@@ -110,3 +110,12 @@ alter table public.audit_log       enable row level security;
 alter table public.sync_runs       enable row level security;
 
 revoke all on all tables in schema public from anon, authenticated;
+
+-- The service role is the only client of these tables (server actions and the
+-- build-time sync). Grant it explicitly so the project's "expose new tables"
+-- setting can be either way without breaking the admin.
+grant usage on schema public to service_role;
+grant all on all tables in schema public to service_role;
+grant usage, select on all sequences in schema public to service_role;
+alter default privileges in schema public grant all on tables to service_role;
+alter default privileges in schema public grant usage, select on sequences to service_role;
