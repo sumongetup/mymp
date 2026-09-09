@@ -3,6 +3,7 @@ import { Hind_Siliguri, Noto_Serif_Bengali } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 import { meta, dateBn } from '@/lib/data';
+import { siteUrl } from '@/lib/site';
 import SiteSearch from '@/components/SiteSearch';
 
 /* Bengali faces are large, so only the weights actually used are requested. */
@@ -21,7 +22,8 @@ const notoBn = Noto_Serif_Bengali({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mymp.bd'),
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: '/' },
   title: {
     default: 'আমার এমপি — বাংলাদেশের সংসদ সদস্যদের তথ্য',
     template: '%s · আমার এমপি',
