@@ -54,7 +54,36 @@ src/app/              routes
 Routes: `/` `/mp` `/mp/[slug]` `/ason/[slug]` `/dol` `/dol/[slug]`
 `/committee` `/committee/[slug]` `/parisonkhan` `/nirbachon` `/songbad`
 
+## Admin panel and database
+
+`/admin` is a Supabase-backed panel: edit members per field, hide/unhide,
+publish news, clear the corrections queue, read the audit log, manage users.
+Until the database variables exist it shows a setup page and nothing else
+changes.
+
+How an edit reaches the public site (there is still no database on the read
+path): every build runs `scripts/sync.mjs --soft` first, which fetches
+parliament.gov.bd, applies every override and hidden flag from Supabase,
+writes the published news to `data/news.json`, then `next build` prerenders.
+"Publish" in the admin calls a Vercel deploy hook; a cron in `vercel.json` does
+the same nightly at 02:00 Dhaka time.
+
+To connect, once:
+
+1. Create a Supabase project dedicated to this site. Run `supabase/schema.sql`
+   in its SQL editor.
+2. Supabase → Authentication → Users → Add user: the first admin's email and
+   password.
+3. Set the variables in `.env.example` on Vercel (`SUPABASE_SERVICE_ROLE_KEY`
+   and `CRON_SECRET` as secrets). `ADMIN_BOOTSTRAP_EMAIL` is that first user;
+   the admin row is created on their first sign-in. Redeploy.
+4. Vercel → Settings → Git → Deploy Hooks → create one for `main`, paste it
+   as `VERCEL_DEPLOY_HOOK_URL`.
+
+Every admin table has row level security on and no policies, so the anon key
+can read nothing; only server actions holding the service key touch them.
+
 ## Not built yet
 
-Admin panel, the news pipeline, the contact form, and the Supabase layer that
-will hold admin edits as overrides the nightly sync must not clobber.
+The public correction form (the queue exists), the news scraper (news is
+entered by hand and reviewed), and the contact-an-MP relay.
