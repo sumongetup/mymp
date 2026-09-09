@@ -21,7 +21,8 @@ const legacyRedirects = [
   { source: '/contact', destination: '/jogajog', permanent: true },
   { source: '/privacy', destination: '/gopaniyota', permanent: true },
   { source: '/terms', destination: '/gopaniyota', permanent: true },
-  { source: '/admin/:path*', destination: '/', permanent: false },
+  // The old Laravel admin lived at /admin/login too; that path is now the real
+  // admin panel, so there is deliberately no redirect for /admin here.
 ];
 
 const nextConfig: NextConfig = {
