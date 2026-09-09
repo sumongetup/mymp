@@ -9,6 +9,7 @@ import committeesJson from '../../data/committees.json';
 import partiesJson from '../../data/parties.json';
 import seatsJson from '../../data/seats.json';
 import metaJson from '../../data/meta.json';
+import ecsJson from '../../data/ecs.json';
 import { normalise } from './search';
 
 export interface Party {
@@ -90,6 +91,34 @@ export const meta = metaJson as {
   source: string;
   counts: Record<string, number>;
 };
+
+/**
+ * National figures the Election Commission publishes on its own pages.
+ * Kept separate from the parliament sync because they are read by a person,
+ * not fetched: the commission's site sits behind bot protection.
+ */
+export const ecs = ecsJson as {
+  source: string;
+  sourceUrl: string;
+  readOn: string;
+  note: string;
+  national: {
+    registeredVoters: number;
+    maleVoters: number;
+    femaleVoters: number;
+    pollingCentres: number;
+    registeredParties: number;
+  };
+};
+
+/** Bengali number grouping: 12,77,11,899 rather than 127,711,899. */
+export function bnGroup(n: number): string {
+  const s = String(n);
+  if (s.length <= 3) return bn(s);
+  const last3 = s.slice(-3);
+  const rest = s.slice(0, -3).replace(/\B(?=(\d{2})+(?!\d))/g, ',');
+  return bn(`${rest},${last3}`);
+}
 
 const bySlug = new Map(members.map((m) => [m.slug, m]));
 const byId = new Map(members.map((m) => [m.id, m]));

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { seats, getMemberById, parties, statistics, districtOf, bn, dateBn, meta } from '@/lib/data';
+import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -61,9 +61,39 @@ export default function ElectionPage() {
         </div>
       </Card>
 
+      <Card className="mt-4 p-6 flex flex-col gap-4">
+        <div className="flex flex-col gap-1">
+          <h2 className="serif text-[21px] font-bold">ভোটার ও ভোটকেন্দ্র</h2>
+          <p className="text-[13px] text-muted">
+            সারা দেশের হিসাব, নির্বাচন কমিশনের প্রকাশিত তথ্য অনুযায়ী
+          </p>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="flex flex-col gap-1">
+            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.registeredVoters)}</span>
+            <span className="text-[13px] text-muted">মোট ভোটার</span>
+          </div>
+          <div className="flex flex-col gap-1">
+            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.maleVoters)}</span>
+            <span className="text-[13px] text-muted">পুরুষ ভোটার</span>
+          </div>
+          <div className="flex flex-col gap-1">
+            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.femaleVoters)}</span>
+            <span className="text-[13px] text-muted">নারী ভোটার</span>
+          </div>
+          <div className="flex flex-col gap-1">
+            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.pollingCentres)}</span>
+            <span className="text-[13px] text-muted">ভোটকেন্দ্র</span>
+          </div>
+        </div>
+        <p className="text-[12.5px] text-muted border-t border-rule pt-3">
+          তথ্যসূত্র: {ecs.source} · পড়া হয়েছে {dateBn(ecs.readOn)}
+        </p>
+      </Card>
+
       <div className="mt-4">
         <Empty
-          title="প্রার্থী তালিকা ও ভোটের সংখ্যা এখনো যোগ করা হয়নি"
+          title="আসনভিত্তিক প্রার্থী তালিকা ও ভোটের সংখ্যা এখনো যোগ করা হয়নি"
           body="নির্বাচন কমিশনের গেজেট থেকে প্রতিটি আসনের প্রার্থী, প্রতীক ও প্রাপ্ত ভোট যোগ করা হবে। যাচাই করা সংখ্যা ছাড়া কিছু দেখানো হবে না।"
         />
       </div>

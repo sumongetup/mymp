@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { statistics, parties, committees, bn, dateBn, meta } from '@/lib/data';
+import { statistics, parties, committees, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -150,10 +150,32 @@ export default function StatisticsPage() {
         </Card>
       </div>
 
-      <div className="mt-4 pb-14 flex flex-col gap-4">
+      <section className="mt-10 flex flex-col gap-4">
+        <div className="flex flex-col gap-1">
+          <h2 className="serif text-[24px] font-bold">ভোটার ও ভোটকেন্দ্র</h2>
+          <p className="text-[13.5px] text-muted">
+            সারা দেশের হিসাব, নির্বাচন কমিশনের প্রকাশিত তথ্য অনুযায়ী। আসনভিত্তিক ভোটার সংখ্যা এখনো যোগ করা হয়নি।
+          </p>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <Stat label="মোট ভোটার" value={bnGroup(ecs.national.registeredVoters)} />
+          <Stat label="পুরুষ ভোটার" value={bnGroup(ecs.national.maleVoters)} />
+          <Stat label="নারী ভোটার" value={bnGroup(ecs.national.femaleVoters)} />
+          <Stat
+            label="ভোটকেন্দ্র"
+            value={bnGroup(ecs.national.pollingCentres)}
+            note={`নিবন্ধিত রাজনৈতিক দল ${bn(ecs.national.registeredParties)}টি`}
+          />
+        </div>
+        <p className="text-[13px] text-muted">
+          তথ্যসূত্র: {ecs.source} · পড়া হয়েছে {dateBn(ecs.readOn)}
+        </p>
+      </section>
+
+      <div className="mt-8 pb-14 flex flex-col gap-4">
         <Empty
           title="যেসব হিসাব এখানে নেই"
-          body="ভোটের সংখ্যা, ভোটার উপস্থিতি, ভোটকেন্দ্র, সংসদে উপস্থিতি বা উত্থাপিত প্রশ্নের হিসাব সংসদের উন্মুক্ত তথ্যভান্ডারে নেই। নির্ভরযোগ্য সূত্র ছাড়া এসব সংখ্যা আমরা দেখাই না।"
+          body="আসনভিত্তিক ভোটের সংখ্যা, ভোটার উপস্থিতি, সংসদে উপস্থিতি বা উত্থাপিত প্রশ্নের হিসাব কোনো উন্মুক্ত সূত্রে পাওয়া যায়নি। নির্ভরযোগ্য সূত্র ছাড়া এসব সংখ্যা আমরা দেখাই না।"
         />
         <p className="text-[13px] text-muted">
           তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ · হালনাগাদ {dateBn(meta.syncedAt)} · মুক্তিযোদ্ধা সদস্য {bn(s.freedomFighters)} জন

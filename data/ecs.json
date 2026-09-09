@@ -1,0 +1,13 @@
+{
+  "source": "Bangladesh Election Commission",
+  "sourceUrl": "https://ecs.gov.bd/",
+  "readOn": "2026-09-09",
+  "note": "Read from the figures the Election Commission publishes on its own home and constituency pages. Entered by hand rather than scraped: their site sits behind bot protection, so these are not fetched automatically and must be re-checked by a person when they change.",
+  "national": {
+    "registeredVoters": 127711899,
+    "maleVoters": 64825154,
+    "femaleVoters": 62885525,
+    "pollingCentres": 42779,
+    "registeredParties": 60
+  }
+}
