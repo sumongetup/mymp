@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { bn, initial, partyColor, type Member, type Party } from '@/lib/data';
+import { bn, dateBn, initial, partyColor, getMemberById, type Member, type Party, type NewsPost } from '@/lib/data';
 import MemberPhoto from './MemberPhoto';
 
 export function Page({ children }: { children: React.ReactNode }) {
@@ -178,6 +178,26 @@ export function CompositionBar({
         ))}
       </div>
     </div>
+  );
+}
+
+/** Headline, masthead, date and a link out. The article body is never reproduced. */
+export function NewsCard({ n }: { n: NewsPost }) {
+  const member = n.memberId ? getMemberById(n.memberId) : undefined;
+  return (
+    <a
+      href={n.sourceUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-surface border border-rule rounded-xl p-5 flex flex-col gap-2 hover:border-brand transition-colors"
+    >
+      <span className="text-[13px] text-muted">{n.sourceName} · {dateBn(n.publishedOn)}</span>
+      <span className="serif text-[17px] font-bold leading-snug">{n.titleBn}</span>
+      {n.excerptBn && <span className="text-[14px] text-inksoft leading-relaxed">{n.excerptBn}</span>}
+      <span className="flex items-center gap-2 text-[13px] font-semibold text-brand">
+        {member ? <><PartyDot abbr={member.party?.abbr} />{member.nameBn ?? member.nameEn}</> : n.seatSlug ? n.seatSlug : 'মূল সংবাদ পড়ুন ↗'}
+      </span>
+    </a>
   );
 }
 

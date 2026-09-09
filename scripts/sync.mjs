@@ -17,6 +17,38 @@ const BASE = 'https://www.parliament.gov.bd';
 const PARLIAMENT = 13;
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
 
+/**
+ * --soft: used by the production build. If parliament.gov.bd cannot be reached,
+ * keep the committed snapshot and exit 0 so a deploy never fails because a
+ * government server is down. Without --soft (manual runs) a failure is fatal.
+ */
+const SOFT = process.argv.includes('--soft');
+
+/**
+ * Optional admin database. When the Supabase variables are present, admin
+ * overrides, hidden entities and published news are merged into the snapshot.
+ * When absent (local runs, or before the database exists) this is skipped and
+ * the site is built purely from the parliament API.
+ */
+const SB_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const dbConfigured = () => !!SB_URL && !!SB_KEY;
+
+async function db(path, init = {}) {
+  const res = await fetch(`${SB_URL}/rest/v1/${path}`, {
+    ...init,
+    headers: {
+      apikey: SB_KEY,
+      Authorization: `Bearer ${SB_KEY}`,
+      'Content-Type': 'application/json',
+      Prefer: init.method === 'POST' ? 'return=minimal' : '',
+      ...(init.headers ?? {}),
+    },
+  });
+  if (!res.ok) throw new Error(`Supabase ${path} -> ${res.status} ${await res.text().catch(() => '')}`);
+  return res.status === 204 || init.method === 'POST' ? null : res.json();
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function getJson(path, tries = 3) {
@@ -93,6 +125,7 @@ async function main() {
       permanentAddressBn: clean(m.permanentAddressBng),
       email: clean(m.email),
       hasMobile: !!m.mobile, // the number itself is deliberately not stored
+      bioBn: null, // only ever set through an admin override
       party: p.abbreviation ? { abbr: p.abbreviation, nameBn: clean(p.nameBng), nameEn: clean(p.nameEng) } : null,
       seat: seatNo
         ? {
@@ -182,8 +215,52 @@ async function main() {
     .map((m) => ({ ...m.seat, memberId: m.id }))
     .sort((a, b) => a.no - b.no);
 
+  // ---- admin overrides and hidden entities ----
+  // Applied AFTER everything above so a hand edit always wins over the source,
+  // and re-applied on every sync so the source can never quietly undo it.
+  let overridesApplied = 0;
+  let hiddenApplied = 0;
+  let adminNote = 'admin database not configured; built from parliament.gov.bd only';
+  if (dbConfigured()) {
+    try {
+      const [overrides, hidden] = await Promise.all([
+        db('overrides?select=entity_type,entity_id,field,value'),
+        db('hidden_entities?select=entity_type,entity_id'),
+      ]);
+      const byType = { member: members, party: parties, committee: committees, seat: seats };
+      const keyOf = { member: (x) => x.id, party: (x) => x.abbr, committee: (x) => x.id, seat: (x) => String(x.no) };
+      for (const o of overrides) {
+        const list = byType[o.entity_type];
+        const target = list?.find((x) => keyOf[o.entity_type](x) === o.entity_id);
+        if (!target) continue;
+        target[o.field] = o.value;
+        overridesApplied++;
+        // A member's seat name lives on the member object too; keep them in step.
+        if (o.entity_type === 'seat') {
+          const m = members.find((x) => x.seat && String(x.seat.no) === o.entity_id);
+          if (m) m.seat[o.field] = o.value;
+        }
+      }
+      const hiddenMembers = new Set(hidden.filter((h) => h.entity_type === 'member').map((h) => h.entity_id));
+      const hiddenCommittees = new Set(hidden.filter((h) => h.entity_type === 'committee').map((h) => h.entity_id));
+      // Mutate in place: these arrays are consts referenced below.
+      for (const s of seats) if (hiddenMembers.has(s.memberId)) s.memberId = null;
+      members.splice(0, members.length, ...members.filter((m) => !hiddenMembers.has(m.id)));
+      committees.splice(0, committees.length, ...committees.filter((c) => !hiddenCommittees.has(c.id)));
+      for (const c of committees) c.members = c.members.filter((x) => !hiddenMembers.has(x.memberId));
+      hiddenApplied = hiddenMembers.size + hiddenCommittees.size;
+      adminNote = `applied ${overridesApplied} overrides, ${hiddenApplied} hidden`;
+      console.log(`  admin: ${adminNote}`);
+    } catch (err) {
+      adminNote = `admin merge skipped: ${err.message}`;
+      console.warn(`  ${adminNote}`);
+    }
+  }
+
   const meta = {
     parliamentNo: PARLIAMENT,
+    overridesApplied,
+    hidden: hiddenApplied,
     syncedAt: new Date().toISOString(),
     source: `${BASE}/api`,
     counts: {
@@ -224,13 +301,52 @@ async function main() {
 
   console.log('\nWrote data/ —', JSON.stringify(meta.counts));
   console.log('Wrote public/search-index.json —', searchIndex.length, 'entries');
+
+  // ---- published news + a record of this run ----
+  // Only published items reach the site, and only the fields the site shows.
+  if (dbConfigured()) {
+    try {
+      const rows = await db('news_posts?select=id,title_bn,source_name,source_url,published_on,excerpt_bn,member_id,seat_slug&status=eq.published&order=published_on.desc&limit=500');
+      const news = rows.map((r) => ({
+        id: r.id, titleBn: r.title_bn, sourceName: r.source_name, sourceUrl: r.source_url,
+        publishedOn: r.published_on, excerptBn: r.excerpt_bn ?? null, memberId: r.member_id ?? null, seatSlug: r.seat_slug ?? null,
+      }));
+      await writeFile(join(OUT, 'news.json'), JSON.stringify(news, null, 1), 'utf8');
+      console.log('Wrote data/news.json —', news.length, 'published items');
+    } catch (err) {
+      console.warn('  news skipped:', err.message);
+    }
+    try {
+      await db('sync_runs', {
+        method: 'POST',
+        body: JSON.stringify({
+          finished_at: new Date().toISOString(), ok: true,
+          members: members.length, committees: committees.length,
+          overrides_applied: overridesApplied, message: adminNote,
+        }),
+      });
+    } catch (err) {
+      console.warn('  sync_runs not recorded:', err.message);
+    }
+  }
   if (members.length === 0) {
     console.error('\nNo members returned. Refusing to treat this as a successful sync.');
     process.exit(1);
   }
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
   console.error('\nSync failed:', err.message);
+  if (SOFT) {
+    // Production build: keep the committed snapshot and let the deploy proceed.
+    console.warn('--soft: keeping the committed snapshot in data/ and continuing the build.');
+    if (dbConfigured()) {
+      await db('sync_runs', {
+        method: 'POST',
+        body: JSON.stringify({ finished_at: new Date().toISOString(), ok: false, message: err.message.slice(0, 500) }),
+      }).catch(() => {});
+    }
+    process.exit(0);
+  }
   process.exit(1);
 });

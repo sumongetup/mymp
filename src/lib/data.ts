@@ -10,6 +10,7 @@ import partiesJson from '../../data/parties.json';
 import seatsJson from '../../data/seats.json';
 import metaJson from '../../data/meta.json';
 import ecsJson from '../../data/ecs.json';
+import newsJson from '../../data/news.json';
 import { normalise } from './search';
 
 export interface Party {
@@ -49,6 +50,8 @@ export interface Member {
   permanentAddressBn: string | null;
   email: string | null;
   hasMobile: boolean;
+  /** Only ever set by an admin override; the parliament API has no biography field. */
+  bioBn: string | null;
   party: { abbr: string; nameBn: string | null; nameEn: string | null } | null;
   seat: Seat | null;
   offices: string[];
@@ -84,7 +87,25 @@ export const committeeCounts = () => ({
 export const members = membersJson as Member[];
 export const committees = committeesJson as Committee[];
 export const parties = partiesJson as Party[];
-export const seats = seatsJson as (Seat & { memberId: string })[];
+/** A seat's memberId is null when its holder has been hidden by an admin. */
+export const seats = seatsJson as (Seat & { memberId: string | null })[];
+
+export interface NewsPost {
+  id: string;
+  titleBn: string;
+  sourceName: string;
+  sourceUrl: string;
+  publishedOn: string;
+  excerptBn: string | null;
+  memberId: string | null;
+  seatSlug: string | null;
+}
+
+/** Published news only. Written by the sync from the admin database; empty until one exists. */
+export const news = newsJson as NewsPost[];
+export const publishedNews = () => [...news].sort((a, b) => b.publishedOn.localeCompare(a.publishedOn));
+export const newsForMember = (id: string) => publishedNews().filter((n) => n.memberId === id);
+export const newsForSeat = (slug: string) => publishedNews().filter((n) => n.seatSlug === slug);
 export const meta = metaJson as {
   parliamentNo: number;
   syncedAt: string;

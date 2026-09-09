@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps<'/ason/[slug]'>): P
   const { slug } = await params;
   const s = getSeat(slug);
   if (!s) return { title: 'আসন পাওয়া যায়নি' };
-  const m = getMemberById(s.memberId);
+  const m = s.memberId ? getMemberById(s.memberId) : undefined;
   return {
     title: `${s.nameBn} আসন`,
     alternates: { canonical: `/ason/${s.slug}` },
@@ -28,7 +28,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
   const seat = getSeat(slug);
   if (!seat) notFound();
 
-  const member = getMemberById(seat.memberId);
+  const member = seat.memberId ? getMemberById(seat.memberId) : undefined;
   const district = districtOf(seat);
   const neighbours = district
     ? seats.filter((s) => s.no !== seat.no && districtOf(s)?.en === district.en)
@@ -152,7 +152,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
               <h2 className="serif text-[19px] font-bold">{district?.bn} জেলার আসন</h2>
               <ul className="flex flex-col gap-2 text-[15px]">
                 {neighbours.map((s) => {
-                  const holder = getMemberById(s.memberId);
+                  const holder = s.memberId ? getMemberById(s.memberId) : undefined;
                   return (
                     <li key={s.no}>
                       <Link href={`/ason/${s.slug}`} className="flex justify-between gap-3 hover:text-brand">

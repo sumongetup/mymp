@@ -1,0 +1,174 @@
+'use server';
+
+import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
+import { supabaseSession } from '@/lib/supabase/server';
+import { requireAdmin, requireSuperAdmin } from '@/lib/admin/auth';
+import {
+  EDITABLE, type EntityType, setOverride, clearOverride, setHidden,
+  upsertNews, setNewsStatus, resolveCorrection, addAdmin, removeAdmin, audit,
+} from '@/lib/admin/store';
+
+export interface ActionState { error?: string; ok?: string }
+
+const str = (fd: FormData, key: string) => {
+  const v = fd.get(key);
+  return typeof v === 'string' ? v : '';
+};
+const orNull = (s: string) => (s.trim() === '' ? null : s.trim());
+
+/* ---------------- session ---------------- */
+
+export async function signIn(_prev: ActionState, fd: FormData): Promise<ActionState> {
+  const email = str(fd, 'email').trim().toLowerCase();
+  const password = str(fd, 'password');
+  if (!email || !password) return { error: 'ইমেইল ও পাসওয়ার্ড দুটোই লাগবে।' };
+  const sb = await supabaseSession();
+  const { error } = await sb.auth.signInWithPassword({ email, password });
+  if (error) return { error: 'ইমেইল বা পাসওয়ার্ড মেলেনি।' };
+  redirect('/admin');
+}
+
+export async function signOut() {
+  const sb = await supabaseSession();
+  await sb.auth.signOut();
+  redirect('/admin/login');
+}
+
+/* ---------------- overrides ---------------- */
+
+/**
+ * Saves every field on the form that differs from what the site currently
+ * shows. Each changed field becomes its own override row and audit entry, so a
+ * later revert can be done per field.
+ */
+export async function saveOverrides(fd: FormData) {
+  const me = await requireAdmin();
+  const type = str(fd, 'entity_type') as EntityType;
+  const id = str(fd, 'entity_id');
+  if (!EDITABLE[type] || !id) throw new Error('bad entity');
+
+  for (const f of EDITABLE[type]) {
+    const next = orNull(str(fd, `field__${f.key}`));
+    const current = orNull(str(fd, `current__${f.key}`));
+    if (next === current) continue;
+    await setOverride(me, type, id, f.key, next, current);
+  }
+  revalidatePath(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}`);
+  redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?saved=1`);
+}
+
+export async function revertOverride(fd: FormData) {
+  const me = await requireAdmin();
+  const type = str(fd, 'entity_type') as EntityType;
+  const id = str(fd, 'entity_id');
+  const field = str(fd, 'field');
+  if (!EDITABLE[type]?.some((f) => f.key === field)) throw new Error('bad field');
+  // The revert button submits the whole edit form, so the current value travels as current__<field>.
+  await clearOverride(me, type, id, field, orNull(str(fd, `current__${field}`)));
+  const seg = type === 'member' ? 'members' : type + 's';
+  revalidatePath(`/admin/${seg}/${id}`);
+  redirect(`/admin/${seg}/${id}?reverted=1`);
+}
+
+export async function toggleHidden(fd: FormData) {
+  const me = await requireAdmin();
+  const type = str(fd, 'entity_type') as 'member' | 'committee';
+  const id = str(fd, 'entity_id');
+  const hide = str(fd, 'hide') === '1';
+  await setHidden(me, type, id, hide, orNull(str(fd, 'reason')));
+  const seg = type === 'member' ? 'members' : 'committees';
+  revalidatePath(`/admin/${seg}/${id}`);
+  redirect(`/admin/${seg}/${id}?${hide ? 'hidden' : 'unhidden'}=1`);
+}
+
+/* ---------------- news ---------------- */
+
+export async function saveNews(fd: FormData) {
+  const me = await requireAdmin();
+  const id = orNull(str(fd, 'id'));
+  const input = {
+    title_bn: str(fd, 'title_bn').trim(),
+    source_name: str(fd, 'source_name').trim(),
+    source_url: str(fd, 'source_url').trim(),
+    published_on: str(fd, 'published_on').trim(),
+    excerpt_bn: orNull(str(fd, 'excerpt_bn')),
+    member_id: orNull(str(fd, 'member_id')),
+    seat_slug: orNull(str(fd, 'seat_slug')),
+  };
+  if (!input.title_bn || !input.source_name || !input.source_url || !input.published_on) {
+    throw new Error('শিরোনাম, সূত্র, লিংক ও তারিখ লাগবে।');
+  }
+  if (!/^https?:\/\//.test(input.source_url)) throw new Error('লিংক http:// বা https:// দিয়ে শুরু হতে হবে।');
+  const savedId = await upsertNews(me, id, input);
+  revalidatePath('/admin/news');
+  redirect(`/admin/news/${savedId}?saved=1`);
+}
+
+export async function changeNewsStatus(fd: FormData) {
+  const me = await requireAdmin();
+  const id = str(fd, 'id');
+  const status = str(fd, 'status') as 'draft' | 'published' | 'rejected';
+  if (!['draft', 'published', 'rejected'].includes(status)) throw new Error('bad status');
+  await setNewsStatus(me, id, status);
+  revalidatePath('/admin/news');
+  redirect(`/admin/news/${id}?status=${status}`);
+}
+
+/* ---------------- corrections ---------------- */
+
+export async function decideCorrection(fd: FormData) {
+  const me = await requireAdmin();
+  const id = str(fd, 'id');
+  const status = str(fd, 'status') as 'accepted' | 'rejected';
+  if (!['accepted', 'rejected'].includes(status)) throw new Error('bad status');
+  await resolveCorrection(me, id, status, orNull(str(fd, 'note')));
+  revalidatePath('/admin/corrections');
+  redirect('/admin/corrections');
+}
+
+/* ---------------- users ---------------- */
+
+export async function createAdmin(_prev: ActionState, fd: FormData): Promise<ActionState> {
+  const me = await requireSuperAdmin();
+  const email = str(fd, 'email').trim().toLowerCase();
+  const role = str(fd, 'role') === 'super_admin' ? 'super_admin' : 'editor';
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return { error: 'ইমেইল ঠিকানাটি সঠিক নয়।' };
+  try {
+    const { tempPassword } = await addAdmin(me, email, role);
+    revalidatePath('/admin/users');
+    return {
+      ok: tempPassword
+        ? `${email} যোগ হয়েছে। সাময়িক পাসওয়ার্ড (একবারই দেখানো হবে): ${tempPassword}`
+        : `${email} যোগ হয়েছে। আগের পাসওয়ার্ড দিয়েই লগইন করতে পারবেন।`,
+    };
+  } catch (e) {
+    return { error: e instanceof Error ? e.message : 'যোগ করা যায়নি।' };
+  }
+}
+
+export async function deleteAdmin(fd: FormData) {
+  const me = await requireSuperAdmin();
+  const userId = str(fd, 'user_id');
+  if (userId === me.id) throw new Error('নিজেকে সরানো যাবে না।');
+  await removeAdmin(me, userId);
+  revalidatePath('/admin/users');
+  redirect('/admin/users');
+}
+
+/* ---------------- publish ---------------- */
+
+/**
+ * Rebuilds the public site. The build fetches parliament.gov.bd again, applies
+ * every override and hidden flag, pulls the published news, and prerenders all
+ * pages. Nothing an admin saves is visible to the public until this runs.
+ */
+export async function publishSite(): Promise<ActionState> {
+  const me = await requireAdmin();
+  const hook = process.env.VERCEL_DEPLOY_HOOK_URL;
+  if (!hook) return { error: 'VERCEL_DEPLOY_HOOK_URL সেট করা নেই। Vercel → Settings → Git → Deploy Hooks থেকে একটি তৈরি করে env-এ দিন।' };
+  const res = await fetch(hook, { method: 'POST' });
+  await audit(me, { action: 'site.publish', entity_type: null, entity_id: null, field: null, old_value: null, new_value: res.ok ? 'triggered' : `failed ${res.status}` });
+  if (!res.ok) return { error: `Vercel ফিরিয়ে দিয়েছে: HTTP ${res.status}` };
+  return { ok: 'সাইট নতুন করে তৈরি হচ্ছে। ২-৩ মিনিটের মধ্যে পরিবর্তন mymp.bd-তে দেখা যাবে।' };
+}

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   members, getMember, committeesOfMember, membersOfParty, districtOf,
-  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts,
+  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, newsForMember,
 } from '@/lib/data';
-import { Page, Card, Breadcrumb, Empty, PartyDot } from '@/components/ui';
+import { Page, Card, Breadcrumb, Empty, PartyDot, NewsCard } from '@/components/ui';
 import MemberPhoto from '@/components/MemberPhoto';
 
 export function generateStaticParams() {
@@ -41,6 +41,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   const age = ageFrom(m.dateOfBirth);
   const district = districtOf(m.seat);
   const onCommittees = committeesOfMember(m.id);
+  const memberNews = newsForMember(m.id);
   const cc = committeeCounts();
   const partyMates = m.party ? membersOfParty(m.party.abbr).filter((x) => x.id !== m.id) : [];
   const sameDistrict = district
@@ -110,6 +111,11 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
         <div className="flex flex-col gap-10">
           <section className="flex flex-col gap-4">
             <h2 className="serif text-[24px] font-bold">পরিচিতি</h2>
+            {m.bioBn && (
+              <Card className="p-5">
+                <p className="text-[15.5px] leading-relaxed whitespace-pre-line">{m.bioBn}</p>
+              </Card>
+            )}
             {bio.length ? (
               <Card className="px-5 py-3 text-[15px]">
                 {bio.map((b) => <Row key={b.label} label={b.label}>{b.value}</Row>)}
@@ -168,10 +174,16 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
 
           <section className="flex flex-col gap-4">
             <h2 className="serif text-[24px] font-bold">সংবাদ</h2>
-            <Empty
-              title="সংবাদ সংযোজন এখনো চালু হয়নি।"
-              body="অনুমোদিত সংবাদমাধ্যম থেকে আসা শিরোনাম যাচাইয়ের পর এখানে দেখানো হবে।"
-            />
+            {memberNews.length ? (
+              <ul className="flex flex-col gap-3">
+                {memberNews.map((n) => <li key={n.id}><NewsCard n={n} /></li>)}
+              </ul>
+            ) : (
+              <Empty
+                title="এই সদস্য নিয়ে এখনো কোনো সংবাদ প্রকাশ করা হয়নি।"
+                body="অনুমোদিত সংবাদমাধ্যমের শিরোনাম যাচাইয়ের পর এখানে দেখানো হবে।"
+              />
+            )}
           </section>
         </div>
 

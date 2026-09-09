@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { members, parties, meta, bn, dateBn, statistics, districtOf } from '@/lib/data';
-import { Page, Card, MemberCard, CompositionBar, Empty } from '@/components/ui';
+import { members, parties, meta, bn, dateBn, statistics, districtOf, publishedNews } from '@/lib/data';
+import { Page, Card, MemberCard, CompositionBar, Empty, NewsCard } from '@/components/ui';
 import SiteSearch from '@/components/SiteSearch';
 
 export const metadata: Metadata = {
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const stats = statistics();
+  const latestNews = publishedNews().slice(0, 3);
 
   // Members holding an office lead the page: Speaker, Deputy Speaker and so on.
   const notable = members.filter((m) => m.offices.length > 0);
@@ -110,10 +111,16 @@ export default function Home() {
             সংবাদ →
           </Link>
         </div>
-        <Empty
-          title="সংবাদ সংযোজন এখনো চালু হয়নি"
-          body="অনুমোদিত সংবাদমাধ্যম থেকে শিরোনাম আনার ব্যবস্থা তৈরি হচ্ছে। যাচাই ছাড়া কোনো সংবাদ এই সাইটে প্রকাশ করা হবে না।"
-        />
+        {latestNews.length ? (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {latestNews.map((n) => <NewsCard key={n.id} n={n} />)}
+          </div>
+        ) : (
+          <Empty
+            title="এখনো কোনো সংবাদ প্রকাশ করা হয়নি"
+            body="অনুমোদিত সংবাদমাধ্যমের শিরোনাম যাচাইয়ের পর এখানে দেখানো হবে। যাচাই ছাড়া কোনো সংবাদ এই সাইটে প্রকাশ করা হয় না।"
+          />
+        )}
       </section>
     </Page>
   );

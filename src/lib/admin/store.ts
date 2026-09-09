@@ -1,0 +1,273 @@
+import 'server-only';
+import { supabaseAdmin } from '@/lib/supabase/admin';
+
+export type EntityType = 'member' | 'seat' | 'party' | 'committee';
+
+/** Which fields an admin may override, per entity. Keys are the JSON keys in data/. */
+export const EDITABLE: Record<EntityType, { key: string; label: string; multiline?: boolean }[]> = {
+  member: [
+    { key: 'nameBn', label: 'নাম (বাংলা)' },
+    { key: 'nameEn', label: 'নাম (English)' },
+    { key: 'professionBn', label: 'পেশা' },
+    { key: 'email', label: 'দাপ্তরিক ইমেইল' },
+    { key: 'presentAddressBn', label: 'বর্তমান ঠিকানা', multiline: true },
+    { key: 'bioBn', label: 'জীবনী', multiline: true },
+  ],
+  seat: [
+    { key: 'nameBn', label: 'আসনের নাম (বাংলা)' },
+    { key: 'nameEn', label: 'আসনের নাম (English)' },
+    { key: 'boundaryBn', label: 'এলাকার বিবরণ', multiline: true },
+  ],
+  party: [
+    { key: 'nameBn', label: 'দলের নাম (বাংলা)' },
+    { key: 'nameEn', label: 'দলের নাম (English)' },
+  ],
+  committee: [
+    { key: 'nameBn', label: 'কমিটির নাম (বাংলা)' },
+    { key: 'nameEn', label: 'কমিটির নাম (English)' },
+  ],
+};
+
+export interface Override {
+  entity_type: EntityType;
+  entity_id: string;
+  field: string;
+  value: string | null;
+  updated_by: string | null;
+  updated_at: string;
+}
+
+export interface Hidden {
+  entity_type: 'member' | 'committee';
+  entity_id: string;
+  reason: string | null;
+  hidden_at: string;
+}
+
+export interface NewsRow {
+  id: string;
+  title_bn: string;
+  source_name: string;
+  source_url: string;
+  published_on: string;
+  excerpt_bn: string | null;
+  member_id: string | null;
+  seat_slug: string | null;
+  status: 'draft' | 'published' | 'rejected';
+  created_at: string;
+  updated_at: string;
+}
+
+export interface CorrectionRow {
+  id: string;
+  page_path: string;
+  message: string;
+  reporter_name: string | null;
+  reporter_email: string | null;
+  status: 'open' | 'accepted' | 'rejected';
+  resolution_note: string | null;
+  resolved_at: string | null;
+  created_at: string;
+}
+
+export interface AuditRow {
+  id: number;
+  actor_email: string | null;
+  action: string;
+  entity_type: string | null;
+  entity_id: string | null;
+  field: string | null;
+  old_value: string | null;
+  new_value: string | null;
+  created_at: string;
+}
+
+export interface SyncRunRow {
+  id: number;
+  started_at: string;
+  finished_at: string | null;
+  ok: boolean | null;
+  members: number | null;
+  committees: number | null;
+  overrides_applied: number | null;
+  message: string | null;
+}
+
+export interface AdminUserRow {
+  user_id: string;
+  email: string;
+  role: 'super_admin' | 'editor';
+  created_at: string;
+}
+
+interface Actor { id: string; email: string }
+
+export async function audit(a: Actor, entry: Omit<AuditRow, 'id' | 'actor_email' | 'created_at'>) {
+  await supabaseAdmin().from('audit_log').insert({ actor: a.id, actor_email: a.email, ...entry });
+}
+
+/* ---------------- overrides ---------------- */
+
+export async function overridesFor(type: EntityType, id: string): Promise<Override[]> {
+  const { data } = await supabaseAdmin()
+    .from('overrides').select('*').eq('entity_type', type).eq('entity_id', id);
+  return (data ?? []) as Override[];
+}
+
+export async function overrideCounts(): Promise<Record<EntityType, number>> {
+  const out: Record<EntityType, number> = { member: 0, seat: 0, party: 0, committee: 0 };
+  const { data } = await supabaseAdmin().from('overrides').select('entity_type');
+  for (const r of data ?? []) out[r.entity_type as EntityType]++;
+  return out;
+}
+
+export async function setOverride(a: Actor, type: EntityType, id: string, field: string, value: string | null, oldValue: string | null) {
+  if (!EDITABLE[type].some((f) => f.key === field)) throw new Error(`Field ${field} is not editable on ${type}.`);
+  const db = supabaseAdmin();
+  await db.from('overrides').upsert(
+    { entity_type: type, entity_id: id, field, value, updated_by: a.id, updated_at: new Date().toISOString() },
+    { onConflict: 'entity_type,entity_id,field' },
+  );
+  await audit(a, { action: 'override.set', entity_type: type, entity_id: id, field, old_value: oldValue, new_value: value });
+}
+
+export async function clearOverride(a: Actor, type: EntityType, id: string, field: string, oldValue: string | null) {
+  await supabaseAdmin().from('overrides').delete().match({ entity_type: type, entity_id: id, field });
+  await audit(a, { action: 'override.clear', entity_type: type, entity_id: id, field, old_value: oldValue, new_value: null });
+}
+
+/* ---------------- hidden ---------------- */
+
+export async function hiddenList(): Promise<Hidden[]> {
+  const { data } = await supabaseAdmin().from('hidden_entities').select('*');
+  return (data ?? []) as Hidden[];
+}
+
+export async function isHidden(type: 'member' | 'committee', id: string): Promise<Hidden | null> {
+  const { data } = await supabaseAdmin().from('hidden_entities').select('*').match({ entity_type: type, entity_id: id }).maybeSingle();
+  return (data as Hidden | null) ?? null;
+}
+
+export async function setHidden(a: Actor, type: 'member' | 'committee', id: string, hidden: boolean, reason: string | null) {
+  const db = supabaseAdmin();
+  if (hidden) {
+    await db.from('hidden_entities').upsert({ entity_type: type, entity_id: id, reason, hidden_by: a.id, hidden_at: new Date().toISOString() });
+  } else {
+    await db.from('hidden_entities').delete().match({ entity_type: type, entity_id: id });
+  }
+  await audit(a, { action: hidden ? 'entity.hide' : 'entity.unhide', entity_type: type, entity_id: id, field: null, old_value: null, new_value: reason });
+}
+
+/* ---------------- news ---------------- */
+
+export async function listNews(status?: NewsRow['status']): Promise<NewsRow[]> {
+  let q = supabaseAdmin().from('news_posts').select('*').order('published_on', { ascending: false }).limit(300);
+  if (status) q = q.eq('status', status);
+  const { data } = await q;
+  return (data ?? []) as NewsRow[];
+}
+
+export async function getNews(id: string): Promise<NewsRow | null> {
+  const { data } = await supabaseAdmin().from('news_posts').select('*').eq('id', id).maybeSingle();
+  return (data as NewsRow | null) ?? null;
+}
+
+export type NewsInput = Pick<NewsRow, 'title_bn' | 'source_name' | 'source_url' | 'published_on' | 'excerpt_bn' | 'member_id' | 'seat_slug'>;
+
+export async function upsertNews(a: Actor, id: string | null, input: NewsInput): Promise<string> {
+  const db = supabaseAdmin();
+  if (id) {
+    const before = await getNews(id);
+    await db.from('news_posts').update({ ...input, updated_by: a.id, updated_at: new Date().toISOString() }).eq('id', id);
+    await audit(a, { action: 'news.update', entity_type: 'news', entity_id: id, field: null, old_value: before?.title_bn ?? null, new_value: input.title_bn });
+    return id;
+  }
+  const { data, error } = await db.from('news_posts').insert({ ...input, created_by: a.id, updated_by: a.id }).select('id').single();
+  if (error || !data) throw new Error(error?.message ?? 'insert failed');
+  await audit(a, { action: 'news.create', entity_type: 'news', entity_id: data.id, field: null, old_value: null, new_value: input.title_bn });
+  return data.id as string;
+}
+
+export async function setNewsStatus(a: Actor, id: string, status: NewsRow['status']) {
+  const before = await getNews(id);
+  await supabaseAdmin().from('news_posts').update({ status, updated_by: a.id, updated_at: new Date().toISOString() }).eq('id', id);
+  await audit(a, { action: `news.${status}`, entity_type: 'news', entity_id: id, field: 'status', old_value: before?.status ?? null, new_value: status });
+}
+
+/* ---------------- corrections ---------------- */
+
+export async function listCorrections(status?: CorrectionRow['status']): Promise<CorrectionRow[]> {
+  let q = supabaseAdmin().from('corrections').select('*').order('created_at', { ascending: false }).limit(300);
+  if (status) q = q.eq('status', status);
+  const { data } = await q;
+  return (data ?? []) as CorrectionRow[];
+}
+
+export async function resolveCorrection(a: Actor, id: string, status: 'accepted' | 'rejected', note: string | null) {
+  await supabaseAdmin().from('corrections').update({ status, resolution_note: note, resolved_by: a.id, resolved_at: new Date().toISOString() }).eq('id', id);
+  await audit(a, { action: 'correction.resolve', entity_type: 'correction', entity_id: id, field: 'status', old_value: 'open', new_value: status });
+}
+
+/* ---------------- audit / sync / users ---------------- */
+
+export async function listAudit(limit = 100): Promise<AuditRow[]> {
+  const { data } = await supabaseAdmin().from('audit_log').select('*').order('created_at', { ascending: false }).limit(limit);
+  return (data ?? []) as AuditRow[];
+}
+
+export async function listSyncRuns(limit = 30): Promise<SyncRunRow[]> {
+  const { data } = await supabaseAdmin().from('sync_runs').select('*').order('started_at', { ascending: false }).limit(limit);
+  return (data ?? []) as SyncRunRow[];
+}
+
+export async function listAdmins(): Promise<AdminUserRow[]> {
+  const { data } = await supabaseAdmin().from('admin_users').select('*').order('created_at');
+  return (data ?? []) as AdminUserRow[];
+}
+
+/** Creates the auth user (if new) and the admin row. Returns the temporary password when a user was created. */
+export async function addAdmin(a: Actor, email: string, role: AdminUserRow['role']): Promise<{ tempPassword: string | null }> {
+  const db = supabaseAdmin();
+  const clean = email.trim().toLowerCase();
+  let userId: string | null = null;
+  let tempPassword: string | null = null;
+
+  const { data: existing } = await db.auth.admin.listUsers({ perPage: 1000 });
+  const found = existing?.users.find((u) => (u.email ?? '').toLowerCase() === clean);
+  if (found) {
+    userId = found.id;
+  } else {
+    tempPassword = Array.from(crypto.getRandomValues(new Uint8Array(12)), (b) => 'abcdefghjkmnpqrstuvwxyz23456789'[b % 31]).join('');
+    const { data: created, error } = await db.auth.admin.createUser({ email: clean, password: tempPassword, email_confirm: true });
+    if (error || !created.user) throw new Error(error?.message ?? 'could not create user');
+    userId = created.user.id;
+  }
+
+  await db.from('admin_users').upsert({ user_id: userId, email: clean, role });
+  await audit(a, { action: 'user.add', entity_type: 'admin_user', entity_id: userId, field: 'role', old_value: null, new_value: role });
+  return { tempPassword };
+}
+
+export async function removeAdmin(a: Actor, userId: string) {
+  const { data: row } = await supabaseAdmin().from('admin_users').select('email, role').eq('user_id', userId).maybeSingle();
+  await supabaseAdmin().from('admin_users').delete().eq('user_id', userId);
+  await audit(a, { action: 'user.remove', entity_type: 'admin_user', entity_id: userId, field: null, old_value: row ? `${row.email} (${row.role})` : null, new_value: null });
+}
+
+export async function counts() {
+  const db = supabaseAdmin();
+  const c = async (table: string, filter?: [string, string]) => {
+    let q = db.from(table).select('*', { count: 'exact', head: true });
+    if (filter) q = q.eq(filter[0], filter[1]);
+    const { count } = await q;
+    return count ?? 0;
+  };
+  return {
+    overrides: await c('overrides'),
+    hidden: await c('hidden_entities'),
+    newsDraft: await c('news_posts', ['status', 'draft']),
+    newsPublished: await c('news_posts', ['status', 'published']),
+    correctionsOpen: await c('corrections', ['status', 'open']),
+    admins: await c('admin_users'),
+  };
+}

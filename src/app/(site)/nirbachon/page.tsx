@@ -113,7 +113,7 @@ export default function ElectionPage() {
               </div>
               <ul className="flex flex-col gap-1.5 text-[14.5px]">
                 {d.list.map((seat) => {
-                  const m = getMemberById(seat.memberId);
+                  const m = seat.memberId ? getMemberById(seat.memberId) : undefined;
                   return (
                     <li key={seat.no}>
                       <Link href={`/ason/${seat.slug}`} className="flex items-center gap-2 hover:text-brand">
