@@ -7,10 +7,27 @@ import type { NextConfig } from 'next';
  */
 const staticExport = process.env.STATIC_EXPORT === '1';
 
+/**
+ * Paths from the previous mymp.bd site. Anyone holding an old bookmark or a
+ * search result lands on the matching section here instead of a 404. The old
+ * per-member ids do not map onto the new slugs, so those fall back to the list.
+ */
+const legacyRedirects = [
+  { source: '/mps', destination: '/mp', permanent: true },
+  { source: '/mps/:id', destination: '/mp', permanent: true },
+  { source: '/parties', destination: '/dol', permanent: true },
+  { source: '/parties/:slug', destination: '/dol', permanent: true },
+  { source: '/about', destination: '/somporke', permanent: true },
+  { source: '/contact', destination: '/jogajog', permanent: true },
+  { source: '/privacy', destination: '/gopaniyota', permanent: true },
+  { source: '/terms', destination: '/gopaniyota', permanent: true },
+  { source: '/admin/:path*', destination: '/', permanent: false },
+];
+
 const nextConfig: NextConfig = {
   ...(staticExport
     ? { output: 'export', images: { unoptimized: true }, basePath: process.env.BASE_PATH || '' }
-    : {}),
+    : { async redirects() { return legacyRedirects; } }),
   trailingSlash: staticExport,
 };
 

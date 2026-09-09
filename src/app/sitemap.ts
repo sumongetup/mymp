@@ -18,6 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url('/committee'), lastModified: synced, changeFrequency: 'weekly', priority: 0.8 },
     { url: url('/parisonkhan'), lastModified: synced, changeFrequency: 'weekly', priority: 0.8 },
     { url: url('/songbad'), lastModified: synced, changeFrequency: 'daily', priority: 0.6 },
+    { url: url('/somporke'), lastModified: synced, changeFrequency: 'monthly', priority: 0.4 },
+    { url: url('/jogajog'), lastModified: synced, changeFrequency: 'monthly', priority: 0.4 },
+    { url: url('/gopaniyota'), lastModified: synced, changeFrequency: 'yearly', priority: 0.2 },
   ];
 
   return [
