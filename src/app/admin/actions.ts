@@ -35,6 +35,20 @@ export async function signOut() {
   redirect('/admin/login');
 }
 
+/** Change the signed-in admin's own password. Runs against their session, not the service key. */
+export async function changePassword(_prev: ActionState, fd: FormData): Promise<ActionState> {
+  const me = await requireAdmin();
+  const password = str(fd, 'password');
+  const confirm = str(fd, 'confirm');
+  if (password.length < 10) return { error: 'পাসওয়ার্ড কমপক্ষে ১০ অক্ষরের হতে হবে।' };
+  if (password !== confirm) return { error: 'দুই ঘরের পাসওয়ার্ড মেলেনি।' };
+  const sb = await supabaseSession();
+  const { error } = await sb.auth.updateUser({ password });
+  if (error) return { error: `বদলানো যায়নি: ${error.message}` };
+  await audit(me, { action: 'user.password', entity_type: 'admin_user', entity_id: me.id, field: null, old_value: null, new_value: null });
+  return { ok: 'পাসওয়ার্ড বদলে গেছে। পরের বার থেকে নতুনটি দিয়ে লগইন করুন।' };
+}
+
 /* ---------------- overrides ---------------- */
 
 /**

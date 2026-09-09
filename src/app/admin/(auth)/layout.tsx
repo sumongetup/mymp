@@ -10,6 +10,7 @@ const NAV = [
   { href: '/admin/sync', label: 'সিঙ্ক ও প্রকাশ' },
   { href: '/admin/audit', label: 'পরিবর্তনের ইতিহাস' },
   { href: '/admin/users', label: 'ব্যবহারকারী', super: true },
+  { href: '/admin/password', label: 'পাসওয়ার্ড' },
 ];
 
 /** Signed-in shell. requireAdmin() redirects anyone who is not an admin. */
