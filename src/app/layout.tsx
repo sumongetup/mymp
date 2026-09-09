@@ -23,7 +23,6 @@ const notoBn = Noto_Serif_Bengali({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  alternates: { canonical: '/' },
   title: {
     default: 'আমার এমপি — বাংলাদেশের সংসদ সদস্যদের তথ্য',
     template: '%s · আমার এমপি',

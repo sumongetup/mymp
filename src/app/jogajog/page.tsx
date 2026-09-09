@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Page, PageHead, Card, Empty } from '@/components/ui';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/jogajog' },
   title: 'যোগাযোগ',
   description: 'আমার এমপি সাইটে ভুল তথ্য জানানো বা যোগাযোগের উপায়।',
 };

@@ -4,6 +4,7 @@ import { statistics, parties, committees, bn, bnGroup, dateBn, meta, ecs } from 
 import { Page, PageHead, Card, Stat, CompositionBar, Empty } from '@/components/ui';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/parisonkhan' },
   title: 'পরিসংখ্যান',
   description: 'ত্রয়োদশ জাতীয় সংসদের সদস্যদের দল, লিঙ্গ, বয়স ও পেশার পরিসংখ্যান।',
 };

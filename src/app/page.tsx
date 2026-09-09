@@ -1,7 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { members, parties, meta, bn, dateBn, statistics, districtOf } from '@/lib/data';
 import { Page, Card, MemberCard, CompositionBar, Empty } from '@/components/ui';
 import SiteSearch from '@/components/SiteSearch';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export default function Home() {
   const stats = statistics();

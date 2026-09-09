@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
   const where = m.seat?.nameBn ? `, ${m.seat.nameBn}` : '';
   return {
     title: `${m.nameBn ?? m.nameEn}`,
+    alternates: { canonical: `/mp/${m.slug}` },
     description: `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
   };
 }

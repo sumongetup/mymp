@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: PageProps<'/ason/[slug]'>): P
   const m = getMemberById(s.memberId);
   return {
     title: `${s.nameBn} আসন`,
+    alternates: { canonical: `/ason/${s.slug}` },
     description: `${s.nameBn} আসনের বর্তমান সংসদ সদস্য${m ? ` ${m.nameBn ?? m.nameEn}` : ''}। ত্রয়োদশ জাতীয় সংসদ।`,
   };
 }

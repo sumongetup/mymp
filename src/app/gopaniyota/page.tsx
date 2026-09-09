@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Page, PageHead, Card } from '@/components/ui';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/gopaniyota' },
   title: 'গোপনীয়তা নীতি ও ব্যবহারের শর্ত',
   description: 'আমার এমপি সাইট আপনার কী তথ্য রাখে (কিছুই না), আর সাইটের তথ্য কীভাবে ব্যবহার করা যায়।',
 };

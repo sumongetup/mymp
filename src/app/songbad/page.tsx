@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Page, PageHead, Card, Empty } from '@/components/ui';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/songbad' },
   title: 'সংবাদ',
   description: 'সংসদ সদস্যদের নিয়ে অনুমোদিত সংবাদমাধ্যমের শিরোনাম।',
 };

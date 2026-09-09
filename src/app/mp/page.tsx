@@ -4,6 +4,7 @@ import { Page, PageHead, Stat } from '@/components/ui';
 import MemberFilter from '@/components/MemberFilter';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/mp' },
   title: 'সব সংসদ সদস্য',
   description: 'ত্রয়োদশ জাতীয় সংসদের সব সদস্যের তালিকা, দল ও আসনসহ।',
 };

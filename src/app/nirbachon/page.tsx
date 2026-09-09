@@ -4,6 +4,7 @@ import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dat
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/nirbachon' },
   title: 'ত্রয়োদশ জাতীয় সংসদ নির্বাচন',
   description: 'ত্রয়োদশ জাতীয় সংসদ নির্বাচনের আসনভিত্তিক ফলাফল ও নির্বাচিত সদস্যদের তালিকা।',
 };

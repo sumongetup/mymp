@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: PageProps<'/dol/[slug]'>): Pr
   if (!p) return { title: 'দল পাওয়া যায়নি' };
   return {
     title: p.nameBn ?? p.abbr,
+    alternates: { canonical: `/dol/${p.slug}` },
     description: `${p.nameBn ?? p.abbr} ত্রয়োদশ জাতীয় সংসদে ${p.seats}টি আসন পেয়েছে। সদস্যদের তালিকা।`,
   };
 }

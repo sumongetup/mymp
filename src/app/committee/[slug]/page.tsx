@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: PageProps<'/committee/[slug]'
   if (!c) return { title: 'কমিটি পাওয়া যায়নি' };
   return {
     title: c.nameBn ?? c.nameEn ?? 'কমিটি',
+    alternates: { canonical: `/committee/${c.slug}` },
     description: `${c.nameBn ?? c.nameEn} — ত্রয়োদশ জাতীয় সংসদের কমিটি ও তার সদস্যবৃন্দ।`,
   };
 }
