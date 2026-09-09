@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* MY MP — "civic ledger": newspaper-calm paper tone, parliamentary green,
+   Bengali serif for headings and a humanist sans for everything else. */
+
+@theme {
+  --color-paper: #f6f4ee;
+  --color-surface: #fffdf9;
+  --color-sunk: #eceee9;
+  --color-ink: #1b1f1c;
+  --color-inksoft: #4a4f4a;
+  --color-muted: #7a7f78;
+  --color-rule: #e2ded2;
+  --color-rulesoft: #eeebe2;
+  --color-brand: #146b4f;
+  --color-branddark: #0d4d38;
+  --color-brandsoft: #e6f1ec;
+  --color-warn: #8a6212;
+  --color-warnsoft: #f7efdc;
+
+  /* Party colours, checked for colour-blind separation before use. */
+  --color-pbnp: #1f7a4f;
+  --color-pjamaat: #8cbf2a;
+  --color-pind: #5b6fb5;
+  --color-pncp: #e0641f;
+  --color-pother: #9a5fc7;
+
+  --font-sans: var(--font-hind), "Segoe UI", system-ui, sans-serif;
+  --font-serif: var(--font-noto-bn), Georgia, "Times New Roman", serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Keyboard focus must stay visible everywhere. */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,13 @@
+{
+ "parliamentNo": 13,
+ "syncedAt": "2026-09-09T07:32:53.803Z",
+ "source": "https://www.parliament.gov.bd/api",
+ "counts": {
+  "members": 349,
+  "territorial": 299,
+  "reserved": 50,
+  "parties": 11,
+  "committees": 66,
+  "committeesCurrent": 31
+ }
+}

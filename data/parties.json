@@ -1,0 +1,101 @@
+[
+ {
+  "abbr": "BNP",
+  "slug": "bnp",
+  "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
+  "nameEn": "Bangladesh Nationalist Party (BNP)",
+  "seats": 247,
+  "seatsTerritorial": 211,
+  "seatsReserved": 36
+ },
+ {
+  "abbr": "BJEI",
+  "slug": "bjei",
+  "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
+  "nameEn": "Bangladesh Jamaat-E-Islami (BJEI)",
+  "seats": 77,
+  "seatsTerritorial": 68,
+  "seatsReserved": 9
+ },
+ {
+  "abbr": "Ind",
+  "slug": "ind",
+  "nameBn": "স্বতন্ত্র",
+  "nameEn": "Independent",
+  "seats": 8,
+  "seatsTerritorial": 7,
+  "seatsReserved": 1
+ },
+ {
+  "abbr": "NCP",
+  "slug": "ncp",
+  "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
+  "nameEn": "National Citizens Party-NCP",
+  "seats": 8,
+  "seatsTerritorial": 6,
+  "seatsReserved": 2
+ },
+ {
+  "abbr": "BKM",
+  "slug": "bkm",
+  "nameBn": "বাংলাদেশ খেলাফত মজলিস",
+  "nameEn": "Bangladesh Khilafat Majlis",
+  "seats": 3,
+  "seatsTerritorial": 2,
+  "seatsReserved": 1
+ },
+ {
+  "abbr": "IMB",
+  "slug": "imb",
+  "nameBn": "ইসলামী আন্দোলন বাংলাদেশ",
+  "nameEn": "Islamic Movement Bangladesh",
+  "seats": 1,
+  "seatsTerritorial": 1,
+  "seatsReserved": 0
+ },
+ {
+  "abbr": "GOP",
+  "slug": "gop",
+  "nameBn": "গণঅধিকার পরিষদ (জিওপি)",
+  "nameEn": "Council on People",
+  "seats": 1,
+  "seatsTerritorial": 1,
+  "seatsReserved": 0
+ },
+ {
+  "abbr": "BJP",
+  "slug": "bjp",
+  "nameBn": "বাংলাদেশ জাতীয় পার্টি-বিজেপি",
+  "nameEn": "Bangladesh National Party-BJP",
+  "seats": 1,
+  "seatsTerritorial": 1,
+  "seatsReserved": 0
+ },
+ {
+  "abbr": "KM",
+  "slug": "km",
+  "nameBn": "খেলাফত মজলিস",
+  "nameEn": "Khilafat Majlis",
+  "seats": 1,
+  "seatsTerritorial": 1,
+  "seatsReserved": 0
+ },
+ {
+  "abbr": "PSM",
+  "slug": "psm",
+  "nameBn": "গণসংহতি আন্দোলন",
+  "nameEn": "People's Solidarity Movement",
+  "seats": 1,
+  "seatsTerritorial": 1,
+  "seatsReserved": 0
+ },
+ {
+  "abbr": "JAGPA",
+  "slug": "jagpa",
+  "nameBn": "জাতীয় গণতান্ত্রিক পার্টি-জাগপা",
+  "nameEn": "Jatiya Ganatantrik Party-JAGPA",
+  "seats": 1,
+  "seatsTerritorial": 0,
+  "seatsReserved": 1
+ }
+]

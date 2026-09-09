@@ -1,0 +1,3143 @@
+[
+ {
+  "no": 1,
+  "reserved": false,
+  "nameBn": "পঞ্চগড়-১",
+  "nameEn": "Panchagarh-1",
+  "slug": "panchagarh-1",
+  "boundaryBn": "(ক) পঞ্চগড় সদর, (খ) তেঁতুলিয়া এবং (গ)আটোয়ারী উপজেলা",
+  "memberId": "013000101"
+ },
+ {
+  "no": 2,
+  "reserved": false,
+  "nameBn": "পঞ্চগড়-২",
+  "nameEn": "Panchagarh-2",
+  "slug": "panchagarh-2",
+  "boundaryBn": "(ক) বোদা এবং (খ) দেবীগঞ্জ উপজেলা",
+  "memberId": "013000201"
+ },
+ {
+  "no": 3,
+  "reserved": false,
+  "nameBn": "ঠাকুরগাঁও-১",
+  "nameEn": "Thakurgaon-1",
+  "slug": "thakurgaon-1",
+  "boundaryBn": "ঠাকুরগাঁও সদর উপজেলা",
+  "memberId": "013000301"
+ },
+ {
+  "no": 4,
+  "reserved": false,
+  "nameBn": "ঠাকুরগাঁও-২",
+  "nameEn": "Thakurgaon-2",
+  "slug": "thakurgaon-2",
+  "boundaryBn": "(ক)বালিয়াডাঙ্গী, (খ) হরিপুর এবং (গ) রানিসংকাইল উপজেলার নিম্নলিখিত ইউনিয়ন সমূহ: (১)ধর্মগড় ও (২)কাশিপুর",
+  "memberId": "013000401"
+ },
+ {
+  "no": 5,
+  "reserved": false,
+  "nameBn": "ঠাকুরগাঁও-৩",
+  "nameEn": "Thakurgaon-3",
+  "slug": "thakurgaon-3",
+  "boundaryBn": "(ক)পীরগঞ্জ উপজেলা এবং (খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত রানিশংকাইল উপজেলা: (১)ধর্মগড় ও(২) কাশিপুর",
+  "memberId": "013000501"
+ },
+ {
+  "no": 6,
+  "reserved": false,
+  "nameBn": "দিনাজপুর-১",
+  "nameEn": "Dinajpur-1",
+  "slug": "dinajpur-1",
+  "boundaryBn": "(ক)বীরগঞ্জ এবং (খ)কাহারোল উপজেলা",
+  "memberId": "013000601"
+ },
+ {
+  "no": 7,
+  "reserved": false,
+  "nameBn": "দিনাজপুর-২",
+  "nameEn": "Dinajpur-2",
+  "slug": "dinajpur-2",
+  "boundaryBn": "(ক)বোচাগঞ্জ এবং(খ) বিরল উপজেলা",
+  "memberId": "013000701"
+ },
+ {
+  "no": 8,
+  "reserved": false,
+  "nameBn": "দিনাজপুর-৩",
+  "nameEn": "Dinajpur-3",
+  "slug": "dinajpur-3",
+  "boundaryBn": "দিনাজপুর সদর উপজেলা",
+  "memberId": "013000801"
+ },
+ {
+  "no": 9,
+  "reserved": false,
+  "nameBn": "দিনাজপুর-৪",
+  "nameEn": "Dinajpur-4",
+  "slug": "dinajpur-4",
+  "boundaryBn": "(ক)খানসামা এবং (খ) চিরিরবন্দর",
+  "memberId": "013000901"
+ },
+ {
+  "no": 10,
+  "reserved": false,
+  "nameBn": "দিনাজপুর-৫",
+  "nameEn": "Dinajpur-5",
+  "slug": "dinajpur-5",
+  "boundaryBn": "(ক)পার্বতীপুর এবং (খ) ফুলবাড়ী উপজেলা",
+  "memberId": "013001001"
+ },
+ {
+  "no": 11,
+  "reserved": false,
+  "nameBn": "দিনাজপুর-৬",
+  "nameEn": "Dinajpur-6",
+  "slug": "dinajpur-6",
+  "boundaryBn": "(ক)নবাবগঞ্জ,(খ) বিরামপুর,(গ) হাকিমপুর এবং (ঘ)ঘোড়াঘাট উপজেলা",
+  "memberId": "013001101"
+ },
+ {
+  "no": 12,
+  "reserved": false,
+  "nameBn": "নীলফামারী-১",
+  "nameEn": "Nilphamari-1",
+  "slug": "nilphamari-1",
+  "boundaryBn": "(ক)ডোমার এবং(খ) ডিমলা উপজেলা",
+  "memberId": "013001201"
+ },
+ {
+  "no": 13,
+  "reserved": false,
+  "nameBn": "নীলফামারী-২",
+  "nameEn": "Nilphamari-2",
+  "slug": "nilphamari-2",
+  "boundaryBn": "নীলফামারী সদর উপজেলা",
+  "memberId": "013001301"
+ },
+ {
+  "no": 14,
+  "reserved": false,
+  "nameBn": "নীলফামারী-৩",
+  "nameEn": "Nilphamari-3",
+  "slug": "nilphamari-3",
+  "boundaryBn": "জলঢাকা উপজেলা",
+  "memberId": "013001401"
+ },
+ {
+  "no": 15,
+  "reserved": false,
+  "nameBn": "নীলফামারী-৪",
+  "nameEn": "Nilphamari-4",
+  "slug": "nilphamari-4",
+  "boundaryBn": "(ক)সৈয়দপুর এবং(খ) কিশোরগঞ্জ উপজেলা",
+  "memberId": "013001501"
+ },
+ {
+  "no": 16,
+  "reserved": false,
+  "nameBn": "লালমনিরহাট-১",
+  "nameEn": "Lalmonirhat-1",
+  "slug": "lalmonirhat-1",
+  "boundaryBn": "(ক)পাটগ্রাম এবং(খ) হাতীবান্ধা উপজেলা",
+  "memberId": "013001601"
+ },
+ {
+  "no": 17,
+  "reserved": false,
+  "nameBn": "লালমনিরহাট-২",
+  "nameEn": "Lalmonirhat-2",
+  "slug": "lalmonirhat-2",
+  "boundaryBn": "(ক)কালিগঞ্জ এবং(খ)আদিতমারী উপজেলা",
+  "memberId": "013001701"
+ },
+ {
+  "no": 18,
+  "reserved": false,
+  "nameBn": "লালমনিরহাট-৩",
+  "nameEn": "Lalmonirhat-3",
+  "slug": "lalmonirhat-3",
+  "boundaryBn": "লালমনিরহাট সদর উপজেলা",
+  "memberId": "013001801"
+ },
+ {
+  "no": 19,
+  "reserved": false,
+  "nameBn": "রংপুর-১",
+  "nameEn": "Rangpur-1",
+  "slug": "rangpur-1",
+  "boundaryBn": "(ক)গংগাচড়া উপজেলা এবং(খ) রংপুর সিটি কর্পোরেশনের ওয়ার্ড- ১,২,৩,৪,৫,৬,৭ ও ৮",
+  "memberId": "013001901"
+ },
+ {
+  "no": 20,
+  "reserved": false,
+  "nameBn": "রংপুর-২",
+  "nameEn": "Rangpur-2",
+  "slug": "rangpur-2",
+  "boundaryBn": "(ক)তারাগঞ্জ এবং(খ) বদরগঞ্জ উপজেলা",
+  "memberId": "013002001"
+ },
+ {
+  "no": 21,
+  "reserved": false,
+  "nameBn": "রংপুর-৩",
+  "nameEn": "Rangpur-3",
+  "slug": "rangpur-3",
+  "boundaryBn": "(ক)রংপুর সদর উপজেলা এবং (খ)রংপুর সিটি কর্পোরেশনের- ১,২,৩,৪,৫,৬,৭ ও ৮ ব্যতীত রংপুর সিটি কর্পোরেশনের এলাকা সমূহ।",
+  "memberId": "013002101"
+ },
+ {
+  "no": 22,
+  "reserved": false,
+  "nameBn": "রংপুর-৪",
+  "nameEn": "Rangpur-4",
+  "slug": "rangpur-4",
+  "boundaryBn": "(ক)পীরগাছা এবং(খ) কাউনিয়া উপজেলা",
+  "memberId": "013002201"
+ },
+ {
+  "no": 23,
+  "reserved": false,
+  "nameBn": "রংপুর-৫",
+  "nameEn": "Rangpur-5",
+  "slug": "rangpur-5",
+  "boundaryBn": "মিঠাপুকুর উপজেলা",
+  "memberId": "013002301"
+ },
+ {
+  "no": 24,
+  "reserved": false,
+  "nameBn": "রংপুর-৬",
+  "nameEn": "Rangpur-6",
+  "slug": "rangpur-6",
+  "boundaryBn": "পীরগঞ্জ উপজেলা",
+  "memberId": "013002401"
+ },
+ {
+  "no": 25,
+  "reserved": false,
+  "nameBn": "কুড়িগ্রাম-১",
+  "nameEn": "Kurigram-1",
+  "slug": "kurigram-1",
+  "boundaryBn": "(ক)ভূরুঙ্গামারী এবং(খ) নাগেশ্বরী উপজেলা",
+  "memberId": "013002501"
+ },
+ {
+  "no": 26,
+  "reserved": false,
+  "nameBn": "কুড়িগ্রাম-২",
+  "nameEn": "Kurigram-2",
+  "slug": "kurigram-2",
+  "boundaryBn": "(ক)কুড়িগ্রাম সদর,(খ) রাজারহাট এবং(গ) ফুলবাড়ী উপজেলা",
+  "memberId": "013002601"
+ },
+ {
+  "no": 27,
+  "reserved": false,
+  "nameBn": "কুড়িগ্রাম-৩",
+  "nameEn": "Kurigram-3",
+  "slug": "kurigram-3",
+  "boundaryBn": "উলিপুর উপজেলা",
+  "memberId": "013002701"
+ },
+ {
+  "no": 28,
+  "reserved": false,
+  "nameBn": "কুড়িগ্রাম-৪",
+  "nameEn": "Kurigram-4",
+  "slug": "kurigram-4",
+  "boundaryBn": "(ক)রৌমারী,(খ) চর রাজিবপুর এবং(গ) চিলমারী উপজেলা",
+  "memberId": "013002801"
+ },
+ {
+  "no": 29,
+  "reserved": false,
+  "nameBn": "গাইবান্ধা-১",
+  "nameEn": "Gaibandha-1",
+  "slug": "gaibandha-1",
+  "boundaryBn": "সুন্দরগঞ্জ উপজেলা",
+  "memberId": "013002901"
+ },
+ {
+  "no": 30,
+  "reserved": false,
+  "nameBn": "গাইবান্ধা-২",
+  "nameEn": "Gaibandha-2",
+  "slug": "gaibandha-2",
+  "boundaryBn": "গাইবান্ধা সদর উপজেলা",
+  "memberId": "013003001"
+ },
+ {
+  "no": 31,
+  "reserved": false,
+  "nameBn": "গাইবান্ধা-৩",
+  "nameEn": "Gaibandha-3",
+  "slug": "gaibandha-3",
+  "boundaryBn": "(ক)সাদুল্যাপুর এবং(খ) পলাশবাড়ী উপজেলা",
+  "memberId": "013003101"
+ },
+ {
+  "no": 32,
+  "reserved": false,
+  "nameBn": "গাইবান্ধা-৪",
+  "nameEn": "Gaibandha-4",
+  "slug": "gaibandha-4",
+  "boundaryBn": "গোবিন্দগঞ্জ উপজেলা",
+  "memberId": "013003201"
+ },
+ {
+  "no": 33,
+  "reserved": false,
+  "nameBn": "গাইবান্ধা-৫",
+  "nameEn": "Gaibandha-5",
+  "slug": "gaibandha-5",
+  "boundaryBn": "(ক)ফুলছড়ি এবং(খ) সাঘাটা উপজেলা",
+  "memberId": "013003301"
+ },
+ {
+  "no": 34,
+  "reserved": false,
+  "nameBn": "জয়পুরহাট-১",
+  "nameEn": "Jaipurhat-1",
+  "slug": "jaipurhat-1",
+  "boundaryBn": "(ক)জয়পুরহাট সদর এবং(খ) পাঁচবিবি উপজেলা",
+  "memberId": "013003401"
+ },
+ {
+  "no": 35,
+  "reserved": false,
+  "nameBn": "জয়পুরহাট-২",
+  "nameEn": "Jaipurhat-2",
+  "slug": "jaipurhat-2",
+  "boundaryBn": "(ক)আক্কেলপুর,(খ) ক্ষেতলাল এবং(গ) কালাই উপজেলা",
+  "memberId": "013003501"
+ },
+ {
+  "no": 36,
+  "reserved": false,
+  "nameBn": "বগুড়া-১",
+  "nameEn": "Bogura-1",
+  "slug": "bogura-1",
+  "boundaryBn": "(ক)সারিয়াকান্দি এবং(খ) সোনাতলা উপজেলা",
+  "memberId": "013003601"
+ },
+ {
+  "no": 37,
+  "reserved": false,
+  "nameBn": "বগুড়া-২",
+  "nameEn": "Bogura-2",
+  "slug": "bogura-2",
+  "boundaryBn": "শিবগঞ্জ উপজেলা",
+  "memberId": "013003701"
+ },
+ {
+  "no": 38,
+  "reserved": false,
+  "nameBn": "বগুড়া-৩",
+  "nameEn": "Bogura-3",
+  "slug": "bogura-3",
+  "boundaryBn": "(ক)আদমদীঘি এবং(খ) দুপচাঁচিয়া উপজেলা",
+  "memberId": "013003801"
+ },
+ {
+  "no": 39,
+  "reserved": false,
+  "nameBn": "বগুড়া-৪",
+  "nameEn": "Bogura-4",
+  "slug": "bogura-4",
+  "boundaryBn": "(ক)কাহালু এবং (খ)নন্দীগ্রাম উপজেলা",
+  "memberId": "013003901"
+ },
+ {
+  "no": 40,
+  "reserved": false,
+  "nameBn": "বগুড়া-৫",
+  "nameEn": "Bogura-5",
+  "slug": "bogura-5",
+  "boundaryBn": "(ক)শেরপুর এবং(খ) ধুনট উপজেলা",
+  "memberId": "013004001"
+ },
+ {
+  "no": 41,
+  "reserved": false,
+  "nameBn": "বগুড়া-৬",
+  "nameEn": "Bogura-6",
+  "slug": "bogura-6",
+  "boundaryBn": "বগুড়া সদর উপজেলা",
+  "memberId": "013004101"
+ },
+ {
+  "no": 42,
+  "reserved": false,
+  "nameBn": "বগুড়া-৭",
+  "nameEn": "Bogura-7",
+  "slug": "bogura-7",
+  "boundaryBn": "(ক)গাবতলী এবং(খ) শাজাহানপুর উপজেলা",
+  "memberId": "013004201"
+ },
+ {
+  "no": 43,
+  "reserved": false,
+  "nameBn": "চাঁপাইনবাবগঞ্জ-১",
+  "nameEn": "ChapaiNawabganj-1",
+  "slug": "chapainawabganj-1",
+  "boundaryBn": "শিবগঞ্জ উপজেলা",
+  "memberId": "013004301"
+ },
+ {
+  "no": 44,
+  "reserved": false,
+  "nameBn": "চাঁপাইনবাবগঞ্জ-২",
+  "nameEn": "ChapaiNawabganj-2",
+  "slug": "chapainawabganj-2",
+  "boundaryBn": "(ক)ভোলাহাট,(খ) গোমস্তাপুর এবং(গ) নাচোল উপজেলা",
+  "memberId": "013004401"
+ },
+ {
+  "no": 45,
+  "reserved": false,
+  "nameBn": "চাঁপাইনবাবগঞ্জ-৩",
+  "nameEn": "ChapaiNawabganj-3",
+  "slug": "chapainawabganj-3",
+  "boundaryBn": "চাঁপাইনবাবগঞ্জ সদর উপজেলা",
+  "memberId": "013004501"
+ },
+ {
+  "no": 46,
+  "reserved": false,
+  "nameBn": "নওগাঁ-১",
+  "nameEn": "Naogaon-1",
+  "slug": "naogaon-1",
+  "boundaryBn": "(ক)পোরশা,(খ) সাপাহার এবং(গ) নিয়ামতপুর উপজেলা",
+  "memberId": "013004601"
+ },
+ {
+  "no": 47,
+  "reserved": false,
+  "nameBn": "নওগাঁ-২",
+  "nameEn": "Naogaon-2",
+  "slug": "naogaon-2",
+  "boundaryBn": "(ক)পত্নীতলা এবং(খ) ধামইরহাট উপজেলা",
+  "memberId": "013004701"
+ },
+ {
+  "no": 48,
+  "reserved": false,
+  "nameBn": "নওগাঁ-৩",
+  "nameEn": "Naogaon-3",
+  "slug": "naogaon-3",
+  "boundaryBn": "(ক)বদলগাছি এবং(খ) মহাদেবপুর উপজেলা",
+  "memberId": "013004801"
+ },
+ {
+  "no": 49,
+  "reserved": false,
+  "nameBn": "নওগাঁ-৪",
+  "nameEn": "Naogaon-4",
+  "slug": "naogaon-4",
+  "boundaryBn": "মান্দা উপজেলা",
+  "memberId": "013004901"
+ },
+ {
+  "no": 50,
+  "reserved": false,
+  "nameBn": "নওগাঁ-৫",
+  "nameEn": "Naogaon-5",
+  "slug": "naogaon-5",
+  "boundaryBn": "নওগাঁ সদর উপজেলা",
+  "memberId": "013005001"
+ },
+ {
+  "no": 51,
+  "reserved": false,
+  "nameBn": "নওগাঁ-৬",
+  "nameEn": "Naogaon-6",
+  "slug": "naogaon-6",
+  "boundaryBn": "(ক) রাণীনগর এবং(খ) আত্রাই উপজেলা",
+  "memberId": "013005101"
+ },
+ {
+  "no": 52,
+  "reserved": false,
+  "nameBn": "রাজশাহী-১",
+  "nameEn": "Rajshahi-1",
+  "slug": "rajshahi-1",
+  "boundaryBn": "(ক)গোদাগাড়ী এবং(খ) তানোর উপজেলা",
+  "memberId": "013005201"
+ },
+ {
+  "no": 53,
+  "reserved": false,
+  "nameBn": "রাজশাহী-২",
+  "nameEn": "Rajshahi-2",
+  "slug": "rajshahi-2",
+  "boundaryBn": "রাজশাহী সিটি কর্পোরেশনের এলাকা সমূহ",
+  "memberId": "013005301"
+ },
+ {
+  "no": 54,
+  "reserved": false,
+  "nameBn": "রাজশাহী-৩",
+  "nameEn": "Rajshahi-3",
+  "slug": "rajshahi-3",
+  "boundaryBn": "(ক)পবা এবং(খ) মোহনপুর উপজেলা",
+  "memberId": "013005401"
+ },
+ {
+  "no": 55,
+  "reserved": false,
+  "nameBn": "রাজশাহী-৪",
+  "nameEn": "Rajshahi-4",
+  "slug": "rajshahi-4",
+  "boundaryBn": "বাগমারা উপজেলা",
+  "memberId": "013005501"
+ },
+ {
+  "no": 56,
+  "reserved": false,
+  "nameBn": "রাজশাহী-৫",
+  "nameEn": "Rajshahi-5",
+  "slug": "rajshahi-5",
+  "boundaryBn": "(ক)দূর্গাপুর এবং(খ) পুঠিয়া উপজেলা",
+  "memberId": "013005601"
+ },
+ {
+  "no": 57,
+  "reserved": false,
+  "nameBn": "রাজশাহী-৬",
+  "nameEn": "Rajshahi-6",
+  "slug": "rajshahi-6",
+  "boundaryBn": "(ক)চারঘাট এবং(খ) বাঘা উপজেলা",
+  "memberId": "013005701"
+ },
+ {
+  "no": 58,
+  "reserved": false,
+  "nameBn": "নাটোর-১",
+  "nameEn": "Natore-1",
+  "slug": "natore-1",
+  "boundaryBn": "(ক)লালপুর এবং(খ) বাগাতিপাড়া",
+  "memberId": "013005801"
+ },
+ {
+  "no": 59,
+  "reserved": false,
+  "nameBn": "নাটোর-২",
+  "nameEn": "Natore-2",
+  "slug": "natore-2",
+  "boundaryBn": "(ক)নাটোর সদর এবং(খ) নলডাঙ্গা",
+  "memberId": "013005901"
+ },
+ {
+  "no": 60,
+  "reserved": false,
+  "nameBn": "নাটোর-৩",
+  "nameEn": "Natore-3",
+  "slug": "natore-3",
+  "boundaryBn": "সিংড়া উপজেলা",
+  "memberId": "013006001"
+ },
+ {
+  "no": 61,
+  "reserved": false,
+  "nameBn": "নাটোর-৪",
+  "nameEn": "Natore-4",
+  "slug": "natore-4",
+  "boundaryBn": "(ক)গুরুদাসপুর এবং (খ)বড়াইগ্রাম উপজেলা",
+  "memberId": "013006101"
+ },
+ {
+  "no": 62,
+  "reserved": false,
+  "nameBn": "সিরাজগঞ্জ-১",
+  "nameEn": "Sirajganj-1",
+  "slug": "sirajganj-1",
+  "boundaryBn": "(ক)কাজিপুর এবং(খ) সিরাজগঞ্জ সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)মেছড়া,(২) রতনকান্দি,(৩) বাগবাটি,(৪) ছোনগাছা ও(৫) বহুলী",
+  "memberId": "013006201"
+ },
+ {
+  "no": 63,
+  "reserved": false,
+  "nameBn": "সিরাজগঞ্জ-২",
+  "nameEn": "Sirajganj-2",
+  "slug": "sirajganj-2",
+  "boundaryBn": "(ক) নিম্নলিখিত ইউনিয়ন ব্যাতীত সিরাজগঞ্জ সদরঃ- (১)মেছড়া,(২) (৩)রতনকান্দি,(৪) বাগবাটি,(৫) ছোনগাছা ও(৫) বহুলী এবং(খ) কামারখন্দ",
+  "memberId": "013006301"
+ },
+ {
+  "no": 64,
+  "reserved": false,
+  "nameBn": "সিরাজগঞ্জ-৩",
+  "nameEn": "Sirajganj-3",
+  "slug": "sirajganj-3",
+  "boundaryBn": "(ক)রায়গঞ্জ এবং(খ) তাড়াশ উপজেলা",
+  "memberId": "013006401"
+ },
+ {
+  "no": 65,
+  "reserved": false,
+  "nameBn": "সিরাজগঞ্জ-৪",
+  "nameEn": "Sirajganj-4",
+  "slug": "sirajganj-4",
+  "boundaryBn": "উল্লাপাড়া উপজেলা",
+  "memberId": "013006501"
+ },
+ {
+  "no": 66,
+  "reserved": false,
+  "nameBn": "সিরাজগঞ্জ-৫",
+  "nameEn": "Sirajganj-5",
+  "slug": "sirajganj-5",
+  "boundaryBn": "(ক)বেলকুচি এবং(খ) চৌহালী উপজেলা",
+  "memberId": "013006601"
+ },
+ {
+  "no": 67,
+  "reserved": false,
+  "nameBn": "সিরাজগঞ্জ-৬",
+  "nameEn": "Sirajganj-6",
+  "slug": "sirajganj-6",
+  "boundaryBn": "শাহজাদপুর উপজেলা",
+  "memberId": "013006701"
+ },
+ {
+  "no": 68,
+  "reserved": false,
+  "nameBn": "পাবনা-১",
+  "nameEn": "Pabna-1",
+  "slug": "pabna-1",
+  "boundaryBn": "(ক)সাঁথিয়া উপজেলা এবং(খ) বেড়া উপজেলার নিম্নিলিখিত এলাকাসমূহঃ (১)বেড়া পৌরসভা, (২)হাটুরিয়া নাকালিয়া ইউনিয়ন,(৩) নতুন ভারেংগা ইউনিয়ন,(৪) চাকলা ইউনিয়ন ও(৫) কৈটোলা ইউনিয়ন",
+  "memberId": "013006801"
+ },
+ {
+  "no": 69,
+  "reserved": false,
+  "nameBn": "পাবনা-২",
+  "nameEn": "Pabna-2",
+  "slug": "pabna-2",
+  "boundaryBn": "(ক)সুজানগর এবং(খ) নিম্নিলিখিত এলাকা ব্যতীত বেড়া উপজেলাঃ (১)বেড়া পৌরসভা, (২)হাটুরিয়া নাকালিয়া ইউনিয়ন,(৩) নতুন ভারেংগা ইউনিয়ন,(৪) চাকলা ইউনিয়ন ও(৫) কৈটোলা ইউনিয়ন",
+  "memberId": "013006901"
+ },
+ {
+  "no": 70,
+  "reserved": false,
+  "nameBn": "পাবনা-৩",
+  "nameEn": "Pabna-3",
+  "slug": "pabna-3",
+  "boundaryBn": "(ক)চাটমোহর,(খ) ভাংগুড়া এবং(গ) ফরিদপুর উপজেলা",
+  "memberId": "013007001"
+ },
+ {
+  "no": 71,
+  "reserved": false,
+  "nameBn": "পাবনা-৪",
+  "nameEn": "Pabna-4",
+  "slug": "pabna-4",
+  "boundaryBn": "(ক)আটঘরিয়া এবং(খ) ঈশ্বরদী উপজেলা",
+  "memberId": "013007101"
+ },
+ {
+  "no": 72,
+  "reserved": false,
+  "nameBn": "পাবনা-৫",
+  "nameEn": "Pabna 5",
+  "slug": "pabna-5",
+  "boundaryBn": "পাবনা সদর উপজেলা",
+  "memberId": "013007201"
+ },
+ {
+  "no": 73,
+  "reserved": false,
+  "nameBn": "মেহেরপুর-১",
+  "nameEn": "Meherpur-1",
+  "slug": "meherpur-1",
+  "boundaryBn": "(ক)মেহেরপুর সদর এবং (খ)মুজিবনগর উপজেলা",
+  "memberId": "013007301"
+ },
+ {
+  "no": 74,
+  "reserved": false,
+  "nameBn": "মেহেরপুর-২",
+  "nameEn": "Meherpur-2",
+  "slug": "meherpur-2",
+  "boundaryBn": "গাংনী উপজেলা",
+  "memberId": "013007401"
+ },
+ {
+  "no": 75,
+  "reserved": false,
+  "nameBn": "কুষ্টিয়া-১",
+  "nameEn": "Kushtia-1",
+  "slug": "kushtia-1",
+  "boundaryBn": "দৌলতপুর উপজেলা",
+  "memberId": "013007501"
+ },
+ {
+  "no": 76,
+  "reserved": false,
+  "nameBn": "কুষ্টিয়া-২",
+  "nameEn": "Kushtia-2",
+  "slug": "kushtia-2",
+  "boundaryBn": "(ক)ভেড়ামারা এবং(খ) মিরপুর উপজেলা",
+  "memberId": "013007601"
+ },
+ {
+  "no": 77,
+  "reserved": false,
+  "nameBn": "কুষ্টিয়া-৩",
+  "nameEn": "Kushtia-3",
+  "slug": "kushtia-3",
+  "boundaryBn": "কুষ্টিয়া সদর উপজেলা",
+  "memberId": "013007701"
+ },
+ {
+  "no": 78,
+  "reserved": false,
+  "nameBn": "কুষ্টিয়া-৪",
+  "nameEn": "Kushtia-4",
+  "slug": "kushtia-4",
+  "boundaryBn": "(ক)কুমারখালী এবং(খ) খোকশা উপজেলা",
+  "memberId": "013007801"
+ },
+ {
+  "no": 79,
+  "reserved": false,
+  "nameBn": "চুয়াডাঙ্গা-১",
+  "nameEn": "Chuadanga-1",
+  "slug": "chuadanga-1",
+  "boundaryBn": "(ক)আলমডাঙ্গা এবং(খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত চুয়াডাঙ্গা সদর উপজেলাঃ(১) তিতুদহ,(২) বেগমপুর(৩) নেহালপুর ও(৪) গড়াইটুপি ইউনিয়ন",
+  "memberId": "013007901"
+ },
+ {
+  "no": 80,
+  "reserved": false,
+  "nameBn": "চুয়াডাঙ্গা-২",
+  "nameEn": "Chuadanga-2",
+  "slug": "chuadanga-2",
+  "boundaryBn": "(ক)দামুড়হুদা, (খ)জীবননগর এবং (গ)চুয়াডাঙ্গা সদর উপজেলার নিম্নলিখিত ইউনিয়নসমূহঃ (১) তিতুদহ,(২) বেগমপুর(৩) নেহালপুর ও(৪) গড়াইটুপি ইউনিয়ন",
+  "memberId": "013008001"
+ },
+ {
+  "no": 81,
+  "reserved": false,
+  "nameBn": "ঝিনাইদহ-১",
+  "nameEn": "Jhenaidah-1",
+  "slug": "jhenaidah-1",
+  "boundaryBn": "শৈলকূপা উপজেলা",
+  "memberId": "013008101"
+ },
+ {
+  "no": 82,
+  "reserved": false,
+  "nameBn": "ঝিনাইদহ-২",
+  "nameEn": "Jhenaidah-2",
+  "slug": "jhenaidah-2",
+  "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত ঝিনাইদহ সদরঃ নলডাঙ্গা, ঘোড়াশাল, ফুরসুন্দি ও মহারাজপুর এবং (খ)হরিণাকুণ্ডু উপজেলা",
+  "memberId": "013008201"
+ },
+ {
+  "no": 83,
+  "reserved": false,
+  "nameBn": "ঝিনাইদহ-৩",
+  "nameEn": "Jhenaidah-3",
+  "slug": "jhenaidah-3",
+  "boundaryBn": "(ক)কোর্টচাদপুর এবং(খ) মহেশপুর উপজেলা",
+  "memberId": "013008301"
+ },
+ {
+  "no": 84,
+  "reserved": false,
+  "nameBn": "ঝিনাইদহ-৪",
+  "nameEn": "Jhenaidah-4",
+  "slug": "jhenaidah-4",
+  "boundaryBn": "(ক)কালীগঞ্জ এবং(খ) ঝিনাইদহ সদর উপজেলার (১)নলডাঙ্গা,(২) ঘোড়াশাল,(৩) ফুরসুন্দি ও(৪) মহারাজপুর ইউনিয়ন",
+  "memberId": "013008401"
+ },
+ {
+  "no": 85,
+  "reserved": false,
+  "nameBn": "যশোর-১",
+  "nameEn": "Jashore-1",
+  "slug": "jashore-1",
+  "boundaryBn": "শার্শা উপজেলা",
+  "memberId": "013008501"
+ },
+ {
+  "no": 86,
+  "reserved": false,
+  "nameBn": "যশোর-২",
+  "nameEn": "Jashore-2",
+  "slug": "jashore-2",
+  "boundaryBn": "(ক)ঝিকরগাছা এবং (খ)চৌগাছা উপজেলা",
+  "memberId": "013008601"
+ },
+ {
+  "no": 87,
+  "reserved": false,
+  "nameBn": "যশোর-৩",
+  "nameEn": "Jashore-3",
+  "slug": "jashore-3",
+  "boundaryBn": "বসুন্দিয়া ইউনিয়ন ব্যতীত যশোর সদর উপজেলা",
+  "memberId": "013008701"
+ },
+ {
+  "no": 88,
+  "reserved": false,
+  "nameBn": "যশোর-৪",
+  "nameEn": "Jashore-4",
+  "slug": "jashore-4",
+  "boundaryBn": "(ক)বাঘারপাড়া,(খ) অভয়নগর এবং(গ) যশোর সদর উপজেলার বসুন্দিয়া ইউনিয়ন",
+  "memberId": "013008801"
+ },
+ {
+  "no": 89,
+  "reserved": false,
+  "nameBn": "যশোর-৫",
+  "nameEn": "Jashore-5",
+  "slug": "jashore-5",
+  "boundaryBn": "মনিরামপুর উপজেলা",
+  "memberId": "013008901"
+ },
+ {
+  "no": 90,
+  "reserved": false,
+  "nameBn": "যশোর-৬",
+  "nameEn": "Jashore-6",
+  "slug": "jashore-6",
+  "boundaryBn": "কেশবপুর উপজেলা",
+  "memberId": "013009001"
+ },
+ {
+  "no": 91,
+  "reserved": false,
+  "nameBn": "মাগুরা-১",
+  "nameEn": "Magura-1",
+  "slug": "magura-1",
+  "boundaryBn": "(ক)শ্রীপুর এবং(খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত মাগুরা সদর উপজেলাঃ(১) শত্রুজিৎপুর,(২) গোপালগ্রাম,(৩) কুচিয়ামোড়া,(৪) বেরইল পলিতা ইউনিয়ন",
+  "memberId": "013009101"
+ },
+ {
+  "no": 92,
+  "reserved": false,
+  "nameBn": "মাগুরা-২",
+  "nameEn": "Magura-2",
+  "slug": "magura-2",
+  "boundaryBn": "(ক)মহম্মদপুর উপজেলা(খ)শালিখা উপজেলা এবং(গ) মাগুরা সদর উপজেলার নিম্নলিখিত ইউনিয়নসমূহ : (১)শত্রুজিৎপুর,(২) গোপালগ্রাম, (৩)কুচিয়ামোড়া,(৪) বেরইল পলিতা ইউনিয়ন",
+  "memberId": "013009201"
+ },
+ {
+  "no": 93,
+  "reserved": false,
+  "nameBn": "নড়াইল-১",
+  "nameEn": "Narail-1",
+  "slug": "narail-1",
+  "boundaryBn": "(ক)কালিয়া এবং(খ) নড়াইল সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)কলোড়া,(২) বিচালি,(৩) ভদ্রবিলা,(৪) সিংগা শোলপুর ও(৫) শেখ হাটি",
+  "memberId": "013009301"
+ },
+ {
+  "no": 94,
+  "reserved": false,
+  "nameBn": "নড়াইল-২",
+  "nameEn": "Narail-2",
+  "slug": "narail-2",
+  "boundaryBn": "(ক)লোহাগড়া উপজেলা এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নড়াইল সদর উপজেলা:(১)কলোড়া,(২) বিচালি,(৩) ভদ্রবিলা,(৪) সিঙগা শোলপুর ও(৫) শেখ হাটি",
+  "memberId": "013009401"
+ },
+ {
+  "no": 95,
+  "reserved": false,
+  "nameBn": "বাগেরহাট-১",
+  "nameEn": "Bagerhat-1",
+  "slug": "bagerhat-1",
+  "boundaryBn": "(ক)ফকিরহাট,(খ) মোল্লাহাট এবং(গ) চিতলমারী উপজেলা",
+  "memberId": "013009501"
+ },
+ {
+  "no": 96,
+  "reserved": false,
+  "nameBn": "বাগেরহাট-২",
+  "nameEn": "Bagerhat-2",
+  "slug": "bagerhat-2",
+  "boundaryBn": "(ক)বাগেরহাট সদর এবং(খ) কচুয়া উপজেলা",
+  "memberId": "013009601"
+ },
+ {
+  "no": 97,
+  "reserved": false,
+  "nameBn": "বাগেরহাট-৩",
+  "nameEn": "Bagerhat-3",
+  "slug": "bagerhat-3",
+  "boundaryBn": "(ক)রামপাল এবং(খ) মোংলা উপজেলা",
+  "memberId": "013009701"
+ },
+ {
+  "no": 98,
+  "reserved": false,
+  "nameBn": "বাগেরহাট-৪",
+  "nameEn": "Bagerhat-4",
+  "slug": "bagerhat-4",
+  "boundaryBn": "(ক)মোড়েলগঞ্জ এবং(খ) শরণখোলা উপজেলা",
+  "memberId": "013009801"
+ },
+ {
+  "no": 99,
+  "reserved": false,
+  "nameBn": "খুলনা-১",
+  "nameEn": "Khulna-1",
+  "slug": "khulna-1",
+  "boundaryBn": "(ক)বটিয়াঘাটা এবং(খ) দাকোপ উপজেলা",
+  "memberId": "013009901"
+ },
+ {
+  "no": 100,
+  "reserved": false,
+  "nameBn": "খুলনা-২",
+  "nameEn": "Khulna-2",
+  "slug": "khulna-2",
+  "boundaryBn": "খুলনা সিটি কর্পোরেশনের ওয়ার্ড ১৬ থেকে ৩১ পর্যন্ত",
+  "memberId": "013010001"
+ },
+ {
+  "no": 101,
+  "reserved": false,
+  "nameBn": "খুলনা-৩",
+  "nameEn": "Khulna-3",
+  "slug": "khulna-3",
+  "boundaryBn": "(ক)খুলনা সিটি কর্পোরেশনের ওয়ার্ড ১ থেকে ১৫ এবং (খ)দিঘলিয়া উপজেলার আঢ়ংঘাটা ও যোগীপোল ইউনিয়ন",
+  "memberId": "013010101"
+ },
+ {
+  "no": 102,
+  "reserved": false,
+  "nameBn": "খুলনা-৪",
+  "nameEn": "Khulna-4",
+  "slug": "khulna-4",
+  "boundaryBn": "(ক)আঢ়ংঘাটা ও যোগীপোল ইউনিয়ন ব্যতীত দিঘলিয়া, (খ)রূপসা এবং (গ)তেরখাদা উপজেলা",
+  "memberId": "013010201"
+ },
+ {
+  "no": 103,
+  "reserved": false,
+  "nameBn": "খুলনা-৫",
+  "nameEn": "Khulna-5",
+  "slug": "khulna-5",
+  "boundaryBn": "(ক)ফুলতলা,(খ) ডুমুরিয়া উপজেলা এবং(গ) গিলাতলা ক্যান্টনমেন্ট এলাকা",
+  "memberId": "013010301"
+ },
+ {
+  "no": 104,
+  "reserved": false,
+  "nameBn": "খুলনা-৬",
+  "nameEn": "Khulna-6",
+  "slug": "khulna-6",
+  "boundaryBn": "(ক)কয়রা এবং(খ) পাইকগাছা উপজেলা",
+  "memberId": "013010401"
+ },
+ {
+  "no": 105,
+  "reserved": false,
+  "nameBn": "সাতক্ষীরা-১",
+  "nameEn": "Satkhira-1",
+  "slug": "satkhira-1",
+  "boundaryBn": "(ক)কলারোয়া এবং(খ) তালা উপজেলা",
+  "memberId": "013010501"
+ },
+ {
+  "no": 106,
+  "reserved": false,
+  "nameBn": "সাতক্ষীরা-২",
+  "nameEn": "Satkhira-2",
+  "slug": "satkhira-2",
+  "boundaryBn": "সাতক্ষীরা সদর উপজেলা",
+  "memberId": "013010601"
+ },
+ {
+  "no": 107,
+  "reserved": false,
+  "nameBn": "সাতক্ষীরা-৩",
+  "nameEn": "Satkhira-3",
+  "slug": "satkhira-3",
+  "boundaryBn": "(ক)আশাশুনি, (খ)দেবহাটা এবং(গ) কালিগঞ্জ উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)চাম্পাফুল,(২) ভাড়াশিমলা,(৩) তারালী ও(৪) নলতা",
+  "memberId": "013010701"
+ },
+ {
+  "no": 108,
+  "reserved": false,
+  "nameBn": "সাতক্ষীরা-৪",
+  "nameEn": "Satkhira-4",
+  "slug": "satkhira-4",
+  "boundaryBn": "(ক)শ্যামনগর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কালিগঞ্জ উপজেলাঃ (১)চাম্পাফুল,(২) ভাড়াশিমলা,(৩) তারালী ও(৪) নলতা",
+  "memberId": "013010801"
+ },
+ {
+  "no": 109,
+  "reserved": false,
+  "nameBn": "বরগুনা-১",
+  "nameEn": "Barguna-1",
+  "slug": "barguna-1",
+  "boundaryBn": "(ক)বরগুনা সদর,(খ) আমতলী এবং(গ) তালতলি উপজেলা",
+  "memberId": "013010901"
+ },
+ {
+  "no": 110,
+  "reserved": false,
+  "nameBn": "বরগুনা-২",
+  "nameEn": "Barguna-2",
+  "slug": "barguna-2",
+  "boundaryBn": "(ক)বামনা উপজেলা,(খ) পাথরঘাটা এবং(গ) বেতাগী উপজেলা",
+  "memberId": "013011001"
+ },
+ {
+  "no": 111,
+  "reserved": false,
+  "nameBn": "পটুয়াখালি-১",
+  "nameEn": "Patuakhali-1",
+  "slug": "patuakhali-1",
+  "boundaryBn": "(ক)পটুয়াখালী সদর,(খ) মির্জাগঞ্জ এবং(গ) দুমকি উপজেলা",
+  "memberId": "013011101"
+ },
+ {
+  "no": 112,
+  "reserved": false,
+  "nameBn": "পটুয়াখালি-২",
+  "nameEn": "Patuakhali-2",
+  "slug": "patuakhali-2",
+  "boundaryBn": "বাউফল উপজেলা",
+  "memberId": "013011201"
+ },
+ {
+  "no": 113,
+  "reserved": false,
+  "nameBn": "পটুয়াখালি-৩",
+  "nameEn": "Patuakhali-3",
+  "slug": "patuakhali-3",
+  "boundaryBn": "(ক)দশমিনা এবং(খ) গলাচিপা উপজেলা",
+  "memberId": "013011301"
+ },
+ {
+  "no": 114,
+  "reserved": false,
+  "nameBn": "পটুয়াখালি-৪",
+  "nameEn": "Patuakhali-4",
+  "slug": "patuakhali-4",
+  "boundaryBn": "(ক)কলাপাড়া এবং(খ) রাঙ্গাবালী উপজেলা",
+  "memberId": "013011401"
+ },
+ {
+  "no": 115,
+  "reserved": false,
+  "nameBn": "ভোলা-১",
+  "nameEn": "Bhola-1",
+  "slug": "bhola-1",
+  "boundaryBn": "ভোলা সদর উপজেলা",
+  "memberId": "013011501"
+ },
+ {
+  "no": 116,
+  "reserved": false,
+  "nameBn": "ভোলা-২",
+  "nameEn": "Bhola-2",
+  "slug": "bhola-2",
+  "boundaryBn": "(ক)দৌলতখান এবং(খ) বোরহানউদ্দিন উপজেলা",
+  "memberId": "013011601"
+ },
+ {
+  "no": 117,
+  "reserved": false,
+  "nameBn": "ভোলা-৩",
+  "nameEn": "Bhola-3",
+  "slug": "bhola-3",
+  "boundaryBn": "(ক)তজুমদ্দিন এবং(খ) লালমোহন উপজেলা",
+  "memberId": "013011701"
+ },
+ {
+  "no": 118,
+  "reserved": false,
+  "nameBn": "ভোলা-৪",
+  "nameEn": "Bhola-4",
+  "slug": "bhola-4",
+  "boundaryBn": "(ক)মনপুরা এবং(খ) চরফ্যাশন উপজেলা",
+  "memberId": "013011801"
+ },
+ {
+  "no": 119,
+  "reserved": false,
+  "nameBn": "বরিশাল-১",
+  "nameEn": "Barishal-1",
+  "slug": "barishal-1",
+  "boundaryBn": "(ক) গৌরনদী এবং (খ)আগৈলঝাড়া উপজেলা",
+  "memberId": "013011901"
+ },
+ {
+  "no": 120,
+  "reserved": false,
+  "nameBn": "বরিশাল-২",
+  "nameEn": "Barishal-2",
+  "slug": "barishal-2",
+  "boundaryBn": "(ক)উজিরপুর এবং(খ) বানারীপাড়া উপজেলা",
+  "memberId": "013012001"
+ },
+ {
+  "no": 121,
+  "reserved": false,
+  "nameBn": "বরিশাল-৩",
+  "nameEn": "Barishal-3",
+  "slug": "barishal-3",
+  "boundaryBn": "(ক)মুলাদী এবং(খ) বাবুগঞ্জ উপজেলা",
+  "memberId": "013012101"
+ },
+ {
+  "no": 122,
+  "reserved": false,
+  "nameBn": "বরিশাল-৪",
+  "nameEn": "Barishal-4",
+  "slug": "barishal-4",
+  "boundaryBn": "(ক)মেহেন্দিগঞ্জ এবং(খ) হিজলা উপজেলা",
+  "memberId": "013012201"
+ },
+ {
+  "no": 123,
+  "reserved": false,
+  "nameBn": "বরিশাল-৫",
+  "nameEn": "Barishal-5",
+  "slug": "barishal-5",
+  "boundaryBn": "(ক)বরিশাল সিটি কর্পোরেশনভুক্ত এলাকা এবং(খ) বরিশাল সদর উপজেলা",
+  "memberId": "013012301"
+ },
+ {
+  "no": 124,
+  "reserved": false,
+  "nameBn": "বরিশাল-৬",
+  "nameEn": "Barishal-6",
+  "slug": "barishal-6",
+  "boundaryBn": "বাকেরগঞ্জ উপজেলা",
+  "memberId": "013012401"
+ },
+ {
+  "no": 125,
+  "reserved": false,
+  "nameBn": "ঝালকাঠি-১",
+  "nameEn": "Jhalokathi-1",
+  "slug": "jhalokathi-1",
+  "boundaryBn": "(ক)রাজাপুর এবং (খ)কাঁঠালিয়া উপজেলা",
+  "memberId": "013012501"
+ },
+ {
+  "no": 126,
+  "reserved": false,
+  "nameBn": "ঝালকাঠি-২",
+  "nameEn": "Jhalokathi-2",
+  "slug": "jhalokathi-2",
+  "boundaryBn": "(ক)ঝালকাঠি সদর এবং(খ) নলছিটি উপজেলা",
+  "memberId": "013012601"
+ },
+ {
+  "no": 127,
+  "reserved": false,
+  "nameBn": "পিরোজপুর-১",
+  "nameEn": "Pirojpur-1",
+  "slug": "pirojpur-1",
+  "boundaryBn": "(ক)পিরোজপুর সদর,(খ) নাজিরপুর এবং (গ)ইন্দুরকানী উপজেলা",
+  "memberId": "013012701"
+ },
+ {
+  "no": 128,
+  "reserved": false,
+  "nameBn": "পিরোজপুর-২",
+  "nameEn": "Pirojpur-2",
+  "slug": "pirojpur-2",
+  "boundaryBn": "(ক)কাউখালি,(খ) ভান্ডারিয়া এবং(গ) নেছারাবাদ উপজেলা",
+  "memberId": "013012801"
+ },
+ {
+  "no": 129,
+  "reserved": false,
+  "nameBn": "পিরোজপুর-৩",
+  "nameEn": "Pirojpur-3",
+  "slug": "pirojpur-3",
+  "boundaryBn": "মঠবাড়ীয়া উপজেলা",
+  "memberId": "013012901"
+ },
+ {
+  "no": 130,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-১",
+  "nameEn": "Tangail-1",
+  "slug": "tangail-1",
+  "boundaryBn": "(ক)মধুপুর এবং(খ) ধনবাড়ী উপজেলা",
+  "memberId": "013013001"
+ },
+ {
+  "no": 131,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-২",
+  "nameEn": "Tangail-2",
+  "slug": "tangail-2",
+  "boundaryBn": "(ক)গোপালপুর এবং(খ) ভুয়াপুর উপজেলা",
+  "memberId": "013013101"
+ },
+ {
+  "no": 132,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-৩",
+  "nameEn": "Tangail-3",
+  "slug": "tangail-3",
+  "boundaryBn": "ঘাটাইল উপজেলা",
+  "memberId": "013013201"
+ },
+ {
+  "no": 133,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-৪",
+  "nameEn": "Tangail-4",
+  "slug": "tangail-4",
+  "boundaryBn": "কালিহাতী উপজেলা",
+  "memberId": "013013301"
+ },
+ {
+  "no": 134,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-৫",
+  "nameEn": "Tangail-5",
+  "slug": "tangail-5",
+  "boundaryBn": "টাংগাইল সদর উপজেলা",
+  "memberId": "013013401"
+ },
+ {
+  "no": 135,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-৬",
+  "nameEn": "Tangail-6",
+  "slug": "tangail-6",
+  "boundaryBn": "(ক)দেলদুয়ার এবং(খ) নাগরপুর উপজেলা",
+  "memberId": "013013501"
+ },
+ {
+  "no": 136,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-৭",
+  "nameEn": "Tangail-7",
+  "slug": "tangail-7",
+  "boundaryBn": "মির্জাপুর উপজেলা",
+  "memberId": "013013601"
+ },
+ {
+  "no": 137,
+  "reserved": false,
+  "nameBn": "টাঙ্গাইল-৮",
+  "nameEn": "Tangail-8",
+  "slug": "tangail-8",
+  "boundaryBn": "(ক)বাসাইল এবং (খ)সখিপুর উপজেলা",
+  "memberId": "013013701"
+ },
+ {
+  "no": 138,
+  "reserved": false,
+  "nameBn": "জামালপুর-১",
+  "nameEn": "Jamalpur-1",
+  "slug": "jamalpur-1",
+  "boundaryBn": "(ক)বকশীগঞ্জ এবং(খ) দেওয়ানগঞ্জ উপজেলা",
+  "memberId": "013013801"
+ },
+ {
+  "no": 139,
+  "reserved": false,
+  "nameBn": "জামালপুর-২",
+  "nameEn": "Jamalpur-2",
+  "slug": "jamalpur-2",
+  "boundaryBn": "ইসলামপুর উপজেলা",
+  "memberId": "013013901"
+ },
+ {
+  "no": 140,
+  "reserved": false,
+  "nameBn": "জামালপুর-৩",
+  "nameEn": "Jamalpur-3",
+  "slug": "jamalpur-3",
+  "boundaryBn": "(ক)মাদারগঞ্জ এবং(খ) মেলান্দহ উপজেলা",
+  "memberId": "013014001"
+ },
+ {
+  "no": 141,
+  "reserved": false,
+  "nameBn": "জামালপুর-৪",
+  "nameEn": "Jamalpur-4",
+  "slug": "jamalpur-4",
+  "boundaryBn": "সরিষাবাড়ী উপজেলা",
+  "memberId": "013014101"
+ },
+ {
+  "no": 142,
+  "reserved": false,
+  "nameBn": "জামালপুর-৫",
+  "nameEn": "Jamalpur-5",
+  "slug": "jamalpur-5",
+  "boundaryBn": "জামালপুর সদর উপজেলা",
+  "memberId": "013014201"
+ },
+ {
+  "no": 143,
+  "reserved": false,
+  "nameBn": "শেরপুর-১",
+  "nameEn": "Sherpur-1",
+  "slug": "sherpur-1",
+  "boundaryBn": "শেরপুর সদর উপজেলা",
+  "memberId": "013014301"
+ },
+ {
+  "no": 144,
+  "reserved": false,
+  "nameBn": "শেরপুর-২",
+  "nameEn": "Sherpur-2",
+  "slug": "sherpur-2",
+  "boundaryBn": "(ক)নকলা এবং(খ) নালিতাবাড়ী উপজেলা",
+  "memberId": "013014401"
+ },
+ {
+  "no": 145,
+  "reserved": false,
+  "nameBn": "শেরপুর-৩",
+  "nameEn": "Sherpur-3",
+  "slug": "sherpur-3",
+  "boundaryBn": "(ক)শ্রীবরদী এবং(খ) ঝিনাইগাতী উপজেলা",
+  "memberId": "013014501"
+ },
+ {
+  "no": 146,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-১",
+  "nameEn": "Mymensingh-1",
+  "slug": "mymensingh-1",
+  "boundaryBn": "(ক)হালুয়াঘাট এবং(খ) ধোবাউড়া উপজেলা",
+  "memberId": "013014601"
+ },
+ {
+  "no": 147,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-২",
+  "nameEn": "Mymensingh-2",
+  "slug": "mymensingh-2",
+  "boundaryBn": "(ক)ফুলপুর এবং(খ) তারাকান্দা উপজেলা",
+  "memberId": "013014701"
+ },
+ {
+  "no": 148,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-৩",
+  "nameEn": "Mymensingh-3",
+  "slug": "mymensingh-3",
+  "boundaryBn": "গৌরীপুর উপজেলা",
+  "memberId": "013014801"
+ },
+ {
+  "no": 149,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-৪",
+  "nameEn": "Mymensingh-4",
+  "slug": "mymensingh-4",
+  "boundaryBn": "(ক)ময়মনসিংহ সিটি কর্পোরেশনভুক্ত এলাকা এবং (খ) ময়মনসিংহ সদর উপজেলা",
+  "memberId": "013014901"
+ },
+ {
+  "no": 150,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-৫",
+  "nameEn": "Mymensingh-5",
+  "slug": "mymensingh-5",
+  "boundaryBn": "মুক্তাগাছা উপজেলা",
+  "memberId": "013015001"
+ },
+ {
+  "no": 151,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-৬",
+  "nameEn": "Mymensingh-6",
+  "slug": "mymensingh-6",
+  "boundaryBn": "ফুলবাড়ীয়া উপজেলা",
+  "memberId": "013015101"
+ },
+ {
+  "no": 152,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-৭",
+  "nameEn": "Mymensingh-7",
+  "slug": "mymensingh-7",
+  "boundaryBn": "ত্রিশাল উপজেলা",
+  "memberId": "013015201"
+ },
+ {
+  "no": 153,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-৮",
+  "nameEn": "Mymensingh-8",
+  "slug": "mymensingh-8",
+  "boundaryBn": "ঈশ্বরগঞ্জ উপজেলা",
+  "memberId": "013015301"
+ },
+ {
+  "no": 154,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-৯",
+  "nameEn": "Mymensingh-9",
+  "slug": "mymensingh-9",
+  "boundaryBn": "নান্দাইল উপজেলা",
+  "memberId": "013015401"
+ },
+ {
+  "no": 155,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-১০",
+  "nameEn": "Mymensingh-10",
+  "slug": "mymensingh-10",
+  "boundaryBn": "গফরগাঁও উপজেলা",
+  "memberId": "013015501"
+ },
+ {
+  "no": 156,
+  "reserved": false,
+  "nameBn": "ময়মনসিংহ-১১",
+  "nameEn": "Mymensingh-11",
+  "slug": "mymensingh-11",
+  "boundaryBn": "ভালুকা উপজেলা",
+  "memberId": "013015601"
+ },
+ {
+  "no": 157,
+  "reserved": false,
+  "nameBn": "নেত্রকোনা-১",
+  "nameEn": "Netrokona-1",
+  "slug": "netrokona-1",
+  "boundaryBn": "(ক)কলমাকান্দা এবং(খ) দূর্গাপুর উপজেলা",
+  "memberId": "013015701"
+ },
+ {
+  "no": 158,
+  "reserved": false,
+  "nameBn": "নেত্রকোনা-২",
+  "nameEn": "Netrokona-2",
+  "slug": "netrokona-2",
+  "boundaryBn": "(ক)নেত্রকোনা সদর এবং(খ) বারহাট্টা উপজেলা",
+  "memberId": "013015801"
+ },
+ {
+  "no": 159,
+  "reserved": false,
+  "nameBn": "নেত্রকোনা-৩",
+  "nameEn": "Netrokona-3",
+  "slug": "netrokona-3",
+  "boundaryBn": "(ক)আটপাড়া এবং(খ) কেন্দুয়া উপজেলা",
+  "memberId": "013015901"
+ },
+ {
+  "no": 160,
+  "reserved": false,
+  "nameBn": "নেত্রকোনা-৪",
+  "nameEn": "Netrokona-4",
+  "slug": "netrokona-4",
+  "boundaryBn": "(ক)মোহনগঞ্জ,(খ) মদন এবং(গ) খালিয়াজুড়ী উপজেলা",
+  "memberId": "013016001"
+ },
+ {
+  "no": 161,
+  "reserved": false,
+  "nameBn": "নেত্রকোনা-৫",
+  "nameEn": "Netrokona-5",
+  "slug": "netrokona-5",
+  "boundaryBn": "পূর্বধলা উপজেলা",
+  "memberId": "013016101"
+ },
+ {
+  "no": 162,
+  "reserved": false,
+  "nameBn": "কিশোরগঞ্জ-১",
+  "nameEn": "Kishoreganj-1",
+  "slug": "kishoreganj-1",
+  "boundaryBn": "(ক)কিশোরগঞ্জ সদর এবং(খ) হোসেনপুর উপজেলা",
+  "memberId": "013016201"
+ },
+ {
+  "no": 163,
+  "reserved": false,
+  "nameBn": "কিশোরগঞ্জ-২",
+  "nameEn": "Kishoreganj-2",
+  "slug": "kishoreganj-2",
+  "boundaryBn": "(ক)কটিয়াদী এবং(খ) পাকুন্দিয়া উপজেলা",
+  "memberId": "013016301"
+ },
+ {
+  "no": 164,
+  "reserved": false,
+  "nameBn": "কিশোরগঞ্জ-৩",
+  "nameEn": "Kishoreganj-3",
+  "slug": "kishoreganj-3",
+  "boundaryBn": "(ক)তাড়াইল এবং(খ) করিমগঞ্জ উপজেলা",
+  "memberId": "013016401"
+ },
+ {
+  "no": 165,
+  "reserved": false,
+  "nameBn": "কিশোরগঞ্জ-৪",
+  "nameEn": "Kishoreganj-4",
+  "slug": "kishoreganj-4",
+  "boundaryBn": "(ক)ইটনা,(খ) মিঠামইন এবং(গ) অষ্টগ্রাম উপজেলা",
+  "memberId": "013016501"
+ },
+ {
+  "no": 166,
+  "reserved": false,
+  "nameBn": "কিশোরগঞ্জ-৫",
+  "nameEn": "Kishoreganj-5",
+  "slug": "kishoreganj-5",
+  "boundaryBn": "(ক)নিকলী এবং(খ) বাজিতপুর উপজেলা",
+  "memberId": "013016601"
+ },
+ {
+  "no": 167,
+  "reserved": false,
+  "nameBn": "কিশোরগঞ্জ-৬",
+  "nameEn": "Kishoreganj-6",
+  "slug": "kishoreganj-6",
+  "boundaryBn": "(ক)কুলিয়ারচর এবং(খ) ভৈরব উপজেলা",
+  "memberId": "013016701"
+ },
+ {
+  "no": 168,
+  "reserved": false,
+  "nameBn": "মানিকগঞ্জ-১",
+  "nameEn": "Manikganj-1",
+  "slug": "manikganj-1",
+  "boundaryBn": "(ক)দৌলতপুর,(খ) ঘিওর এবং(গ) শিবালয় উপজেলা",
+  "memberId": "013016801"
+ },
+ {
+  "no": 169,
+  "reserved": false,
+  "nameBn": "মানিকগঞ্জ-২",
+  "nameEn": "Manikganj-2",
+  "slug": "manikganj-2",
+  "boundaryBn": "(ক)সিঙ্গাইর,(খ) হরিরামপুর এবং(গ) মানিকগঞ্জ সদর উপজেলার হাটিপাড়া, ভাড়ারিয়া ও পুটাইল ইউনিয়ন সমূহ",
+  "memberId": "013016901"
+ },
+ {
+  "no": 170,
+  "reserved": false,
+  "nameBn": "মানিকগঞ্জ-৩",
+  "nameEn": "Manikganj-3",
+  "slug": "manikganj-3",
+  "boundaryBn": "(ক)হাটিপাড়া, ভাড়ারিয়া ও পুটাইল ইউনিয়ন সমূহ ব্যতীত মানিকগঞ্জ সদর এবং(খ) সাটুরিয়া উপজেলা",
+  "memberId": "013017001"
+ },
+ {
+  "no": 171,
+  "reserved": false,
+  "nameBn": "মুন্সিগঞ্জ-১",
+  "nameEn": "Munshiganj-1",
+  "slug": "munshiganj-1",
+  "boundaryBn": "(ক)শ্রীনগর এবং(খ) সিরাজদিখান উপজেলা",
+  "memberId": "013017101"
+ },
+ {
+  "no": 172,
+  "reserved": false,
+  "nameBn": "মুন্সিগঞ্জ-২",
+  "nameEn": "Munshiganj-2",
+  "slug": "munshiganj-2",
+  "boundaryBn": "(ক)লৌহজং এবং(খ) টংগীবাড়ী উপজেলা",
+  "memberId": "013017201"
+ },
+ {
+  "no": 173,
+  "reserved": false,
+  "nameBn": "মুন্সিগঞ্জ-৩",
+  "nameEn": "Munshiganj-3",
+  "slug": "munshiganj-3",
+  "boundaryBn": "(ক)মুন্সীগঞ্জ সদর এবং(খ) গজারিয়া উপজেলা",
+  "memberId": "013017301"
+ },
+ {
+  "no": 174,
+  "reserved": false,
+  "nameBn": "ঢাকা-১",
+  "nameEn": "Dhaka-1",
+  "slug": "dhaka-1",
+  "boundaryBn": "(ক)দোহার এবং(খ) নবাবগঞ্জ উপজেলা",
+  "memberId": "013017401"
+ },
+ {
+  "no": 175,
+  "reserved": false,
+  "nameBn": "ঢাকা-২",
+  "nameEn": "Dhaka-2",
+  "slug": "dhaka-2",
+  "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কেরানিগঞ্জ উপজেলাঃ(১) জিনজিরা, (২)আগানগর,(৩) তেঘরিয়া,(৪) কোন্ডা ও(৫) শুভাট্যা, (খ)ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড ৫৫,৫৬, ও ৫৭ এবং (গ)সাভার উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) আমিনবাজার,(২) তেতুলঝড়া ও(৩) ভাকুর্তা",
+  "memberId": "013017501"
+ },
+ {
+  "no": 176,
+  "reserved": false,
+  "nameBn": "ঢাকা-৩",
+  "nameEn": "Dhaka-3",
+  "slug": "dhaka-3",
+  "boundaryBn": "কেরানীগঞ্জ উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)জিনজিরা,(২) আগানগর,(৩) তেঘরিয়া,(৪) কোন্ডা ও(৫) শুভাট্যা",
+  "memberId": "013017601"
+ },
+ {
+  "no": 177,
+  "reserved": false,
+  "nameBn": "ঢাকা-৪",
+  "nameEn": "Dhaka-4",
+  "slug": "dhaka-4",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ৪৭,৫১,৫২,৫৩,৫৪,৫৮ এবং ৫৯",
+  "memberId": "013017701"
+ },
+ {
+  "no": 178,
+  "reserved": false,
+  "nameBn": "ঢাকা-৫",
+  "nameEn": "Dhaka-5",
+  "slug": "dhaka-5",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড-৪৮,৪৯,৫০,৬০,৬১,৬২,৬৩,৬৪,৬৫,৬৬,৬৭,৬৮,৬৯, এবং ৭০",
+  "memberId": "013017801"
+ },
+ {
+  "no": 179,
+  "reserved": false,
+  "nameBn": "ঢাকা-৬",
+  "nameEn": "Dhaka-6",
+  "slug": "dhaka-6",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড-৩৪,৩৭,৩৮,৩৯,৪০,৪১,৪২,৪৩,৪৪,৪৫ ও ৪৬",
+  "memberId": "013017901"
+ },
+ {
+  "no": 180,
+  "reserved": false,
+  "nameBn": "ঢাকা-৭",
+  "nameEn": "Dhaka-7",
+  "slug": "dhaka-7",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২৩,২৪,২৫,২৬,২৭,২৮,২৯,৩০,৩১,৩২,৩৩,৩৫, ও ৩৬",
+  "memberId": "013018001"
+ },
+ {
+  "no": 181,
+  "reserved": false,
+  "nameBn": "ঢাকা-৮",
+  "nameEn": "Dhaka-8",
+  "slug": "dhaka-8",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ৮,৯,১০,১১,১২,১৩,১৯,২০,২১",
+  "memberId": "013018101"
+ },
+ {
+  "no": 182,
+  "reserved": false,
+  "nameBn": "ঢাকা-৯",
+  "nameEn": "Dhaka-9",
+  "slug": "dhaka-9",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ১,২,৩,৪,৫,৬,৭,৭১,৭২,৭৩,৭৪ ও ৭৫",
+  "memberId": "013018201"
+ },
+ {
+  "no": 183,
+  "reserved": false,
+  "nameBn": "ঢাকা-১০",
+  "nameEn": "Dhaka-10",
+  "slug": "dhaka-10",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ১৪,১৫,১৬,১৭,১৮ ও ২২",
+  "memberId": "013018301"
+ },
+ {
+  "no": 184,
+  "reserved": false,
+  "nameBn": "ঢাকা-১১",
+  "nameEn": "Dhaka-11",
+  "slug": "dhaka-11",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২১,২২,২৩,৩৭,৩৮,৩৯,৪০,৪১, ও ৪২",
+  "memberId": "013018401"
+ },
+ {
+  "no": 185,
+  "reserved": false,
+  "nameBn": "ঢাকা-১২",
+  "nameEn": "Dhaka-12",
+  "slug": "dhaka-12",
+  "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২৪,২৫,২৬,২৭,৩৫ ও ৩৬",
+  "memberId": "013018501"
+ },
+ {
+  "no": 186,
+  "reserved": false,
+  "nameBn": "ঢাকা-১৩",
+  "nameEn": "Dhaka-13",
+  "slug": "dhaka-13",
+  "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ২৮,২৯,৩০,৩১,৩২,৩৩, ও ৩৪",
+  "memberId": "013018601"
+ },
+ {
+  "no": 187,
+  "reserved": false,
+  "nameBn": "ঢাকা-১৪",
+  "nameEn": "Dhaka-14",
+  "slug": "dhaka-14",
+  "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড ৭ থেকে ১২ পর্যন্ত এবং (খ)সাভার উপজেলার কাউন্দিয়া ইউনিয়ন",
+  "memberId": "013018701"
+ },
+ {
+  "no": 188,
+  "reserved": false,
+  "nameBn": "ঢাকা-১৫",
+  "nameEn": "Dhaka-15",
+  "slug": "dhaka-15",
+  "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০৪,১৩,১৪, ও ১৬",
+  "memberId": "013018801"
+ },
+ {
+  "no": 189,
+  "reserved": false,
+  "nameBn": "ঢাকা-১৬",
+  "nameEn": "Dhaka-16",
+  "slug": "dhaka-16",
+  "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০২,০৩,০৫, ও ০৬",
+  "memberId": "013018901"
+ },
+ {
+  "no": 190,
+  "reserved": false,
+  "nameBn": "ঢাকা-১৭",
+  "nameEn": "Dhaka-17",
+  "slug": "dhaka-17",
+  "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ১৫,১৮,১৯ ও ২০ এবং (খ)ঢাকা ক্যান্টনমেন্ট এলাকা",
+  "memberId": "013019001"
+ },
+ {
+  "no": 191,
+  "reserved": false,
+  "nameBn": "ঢাকা-১৮",
+  "nameEn": "Dhaka-18",
+  "slug": "dhaka-18",
+  "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০১,১৭,৪৩,৪৪,৪৫,৪৬,৪৭,৪৮,৪৯,৫০,৫১,৫২,৫৩,৫৪ ও (খ)ঢাকা বিমানবন্দর উপজেলা",
+  "memberId": "013019101"
+ },
+ {
+  "no": 192,
+  "reserved": false,
+  "nameBn": "ঢাকা-১৯",
+  "nameEn": "Dhaka-19",
+  "slug": "dhaka-19",
+  "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত সাভার উপজেলালঃ (১)আমিনবাজার, (২)তেতুলঝড়া,(৩) ভাকুর্তা ও(৪) কাউন্দিয়া ইউনিয়ন",
+  "memberId": "013019201"
+ },
+ {
+  "no": 193,
+  "reserved": false,
+  "nameBn": "ঢাকা-২০",
+  "nameEn": "Dhaka-20",
+  "slug": "dhaka-20",
+  "boundaryBn": "ধামরাই উপজেলা",
+  "memberId": "013019301"
+ },
+ {
+  "no": 194,
+  "reserved": false,
+  "nameBn": "গাজীপুর-১",
+  "nameEn": "Gazipur-1",
+  "slug": "gazipur-1",
+  "boundaryBn": "(ক)কালিয়াকৈর এবং(খ) গাজীপুর সিটি কর্পোরেশনের ১ হতে ১৮ নং ওয়ার্ড",
+  "memberId": "013019401"
+ },
+ {
+  "no": 195,
+  "reserved": false,
+  "nameBn": "গাজীপুর-২",
+  "nameEn": "Gazipur-2",
+  "slug": "gazipur-2",
+  "boundaryBn": "(ক)গাজীপুর সিটি কর্পোরেশনের ১৯ হতে ৩৯ নং ওয়ার্ড, (খ)গাজীপুর সিটি কর্পোরেশনের ৪৩ হতে ৫৭ নং ওয়ার্ড এবং (গ)গাজীপুর ক্যান্টনমেন্ট এলাকা",
+  "memberId": "013019501"
+ },
+ {
+  "no": 196,
+  "reserved": false,
+  "nameBn": "গাজীপুর-৩",
+  "nameEn": "Gazipur-3",
+  "slug": "gazipur-3",
+  "boundaryBn": "(ক)শ্রীপুর এবং (খ)গাজিপুর সদর উপজেলারঃ মির্জাপুর, ভাওয়াল গড় ও পিরুজালী ইউনিয়ন",
+  "memberId": "013019601"
+ },
+ {
+  "no": 197,
+  "reserved": false,
+  "nameBn": "গাজীপুর-৪",
+  "nameEn": "Gazipur-4",
+  "slug": "gazipur-4",
+  "boundaryBn": "কাপাসিয়া উপজেলা",
+  "memberId": "013019701"
+ },
+ {
+  "no": 198,
+  "reserved": false,
+  "nameBn": "গাজীপুর-৫",
+  "nameEn": "Gazipur-5",
+  "slug": "gazipur-5",
+  "boundaryBn": "(ক)কালীগঞ্জ,(খ) গাজীপুর সিটি কর্পোরেশনের ৪০ হতে ৪২ নং ওয়ার্ড এবং (গ)গাজিপুর সদর উপজেলার বাড়িয়া ইউনিয়ন",
+  "memberId": "013019801"
+ },
+ {
+  "no": 199,
+  "reserved": false,
+  "nameBn": "নরসিংদী-১",
+  "nameEn": "Narsingdi-1",
+  "slug": "narsingdi-1",
+  "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নরসিংদী সদর উপজেলাঃ (১)আমদিয়া, (২)পাঁচদোনা ও(৩) মেহেরপাড়া",
+  "memberId": "013019901"
+ },
+ {
+  "no": 200,
+  "reserved": false,
+  "nameBn": "নরসিংদী-২",
+  "nameEn": "Narsingdi-2",
+  "slug": "narsingdi-2",
+  "boundaryBn": "পলাশ এবং নরসিংদী সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)আমদিয়া,(২) পাঁচদোনা,(৩) মেহেরপাড়া",
+  "memberId": "013020001"
+ },
+ {
+  "no": 201,
+  "reserved": false,
+  "nameBn": "নরসিংদী-৩",
+  "nameEn": "Narsingdi-3",
+  "slug": "narsingdi-3",
+  "boundaryBn": "শিবপুর উপজেলা",
+  "memberId": "013020101"
+ },
+ {
+  "no": 202,
+  "reserved": false,
+  "nameBn": "নরসিংদী-৪",
+  "nameEn": "Narsingdi-4",
+  "slug": "narsingdi-4",
+  "boundaryBn": "(ক)মনোহরদী এবং(খ) বেলাব উপজেলা",
+  "memberId": "013020201"
+ },
+ {
+  "no": 203,
+  "reserved": false,
+  "nameBn": "নরসিংদী-৫",
+  "nameEn": "Narsingdi-5",
+  "slug": "narsingdi-5",
+  "boundaryBn": "রায়পুরা উপজেলা",
+  "memberId": "013020301"
+ },
+ {
+  "no": 204,
+  "reserved": false,
+  "nameBn": "নারায়ণগঞ্জ-১",
+  "nameEn": "Narayanganj-1",
+  "slug": "narayanganj-1",
+  "boundaryBn": "রূপগঞ্জ উপজেলা",
+  "memberId": "013020401"
+ },
+ {
+  "no": 205,
+  "reserved": false,
+  "nameBn": "নারায়ণগঞ্জ-২",
+  "nameEn": "Narayanganj-2",
+  "slug": "narayanganj-2",
+  "boundaryBn": "আড়াইহাজার উপজেলা",
+  "memberId": "013020501"
+ },
+ {
+  "no": 206,
+  "reserved": false,
+  "nameBn": "নারায়ণগঞ্জ-৩",
+  "nameEn": "Narayanganj-3",
+  "slug": "narayanganj-3",
+  "boundaryBn": "সোনারগাঁও উপজেলা",
+  "memberId": "013020601"
+ },
+ {
+  "no": 207,
+  "reserved": false,
+  "nameBn": "নারায়ণগঞ্জ-৪",
+  "nameEn": "Narayanganj-4",
+  "slug": "narayanganj-4",
+  "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নারায়ণগঞ্জ সদর উপজেলাঃ (১)আলির টেক,(২) গোগনগর এবং(খ) নারায়ণগঞ্জ সিটি কর্পোরেশনের ওয়ার্ড নং ০১,০২,০৩,০৪,০৫,০৬,০৭,০৮,০৯ ও ১০",
+  "memberId": "013020701"
+ },
+ {
+  "no": 208,
+  "reserved": false,
+  "nameBn": "নারায়ণগঞ্জ-৫",
+  "nameEn": "Narayanganj-5",
+  "slug": "narayanganj-5",
+  "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ নারায়ণগঞ্জ সদর উপজেলাঃ (১)আলিরটেক, (২)গোগননগর,(খ) বন্দর উপজেলা এবং (গ)নারায়ণগঞ্জ সিটি কর্পোরেশনের ওয়ার্ড নং ১১,১২,১৩,১৪,১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,২৪,২৫,২৬ ও ২৭",
+  "memberId": "013020801"
+ },
+ {
+  "no": 209,
+  "reserved": false,
+  "nameBn": "রাজবাড়ী-১",
+  "nameEn": "Rajbari-1",
+  "slug": "rajbari-1",
+  "boundaryBn": "(ক)রাজবাড়ী সদর এবং(খ) গোয়ালন্দ উপজেলা",
+  "memberId": "013020901"
+ },
+ {
+  "no": 210,
+  "reserved": false,
+  "nameBn": "রাজবাড়ী-২",
+  "nameEn": "Rajbari-2",
+  "slug": "rajbari-2",
+  "boundaryBn": "(ক)পাংশা, (খ)কালুখালী এবং(গ) বালিয়াকান্দি উপজেলা",
+  "memberId": "013021001"
+ },
+ {
+  "no": 211,
+  "reserved": false,
+  "nameBn": "ফরিদপুর-১",
+  "nameEn": "Faridpur-1",
+  "slug": "faridpur-1",
+  "boundaryBn": "(ক)মধুখালী,(খ) বোয়ালমারী এবং(গ) আলফাডাংগা উপজেলা",
+  "memberId": "013021101"
+ },
+ {
+  "no": 212,
+  "reserved": false,
+  "nameBn": "ফরিদপুর-২",
+  "nameEn": "Faridpur-2",
+  "slug": "faridpur-2",
+  "boundaryBn": "(ক)নগরকান্দা,(খ) সালথা উপজেলা",
+  "memberId": "013021201"
+ },
+ {
+  "no": 213,
+  "reserved": false,
+  "nameBn": "ফরিদপুর-৩",
+  "nameEn": "Faridpur-3",
+  "slug": "faridpur-3",
+  "boundaryBn": "ফরিদপুর সদর উপজেলা",
+  "memberId": "013021301"
+ },
+ {
+  "no": 214,
+  "reserved": false,
+  "nameBn": "ফরিদপুর-৪",
+  "nameEn": "Faridpur-4",
+  "slug": "faridpur-4",
+  "boundaryBn": "(ক)ভাঙ্গা, (খ)চরভদ্রাসন এবং (গ) সদরপুর উপজেলা",
+  "memberId": "013021401"
+ },
+ {
+  "no": 215,
+  "reserved": false,
+  "nameBn": "গোপালগঞ্জ-১",
+  "nameEn": "Gopalgonj-1",
+  "slug": "gopalgonj-1",
+  "boundaryBn": "(ক)মুকসুদপুর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কাশিয়ানী উপজেলাঃ(১) সিঙ্গা,(২) হাতিয়াড়া,(৩) পুইশুর,(৪) বেথুড়ী,(৫) নিজামকান্দি,(৬) ওড়াকান্দি,(৭) ফুকরা",
+  "memberId": "013021501"
+ },
+ {
+  "no": 216,
+  "reserved": false,
+  "nameBn": "গোপালগঞ্জ-২",
+  "nameEn": "Gopalgonj-2",
+  "slug": "gopalgonj-2",
+  "boundaryBn": "(ক)গোপালগঞ্জ সদর এবং (খ)কাশিয়ানী উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) সিঙ্গা,(২) হাতিয়াড়া,(৩) পুইশুর,(৪) বেথুড়ী,(৫) নিজামকান্দি, (৬)ওড়াকান্দি ও(৭) ফুকরা",
+  "memberId": "013021601"
+ },
+ {
+  "no": 217,
+  "reserved": false,
+  "nameBn": "গোপালগঞ্জ-৩",
+  "nameEn": "Gopalgonj-3",
+  "slug": "gopalgonj-3",
+  "boundaryBn": "(ক)টুঙ্গীপাড়া এবং(খ) কোটালীপাড়া উপজেলা",
+  "memberId": "013021701"
+ },
+ {
+  "no": 218,
+  "reserved": false,
+  "nameBn": "মাদারিপুর-১",
+  "nameEn": "Madaripur-1",
+  "slug": "madaripur-1",
+  "boundaryBn": "শিবচর উপজেলা",
+  "memberId": "013021801"
+ },
+ {
+  "no": 219,
+  "reserved": false,
+  "nameBn": "মাদারিপুর-২",
+  "nameEn": "Madaripur-2",
+  "slug": "madaripur-2",
+  "boundaryBn": "(ক)রাজৈর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত মাদারীপুর সদর উপজেলাঃ (১)খোয়াজপুর,(২) ঝাউদি,(৩) ঘটমাঝি,(৪) মস্তফাপুর ও (৫)কেন্দুয়া",
+  "memberId": "013021901"
+ },
+ {
+  "no": 220,
+  "reserved": false,
+  "nameBn": "মাদারিপুর-৩",
+  "nameEn": "Madaripur-3",
+  "slug": "madaripur-3",
+  "boundaryBn": "(ক)কালকিনি (খ)ডাসার উপজেলা এবং(গ) মাদারিপুর সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) খোয়াজপুর,(২) ঝাউদি,(৩) ঘটমাঝি, (৪)মস্তফাপুর ও(৫) কেন্দুয়া",
+  "memberId": "013022001"
+ },
+ {
+  "no": 221,
+  "reserved": false,
+  "nameBn": "শরিয়তপুর-১",
+  "nameEn": "Shariatpur-1",
+  "slug": "shariatpur-1",
+  "boundaryBn": "(ক)শরীয়তপুর সদর এবং(খ) জাজিরা উপজেলা",
+  "memberId": "013022101"
+ },
+ {
+  "no": 222,
+  "reserved": false,
+  "nameBn": "শরিয়তপুর-২",
+  "nameEn": "Shariatpur-2",
+  "slug": "shariatpur-2",
+  "boundaryBn": "(ক)নড়িয়া এবং(খ) সখিপুর থানা, ভেদরগঞ্জ উপজেলা",
+  "memberId": "013022201"
+ },
+ {
+  "no": 223,
+  "reserved": false,
+  "nameBn": "শরিয়তপুর-৩",
+  "nameEn": "Shariatpur-3",
+  "slug": "shariatpur-3",
+  "boundaryBn": "(ক) ডামুড্যা উপজেলা (খ) গোসাইরহাট উপজেলা (গ) ভেদরগঞ্জ থানা,উপজেলা-ভেদরগঞ্জ",
+  "memberId": "013022301"
+ },
+ {
+  "no": 224,
+  "reserved": false,
+  "nameBn": "সুনামগঞ্জ-১",
+  "nameEn": "Sunamganj-1",
+  "slug": "sunamganj-1",
+  "boundaryBn": "(ক)ধর্মপাশা,(খ)মধ্যনগর(গ) তাহিরপুর এবং(ঘ) জামালগঞ্জ উপজেলা",
+  "memberId": "013022401"
+ },
+ {
+  "no": 225,
+  "reserved": false,
+  "nameBn": "সুনামগঞ্জ-২",
+  "nameEn": "Sunamganj-2",
+  "slug": "sunamganj-2",
+  "boundaryBn": "(ক)দিরাই এবং(খ) শাল্লা উপজেলা",
+  "memberId": "013022501"
+ },
+ {
+  "no": 226,
+  "reserved": false,
+  "nameBn": "সুনামগঞ্জ-৩",
+  "nameEn": "Sunamganj-3",
+  "slug": "sunamganj-3",
+  "boundaryBn": "(ক)জগন্নাথপুর এবং(খ) শান্তিগঞ্জ উপজেলা",
+  "memberId": "013022601"
+ },
+ {
+  "no": 227,
+  "reserved": false,
+  "nameBn": "সুনামগঞ্জ-৪",
+  "nameEn": "Sunamganj-4",
+  "slug": "sunamganj-4",
+  "boundaryBn": "(ক)সুনামগঞ্জ সদর এবং(খ) বিশ্বম্ভরপুর উপজেলা",
+  "memberId": "013022701"
+ },
+ {
+  "no": 228,
+  "reserved": false,
+  "nameBn": "সুনামগঞ্জ-৫",
+  "nameEn": "Sunamganj-5",
+  "slug": "sunamganj-5",
+  "boundaryBn": "(ক)ছাতক এবং(খ) দোয়ারাবাজার উপজেলা",
+  "memberId": "013022801"
+ },
+ {
+  "no": 229,
+  "reserved": false,
+  "nameBn": "সিলেট-১",
+  "nameEn": "Sylhet-1",
+  "slug": "sylhet-1",
+  "boundaryBn": "(ক)সিলেট সিটি কর্পোরেশনের ওয়ার্ড নম্বর-১,২,৩,৪,৫,৬,৭,৮,৯,১০,১১,১২,১৩,১৪,১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,২৪,২৫,২৬,২৭,৩১,৩২,৩৩,৩৪,৩৫,৩৬,৩৭,৩৮,৩৯ এবং (খ) সিলেট সদর উপজেলা",
+  "memberId": "013022901"
+ },
+ {
+  "no": 230,
+  "reserved": false,
+  "nameBn": "সিলেট-২",
+  "nameEn": "Sylhet-2",
+  "slug": "sylhet-2",
+  "boundaryBn": "(ক)বিশ্বনাথ এবং(খ) ওসমানী নগর উপজেলা",
+  "memberId": "013023001"
+ },
+ {
+  "no": 231,
+  "reserved": false,
+  "nameBn": "সিলেট-৩",
+  "nameEn": "Sylhet-3",
+  "slug": "sylhet-3",
+  "boundaryBn": "(ক) সিলেট সিটি কর্পেোরেশনের ওয়ার্ড নম্বর-২৮,২৯,৩০,৪০,৪১ ও ৪২ (খ)দক্ষিন সুরমা,(গ) ফেঞ্চুগঞ্জ এবং(ঘ) বালাগঞ্জ উপজেলা",
+  "memberId": "013023101"
+ },
+ {
+  "no": 232,
+  "reserved": false,
+  "nameBn": "সিলেট-৪",
+  "nameEn": "Sylhet-4",
+  "slug": "sylhet-4",
+  "boundaryBn": "(ক)কোম্পানীগঞ্জ,(খ) গোয়াইনঘাট এবং(গ) জৈন্তাপুর উপজেলা",
+  "memberId": "013023201"
+ },
+ {
+  "no": 233,
+  "reserved": false,
+  "nameBn": "সিলেট-৫",
+  "nameEn": "Sylhet-5",
+  "slug": "sylhet-5",
+  "boundaryBn": "(ক)কানাইঘাট এবং(খ) জকিগঞ্জ উপজেলা",
+  "memberId": "013023301"
+ },
+ {
+  "no": 234,
+  "reserved": false,
+  "nameBn": "সিলেট-৬",
+  "nameEn": "Sylhet-6",
+  "slug": "sylhet-6",
+  "boundaryBn": "(ক)বিয়ানী বাজার এবং(খ) গোলাপগঞ্জ উপজেলা",
+  "memberId": "013023401"
+ },
+ {
+  "no": 235,
+  "reserved": false,
+  "nameBn": "মৌলভীবাজার-১",
+  "nameEn": "Maulvibazar-1",
+  "slug": "maulvibazar-1",
+  "boundaryBn": "(ক)বড়লেখা এবং(খ) জুড়ী উপজেলা",
+  "memberId": "013023501"
+ },
+ {
+  "no": 236,
+  "reserved": false,
+  "nameBn": "মৌলভীবাজার-২",
+  "nameEn": "Maulvibazar-2",
+  "slug": "maulvibazar-2",
+  "boundaryBn": "কুলাউড়া উপজেলা",
+  "memberId": "013023601"
+ },
+ {
+  "no": 237,
+  "reserved": false,
+  "nameBn": "মৌলভীবাজার-৩",
+  "nameEn": "Maulvibazar-3",
+  "slug": "maulvibazar-3",
+  "boundaryBn": "(ক)মৌলভীবাজার সদর এবং(খ) রাজনগর উপজেলা",
+  "memberId": "013023701"
+ },
+ {
+  "no": 238,
+  "reserved": false,
+  "nameBn": "মৌলভীবাজার-৪",
+  "nameEn": "Maulvibazar-4",
+  "slug": "maulvibazar-4",
+  "boundaryBn": "(ক)শ্রীমঙ্গল এবং(খ) কমলগঞ্জ উপজেলা",
+  "memberId": "013023801"
+ },
+ {
+  "no": 239,
+  "reserved": false,
+  "nameBn": "হবিগঞ্জ-১",
+  "nameEn": "Habiganj-1",
+  "slug": "habiganj-1",
+  "boundaryBn": "(ক)নবীগঞ্জ এবং(খ) বাহুবল উপজেলা",
+  "memberId": "013023901"
+ },
+ {
+  "no": 240,
+  "reserved": false,
+  "nameBn": "হবিগঞ্জ-২",
+  "nameEn": "Habiganj-2",
+  "slug": "habiganj-2",
+  "boundaryBn": "(ক)আজমিরীগঞ্জ এবং(খ) বানিয়াচং উপজেলা",
+  "memberId": "013024001"
+ },
+ {
+  "no": 241,
+  "reserved": false,
+  "nameBn": "হবিগঞ্জ-৩",
+  "nameEn": "Habiganj-3",
+  "slug": "habiganj-3",
+  "boundaryBn": "(ক)হবিগঞ্জ সদর,(খ) লাখাই এবং(গ) সায়েস্তাগঞ্জ উপজেলা",
+  "memberId": "013024101"
+ },
+ {
+  "no": 242,
+  "reserved": false,
+  "nameBn": "হবিগঞ্জ-৪",
+  "nameEn": "Habiganj-4",
+  "slug": "habiganj-4",
+  "boundaryBn": "(ক)চুনারুঘাট এবং(খ) মাধবপুর উপজেলা",
+  "memberId": "013024201"
+ },
+ {
+  "no": 243,
+  "reserved": false,
+  "nameBn": "ব্রাহ্মণবাড়িয়া-১",
+  "nameEn": "Brahmanbaria-1",
+  "slug": "brahmanbaria-1",
+  "boundaryBn": "নাসিরনগর উপজেলা",
+  "memberId": "013024301"
+ },
+ {
+  "no": 244,
+  "reserved": false,
+  "nameBn": "ব্রাহ্মণবাড়িয়া-২",
+  "nameEn": "Brahmanbaria-2",
+  "slug": "brahmanbaria-2",
+  "boundaryBn": "(ক)সরাইল এবং(খ) আশুগঞ্জ উপজেলা",
+  "memberId": "013024401"
+ },
+ {
+  "no": 245,
+  "reserved": false,
+  "nameBn": "ব্রাহ্মণবাড়িয়া-৩",
+  "nameEn": "Brahmanbaria-3",
+  "slug": "brahmanbaria-3",
+  "boundaryBn": "(ক)ব্রাহ্মণবাড়িয়া সদর ও(খ) বিজয়নগর উপজেলা",
+  "memberId": "013024501"
+ },
+ {
+  "no": 246,
+  "reserved": false,
+  "nameBn": "ব্রাহ্মণবাড়িয়া-৪",
+  "nameEn": "Brahmanbaria-4",
+  "slug": "brahmanbaria-4",
+  "boundaryBn": "(ক)আখাউড়া এবং(খ) কসবা উপজেলা",
+  "memberId": "013024601"
+ },
+ {
+  "no": 247,
+  "reserved": false,
+  "nameBn": "ব্রাহ্মণবাড়িয়া-৫",
+  "nameEn": "Brahmanbaria-5",
+  "slug": "brahmanbaria-5",
+  "boundaryBn": "নবীনগর উপজেলা",
+  "memberId": "013024701"
+ },
+ {
+  "no": 248,
+  "reserved": false,
+  "nameBn": "ব্রাহ্মণবাড়িয়া-৬",
+  "nameEn": "Brahmanbaria-6",
+  "slug": "brahmanbaria-6",
+  "boundaryBn": "বাঞ্ছারামপুর উপজেলা",
+  "memberId": "013024801"
+ },
+ {
+  "no": 249,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-১",
+  "nameEn": "Cumilla-1",
+  "slug": "cumilla-1",
+  "boundaryBn": "(ক)দাউদকান্দি এবং(খ) তিতাস উপজেলা",
+  "memberId": "013024901"
+ },
+ {
+  "no": 250,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-২",
+  "nameEn": "Cumilla-2",
+  "slug": "cumilla-2",
+  "boundaryBn": "(ক)হোমনা এবং(খ) মেঘনা উপজেলা",
+  "memberId": "013025001"
+ },
+ {
+  "no": 251,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-৩",
+  "nameEn": "Cumilla-3",
+  "slug": "cumilla-3",
+  "boundaryBn": "মুরাদনগর উপজেলা",
+  "memberId": "013025101"
+ },
+ {
+  "no": 252,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-৪",
+  "nameEn": "Cumilla-4",
+  "slug": "cumilla-4",
+  "boundaryBn": "দেবীদ্বার উপজেলা",
+  "memberId": "013025201"
+ },
+ {
+  "no": 253,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-৫",
+  "nameEn": "Cumilla-5",
+  "slug": "cumilla-5",
+  "boundaryBn": "(ক)ব্রাহ্মণপাড়া এবং(খ) বুড়িচং উপজেলা",
+  "memberId": "013025301"
+ },
+ {
+  "no": 254,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-৬",
+  "nameEn": "Cumilla-6",
+  "slug": "cumilla-6",
+  "boundaryBn": "(ক)কুমিল্লা আদর্শ সদর,(খ) কুমিল্লা সিটি কর্পোরেশন এবং(গ) কুমিল্লা সেনানিবাস এলাকা",
+  "memberId": "013025401"
+ },
+ {
+  "no": 255,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-৭",
+  "nameEn": "Cumilla-7",
+  "slug": "cumilla-7",
+  "boundaryBn": "চান্দিনা উপজেলা",
+  "memberId": "013025501"
+ },
+ {
+  "no": 256,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-৮",
+  "nameEn": "Cumilla-8",
+  "slug": "cumilla-8",
+  "boundaryBn": "বরুড়া উপজেলা",
+  "memberId": "013025601"
+ },
+ {
+  "no": 257,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-৯",
+  "nameEn": "Cumilla-9",
+  "slug": "cumilla-9",
+  "boundaryBn": "(ক)লাকসাম এবং(খ) মনোহরগঞ্জ উপজেলা",
+  "memberId": "013025701"
+ },
+ {
+  "no": 258,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-১০",
+  "nameEn": "Cumilla-10",
+  "slug": "cumilla-10",
+  "boundaryBn": "(ক)কুমিল্লা সদর দক্ষিন,(খ) লালমাই এবং(গ) নাঙ্গলকোট উপজেলা",
+  "memberId": "013025801"
+ },
+ {
+  "no": 259,
+  "reserved": false,
+  "nameBn": "কুমিল্লা-১১",
+  "nameEn": "Cumilla-11",
+  "slug": "cumilla-11",
+  "boundaryBn": "চৌদ্দগ্রাম উপজেলা",
+  "memberId": "013025901"
+ },
+ {
+  "no": 260,
+  "reserved": false,
+  "nameBn": "চাঁদপুর-১",
+  "nameEn": "Chandpur-1",
+  "slug": "chandpur-1",
+  "boundaryBn": "কচুয়া উপজেলা",
+  "memberId": "013026001"
+ },
+ {
+  "no": 261,
+  "reserved": false,
+  "nameBn": "চাঁদপুর-২",
+  "nameEn": "Chandpur-2",
+  "slug": "chandpur-2",
+  "boundaryBn": "(ক)মতলব উত্তর এবং(খ) মতলব দক্ষিন উপজেলা",
+  "memberId": "013026101"
+ },
+ {
+  "no": 262,
+  "reserved": false,
+  "nameBn": "চাঁদপুর-৩",
+  "nameEn": "Chandpur-3",
+  "slug": "chandpur-3",
+  "boundaryBn": "(ক)চাঁদপুর সদর এবং(খ) হাইমচর উপজেলা",
+  "memberId": "013026201"
+ },
+ {
+  "no": 263,
+  "reserved": false,
+  "nameBn": "চাঁদপুর-৪",
+  "nameEn": "Chandpur-4",
+  "slug": "chandpur-4",
+  "boundaryBn": "ফরিদগঞ্জ উপজেলা",
+  "memberId": "013026301"
+ },
+ {
+  "no": 264,
+  "reserved": false,
+  "nameBn": "চাঁদপুর-৫",
+  "nameEn": "Chandpur-5",
+  "slug": "chandpur-5",
+  "boundaryBn": "(ক)হাজীগঞ্জ এবং(খ) শাহরাস্তি উপজেলা",
+  "memberId": "013026401"
+ },
+ {
+  "no": 265,
+  "reserved": false,
+  "nameBn": "ফেনী-১",
+  "nameEn": "Feni-1",
+  "slug": "feni-1",
+  "boundaryBn": "(ক)পরশুরাম,(খ) ছাগলনাইয়া এবং (গ)ফুলগাজী উপজেলা",
+  "memberId": "013026501"
+ },
+ {
+  "no": 266,
+  "reserved": false,
+  "nameBn": "ফেনী-২",
+  "nameEn": "Feni-2",
+  "slug": "feni-2",
+  "boundaryBn": "ফেনী সদর উপজেলা",
+  "memberId": "013026601"
+ },
+ {
+  "no": 267,
+  "reserved": false,
+  "nameBn": "ফেনী-৩",
+  "nameEn": "Feni-3",
+  "slug": "feni-3",
+  "boundaryBn": "(ক)সোনাগাজী এবং(খ) দাগনভুঁঞা উপজেলা",
+  "memberId": "013026701"
+ },
+ {
+  "no": 268,
+  "reserved": false,
+  "nameBn": "নোয়াখালী-১",
+  "nameEn": "Noakhali-1",
+  "slug": "noakhali-1",
+  "boundaryBn": "(ক)চাটখিল এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত সোনাইমুড়ী উপজেলাঃ (১)বারগাঁও,(২) নাটেশ্বর,(৩) অম্বর নগর,ও(৪) বাজরা",
+  "memberId": "013026801"
+ },
+ {
+  "no": 269,
+  "reserved": false,
+  "nameBn": "নোয়াখালী-২",
+  "nameEn": "Noakhali-2",
+  "slug": "noakhali-2",
+  "boundaryBn": "(ক)সেনবাগ এবং(খ) সোনাইমুড়ি উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)বারগাও, (২)নাটেশ্বর, (৩)অম্বর নগর ও (৪) বাজরা",
+  "memberId": "013026901"
+ },
+ {
+  "no": 270,
+  "reserved": false,
+  "nameBn": "নোয়াখালী-৩",
+  "nameEn": "Noakhali-3",
+  "slug": "noakhali-3",
+  "boundaryBn": "বেগমগঞ্জ উপজেলা",
+  "memberId": "013027001"
+ },
+ {
+  "no": 271,
+  "reserved": false,
+  "nameBn": "নোয়াখালী-৪",
+  "nameEn": "Noakhali-4",
+  "slug": "noakhali-4",
+  "boundaryBn": "(ক)সুবর্ণচরএবং(খ) নোয়াখালী সদর উপজেলা",
+  "memberId": "013027101"
+ },
+ {
+  "no": 272,
+  "reserved": false,
+  "nameBn": "নোয়াখালী-৫",
+  "nameEn": "Noakhali-5",
+  "slug": "noakhali-5",
+  "boundaryBn": "(ক)কোম্পানীগঞ্জ এবং(খ) কবিরহাট উপজেলা",
+  "memberId": "013027201"
+ },
+ {
+  "no": 273,
+  "reserved": false,
+  "nameBn": "নোয়াখালী-৬",
+  "nameEn": "Noakhali-6",
+  "slug": "noakhali-6",
+  "boundaryBn": "হাতিয়া উপজেলা",
+  "memberId": "013027301"
+ },
+ {
+  "no": 274,
+  "reserved": false,
+  "nameBn": "লক্ষ্মীপুর-১",
+  "nameEn": "Laxmipur-1",
+  "slug": "laxmipur-1",
+  "boundaryBn": "রামগঞ্জ উপজেলা",
+  "memberId": "013027401"
+ },
+ {
+  "no": 275,
+  "reserved": false,
+  "nameBn": "লক্ষ্মীপুর-২",
+  "nameEn": "Laxmipur-2",
+  "slug": "laxmipur-2",
+  "boundaryBn": "(ক)রায়পুর এবং(খ) লক্ষীপুর সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)উত্তর হামছাদী,(২) দক্ষিন হামছাদী,(৩) দালাল বাজার,(৪) চর রুহিতা, (৫)পার্বতী নগর,(৬) শাকচর,(৭) টুমচর,(৮) চর রমনীমোহন ও(৯) বশিকপুর",
+  "memberId": "013027501"
+ },
+ {
+  "no": 276,
+  "reserved": false,
+  "nameBn": "লক্ষ্মীপুর-৩",
+  "nameEn": "Laxmipur-3",
+  "slug": "laxmipur-3",
+  "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত লক্ষীপুর সদর উপজেলা: (১)উত্তর হামছাদী,(২) দক্ষিন হামছাদী,(৩) দালাল বাজার,(৪) চর রুহিতা, (৫)পার্বতী নগর,(৬) শাকচর,(৭) টুমচর,(৮) চর রমনীমোহন ও(৯) বশিকপুর",
+  "memberId": "013027601"
+ },
+ {
+  "no": 277,
+  "reserved": false,
+  "nameBn": "লক্ষ্মীপুর-৪",
+  "nameEn": "Laxmipur-4",
+  "slug": "laxmipur-4",
+  "boundaryBn": "(ক)রামগতি এবং(খ) কমলনগর উপজেলা",
+  "memberId": "013027701"
+ },
+ {
+  "no": 278,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১",
+  "nameEn": "Chattogram-1",
+  "slug": "chattogram-1",
+  "boundaryBn": "মীরশ্বরাই উপজেলা",
+  "memberId": "013027801"
+ },
+ {
+  "no": 279,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-২",
+  "nameEn": "Chattogram-2",
+  "slug": "chattogram-2",
+  "boundaryBn": "ফটিকছড়ি উপজেলা",
+  "memberId": "013027901"
+ },
+ {
+  "no": 280,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-৩",
+  "nameEn": "Chattogram-3",
+  "slug": "chattogram-3",
+  "boundaryBn": "সন্দীপ উপজেলা",
+  "memberId": "013028001"
+ },
+ {
+  "no": 282,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-৫",
+  "nameEn": "Chattogram-5",
+  "slug": "chattogram-5",
+  "boundaryBn": "(ক)হাটহাজারী উপজেলা এবং (খ)চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড ০১ ও ০২",
+  "memberId": "013028201"
+ },
+ {
+  "no": 283,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-৬",
+  "nameEn": "Chattogram-6",
+  "slug": "chattogram-6",
+  "boundaryBn": "রাউজান উপজেলা",
+  "memberId": "013028301"
+ },
+ {
+  "no": 284,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-৭",
+  "nameEn": "Chattogram-7",
+  "slug": "chattogram-7",
+  "boundaryBn": "(ক) রাংগুনিয়া উপজেলা (খ) বোয়ালখালী উপজেলার শ্রীপুর-খরনদ্বীপ ইউনিয়ন।",
+  "memberId": "013028401"
+ },
+ {
+  "no": 285,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-৮",
+  "nameEn": "Chittagong-8",
+  "slug": "chittagong-8",
+  "boundaryBn": "(ক) শ্রীপুর-খরনদ্বীপ ইউনিয় ব্যতীত বোয়ালখালী উপজেলা এবং (খ) চট্টগ্রাম সিটি কর্পোরেশরে ওয়ার্ড নম্বর-০৩,০৪,০৫,০৬, ও ০৭",
+  "memberId": "013028501"
+ },
+ {
+  "no": 286,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-৯",
+  "nameEn": "Chattogram-9",
+  "slug": "chattogram-9",
+  "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,৩১,৩২,৩৩,৩৪,ও ৩৫",
+  "memberId": "013028601"
+ },
+ {
+  "no": 287,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১০",
+  "nameEn": "Chattogram-10",
+  "slug": "chattogram-10",
+  "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-০৮,১১,১২,১৩,১৪,২৪,২৫ ও ২৬",
+  "memberId": "013028701"
+ },
+ {
+  "no": 288,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১১",
+  "nameEn": "Chattogram-11",
+  "slug": "chattogram-11",
+  "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-২৭,২৮,২৯,৩০,৩৬,৩৭,৩৮,৩৯,৪০ ও ৪১",
+  "memberId": "013028801"
+ },
+ {
+  "no": 289,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১২",
+  "nameEn": "Chattogram-12",
+  "slug": "chattogram-12",
+  "boundaryBn": "পটিয়া উপজেলা",
+  "memberId": "013028901"
+ },
+ {
+  "no": 290,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১৩",
+  "nameEn": "Chattogram-13",
+  "slug": "chattogram-13",
+  "boundaryBn": "(ক)আনোয়ারা উপজেলা এবং (খ)কর্ণফুলী উপজেলা",
+  "memberId": "013029001"
+ },
+ {
+  "no": 291,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১৪",
+  "nameEn": "Chattogram-14",
+  "slug": "chattogram-14",
+  "boundaryBn": "(ক) চন্দনাইশ উপজেলা এবং (খ) সাতকানিয়া উপজেলার নিম্নলিখিত ইউনিয়নসমূহ: (১) কেওচিয়া (২)কালিয়াইশ (৩)বাজালিয়া (৪)ধর্মপুর (৫)পুরানগড় ও(৬) খাগরিয়া",
+  "memberId": "013029101"
+ },
+ {
+  "no": 292,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১৫",
+  "nameEn": "Chattogram-15",
+  "slug": "chattogram-15",
+  "boundaryBn": "(ক) লোহাগাড়া উপজেলা এবং (খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত সাতকানিয়া উপজেলা: (১) কেওচিয়া (২)কালিয়াইশ (৩)বাজালিয়া (৪)ধর্মপুর (৫)পুরানগড় ও(৬) খাগরিয়া",
+  "memberId": "013029201"
+ },
+ {
+  "no": 293,
+  "reserved": false,
+  "nameBn": "চট্টগ্রাম-১৬",
+  "nameEn": "Chattogram-16",
+  "slug": "chattogram-16",
+  "boundaryBn": "বাঁশখালী উপজেলা",
+  "memberId": "013029301"
+ },
+ {
+  "no": 294,
+  "reserved": false,
+  "nameBn": "কক্সবাজার-১",
+  "nameEn": "Cox'sBazar-1",
+  "slug": "coxsbazar-1",
+  "boundaryBn": "(ক) চকরিয়া উপজেলা এবং (খ)পেকুয়া উপজেলা",
+  "memberId": "013029401"
+ },
+ {
+  "no": 295,
+  "reserved": false,
+  "nameBn": "কক্সবাজার-২",
+  "nameEn": "Cox'sBazar-2",
+  "slug": "coxsbazar-2",
+  "boundaryBn": "(ক)কুতুবদিয়া উপজেলা এবং (খ)মহেশখালী উপজেলা",
+  "memberId": "013029501"
+ },
+ {
+  "no": 296,
+  "reserved": false,
+  "nameBn": "কক্সবাজার-৩",
+  "nameEn": "Cox'sBazar-3",
+  "slug": "coxsbazar-3",
+  "boundaryBn": "(ক)কক্সবাজার সদর উপজেলা (খ) ঈদগাঁও উপজেলা এবং(গ) রামু উপজেলা",
+  "memberId": "013029601"
+ },
+ {
+  "no": 297,
+  "reserved": false,
+  "nameBn": "কক্সবাজার-৪",
+  "nameEn": "Cox'sBazar-4",
+  "slug": "coxsbazar-4",
+  "boundaryBn": "(ক)উখিয়া উপজেলা এবং(খ) টেকনাফ উপজেলা",
+  "memberId": "013029701"
+ },
+ {
+  "no": 298,
+  "reserved": false,
+  "nameBn": "খাগড়াছড়ি",
+  "nameEn": "Khagrachhari",
+  "slug": "khagrachhari",
+  "boundaryBn": "খাগড়াছড়ি পার্বত্য জেলা",
+  "memberId": "013029801"
+ },
+ {
+  "no": 299,
+  "reserved": false,
+  "nameBn": "রাঙ্গামাটি",
+  "nameEn": "Rangamati",
+  "slug": "rangamati",
+  "boundaryBn": "রাংগামাটি পার্বত্য জেলা",
+  "memberId": "013029901"
+ },
+ {
+  "no": 300,
+  "reserved": false,
+  "nameBn": "বান্দরবন",
+  "nameEn": "Bandarban",
+  "slug": "bandarban",
+  "boundaryBn": "বান্দরবান পার্বত্য জেলা",
+  "memberId": "013030001"
+ },
+ {
+  "no": 301,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১",
+  "nameEn": "Women Seat-1",
+  "slug": "women-seat-1",
+  "boundaryBn": null,
+  "memberId": "013030101"
+ },
+ {
+  "no": 302,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২",
+  "nameEn": "Women Seat-2",
+  "slug": "women-seat-2",
+  "boundaryBn": null,
+  "memberId": "013030201"
+ },
+ {
+  "no": 303,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩",
+  "nameEn": "Women Seat-3",
+  "slug": "women-seat-3",
+  "boundaryBn": null,
+  "memberId": "013030301"
+ },
+ {
+  "no": 304,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪",
+  "nameEn": "Women Seat-4",
+  "slug": "women-seat-4",
+  "boundaryBn": null,
+  "memberId": "013030401"
+ },
+ {
+  "no": 305,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৫",
+  "nameEn": "Women Seat-5",
+  "slug": "women-seat-5",
+  "boundaryBn": null,
+  "memberId": "013030501"
+ },
+ {
+  "no": 306,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৬",
+  "nameEn": "Women Seat-6",
+  "slug": "women-seat-6",
+  "boundaryBn": null,
+  "memberId": "013030601"
+ },
+ {
+  "no": 307,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৭",
+  "nameEn": "Women Seat-7",
+  "slug": "women-seat-7",
+  "boundaryBn": null,
+  "memberId": "013030701"
+ },
+ {
+  "no": 308,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৮",
+  "nameEn": "Women Seat-8",
+  "slug": "women-seat-8",
+  "boundaryBn": null,
+  "memberId": "013030801"
+ },
+ {
+  "no": 309,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৯",
+  "nameEn": "Women Seat-9",
+  "slug": "women-seat-9",
+  "boundaryBn": null,
+  "memberId": "013030901"
+ },
+ {
+  "no": 310,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১০",
+  "nameEn": "Women Seat-10",
+  "slug": "women-seat-10",
+  "boundaryBn": null,
+  "memberId": "013031001"
+ },
+ {
+  "no": 311,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১১",
+  "nameEn": "Women Seat-11",
+  "slug": "women-seat-11",
+  "boundaryBn": null,
+  "memberId": "013031101"
+ },
+ {
+  "no": 312,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১২",
+  "nameEn": "Women Seat-12",
+  "slug": "women-seat-12",
+  "boundaryBn": null,
+  "memberId": "013031201"
+ },
+ {
+  "no": 313,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১৩",
+  "nameEn": "Women Seat-13",
+  "slug": "women-seat-13",
+  "boundaryBn": null,
+  "memberId": "013031301"
+ },
+ {
+  "no": 314,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১৪",
+  "nameEn": "Women Seat-14",
+  "slug": "women-seat-14",
+  "boundaryBn": null,
+  "memberId": "013031401"
+ },
+ {
+  "no": 315,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১৫",
+  "nameEn": "Women Seat-15",
+  "slug": "women-seat-15",
+  "boundaryBn": null,
+  "memberId": "013031501"
+ },
+ {
+  "no": 316,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১৬",
+  "nameEn": "Women Seat-16",
+  "slug": "women-seat-16",
+  "boundaryBn": null,
+  "memberId": "013031601"
+ },
+ {
+  "no": 317,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১৭",
+  "nameEn": "Women Seat-17",
+  "slug": "women-seat-17",
+  "boundaryBn": null,
+  "memberId": "013031701"
+ },
+ {
+  "no": 318,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১৮",
+  "nameEn": "Women Seat-18",
+  "slug": "women-seat-18",
+  "boundaryBn": null,
+  "memberId": "013031801"
+ },
+ {
+  "no": 319,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-১৯",
+  "nameEn": "Women Seat-19",
+  "slug": "women-seat-19",
+  "boundaryBn": null,
+  "memberId": "013031901"
+ },
+ {
+  "no": 320,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২০",
+  "nameEn": "Women Seat-20",
+  "slug": "women-seat-20",
+  "boundaryBn": null,
+  "memberId": "013032001"
+ },
+ {
+  "no": 321,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২১",
+  "nameEn": "Women Seat-21",
+  "slug": "women-seat-21",
+  "boundaryBn": null,
+  "memberId": "013032101"
+ },
+ {
+  "no": 322,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২২",
+  "nameEn": "Women Seat-22",
+  "slug": "women-seat-22",
+  "boundaryBn": null,
+  "memberId": "013032201"
+ },
+ {
+  "no": 323,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২৩",
+  "nameEn": "Women Seat-23",
+  "slug": "women-seat-23",
+  "boundaryBn": null,
+  "memberId": "013032301"
+ },
+ {
+  "no": 324,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২৪",
+  "nameEn": "Women Seat-24",
+  "slug": "women-seat-24",
+  "boundaryBn": null,
+  "memberId": "013032401"
+ },
+ {
+  "no": 325,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২৫",
+  "nameEn": "Women Seat-25",
+  "slug": "women-seat-25",
+  "boundaryBn": null,
+  "memberId": "013032501"
+ },
+ {
+  "no": 326,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২৬",
+  "nameEn": "Women Seat-26",
+  "slug": "women-seat-26",
+  "boundaryBn": null,
+  "memberId": "013032601"
+ },
+ {
+  "no": 327,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২৭",
+  "nameEn": "Women Seat-27",
+  "slug": "women-seat-27",
+  "boundaryBn": null,
+  "memberId": "013032701"
+ },
+ {
+  "no": 328,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২৮",
+  "nameEn": "Women Seat-28",
+  "slug": "women-seat-28",
+  "boundaryBn": null,
+  "memberId": "013032801"
+ },
+ {
+  "no": 329,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-২৯",
+  "nameEn": "Women Seat-29",
+  "slug": "women-seat-29",
+  "boundaryBn": null,
+  "memberId": "013032901"
+ },
+ {
+  "no": 330,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩০",
+  "nameEn": "Women Seat-30",
+  "slug": "women-seat-30",
+  "boundaryBn": null,
+  "memberId": "013033001"
+ },
+ {
+  "no": 331,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩১",
+  "nameEn": "Women Seat-31",
+  "slug": "women-seat-31",
+  "boundaryBn": null,
+  "memberId": "013033101"
+ },
+ {
+  "no": 332,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩২",
+  "nameEn": "Women Seat-32",
+  "slug": "women-seat-32",
+  "boundaryBn": null,
+  "memberId": "013033201"
+ },
+ {
+  "no": 333,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩৩",
+  "nameEn": "Women Seat-33",
+  "slug": "women-seat-33",
+  "boundaryBn": null,
+  "memberId": "013033301"
+ },
+ {
+  "no": 334,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩৪",
+  "nameEn": "Women Seat-34",
+  "slug": "women-seat-34",
+  "boundaryBn": null,
+  "memberId": "013033401"
+ },
+ {
+  "no": 335,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩৫",
+  "nameEn": "Women Seat-35",
+  "slug": "women-seat-35",
+  "boundaryBn": null,
+  "memberId": "013033501"
+ },
+ {
+  "no": 336,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩৬",
+  "nameEn": "Women Seat-36",
+  "slug": "women-seat-36",
+  "boundaryBn": null,
+  "memberId": "013033601"
+ },
+ {
+  "no": 337,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩৭",
+  "nameEn": "Women Seat-37",
+  "slug": "women-seat-37",
+  "boundaryBn": null,
+  "memberId": "013033701"
+ },
+ {
+  "no": 338,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩৮",
+  "nameEn": "Women Seat-38",
+  "slug": "women-seat-38",
+  "boundaryBn": null,
+  "memberId": "013033801"
+ },
+ {
+  "no": 339,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৩৯",
+  "nameEn": "Women Seat-39",
+  "slug": "women-seat-39",
+  "boundaryBn": null,
+  "memberId": "013033901"
+ },
+ {
+  "no": 340,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪০",
+  "nameEn": "Women Seat-40",
+  "slug": "women-seat-40",
+  "boundaryBn": null,
+  "memberId": "013034001"
+ },
+ {
+  "no": 341,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪১",
+  "nameEn": "Women Seat-41",
+  "slug": "women-seat-41",
+  "boundaryBn": null,
+  "memberId": "013034101"
+ },
+ {
+  "no": 342,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪২",
+  "nameEn": "Women Seat-42",
+  "slug": "women-seat-42",
+  "boundaryBn": null,
+  "memberId": "013034201"
+ },
+ {
+  "no": 343,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪৩",
+  "nameEn": "Women Seat-43",
+  "slug": "women-seat-43",
+  "boundaryBn": null,
+  "memberId": "013034301"
+ },
+ {
+  "no": 344,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪৪",
+  "nameEn": "Women Seat-44",
+  "slug": "women-seat-44",
+  "boundaryBn": null,
+  "memberId": "013034401"
+ },
+ {
+  "no": 345,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪৫",
+  "nameEn": "Women Seat-45",
+  "slug": "women-seat-45",
+  "boundaryBn": null,
+  "memberId": "013034501"
+ },
+ {
+  "no": 346,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪৬",
+  "nameEn": "Women Seat-46",
+  "slug": "women-seat-46",
+  "boundaryBn": null,
+  "memberId": "013034601"
+ },
+ {
+  "no": 347,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪৭",
+  "nameEn": "Women Seat-47",
+  "slug": "women-seat-47",
+  "boundaryBn": null,
+  "memberId": "013034701"
+ },
+ {
+  "no": 348,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪৮",
+  "nameEn": "Women Seat-48",
+  "slug": "women-seat-48",
+  "boundaryBn": null,
+  "memberId": "013034801"
+ },
+ {
+  "no": 349,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৪৯",
+  "nameEn": "Women Seat-49",
+  "slug": "women-seat-49",
+  "boundaryBn": null,
+  "memberId": "013034901"
+ },
+ {
+  "no": 350,
+  "reserved": true,
+  "nameBn": "মহিলা আসন-৫০",
+  "nameEn": "Women Seat-50",
+  "slug": "women-seat-50",
+  "boundaryBn": null,
+  "memberId": "013035001"
+ }
+]
