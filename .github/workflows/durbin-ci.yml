@@ -1,0 +1,52 @@
+name: Durbin Sangsad CI
+
+# The Durbin News monorepo lives in durbin-sangsad/ inside the mymp repository.
+# GitHub only reads workflows from the repository root, so this file is here,
+# but it runs only for changes under that folder and every step runs inside it.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'durbin-sangsad/**'
+      - '.github/workflows/durbin-ci.yml'
+  pull_request:
+    paths:
+      - 'durbin-sangsad/**'
+      - '.github/workflows/durbin-ci.yml'
+
+defaults:
+  run:
+    working-directory: durbin-sangsad
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      # CI has no database: the web build and e2e run on TEST_ fixtures.
+      FIXTURES: '1'
+      BASE_PATH: /sangsad
+      NEXT_PUBLIC_SITE_URL: http://localhost:3100
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: durbin-sangsad/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm --filter @durbin/web build
+      - run: pnpm --filter @durbin/web exec playwright install --with-deps chromium
+      - run: pnpm --filter @durbin/web e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: durbin-sangsad/apps/web/playwright-report
+          retention-days: 7

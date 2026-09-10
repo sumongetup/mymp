@@ -1,0 +1,56 @@
+{
+  "_note": "Local development only. Every name starts with TEST_ so it can never be mistaken for real data. Numbers above 900 are impossible seat numbers on purpose.",
+  "parliamentNumber": 13,
+  "constituencies": [
+    {
+      "number": 901,
+      "name_bn": "TEST_উত্তরপাড়া-১",
+      "name_en": "TEST_Uttarpara-1",
+      "slug": "test-uttarpara-1",
+      "isReservedWomen": false,
+      "boundaryBn": "TEST_ সীমানা: উত্তরপাড়া সদর উপজেলা",
+      "district": { "name_bn": "TEST_উত্তরপাড়া", "name_en": "TEST_Uttarpara", "slug": "test-uttarpara" },
+      "division": { "name_bn": "TEST_উত্তর বিভাগ", "name_en": "TEST_North", "slug": "test-north" }
+    },
+    {
+      "number": 902,
+      "name_bn": "TEST_উত্তরপাড়া-২",
+      "name_en": "TEST_Uttarpara-2",
+      "slug": "test-uttarpara-2",
+      "isReservedWomen": false,
+      "boundaryBn": null,
+      "district": { "name_bn": "TEST_উত্তরপাড়া", "name_en": "TEST_Uttarpara", "slug": "test-uttarpara" },
+      "division": { "name_bn": "TEST_উত্তর বিভাগ", "name_en": "TEST_North", "slug": "test-north" }
+    },
+    {
+      "number": 903,
+      "name_bn": "TEST_নদীগ্রাম-১",
+      "name_en": "TEST_Nadigram-1",
+      "slug": "test-nadigram-1",
+      "isReservedWomen": false,
+      "boundaryBn": "TEST_ সীমানা: নদীগ্রাম ও চরপাড়া",
+      "district": { "name_bn": "TEST_নদীগ্রাম", "name_en": "TEST_Nadigram", "slug": "test-nadigram" },
+      "division": { "name_bn": "TEST_উত্তর বিভাগ", "name_en": "TEST_North", "slug": "test-north" }
+    },
+    {
+      "number": 904,
+      "name_bn": "TEST_সাগরকূল-১",
+      "name_en": "TEST_Sagarkul-1",
+      "slug": "test-sagarkul-1",
+      "isReservedWomen": false,
+      "boundaryBn": null,
+      "district": { "name_bn": "TEST_সাগরকূল", "name_en": "TEST_Sagarkul", "slug": "test-sagarkul" },
+      "division": { "name_bn": "TEST_দক্ষিণ বিভাগ", "name_en": "TEST_South", "slug": "test-south" }
+    },
+    {
+      "number": 951,
+      "name_bn": "TEST_মহিলা আসন-১",
+      "name_en": "TEST_Women Seat-1",
+      "slug": "test-women-seat-1",
+      "isReservedWomen": true,
+      "boundaryBn": null,
+      "district": null,
+      "division": null
+    }
+  ]
+}

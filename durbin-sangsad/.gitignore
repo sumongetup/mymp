@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+.next/
+out/
+dist/
+*.tsbuildinfo
+next-env.d.ts
+
+# environment: never commit keys
+.env
+.env.*
+!.env.example
+
+# test artefacts
+coverage/
+playwright-report/
+test-results/
+blob-report/
+
+# worker scratch: downloaded PDFs, OCR output, caches
+worker/.cache/
+worker/tmp/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

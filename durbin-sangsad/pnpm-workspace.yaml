@@ -1,0 +1,15 @@
+packages:
+  - apps/*
+  - packages/*
+  - worker
+
+# pnpm 12 refuses postinstall scripts unless listed; these two are build-time only.
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+
+# pnpm 12 holds back packages younger than its minimum release age; React 19.3 is what Next 16 wants.
+minimumReleaseAgeExclude:
+  - react-dom@19.3.0
+  - react@19.3.0
+  - scheduler@0.28.0
