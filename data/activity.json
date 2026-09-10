@@ -534,6 +534,28 @@
    "committeeId": "86"
   },
   {
+   "id": "863",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-10",
+   "titleBn": "জনাব সরদার সরফুদ্দিন আহমেদ, ১২০ বরিশাল-২",
+   "titleEn": "Mr. Sarder Sharfuddin Ahmed, 120 Barishal-2",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/17016ddd-d285-4de7-ba85-518f1c4b4c73.pdf",
+   "memberId": "013012001",
+   "committeeId": null
+  },
+  {
+   "id": "862",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-10",
+   "titleBn": "জনাব মোঃ রাশেদুল ইসলাম রাশেদ, ১৪৩ শেরপুর-১",
+   "titleEn": "Mr. Md Rashedul Islam Rashed, 143 Sherpur-1",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/dad03133-0506-4a22-99fd-835f5d930dbc.pdf",
+   "memberId": "013014301",
+   "committeeId": null
+  },
+  {
    "id": "845",
    "type": "COMMITTEE",
    "category": null,
@@ -827,6 +849,17 @@
    "titleBn": "বাংলাদেশ-কানাডা সংসদীয় মৈত্রী গোষ্ঠী",
    "titleEn": "Parliamentary Friendship Group on Bangladesh-Canada",
    "pdfUrl": "https://www.parliament.gov.bd/api/upload/07e06dc5-3888-4f1c-8fa4-75b909ec933a.pdf",
+   "memberId": null,
+   "committeeId": null
+  },
+  {
+   "id": "860",
+   "type": "GENERAL",
+   "category": "notification",
+   "date": "2026-09-06",
+   "titleBn": "মোছাঃ রুবা মিরাতুল ফাতিমা",
+   "titleEn": "Mst. Ruba Miratul Fatima",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/41b09f03-1871-4d4b-8e76-d2269f77cd79.pdf",
    "memberId": null,
    "committeeId": null
   },
