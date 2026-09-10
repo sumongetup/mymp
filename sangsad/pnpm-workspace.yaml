@@ -1,0 +1,9 @@
+packages:
+  - packages/*
+  - worker
+
+# pnpm 12 refuses postinstall scripts unless listed; these two are build-time only.
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+

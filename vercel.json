@@ -1,5 +1,5 @@
 {
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . \":(exclude)durbin-sangsad\"",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . \":(exclude)sangsad\"",
   "regions": [
     "sin1"
   ],
