@@ -4,8 +4,12 @@
  * the TEST_ fixtures.
  */
 import { asc, eq } from 'drizzle-orm';
-import type { Db } from './client';
+import type { PgDatabase, PgQueryResultHKT } from 'drizzle-orm/pg-core';
+import type * as schema from './schema';
 import { constituencies, districts, divisions, parliaments } from './schema';
+
+/** Any Drizzle Postgres connection over this schema: postgres.js in production, PGlite in tests. */
+export type AnyDb = PgDatabase<PgQueryResultHKT, typeof schema>;
 
 export interface ConstituencyRow {
   number: number;
@@ -32,7 +36,7 @@ export interface ConstituencyListing {
   reservedSeats: ConstituencyRow[];
 }
 
-export async function listConstituencies(db: Db, parliamentNumber = 13): Promise<ConstituencyListing> {
+export async function listConstituencies(db: AnyDb, parliamentNumber = 13): Promise<ConstituencyListing> {
   const rows = await db
     .select({
       number: constituencies.number,

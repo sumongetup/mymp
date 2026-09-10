@@ -21,7 +21,7 @@ On Windows Git Bash, prefix commands that pass `BASE_PATH=/sangsad` with `MSYS_N
 | Task | Command |
 |---|---|
 | Typecheck everything | `pnpm typecheck` |
-| Unit tests (Vitest) | `pnpm test` |
+| Unit + integration tests (Vitest; the db package runs the real migration, RLS file and seed logic on PGlite, an in-process Postgres) | `pnpm test` |
 | End-to-end (Playwright, needs a build) | `pnpm --filter @durbin/web build && pnpm --filter @durbin/web e2e` |
 | Change the schema | edit `packages/db/src/schema.ts` → `pnpm db:generate` → review the SQL in `packages/db/migrations/` → `pnpm db:migrate` |
 | Change RLS | edit `packages/db/sql/rls.sql` → `pnpm db:migrate` (re-applies all policies) |

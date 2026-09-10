@@ -1,8 +1,14 @@
 -- Row Level Security for Durbin News · সংসদ.
 -- Idempotent: re-run after every migration. The service role bypasses RLS,
 -- so workers and admin server actions write freely; anon and authenticated
--- (the browser, PostgREST) get read access to published rows only and can
--- never write.
+-- (the browser, PostgREST) may read published rows only and can never write.
+--
+-- Privileges and policies are both explicit here. Supabase grants anon and
+-- authenticated everything on new tables by default; a bare Postgres grants
+-- nothing. This file makes both behave the same: every table starts with no
+-- public privilege, and a SELECT grant appears only together with a policy.
+
+grant usage on schema public to anon, authenticated;
 
 do $$
 declare t text;
@@ -12,15 +18,16 @@ begin
       and tablename not like '__drizzle%'
   loop
     execute format('alter table public.%I enable row level security', t);
-    execute format('revoke insert, update, delete, truncate on public.%I from anon, authenticated', t);
+    execute format('revoke all on public.%I from anon, authenticated', t);
   end loop;
 end $$;
 
--- helper: drop-then-create keeps this file re-runnable
+-- helper: drop-then-create keeps this file re-runnable; the grant travels with the policy
 create or replace function public._policy(tbl text, name text, using_expr text) returns void language plpgsql as $$
 begin
   execute format('drop policy if exists %I on public.%I', name, tbl);
   execute format('create policy %I on public.%I for select to anon, authenticated using (%s)', name, tbl, using_expr);
+  execute format('grant select on public.%I to anon, authenticated', tbl);
 end $$;
 
 -- reference data: fully public
@@ -51,7 +58,7 @@ select public._policy('article_members', 'public_read_published', 'status in (''
 select public._policy('video_members',   'public_read_published', 'status in (''auto'', ''approved'')');
 
 -- never public: member_aliases, corrections, audit_log, ingest_runs, admin_users
--- (RLS enabled above with no select policy = no rows for anon/authenticated)
+-- (no policy and no SELECT grant: a public read is refused outright)
 drop policy if exists public_read on public.member_aliases;
 drop policy if exists public_read on public.corrections;
 drop policy if exists public_read on public.audit_log;
