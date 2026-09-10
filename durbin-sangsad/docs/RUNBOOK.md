@@ -8,6 +8,7 @@ This monorepo lives in the `durbin-sangsad/` folder of the `sumongetup/mymp` rep
 pnpm install
 cp .env.example .env        # fill DATABASE_URL and the Supabase keys
 pnpm db:migrate             # applies migrations, then re-applies RLS policies (idempotent)
+                            # (or, once, paste packages/db/setup.sql into Supabase → SQL Editor; regenerate it with pnpm --filter @durbin/db sql:bundle)
 pnpm db:seed                # parliaments, divisions, districts, 350 constituencies from parliament.gov.bd
 pnpm dev                    # http://localhost:3000/sangsad (BASE_PATH from .env)
 ```
