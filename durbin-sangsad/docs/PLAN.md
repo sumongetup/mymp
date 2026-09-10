@@ -1,4 +1,48 @@
-# Durbin News · সংসদ — Build plan
+# সংসদ for mymp.bd: build plan
+
+## Direction change (owner, 2026-09-11)
+
+This work is for **mymp.bd**, not Durbin News. The brief said durbinnews.com/sangsad; the owner has since said the সংসদ project is for My MP. Decision: **the live mymp.bd stays the only website and admin, and this workspace becomes its data engine.** Everything below replaces the Durbin-targeted phases 3–6; phases 1–2 (the database, the nightly worker, 349 members and their photos on Supabase) are done and are kept as they are.
+
+What stays from the brief: plan and approve each phase; never invent data (gaps read "তথ্য পাওয়া যায়নি"); TEST_ fixtures that cannot load in production; inspect every source before ingesting and record it in SOURCES.md; link-only news (headline, source, time, link; no full text, no copied images); one request per second per domain and robots.txt respected; never scrape Facebook; the neutrality rules; matcher thresholds (≥0.85 auto, 0.5–0.85 review, <0.5 discard). What goes: the durbinnews.com base path, the Durbin name and bot string, the rule about Durbin's own articles, and the separate Next app in `apps/web` (mymp.bd already is the website).
+
+## Architecture
+
+```
+parliament.gov.bd API ──► sangsad worker (GitHub Actions, 02:00 Dhaka) ──► sangsad Postgres + photo storage
+news feeds (Phase M3) ──┘                    │                                   (Supabase project, mymp org)
+ECS PDFs uploaded in mymp admin (M2) ────────┘
+                                             └─► then calls mymp.bd's deploy hook
+mymp.bd build: reads the sangsad database (falls back to the live API if it is down)
+             + mymp's own Supabase (admin overrides, hidden items, news posts, results, audit)
+             ──► the same static pages as today
+```
+
+Two Supabase projects, on purpose: mymp's existing one keeps admin logins and editorial data (8 tables, untouched); the sangsad one holds the bulk official data the worker maintains. Merging them is possible later but means reconciling four tables that exist in both (`admin_users`, `audit_log`, `corrections`, `election_results`) and moving admin logins, for no gain today. The Free plan allows exactly these two.
+
+## Phases
+
+**M0: Rename and clean up (half a day).** Folder `durbin-sangsad/` → `sangsad/`; packages `@durbin/*` → `@sangsad/*`; delete `apps/web`; bot string → `MyMPBot/1.0 (+https://mymp.bd/somporke)`; docs, CI and worker workflow renamed; mymp.bd's `ignoreCommand` and `tsconfig` exclude follow the new folder. The workflow reads new `SANGSAD_*` secrets and falls back to the current `DURBIN_*` ones, so the nightly run never breaks; the owner adds the three new names once and deletes the old ones. Optional: rename the Supabase project to "sangsad" in its dashboard. Done when: no "durbin" left in the repo, CI green, one worker run green.
+
+**M1: mymp.bd reads the engine (about a day).** `scripts/sync.mjs` reads members, terms (including earlier terms), committees (roster rule), sessions and notices from the sangsad database and writes the same `data/*.json` shapes, so no page changes. MP photos switch from `prp.parliament.gov.bd` (slow, TLS quirks) to the stored copies. If the database is unreachable the build falls back to today's live-API path. The worker workflow ends by calling mymp.bd's deploy hook, and mymp.bd's own 02:00 cron moves to 03:00 as a backstop. Done when: a mymp.bd build from the database produces the same counts as today (349 members, earlier terms, committees, notices), photos load from storage, and a before/after diff of `data/*.json` is reviewed.
+
+**M2: Affidavits and election results from ECS PDFs (brief phase 3).** Upload in mymp admin (editors download from ecs.gov.bd in a normal browser; nothing bypasses its bot check); `pdf-parse`, then Tesseract `ben` for scans; extracted rows land as `pending`; a verify screen shows the PDF beside the fields; nothing publishes without an editor's approval. Results prefill mymp's existing results form; affidavit data appears on MP pages as "হলফনামা অনুযায়ী" with year and source link. Needs: two or three sample PDFs of each kind from the owner before the plan for M2 is final.
+
+**M3: Automatic news per MP (brief phase 4).** Inspect the 50 sources in `config/sources.json`, RSS every 30 minutes, Google News RSS as a rate-limited fallback, YouTube uploads playlists; the matcher (alias table already seeded, context signals, ambiguity guard, `match_reason`) links items to MPs; 0.5–0.85 matches wait in a review queue in mymp admin. Items appear on MP pages and `/songbad` next to the manual news posts, link-only. 48-hour soak and a 100-item accuracy check before it goes public.
+
+**M4: English pages (brief requirement, owner to confirm).** `/en` versions of the main pages from the English fields the source already has.
+
+**M5: Hardening.** Corrections inbox in admin, alert after three failed source runs, rate limits, backups.
+
+## Decisions needed from the owner
+
+1. Approve M0 + M1 to start now.
+2. English version: build it (M4), or later / not at all.
+3. For M2: send two or three sample affidavit PDFs and result gazette PDFs.
+
+---
+
+# History: the Durbin-targeted plan (phases 1–2 done, kept for the record)
 
 Public, bilingual (বাংলা first) directory of every Member of the 13th Jatiya Sangsad, with a verified profile and an auto-updated, link-only news feed per member. Runs at `durbinnews.com/sangsad` (configurable `BASE_PATH`) or a subdomain.
 
