@@ -1,18 +1,18 @@
 import { NextResponse } from 'next/server';
-import { readFile } from 'node:fs/promises';
-import { join } from 'node:path';
 import https from 'node:https';
 import tls from 'node:tls';
+// Plain ESM, shared with scripts/sync.mjs, which cannot import TypeScript.
+import { PARLIAMENT_CA } from '@/lib/parliament-ca.mjs';
 
 export const dynamic = 'force-dynamic';
 
 /**
  * Reachability probe for parliament.gov.bd, gated by the cron secret.
  *
- * It goes through the same node:https path the sync uses, because a plain
- * fetch() fails twice over on that host: the server omits the intermediate
- * certificate, and it resets connections that send no User-Agent. Returns only
- * status and timing, never data from the source.
+ * It uses the same node:https path as the sync, because a plain fetch() fails
+ * twice over on that host: it omits the intermediate certificate, and it resets
+ * connections that send no User-Agent. Returns only status and timing, never
+ * data from the source.
  */
 export async function GET(req: Request) {
   const secret = process.env.CRON_SECRET;
@@ -21,16 +21,7 @@ export async function GET(req: Request) {
   }
 
   const started = Date.now();
-  const region = process.env.VERCEL_REGION ?? null;
-
-  let extra: string[] = [];
-  let caFile = 'loaded';
-  try {
-    const pem = await readFile(join(process.cwd(), 'certs', 'parliament-chain.pem'), 'utf8');
-    extra = pem.split(/(?=-----BEGIN CERTIFICATE-----)/).filter((s) => s.includes('BEGIN CERTIFICATE'));
-  } catch (e) {
-    caFile = `missing: ${(e as Error).message}`;
-  }
+  const ca = [...tls.rootCertificates, ...(PARLIAMENT_CA as string[])];
 
   const result = await new Promise<Record<string, unknown>>((resolve) => {
     const request = https.request(
@@ -39,7 +30,7 @@ export async function GET(req: Request) {
         path: '/api/members?parliamentNo=13&limit=1&page=1',
         method: 'GET',
         timeout: 25000,
-        ca: [...tls.rootCertificates, ...extra],
+        ca,
         headers: { accept: 'application/json', 'user-agent': 'mymp-sync/1.0 (+https://mymp.bd)' },
       },
       (res) => {
@@ -58,6 +49,8 @@ export async function GET(req: Request) {
     request.end();
   });
 
-  return NextResponse.json({ ...result, caFile, certs: extra.length, ms: Date.now() - started, region },
-    { status: result.ok ? 200 : 502 });
+  return NextResponse.json(
+    { ...result, certs: (PARLIAMENT_CA as string[]).length, ms: Date.now() - started, region: process.env.VERCEL_REGION ?? null },
+    { status: result.ok ? 200 : 502 },
+  );
 }

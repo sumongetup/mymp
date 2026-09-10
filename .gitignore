@@ -42,3 +42,6 @@ next-env.d.ts
 
 # keep the example env file
 !.env.example
+
+# CA chain for parliament.gov.bd: public certificates, not keys
+!src/lib/parliament-ca.mjs

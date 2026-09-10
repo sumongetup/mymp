@@ -9,11 +9,12 @@
  * API, but bulk-publishing 349 personal numbers is a decision the site owner has
  * to make first; until then we record only whether one exists.
  */
-import { writeFile, mkdir, readFile } from 'node:fs/promises';
+import { writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import https from 'node:https';
 import tls from 'node:tls';
+import { PARLIAMENT_CA } from '../src/lib/parliament-ca.mjs';
 
 const BASE = 'https://www.parliament.gov.bd';
 const HOST = 'www.parliament.gov.bd';
@@ -61,38 +62,24 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
  *  1. The server sends only its leaf certificate, not the GoGetSSL intermediate
  *     that signs it. Browsers paper over that by fetching the intermediate from
  *     the AIA extension; Node does not, and reports UNABLE_TO_VERIFY_LEAF_
- *     SIGNATURE. certs/parliament-chain.pem supplies the intermediate and its
- *     root, added ALONGSIDE Node's bundled roots (passing `ca` replaces them).
+ *     SIGNATURE. src/lib/parliament-ca.mjs supplies that intermediate and its
+ *     root, added ALONGSIDE Node's bundled roots, since a ca option replaces
+ *     the bundled list rather than adding to it.
  *  2. Requests with no User-Agent get their connection reset.
  *
  * Verified locally: without these, ECONNRESET / UNABLE_TO_VERIFY_LEAF_SIGNATURE;
  * with them, HTTP 200.
  */
-const CA_FILE = join(dirname(fileURLToPath(import.meta.url)), '..', 'certs', 'parliament-chain.pem');
-let agent = null;
+const agent = new https.Agent({ ca: [...tls.rootCertificates, ...PARLIAMENT_CA], keepAlive: true });
 
-async function getAgent() {
-  if (agent) return agent;
-  let extra = [];
-  try {
-    const pem = await readFile(CA_FILE, 'utf8');
-    extra = pem.split(/(?=-----BEGIN CERTIFICATE-----)/).filter((s) => s.includes('BEGIN CERTIFICATE'));
-  } catch {
-    console.warn('  certs/parliament-chain.pem missing; TLS verification may fail');
-  }
-  agent = new https.Agent({ ca: [...tls.rootCertificates, ...extra], keepAlive: true });
-  return agent;
-}
-
-async function request(path) {
-  const ca = await getAgent();
+function request(path) {
   return new Promise((resolve, reject) => {
     const req = https.request(
       {
         host: HOST,
         path,
         method: 'GET',
-        agent: ca,
+        agent,
         timeout: 30000,
         headers: { accept: 'application/json', 'user-agent': 'mymp-sync/1.0 (+https://mymp.bd)' },
       },
