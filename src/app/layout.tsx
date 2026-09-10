@@ -1,11 +1,19 @@
 import type { Metadata } from 'next';
-import { Hind_Siliguri, Noto_Serif_Bengali } from 'next/font/google';
+import { Anek_Bangla, Noto_Serif_Bengali } from 'next/font/google';
 import './globals.css';
 import { siteUrl } from '@/lib/site';
 
-/* Bengali faces are large, so only the weights actually used are requested. */
-const hind = Hind_Siliguri({
-  variable: '--font-hind',
+/*
+ * Anek Bangla is a Bengali-first family from Ek Type: weights 100-800 and
+ * noticeably better-resolved conjuncts than a Latin family extended to Bengali,
+ * which is what the site used before. Noto Serif Bengali stays for headings
+ * because it is the only Bengali serif with a full weight range, and headings
+ * here run from 15px to 58px.
+ *
+ * Bengali faces are large, so only the weights actually used are requested.
+ */
+const anek = Anek_Bangla({
+  variable: '--font-anek',
   subsets: ['bengali', 'latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
@@ -36,7 +44,7 @@ export const metadata: Metadata = {
  */
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="bn" className={`${hind.variable} ${notoBn.variable} h-full`}>
+    <html lang="bn" className={`${anek.variable} ${notoBn.variable} h-full`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

@@ -5,6 +5,9 @@ import { signOut } from '@/app/admin/actions';
 const NAV = [
   { href: '/admin', label: 'ড্যাশবোর্ড' },
   { href: '/admin/members', label: 'সংসদ সদস্য' },
+  { href: '/admin/seats', label: 'আসন' },
+  { href: '/admin/parties', label: 'দল' },
+  { href: '/admin/committees', label: 'কমিটি' },
   { href: '/admin/news', label: 'সংবাদ' },
   { href: '/admin/corrections', label: 'সংশোধন অনুরোধ' },
   { href: '/admin/sync', label: 'সিঙ্ক ও প্রকাশ' },
