@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   description:
     'ত্রয়োদশ জাতীয় সংসদের ৩৪৯ জন সদস্য, ৩০০ আসন, দল, সংসদীয় কমিটি ও অধিবেশনের তথ্য। সূত্র বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন।',
   openGraph: { type: 'website', locale: 'bn_BD', siteName: 'আমার এমপি' },
+  // The share image itself is src/app/opengraph-image.png (file convention, inherited by every page).
+  twitter: { card: 'summary_large_image' },
 };
 
 /**

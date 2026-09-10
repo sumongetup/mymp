@@ -55,7 +55,7 @@ export default function AdminNav({ groups, account }: { groups: NavGroup[]; acco
 
   const head = (
     <Link href="/admin" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-      <Mark size={30} />
+      <Mark size={26} tone="light" />
       <span className="flex flex-col leading-none gap-[3px]">
         <span className="display text-[17px] text-white">আমার এমপি</span>
         <span className="text-[9.5px] font-bold tracking-[2px] text-white/50">ADMIN</span>

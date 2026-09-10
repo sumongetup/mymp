@@ -4,11 +4,23 @@ import { NAV, NAV_MORE } from '@/lib/nav';
 import SiteSearch from '@/components/SiteSearch';
 import Brand from '@/components/Brand';
 import MobileNav from '@/components/MobileNav';
+import { siteUrl } from '@/lib/site';
+
+/** Tells search engines who publishes the site and which image is its logo. */
+const ORGANIZATION = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'আমার এমপি',
+  alternateName: 'mymp',
+  url: siteUrl,
+  logo: `${siteUrl}/icon-512.png`,
+};
 
 /** Public site shell. Reads no session, so every page beneath it can be prerendered. */
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION) }} />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:start-3 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-brand focus:text-white"

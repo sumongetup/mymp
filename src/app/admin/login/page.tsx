@@ -20,7 +20,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
     <div className="grow flex items-center justify-center px-5 py-12 bg-[radial-gradient(ellipse_at_top,_var(--color-brandsoft),_var(--color-paper)_60%)]">
       <div className="w-full max-w-[400px] flex flex-col gap-6">
         <div className="flex items-center gap-3">
-          <Mark size={40} />
+          <Mark size={36} />
           <span className="flex flex-col leading-none gap-1">
             <span className="display text-[22px] text-brand">আমার এমপি</span>
             <span className="text-[10px] font-bold tracking-[2.2px] text-muted">ADMIN PANEL</span>

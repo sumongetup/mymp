@@ -20,6 +20,7 @@
   --color-rule: #dfe3dd;
   --color-rulesoft: #eaede8;
   --color-brand: #0f6a4b;
+  --color-logo: #17cf54; /* the logo's own green: artwork only, too light for text on white */
   --color-branddark: #0a4d36;
   --color-brandsoft: #e3f1e9;
   --color-brandring: #bfe1cf;
