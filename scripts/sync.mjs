@@ -680,7 +680,7 @@ async function main() {
   // Only published items reach the site, and only the fields the site shows.
   if (dbConfigured()) {
     try {
-      const rows = await db('news_posts?select=id,title_bn,source_name,source_url,published_on,excerpt_bn,member_id,seat_slug&status=eq.published&order=published_on.desc&limit=500');
+      const rows = await db('news_posts?select=id,title_bn,source_name,source_url,published_on,excerpt_bn,member_id,seat_slug&status=eq.published&order=published_on.desc,created_at.desc&limit=3000');
       const news = rows.map((r) => ({
         id: r.id, titleBn: r.title_bn, sourceName: r.source_name, sourceUrl: r.source_url,
         publishedOn: r.published_on, excerptBn: r.excerpt_bn ?? null, memberId: r.member_id ?? null, seatSlug: r.seat_slug ?? null,

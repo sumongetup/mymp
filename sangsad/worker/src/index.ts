@@ -13,6 +13,8 @@ import { parliamentGet } from '@sangsad/shared';
 import { runParliament } from './jobs/parliament';
 import { runPhotos } from './jobs/photos';
 import { runReport } from './jobs/report';
+import { runSourcesInspect } from './jobs/sources-inspect';
+import { runNews, runNewsRematch } from './jobs/news';
 
 config({ path: resolve(import.meta.dirname, '../../.env') });
 
@@ -34,6 +36,12 @@ const jobs: Record<string, Job> = {
   'parliament:photos': () => runPhotos(getDb()),
   /** Writes docs/reports/parliament-<date>.md. */
   'parliament:report': () => runReport(getDb()),
+  /** Inspects every news source (robots.txt, feeds) and records it in config/sources.json and docs/SOURCES.md. */
+  'sources:inspect': () => runSourcesInspect(),
+  /** Reads the active news sources, matches new stories to members, hands matches to mymp.bd. */
+  news: () => runNews(getDb()),
+  /** Re-runs the matcher over the last week's articles (after the matcher changes). */
+  'news:rematch': () => runNewsRematch(getDb()),
 };
 
 async function run(name: string) {

@@ -39,9 +39,20 @@ Jobs today:
 | `health` | proves the database and parliament.gov.bd are reachable | DATABASE_URL |
 | `parliament` | writes the public mirror mymp.bd builds from (below), then members, parties, officers, committees (roster rule), sessions and sittings, notices matched to members and committees, earlier terms of sitting members with corroborated matching | DATABASE_URL, plus NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY for the mirror; about 45 requests at 1/s |
 | `parliament:photos` | copies official photos into the public Storage bucket `member-photos` (only members whose copy is missing are fetched), then writes the photo map for mymp.bd | plus NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY |
+| `sources:inspect` | inspects the 80 news sources (robots.txt, the homepage's feed links, known feed addresses, the usual feed and news-sitemap paths) and writes the result to `config/sources.json` and the table in `docs/SOURCES.md`; commit both | nothing but network; run by hand when outlets change |
+| `news` | reads every active source (RSS or Google News sitemap), keeps new headlines from the last 7 days, matches them to sitting members (`worker/src/matcher/match.ts`), and delivers matches to mymp.bd's `news_posts`: 0.85 or more as published, 0.50 to 0.85 as drafts | DATABASE_URL; MYMP_SUPABASE_URL and MYMP_SUPABASE_SERVICE_ROLE_KEY to deliver; NEWS_AUTO_PUBLISH=false makes every match a draft |
+| `news:rematch` | re-runs the current matcher over the last week's stored headlines (after a matcher change); editor-approved or rejected matches are kept, deliveries skip what mymp.bd already has | as `news` |
 | `parliament:report` | writes `docs/reports/parliament-<date>.md`: counts against the source, the unseated seat, officers, every member with a missing photo, email, profession, date of birth or party | DATABASE_URL |
 
 The nightly workflow `.github/workflows/sangsad-worker.yml` (repository root) runs the three parliament jobs at 02:00 Dhaka and can be started by hand with a job name. It reads the repository secrets `SANGSAD_DATABASE_URL`, `SANGSAD_SUPABASE_URL` and `SANGSAD_SUPABASE_SERVICE_ROLE_KEY`, and optionally `MYMP_DEPLOY_HOOK_URL`.
+
+## News
+
+`.github/workflows/sangsad-news.yml` runs `news` every 30 minutes and, every 3 hours, calls mymp.bd's deploy hook so new headlines reach the static pages. It needs, besides the three `SANGSAD_*` secrets, `MYMP_SUPABASE_URL` and `MYMP_SUPABASE_SERVICE_ROLE_KEY` (mymp.bd's own Supabase project) and optionally `MYMP_DEPLOY_HOOK_URL`.
+
+Only headline, outlet, date and link reach the site. The feed summary (160 characters at most) is stored for the matcher and never shown. A wrong match is removed in mymp.bd's admin (News: reject or unpublish); `news:rematch` never re-delivers a story mymp.bd already holds.
+
+To see what the matcher decided and why: `select am.status, am.confidence, am.match_reason, a.title from article_members am join articles a on a.id = am.article_id order by a.published_at desc limit 50;`
 
 ## The mirror mymp.bd builds from
 

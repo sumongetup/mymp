@@ -312,7 +312,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             <H2 count={memberNews.length}>সংবাদ</H2>
             {memberNews.length ? (
               <ul className="flex flex-col gap-3">
-                {memberNews.map((n) => <li key={n.id}><NewsCard n={n} /></li>)}
+                {memberNews.slice(0, 30).map((n) => <li key={n.id}><NewsCard n={n} /></li>)}
               </ul>
             ) : (
               <Empty

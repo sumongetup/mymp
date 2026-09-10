@@ -22,9 +22,11 @@ export default function NewsPage() {
       <div className="pt-8 pb-14 flex flex-col gap-6 max-w-[760px]">
         {items.length ? (
           <>
-            <p className="text-[13.5px] text-muted tnum">{bn(items.length)}টি সংবাদ</p>
+            <p className="text-[13.5px] text-muted tnum">
+              {items.length > 300 ? `সর্বশেষ ${bn(300)}টি দেখানো হচ্ছে, মোট ${bn(items.length)}টি সংবাদ` : `${bn(items.length)}টি সংবাদ`}
+            </p>
             <ul className="flex flex-col gap-3">
-              {items.map((n) => <li key={n.id}><NewsCard n={n} /></li>)}
+              {items.slice(0, 300).map((n) => <li key={n.id}><NewsCard n={n} /></li>)}
             </ul>
           </>
         ) : (
@@ -39,17 +41,17 @@ export default function NewsPage() {
           <ol className="flex flex-col gap-3 text-[15px] leading-relaxed text-inksoft">
             <li className="flex gap-3">
               <span className="shrink-0 w-6 h-6 rounded-full bg-brandsoft text-brand text-[12px] font-bold grid place-items-center tnum">১</span>
-              <span>শুধু অনুমোদিত সংবাদমাধ্যমের শিরোনাম নেওয়া হয়। অন্য কোনো উৎস থেকে নয়।</span>
+              <span>দেশি-বিদেশি ৮০টি সংবাদমাধ্যমের তালিকা থেকে শিরোনাম নেওয়া হয়, শুধু সেই সাইটগুলো থেকে যেগুলো নিজেরাই ফিড বা নিউজ সাইটম্যাপ প্রকাশ করে এবং যাদের robots.txt তা অনুমতি দেয়।</span>
             </li>
             <li className="flex gap-3">
               <span className="shrink-0 w-6 h-6 rounded-full bg-brandsoft text-brand text-[12px] font-bold grid place-items-center tnum">২</span>
-              <span>প্রতিটি শিরোনাম সংশ্লিষ্ট সংসদ সদস্য বা আসনের সঙ্গে মিলিয়ে নেওয়া হয়।</span>
+              <span>একজন সংসদ সদস্যের সঙ্গে যুক্ত হতে শিরোনামে তাঁর নাম এবং তাঁর পদ, আসন বা “এমপি”-র মতো প্রসঙ্গ দুটোই লাগে। শুধু নামের মিলে কোনো শিরোনাম কারও সঙ্গে যুক্ত হয় না।</span>
             </li>
             <li className="flex gap-3">
               <span className="shrink-0 w-6 h-6 rounded-full bg-brandsoft text-brand text-[12px] font-bold grid place-items-center tnum">৩</span>
               <span>
-                <strong className="text-ink font-semibold">কোনো সংবাদ নিজে নিজে প্রকাশ হয় না।</strong>{' '}
-                একজন সম্পাদক দেখে অনুমোদন করার পরই তা সাইটে আসে।
+                <strong className="text-ink font-semibold">মিল নিশ্চিত হলে শিরোনাম নিজে থেকে প্রকাশ হয়; সন্দেহ থাকলে একজন সম্পাদক দেখে অনুমোদন করার পরই আসে।</strong>{' '}
+                ভুল মিল চোখে পড়লে জানান, সম্পাদক তা সরিয়ে দেবেন।
               </span>
             </li>
             <li className="flex gap-3">
