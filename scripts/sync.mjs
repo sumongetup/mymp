@@ -9,11 +9,14 @@
  * API, but bulk-publishing 349 personal numbers is a decision the site owner has
  * to make first; until then we record only whether one exists.
  */
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import https from 'node:https';
+import tls from 'node:tls';
 
 const BASE = 'https://www.parliament.gov.bd';
+const HOST = 'www.parliament.gov.bd';
 const PARLIAMENT = 13;
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
 
@@ -51,12 +54,71 @@ async function db(path, init = {}) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/**
+ * Two things about parliament.gov.bd's TLS make a plain fetch() fail on a clean
+ * machine, which is why this uses node:https rather than fetch:
+ *
+ *  1. The server sends only its leaf certificate, not the GoGetSSL intermediate
+ *     that signs it. Browsers paper over that by fetching the intermediate from
+ *     the AIA extension; Node does not, and reports UNABLE_TO_VERIFY_LEAF_
+ *     SIGNATURE. certs/parliament-chain.pem supplies the intermediate and its
+ *     root, added ALONGSIDE Node's bundled roots (passing `ca` replaces them).
+ *  2. Requests with no User-Agent get their connection reset.
+ *
+ * Verified locally: without these, ECONNRESET / UNABLE_TO_VERIFY_LEAF_SIGNATURE;
+ * with them, HTTP 200.
+ */
+const CA_FILE = join(dirname(fileURLToPath(import.meta.url)), '..', 'certs', 'parliament-chain.pem');
+let agent = null;
+
+async function getAgent() {
+  if (agent) return agent;
+  let extra = [];
+  try {
+    const pem = await readFile(CA_FILE, 'utf8');
+    extra = pem.split(/(?=-----BEGIN CERTIFICATE-----)/).filter((s) => s.includes('BEGIN CERTIFICATE'));
+  } catch {
+    console.warn('  certs/parliament-chain.pem missing; TLS verification may fail');
+  }
+  agent = new https.Agent({ ca: [...tls.rootCertificates, ...extra], keepAlive: true });
+  return agent;
+}
+
+async function request(path) {
+  const ca = await getAgent();
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      {
+        host: HOST,
+        path,
+        method: 'GET',
+        agent: ca,
+        timeout: 30000,
+        headers: { accept: 'application/json', 'user-agent': 'mymp-sync/1.0 (+https://mymp.bd)' },
+      },
+      (res) => {
+        let body = '';
+        res.setEncoding('utf8');
+        res.on('data', (c) => { body += c; });
+        res.on('end', () => {
+          if (res.statusCode < 200 || res.statusCode >= 300) {
+            reject(new Error(`${res.statusCode} ${res.statusMessage}`));
+            return;
+          }
+          try { resolve(JSON.parse(body)); } catch (e) { reject(new Error(`bad JSON: ${e.message}`)); }
+        });
+      },
+    );
+    req.on('timeout', () => req.destroy(new Error('timeout')));
+    req.on('error', (e) => reject(new Error(e.code ?? e.message)));
+    req.end();
+  });
+}
+
 async function getJson(path, tries = 3) {
   for (let i = 1; i <= tries; i++) {
     try {
-      const res = await fetch(BASE + path, { headers: { accept: 'application/json' } });
-      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-      return await res.json();
+      return await request(path);
     } catch (err) {
       if (i === tries) throw new Error(`GET ${path} failed after ${tries} tries: ${err.message}`);
       await sleep(1500 * i);

@@ -1,12 +1,18 @@
 import { NextResponse } from 'next/server';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import https from 'node:https';
+import tls from 'node:tls';
 
 export const dynamic = 'force-dynamic';
 
 /**
- * Reachability probe: can THIS function's network reach parliament.gov.bd?
- * The build container could not, so this tells us whether a scheduled
- * function in the configured region can fetch the source instead.
- * Secret-gated like the cron route; returns no data from the source itself.
+ * Reachability probe for parliament.gov.bd, gated by the cron secret.
+ *
+ * It goes through the same node:https path the sync uses, because a plain
+ * fetch() fails twice over on that host: the server omits the intermediate
+ * certificate, and it resets connections that send no User-Agent. Returns only
+ * status and timing, never data from the source.
  */
 export async function GET(req: Request) {
   const secret = process.env.CRON_SECRET;
@@ -14,26 +20,44 @@ export async function GET(req: Request) {
     return NextResponse.json({ ok: false, error: 'unauthorized' }, { status: 401 });
   }
 
-  const target = 'https://www.parliament.gov.bd/api/members?parliamentNo=13&limit=1&page=1';
   const started = Date.now();
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 20000);
+  const region = process.env.VERCEL_REGION ?? null;
+
+  let extra: string[] = [];
+  let caFile = 'loaded';
   try {
-    const res = await fetch(target, { headers: { accept: 'application/json' }, signal: ctrl.signal, cache: 'no-store' });
-    const text = await res.text();
-    let total: number | null = null;
-    try { total = JSON.parse(text).total ?? null; } catch { /* not json */ }
-    return NextResponse.json({
-      ok: res.ok, status: res.status, bytes: text.length, total,
-      ms: Date.now() - started, region: process.env.VERCEL_REGION ?? null,
-    });
-  } catch (err) {
-    const e = err as Error & { cause?: { code?: string; message?: string } };
-    return NextResponse.json({
-      ok: false, error: e.message, cause: e.cause?.code ?? e.cause?.message ?? null,
-      ms: Date.now() - started, region: process.env.VERCEL_REGION ?? null,
-    }, { status: 502 });
-  } finally {
-    clearTimeout(timer);
+    const pem = await readFile(join(process.cwd(), 'certs', 'parliament-chain.pem'), 'utf8');
+    extra = pem.split(/(?=-----BEGIN CERTIFICATE-----)/).filter((s) => s.includes('BEGIN CERTIFICATE'));
+  } catch (e) {
+    caFile = `missing: ${(e as Error).message}`;
   }
+
+  const result = await new Promise<Record<string, unknown>>((resolve) => {
+    const request = https.request(
+      {
+        host: 'www.parliament.gov.bd',
+        path: '/api/members?parliamentNo=13&limit=1&page=1',
+        method: 'GET',
+        timeout: 25000,
+        ca: [...tls.rootCertificates, ...extra],
+        headers: { accept: 'application/json', 'user-agent': 'mymp-sync/1.0 (+https://mymp.bd)' },
+      },
+      (res) => {
+        let body = '';
+        res.setEncoding('utf8');
+        res.on('data', (c) => { body += c; });
+        res.on('end', () => {
+          let total: number | null = null;
+          try { total = JSON.parse(body).total ?? null; } catch { /* not json */ }
+          resolve({ ok: (res.statusCode ?? 0) < 400, status: res.statusCode, bytes: body.length, total });
+        });
+      },
+    );
+    request.on('timeout', () => request.destroy(new Error('timeout')));
+    request.on('error', (e: NodeJS.ErrnoException) => resolve({ ok: false, error: e.code ?? e.message }));
+    request.end();
+  });
+
+  return NextResponse.json({ ...result, caFile, certs: extra.length, ms: Date.now() - started, region },
+    { status: result.ok ? 200 : 502 });
 }
