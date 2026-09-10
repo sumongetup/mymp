@@ -10,10 +10,12 @@ cp .env.example .env        # fill DATABASE_URL and the Supabase keys
 pnpm db:migrate             # applies migrations, then re-applies RLS policies (idempotent)
                             # (or, once, paste packages/db/setup.sql into Supabase → SQL Editor; regenerate it with pnpm --filter @durbin/db sql:bundle)
 pnpm db:seed                # parliaments, divisions, districts, 350 constituencies from parliament.gov.bd
-pnpm dev                    # http://localhost:3000/sangsad (BASE_PATH from .env)
+pnpm dev                    # http://localhost:3000/sangsad (next.config.ts loads the root .env; shell variables win)
 ```
 
 Without a database: set `FIXTURES=1` in `.env` and skip migrate/seed. The site then serves the `TEST_` fixtures in `fixtures/` and shows a yellow banner. This cannot happen on a production deployment: the loader throws when `VERCEL_ENV=production`, when `APP_ENV=production`, or when `NEXT_PUBLIC_SITE_URL` is durbinnews.com (NODE_ENV is not used, because `next build` sets it to production even in CI).
+
+**Supabase connection.** Use the **session pooler** string from the dashboard's Connect sheet: host `aws-0-ap-southeast-1.pooler.supabase.com`, port 5432, user `postgres.<project-ref>`. The direct host `db.<ref>.supabase.co` is IPv6-only and does not resolve on many networks. Set the database password when the project is created and copy it then: on the first project (2026-09-10) four dashboard password resets never reached the pooler (28P01 every time), and a fresh project with its creation password worked at once.
 
 On Windows Git Bash, prefix commands that pass `BASE_PATH=/sangsad` with `MSYS_NO_PATHCONV=1`, or the shell rewrites `/sangsad` into a Windows path.
 

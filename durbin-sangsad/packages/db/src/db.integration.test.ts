@@ -22,7 +22,9 @@ const DIV_N = place(1, 'TEST_North', 'TEST_উত্তর');
 const DIV_S = place(2, 'TEST_South', 'TEST_দক্ষিণ');
 const DIST_A = { ...place(11, 'TEST_Uttarpara', 'TEST_উত্তরপাড়া'), divisionId: 1 };
 const DIST_B = { ...place(12, 'TEST_Nadigram', 'TEST_নদীগ্রাম'), divisionId: 1 };
-const DIST_C = { ...place(21, 'TEST_Sagarkul', 'TEST_সাগরকূল'), divisionId: 2 };
+// Like the source, a district's own divisionId uses a different numbering from
+// the division objects (8 is nobody's id here); the seat row's division decides.
+const DIST_C = { ...place(21, 'TEST_Sagarkul', 'TEST_সাগরকূল'), divisionId: 8 };
 
 const seat = (id: number, no: number, en: string, bn: string, division: typeof DIV_N | null, district: typeof DIST_A | null, boundary: string | null): SrcConstituency => ({
   id,
@@ -148,5 +150,32 @@ describe('migration + RLS + seed on real Postgres (PGlite)', () => {
     } finally {
       await pg.exec('reset role');
     }
+  });
+
+  it('keeps a repeated seat name as published and gives the later seat its own slug', async () => {
+    const rows = [
+      // An older set: no division on the rows, districts only looked up.
+      { ...seat(21, 241, 'TEST_Uttarpara-1', 'TEST_উত্তরপাড়া-১', null, DIST_A, null), electionId: 12 },
+      { ...seat(22, 242, 'TEST_Uttarpara-1', 'TEST_উত্তরপাড়া-১', null, DIST_A, null), electionId: 12 },
+      { ...seat(23, 243, 'TEST_Nowhere-1', 'TEST_কোথাও-১', null, { ...place(99, 'TEST_Nowhere', 'TEST_কোথাও'), divisionId: 1 }, null), electionId: 12 },
+    ];
+    const r = await upsertConstituencySet(db, 12, rows, { writePlaces: false });
+    expect(r.duplicateNames).toEqual(['242 TEST_Uttarpara-1']);
+    expect(r.unknownDistricts).toEqual(['TEST_Nowhere']);
+    await upsertConstituencySet(db, 12, rows, { writePlaces: false });
+    const dist = await db.select({ n: sql<number>`count(*)::int` }).from(schema.districts);
+    expect(dist[0]?.n).toBe(3);
+    const got = await db
+      .select({ number: schema.constituencies.number, slug: schema.constituencies.slug, nameBn: schema.constituencies.nameBn, district: schema.constituencies.districtId })
+      .from(schema.constituencies)
+      .innerJoin(schema.parliaments, sql`${schema.parliaments.id} = ${schema.constituencies.parliamentId}`)
+      .where(sql`${schema.parliaments.number} = 12`)
+      .orderBy(schema.constituencies.number);
+    const [uttarpara] = await db.select({ id: schema.districts.id }).from(schema.districts).where(sql`${schema.districts.sourceId} = 11`);
+    expect(got).toEqual([
+      { number: 241, slug: 'test-uttarpara-1', nameBn: 'TEST_উত্তরপাড়া-১', district: uttarpara!.id },
+      { number: 242, slug: 'test-uttarpara-1-242', nameBn: 'TEST_উত্তরপাড়া-১', district: uttarpara!.id },
+      { number: 243, slug: 'test-nowhere-1', nameBn: 'TEST_কোথাও-১', district: null },
+    ]);
   });
 });

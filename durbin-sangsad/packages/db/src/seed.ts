@@ -4,8 +4,10 @@
  *
  * Network here, logic in seed-core.ts (shared with the PGlite integration
  * test). Re-running is safe: every write is an upsert on the source's ids.
- * Sets are applied oldest first so the current election's spellings of
- * districts (Bogura, Cumilla…) are the ones that stay.
+ * Divisions and districts come from the current election's set only (its
+ * spellings, Bogura and Cumilla, and the only set with divisions on every
+ * seat). Every other set runs after it and looks districts up by the
+ * source's district id, which is the same across sets.
  */
 import { config } from 'dotenv';
 import { resolve } from 'node:path';
@@ -31,14 +33,18 @@ async function main() {
   );
 
   let currentCount = 0;
-  for (const p of [...rawParliaments].sort((a, b) => a.parliamentNo - b.parliamentNo)) {
+  const ordered = [current, ...rawParliaments.filter((p) => p !== current).sort((a, b) => a.parliamentNo - b.parliamentNo)];
+  for (const p of ordered) {
     const rows = all.filter((c) => c.electionId === p.externalId);
     if (!rows.length) continue;
-    const r = await upsertConstituencySet(db, p.parliamentNo, rows);
+    const r = await upsertConstituencySet(db, p.parliamentNo, rows, { writePlaces: p === current });
     console.log(
       `parliament ${p.parliamentNo}: ${r.constituencies} constituencies (${r.territorial} territorial + ${r.reserved} reserved), ${r.divisions} divisions, ${r.districts} districts`,
     );
-    for (const d of r.skippedDistricts) console.warn(`  district ${d} has no known division; skipped`);
+    for (const d of r.skippedDistricts) console.warn(`  district ${d} has no division on its seat rows; skipped`);
+    for (const d of r.divisionConflicts) console.log(`  division check: ${d}`);
+    if (r.unknownDistricts.length) console.warn(`  districts not in the current set, seats left without a district: ${r.unknownDistricts.join(', ')}`);
+    for (const d of r.duplicateNames) console.log(`  seat ${d}: same name as an earlier seat in the source; slug takes the seat number`);
     if (p.parliamentNo === CURRENT_PARLIAMENT) {
       currentCount = r.constituencies;
       if (r.missingBoundary) console.log(`  note: ${r.missingBoundary} territorial constituencies have no boundary text in the source`);
