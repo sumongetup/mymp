@@ -3,9 +3,7 @@ name: Sangsad worker
 # Nightly refresh of the সংসদ engine behind mymp.bd from parliament.gov.bd,
 # and on demand. Runs the three parliament jobs in order; each records itself
 # in ingest_runs. Reads the repository secrets SANGSAD_DATABASE_URL,
-# SANGSAD_SUPABASE_URL and SANGSAD_SUPABASE_SERVICE_ROLE_KEY, falling back to
-# the older names they had before the rename, so the run never breaks while
-# the owner moves them.
+# SANGSAD_SUPABASE_URL and SANGSAD_SUPABASE_SERVICE_ROLE_KEY.
 
 on:
   schedule:
@@ -26,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      DATABASE_URL: ${{ secrets.SANGSAD_DATABASE_URL || secrets.DURBIN_DATABASE_URL }}
-      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SANGSAD_SUPABASE_URL || secrets.DURBIN_SUPABASE_URL }}
-      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SANGSAD_SUPABASE_SERVICE_ROLE_KEY || secrets.DURBIN_SUPABASE_SERVICE_ROLE_KEY }}
+      DATABASE_URL: ${{ secrets.SANGSAD_DATABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SANGSAD_SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SANGSAD_SUPABASE_SERVICE_ROLE_KEY }}
       APP_ENV: production
       # Optional: mymp.bd's Vercel deploy hook, so the site rebuilds from tonight's copy right away.
       MYMP_DEPLOY_HOOK_URL: ${{ secrets.MYMP_DEPLOY_HOOK_URL }}

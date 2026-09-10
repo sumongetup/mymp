@@ -41,7 +41,7 @@ Jobs today:
 | `parliament:photos` | copies official photos into the public Storage bucket `member-photos` (only members whose copy is missing are fetched), then writes the photo map for mymp.bd | plus NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY |
 | `parliament:report` | writes `docs/reports/parliament-<date>.md`: counts against the source, the unseated seat, officers, every member with a missing photo, email, profession, date of birth or party | DATABASE_URL |
 
-The nightly workflow `.github/workflows/sangsad-worker.yml` (repository root) runs the three parliament jobs at 02:00 Dhaka and can be started by hand with a job name. It reads the repository secrets `SANGSAD_DATABASE_URL`, `SANGSAD_SUPABASE_URL` and `SANGSAD_SUPABASE_SERVICE_ROLE_KEY`, and falls back to the older `DURBIN_*` names until those are deleted.
+The nightly workflow `.github/workflows/sangsad-worker.yml` (repository root) runs the three parliament jobs at 02:00 Dhaka and can be started by hand with a job name. It reads the repository secrets `SANGSAD_DATABASE_URL`, `SANGSAD_SUPABASE_URL` and `SANGSAD_SUPABASE_SERVICE_ROLE_KEY`, and optionally `MYMP_DEPLOY_HOOK_URL`.
 
 ## The mirror mymp.bd builds from
 
