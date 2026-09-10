@@ -1,6 +1,6 @@
 # সংসদ: the data engine behind mymp.bd
 
-This workspace keeps a normalised Postgres copy of Bangladesh's official parliamentary data (members, terms, parties, committees, sessions, notices, photos) and, in later phases, the affidavits, election results and news that mymp.bd shows. The website itself is the Next.js app at the root of this repository (mymp.bd); this folder has no web app of its own.
+This workspace keeps a normalised Postgres copy of Bangladesh's official parliamentary data (members, terms, parties, committees, sessions, notices, photos) and, in later phases, the affidavits, election results and news that mymp.bd shows. The website itself is the Next.js app at the root of this repository (mymp.bd); this folder has no web app of its own. Each night the worker also publishes a cleaned copy of the official responses (mobile numbers and other private fields removed) that mymp.bd builds from; see docs/RUNBOOK.md.
 
 - `packages/db`: Drizzle schema, migrations, Row Level Security, seed
 - `packages/shared`: Bangla/English name normalisation, similarity, slugs, the parliament.gov.bd client

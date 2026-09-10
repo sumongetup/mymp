@@ -37,11 +37,21 @@ Jobs today:
 | Job | What it does | Needs |
 |---|---|---|
 | `health` | proves the database and parliament.gov.bd are reachable | DATABASE_URL |
-| `parliament` | members, parties, officers, committees (roster rule), sessions and sittings, notices matched to members and committees, earlier terms of sitting members with corroborated matching | DATABASE_URL; about 45 requests at 1/s |
-| `parliament:photos` | copies official photos into the public Storage bucket `member-photos`; only members whose copy is missing are fetched | plus NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY |
+| `parliament` | writes the public mirror mymp.bd builds from (below), then members, parties, officers, committees (roster rule), sessions and sittings, notices matched to members and committees, earlier terms of sitting members with corroborated matching | DATABASE_URL, plus NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY for the mirror; about 45 requests at 1/s |
+| `parliament:photos` | copies official photos into the public Storage bucket `member-photos` (only members whose copy is missing are fetched), then writes the photo map for mymp.bd | plus NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY |
 | `parliament:report` | writes `docs/reports/parliament-<date>.md`: counts against the source, the unseated seat, officers, every member with a missing photo, email, profession, date of birth or party | DATABASE_URL |
 
 The nightly workflow `.github/workflows/sangsad-worker.yml` (repository root) runs the three parliament jobs at 02:00 Dhaka and can be started by hand with a job name. It reads the repository secrets `SANGSAD_DATABASE_URL`, `SANGSAD_SUPABASE_URL` and `SANGSAD_SUPABASE_SERVICE_ROLE_KEY`, and falls back to the older `DURBIN_*` names until those are deleted.
+
+## The mirror mymp.bd builds from
+
+The `parliament` job writes `mirror/parliament/latest.json` (plus a dated copy for rollback) to the public Storage bucket `mirror`: the parliament.gov.bd responses mymp.bd's `scripts/sync.mjs` needs, keyed by the exact request path. The photos job writes `mirror/photos/latest.json`, member id to our stored photo. mymp.bd reads both at build time when the copy is at most 36 hours old and reads parliament.gov.bd directly otherwise, so its own derivations (slugs, committees, notices, seat history) stay one piece of code.
+
+The bucket is public, and the source's records carry every member's mobile number, a second mobile and email, a signature image, user ids and officers' phone numbers. `worker/src/jobs/mirror.ts` therefore rebuilds each record from an allow-list of fields, keeps a mobile number only as `hasMobile`, and scans the whole document for private field names before uploading; `mirror.test.ts` covers this. A copy with fewer than 300 sitting members is refused, so a bad night never replaces a good copy.
+
+After the nightly jobs the workflow calls mymp.bd's deploy hook when the repository secret `MYMP_DEPLOY_HOOK_URL` exists; mymp.bd's own cron (03:00 Dhaka) rebuilds it anyway.
+
+To check what mymp.bd will read: open `https://<engine-ref>.supabase.co/storage/v1/object/public/mirror/parliament/latest.json` and look at `fetchedAt`. To force a build straight from parliament.gov.bd: `node scripts/sync.mjs --live` in the repository root.
 
 To re-run a failed job: run it again by name; every job is idempotent (upserts keyed on the source's ids).
 

@@ -5,6 +5,14 @@
  * time. Keeping a committed snapshot means a deploy never depends on their API
  * being up, and refreshing the data is a deliberate, reviewable act.
  *
+ * Where the data comes from: the সংসদ engine (sangsad/ in this repository)
+ * fetches parliament.gov.bd every night and publishes a cleaned copy of the
+ * responses this script needs, plus a map of member photos it has copied to
+ * its own storage. This script reads that copy when it is at most 36 hours
+ * old, and parliament.gov.bd directly otherwise, so a build never depends on
+ * the government server being up and never serves a stale copy for long.
+ * `--live` skips the copy; `--engine` refuses to fall back (parity checks).
+ *
  * Mobile numbers are deliberately NOT stored. Every sitting member has one in the
  * API, but bulk-publishing 349 personal numbers is a decision the site owner has
  * to make first; until then we record only whether one exists.
@@ -27,6 +35,19 @@ const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
  * government server is down. Without --soft (manual runs) a failure is fatal.
  */
 const SOFT = process.argv.includes('--soft');
+const LIVE = process.argv.includes('--live');
+const ENGINE_ONLY = process.argv.includes('--engine');
+
+/*
+ * The engine's public mirror. The bucket is public by design (it holds only
+ * what mymp.bd itself publishes; mobile numbers are stripped by the engine),
+ * so its address is not a secret and needs no environment variable.
+ */
+const ENGINE_URL = (process.env.SANGSAD_SUPABASE_URL || 'https://ckeorrzppdgsutqfqdor.supabase.co').replace(/\/$/, '');
+const MIRROR_URL = `${ENGINE_URL}/storage/v1/object/public/mirror`;
+const MIRROR_MAX_AGE_HOURS = 36;
+/** Set by loadMirror(): { fetchedAt, responses: { [apiPath]: rows }, photos: { [externalId]: url } }. */
+let mirror = null;
 
 /**
  * Optional admin database. When the Supabase variables are present, admin
@@ -113,7 +134,39 @@ async function getJson(path, tries = 3) {
   }
 }
 
+async function fetchUrlJson(url) {
+  const res = await fetch(url, { signal: AbortSignal.timeout(30000), headers: { 'user-agent': 'mymp-sync/1.0 (+https://mymp.bd)' } });
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+  return res.json();
+}
+
+async function loadMirror() {
+  const doc = await fetchUrlJson(`${MIRROR_URL}/parliament/latest.json`);
+  if (doc?.version !== 1 || typeof doc.responses !== 'object' || !doc.fetchedAt) throw new Error('unexpected mirror format');
+  const ageHours = (Date.now() - Date.parse(doc.fetchedAt)) / 36e5;
+  if (!(ageHours <= MIRROR_MAX_AGE_HOURS)) throw new Error(`mirror is ${ageHours.toFixed(1)} h old (limit ${MIRROR_MAX_AGE_HOURS} h)`);
+  const current = doc.responses[`/api/members?parliamentNo=${PARLIAMENT}`];
+  if (!Array.isArray(current) || current.length < 300) throw new Error('mirror lacks the sitting members');
+  if (!Array.isArray(doc.responses['/api/committees'])) throw new Error('mirror lacks committees');
+  let photos = {};
+  try {
+    photos = (await fetchUrlJson(`${MIRROR_URL}/photos/latest.json`))?.photos ?? {};
+  } catch (err) {
+    console.warn(`  photo map unavailable (${err.message}); using the source's photo links`);
+  }
+  return { fetchedAt: doc.fetchedAt, responses: doc.responses, photos };
+}
+
+/** One API list from the mirror; the caller has already decided the mirror is in use. */
+function fromMirror(path) {
+  const rows = mirror.responses[path];
+  if (!Array.isArray(rows)) throw new Error(`mirror has no ${path}`);
+  process.stdout.write(`  ${path} — ${rows.length} (mirror)\n`);
+  return rows;
+}
+
 async function getAllPages(path, limit = 100) {
+  if (mirror) return fromMirror(path);
   const rows = [];
   let page = 1;
   let total = null;
@@ -247,7 +300,16 @@ const slugify = (s) =>
   String(s).toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 async function main() {
-  console.log(`Syncing the ${PARLIAMENT}th parliament from ${BASE}\n`);
+  if (!LIVE) {
+    try {
+      mirror = await loadMirror();
+      console.log(`Syncing the ${PARLIAMENT}th parliament from the সংসদ engine's copy (fetched from ${BASE} at ${mirror.fetchedAt})\n`);
+    } catch (err) {
+      if (ENGINE_ONLY) throw new Error(`engine mirror unavailable: ${err.message}`);
+      console.warn(`  engine mirror unavailable (${err.message}); reading ${BASE} directly`);
+    }
+  }
+  if (!mirror) console.log(`Syncing the ${PARLIAMENT}th parliament from ${BASE}\n`);
 
   const rawMembers = await getAllPages(`/api/members?parliamentNo=${PARLIAMENT}`);
   const rawCommittees = await getAllPages('/api/committees', 50);
@@ -261,7 +323,7 @@ async function main() {
   const rawSessions = (await optional('sessions', () => getAllPages(`/api/sessions?parliamentId=${PARLIAMENT}`, 50))) ?? [];
   const rawNotices = (await optional('notices', () => getAllPages('/api/notices', 100))) ?? [];
   const rawSpeakers = (await optional('speakers', () => getAllPages('/api/speakers', 100))) ?? [];
-  const rawParliaments = (await optional('parliaments', () => getJson('/api/parliaments'))) ?? [];
+  const rawParliaments = (await optional('parliaments', async () => (mirror ? fromMirror('/api/parliaments') : getJson('/api/parliaments')))) ?? [];
 
   // Earlier parliaments. The source holds members for the 4th, 5th and 7th to
   // 12th; the others return nothing. These feed "who held this seat before"
@@ -291,7 +353,8 @@ async function main() {
       slug: nameCount.get(base) > 1 && c.constituencyEng ? `${base}-${slugify(c.constituencyEng)}` : base,
       nameBn: clean(m.nameBng),
       nameEn: clean(m.nameEng),
-      photoUrl: clean(m.photoUrl),
+      // Our stored copy from the engine when it has one; the source's link otherwise.
+      photoUrl: mirror?.photos?.[m.externalId] ?? clean(m.photoUrl),
       gender: clean(m.gender),
       dateOfBirth: clean(m.dateOfBirth),
       professionBn: clean(m.professionBn),
@@ -303,7 +366,8 @@ async function main() {
       presentAddressBn: clean(m.presentAddressBng),
       permanentAddressBn: clean(m.permanentAddressBng),
       email: clean(m.email),
-      hasMobile: !!m.mobile, // the number itself is deliberately not stored
+      // The number itself is deliberately not stored; the engine's copy carries only this yes/no.
+      hasMobile: typeof m.hasMobile === 'boolean' ? m.hasMobile : !!m.mobile,
       // The source carries a written biography only for the Speaker and Deputy
       // Speaker. Everyone else's stays null unless an admin writes one.
       bioBn: htmlToText(m.speakerDetailsBioBn),
@@ -564,8 +628,11 @@ async function main() {
     parliamentNo: PARLIAMENT,
     overridesApplied,
     hidden: hiddenApplied,
-    syncedAt: new Date().toISOString(),
-    source: `${BASE}/api`,
+    // When parliament.gov.bd was read: the engine's fetch time, or now for a direct read.
+    syncedAt: mirror ? mirror.fetchedAt : new Date().toISOString(),
+    builtAt: new Date().toISOString(),
+    source: mirror ? `${MIRROR_URL}/parliament/latest.json` : `${BASE}/api`,
+    via: mirror ? 'engine' : 'live',
     counts: {
       members: members.length,
       territorial: members.filter((m) => m.seat && !m.seat.reserved).length,
@@ -642,7 +709,7 @@ async function main() {
         body: JSON.stringify({
           finished_at: new Date().toISOString(), ok: true,
           members: members.length, committees: committees.length,
-          overrides_applied: overridesApplied, message: adminNote,
+          overrides_applied: overridesApplied, message: `${adminNote}; data via ${mirror ? 'engine mirror' : 'parliament.gov.bd'}`,
         }),
       });
     } catch (err) {

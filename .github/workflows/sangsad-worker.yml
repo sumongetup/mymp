@@ -30,6 +30,8 @@ jobs:
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SANGSAD_SUPABASE_URL || secrets.DURBIN_SUPABASE_URL }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SANGSAD_SUPABASE_SERVICE_ROLE_KEY || secrets.DURBIN_SUPABASE_SERVICE_ROLE_KEY }}
       APP_ENV: production
+      # Optional: mymp.bd's Vercel deploy hook, so the site rebuilds from tonight's copy right away.
+      MYMP_DEPLOY_HOOK_URL: ${{ secrets.MYMP_DEPLOY_HOOK_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -50,6 +52,9 @@ jobs:
           pnpm worker parliament
           pnpm worker parliament:photos
           pnpm worker parliament:report
+      - name: Rebuild mymp.bd from the fresh copy
+        if: github.event_name == 'schedule' && env.MYMP_DEPLOY_HOOK_URL != ''
+        run: curl -fsS -X POST "$MYMP_DEPLOY_HOOK_URL" > /dev/null && echo 'mymp.bd rebuild requested'
       - uses: actions/upload-artifact@v4
         if: always()
         with:

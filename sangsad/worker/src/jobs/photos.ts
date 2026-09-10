@@ -11,6 +11,7 @@ import { createClient } from '@supabase/supabase-js';
 import { and, eq, isNotNull, isNull, sql } from 'drizzle-orm';
 import { schema } from '@sangsad/db';
 import type { Db } from './parliament-core';
+import { uploadMirrorFile } from './mirror';
 
 const BUCKET = 'member-photos';
 const UA = process.env.SCRAPER_USER_AGENT ?? 'MyMPBot/1.0 (+https://mymp.bd/somporke)';
@@ -63,5 +64,20 @@ export async function runPhotos(db: Db, parliamentNumber = 13): Promise<{ itemsF
   }
   process.stdout.write(`  photos: ${pending.length} pending, ${copied} copied, ${failed.length} failed\n`);
   for (const f of failed) process.stdout.write(`    failed: ${f}\n`);
+
+  // The map mymp.bd's build reads: member id → our copy. The copy time rides
+  // along as ?v= so a replaced photo is never served from a stale cache.
+  const stored = await db
+    .select({ externalId: members.sourceExternalId, url: members.photoUrl, checked: members.photoCheckedAt })
+    .from(members)
+    .innerJoin(memberTerms, and(eq(memberTerms.memberId, members.id), eq(memberTerms.role, 'MP')))
+    .innerJoin(parliaments, and(eq(parliaments.id, memberTerms.parliamentId), eq(parliaments.number, parliamentNumber)))
+    .where(isNotNull(members.photoUrl));
+  const photos: Record<string, string> = {};
+  for (const r of stored) if (r.externalId && r.url) photos[r.externalId] = r.checked ? `${r.url}?v=${r.checked.getTime()}` : r.url;
+  const generatedAt = new Date().toISOString();
+  const mapUrl = await uploadMirrorFile(supabase, 'photos', { version: 1, generatedAt, photos }, generatedAt.slice(0, 10));
+  process.stdout.write(`  photo map: ${Object.keys(photos).length} members → ${mapUrl}\n`);
+
   return { itemsFound: pending.length, itemsNew: copied, failed };
 }

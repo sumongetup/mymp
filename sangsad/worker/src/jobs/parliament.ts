@@ -16,6 +16,7 @@ import {
   type RawSession,
   type SyncSummary,
 } from './parliament-core';
+import { buildMirror, checkMirror, storageClientFromEnv, uploadMirrorFile } from './mirror';
 
 export const CURRENT_PARLIAMENT = 13;
 /** Parliaments the source holds member lists for, besides the current one. */
@@ -46,6 +47,21 @@ export async function runParliament(db: Db): Promise<{ itemsFound: number; items
   for (const n of EARLIER_PARLIAMENTS) {
     earlier[n] = await parliamentGetAll<RawMember>(`/api/members?parliamentNo=${n}`, 100);
     log(`parliament ${n}: ${earlier[n].length} records`);
+  }
+
+  // The public mirror mymp.bd builds from, written before the database sync so
+  // a database problem never leaves the website on stale official data.
+  const mirror = buildMirror(
+    { currentParliament: CURRENT_PARLIAMENT, currentParliamentSourceId: current.id, parliaments: parliamentsList, members, committees, sessions, notices, officers, earlier },
+    new Date(),
+  );
+  checkMirror(mirror, CURRENT_PARLIAMENT, current.id);
+  const storage = storageClientFromEnv();
+  if (storage) {
+    const url = await uploadMirrorFile(storage, 'parliament', mirror, mirror.fetchedAt.slice(0, 10));
+    log(`mirror: ${Object.keys(mirror.responses).length} responses → ${url}`);
+  } else {
+    log('mirror: skipped (NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY not set)');
   }
 
   const summary = await syncParliament(db, { parliamentNumber: CURRENT_PARLIAMENT, parties, members, officers, committees, sessions, notices, earlier });
