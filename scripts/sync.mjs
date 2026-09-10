@@ -158,6 +158,86 @@ const htmlToText = (html) =>
   );
 
 const BN_TO_LATIN = (v) => String(v).replace(/[০-৯]/g, (d) => '০১২৩৪৫৬৭৮৯'.indexOf(d));
+
+/**
+ * Is an earlier parliament's record the same person as a sitting member?
+ *
+ * The source is uneven: from the 11th parliament on, the secretariat's person
+ * id (empId) is reliable; for the 8th and earlier, dates of birth are mostly
+ * the placeholder 1900-01-01, names are transliterated differently each time
+ * ("Lutfuzzaman Babor" / "Lutfozzaman Babar"), and one id was found on two
+ * different people. So no single field decides. A match needs either
+ *   - the same empId AND a corroboration (similar name, equal real birth date,
+ *     or the same seat in the same district), or
+ *   - a similar name AND an equal real birth date, or
+ *   - a similar name AND the same seat in the same district, with no
+ *     conflicting real birth dates.
+ * Name alone never matches: the source has several unrelated members who
+ * share a name exactly.
+ */
+const NAME_TITLES = /\b(md|mohammad|muhammad|mohd|mohammed|mohammod|alhaj|alhajj|haji|hajee|advocate|adv|barrister|dr|prof|professor|engineer|engr|begum|late|mrs|mr|ms|major|maj|retd|ret|rtd|general|gen|brig|colonel|col|captain|capt|lt|justice|bir|bikram|uttam|protik|khan|sarkar|sarker|mia|miah|mian|khandaker|khandakar|khondkar|khondaker|kazi|quazi|syed|sayed|shaikh|sheikh|shekh)\b\.?/g;
+const NAME_ALIAS = [[/ahmm?e?d|ahmad|ahamed|ahammed|ahammad/g, 'ahmad'], [/hoss?ain|hussain|hossen|hosen|husain/g, 'hossain'], [/rahaman|rahman/g, 'rahman'], [/chowdhury|choudhury|chaudhury|chowdhuri|chaudhuri/g, 'chowdhury'], [/haque|hoque|huq|hoq/g, 'haque'], [/siddiqu?e?y?|siddiqi/g, 'siddique'], [/uddin|oddin|udin/g, 'uddin'], [/abdul|abdool/g, 'abdul'], [/islam|eslam/g, 'islam'], [/kabir|kobir/g, 'kabir'], [/karim|korim/g, 'karim'], [/hasan|hassan|hasaan/g, 'hasan'], [/mahmud|mahmood|mahamud/g, 'mahmud'], [/salim|selim/g, 'selim'], [/jahan|zahan/g, 'jahan'], [/nur|noor|nure/g, 'nur'], [/zaman|jaman/g, 'zaman'], [/akter|akhter|aktar|akhtar/g, 'akter']];
+const nameKey = (v) => {
+  let t = String(v ?? '').toLowerCase().replace(/\(.*?\)/g, ' ').replace(/[^a-z\s]/g, ' ').replace(NAME_TITLES, ' ').replace(/\s+/g, ' ').trim();
+  for (const [re, to] of NAME_ALIAS) t = t.replace(re, to);
+  return t.replace(/\s/g, '');
+};
+const bigrams = (t) => { const out = new Set(); for (let i = 0; i < t.length - 1; i++) out.add(t.slice(i, i + 2)); return out; };
+const dice = (a, b) => {
+  if (!a || !b) return 0;
+  if (a === b) return 1;
+  const A = bigrams(a), B = bigrams(b);
+  let hit = 0; for (const x of A) if (B.has(x)) hit++;
+  return (2 * hit) / (A.size + B.size);
+};
+/**
+ * Consonant skeleton: "mosarrof" and "mosharraf" are one name spelled twice.
+ * Vowels vary most in Bengali-to-Latin transliteration, so drop them (except
+ * a leading one), fold the aspirates, and collapse doubled letters.
+ */
+const skeleton = (t) =>
+  t.replace(/sh|ch/g, 's').replace(/ph/g, 'f').replace(/kh/g, 'k').replace(/gh/g, 'g').replace(/th/g, 't').replace(/dh/g, 'd').replace(/bh/g, 'b')
+    .replace(/q/g, 'k').replace(/z/g, 'j').replace(/w/g, 'v')
+    .replace(/(?!^)[aeiouy]/g, '')
+    .replace(/(.)\1+/g, '$1');
+/** Similarity of two name keys: the better of spelled and skeleton Dice, with containment ("Mirza Abbas" inside "Mirza Abbas Uddin Ahmad") counted as similar. */
+const nameSimilarity = (a, b) => {
+  if (!a || !b) return 0;
+  if (a === b) return 1;
+  if ((a.length >= 8 && b.length >= 8) && (a.includes(b) || b.includes(a))) return 0.9;
+  return Math.max(dice(a, b), dice(skeleton(a), skeleton(b)));
+};
+const PLACEHOLDER_DOB = new Set(['1900-01-01', '1970-01-01', '0001-01-01']);
+const realDob = (d) => !!d && !PLACEHOLDER_DOB.has(d);
+
+const samePerson = (cur, old) => {
+  const nameSim = nameSimilarity(cur.nameKey, old.nameKey);
+  const dobEqual = realDob(cur.dob) && realDob(old.dob) && cur.dob === old.dob;
+  const dobConflict = realDob(cur.dob) && realDob(old.dob) && cur.dob !== old.dob;
+  const sameSeat = !!old.seatKey && old.seatKey === cur.seatKey && old.seatNo !== null && old.seatNo <= 300;
+  // Two different people with near-identical names sat for neighbouring
+  // districts under one id, so a district mismatch vetoes an id match.
+  const districtConflict = !!old.district && !!cur.district && old.seatNo !== null && old.seatNo <= 300 && cur.seatNo !== null && cur.seatNo <= 300 && old.district !== cur.district;
+  if (dobConflict) return false;
+  if (cur.empId && old.empId && String(cur.empId) === String(old.empId)) return dobEqual || sameSeat || (nameSim >= 0.7 && !districtConflict);
+  if (nameSim >= 0.8 && dobEqual) return true;
+  if (nameSim >= 0.85 && sameSeat) return true;
+  return false;
+};
+
+/** District part of "Bogura-6" / "BOGRA-6", folded across the 2018 renamings. */
+const DISTRICT_ALIAS = { bogra: 'bogura', comilla: 'cumilla', chittagong: 'chattogram', jessore: 'jashore', barisal: 'barishal', nawabganj: 'chapainawabganj', chapainababganj: 'chapainawabganj', moulvibazar: 'maulvibazar', netrakona: 'netrokona', jhalakathi: 'jhalokati', munshigonj: 'munshiganj', narayangonj: 'narayanganj', coxbazar: 'coxsbazar', dacca: 'dhaka', kishorganj: 'kishoreganj', brahmanbaria: 'brahmanbaria', laxmipur: 'lakshmipur', lakshmipur: 'lakshmipur', gopalgonj: 'gopalganj', habigonj: 'habiganj', sunamgonj: 'sunamganj', manikgonj: 'manikganj', kishoregonj: 'kishoreganj', jhenaidah: 'jhenaidah', jhenidah: 'jhenaidah' };
+const districtKey = (constituencyEng) => {
+  const raw = String(constituencyEng ?? '').replace(/\s*-\s*\d+\s*$/, '').toLowerCase().replace(/[^a-z]/g, '');
+  return DISTRICT_ALIAS[raw] ?? raw;
+};
+/** "BOGRA-6" and "Bogura-6" share one key; a single-seat district ("Bandarban") counts as its seat 1. */
+const seatKey = (constituencyEng) => {
+  const d = districtKey(constituencyEng);
+  if (!d) return null;
+  const ord = String(constituencyEng ?? '').match(/-\s*(\d+)\s*$/);
+  return `${d}-${ord ? Number(ord[1]) : 1}`;
+};
 /** "জনাব X, ১১৮ ভোলা-৪", "৩১২ মহিলা আসন-১২" and "(293 Chattagram-16)" all carry the seat number. */
 const seatInTitle = (title) => {
   const m = String(title ?? '').match(/(?:^|[\s,(])([০-৯\d]{1,3})\s+(?:মহিলা\s+আসন|[^\s,()]+)-[০-৯\d]+/u);
@@ -182,6 +262,14 @@ async function main() {
   const rawNotices = (await optional('notices', () => getAllPages('/api/notices', 100))) ?? [];
   const rawSpeakers = (await optional('speakers', () => getAllPages('/api/speakers', 100))) ?? [];
   const rawParliaments = (await optional('parliaments', () => getJson('/api/parliaments'))) ?? [];
+
+  // Earlier parliaments. The source holds members for the 4th, 5th and 7th to
+  // 12th; the others return nothing. These feed "who held this seat before"
+  // and "how many terms has this member served", nothing else.
+  const rawHistory = {};
+  for (const n of [12, 11, 10, 9, 8, 7, 5, 4]) {
+    rawHistory[n] = (await optional(`parliament ${n}`, () => getAllPages(`/api/members?parliamentNo=${n}`))) ?? [];
+  }
 
   // ---- members ----
   // Two pairs of sitting members share a name, so the seat has to disambiguate the
@@ -221,6 +309,9 @@ async function main() {
       bioBn: htmlToText(m.speakerDetailsBioBn),
       summaryBn: clean(m.speakerHeroSummaryBn),
       term: { start: clean(term.startDate), end: clean(term.endDate) },
+      // Official pages an admin has verified. Nothing here comes from the source.
+      facebook: null, x: null, youtube: null, instagram: null, website: null,
+      _match: { empId: m.empId ?? null, nameKey: nameKey(m.nameEng), dob: clean(m.dateOfBirth), seatNo, district: districtKey(c.constituencyEng), seatKey: seatKey(c.constituencyEng) }, // internal, stripped before writing
       party: p.abbreviation ? { abbr: p.abbreviation, nameBn: clean(p.nameBng), nameEn: clean(p.nameEng) } : null,
       seat: seatNo
         ? {
@@ -310,6 +401,67 @@ async function main() {
     .map((m) => ({ ...m.seat, memberId: m.id }))
     .sort((a, b) => a.no - b.no);
 
+  // ---- earlier parliaments ----
+  const termOf = (m, n) => (m.terms ?? []).find((t) => t.parliamentNo === n) ?? (m.terms ?? [])[0] ?? {};
+  const seatNoByKey = new Map(members.filter((m) => m.seat && !m.seat.reserved).map((m) => [seatKey(m.seat.nameEn), m.seat.no]));
+  const findCurrent = (m, n) => {
+    const t = termOf(m, n);
+    const c = t.constituency ?? {};
+    const old = { empId: m.empId ?? null, nameKey: nameKey(m.nameEng), dob: clean(m.dateOfBirth), seatNo: typeof c.constituencyNo === 'number' ? c.constituencyNo : null, district: districtKey(c.constituencyEng), seatKey: seatKey(c.constituencyEng) };
+    if (!old.nameKey && !old.empId) return null;
+    return members.find((cur) => samePerson(cur._match, old)) ?? null;
+  };
+  const priorTerms = {};
+  const seatHolders = {};
+  const partySeats = {};
+  const countParty = (bucket, abbr, nameBn, reserved) => {
+    const e = bucket.get(abbr) ?? { abbr, nameBn, territorial: 0, reserved: 0 };
+    if (reserved) e.reserved++; else e.territorial++;
+    bucket.set(abbr, e);
+  };
+  for (const [nStr, list] of Object.entries(rawHistory)) {
+    const n = Number(nStr);
+    const bucket = new Map();
+    const seenSeat = new Set();
+    for (const m of list) {
+      const t = termOf(m, n);
+      const c = t.constituency ?? {};
+      const seatNo = typeof c.constituencyNo === 'number' ? c.constituencyNo : null;
+      const reserved = seatNo !== null && seatNo > 300;
+      const abbr = t.party?.abbreviation ?? null;
+      if (abbr && !(seatNo !== null && seenSeat.has(seatNo))) countParty(bucket, abbr, clean(t.party?.nameBng), reserved);
+      if (seatNo !== null) seenSeat.add(seatNo);
+
+      const cur = findCurrent(m, n);
+      if (cur) {
+        (priorTerms[cur.id] ??= []).push({ parliamentNo: n, seatNo, seatNameBn: clean(c.constituencyBng), seatNameEn: clean(c.constituencyEng), partyAbbr: abbr, partyNameBn: clean(t.party?.nameBng) });
+      }
+      // The seat is matched by its name (district + ordinal), never by number alone.
+      const todaySeatNo = seatNo !== null && !reserved ? seatNoByKey.get(seatKey(c.constituencyEng)) : undefined;
+      if (todaySeatNo !== undefined) {
+        (seatHolders[todaySeatNo] ??= []).push({ parliamentNo: n, nameBn: clean(m.nameBng), nameEn: clean(m.nameEng), partyAbbr: abbr, partyNameBn: clean(t.party?.nameBng), memberId: cur?.id ?? null });
+      }
+    }
+    partySeats[n] = [...bucket.values()].sort((a, b) => b.territorial + b.reserved - (a.territorial + a.reserved));
+  }
+  {
+    const bucket = new Map();
+    for (const m of members) if (m.party) countParty(bucket, m.party.abbr, m.party.nameBn, !!m.seat?.reserved);
+    partySeats[PARLIAMENT] = [...bucket.values()].sort((a, b) => b.territorial + b.reserved - (a.territorial + a.reserved));
+  }
+  for (const list of Object.values(priorTerms)) {
+    // one entry per parliament, newest first
+    const byParl = new Map(); for (const t of list) byParl.set(t.parliamentNo, t);
+    list.splice(0, list.length, ...[...byParl.values()].sort((a, b) => b.parliamentNo - a.parliamentNo));
+  }
+  for (const list of Object.values(seatHolders)) list.sort((a, b) => b.parliamentNo - a.parliamentNo);
+  const parliamentsInfo = (Array.isArray(rawParliaments) ? rawParliaments : [])
+    .map((p) => ({ no: p.parliamentNo, electionDate: clean(p.electionDate), oathDate: clean(p.oathDate), endDate: clean(p.parliamentLastDate), recorded: p.parliamentNo === PARLIAMENT ? members.length : (rawHistory[p.parliamentNo] ?? []).length }))
+    .sort((a, b) => b.no - a.no);
+  const history = { parliaments: parliamentsInfo, priorTerms, seatHolders, partySeats };
+  console.log(`  history: ${Object.values(rawHistory).reduce((n, l) => n + l.length, 0)} earlier records, ${Object.keys(priorTerms).length} sitting members with earlier terms, ${Object.keys(seatHolders).length} seats with holders`);
+  for (const m of members) delete m._match;
+
   // ---- parliamentary activity ----
   const p13 = (Array.isArray(rawParliaments) ? rawParliaments : []).find((x) => x.parliamentNo === PARLIAMENT);
   const parliament = p13
@@ -396,6 +548,8 @@ async function main() {
       for (const c of committees) c.members = c.members.filter((x) => !hiddenMembers.has(x.memberId));
       for (const n of notices) if (n.memberId && hiddenMembers.has(n.memberId)) n.memberId = null;
       for (const s of speakers) if (s.memberId && hiddenMembers.has(s.memberId)) s.memberId = null;
+      for (const id of hiddenMembers) delete priorTerms[id];
+      for (const list of Object.values(seatHolders)) for (const h of list) if (h.memberId && hiddenMembers.has(h.memberId)) h.memberId = null;
       notices.splice(0, notices.length, ...notices.filter((n) => n.memberId || (n.committeeId && !hiddenCommittees.has(n.committeeId)) || (!n.committeeId && n.type === 'GENERAL')));
       hiddenApplied = hiddenMembers.size + hiddenCommittees.size;
       adminNote = `applied ${overridesApplied} overrides, ${hiddenApplied} hidden`;
@@ -421,6 +575,7 @@ async function main() {
       committeesCurrent: committees.filter((c) => c.rosterCurrent).length,
       sittings: sessions.reduce((n, x) => n + x.sittings.length, 0),
       notices: notices.length,
+      returningMembers: Object.keys(priorTerms).length,
     },
   };
   const activity = { parliament, speakers, sessions, notices };
@@ -445,7 +600,7 @@ async function main() {
   ];
 
   await mkdir(OUT, { recursive: true });
-  for (const [name, value] of Object.entries({ members, committees, parties, seats, meta, activity })) {
+  for (const [name, value] of Object.entries({ members, committees, parties, seats, meta, activity, history })) {
     await writeFile(join(OUT, `${name}.json`), JSON.stringify(value, null, 1), 'utf8');
   }
   await mkdir(join(OUT, '..', 'public'), { recursive: true });
@@ -467,6 +622,19 @@ async function main() {
       console.log('Wrote data/news.json —', news.length, 'published items');
     } catch (err) {
       console.warn('  news skipped:', err.message);
+    }
+    // Vote counts come only from here: the source has none. Draft rows never leave the database.
+    try {
+      const rows = await db('election_results?select=seat_no,parliament_no,candidates,total_votes,turnout,source_url,source_note&status=eq.published&order=seat_no');
+      const results = rows.map((r) => ({
+        seatNo: r.seat_no, parliamentNo: r.parliament_no, candidates: r.candidates ?? [],
+        totalVotes: r.total_votes ?? null, turnout: r.turnout == null ? null : Number(r.turnout),
+        sourceUrl: r.source_url, sourceNote: r.source_note ?? null,
+      }));
+      await writeFile(join(OUT, 'results.json'), JSON.stringify(results, null, 1), 'utf8');
+      console.log('Wrote data/results.json —', results.length, 'published results');
+    } catch (err) {
+      console.warn('  election results skipped (table missing?):', err.message.slice(0, 120));
     }
     try {
       await db('sync_runs', {

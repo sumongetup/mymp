@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
 import { parliament } from '@/lib/activity';
+import { parliamentsWithRecords, partySeatsOf, parliamentLabel } from '@/lib/history';
+import { partyColor } from '@/lib/data';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/nirbachon' },
@@ -113,6 +115,60 @@ export default function ElectionPage() {
           body="নির্বাচন কমিশনের গেজেট থেকে প্রতিটি আসনের প্রার্থী, প্রতীক ও প্রাপ্ত ভোট যোগ করা হবে। যাচাই করা সংখ্যা ছাড়া কিছু দেখানো হবে না।"
         />
       </div>
+
+      <section className="mt-10 flex flex-col gap-4">
+        <div className="flex items-baseline justify-between gap-4">
+          <h2 className="display text-[26px]">আগের নির্বাচনগুলোতে দলগুলোর আসন</h2>
+          <span className="text-[13px] text-muted">সংসদের তথ্যভান্ডার</span>
+        </div>
+        {(() => {
+          const rows = parliamentsWithRecords().filter((p) => partySeatsOf(p.no).length > 0);
+          const totals = new Map<string, { abbr: string; nameBn: string | null; n: number }>();
+          for (const p of rows) for (const ps of partySeatsOf(p.no)) {
+            const e = totals.get(ps.abbr) ?? { abbr: ps.abbr, nameBn: ps.nameBn, n: 0 };
+            e.n += ps.territorial; totals.set(ps.abbr, e);
+          }
+          const cols = [...totals.values()].sort((a, b) => b.n - a.n).slice(0, 5);
+          return (
+            <Card className="overflow-x-auto">
+              <table className="w-full text-[14px] min-w-[640px]">
+                <thead>
+                  <tr className="bg-sunk/70 text-[12px] font-bold text-muted">
+                    <th className="text-start px-4 py-2.5">সংসদ</th>
+                    {cols.map((c) => (
+                      <th key={c.abbr} className="text-end px-3 py-2.5 whitespace-nowrap">
+                        <span className="inline-flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full" style={{ background: partyColor(c.abbr) }} />{c.abbr}</span>
+                      </th>
+                    ))}
+                    <th className="text-end px-3 py-2.5">অন্য</th>
+                    <th className="text-end px-4 py-2.5">নথিভুক্ত</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-rulesoft">
+                  {rows.map((p) => {
+                    const ps = partySeatsOf(p.no);
+                    const get = (abbr: string) => ps.find((x) => x.abbr === abbr)?.territorial ?? 0;
+                    const other = ps.filter((x) => !cols.some((c) => c.abbr === x.abbr)).reduce((n, x) => n + x.territorial, 0);
+                    const total = ps.reduce((n, x) => n + x.territorial, 0);
+                    return (
+                      <tr key={p.no} className={p.no === parliament.no ? 'bg-brandsoft/40' : ''}>
+                        <td className="px-4 py-2.5 font-semibold whitespace-nowrap">{parliamentLabel(p.no)}</td>
+                        {cols.map((c) => <td key={c.abbr} className="px-3 py-2.5 text-end tnum">{get(c.abbr) ? bn(get(c.abbr)) : <span className="text-muted">—</span>}</td>)}
+                        <td className="px-3 py-2.5 text-end tnum">{other ? bn(other) : <span className="text-muted">—</span>}</td>
+                        <td className="px-4 py-2.5 text-end tnum text-muted">{bn(total)}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </Card>
+          );
+        })()}
+        <p className="text-[12.5px] text-muted leading-relaxed">
+          সাধারণ (আসনভিত্তিক) আসনে সংসদের তথ্যভান্ডারে নথিভুক্ত সদস্য অনুযায়ী; সংরক্ষিত নারী আসন বাদ। উপনির্বাচন ও অসম্পূর্ণ রেকর্ডের কারণে
+          কোনো কোনো সংসদে সংখ্যা সরকারি ফলের সঙ্গে সামান্য ভিন্ন হতে পারে; “নথিভুক্ত” কলামে সেটি দেখা যায়। ১ম–৩য় ও ৬ষ্ঠ সংসদের রেকর্ড সেখানে নেই।
+        </p>
+      </section>
 
       <section className="mt-10 pb-14 flex flex-col gap-5">
         <div className="flex items-baseline justify-between gap-4">

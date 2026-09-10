@@ -36,13 +36,17 @@ export function EntityEditor({
           const value = o ? o.value : snapshot[f.key] ?? null;
           return (
             <div key={f.key} className="flex flex-col gap-1.5">
+              {f.group && (
+                <span className="mt-3 pt-4 border-t border-rulesoft text-[11.5px] font-bold tracking-[1.4px] text-muted">{f.group}</span>
+              )}
               <Field
                 label={f.label}
                 name={`field__${f.key}`}
                 defaultValue={value}
                 multiline={f.multiline}
+                type={f.url ? 'url' : 'text'}
                 badge={o ? <Badge tone="good">হাতে সম্পাদিত</Badge> : undefined}
-                hint={o ? `সংসদের মান: ${snapshot[f.key] || '(নেই)'} · বদলেছেন ${when(o.updated_at)}` : undefined}
+                hint={o ? `সংসদের মান: ${snapshot[f.key] || '(নেই)'} · বদলেছেন ${when(o.updated_at)}` : f.hint}
               />
               <input type="hidden" name={`current__${f.key}`} value={value ?? ''} />
               {o && (
@@ -53,7 +57,7 @@ export function EntityEditor({
                   formAction={revertOverride}
                   className="self-start text-[12.5px] font-semibold text-brand hover:underline"
                 >
-                  সংসদের মানে ফেরান
+                  {f.url ? 'লিংক মুছুন' : 'সংসদের মানে ফেরান'}
                 </button>
               )}
             </div>
@@ -97,13 +101,21 @@ export function HidePanel({
   );
 }
 
-export function EditFlags({ flags, noun }: { flags: Record<string, string | undefined>; noun: string }) {
+const fieldLabel = (type: EntityType, key: string) => EDITABLE[type].find((f) => f.key === key)?.label ?? key;
+
+export function EditFlags({ flags, noun, type = 'member' }: { flags: Record<string, string | undefined>; noun: string; type?: EntityType }) {
   return (
     <>
       {flags.saved && <Notice tone="good">সংরক্ষিত হয়েছে। সাইটে দেখাতে ড্যাশবোর্ড থেকে “সাইটে প্রকাশ করুন” চাপুন।</Notice>}
       {flags.reverted && <Notice tone="good">ফিল্ডটি সংসদের মূল মানে ফিরিয়ে আনা হয়েছে।</Notice>}
       {flags.hidden && <Notice tone="warn">{noun} সাইট থেকে সরানো হয়েছে। পরের প্রকাশ থেকে দেখা যাবে না।</Notice>}
       {flags.unhidden && <Notice tone="good">{noun} আবার দেখানো হবে।</Notice>}
+      {flags.invalid && (
+        <Notice tone="bad">
+          “{fieldLabel(type, flags.invalid)}” ঘরের লিংকটি গ্রহণ করা হয়নি: পুরো https:// ঠিকানা দিন, আর সেটি সংশ্লিষ্ট
+          সাইটেরই হতে হবে (যেমন facebook.com)। অন্য ঘরগুলো সংরক্ষিত হয়েছে।
+        </Notice>
+      )}
     </>
   );
 }

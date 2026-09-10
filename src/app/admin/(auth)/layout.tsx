@@ -18,6 +18,7 @@ const GROUPS: { label: string; items: (NavGroup['items'][number] & { super?: boo
     items: [
       { href: '/admin/news', label: 'সংবাদ', icon: 'file' },
       { href: '/admin/corrections', label: 'সংশোধন অনুরোধ', icon: 'message' },
+      { href: '/admin/results', label: 'নির্বাচনের ফল', icon: 'chart' },
       { href: '/admin/sync', label: 'সিঙ্ক ও প্রকাশ', icon: 'refresh' },
     ],
   },

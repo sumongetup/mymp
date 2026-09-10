@@ -7,6 +7,7 @@ import { requireAdmin, requireSuperAdmin } from '@/lib/admin/auth';
 import {
   EDITABLE, type EntityType, setOverride, clearOverride, setHidden,
   upsertNews, setNewsStatus, resolveCorrection, addAdmin, removeAdmin, audit,
+  upsertResult, setResultStatus,
 } from '@/lib/admin/store';
 
 export interface ActionState { error?: string; ok?: string }
@@ -16,6 +17,26 @@ const str = (fd: FormData, key: string) => {
   return typeof v === 'string' ? v : '';
 };
 const orNull = (s: string) => (s.trim() === '' ? null : s.trim());
+
+/** Social links must point at the network they claim to; anything else is refused, not stored. */
+const SOCIAL_HOSTS: Record<string, string[] | null> = {
+  facebook: ['facebook.com', 'fb.com', 'fb.me'],
+  x: ['x.com', 'twitter.com'],
+  youtube: ['youtube.com', 'youtu.be'],
+  instagram: ['instagram.com'],
+  website: null,
+};
+const validUrl = (value: string, hosts: string[] | null) => {
+  try {
+    const u = new URL(value);
+    if (u.protocol !== 'https:') return false;
+    if (!hosts) return true;
+    const h = u.hostname.replace(/^www\./, '').replace(/^m\./, '');
+    return hosts.some((x) => h === x || h.endsWith('.' + x));
+  } catch {
+    return false;
+  }
+};
 
 /* ---------------- session ---------------- */
 
@@ -62,12 +83,18 @@ export async function saveOverrides(fd: FormData) {
   const id = str(fd, 'entity_id');
   if (!EDITABLE[type] || !id) throw new Error('bad entity');
 
+  let invalid: string | null = null;
   for (const f of EDITABLE[type]) {
     const next = orNull(str(fd, `field__${f.key}`));
     const current = orNull(str(fd, `current__${f.key}`));
     if (next === current) continue;
+    if (type === 'member' && next && f.key in SOCIAL_HOSTS && !validUrl(next, SOCIAL_HOSTS[f.key])) {
+      invalid = f.key;
+      continue;
+    }
     await setOverride(me, type, id, f.key, next, current);
   }
+  if (invalid) redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?invalid=${invalid}`);
   revalidatePath(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}`);
   redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?saved=1`);
 }
@@ -185,4 +212,59 @@ export async function publishSite(): Promise<ActionState> {
   await audit(me, { action: 'site.publish', entity_type: null, entity_id: null, field: null, old_value: null, new_value: res.ok ? 'triggered' : `failed ${res.status}` });
   if (!res.ok) return { error: `Vercel ফিরিয়ে দিয়েছে: HTTP ${res.status}` };
   return { ok: 'সাইট নতুন করে তৈরি হচ্ছে। ২-৩ মিনিটের মধ্যে পরিবর্তন mymp.bd-তে দেখা যাবে।' };
+}
+
+/* ---------------- election results ---------------- */
+
+const toLatinDigits = (s: string) => s.replace(/[০-৯]/g, (d) => String('০১২৩৪৫৬৭৮৯'.indexOf(d)));
+const numOrNull = (s: string) => {
+  const t = toLatinDigits(s).replace(/[^\d.]/g, '');
+  return t === '' ? null : Number(t);
+};
+
+export async function saveResult(fd: FormData) {
+  const me = await requireAdmin();
+  const seatNo = Number(str(fd, 'seat_no'));
+  const parliamentNo = Number(str(fd, 'parliament_no'));
+  if (!(seatNo >= 1 && seatNo <= 300) || !(parliamentNo >= 1 && parliamentNo <= 20)) throw new Error('bad seat');
+  const back = `/admin/results/${seatNo}?p=${parliamentNo}`;
+
+  // One candidate per line: name | party | votes
+  const candidates = str(fd, 'candidates')
+    .split(/\r?\n/)
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .map((l) => {
+      const [name = '', party = '', votes = ''] = l.split('|').map((x) => x.trim());
+      const v = toLatinDigits(votes).replace(/[^\d]/g, '');
+      return { name, party: party || null, votes: v === '' ? NaN : Number(v) };
+    });
+  if (!candidates.length || candidates.some((c) => !c.name || !Number.isFinite(c.votes) || c.votes < 0)) redirect(`${back}&invalid=candidates`);
+
+  const sourceUrl = str(fd, 'source_url').trim();
+  if (!/^https:\/\/\S+$/.test(sourceUrl)) redirect(`${back}&invalid=source`);
+
+  const status = str(fd, 'status') === 'published' ? 'published' : 'draft';
+  await upsertResult(me, {
+    seat_no: seatNo,
+    parliament_no: parliamentNo,
+    candidates: candidates.sort((a, b) => b.votes - a.votes),
+    total_votes: numOrNull(str(fd, 'total_votes')),
+    turnout: numOrNull(str(fd, 'turnout')),
+    source_url: sourceUrl,
+    source_note: orNull(str(fd, 'source_note')),
+    status,
+  });
+  revalidatePath('/admin/results');
+  redirect(`${back}&saved=1`);
+}
+
+export async function changeResultStatus(fd: FormData) {
+  const me = await requireAdmin();
+  const seatNo = Number(str(fd, 'seat_no'));
+  const parliamentNo = Number(str(fd, 'parliament_no'));
+  const status = str(fd, 'status') === 'published' ? 'published' : 'draft';
+  await setResultStatus(me, seatNo, parliamentNo, status);
+  revalidatePath('/admin/results');
+  redirect(`/admin/results/${seatNo}?p=${parliamentNo}&status=${status}`);
 }

@@ -6,6 +6,8 @@ import {
 } from '@/lib/data';
 import { Page, Card, Breadcrumb, Empty, PartyDot } from '@/components/ui';
 import MemberPhoto from '@/components/MemberPhoto';
+import { ResultCard } from '@/components/results';
+import { seatHolders, resultsForSeat, parliamentLabel, SAME_AREA_SINCE } from '@/lib/history';
 
 export function generateStaticParams() {
   return seats.map((s) => ({ slug: s.slug }));
@@ -33,6 +35,10 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
   const neighbours = district
     ? seats.filter((s) => s.no !== seat.no && districtOf(s)?.en === district.en)
     : [];
+
+  const holders = seat.reserved ? [] : seatHolders(seat.no);
+  const results = seat.reserved ? [] : resultsForSeat(seat.no);
+  const oldBoundary = holders.some((h) => h.parliamentNo < SAME_AREA_SINCE);
 
   const idx = seats.findIndex((s) => s.no === seat.no);
   const prev = seats[idx - 1];
@@ -117,12 +123,65 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
             </section>
           )}
 
+          {!seat.reserved && (
+            <section className="flex flex-col gap-4">
+              <h2 className="display text-[24px]">
+                এই আসনের আগের সদস্যরা
+                {holders.length > 0 && <span className="ms-2 text-[15px] font-semibold text-muted tnum">({bn(holders.length)})</span>}
+              </h2>
+              {holders.length ? (
+                <>
+                  <Card className="divide-y divide-rulesoft">
+                    {holders.map((h) => {
+                      const cur = h.memberId ? getMemberById(h.memberId) : undefined;
+                      // A sitting member is shown under the name the site uses for them; the
+                      // source's own spelling for that year stays underneath.
+                      const name = cur?.nameBn ?? h.nameBn ?? h.nameEn ?? '—';
+                      const sub = cur ? (h.nameEn ?? h.nameBn) : h.nameBn ? h.nameEn : null;
+                      return (
+                        <div key={`${h.parliamentNo}-${name}`} className="px-4 sm:px-5 py-3 flex items-center gap-3 sm:gap-4">
+                          <span className="w-[104px] sm:w-[190px] shrink-0 text-[12.5px] sm:text-[13.5px] text-muted leading-snug">{parliamentLabel(h.parliamentNo)}</span>
+                          <span className="grow min-w-0 flex flex-col">
+                            {cur ? (
+                              <Link href={`/mp/${cur.slug}`} className="font-semibold text-brand hover:underline wrap-anywhere">{name}</Link>
+                            ) : (
+                              <span className="font-semibold wrap-anywhere">{name}</span>
+                            )}
+                            {sub && sub !== name && <span className="text-[12.5px] text-muted wrap-anywhere">{sub}</span>}
+                          </span>
+                          <span className="shrink-0 flex items-center gap-2 text-[13px] font-semibold text-inksoft">
+                            <PartyDot abbr={h.partyAbbr} />
+                            <span className="hidden sm:inline">{h.partyNameBn ?? h.partyAbbr ?? '—'}</span>
+                            <span className="sm:hidden">{h.partyAbbr ?? '—'}</span>
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </Card>
+                  <p className="text-[12.5px] text-muted leading-relaxed">
+                    সংসদের তথ্যভান্ডারে ৪র্থ, ৫ম ও ৭ম থেকে ১২শ সংসদের রেকর্ড আছে; ১ম–৩য় ও ৬ষ্ঠ সংসদের তালিকা সেখানে নেই।
+                    {oldBoundary && ' ২০০৮ সালের সীমানা পুনর্নির্ধারণের আগের আসনগুলো একই নম্বরের হলেও এলাকা ভিন্ন হতে পারে।'}
+                  </p>
+                </>
+              ) : (
+                <Empty
+                  title="সংসদের তথ্যভান্ডারে এই আসনের আগের সদস্যদের রেকর্ড পাওয়া যায়নি।"
+                  body="আসনটি একই জেলায় একই নম্বরে থাকলে তবেই আগের সংসদের সদস্যকে এখানে দেখানো হয়।"
+                />
+              )}
+            </section>
+          )}
+
           <section className="flex flex-col gap-4">
-            <h2 className="display text-[24px] font-bold">২০২৬ নির্বাচনের ফল</h2>
-            <Empty
-              title="এই আসনের প্রার্থী তালিকা ও ভোটের সংখ্যা এখনো যোগ করা হয়নি।"
-              body="নির্বাচন কমিশনের গেজেট থেকে প্রার্থী, প্রতীক ও প্রাপ্ত ভোট যোগ করা হবে। যাচাই করা সংখ্যা ছাড়া কিছু দেখানো হবে না।"
-            />
+            <h2 className="display text-[24px]">নির্বাচনের ফল</h2>
+            {results.length ? (
+              results.map((r) => <ResultCard key={r.parliamentNo} r={r} />)
+            ) : (
+              <Empty
+                title="এই আসনের প্রার্থী তালিকা ও ভোটের সংখ্যা এখনো যোগ করা হয়নি।"
+                body="সংসদের তথ্যভান্ডারে ভোটের সংখ্যা নেই। নির্বাচন কমিশনের গেজেট থেকে প্রার্থী ও প্রাপ্ত ভোট যাচাই করে যোগ করা হয়; যাচাই করা সংখ্যা ছাড়া কিছু দেখানো হবে না।"
+              />
+            )}
           </section>
         </div>
 

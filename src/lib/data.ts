@@ -56,6 +56,12 @@ export interface Member {
   summaryBn: string | null;
   /** This parliament: oath date to the scheduled end of the term. */
   term: { start: string | null; end: string | null };
+  /** Official pages, entered by an admin after checking them. Never from the source. */
+  facebook: string | null;
+  x: string | null;
+  youtube: string | null;
+  instagram: string | null;
+  website: string | null;
   party: { abbr: string; nameBn: string | null; nameEn: string | null } | null;
   seat: Seat | null;
   offices: string[];

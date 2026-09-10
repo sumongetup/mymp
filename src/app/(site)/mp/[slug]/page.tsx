@@ -6,7 +6,9 @@ import {
   bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, newsForMember, partyColor,
 } from '@/lib/data';
 import { rolesOf, noticesForMember } from '@/lib/activity';
+import { priorTermsOf, parliamentLabel, parliamentOrdinal, resultForSeat, socialsOf, electionYear } from '@/lib/history';
 import { Page, Card, Breadcrumb, Empty, PartyDot, NewsCard, DocLink } from '@/components/ui';
+import { ResultCard } from '@/components/results';
 import MemberPhoto from '@/components/MemberPhoto';
 import Icon from '@/components/Icon';
 
@@ -22,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
   return {
     title: `${m.nameBn ?? m.nameEn}`,
     alternates: { canonical: `/mp/${m.slug}` },
-    description: `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। পরিচিতি, কমিটি, সংসদ সচিবালয়ের প্রজ্ঞাপন ও যোগাযোগ। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
+    description: `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। পরিচিতি, আগের মেয়াদ, কমিটি, সংসদ সচিবালয়ের প্রজ্ঞাপন ও যোগাযোগ। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
   };
 }
 
@@ -54,6 +56,9 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   const onCommittees = committeesOfMember(m.id);
   const memberNews = newsForMember(m.id);
   const notices = noticesForMember(m.id);
+  const prior = priorTermsOf(m.id);
+  const socials = socialsOf(m);
+  const result = m.seat && !m.seat.reserved ? resultForSeat(m.seat.no, meta.parliamentNo) : null;
   const cc = committeeCounts();
   const partyMates = m.party ? membersOfParty(m.party.abbr).filter((x) => x.id !== m.id) : [];
   const sameDistrict = district
@@ -71,10 +76,11 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
     m.fatherBn && { label: 'পিতা', value: m.fatherBn },
     m.motherBn && { label: 'মাতা', value: m.motherBn },
     m.isFreedomFighter && { label: 'মুক্তিযোদ্ধা', value: 'হ্যাঁ' },
-    m.term?.start && { label: 'মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
+    m.term?.start && { label: 'বর্তমান মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
   ].filter(Boolean) as { label: string; value: string }[];
 
   const paragraphs = (m.bioBn ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  const year = electionYear(meta.parliamentNo);
 
   return (
     <Page>
@@ -100,6 +106,11 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             {roles.map((r) => (
               <span key={r} className="px-3 py-1 rounded-full bg-ink text-white text-[12.5px] font-bold">{r}</span>
             ))}
+            {prior.length > 0 && (
+              <span className="px-3 py-1 rounded-full border border-rule text-[12.5px] font-semibold text-inksoft">
+                এর আগে {bn(prior.length)} বার সংসদ সদস্য
+              </span>
+            )}
             {m.seat?.reserved && (
               <span className="px-3 py-1 rounded-full border border-rule text-[12.5px] font-semibold text-inksoft">
                 সংরক্ষিত নারী আসন
@@ -126,6 +137,22 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               <Link href={`/jela/${district.slug}`} className="text-inksoft hover:text-brand">{district.bn} জেলা</Link>
             )}
           </div>
+          {socials.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-1">
+              {socials.map((s) => (
+                <a
+                  key={s.key}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  className="inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border border-rule bg-surface text-[13px] font-semibold hover:border-brand hover:text-brand transition-colors"
+                >
+                  <Icon name={s.icon} size={14} />
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
@@ -151,6 +178,63 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               <Empty title="পরিচিতির তথ্য সংসদের তথ্যভান্ডারে নেই।" />
             )}
           </section>
+
+          <section className="flex flex-col gap-4">
+            <H2>সংসদে মেয়াদ</H2>
+            <Card className="divide-y divide-rulesoft">
+              <div className="px-5 py-3 flex items-center gap-4 bg-brandsoft/40">
+                <span className="w-[150px] sm:w-[190px] shrink-0 text-[13.5px] font-semibold text-brand">{parliamentLabel(meta.parliamentNo)}</span>
+                <span className="grow min-w-0 flex flex-col">
+                  <span className="font-semibold truncate">{m.seat?.nameBn ?? 'আসন উল্লেখ নেই'}</span>
+                  <span className="text-[12.5px] text-muted">বর্তমান মেয়াদ</span>
+                </span>
+                <span className="shrink-0 flex items-center gap-2 text-[13px] font-semibold text-inksoft">
+                  <PartyDot abbr={m.party?.abbr} />
+                  <span className="hidden sm:inline">{m.party?.nameBn ?? m.party?.abbr ?? '—'}</span>
+                  <span className="sm:hidden">{m.party?.abbr ?? '—'}</span>
+                </span>
+              </div>
+              {prior.map((t) => (
+                <div key={t.parliamentNo} className="px-5 py-3 flex items-center gap-4">
+                  <span className="w-[150px] sm:w-[190px] shrink-0 text-[13.5px] text-muted">{parliamentLabel(t.parliamentNo)}</span>
+                  <span className="grow min-w-0 flex flex-col">
+                    <span className="font-semibold truncate">{t.seatNameBn ?? t.seatNameEn ?? 'আসন উল্লেখ নেই'}</span>
+                    {t.seatNameEn && t.seatNameBn && <span className="text-[12.5px] text-muted truncate">{t.seatNameEn}</span>}
+                  </span>
+                  <span className="shrink-0 flex items-center gap-2 text-[13px] font-semibold text-inksoft">
+                    <PartyDot abbr={t.partyAbbr} />
+                    <span className="hidden sm:inline">{t.partyNameBn ?? t.partyAbbr ?? '—'}</span>
+                    <span className="sm:hidden">{t.partyAbbr ?? '—'}</span>
+                  </span>
+                </div>
+              ))}
+            </Card>
+            <p className="text-[12.5px] text-muted leading-relaxed">
+              {prior.length
+                ? `সংসদের তথ্যভান্ডার অনুযায়ী এটি ${parliamentOrdinal(prior.length + 1).replace(' সংসদ', '')} মেয়াদ। `
+                : 'সংসদের তথ্যভান্ডারে এই সদস্যের আগের কোনো মেয়াদ পাওয়া যায়নি। '}
+              সেখানে ৪র্থ, ৫ম ও ৭ম থেকে ১২শ সংসদের রেকর্ড আছে; ১ম–৩য় ও ৬ষ্ঠ সংসদের তালিকা নেই, তাই তার আগের মেয়াদ থাকলে এখানে দেখা যাবে না।
+            </p>
+          </section>
+
+          {m.seat && !m.seat.reserved && (
+            <section className="flex flex-col gap-4">
+              <div className="flex justify-between items-baseline gap-4">
+                <H2>{year ? `${bn(year)} নির্বাচনে` : 'নির্বাচনে'} প্রাপ্ত ভোট</H2>
+                <Link href={`/ason/${m.seat.slug}`} className="text-[14px] font-semibold text-brand hover:underline whitespace-nowrap">
+                  আসনের সব ফল →
+                </Link>
+              </div>
+              {result ? (
+                <ResultCard r={result} />
+              ) : (
+                <Empty
+                  title="এই আসনের ভোটের সংখ্যা এখনো যোগ হয়নি।"
+                  body="সংসদের তথ্যভান্ডারে ভোটের সংখ্যা নেই। নির্বাচন কমিশনের গেজেট থেকে যাচাই করে যোগ করা হলে এখানে দেখা যাবে।"
+                />
+              )}
+            </section>
+          )}
 
           <section className="flex flex-col gap-4">
             <H2 count={notices.length}>সংসদ সচিবালয়ের প্রজ্ঞাপন</H2>
@@ -260,6 +344,23 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 সংসদের তথ্যভান্ডারে এই সদস্যের কোনো দাপ্তরিক ইমেইল প্রকাশ করা নেই।
                 {m.seat?.reserved && ' সংরক্ষিত আসনের সদস্যদের ক্ষেত্রে এটি সাধারণ।'}
               </p>
+            )}
+            {socials.length > 0 && (
+              <div className="flex flex-col gap-2 border-t border-rule pt-3">
+                <span className="text-[12px] font-bold tracking-[1px] text-muted">অফিসিয়াল সোশ্যাল মিডিয়া</span>
+                <ul className="flex flex-col gap-1.5">
+                  {socials.map((s) => (
+                    <li key={s.key}>
+                      <a href={s.url} target="_blank" rel="noopener noreferrer me" className="flex items-center gap-2 text-[14px] font-semibold hover:text-brand">
+                        <Icon name={s.icon} size={15} className="text-muted" />
+                        {s.label}
+                        <Icon name="external" size={12} className="text-muted" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <span className="text-[12px] text-muted leading-relaxed">আমার এমপির সম্পাদক যাচাই করে যুক্ত করেছেন।</span>
+              </div>
             )}
             {m.presentAddressBn && (
               <div className="flex flex-col gap-1 border-t border-rule pt-3">

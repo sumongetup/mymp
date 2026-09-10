@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { statistics, parties, committees, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty } from '@/components/ui';
+import { experienceStats } from '@/lib/history';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/parisonkhan' },
@@ -150,6 +151,56 @@ export default function StatisticsPage() {
           </p>
         </Card>
       </div>
+
+      {(() => {
+        const x = experienceStats();
+        const max = Math.max(...x.bands.map((b) => b.count), 1);
+        return (
+          <section className="mt-10 flex flex-col gap-4">
+            <div className="flex items-baseline justify-between gap-4">
+              <h2 className="display text-[24px]">সংসদে অভিজ্ঞতা</h2>
+              <span className="text-[13px] text-muted">সংসদের তথ্যভান্ডার, ৪র্থ সংসদ থেকে</span>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+              <Card className="p-5 sm:p-6 flex flex-col gap-4">
+                <p className="text-[14px] text-muted -mb-1">
+                  {bn(x.firstTime)} জন এবারই প্রথম সংসদে, {bn(x.returning)} জন আগেও সদস্য ছিলেন।
+                </p>
+                <div className="flex flex-col gap-2.5">
+                  {x.bands.map((b) => (
+                    <div key={b.label} className="grid grid-cols-[130px_1fr_40px] items-center gap-3 text-[14px]">
+                      <span className="text-muted">{b.label}</span>
+                      <div className="h-3 rounded-full bg-sunk overflow-hidden"><div className="h-full rounded-full bg-brand" style={{ width: `${(b.count / max) * 100}%` }} /></div>
+                      <span className="tnum font-bold text-end">{bn(b.count)}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+              <Card className="p-5 sm:p-6 flex flex-col gap-3">
+                <span className="text-[12px] font-bold tracking-[1px] text-muted">সবচেয়ে বেশি মেয়াদ</span>
+                {x.most.length ? (
+                  <ul className="flex flex-col divide-y divide-rulesoft">
+                    {x.most.map(({ m, terms }) => (
+                      <li key={m.id}>
+                        <Link href={`/mp/${m.slug}`} className="py-2 flex items-center justify-between gap-3 hover:text-brand">
+                          <span className="flex flex-col min-w-0">
+                            <span className="font-semibold truncate">{m.nameBn ?? m.nameEn}</span>
+                            <span className="text-[12.5px] text-muted">{m.seat?.nameBn}{m.party ? ` · ${m.party.abbr}` : ''}</span>
+                          </span>
+                          <span className="shrink-0 tnum text-[13px] font-bold text-brand">{bn(terms)} মেয়াদ</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-[14px] text-muted">সংসদের তথ্যভান্ডারে কারও আগের মেয়াদ পাওয়া যায়নি।</p>
+                )}
+                <p className="text-[12px] text-muted leading-relaxed">১ম–৩য় ও ৬ষ্ঠ সংসদের রেকর্ড সেখানে নেই, তাই তার আগের মেয়াদ গোনা যায়নি।</p>
+              </Card>
+            </div>
+          </section>
+        );
+      })()}
 
       <section className="mt-10 flex flex-col gap-4">
         <div className="flex flex-col gap-1">

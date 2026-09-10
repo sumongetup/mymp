@@ -4,7 +4,7 @@ import { supabaseAdmin } from '@/lib/supabase/admin';
 export type EntityType = 'member' | 'seat' | 'party' | 'committee';
 
 /** Which fields an admin may override, per entity. Keys are the JSON keys in data/. */
-export const EDITABLE: Record<EntityType, { key: string; label: string; multiline?: boolean }[]> = {
+export const EDITABLE: Record<EntityType, { key: string; label: string; multiline?: boolean; url?: boolean; group?: string; hint?: string }[]> = {
   member: [
     { key: 'nameBn', label: 'নাম (বাংলা)' },
     { key: 'nameEn', label: 'নাম (English)' },
@@ -12,6 +12,11 @@ export const EDITABLE: Record<EntityType, { key: string; label: string; multilin
     { key: 'email', label: 'দাপ্তরিক ইমেইল' },
     { key: 'presentAddressBn', label: 'বর্তমান ঠিকানা', multiline: true },
     { key: 'bioBn', label: 'জীবনী', multiline: true },
+    { key: 'facebook', label: 'Facebook পেজ', url: true, group: 'অফিসিয়াল সোশ্যাল মিডিয়া', hint: 'শুধু সদস্যের নিজের বা তাঁর দপ্তরের নিশ্চিত পেজ। পুরো লিংক দিন, যেমন https://www.facebook.com/…' },
+    { key: 'x', label: 'X (Twitter)', url: true },
+    { key: 'youtube', label: 'YouTube চ্যানেল', url: true },
+    { key: 'instagram', label: 'Instagram', url: true },
+    { key: 'website', label: 'ব্যক্তিগত বা দাপ্তরিক ওয়েবসাইট', url: true },
   ],
   seat: [
     { key: 'nameBn', label: 'আসনের নাম (বাংলা)' },
@@ -270,4 +275,62 @@ export async function counts() {
     correctionsOpen: await c('corrections', ['status', 'open']),
     admins: await c('admin_users'),
   };
+}
+
+/* ---------------- election results (entered from the EC gazette) ---------------- */
+
+export interface ResultRow {
+  id: string;
+  seat_no: number;
+  parliament_no: number;
+  candidates: { name: string; party: string | null; votes: number }[];
+  total_votes: number | null;
+  turnout: number | null;
+  source_url: string;
+  source_note: string | null;
+  status: 'draft' | 'published';
+  updated_at: string;
+}
+
+export async function listResults(): Promise<ResultRow[]> {
+  const { data, error } = await supabaseAdmin()
+    .from('election_results')
+    .select('id,seat_no,parliament_no,candidates,total_votes,turnout,source_url,source_note,status,updated_at')
+    .order('seat_no')
+    .order('parliament_no', { ascending: false });
+  if (error) throw error;
+  return (data ?? []) as ResultRow[];
+}
+
+export async function getResult(seatNo: number, parliamentNo: number): Promise<ResultRow | null> {
+  const { data, error } = await supabaseAdmin()
+    .from('election_results')
+    .select('id,seat_no,parliament_no,candidates,total_votes,turnout,source_url,source_note,status,updated_at')
+    .eq('seat_no', seatNo)
+    .eq('parliament_no', parliamentNo)
+    .maybeSingle();
+  if (error) throw error;
+  return (data as ResultRow | null) ?? null;
+}
+
+export async function upsertResult(a: Actor, input: Omit<ResultRow, 'id' | 'updated_at'>) {
+  const db = supabaseAdmin();
+  const { error } = await db
+    .from('election_results')
+    .upsert({ ...input, updated_by: a.id, updated_at: new Date().toISOString() }, { onConflict: 'seat_no,parliament_no' });
+  if (error) throw error;
+  await audit(a, {
+    action: 'result.save', entity_type: 'seat', entity_id: String(input.seat_no), field: `parliament ${input.parliament_no}`,
+    old_value: null, new_value: `${input.candidates.length} candidates, ${input.status}`,
+  });
+}
+
+export async function setResultStatus(a: Actor, seatNo: number, parliamentNo: number, status: ResultRow['status']) {
+  const { error } = await supabaseAdmin()
+    .from('election_results')
+    .update({ status, updated_by: a.id, updated_at: new Date().toISOString() })
+    .eq('seat_no', seatNo)
+    .eq('parliament_no', parliamentNo);
+  if (error) throw error;
+  await audit(a, { action: `result.${status}`, entity_type: 'seat', entity_id: String(seatNo), field: `parliament ${parliamentNo}`, old_value: null, new_value: status });
 }

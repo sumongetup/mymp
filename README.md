@@ -83,6 +83,12 @@ To connect, once:
 Every admin table has row level security on and no policies, so the anon key
 can read nothing; only server actions holding the service key touch them.
 
+## Earlier parliaments, results and social links
+
+- `data/history.json` is written by the sync from the source's records of the 4th, 5th and 7th to 12th parliaments. People are matched across parliaments by the secretariat's own person id (`empId`), never by name alone; seats are matched by number within the same district, and anything before the 2008 delimitation is flagged on the page.
+- Vote counts do not exist in the source. `supabase/migrations/002_election_results.sql` adds a table an admin fills from the Election Commission's gazette at /admin/results; only `published` rows are copied into `data/results.json` at build time.
+- Social links are admin-entered member overrides (facebook, x, youtube, instagram, website) and are refused unless they are https URLs on the matching network.
+
 ## Not built yet
 
 The public correction form (the queue exists), the news scraper (news is
