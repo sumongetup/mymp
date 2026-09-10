@@ -18,6 +18,11 @@
   "email": "panchagarh.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -53,6 +58,11 @@
   "email": "panchagarh.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -88,6 +98,11 @@
   "email": "thakurgaon.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2026-08-21"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -123,6 +138,11 @@
   "email": "thakurgaon.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -158,6 +178,11 @@
   "email": "thakurgaon.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2022-12-11"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -193,6 +218,11 @@
   "email": "dinajpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -228,6 +258,11 @@
   "email": "dinajpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -263,6 +298,11 @@
   "email": "dinajpur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -298,6 +338,11 @@
   "email": "dinajpur.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -333,6 +378,11 @@
   "email": "dinajpur.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -368,6 +418,11 @@
   "email": "dinajpur.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -403,6 +458,11 @@
   "email": "nilphamari.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -438,6 +498,11 @@
   "email": "nilphamari.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -473,6 +538,11 @@
   "email": "nilphamari.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -508,6 +578,11 @@
   "email": "nilphamari.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -543,6 +618,11 @@
   "email": "lalmonirhat.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -578,6 +658,11 @@
   "email": "lalmonirhat.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -613,6 +698,11 @@
   "email": "lalmonirhat.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -648,6 +738,11 @@
   "email": "rangpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -683,6 +778,11 @@
   "email": "rangpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -718,6 +818,11 @@
   "email": "rangpur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -753,6 +858,11 @@
   "email": "rangpur.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -788,6 +898,11 @@
   "email": "rangpur.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -823,6 +938,11 @@
   "email": "speaker@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -858,6 +978,11 @@
   "email": "kurigram.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -893,6 +1018,11 @@
   "email": "kurigram.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -928,6 +1058,11 @@
   "email": "kurigram.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -963,6 +1098,11 @@
   "email": "kurigram.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -998,6 +1138,11 @@
   "email": "gaibandha.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1033,6 +1178,11 @@
   "email": "gaibandha.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1068,6 +1218,11 @@
   "email": "gaibandha.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1103,6 +1258,11 @@
   "email": "gaibandha.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1138,6 +1298,11 @@
   "email": "gaibandha.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1173,6 +1338,11 @@
   "email": "jaipurhat.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1208,6 +1378,11 @@
   "email": "jaipurhat.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1243,6 +1418,11 @@
   "email": "bogra.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1278,6 +1458,11 @@
   "email": "bogra.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1313,6 +1498,11 @@
   "email": "bogra.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1348,6 +1538,11 @@
   "email": "bogra.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2022-12-11"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1383,6 +1578,11 @@
   "email": "bogra.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2022-12-11"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1418,6 +1618,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-04-12",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1453,6 +1658,11 @@
   "email": "bogra.7@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1488,6 +1698,11 @@
   "email": "mdkeramatalisuzc@gmail.com",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1523,6 +1738,11 @@
   "email": "chapainawabganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1558,6 +1778,11 @@
   "email": "chapainawabganj.3@parliament.gmail",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1593,6 +1818,11 @@
   "email": "naogaon.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1628,6 +1858,11 @@
   "email": "naogaon.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1663,6 +1898,11 @@
   "email": "naogaon.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1698,6 +1938,11 @@
   "email": "naogaon.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1733,6 +1978,11 @@
   "email": "naogaon.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1768,6 +2018,11 @@
   "email": "naogaon.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1803,6 +2058,11 @@
   "email": "rajshahi.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1838,6 +2098,11 @@
   "email": "rajshahi.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1873,6 +2138,11 @@
   "email": "rajshahi.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1908,6 +2178,11 @@
   "email": "rajshahi.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1943,6 +2218,11 @@
   "email": "rajshahi.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1978,6 +2258,11 @@
   "email": "rajshahi.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2013,6 +2298,11 @@
   "email": "natore.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2048,6 +2338,11 @@
   "email": "natore.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2083,6 +2378,11 @@
   "email": "natore.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2118,6 +2418,11 @@
   "email": "natore.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2153,6 +2458,11 @@
   "email": "sirajganj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2188,6 +2498,11 @@
   "email": "sirajganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2223,6 +2538,11 @@
   "email": "vpaynulofficial@gmail.com",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2258,6 +2578,11 @@
   "email": "sirajganj.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2293,6 +2618,11 @@
   "email": "sirajganj.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2328,6 +2658,11 @@
   "email": "sirajganj.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2363,6 +2698,11 @@
   "email": "pabna.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2398,6 +2738,11 @@
   "email": "pabna.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2433,6 +2778,11 @@
   "email": "pabna.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2468,6 +2818,11 @@
   "email": "pabna.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2503,6 +2858,11 @@
   "email": "pabna.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2538,6 +2898,11 @@
   "email": "meherpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2573,6 +2938,11 @@
   "email": "meherpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2608,6 +2978,11 @@
   "email": "kushtia.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2643,6 +3018,11 @@
   "email": "kushtia.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2678,6 +3058,11 @@
   "email": "kushtia.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2713,6 +3098,11 @@
   "email": "kushtia.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2748,6 +3138,11 @@
   "email": "chuadanga.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2783,6 +3178,11 @@
   "email": "chuadanga.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2818,6 +3218,11 @@
   "email": "jhenaidah.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2853,6 +3258,11 @@
   "email": "jhenaidah.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2888,6 +3298,11 @@
   "email": "jhenaidah.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2923,6 +3338,11 @@
   "email": "jhenaidah.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2958,6 +3378,11 @@
   "email": "jessore.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2993,6 +3418,11 @@
   "email": "jessore.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3028,6 +3458,11 @@
   "email": "jessore.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3063,6 +3498,11 @@
   "email": "jessore.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3098,6 +3538,11 @@
   "email": "jessore.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3133,6 +3578,11 @@
   "email": "jessore.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3168,6 +3618,11 @@
   "email": "magura.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3203,6 +3658,11 @@
   "email": "magura.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3238,6 +3698,11 @@
   "email": "narail.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3273,6 +3738,11 @@
   "email": "narail.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3308,6 +3778,11 @@
   "email": "bagerhat.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3343,6 +3818,11 @@
   "email": "bagerhat.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3378,6 +3858,11 @@
   "email": "bagerhat.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3413,6 +3898,11 @@
   "email": "bagerhat.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3448,6 +3938,11 @@
   "email": "khulna.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3483,6 +3978,11 @@
   "email": "khulna.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3518,6 +4018,11 @@
   "email": "khulna.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3553,6 +4058,11 @@
   "email": "khulna.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3588,6 +4098,11 @@
   "email": "khulna.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3623,6 +4138,11 @@
   "email": "khulna.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3658,6 +4178,11 @@
   "email": "Satkhira.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3693,6 +4218,11 @@
   "email": "Satkhira.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3728,6 +4258,11 @@
   "email": "Satkhira.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3763,6 +4298,11 @@
   "email": "satkhira.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3798,6 +4338,11 @@
   "email": "barguna.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "IMB",
    "nameBn": "ইসলামী আন্দোলন বাংলাদেশ",
@@ -3833,6 +4378,11 @@
   "email": "barguna.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3868,6 +4418,11 @@
   "email": "patuakhali.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3903,6 +4458,11 @@
   "email": "patuakhali.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3938,6 +4498,11 @@
   "email": "patuakhali.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "GOP",
    "nameBn": "গণঅধিকার পরিষদ (জিওপি)",
@@ -3973,6 +4538,11 @@
   "email": "patuakhali.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4008,6 +4578,11 @@
   "email": "bhola.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJP",
    "nameBn": "বাংলাদেশ জাতীয় পার্টি-বিজেপি",
@@ -4043,6 +4618,11 @@
   "email": "bhola.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4077,7 +4657,12 @@
   "permanentAddressBn": "বাড়ী নং K-২১, সড়ক নং ২৭, বনানী, ঢাকা ১২১৩।, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "bhola.3@parliament.gov.bd",
   "hasMobile": true,
-  "bioBn": null,
+  "bioBn": "হাফিজ উদ্দিন আহমদ বীর বিক্রম: পেশাগত জীবনী\nহাফিজ উদ্দিন আহমদ ক্রীড়া, সেনা কর্মকর্তা এবং রাজনৈতিক নেতৃত্বের ক্ষেত্রে উল্লেখযোগ‌্য অর্জনের জন্য সুপরিচিত। ১৯৬০-এর দশকে পেশাদার ফুটবলার হতে শুরু করে ২০২৬ সালে জাতীয় সংসদের স্পীকার হওয়া পর্যন্ত তাঁর দীর্ঘ কর্মজীবন অবিচল প্রতিশ্রুতি, দৃঢ়তা এবং জনসেবার এক অনন্য দৃষ্টান্ত।\n\nপ্রারম্ভিক জীবন ও শিক্ষা\n১৯৪৪ সালের ২৯ অক্টোবর ভোলা জেলার লালমোহনে এক সম্ভ্রান্ত বাঙালি মুসলিম পরিবারে হাফিজ উদ্দিন আহমদ জন্মগ্রহণ করেন। তাঁর পিতা ড. আজহার উদ্দিন ছিলেন একজন প্রভাবশালী রাজনৈতিক ব্যক্তিত্ব এবং পাকিস্তান জাতীয় পরিষদের সদস্য। তাঁর মাতা মোসাম্মৎ করিমুন নেছা ছিলেন একজন গৃহিণী। তিনি ১৯৬৫ সালে ঢাকা বিশ্ববিদ্যালয় থেকে রাষ্ট্রবিজ্ঞানে স্নাতকোত্তর (এমএ) ডিগ্রি লাভ করেন, যা তাঁর পরবর্তী রাজনৈতিক জীবনের ভিত্তি স্থাপন করেছিল।\n\nক্রীড়ায় অবদান ও সাফল্য\nসামরিক ও রাজনৈতিক জীবন শুরুর আগে তিনি একজন ফুটবলার হিসেবে বিশেষ খ্যাতি অর্জন করেছিলেন এবং তাঁর সময়ের অন্যতম সেরা প্রতিভাবান খেলোয়ার হিসেবে তিনি স্বীকৃত ছিলেন। একজন গতিশীল ফরোয়ার্ড হিসেবে তিনি মোহামেডান স্পোর্টিং ক্লাবসহ বেশ কিছু শীর্ষস্থানীয় ক্লাবে খেলেছেন। তিনি ১৯৬৭ থেকে ১৯৭১ সালে বাংলাদেশের স্বাধীনতা লাভ করা পর্যন্ত পাকিস্তান জাতীয় ফুটবল দলের প্রতিনিধিত্ব করেছেন। আন্তর্জাতিক পর্যায়ে তিনি ইরান, তুরস্ক এবং মিয়ানমারে ম্যাচ খেলেছেন। তিনি ১৯৬৪-১৯৬৬ সালের মধ্যে ১০০ মিটার এবং ২০০ মিটার স্প্রিন্টে তৎকালীন পূর্ব পাকিস্তানে রেকর্ড খেতাব অর্জন করেন। তাঁর অসাধারণ গতি এবং প্রতিযোগিতামূলক মনোভাব সম্পন্ন ক্রীড়া নৈপুণ‌্য তাঁকে দক্ষিণ এশিয়ার ফুটবলে একটি বিশিষ্ট অবস্থানে নিয়ে যায়। ফুটবলে তাঁর এই অবদানের স্বীকৃতিস্বরূপ, ২০০৫ সালে ফিফা (FIFA) তাঁকে তাদের শতবর্ষী 'অর্ডার অব মেরিট'-এ ভূষিত করে, যা বিশ্ব ক্রীড়ায় অন্যতম মর্যাদাপূর্ণ সম্মাননা।\n\nবাংলাদেশের স্বাধীনতা যুদ্ধে সামরিক অবদান\n১৯৭১ সালের বাংলাদেশের স্বাধীনতা যুদ্ধে হাফিজ উদ্দিন আহমদ গভীর দেশপ্রেমের পরিচয় দেন। পাকিস্তান সেনাবাহিনীতে কমিশনপ্রাপ্ত কর্মকর্তা হিসেবে তিনি ক্যাপ্টেন থাকাকালীন কৌশলগতভাবে গুরুত্বপূর্ণ বিভিন্ন সেক্টরে, বিশেষ করে ৮ নম্বর সেক্টর এবং 'জেড' ফোর্সের অধীনে সম্মুখ সমরে সক্রিয়ভাবে অংশ নেন। ১৯৭১ সালের ৩০শে মার্চ তিনি ইস্ট বেঙ্গল রেজিমেন্ট এর একজন কর্মকর্তা হিসেবে যশোর সেনানিবাসে পাকিস্তান সরকারের বিরুদ্ধে বিদ্রোহ ঘোষণা করেন। সেই সময় তিনি পাকিস্তানি সেনাবাহিনীর বিরুদ্ধে প্রায় আট ঘণ্টা যুদ্ধ করেন এবং দুইশত সৈন্য নিয়ে সেনানিবাস থেকে বেরিয়ে আসেন। তাঁর অসামান্য সাহসিকতা এবং যুদ্ধকৌশলের জন্য তাঁকে বাংলাদেশের তৃতীয় সর্বোচ্চ সামরিক পদক 'বীর বিক্রম'-এ ভূষিত করা হয়, যা তাঁকে একজন বিশিষ্ট বীর মুক্তিযোদ্ধা হিসেবে প্রতিষ্ঠিত করে। তাঁর মহান আত্মত্যাগ দেশের স্বাধীনতা অর্জনে বড় ভূমিকা রাখে। ১৯৭১ সালের ১৫ই ডিসেম্বর তৎকালীন মেজর জিয়াউর রহমানের নেতৃত্বাধীন 'জেড' ফোর্সের অধীনে দিনব্যাপী যুদ্ধের পর তিনি সিলেট শহর দখল করেন।\n\nরাজনৈতিক জীবন\nজনাব হাফিজ ১৯৮৬ সালে ভোলা-৩ সংসদীয় আসন থেকে প্রথম সংসদ সদস্য নির্বাচিত হন এবং পরবর্তীতে ১৯৯২ সালে তিনি বিএনপিতে যোগদান করেন। তাঁর সংসদীয় কর্মজীবনে তিনি ৩য় (১৯৮৬), ৪র্থ (১৯৮৮), ৫ম (১৯৯১), ৬ষ্ঠ (১৯৯৬), ৭ম (১৯৯৬), ৮ম (২০০১) এবং ১৩শ (২০২৬) জাতীয় সংসদে সংসদ সদস‌্য হিসেবে বিজয়ী হন। রাজনৈতিক জীবনে তিনি বিএনপির দলীয় পদ ও স্থায়ী কমিটিতে যোগদান করেন যা দলে তাঁর বিশেষ মর্যাদার প্রতিফলন। পরবর্তীতে তিনি বিএনপির সর্বোচ্চ নীতিনির্ধারণী ফোরাম 'জাতীয় স্থায়ী কমিটি'র সদস্য নির্বাচিত হন।\nমন্ত্রী হিসেবে তিনি একাধিক গুরুত্বপূর্ণ মন্ত্রণালয়ে সাফল‌্যের সাথে দায়িত্ব পালন করেছেন, যার মধ্যে রয়েছে বাণিজ্য প্রতিমন্ত্রী (১৯৯৬), পানিসম্পদ মন্ত্রী, বাণিজ্য মন্ত্রী ও পাট মন্ত্রী (২০০১-২০০৬) এবং অতি সম্প্রতি মুক্তিযুদ্ধ বিষয়ক মন্ত্রী (২০২৬) হিসেবে দায়িত্ব পালন।\n২০২৬ সালের মার্চ মাসে তিনি সর্বসম্মতিক্রমে বাংলাদেশের ত্রয়োদশ জাতীয় সংসদের স্পীকার নির্বাচিত হন এবং মহামান্য রাষ্ট্রপতি তাঁকে শপথ বাক্য পাঠ করান। জাতীয় সংসদের স্পীকার হিসেবে তিনি সংসদীয় কার্যক্রম পরিচালনায় জাতীয় সংসদের অধিবেশনে সভাপতিত্ব করেন এবং বাংলাদেশের গণতান্ত্রিক উন্নয়নের এক গুরুত্বপূর্ণ সন্ধিক্ষণে নেতৃত্ব দিয়ে যাচ্ছেন।\n\nব্যক্তিগত জীবন ও মতাদর্শ\nবিশিষ্ট শিক্ষাবিদ দিলারা হাফিজ ছিলেন হাফিজ উদ্দিন আহমদ এর সহধর্মিণী। দিলারা হাফিজ ঢাকা ইডেন মহিলা কলেজ ও শহীদ সোহরাওয়ার্দী কলেজের অধ্যক্ষ এবং মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তরের মহাপরিচালক (ডিজি) হিসেবে দায়িত্ব পালন করেন। দিলারা হাফিজ ২০২৬ সালের ২৮শে মার্চ মৃত্যুবরণ করেন।\nহাফিজ উদ্দিন আহমদ দুই পুত্র ও এক কন‌্যার পিতা। পুত্র শাহরুখ হাফিজ পেশায় একজন কম্পিউটার প্রকৌশলী ও তাহারাত হাফিজ একজন ব্যবসায়ী এবং কন‌্যা শামা‌মা শাহরীন হাফিজ কানাডার উইন্ডসর বিশ্ববিদ্যালয় থেকে এমবিএ সম্পন্ন করেছেন। ব‌্যক্তিগত ও খেলোয়াড় জীবনে শৃঙ্খলাবোধ, সামরিক নিয়মানুবর্তীতা, রাজনৈতিক অভিজ্ঞতা এবং সততার জন‌্য তিনি সর্বজনস্বীকৃত ।\nতিনি স্বাধীনতা যুদ্ধের মূল চেতনার একজন একনিষ্ঠ সমর্থক এবং একটি শক্তিশালী গণতন্ত্র, প্রাতিষ্ঠানিক জবাবদিহিতা, জাতীয় উন্নয়ন ও আইনের শাসনের পক্ষে সর্বদা সোচ্চার। সমসাময়িক বিষয়াবলীতে তাঁর সুস্পষ্ট অবস্থান ও অকপট দৃষ্টিভঙ্গি তাঁকে একজন নীতিবান রাজনীতিক হিসেবে প্রতিষ্ঠিত করেছে।\n\nকীর্তি\nহাফিজ উদ্দিন আহমদের কর্মময় জীবন বিভিন্ন ক্ষেত্রে সাফল্যের এক বিশাল ক্যানভাস: তিনি একাধারে ফিফা-স্বীকৃত ফুটবলার, বীর বিক্রম খেতাবপ্রাপ্ত বীর মুক্তিযোদ্ধা, একজন পদকপ্রাপ্ত সামরিক কর্মকর্তা, সাতবারের নির্বাচিত সংসদ সদস্য এবং একজন অভিজ্ঞ মন্ত্রী। বর্তমানে জাতীয় সংসদের স্পীকার হিসেবে দায়িত্ব পালনরত তাঁর ছয় দশকেরও বেশি সময়ের এই কর্মজীবন জাতীয় অগ্রগতির প্রতি তাঁর দায়বদ্ধতাকে প্রকাশ করে এবং বাংলাদেশের গণতান্ত্রিক বিবর্তনে ব্যক্তিগত উৎকর্ষ ও জনসেবার এক অনন্য মেলবন্ধন ফুটিয়ে তোলে।",
+  "summaryBn": "হাফিজ উদ্দিন আহমদ বীর বিক্রম একজন বাংলাদেশি রাজনীতিবিদ ও মুক্তিযোদ্ধা, যিনি ১৯৭১ সালের মুক্তিযুদ্ধে বীরত্বপূর্ণ অবদানের জন্য বীর বিক্রম খেতাবে ভূষিত হন। বর্তমানে তিনি বাংলাদেশের ১৩তম জাতীয় সংসদের স্পিকার হিসেবে দায়িত্ব পালন করছেন।",
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4115,6 +4700,11 @@
   "email": "bhola.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4150,6 +4740,11 @@
   "email": "barisal.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4185,6 +4780,11 @@
   "email": "barisal.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4220,6 +4820,11 @@
   "email": "barisal.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4255,6 +4860,11 @@
   "email": "barisal.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4290,6 +4900,11 @@
   "email": "barisal.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4325,6 +4940,11 @@
   "email": "barisal.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4360,6 +4980,11 @@
   "email": "jhalokathi.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4395,6 +5020,11 @@
   "email": "jhalokathi.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4430,6 +5060,11 @@
   "email": "pirojpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4465,6 +5100,11 @@
   "email": "pirojpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4500,6 +5140,11 @@
   "email": "pirojpur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4535,6 +5180,11 @@
   "email": "tangail.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4570,6 +5220,11 @@
   "email": "tangail.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4605,6 +5260,11 @@
   "email": "tangail.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -4640,6 +5300,11 @@
   "email": "tangail.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4675,6 +5340,11 @@
   "email": "tangail.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4710,6 +5380,11 @@
   "email": "tangail.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4745,6 +5420,11 @@
   "email": "tangail.7@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4780,6 +5460,11 @@
   "email": "tangail.8@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4815,6 +5500,11 @@
   "email": "jamalpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4850,6 +5540,11 @@
   "email": "jamalpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4885,6 +5580,11 @@
   "email": "jamalpur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4920,6 +5620,11 @@
   "email": "jamalpur.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4955,6 +5660,11 @@
   "email": "jamalpur.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4990,6 +5700,11 @@
   "email": "sherpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5025,6 +5740,11 @@
   "email": "sherpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5060,6 +5780,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-04-12",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5095,6 +5820,11 @@
   "email": "mymensingh.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -5130,6 +5860,11 @@
   "email": "mymensingh.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BKM",
    "nameBn": "বাংলাদেশ খেলাফত মজলিস",
@@ -5165,6 +5900,11 @@
   "email": "mymensingh.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5200,6 +5940,11 @@
   "email": "mymensingh.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5235,6 +5980,11 @@
   "email": "mymensingh.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5270,6 +6020,11 @@
   "email": "mymensingh.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5305,6 +6060,11 @@
   "email": "mymensingh.7@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5340,6 +6100,11 @@
   "email": "mymensingh.8@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5375,6 +6140,11 @@
   "email": "mymensingh.9@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5410,6 +6180,11 @@
   "email": "mymensingh.10@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5445,6 +6220,11 @@
   "email": "mymensingh.11@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5479,7 +6259,12 @@
   "permanentAddressBn": "গ্রাম: চত্রংপুর, ডাক-কলমাকান্দা, কলমাকান্দা, নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": "netrokona.1@parliament.gov.bd",
   "hasMobile": true,
-  "bioBn": null,
+  "bioBn": "ব্যারিষ্টার কায়সার কামাল একজন বিশিষ্ট বাংলাদেশি রাজনীতিবিদ ও সুপ্রিম কোর্টের সিনিয়র এডভোকেট, বর্তমানে বাংলাদেশের ১৩তম সংসদের ডেপুটি স্পীকার হিসেবে দায়িত্ব পালন করছেন। নেত্রকোণা-১ আসনের প্রতিনিধিত্বকারী তিনি তার বিস্তৃত আইনগত ও সরকারি অভিজ্ঞতা নেতৃত্বে নিয়ে আসেন, পূর্বে ভূমি মন্ত্রণালয়ের প্রতিমন্ত্রী হিসেবে কর্মরত ছিলেন।\n\n১৯৭২ সালে নেত্রকোণায় জন্মগ্রহণ করেন। ঢাকা বিশ্ববিদ্যালয় থেকে স্নাতক ও স্নাতকোত্তর ডিগ্রি অর্জনের পর যুক্তরাজ্যে আইন শিক্ষা সম্পন্ন করেন, যেখানে তিনি এলএলবি (অনার্স) লাভ করেন এবং ২০০৫ সালে দ্য অনারেবল সোসাইটি অফ লিঙ্কন’স ইন কর্তৃক বারে অন্তর্ভুক্ত হন।\n\n২০২৬ সালের মার্চে সর্বসম্মতিক্রমে ডেপুটি স্পীকার হিসেবে নির্বাচিত, ব্যারিষ্টার কামাল অন্তর্ভুক্তিমূলক অংশগ্রহণ বৃদ্ধি, স্বচ্ছ শাসন নিশ্চিত করা এবং দেশের কেন্দ্রীয় গণতান্ত্রিক সংস্থায় নিরপেক্ষ নেতৃত্ব বজায় রাখার ক্ষেত্রে অঙ্গীকারবদ্ধ রয়েছেন।",
+  "summaryBn": "ব্যারিষ্টার কায়সার কামাল একজন বিশিষ্ট বাংলাদেশি রাজনীতিবিদ ও সুপ্রিম কোর্টের সিনিয়র এডভোকেট, বর্তমানে বাংলাদেশের ১৩তম সংসদের ডেপুটি স্পীকার হিসেবে দায়িত্ব পালন করছেন। নেত্রকোণা-১ আসনের প্রতিনিধিত্বকারী তিনি তার বিস্তৃত আইনগত ও সরকারি অভিজ্ঞতা নেতৃত্বে নিয়ে আসেন, পূর্বে ভূমি মন্ত্রণালয়ের প্রতিমন্ত্রী হিসেবে কর্মরত ছিলেন।\n\n১৯৭২ সালে নেত্রকোণায় জন্মগ্রহণ করেন। ঢাকা বিশ্ববিদ্যালয় থেকে স্নাতক ও স্নাতকোত্তর ডিগ্রি অর্জনের পর যুক্তরাজ্যে আইন শিক্ষা সম্পন্ন করেন, যেখানে তিনি এলএলবি (অনার্স) লাভ করেন এবং ২০০৫ সালে দ্য অনারেবল সোসাইটি অফ লিঙ্কন’স ইন কর্তৃক বারে অন্তর্ভুক্ত হন।\n\n২০২৬ সালের মার্চে সর্বসম্মতিক্রমে ডেপুটি স্পীকার হিসেবে নির্বাচিত, ব্যারিষ্টার কামাল অন্তর্ভুক্তিমূলক অংশগ্রহণ বৃদ্ধি, স্বচ্ছ শাসন নিশ্চিত করা এবং দেশের কেন্দ্রীয় গণতান্ত্রিক সংস্থায় নিরপেক্ষ নেতৃত্ব বজায় রাখার ক্ষেত্রে অঙ্গীকারবদ্ধ রয়েছেন।",
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5517,6 +6302,11 @@
   "email": "netrokona.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5552,6 +6342,11 @@
   "email": "netrokona.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5587,6 +6382,11 @@
   "email": "netrokona.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5622,6 +6422,11 @@
   "email": "netrokona.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5657,6 +6462,11 @@
   "email": "kishoreganj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5692,6 +6502,11 @@
   "email": "kishoreganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5727,6 +6542,11 @@
   "email": "kishoreganj.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5762,6 +6582,11 @@
   "email": "kishoreganj.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5797,6 +6622,11 @@
   "email": "kishoreganj.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -5832,6 +6662,11 @@
   "email": "kishoreganj.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5867,6 +6702,11 @@
   "email": "manikganj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5902,6 +6742,11 @@
   "email": "manikganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5937,6 +6782,11 @@
   "email": "manikganj.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5972,6 +6822,11 @@
   "email": "munshiganj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6007,6 +6862,11 @@
   "email": "munshiganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6042,6 +6902,11 @@
   "email": "munshiganj.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6077,6 +6942,11 @@
   "email": "dhaka.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6112,6 +6982,11 @@
   "email": "dhaka.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6147,6 +7022,11 @@
   "email": "dhaka.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6182,6 +7062,11 @@
   "email": "dhaka.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6217,6 +7102,11 @@
   "email": "dhaka.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6252,6 +7142,11 @@
   "email": "dhaka.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6287,6 +7182,11 @@
   "email": "dhaka.7@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6322,6 +7222,11 @@
   "email": "dhaka.8@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6357,6 +7262,11 @@
   "email": "dhaka.9@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6392,6 +7302,11 @@
   "email": "dhaka.10@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6427,6 +7342,11 @@
   "email": "dhaka.11@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -6462,6 +7382,11 @@
   "email": "dhaka.12@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6497,6 +7422,11 @@
   "email": "dhaka.13@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6532,6 +7462,11 @@
   "email": "dhaka.14@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6567,6 +7502,11 @@
   "email": "dhaka.15@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6604,6 +7544,11 @@
   "email": "dhaka.16@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6639,6 +7584,11 @@
   "email": "dhaka.17@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6676,6 +7626,11 @@
   "email": "dhaka.18@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6711,6 +7666,11 @@
   "email": "dhaka.19@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6746,6 +7706,11 @@
   "email": "dhaka.20@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6781,6 +7746,11 @@
   "email": "gazipur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6816,6 +7786,11 @@
   "email": "gazipur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6851,6 +7826,11 @@
   "email": "gazipur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6886,6 +7866,11 @@
   "email": "gazipur.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6921,6 +7906,11 @@
   "email": "gazipur.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6956,6 +7946,11 @@
   "email": "narsingdi.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6991,6 +7986,11 @@
   "email": "narsingdi.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7026,6 +8026,11 @@
   "email": "narsingdi.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7061,6 +8066,11 @@
   "email": "narsingdi.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7096,6 +8106,11 @@
   "email": "narsingdi.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7131,6 +8146,11 @@
   "email": "narayanganj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7166,6 +8186,11 @@
   "email": "narayanganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7201,6 +8226,11 @@
   "email": "narayanganj.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7236,6 +8266,11 @@
   "email": "narayanganj.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -7271,6 +8306,11 @@
   "email": "narayanganj.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7306,6 +8346,11 @@
   "email": "rajbari.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7341,6 +8386,11 @@
   "email": "rajbari.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7376,6 +8426,11 @@
   "email": "faridpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -7411,6 +8466,11 @@
   "email": "faridpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7446,6 +8506,11 @@
   "email": "faridpur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7481,6 +8546,11 @@
   "email": "faridpur.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7516,6 +8586,11 @@
   "email": "gopalgonj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7551,6 +8626,11 @@
   "email": "gopalgonj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7586,6 +8666,11 @@
   "email": "gopalgonj.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7621,6 +8706,11 @@
   "email": "madaripur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BKM",
    "nameBn": "বাংলাদেশ খেলাফত মজলিস",
@@ -7656,6 +8746,11 @@
   "email": "madaripur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7691,6 +8786,11 @@
   "email": "madaripur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7726,6 +8826,11 @@
   "email": "shariatpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7761,6 +8866,11 @@
   "email": "shariatpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7796,6 +8906,11 @@
   "email": "shariatpur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7831,6 +8946,11 @@
   "email": "sunamganj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7866,6 +8986,11 @@
   "email": "sunamganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7901,6 +9026,11 @@
   "email": "sunamganj.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7936,6 +9066,11 @@
   "email": "sunamganj.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7971,6 +9106,11 @@
   "email": "sunamganj.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8006,6 +9146,11 @@
   "email": "sylhet.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8041,6 +9186,11 @@
   "email": "sylhet.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8076,6 +9226,11 @@
   "email": "sylhet.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8111,6 +9266,11 @@
   "email": "sylhet.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8146,6 +9306,11 @@
   "email": "sylhet.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "KM",
    "nameBn": "খেলাফত মজলিস",
@@ -8181,6 +9346,11 @@
   "email": "sylhet.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8216,6 +9386,11 @@
   "email": "maulvibazar.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8251,6 +9426,11 @@
   "email": "maulvibazar.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8286,6 +9466,11 @@
   "email": "maulvibazar.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8321,6 +9506,11 @@
   "email": "maulvibazar.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8356,6 +9546,11 @@
   "email": "habiganj.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8391,6 +9586,11 @@
   "email": "habiganj.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8426,6 +9626,11 @@
   "email": "habiganj.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8461,6 +9666,11 @@
   "email": "habiganj.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8496,6 +9706,11 @@
   "email": "brahmanbaria.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8531,6 +9746,11 @@
   "email": "brahmanbaria.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2022-12-11"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -8566,6 +9786,11 @@
   "email": "brahmanbaria.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8601,6 +9826,11 @@
   "email": "brahmanbaria.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8636,6 +9866,11 @@
   "email": "brahmanbaria.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8671,6 +9906,11 @@
   "email": "brahmanbaria.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "PSM",
    "nameBn": "গণসংহতি আন্দোলন",
@@ -8706,6 +9946,11 @@
   "email": "comilla.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8741,6 +9986,11 @@
   "email": "comilla.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8776,6 +10026,11 @@
   "email": "comilla.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8811,6 +10066,11 @@
   "email": "comilla.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -8846,6 +10106,11 @@
   "email": "comilla.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8881,6 +10146,11 @@
   "email": "comilla.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8916,6 +10186,11 @@
   "email": "comilla.7@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -8951,6 +10226,11 @@
   "email": "comilla.8@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8986,6 +10266,11 @@
   "email": "comilla.9@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9021,6 +10306,11 @@
   "email": "comilla.10@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9056,6 +10346,11 @@
   "email": "comilla.11@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -9091,6 +10386,11 @@
   "email": "chandpur.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9126,6 +10426,11 @@
   "email": "chandpur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9161,6 +10466,11 @@
   "email": "chandpur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9196,6 +10506,11 @@
   "email": "chandpur.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -9231,6 +10546,11 @@
   "email": "chandpur.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9266,6 +10586,11 @@
   "email": "feni.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9301,6 +10626,11 @@
   "email": "feni.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9336,6 +10666,11 @@
   "email": "feni.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9371,6 +10706,11 @@
   "email": "noakhali.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9406,6 +10746,11 @@
   "email": "noakhali.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9441,6 +10786,11 @@
   "email": "noakhali.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9476,6 +10826,11 @@
   "email": "noakhali.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9511,6 +10866,11 @@
   "email": "noakhali.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9546,6 +10906,11 @@
   "email": "noakhali.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -9581,6 +10946,11 @@
   "email": "laxmipur.1@parliament.gov.bd / shahadatsalim66@gmail.com",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9616,6 +10986,11 @@
   "email": "laxmipur.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9651,6 +11026,11 @@
   "email": "laxmipur.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9686,6 +11066,11 @@
   "email": "laxmipur.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9721,6 +11106,11 @@
   "email": "chittagong.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9756,6 +11146,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-16",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9791,6 +11186,11 @@
   "email": "chittagong.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9826,6 +11226,11 @@
   "email": "chittagong.5@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9861,6 +11266,11 @@
   "email": "chittagong.6@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9896,6 +11306,11 @@
   "email": "chittagong.7@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9931,6 +11346,11 @@
   "email": "chittagong.8@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9966,6 +11386,11 @@
   "email": "chittagong.9@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10001,6 +11426,11 @@
   "email": "chittagong.10@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10036,6 +11466,11 @@
   "email": "chittagong.11@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10071,6 +11506,11 @@
   "email": "chittagong.12@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10106,6 +11546,11 @@
   "email": "chittagong.13@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10141,6 +11586,11 @@
   "email": "chittagong.14@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10176,6 +11626,11 @@
   "email": "chittagong.15@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -10211,6 +11666,11 @@
   "email": "chittagong.16@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -10246,6 +11706,11 @@
   "email": "coxbazar.1@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10281,6 +11746,11 @@
   "email": "coxbazar.2@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10316,6 +11786,11 @@
   "email": "coxbazar.3@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10351,6 +11826,11 @@
   "email": "coxsbazar.4@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10386,6 +11866,11 @@
   "email": "khagrachari@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10421,6 +11906,11 @@
   "email": "rangamati@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10456,6 +11946,11 @@
   "email": "bandarban@parliament.gov.bd",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-02-17",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10491,6 +11986,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10526,6 +12026,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10561,6 +12066,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10596,6 +12106,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10631,6 +12146,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10666,6 +12186,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10701,6 +12226,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10736,6 +12266,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10771,6 +12306,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10806,6 +12346,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": null
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10841,6 +12386,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10876,6 +12426,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10911,6 +12466,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10946,6 +12506,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10981,6 +12546,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-04-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11016,6 +12586,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11051,6 +12626,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11086,6 +12666,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11121,6 +12706,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11156,6 +12746,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11191,6 +12786,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11226,6 +12826,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11261,6 +12866,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11296,6 +12906,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11331,6 +12946,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11366,6 +12986,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11401,6 +13026,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11436,6 +13066,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11471,6 +13106,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11506,6 +13146,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11541,6 +13186,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11576,6 +13226,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11611,6 +13266,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11646,6 +13306,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11681,6 +13346,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11716,6 +13386,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11751,6 +13426,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11786,6 +13466,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11821,6 +13506,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11856,6 +13546,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11891,6 +13586,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11926,6 +13626,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11961,6 +13666,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11996,6 +13706,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -12031,6 +13746,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -12066,6 +13786,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -12101,6 +13826,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "JAGPA",
    "nameBn": "জাতীয় গণতান্ত্রিক পার্টি-জাগপা",
@@ -12136,6 +13866,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "BKM",
    "nameBn": "বাংলাদেশ খেলাফত মজলিস",
@@ -12171,6 +13906,11 @@
   "email": "sultanajesmen349@gmail.com",
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-03",
+   "end": "2031-02-16"
+  },
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -12206,6 +13946,11 @@
   "email": null,
   "hasMobile": true,
   "bioBn": null,
+  "summaryBn": null,
+  "term": {
+   "start": "2026-05-06",
+   "end": null
+  },
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",

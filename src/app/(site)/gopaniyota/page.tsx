@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <Card className="p-6 flex flex-col gap-3">
-      <h2 className="serif text-[21px] font-bold">{title}</h2>
+      <h2 className="display text-[21px] font-bold">{title}</h2>
       <div className="flex flex-col gap-2.5 text-[15.5px] leading-relaxed text-inksoft">{children}</div>
     </Card>
   );

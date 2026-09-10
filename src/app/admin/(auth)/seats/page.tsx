@@ -46,7 +46,7 @@ export default async function SeatsAdmin({ searchParams }: { searchParams: Promi
               <tr key={s.no}>
                 <Td className="tnum text-muted">{bn(s.no)}</Td>
                 <Td>
-                  <span className="serif font-bold">{s.nameBn}</span>
+                  <span className="display font-bold">{s.nameBn}</span>
                   <span className="block text-[12.5px] text-muted">{s.nameEn}</span>
                 </Td>
                 <Td className="text-[13.5px]">{m?.nameBn ?? '—'}</Td>

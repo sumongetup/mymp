@@ -28,7 +28,7 @@ export default function MemberPhoto({
       <span
         style={{ ...style, fontSize: Math.round(size * 0.38) }}
         aria-hidden="true"
-        className={`serif shrink-0 rounded-full bg-brandsoft text-brand font-bold grid place-items-center ${className}`}
+        className={`display shrink-0 rounded-full bg-brandsoft text-brand font-bold grid place-items-center ${className}`}
       >
         {initial}
       </span>

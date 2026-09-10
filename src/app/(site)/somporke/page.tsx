@@ -23,7 +23,7 @@ export default function AboutPage() {
 
       <div className="pt-8 pb-14 flex flex-col gap-6 max-w-[760px]">
         <Card className="p-6 flex flex-col gap-3">
-          <h2 className="serif text-[21px] font-bold">এই সাইটে কী আছে</h2>
+          <h2 className="display text-[21px] font-bold">এই সাইটে কী আছে</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
             ত্রয়োদশ জাতীয় সংসদের {bn(s.total)} জন সদস্যের প্রত্যেকের একটি করে পাতা: নাম, ছবি, দল, আসন,
             জন্মতারিখ, পেশা, ঠিকানা ও দাপ্তরিক ইমেইল। {bn(300)}টি আসনের প্রতিটির পাতা, {bn(cc.total)}টি
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </Card>
 
         <Card className="p-6 flex flex-col gap-3">
-          <h2 className="serif text-[21px] font-bold">তথ্য কোথা থেকে আসে</h2>
+          <h2 className="display text-[21px] font-bold">তথ্য কোথা থেকে আসে</h2>
           <ul className="flex flex-col gap-3 text-[15.5px] leading-relaxed text-inksoft">
             <li>
               <strong className="text-ink font-semibold">বাংলাদেশ জাতীয় সংসদ</strong> (parliament.gov.bd):
@@ -51,7 +51,7 @@ export default function AboutPage() {
         </Card>
 
         <Card className="p-6 flex flex-col gap-3">
-          <h2 className="serif text-[21px] font-bold">যা আমরা করি না</h2>
+          <h2 className="display text-[21px] font-bold">যা আমরা করি না</h2>
           <ul className="flex flex-col gap-2.5 text-[15.5px] leading-relaxed text-inksoft list-disc ps-5">
             <li>কোনো সংখ্যা, নাম বা তারিখ অনুমান করে বসাই না। সূত্রে না থাকলে পাতায় লেখা থাকে যে তথ্যটি নেই।</li>
             <li>
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </Card>
 
         <Card className="p-6 flex flex-col gap-3">
-          <h2 className="serif text-[21px] font-bold">ভুল দেখলে</h2>
+          <h2 className="display text-[21px] font-bold">ভুল দেখলে</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
             কোনো তথ্য ভুল মনে হলে <Link href="/jogajog" className="text-brand font-semibold hover:underline">যোগাযোগ</Link> পাতায়
             জানান। যাচাই করে সংশোধন করা হয়, আর কোন সূত্রে যাচাই হলো তা পাতায় উল্লেখ থাকে।

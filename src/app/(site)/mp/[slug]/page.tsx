@@ -3,10 +3,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   members, getMember, committeesOfMember, membersOfParty, districtOf,
-  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, newsForMember,
+  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, newsForMember, partyColor,
 } from '@/lib/data';
-import { Page, Card, Breadcrumb, Empty, PartyDot, NewsCard } from '@/components/ui';
+import { rolesOf, noticesForMember } from '@/lib/activity';
+import { Page, Card, Breadcrumb, Empty, PartyDot, NewsCard, DocLink } from '@/components/ui';
 import MemberPhoto from '@/components/MemberPhoto';
+import Icon from '@/components/Icon';
 
 export function generateStaticParams() {
   return members.map((m) => ({ slug: m.slug }));
@@ -20,16 +22,25 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
   return {
     title: `${m.nameBn ?? m.nameEn}`,
     alternates: { canonical: `/mp/${m.slug}` },
-    description: `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
+    description: `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। পরিচিতি, কমিটি, সংসদ সচিবালয়ের প্রজ্ঞাপন ও যোগাযোগ। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
   };
 }
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="flex justify-between gap-4 py-2 border-b border-rulesoft last:border-0">
+    <div className="flex justify-between gap-4 py-2.5 border-b border-rulesoft last:border-0">
       <span className="text-muted shrink-0">{label}</span>
-      <span className="text-end font-medium">{children}</span>
+      <span className="text-end font-medium wrap-anywhere">{children}</span>
     </div>
+  );
+}
+
+function H2({ children, count }: { children: React.ReactNode; count?: number }) {
+  return (
+    <h2 className="display text-[21px] sm:text-[24px]">
+      {children}
+      {typeof count === 'number' && count > 0 && <span className="ms-2 text-[15px] font-semibold text-muted tnum">({bn(count)})</span>}
+    </h2>
   );
 }
 
@@ -42,20 +53,28 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   const district = districtOf(m.seat);
   const onCommittees = committeesOfMember(m.id);
   const memberNews = newsForMember(m.id);
+  const notices = noticesForMember(m.id);
   const cc = committeeCounts();
   const partyMates = m.party ? membersOfParty(m.party.abbr).filter((x) => x.id !== m.id) : [];
   const sameDistrict = district
     ? members.filter((x) => x.id !== m.id && districtOf(x.seat)?.en === district.en)
     : [];
 
-  const bio = [
+  // Offices come from two places in the source: the term record (Speaker, PM…)
+  // and the presiding-officers list (whips and leaders). Show each once.
+  const roles = [...new Set([...m.offices.map((o) => OFFICE_LABELS[o] ?? o), ...rolesOf(m.id)])];
+
+  const facts = [
     m.dateOfBirth && { label: 'জন্ম', value: `${dateBn(m.dateOfBirth)}${age !== null ? ` · ${bn(age)} বছর` : ''}` },
     m.gender && { label: 'লিঙ্গ', value: m.gender === 'Female' ? 'নারী' : 'পুরুষ' },
     m.professionBn && { label: 'পেশা', value: m.professionBn },
     m.fatherBn && { label: 'পিতা', value: m.fatherBn },
     m.motherBn && { label: 'মাতা', value: m.motherBn },
     m.isFreedomFighter && { label: 'মুক্তিযোদ্ধা', value: 'হ্যাঁ' },
+    m.term?.start && { label: 'মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
   ].filter(Boolean) as { label: string; value: string }[];
+
+  const paragraphs = (m.bioBn ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
 
   return (
     <Page>
@@ -63,36 +82,37 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
         items={[
           { href: '/', label: 'হোম' },
           { href: '/mp', label: 'সংসদ সদস্য' },
-          ...(district ? [{ label: district.bn }] : []),
+          ...(district ? [{ href: `/jela/${district.slug}`, label: district.bn }] : []),
           { label: m.seat?.nameBn ?? (m.nameBn ?? '') },
         ]}
       />
 
-      <header className="pt-7 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-        <MemberPhoto src={m.photoUrl} alt={m.nameBn ?? m.nameEn ?? ''} initial={initial(m)} size={128} />
-        <div className="grow flex flex-col gap-3">
+      <header
+        className="mt-5 bg-surface border border-rule rounded-card shadow-card p-5 sm:p-7 flex flex-col md:flex-row gap-5 md:gap-8 items-start"
+        style={{ borderTopColor: partyColor(m.party?.abbr), borderTopWidth: 4 }}
+      >
+        <MemberPhoto src={m.photoUrl} alt={m.nameBn ?? m.nameEn ?? ''} initial={initial(m)} size={120} className="ring-4 ring-paper" />
+        <div className="grow flex flex-col gap-3 min-w-0">
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 rounded-full bg-brandsoft text-brand text-[13px] font-bold">
+            <span className="px-3 py-1 rounded-full bg-brandsoft text-brand text-[12.5px] font-bold">
               বর্তমান সদস্য · ত্রয়োদশ সংসদ
             </span>
-            {m.offices.map((o) => (
-              <span key={o} className="px-3 py-1 rounded-full bg-ink text-white text-[13px] font-bold">
-                {OFFICE_LABELS[o] ?? o}
-              </span>
+            {roles.map((r) => (
+              <span key={r} className="px-3 py-1 rounded-full bg-ink text-white text-[12.5px] font-bold">{r}</span>
             ))}
             {m.seat?.reserved && (
-              <span className="px-3 py-1 rounded-full border border-rule text-[13px] font-semibold text-inksoft">
+              <span className="px-3 py-1 rounded-full border border-rule text-[12.5px] font-semibold text-inksoft">
                 সংরক্ষিত নারী আসন
               </span>
             )}
           </div>
-          <h1 className="serif text-[32px] sm:text-[44px] leading-[1.15] font-extrabold text-balance">
+          <h1 className="display text-[28px] sm:text-[40px] leading-[1.15] text-balance wrap-anywhere">
             {m.nameBn ?? m.nameEn}
           </h1>
-          {m.nameEn && m.nameBn && <p className="text-[17px] text-muted">{m.nameEn}</p>}
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px] sm:text-[16px]">
+          {m.nameEn && m.nameBn && <p className="text-[15.5px] text-muted -mt-1">{m.nameEn}</p>}
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
             {m.party && (
-              <Link href={`/dol/${m.party.abbr.toLowerCase()}`} className="flex items-center gap-2 font-semibold hover:underline">
+              <Link href={`/dol/${m.party.abbr.toLowerCase()}`} className="flex items-center gap-2 font-semibold hover:text-brand">
                 <PartyDot abbr={m.party.abbr} />
                 {m.party.nameBn ?? m.party.abbr}
               </Link>
@@ -102,40 +122,71 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 {m.seat.nameBn}
               </Link>
             )}
-            {district && <span className="text-inksoft">{district.bn} জেলা</span>}
+            {district && (
+              <Link href={`/jela/${district.slug}`} className="text-inksoft hover:text-brand">{district.bn} জেলা</Link>
+            )}
           </div>
         </div>
       </header>
 
-      <div className="pt-9 pb-14 grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-10 items-start">
-        <div className="flex flex-col gap-10">
+      <div className="pt-8 pb-14 grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8 lg:gap-10 items-start">
+        <div className="flex flex-col gap-10 min-w-0">
           <section className="flex flex-col gap-4">
-            <h2 className="serif text-[24px] font-bold">পরিচিতি</h2>
-            {m.bioBn && (
-              <Card className="p-5">
-                <p className="text-[15.5px] leading-relaxed whitespace-pre-line">{m.bioBn}</p>
+            <H2>পরিচিতি</H2>
+            {m.summaryBn && (
+              <p className="text-[16px] sm:text-[17px] leading-relaxed text-inksoft">{m.summaryBn}</p>
+            )}
+            {paragraphs.length > 0 && (
+              <Card className="p-5 sm:p-6 flex flex-col gap-3">
+                {paragraphs.map((p, i) => (
+                  <p key={i} className="text-[15px] leading-[1.8] wrap-anywhere">{p}</p>
+                ))}
               </Card>
             )}
-            {bio.length ? (
-              <Card className="px-5 py-3 text-[15px]">
-                {bio.map((b) => <Row key={b.label} label={b.label}>{b.value}</Row>)}
+            {facts.length ? (
+              <Card className="px-5 py-2 text-[14.5px]">
+                {facts.map((b) => <Row key={b.label} label={b.label}>{b.value}</Row>)}
               </Card>
             ) : (
               <Empty title="পরিচিতির তথ্য সংসদের তথ্যভান্ডারে নেই।" />
             )}
           </section>
 
+          <section className="flex flex-col gap-4">
+            <H2 count={notices.length}>সংসদ সচিবালয়ের প্রজ্ঞাপন</H2>
+            {notices.length ? (
+              <Card className="divide-y divide-rulesoft">
+                {notices.map((n) => (
+                  <div key={n.id} className="px-5 py-3.5 flex items-start gap-4">
+                    <span className="grow min-w-0 flex flex-col gap-0.5">
+                      <span className="text-[14.5px] font-medium wrap-anywhere">{n.titleBn ?? n.titleEn}</span>
+                      <span className="text-[12.5px] text-muted">
+                        {dateBn(n.date) ?? 'তারিখ নেই'}{n.category ? ` · ${n.category}` : ''}
+                      </span>
+                    </span>
+                    {n.pdfUrl && <DocLink href={n.pdfUrl}>PDF</DocLink>}
+                  </div>
+                ))}
+              </Card>
+            ) : (
+              <Empty
+                title="এই সদস্য সম্পর্কে সংসদ সচিবালয়ের কোনো প্রজ্ঞাপন নেই।"
+                body="সংসদ সচিবালয় কোনো সদস্যের নামে প্রজ্ঞাপন বা সরকারি আদেশ প্রকাশ করলে তা প্রতিদিন এখানে যুক্ত হয়।"
+              />
+            )}
+          </section>
+
           {m.seat && !m.seat.reserved && (
             <section className="flex flex-col gap-4">
               <div className="flex justify-between items-baseline gap-4">
-                <h2 className="serif text-[24px] font-bold">আসন · {m.seat.nameBn}</h2>
-                <Link href={`/ason/${m.seat.slug}`} className="text-[14px] font-semibold text-brand hover:underline">
+                <H2>আসন · {m.seat.nameBn}</H2>
+                <Link href={`/ason/${m.seat.slug}`} className="text-[14px] font-semibold text-brand hover:underline whitespace-nowrap">
                   আসনের পাতা →
                 </Link>
               </div>
               {m.seat.boundaryBn ? (
                 <Card className="p-5 flex flex-col gap-2">
-                  <span className="text-[13px] font-bold tracking-[1px] text-muted">এলাকা</span>
+                  <span className="text-[12px] font-bold tracking-[1px] text-muted">এলাকা</span>
                   <p className="text-[15px] leading-relaxed">{m.seat.boundaryBn}</p>
                 </Card>
               ) : (
@@ -145,20 +196,21 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           )}
 
           <section className="flex flex-col gap-4">
-            <h2 className="serif text-[24px] font-bold">সংসদীয় কমিটি</h2>
+            <H2 count={onCommittees.length}>সংসদীয় কমিটি</H2>
             {onCommittees.length ? (
               <ul className="flex flex-col gap-2.5">
                 {onCommittees.map((c) => {
                   const role = c.members.find((x) => x.memberId === m.id)?.role;
                   return (
                     <li key={c.id}>
-                      <Link href={`/committee/${c.slug}`} className="bg-surface border border-rule rounded-xl px-5 py-4 flex items-center gap-4 hover:border-brand transition-colors">
-                        <span className="grow serif text-[16px] font-bold">{c.nameBn ?? c.nameEn}</span>
+                      <Link href={`/committee/${c.slug}`} className="bg-surface border border-rule rounded-card shadow-card px-5 py-4 flex items-center gap-4 hover:border-brand hover:shadow-lift transition-all">
+                        <span className="grow display text-[15.5px]">{c.nameBn ?? c.nameEn}</span>
                         {role && role !== 'Member' && (
                           <span className="shrink-0 px-2.5 py-1 rounded-full bg-brandsoft text-brand text-[12px] font-bold">
                             {role === 'Chairman' ? 'সভাপতি' : role}
                           </span>
                         )}
+                        <Icon name="arrow" size={16} className="text-muted" />
                       </Link>
                     </li>
                   );
@@ -173,7 +225,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           </section>
 
           <section className="flex flex-col gap-4">
-            <h2 className="serif text-[24px] font-bold">সংবাদ</h2>
+            <H2 count={memberNews.length}>সংবাদ</H2>
             {memberNews.length ? (
               <ul className="flex flex-col gap-3">
                 {memberNews.map((n) => <li key={n.id}><NewsCard n={n} /></li>)}
@@ -189,29 +241,29 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
 
         <aside className="flex flex-col gap-4">
           <Card className="p-5 flex flex-col gap-3">
-            <h2 className="serif text-[19px] font-bold">যোগাযোগ</h2>
+            <h2 className="display text-[18px] flex items-center gap-2"><Icon name="mail" size={17} className="text-brand" /> যোগাযোগ</h2>
             {m.email ? (
               <>
-                <p className="text-[14px] text-inksoft leading-relaxed">
-                  এটি সংসদ কর্তৃক প্রকাশিত দাপ্তরিক ঠিকানা। বার্তা সরাসরি সদস্যের কাছে যাবে, আমার এমপি
+                <p className="text-[13.5px] text-inksoft leading-relaxed">
+                  সংসদ কর্তৃক প্রকাশিত দাপ্তরিক ঠিকানা। বার্তা সরাসরি সদস্যের কাছে যাবে; আমার এমপি
                   তাঁর পক্ষে উত্তর দেয় না।
                 </p>
                 <a
                   href={`mailto:${m.email}`}
-                  className="break-all text-[14px] font-semibold text-brand hover:underline"
+                  className="inline-flex items-center justify-center h-11 rounded-lg bg-brand text-white text-[14px] font-semibold hover:bg-branddark transition-colors wrap-anywhere px-3"
                 >
                   {m.email}
                 </a>
               </>
             ) : (
-              <p className="text-[14px] text-inksoft leading-relaxed">
+              <p className="text-[13.5px] text-inksoft leading-relaxed">
                 সংসদের তথ্যভান্ডারে এই সদস্যের কোনো দাপ্তরিক ইমেইল প্রকাশ করা নেই।
                 {m.seat?.reserved && ' সংরক্ষিত আসনের সদস্যদের ক্ষেত্রে এটি সাধারণ।'}
               </p>
             )}
             {m.presentAddressBn && (
               <div className="flex flex-col gap-1 border-t border-rule pt-3">
-                <span className="text-[13px] font-bold text-muted">ঠিকানা</span>
+                <span className="text-[12px] font-bold tracking-[1px] text-muted">ঠিকানা</span>
                 <span className="text-[14px] leading-relaxed">{m.presentAddressBn}</span>
               </div>
             )}
@@ -220,15 +272,15 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           {partyMates.length > 0 && m.party && (
             <Card className="p-5 flex flex-col gap-3">
               <div className="flex justify-between items-baseline">
-                <h2 className="serif text-[19px] font-bold">একই দলের</h2>
+                <h2 className="display text-[18px]">একই দলের</h2>
                 <Link href={`/dol/${m.party.abbr.toLowerCase()}`} className="text-[13px] font-semibold text-brand hover:underline">
                   সব {bn(partyMates.length + 1)} →
                 </Link>
               </div>
-              <ul className="flex flex-col gap-2 text-[14.5px]">
+              <ul className="flex flex-col divide-y divide-rulesoft text-[14.5px]">
                 {partyMates.slice(0, 5).map((x) => (
                   <li key={x.id}>
-                    <Link href={`/mp/${x.slug}`} className="flex justify-between gap-3 hover:text-brand">
+                    <Link href={`/mp/${x.slug}`} className="flex justify-between gap-3 py-2 hover:text-brand">
                       <span className="truncate">{x.nameBn ?? x.nameEn}</span>
                       <span className="text-muted shrink-0">{x.seat?.nameBn}</span>
                     </Link>
@@ -238,13 +290,16 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             </Card>
           )}
 
-          {sameDistrict.length > 0 && (
+          {sameDistrict.length > 0 && district && (
             <Card className="p-5 flex flex-col gap-3">
-              <h2 className="serif text-[19px] font-bold">{district?.bn} জেলার অন্য আসন</h2>
-              <ul className="flex flex-col gap-2 text-[14.5px]">
+              <div className="flex justify-between items-baseline">
+                <h2 className="display text-[18px]">{district.bn} জেলার অন্য আসন</h2>
+                <Link href={`/jela/${district.slug}`} className="text-[13px] font-semibold text-brand hover:underline">জেলা →</Link>
+              </div>
+              <ul className="flex flex-col divide-y divide-rulesoft text-[14.5px]">
                 {sameDistrict.slice(0, 6).map((x) => (
                   <li key={x.id}>
-                    <Link href={`/ason/${x.seat?.slug}`} className="flex justify-between gap-3 hover:text-brand">
+                    <Link href={`/ason/${x.seat?.slug}`} className="flex justify-between gap-3 py-2 hover:text-brand">
                       <span>{x.seat?.nameBn}</span>
                       <span className="text-muted truncate max-w-[55%]">{x.nameBn ?? x.nameEn}</span>
                     </Link>
@@ -254,10 +309,11 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             </Card>
           )}
 
-          <div className="p-4 rounded-xl bg-brandsoft flex flex-col gap-2">
-            <span className="text-[14.5px] font-bold text-branddark">তথ্যসূত্র</span>
-            <span className="text-[13px] leading-relaxed text-brand">
-              বাংলাদেশ জাতীয় সংসদ। সর্বশেষ হালনাগাদ {dateBn(meta.syncedAt)}। ভুল দেখলে আমাদের জানান।
+          <div className="p-4 rounded-card bg-brandsoft flex gap-3">
+            <Icon name="info" size={18} className="text-brand mt-0.5" />
+            <span className="text-[13px] leading-relaxed text-branddark">
+              তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ। সংসদের তথ্যভান্ডার থেকে প্রতিদিন হালনাগাদ, সর্বশেষ {dateBn(meta.syncedAt)}।
+              ভুল দেখলে <Link href="/jogajog" className="font-semibold underline">আমাদের জানান</Link>।
             </span>
           </div>
         </aside>

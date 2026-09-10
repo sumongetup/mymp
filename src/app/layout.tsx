@@ -1,28 +1,19 @@
 import type { Metadata } from 'next';
-import { Anek_Bangla, Noto_Serif_Bengali } from 'next/font/google';
+import { Noto_Sans_Bengali } from 'next/font/google';
 import './globals.css';
 import { siteUrl } from '@/lib/site';
 
 /*
- * Anek Bangla is a Bengali-first family from Ek Type: weights 100-800 and
- * noticeably better-resolved conjuncts than a Latin family extended to Bengali,
- * which is what the site used before. Noto Serif Bengali stays for headings
- * because it is the only Bengali serif with a full weight range, and headings
- * here run from 15px to 58px.
- *
- * Bengali faces are large, so only the weights actually used are requested.
+ * Noto Sans Bengali, as one variable file covering every weight. It is the
+ * Bengali face of BBC Bangla, Google's own Bengali products and Android, so it
+ * is what most readers already see as "normal" professional Bengali, and the
+ * app will render the very same glyphs. Only the Bengali and Latin subsets are
+ * requested; Bengali faces are large.
  */
-const anek = Anek_Bangla({
-  variable: '--font-anek',
+const notoBn = Noto_Sans_Bengali({
+  variable: '--font-bn',
   subsets: ['bengali', 'latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-});
-
-const notoBn = Noto_Serif_Bengali({
-  variable: '--font-noto-bn',
-  subsets: ['bengali', 'latin'],
-  weight: ['600', '700', '800'],
+  weight: 'variable',
   display: 'swap',
 });
 
@@ -33,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s · আমার এমপি',
   },
   description:
-    'ত্রয়োদশ জাতীয় সংসদের ৩৪৯ জন সদস্য, ৩০০ আসন, দল ও সংসদীয় কমিটির তথ্য। সূত্র বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন।',
+    'ত্রয়োদশ জাতীয় সংসদের ৩৪৯ জন সদস্য, ৩০০ আসন, দল, সংসদীয় কমিটি ও অধিবেশনের তথ্য। সূত্র বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন।',
   openGraph: { type: 'website', locale: 'bn_BD', siteName: 'আমার এমপি' },
 };
 
@@ -44,7 +35,7 @@ export const metadata: Metadata = {
  */
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="bn" className={`${anek.variable} ${notoBn.variable} h-full`}>
+    <html lang="bn" className={`${notoBn.variable} h-full`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

@@ -19,7 +19,7 @@ export default function SetupPage() {
       <div className="w-full max-w-[720px] flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <span className="text-[12px] font-bold tracking-[1.5px] text-brand">অ্যাডমিন প্যানেল</span>
-          <h1 className="serif text-[30px] font-extrabold">ডেটাবেস এখনো যুক্ত হয়নি</h1>
+          <h1 className="display text-[30px] font-extrabold">ডেটাবেস এখনো যুক্ত হয়নি</h1>
           <p className="text-[15px] text-inksoft leading-relaxed">
             অ্যাডমিন প্যানেল চালু হতে একটি Supabase প্রজেক্ট লাগে। প্রথমে <code className="bg-sunk px-1.5 rounded">supabase/schema.sql</code> ফাইলটি
             Supabase-এর SQL Editor-এ চালান, তারপর নিচের পরিবেশ-ভ্যারিয়েবলগুলো Vercel-এ দিয়ে Redeploy করুন।

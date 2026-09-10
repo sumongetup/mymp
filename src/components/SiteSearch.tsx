@@ -79,7 +79,7 @@ export default function SiteSearch({
       <div
         className={
           compact
-            ? 'flex items-center gap-2 h-10 w-[190px] sm:w-[260px] px-3 rounded-[10px] border border-rule bg-paper'
+            ? 'flex items-center gap-2 h-10 w-[128px] sm:w-[260px] px-3 rounded-[10px] border border-rule bg-paper'
             : 'flex items-center gap-3 h-14 sm:h-[62px] px-4 sm:px-5 rounded-[14px] border-[1.5px] border-ink bg-surface'
         }
       >
@@ -102,7 +102,7 @@ export default function SiteSearch({
           aria-controls={listId}
           aria-autocomplete="list"
           placeholder={compact ? 'খুঁজুন…' : placeholder}
-          className={`grow bg-transparent outline-none placeholder:text-muted ${compact ? 'text-[14px]' : 'text-[16px] sm:text-[18px]'}`}
+          className={`grow min-w-0 w-full bg-transparent outline-none placeholder:text-muted ${compact ? 'text-[14px]' : 'text-[16px] sm:text-[18px]'}`}
         />
       </div>
 
@@ -110,7 +110,7 @@ export default function SiteSearch({
         <ul
           id={listId}
           role="listbox"
-          className="absolute z-30 mt-2 w-full min-w-[280px] max-h-[380px] overflow-y-auto rounded-xl border border-rule bg-surface shadow-lg py-1"
+          className="absolute z-30 mt-2 end-0 w-full min-w-[300px] max-h-[380px] overflow-y-auto rounded-xl border border-rule bg-surface shadow-lg py-1"
         >
           {hits.length === 0 && (
             <li className="px-4 py-3 text-[14px] text-muted">
@@ -126,7 +126,7 @@ export default function SiteSearch({
                 className={`w-full text-start px-4 py-2.5 flex items-baseline gap-3 ${i === active ? 'bg-brandsoft' : ''}`}
               >
                 <span className="grow min-w-0">
-                  <span className="serif block text-[15px] font-bold truncate">{h.bn || h.en}</span>
+                  <span className="display block text-[15px] font-bold truncate">{h.bn || h.en}</span>
                   {h.sub && <span className="block text-[12.5px] text-muted truncate">{h.sub}</span>}
                 </span>
                 <span className="shrink-0 text-[11px] font-bold text-muted">{TYPE_LABEL[h.type] ?? ''}</span>

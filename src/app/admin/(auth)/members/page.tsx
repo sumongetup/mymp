@@ -52,7 +52,7 @@ export default async function MembersAdmin({ searchParams }: { searchParams: Pro
             <tr key={m.id}>
               <Td className="whitespace-nowrap">{m.seat?.nameBn ?? '—'}</Td>
               <Td>
-                <span className="serif font-bold">{m.nameBn}</span>
+                <span className="display font-bold">{m.nameBn}</span>
                 <span className="block text-[12.5px] text-muted">{m.nameEn}</span>
               </Td>
               <Td className="whitespace-nowrap">{m.party?.abbr ?? '—'}</Td>

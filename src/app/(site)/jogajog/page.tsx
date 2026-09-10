@@ -21,7 +21,7 @@ export default function ContactPage() {
 
       <div className="pt-8 pb-14 flex flex-col gap-6 max-w-[760px]">
         <Card className="p-6 flex flex-col gap-3">
-          <h2 className="serif text-[21px] font-bold">কোনো সংসদ সদস্যের সঙ্গে যোগাযোগ</h2>
+          <h2 className="display text-[21px] font-bold">কোনো সংসদ সদস্যের সঙ্গে যোগাযোগ</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
             এই সাইট কোনো সদস্যের পক্ষে বার্তা নেয় না। প্রত্যেক সদস্যের পাতায় সংসদ কর্তৃক প্রকাশিত
             দাপ্তরিক ইমেইল ও ঠিকানা দেওয়া আছে, সরাসরি সেখানে লিখুন।{' '}
@@ -30,7 +30,7 @@ export default function ContactPage() {
         </Card>
 
         <Card className="p-6 flex flex-col gap-3">
-          <h2 className="serif text-[21px] font-bold">ভুল তথ্য জানাতে</h2>
+          <h2 className="display text-[21px] font-bold">ভুল তথ্য জানাতে</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
             সাইটের কোড ও তথ্য উন্মুক্ত। ভুল বা অসংগতি পেলে GitHub-এ একটি ইস্যু খুলুন, তাতে কোন পাতা এবং
             কী ভুল তা লিখুন। প্রতিটি রিপোর্ট সূত্র মিলিয়ে যাচাই করা হয়।

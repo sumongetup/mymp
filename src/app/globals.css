@@ -1,22 +1,32 @@
 @import "tailwindcss";
 
-/* MY MP — "civic ledger": newspaper-calm paper tone, parliamentary green,
-   Bengali serif for headings and a humanist sans for everything else. */
+/*
+ * MY MP design tokens.
+ *
+ * One Bengali family, Noto Sans Bengali, for everything: it is the face BBC
+ * Bangla, Google's Bengali products and Android itself use, so the site reads
+ * as the same professional voice on every device, and the future app inherits
+ * it for free. Headings take the same family at a heavier weight through
+ * `.display`, which keeps a single switch if the display face ever changes.
+ */
 
 @theme {
-  --color-paper: #f6f4ee;
-  --color-surface: #fffdf9;
-  --color-sunk: #eceee9;
-  --color-ink: #1b1f1c;
-  --color-inksoft: #4a4f4a;
-  --color-muted: #7a7f78;
-  --color-rule: #e2ded2;
-  --color-rulesoft: #eeebe2;
-  --color-brand: #146b4f;
-  --color-branddark: #0d4d38;
-  --color-brandsoft: #e6f1ec;
+  --color-paper: #f4f5f1;
+  --color-surface: #ffffff;
+  --color-sunk: #eceeea;
+  --color-ink: #17201b;
+  --color-inksoft: #465049;
+  --color-muted: #6c766f;
+  --color-rule: #dfe3dd;
+  --color-rulesoft: #eaede8;
+  --color-brand: #0f6a4b;
+  --color-branddark: #0a4d36;
+  --color-brandsoft: #e3f1e9;
+  --color-brandring: #bfe1cf;
   --color-warn: #8a6212;
-  --color-warnsoft: #f7efdc;
+  --color-warnsoft: #f8f0dc;
+  --color-danger: #a8323d;
+  --color-dangersoft: #fbe9ea;
 
   /* Party colours, checked for colour-blind separation before use. */
   --color-pbnp: #1f7a4f;
@@ -25,23 +35,34 @@
   --color-pncp: #e0641f;
   --color-pother: #9a5fc7;
 
-  --font-sans: var(--font-anek), "Segoe UI", system-ui, sans-serif;
-  --font-serif: var(--font-noto-bn), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-bn), "Noto Sans Bengali", "Segoe UI", system-ui, sans-serif;
+  --font-display: var(--font-bn), "Noto Sans Bengali", "Segoe UI", system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgba(23, 32, 27, 0.05), 0 1px 1px rgba(23, 32, 27, 0.03);
+  --shadow-lift: 0 10px 28px -14px rgba(23, 32, 27, 0.22), 0 2px 6px rgba(23, 32, 27, 0.06);
+  --shadow-pop: 0 18px 44px -18px rgba(23, 32, 27, 0.3), 0 4px 12px rgba(23, 32, 27, 0.08);
+
+  --radius-card: 14px;
 }
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 76px;
 }
 
 body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-.serif {
-  font-family: var(--font-serif);
+/* Headings and numbers that carry a page. Same family, heavier hand. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
 }
 
 .tnum {
@@ -57,7 +78,20 @@ a {
 :focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 2px;
-  border-radius: 3px;
+  border-radius: 4px;
+}
+
+/* Long Bengali words in narrow cards must wrap, never overflow the screen. */
+.wrap-anywhere {
+  overflow-wrap: anywhere;
+}
+
+/* Hide the scrollbar on horizontal chip rows without losing scrolling. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

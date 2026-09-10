@@ -37,12 +37,12 @@ export default function PartiesPage() {
                 style={{ background: partyColor(p.abbr) }}
               />
               <span className="grow min-w-0 flex flex-col gap-1">
-                <span className="serif text-[19px] font-bold leading-snug">{p.nameBn ?? p.abbr}</span>
+                <span className="display text-[19px] font-bold leading-snug">{p.nameBn ?? p.abbr}</span>
                 <span className="text-[13.5px] text-muted">{p.nameEn}</span>
               </span>
               <span className="flex gap-6 sm:gap-8 shrink-0">
                 <span className="flex flex-col">
-                  <span className="serif tnum text-[24px] font-extrabold leading-none">{bn(p.seats)}</span>
+                  <span className="display tnum text-[24px] font-extrabold leading-none">{bn(p.seats)}</span>
                   <span className="text-[12px] text-muted mt-1">মোট আসন</span>
                 </span>
                 <span className="flex flex-col">

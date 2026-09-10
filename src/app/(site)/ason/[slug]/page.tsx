@@ -54,7 +54,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
           <span className="text-[13px] font-bold tracking-[1.5px] text-brand">
             ত্রয়োদশ জাতীয় সংসদ
           </span>
-          <h1 className="serif text-[38px] sm:text-[50px] leading-[1.08] font-extrabold">
+          <h1 className="display text-[38px] sm:text-[50px] leading-[1.08] font-extrabold">
             {seat.nameBn}
           </h1>
           <div className="flex flex-wrap items-center gap-3 text-[16px] text-inksoft">
@@ -81,7 +81,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
       <div className="pt-8 pb-14 grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-10 items-start">
         <div className="flex flex-col gap-8">
           <section className="flex flex-col gap-4">
-            <h2 className="serif text-[24px] font-bold">বর্তমান সংসদ সদস্য</h2>
+            <h2 className="display text-[24px] font-bold">বর্তমান সংসদ সদস্য</h2>
             {member ? (
               <Link
                 href={`/mp/${member.slug}`}
@@ -90,7 +90,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
               >
                 <MemberPhoto src={member.photoUrl} alt="" initial={initial(member)} size={88} />
                 <span className="grow flex flex-col gap-2">
-                  <span className="serif text-[24px] sm:text-[28px] font-extrabold leading-tight">
+                  <span className="display text-[24px] sm:text-[28px] font-extrabold leading-tight">
                     {member.nameBn ?? member.nameEn}
                   </span>
                   <span className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[15px] text-inksoft">
@@ -110,7 +110,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
 
           {seat.boundaryBn && (
             <section className="flex flex-col gap-4">
-              <h2 className="serif text-[24px] font-bold">আসনের এলাকা</h2>
+              <h2 className="display text-[24px] font-bold">আসনের এলাকা</h2>
               <Card className="p-5">
                 <p className="text-[15.5px] leading-relaxed">{seat.boundaryBn}</p>
               </Card>
@@ -118,7 +118,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
           )}
 
           <section className="flex flex-col gap-4">
-            <h2 className="serif text-[24px] font-bold">২০২৬ নির্বাচনের ফল</h2>
+            <h2 className="display text-[24px] font-bold">২০২৬ নির্বাচনের ফল</h2>
             <Empty
               title="এই আসনের প্রার্থী তালিকা ও ভোটের সংখ্যা এখনো যোগ করা হয়নি।"
               body="নির্বাচন কমিশনের গেজেট থেকে প্রার্থী, প্রতীক ও প্রাপ্ত ভোট যোগ করা হবে। যাচাই করা সংখ্যা ছাড়া কিছু দেখানো হবে না।"
@@ -128,7 +128,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
 
         <aside className="flex flex-col gap-4">
           <Card className="p-5 flex flex-col gap-3">
-            <h2 className="serif text-[19px] font-bold">আসন তথ্য</h2>
+            <h2 className="display text-[19px] font-bold">আসন তথ্য</h2>
             <div className="flex flex-col gap-2 text-[15px]">
               <div className="flex justify-between gap-3 py-1.5 border-b border-rulesoft">
                 <span className="text-muted">আসন নম্বর</span>
@@ -149,7 +149,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
 
           {neighbours.length > 0 && (
             <Card className="p-5 flex flex-col gap-3">
-              <h2 className="serif text-[19px] font-bold">{district?.bn} জেলার আসন</h2>
+              <h2 className="display text-[19px] font-bold">{district?.bn} জেলার আসন</h2>
               <ul className="flex flex-col gap-2 text-[15px]">
                 {neighbours.map((s) => {
                   const holder = s.memberId ? getMemberById(s.memberId) : undefined;

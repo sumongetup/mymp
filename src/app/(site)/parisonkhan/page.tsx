@@ -64,7 +64,7 @@ export default function StatisticsPage() {
       <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
         <Card className="p-6 flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <h2 className="serif text-[21px] font-bold">দলভিত্তিক আসন</h2>
+            <h2 className="display text-[21px] font-bold">দলভিত্তিক আসন</h2>
             <p className="text-[13px] text-muted">{bn(s.total)}টি আসনের সবগুলো, সংরক্ষিত আসনসহ</p>
           </div>
           <CompositionBar parties={parties} total={s.total} majority={s.majority} />
@@ -76,7 +76,7 @@ export default function StatisticsPage() {
 
         <Card className="p-6 flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <h2 className="serif text-[21px] font-bold">বয়স</h2>
+            <h2 className="display text-[21px] font-bold">বয়স</h2>
             <p className="text-[13px] text-muted">{bn(s.total)} জনেরই জন্মতারিখ পাওয়া গেছে</p>
           </div>
           <Bars rows={s.ageBands} />
@@ -106,7 +106,7 @@ export default function StatisticsPage() {
 
         <Card className="p-6 flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <h2 className="serif text-[21px] font-bold">নারী প্রতিনিধিত্ব</h2>
+            <h2 className="display text-[21px] font-bold">নারী প্রতিনিধিত্ব</h2>
             <p className="text-[13px] text-muted">{bn(s.women)} জন নারী, {bn(s.total)} জনের মধ্যে</p>
           </div>
           <div
@@ -123,11 +123,11 @@ export default function StatisticsPage() {
           </div>
           <div className="flex gap-4">
             <div className="grow p-4 bg-paper rounded-lg flex flex-col gap-1">
-              <span className="serif tnum text-[26px] font-extrabold text-brand leading-none">{bn(s.womenTerritorial)}</span>
+              <span className="display tnum text-[26px] font-extrabold text-brand leading-none">{bn(s.womenTerritorial)}</span>
               <span className="text-[13px] text-inksoft leading-snug">সাধারণ আসনে নির্বাচিত<br />{bn(s.territorial)} জনের মধ্যে</span>
             </div>
             <div className="grow p-4 bg-paper rounded-lg flex flex-col gap-1">
-              <span className="serif tnum text-[26px] font-extrabold text-brand leading-none">{bn(s.womenReserved)}</span>
+              <span className="display tnum text-[26px] font-extrabold text-brand leading-none">{bn(s.womenReserved)}</span>
               <span className="text-[13px] text-inksoft leading-snug">সংরক্ষিত আসনে<br />{bn(s.reserved)} জনের মধ্যে</span>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function StatisticsPage() {
 
         <Card className="p-6 flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <h2 className="serif text-[21px] font-bold">পেশা</h2>
+            <h2 className="display text-[21px] font-bold">পেশা</h2>
             <p className="text-[13px] text-muted">
               {bn(s.total)} জনের মধ্যে {bn(s.withProfession)} জনের পেশা লিপিবদ্ধ
             </p>
@@ -153,7 +153,7 @@ export default function StatisticsPage() {
 
       <section className="mt-10 flex flex-col gap-4">
         <div className="flex flex-col gap-1">
-          <h2 className="serif text-[24px] font-bold">ভোটার ও ভোটকেন্দ্র</h2>
+          <h2 className="display text-[24px] font-bold">ভোটার ও ভোটকেন্দ্র</h2>
           <p className="text-[13.5px] text-muted">
             সারা দেশের হিসাব, নির্বাচন কমিশনের প্রকাশিত তথ্য অনুযায়ী। আসনভিত্তিক ভোটার সংখ্যা এখনো যোগ করা হয়নি।
           </p>

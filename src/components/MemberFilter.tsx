@@ -158,7 +158,7 @@ export default function MemberFilter({
               >
                 <MemberPhoto src={m.photoUrl} alt="" initial={initialOf(m)} size={44} />
                 <span className="grow min-w-0 flex flex-col gap-0.5">
-                  <span className="serif text-[15.5px] font-bold truncate">{m.nameBn || m.nameEn}</span>
+                  <span className="display text-[15.5px] font-bold truncate">{m.nameBn || m.nameEn}</span>
                   <span className="text-[13px] text-muted truncate">
                     {[m.seatBn, m.partyBn ?? m.party].filter(Boolean).join(' · ')}
                   </span>

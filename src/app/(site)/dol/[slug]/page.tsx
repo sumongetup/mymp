@@ -53,7 +53,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
       <div className="pt-8 pb-14 flex flex-col gap-9">
         {territorial.length > 0 && (
           <section className="flex flex-col gap-4">
-            <h2 className="serif text-[24px] font-bold">
+            <h2 className="display text-[24px] font-bold">
               আসন থেকে নির্বাচিত <span className="text-muted font-semibold text-[19px]">({bn(territorial.length)})</span>
             </h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
@@ -64,7 +64,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
 
         {reserved.length > 0 && (
           <section className="flex flex-col gap-4">
-            <h2 className="serif text-[24px] font-bold">
+            <h2 className="display text-[24px] font-bold">
               সংরক্ষিত নারী আসন <span className="text-muted font-semibold text-[19px]">({bn(reserved.length)})</span>
             </h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">

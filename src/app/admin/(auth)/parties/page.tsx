@@ -18,7 +18,7 @@ export default async function PartiesAdmin() {
         {parties.map((p) => (
           <tr key={p.abbr}>
             <Td>
-              <span className="serif font-bold">{p.nameBn}</span>
+              <span className="display font-bold">{p.nameBn}</span>
               <span className="block text-[12.5px] text-muted">{p.nameEn}</span>
             </Td>
             <Td className="whitespace-nowrap">{p.abbr}</Td>

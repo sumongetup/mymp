@@ -35,7 +35,7 @@ export default function NewsPage() {
         )}
 
         <Card className="p-6 flex flex-col gap-4">
-          <h2 className="serif text-[20px] font-bold">সংবাদ কীভাবে যুক্ত হয়</h2>
+          <h2 className="display text-[20px] font-bold">সংবাদ কীভাবে যুক্ত হয়</h2>
           <ol className="flex flex-col gap-3 text-[15px] leading-relaxed text-inksoft">
             <li className="flex gap-3">
               <span className="shrink-0 w-6 h-6 rounded-full bg-brandsoft text-brand text-[12px] font-bold grid place-items-center tnum">১</span>

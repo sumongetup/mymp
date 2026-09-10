@@ -24,7 +24,7 @@ export default async function CommitteesAdmin() {
         {committees.map((c) => (
           <tr key={c.id}>
             <Td>
-              <span className="serif font-bold">{c.nameBn}</span>
+              <span className="display font-bold">{c.nameBn}</span>
               <span className="block text-[12.5px] text-muted">{c.nameEn}</span>
             </Td>
             <Td className="text-[13px] text-muted">{c.type}</Td>

@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { adminConfigured, adminIdentity, currentUser } from '@/lib/admin/auth';
 import { signOut } from '@/app/admin/actions';
+import { Mark } from '@/components/Brand';
 import LoginForm from './LoginForm';
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<{ denied?: string }> }) {
@@ -15,15 +17,18 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
   const user = await currentUser();
 
   return (
-    <div className="grow flex items-center justify-center px-5 py-16">
+    <div className="grow flex items-center justify-center px-5 py-12 bg-[radial-gradient(ellipse_at_top,_var(--color-brandsoft),_var(--color-paper)_60%)]">
       <div className="w-full max-w-[400px] flex flex-col gap-6">
-        <div className="flex flex-col gap-1.5">
-          <span className="text-[12px] font-bold tracking-[1.5px] text-brand">অ্যাডমিন প্যানেল</span>
-          <h1 className="serif text-[30px] font-extrabold">লগইন</h1>
+        <div className="flex items-center gap-3">
+          <Mark size={40} />
+          <span className="flex flex-col leading-none gap-1">
+            <span className="display text-[22px] text-brand">আমার এমপি</span>
+            <span className="text-[10px] font-bold tracking-[2.2px] text-muted">ADMIN PANEL</span>
+          </span>
         </div>
 
         {user ? (
-          <div className="bg-surface border border-rule rounded-xl p-5 flex flex-col gap-3">
+          <div className="bg-surface border border-rule rounded-card shadow-lift p-6 flex flex-col gap-4">
             <p className="text-[14.5px] leading-relaxed">
               <strong>{user.email}</strong> হিসেবে লগইন আছেন, কিন্তু এই ঠিকানাটি অ্যাডমিন তালিকায় নেই।
               একজন সুপার অ্যাডমিন আপনাকে যোগ করলে ঢুকতে পারবেন।
@@ -44,6 +49,10 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
             <LoginForm />
           </>
         )}
+
+        <p className="text-center text-[13px] text-muted">
+          <Link href="/" className="hover:text-brand">← সাইটে ফিরে যান</Link>
+        </p>
       </div>
     </div>
   );

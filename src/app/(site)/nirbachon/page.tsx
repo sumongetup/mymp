@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
+import { parliament } from '@/lib/activity';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/nirbachon' },
@@ -38,9 +39,23 @@ export default function ElectionPage() {
         }
       />
 
-      <Card className="mt-8 p-6 flex flex-col gap-4">
+      <Card className="mt-8 px-5 sm:px-6 py-5 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        {([
+          ['নির্বাচন', parliament.electionDate],
+          ['গেজেট', parliament.gazetteDate],
+          ['শপথ', parliament.oathDate],
+          ['মেয়াদ শেষ', parliament.endDate],
+        ] as [string, string | null][]).map(([label, value]) => (
+          <div key={label} className="flex flex-col gap-0.5">
+            <span className="text-[12.5px] text-muted">{label}</span>
+            <span className="text-[15.5px] font-semibold">{dateBn(value) ?? '—'}</span>
+          </div>
+        ))}
+      </Card>
+
+      <Card className="mt-4 p-6 flex flex-col gap-4">
         <div className="flex flex-col gap-1">
-          <h2 className="serif text-[21px] font-bold">সংসদের গঠন</h2>
+          <h2 className="display text-[21px] font-bold">সংসদের গঠন</h2>
           <p className="text-[13px] text-muted">
             সংরক্ষিত আসনসহ মোট {bn(s.total)}টি আসন। শুধু নির্বাচনের ফল আলাদা, নিচে দেখুন।
           </p>
@@ -64,26 +79,26 @@ export default function ElectionPage() {
 
       <Card className="mt-4 p-6 flex flex-col gap-4">
         <div className="flex flex-col gap-1">
-          <h2 className="serif text-[21px] font-bold">ভোটার ও ভোটকেন্দ্র</h2>
+          <h2 className="display text-[21px] font-bold">ভোটার ও ভোটকেন্দ্র</h2>
           <p className="text-[13px] text-muted">
             সারা দেশের হিসাব, নির্বাচন কমিশনের প্রকাশিত তথ্য অনুযায়ী
           </p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="flex flex-col gap-1">
-            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.registeredVoters)}</span>
+            <span className="display tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.registeredVoters)}</span>
             <span className="text-[13px] text-muted">মোট ভোটার</span>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.maleVoters)}</span>
+            <span className="display tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.maleVoters)}</span>
             <span className="text-[13px] text-muted">পুরুষ ভোটার</span>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.femaleVoters)}</span>
+            <span className="display tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.femaleVoters)}</span>
             <span className="text-[13px] text-muted">নারী ভোটার</span>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="serif tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.pollingCentres)}</span>
+            <span className="display tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.pollingCentres)}</span>
             <span className="text-[13px] text-muted">ভোটকেন্দ্র</span>
           </div>
         </div>
@@ -101,14 +116,14 @@ export default function ElectionPage() {
 
       <section className="mt-10 pb-14 flex flex-col gap-5">
         <div className="flex items-baseline justify-between gap-4">
-          <h2 className="serif text-[26px] font-bold">জেলা অনুযায়ী আসন</h2>
+          <h2 className="display text-[26px] font-bold">জেলা অনুযায়ী আসন</h2>
           <span className="text-[14px] text-muted tnum">{bn(districts.length)} জেলা</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {districts.map((d) => (
             <Card key={d.bn} className="p-5 flex flex-col gap-3">
               <div className="flex items-baseline justify-between gap-3">
-                <h3 className="serif text-[18px] font-bold">{d.bn}</h3>
+                <h3 className="display text-[18px] font-bold">{d.bn}</h3>
                 <span className="text-[13px] text-muted tnum">{bn(d.list.length)} আসন</span>
               </div>
               <ul className="flex flex-col gap-1.5 text-[14.5px]">

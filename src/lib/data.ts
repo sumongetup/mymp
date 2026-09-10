@@ -50,8 +50,12 @@ export interface Member {
   permanentAddressBn: string | null;
   email: string | null;
   hasMobile: boolean;
-  /** Only ever set by an admin override; the parliament API has no biography field. */
+  /** Written by the source for the Speaker and Deputy Speaker only; anyone else only through an admin override. */
   bioBn: string | null;
+  /** A one-paragraph summary the source provides for the presiding officers. */
+  summaryBn: string | null;
+  /** This parliament: oath date to the scheduled end of the term. */
+  term: { start: string | null; end: string | null };
   party: { abbr: string; nameBn: string | null; nameEn: string | null } | null;
   seat: Seat | null;
   offices: string[];

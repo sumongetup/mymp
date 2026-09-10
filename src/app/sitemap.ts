@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { members, seats, parties, committees, meta } from '@/lib/data';
+import { members, seats, parties, committees, meta, districtOf } from '@/lib/data';
 import { siteUrl } from '@/lib/site';
 
 /**
@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url('/'), lastModified: synced, changeFrequency: 'daily', priority: 1 },
     { url: url('/mp'), lastModified: synced, changeFrequency: 'daily', priority: 0.9 },
     { url: url('/nirbachon'), lastModified: synced, changeFrequency: 'weekly', priority: 0.9 },
+    { url: url('/odhibeshon'), lastModified: synced, changeFrequency: 'daily', priority: 0.8 },
     { url: url('/dol'), lastModified: synced, changeFrequency: 'weekly', priority: 0.8 },
     { url: url('/committee'), lastModified: synced, changeFrequency: 'weekly', priority: 0.8 },
     { url: url('/parisonkhan'), lastModified: synced, changeFrequency: 'weekly', priority: 0.8 },
@@ -22,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url('/jogajog'), lastModified: synced, changeFrequency: 'monthly', priority: 0.4 },
     { url: url('/gopaniyota'), lastModified: synced, changeFrequency: 'yearly', priority: 0.2 },
   ];
+
+  const districtSlugs = [...new Set(seats.map((s) => districtOf(s)?.slug).filter((x): x is string => !!x))];
 
   return [
     ...fixed,
@@ -33,6 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...seats.map((s) => ({
       url: url(`/ason/${s.slug}`),
+      lastModified: synced,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+    ...districtSlugs.map((d) => ({
+      url: url(`/jela/${d}`),
       lastModified: synced,
       changeFrequency: 'weekly' as const,
       priority: 0.7,

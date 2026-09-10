@@ -132,6 +132,37 @@ async function getAllPages(path, limit = 100) {
 }
 
 const clean = (v) => (typeof v === 'string' ? v.trim() : v) || null;
+
+/** Loose Bengali key for matching a person's name inside a notice title. */
+const fold = (v) =>
+  String(v ?? '')
+    .normalize('NFC')
+    .replace(/[\u200c\u200d]/g, '')
+    .replace(/মোঃ|মো\.|মোহাম্মদ|মুহাম্মদ|মুহম্মদ/g, 'মো')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim()
+    .toLowerCase();
+
+/** The Speaker biographies arrive as HTML; the site renders plain paragraphs. */
+const htmlToText = (html) =>
+  clean(
+    String(html ?? '')
+      .replace(/<\/p>|<br\s*\/?>/gi, '\n')
+      .replace(/<[^>]+>/g, '')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;|&apos;/g, "'")
+      .replace(/[ \t]+\n/g, '\n')
+      .replace(/\n{3,}/g, '\n\n'),
+  );
+
+const BN_TO_LATIN = (v) => String(v).replace(/[০-৯]/g, (d) => '০১২৩৪৫৬৭৮৯'.indexOf(d));
+/** "জনাব X, ১১৮ ভোলা-৪", "৩১২ মহিলা আসন-১২" and "(293 Chattagram-16)" all carry the seat number. */
+const seatInTitle = (title) => {
+  const m = String(title ?? '').match(/(?:^|[\s,(])([০-৯\d]{1,3})\s+(?:মহিলা\s+আসন|[^\s,()]+)-[০-৯\d]+/u);
+  return m ? Number(BN_TO_LATIN(m[1])) : null;
+};
 const slugify = (s) =>
   String(s).toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
@@ -140,6 +171,17 @@ async function main() {
 
   const rawMembers = await getAllPages(`/api/members?parliamentNo=${PARLIAMENT}`);
   const rawCommittees = await getAllPages('/api/committees', 50);
+
+  // What the House is doing, from the same source: sittings, circulars, notices,
+  // the presiding officers and the parliament's own dates. Each is optional, so a
+  // gap in one of them never blocks the member data.
+  const optional = async (label, fn) => {
+    try { return await fn(); } catch (err) { console.warn(`  ${label} skipped: ${err.message}`); return null; }
+  };
+  const rawSessions = (await optional('sessions', () => getAllPages(`/api/sessions?parliamentId=${PARLIAMENT}`, 50))) ?? [];
+  const rawNotices = (await optional('notices', () => getAllPages('/api/notices', 100))) ?? [];
+  const rawSpeakers = (await optional('speakers', () => getAllPages('/api/speakers', 100))) ?? [];
+  const rawParliaments = (await optional('parliaments', () => getJson('/api/parliaments'))) ?? [];
 
   // ---- members ----
   // Two pairs of sitting members share a name, so the seat has to disambiguate the
@@ -174,7 +216,11 @@ async function main() {
       permanentAddressBn: clean(m.permanentAddressBng),
       email: clean(m.email),
       hasMobile: !!m.mobile, // the number itself is deliberately not stored
-      bioBn: null, // only ever set through an admin override
+      // The source carries a written biography only for the Speaker and Deputy
+      // Speaker. Everyone else's stays null unless an admin writes one.
+      bioBn: htmlToText(m.speakerDetailsBioBn),
+      summaryBn: clean(m.speakerHeroSummaryBn),
+      term: { start: clean(term.startDate), end: clean(term.endDate) },
       party: p.abbreviation ? { abbr: p.abbreviation, nameBn: clean(p.nameBng), nameEn: clean(p.nameEng) } : null,
       seat: seatNo
         ? {
@@ -264,6 +310,57 @@ async function main() {
     .map((m) => ({ ...m.seat, memberId: m.id }))
     .sort((a, b) => a.no - b.no);
 
+  // ---- parliamentary activity ----
+  const p13 = (Array.isArray(rawParliaments) ? rawParliaments : []).find((x) => x.parliamentNo === PARLIAMENT);
+  const parliament = p13
+    ? { no: PARLIAMENT, electionDate: clean(p13.electionDate), oathDate: clean(p13.oathDate), gazetteDate: clean(p13.gazetteDate), endDate: clean(p13.parliamentLastDate) }
+    : { no: PARLIAMENT, electionDate: null, oathDate: null, gazetteDate: null, endDate: null };
+
+  const byFold = new Map(members.map((m) => [fold(m.nameBn), m.id]));
+  const bySeatNo = new Map(members.filter((m) => m.seat).map((m) => [m.seat.no, m.id]));
+  const memberByName = (name) => byFold.get(fold(name)) ?? null;
+
+  const speakers = rawSpeakers
+    .filter((x) => x.isCurrent && x.parliamentNo === PARLIAMENT)
+    .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+    .map((x) => ({ role: x.role, nameBn: clean(x.nameBn), nameEn: clean(x.nameEn), tenureBn: clean(x.tenureTextBn), memberId: memberByName(x.nameBn) }));
+
+  const sessions = rawSessions
+    .map((x) => ({
+      id: String(x.id), titleBn: clean(x.titleBn), titleEn: clean(x.titleEn),
+      startDate: clean(x.startDate), endDate: clean(x.endDate),
+      circulars: (x.poripotras ?? []).map((c) => ({ id: String(c.id), no: c.poripotraNo ?? null, titleBn: clean(c.titleBn), date: clean(c.date), pdfUrl: clean(c.pdfUrl) })),
+      sittings: (x.poripotras ?? []).flatMap((c) => c.orderOfTheDays ?? [])
+        .map((o) => ({ id: String(o.id), titleBn: clean(o.titleBn), date: clean(o.date), pdfUrl: clean(o.pdfUrl) }))
+        .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? '')),
+    }))
+    .sort((a, b) => (b.startDate ?? '').localeCompare(a.startDate ?? ''));
+
+  // Only notices about the House and its members reach the site. Staff office
+  // orders, tenders and downloads are the secretariat's business, not the public's.
+  const finalCommitteeId = new Map(records.map((r) => [r.id, grouped.get(r.slug)?.id ?? r.id]));
+  const notices = rawNotices
+    .map((n) => {
+      const seatNo = n.noticeType === 'NOC_GO' ? seatInTitle(n.titleBn) ?? seatInTitle(n.titleEn) : null;
+      let memberId = seatNo ? bySeatNo.get(seatNo) ?? null : null;
+      if (!memberId && n.noticeType === 'NOC_GO') {
+        const t = fold(n.titleBn);
+        for (const [key, id] of byFold) if (key.length > 6 && t.includes(key)) { memberId = id; break; }
+      }
+      const committeeId = n.committeeId ? finalCommitteeId.get(String(n.committeeId)) ?? null : null;
+      const general = n.noticeType === 'GENERAL' && n.category === 'notification';
+      if (!memberId && !committeeId && !general) return null;
+      return {
+        id: String(n.id), type: n.noticeType, category: clean(n.category), date: clean(n.date),
+        titleBn: clean(n.titleBn), titleEn: clean(n.titleEn), pdfUrl: clean(n.pdfUrl),
+        memberId, committeeId,
+      };
+    })
+    .filter(Boolean)
+    .sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
+
+  console.log(`  activity: ${sessions.length} sessions, ${sessions.reduce((n, x) => n + x.sittings.length, 0)} sittings, ${notices.length} notices kept of ${rawNotices.length} (${notices.filter((n) => n.memberId).length} to members, ${notices.filter((n) => n.committeeId).length} to committees), ${speakers.length} presiding officers`);
+
   // ---- admin overrides and hidden entities ----
   // Applied AFTER everything above so a hand edit always wins over the source,
   // and re-applied on every sync so the source can never quietly undo it.
@@ -297,6 +394,9 @@ async function main() {
       members.splice(0, members.length, ...members.filter((m) => !hiddenMembers.has(m.id)));
       committees.splice(0, committees.length, ...committees.filter((c) => !hiddenCommittees.has(c.id)));
       for (const c of committees) c.members = c.members.filter((x) => !hiddenMembers.has(x.memberId));
+      for (const n of notices) if (n.memberId && hiddenMembers.has(n.memberId)) n.memberId = null;
+      for (const s of speakers) if (s.memberId && hiddenMembers.has(s.memberId)) s.memberId = null;
+      notices.splice(0, notices.length, ...notices.filter((n) => n.memberId || (n.committeeId && !hiddenCommittees.has(n.committeeId)) || (!n.committeeId && n.type === 'GENERAL')));
       hiddenApplied = hiddenMembers.size + hiddenCommittees.size;
       adminNote = `applied ${overridesApplied} overrides, ${hiddenApplied} hidden`;
       console.log(`  admin: ${adminNote}`);
@@ -319,8 +419,11 @@ async function main() {
       parties: parties.length,
       committees: committees.length,
       committeesCurrent: committees.filter((c) => c.rosterCurrent).length,
+      sittings: sessions.reduce((n, x) => n + x.sittings.length, 0),
+      notices: notices.length,
     },
   };
+  const activity = { parliament, speakers, sessions, notices };
 
   // ---- search index ----
   // Names only, in both scripts. Match keys are built in the browser, which halves
@@ -342,7 +445,7 @@ async function main() {
   ];
 
   await mkdir(OUT, { recursive: true });
-  for (const [name, value] of Object.entries({ members, committees, parties, seats, meta })) {
+  for (const [name, value] of Object.entries({ members, committees, parties, seats, meta, activity })) {
     await writeFile(join(OUT, `${name}.json`), JSON.stringify(value, null, 1), 'utf8');
   }
   await mkdir(join(OUT, '..', 'public'), { recursive: true });

@@ -32,7 +32,7 @@ export default function CommitteesPage() {
 
       <div className="pt-8 pb-14 flex flex-col gap-8">
         <section className="flex flex-col gap-4">
-          <h2 className="serif text-[24px] font-bold">
+          <h2 className="display text-[24px] font-bold">
             হালনাগাদ কমিটি <span className="text-muted font-semibold text-[19px]">({bn(current.length)})</span>
           </h2>
           <ul className="flex flex-col gap-3">
@@ -47,7 +47,7 @@ export default function CommitteesPage() {
                   >
                     <span className="grow min-w-0 flex flex-col gap-2">
                       <span className="flex items-center gap-2.5 flex-wrap">
-                        <span className="serif text-[18px] font-bold leading-snug">{c.nameBn ?? c.nameEn}</span>
+                        <span className="display text-[18px] font-bold leading-snug">{c.nameBn ?? c.nameEn}</span>
                         <span className="px-2.5 py-0.5 rounded-full bg-brandsoft text-brand text-[11.5px] font-bold shrink-0">
                           হালনাগাদ
                         </span>
@@ -66,7 +66,7 @@ export default function CommitteesPage() {
                       )}
                     </span>
                     <span className="flex sm:flex-col items-baseline sm:items-end gap-2 sm:gap-0.5 shrink-0">
-                      <span className="serif tnum text-[24px] font-extrabold leading-none">{bn(c.members.length)}</span>
+                      <span className="display tnum text-[24px] font-extrabold leading-none">{bn(c.members.length)}</span>
                       <span className="text-[12.5px] text-muted">সদস্য</span>
                     </span>
                   </Link>
@@ -78,7 +78,7 @@ export default function CommitteesPage() {
 
         <section className="flex flex-col gap-4">
           <div className="flex items-center gap-3.5">
-            <h2 className="serif text-[22px] font-bold">যেসব কমিটির তালিকা এখনো হালনাগাদ হয়নি</h2>
+            <h2 className="display text-[22px] font-bold">যেসব কমিটির তালিকা এখনো হালনাগাদ হয়নি</h2>
             <span className="px-3 py-0.5 rounded-full bg-warnsoft text-warn text-[12px] font-bold tnum shrink-0">
               {bn(pending.length)}টি
             </span>
@@ -95,7 +95,7 @@ export default function CommitteesPage() {
             {pending.map((c) => (
               <li key={c.id}>
                 <Card className="p-5 flex flex-col gap-1.5 h-full">
-                  <span className="serif text-[16px] font-bold leading-snug">{c.nameBn ?? c.nameEn}</span>
+                  <span className="display text-[16px] font-bold leading-snug">{c.nameBn ?? c.nameEn}</span>
                   <span className="text-[13px] text-muted">{c.nameEn}</span>
                   <span className="text-[13px] font-semibold text-warn mt-auto pt-1">
                     সদস্য তালিকা হালনাগাদের অপেক্ষায়

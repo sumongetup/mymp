@@ -43,7 +43,7 @@ export default async function NewsAdmin({ searchParams }: { searchParams: Promis
               <tr key={n.id}>
                 <Td className="whitespace-nowrap tnum text-muted">{n.published_on}</Td>
                 <Td>
-                  <span className="serif font-bold">{n.title_bn}</span>
+                  <span className="display font-bold">{n.title_bn}</span>
                   <span className="block text-[12.5px] text-muted">{n.source_name}</span>
                 </Td>
                 <Td className="text-[13px]">{member?.nameBn ?? n.seat_slug ?? '—'}</Td>
