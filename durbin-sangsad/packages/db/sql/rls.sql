@@ -42,6 +42,12 @@ select public._policy('committees',    'public_read', 'true');
 select public._policy('member_committees', 'public_read', 'true');
 select public._policy('sources',       'public_read', 'status = ''active''');
 
+-- what the House is doing: official, public
+select public._policy('parliament_sessions', 'public_read', 'true');
+select public._policy('sittings',            'public_read', 'true');
+select public._policy('notices',             'public_read', 'true');
+select public._policy('notice_members',      'public_read', 'true');
+
 -- editorial data: only what an editor verified
 select public._policy('election_results', 'public_read_verified', 'status = ''verified''');
 select public._policy('affidavits',       'public_read_verified', 'status = ''verified''');

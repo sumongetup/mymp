@@ -6,17 +6,27 @@ What each source provides, how we read it, and its status. Every entry records w
 
 ### Bangladesh Parliament — parliament.gov.bd (inspected 2026-09-10)
 
-- **robots.txt:** no disallow for `/api/`.
+- **robots.txt:** none (`/robots.txt` returns the site's 404 page). Nothing is disallowed; we still keep to one request per second.
 - **Structured access:** the site is a JavaScript app over an open JSON API. No HTML scraping and no Playwright needed.
 - **Endpoints used**
   - `GET /api/parliaments` — all parliaments with election, oath and end dates; `externalId` is the election set id (13th = 112).
-  - `GET /api/constituencies?limit=100&page=N` — 2,924 rows across election sets; filter `electionId = 112` for the 13th: 350 seats (1–300 territorial with division/district/boundary, 301–350 "Women Seat-N" with no district).
-  - `GET /api/members?parliamentNo=13&limit=100&page=N` — 349 sitting members (Phase 2): names bn/en, photo URL, DOB, profession, parents, addresses, official email, mobile (never published), term with constituency and party, Speaker/Deputy biography HTML, `empId` person id.
-  - `GET /api/committees?limit=50&page=N` — one record per committee per parliament; roster may still be the previous parliament's (Phase 2).
-  - `GET /api/speakers`, `/api/sessions?parliamentId=13`, `/api/notices` — presiding officers, sittings with orders-of-the-day PDFs, secretariat notices (Phase 2/5).
+  - `GET /api/constituencies?limit=100&page=N` — 2,924 rows across election sets; `electionId` ties each row to a parliament. The 13th has 350 seats (1–300 territorial with division/district/boundary, 301–350 "Women Seat-N" with no district). The seed loads every set the source has, oldest first.
+  - `GET /api/members?parliamentNo=N&limit=100&page=M` — the 13th has 349 sitting members: names bn/en, photo URL, DOB, profession, parents, addresses, official email, mobile (read and discarded, never stored), term with constituency and party, Speaker/Deputy biography HTML, `empId` person id. Records also exist for the 4th, 5th and 7th–12th parliaments; identity across parliaments is matched with corroborated rules (see `worker/src/jobs/person-match.ts`).
+  - `GET /api/parties?limit=100` — 45 parties. `abbreviation` is not unique (two "JP", two "BJP"), so parties are keyed on the source id.
+  - `GET /api/speakers` — presiding officers past and present: SPEAKER, DEPUTY_SPEAKER, LEADER_OF_HOUSE, OPPOSITION_LEADER, CHIEF_WHIP, WHIP, with `isCurrent`.
+  - `GET /api/committees?limit=50&page=N` — one record per committee per parliament; a roster may still be the previous parliament's, which the worker detects and withholds.
+  - `GET /api/sessions?parliamentId=13` — sessions with circulars (পরিপত্র) and orders of the day (one per sitting, PDF on the parliament's server).
+  - `GET /api/notices?limit=100&page=N` — 845 secretariat notices: NOC_GO (government orders about individual members, seat number in the title), COMMITTEE (meeting notices with `committeeId`), GENERAL, plus TENDER/DOWNLOAD/OTHERS which are not shown.
 - **Quirks (verified):** the server omits its TLS intermediate certificate and resets connections that send no User-Agent. `@durbin/shared`'s client adds the GoGetSSL intermediate + USERTrust root alongside Node's bundled CAs and always sends `DurbinNewsSangsadBot/1.0`.
 - **Rate:** 1 request/second, 3 tries with backoff.
-- **Status:** active. Seeded by `pnpm db:seed`.
+- **Status:** active. Seeded by `pnpm db:seed`; refreshed nightly by the `parliament` worker job.
+
+### Parliament photo host — prp.parliament.gov.bd (inspected 2026-09-10)
+
+- **robots.txt:** `/robots.txt` redirects (302) to the site; no rules are served.
+- **Access:** member photos at `/api/files?_=<token>` return `image/jpeg`, about 10 KB each, with an ordinary TLS chain and no User-Agent requirement (checked all three ways).
+- **Use:** the `parliament:photos` job copies each sitting member's official photo into the public Supabase Storage bucket `member-photos`, keeps the source URL on the member, and re-downloads only when that URL changes. No other image source is ever used; a failed copy leaves the neutral placeholder.
+- **Status:** active.
 
 ### Election Commission — ecs.gov.bd (inspected 2026-09-10)
 

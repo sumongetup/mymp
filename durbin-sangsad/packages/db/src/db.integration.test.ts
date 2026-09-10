@@ -60,7 +60,7 @@ describe('migration + RLS + seed on real Postgres (PGlite)', () => {
     const r = await pg.query<{ n: number }>(
       "select count(*)::int as n from pg_tables where schemaname = 'public' and tablename not like '__drizzle%'",
     );
-    expect(r.rows[0]?.n).toBe(24);
+    expect(r.rows[0]?.n).toBe(28);
   });
 
   it('enables RLS on every public table', async () => {
@@ -107,6 +107,8 @@ describe('migration + RLS + seed on real Postgres (PGlite)', () => {
     try {
       const seats = await pg.query<{ n: number }>('select count(*)::int as n from constituencies');
       expect(seats.rows[0]?.n).toBe(5);
+      const sittings = await pg.query<{ n: number }>('select count(*)::int as n from sittings');
+      expect(sittings.rows[0]?.n).toBe(0);
       // Private tables carry no SELECT grant at all, so the refusal is explicit rather than an empty result.
       await expect(pg.query('select count(*) from admin_users')).rejects.toThrow(/permission denied/i);
       await expect(pg.query('select count(*) from audit_log')).rejects.toThrow(/permission denied/i);

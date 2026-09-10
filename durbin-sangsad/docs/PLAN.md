@@ -5,7 +5,7 @@ Public, bilingual (বাংলা first) directory of every Member of the 13th 
 ## Status
 
 - **Phase 1 — built, pushed, CI green (2026-09-10).** The database layer is proven on real Postgres through a PGlite integration test (migration, every RLS policy, the seed logic, the listing query) that runs in CI with no external service. The one thing still owed is the same migration and seed on the owner's Supabase project, which waits for its keys; nothing in the code changes for that.
-- **Phase 2 — plan below, awaiting approval.**
+- **Phase 2 — approved and built (2026-09-10), not yet run against Supabase.** The `parliament`, `parliament:photos` and `parliament:report` jobs exist with the corroborated person matcher, the roster rule, alias derivation, notice-to-member matching and the four additive tables; 19 worker tests (8 matcher cases on real pairs, 11 on PGlite with TEST_ payloads, run twice) plus the 24 earlier ones are green in CI. What is still owed, all of it waiting on the owner's Supabase keys: `db:migrate` (two migrations), `db:seed`, a first `pnpm worker parliament` run, the photo copy, the first report, and the nightly workflow's secrets. Until that run, the counts against the live source (349 members, the unseated seat) are known from mymp.bd, not from this code.
 
 ## 0. What is already known (from building mymp.bd, verified on 2026-09-10)
 

@@ -31,6 +31,17 @@ On Windows Git Bash, prefix commands that pass `BASE_PATH=/sangsad` with `MSYS_N
 
 `worker/src/index.ts` runs one named job per invocation and records it in `ingest_runs` (started, finished, ok, counts, error text). The scheduled runner (GitHub Actions in `.github/workflows/`, from Phase 2) calls the same entry point, so a job behaves identically on a laptop and in CI.
 
+Jobs today:
+
+| Job | What it does | Needs |
+|---|---|---|
+| `health` | proves the database and parliament.gov.bd are reachable | DATABASE_URL |
+| `parliament` | members, parties, officers, committees (roster rule), sessions and sittings, notices matched to members and committees, earlier terms of sitting members with corroborated matching | DATABASE_URL; about 45 requests at 1/s |
+| `parliament:photos` | copies official photos into the public Storage bucket `member-photos`; only members whose copy is missing are fetched | plus NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY |
+| `parliament:report` | writes `docs/reports/parliament-<date>.md`: counts against the source, the unseated seat, officers, every member with a missing photo, email, profession, date of birth or party | DATABASE_URL |
+
+The nightly workflow `.github/workflows/durbin-worker.yml` (repository root) runs the three parliament jobs at 02:00 Dhaka and can be started by hand with a job name. It needs the repository secrets `DURBIN_DATABASE_URL`, `DURBIN_SUPABASE_URL` and `DURBIN_SUPABASE_SERVICE_ROLE_KEY`.
+
 To re-run a failed job: run it again by name; every job is idempotent (upserts keyed on the source's ids).
 
 To find why a source failed: `select * from ingest_runs where job = '<name>' order by started_at desc limit 20;` and read `error_text`.

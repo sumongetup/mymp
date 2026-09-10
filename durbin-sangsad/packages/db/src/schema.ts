@@ -37,14 +37,18 @@ export const parliaments = pgTable('parliaments', {
   sourceElectionId: integer('source_election_id'),
 });
 
+/**
+ * Keyed on the source's party id, not the abbreviation: the source lists two
+ * different parties as "JP" and two as "BJP".
+ */
 export const parties = pgTable('parties', {
   id: serial('id').primaryKey(),
   nameBn: text('name_bn').notNull(),
   nameEn: text('name_en').notNull(),
-  shortName: text('short_name').notNull().unique(),
+  shortName: text('short_name').notNull(),
   /** Hex colour used identically for every party chip; no party gets a special treatment. */
   color: text('color'),
-  sourceId: integer('source_id'),
+  sourceId: integer('source_id').unique(),
 });
 
 export const divisions = pgTable('divisions', {
@@ -99,6 +103,11 @@ export const constituencies = pgTable(
 
 export const genderEnum = pgEnum('gender', ['male', 'female', 'other', 'unknown']);
 
+/**
+ * People. The columns after `gender` are what parliament.gov.bd publishes about
+ * a member and are shown labelled as such; nothing is written here by hand.
+ * Mobile numbers exist in the source and are deliberately never stored.
+ */
 export const members = pgTable(
   'members',
   {
@@ -110,17 +119,29 @@ export const members = pgTable(
     photoUrl: text('photo_url'),
     /** Where the photo came from: only parliament.gov.bd is acceptable. */
     photoSourceUrl: text('photo_source_url'),
+    photoCheckedAt: timestamp('photo_checked_at', { withTimezone: true }),
     dateOfBirth: date('date_of_birth'),
     gender: genderEnum('gender').notNull().default('unknown'),
+    professionBn: text('profession_bn'),
+    fatherNameBn: text('father_name_bn'),
+    motherNameBn: text('mother_name_bn'),
+    presentAddressBn: text('present_address_bn'),
+    /** The official parliament mailbox (seat@parliament.gov.bd), never a personal address. */
+    officialEmail: text('official_email'),
+    isFreedomFighter: boolean('is_freedom_fighter').notNull().default(false),
+    /** The source carries a written biography for the presiding officers only. */
+    officialSummaryBn: text('official_summary_bn'),
+    officialBioBn: text('official_bio_bn'),
     /** parliament.gov.bd externalId, e.g. 013019001. Stable within a parliament. */
     sourceExternalId: text('source_external_id').unique(),
     /** parliament.gov.bd person id (empId); reliable from the 11th parliament on. */
     sourcePersonId: integer('source_person_id'),
     sourceUrl: text('source_url'),
+    sourceUpdatedAt: timestamp('source_updated_at', { withTimezone: true }),
     createdAt: createdAt(),
     updatedAt: updatedAt(),
   },
-  (t) => [index('members_name_bn_idx').on(t.nameBn)],
+  (t) => [index('members_name_bn_idx').on(t.nameBn), index('members_person_idx').on(t.sourcePersonId)],
 );
 
 export const memberTerms = pgTable(
@@ -134,11 +155,16 @@ export const memberTerms = pgTable(
       .notNull()
       .references(() => parliaments.id),
     constituencyId: integer('constituency_id').references(() => constituencies.id),
+    /** The seat as the source names it, kept for earlier parliaments whose seat rows may be absent. */
+    seatLabelBn: text('seat_label_bn'),
+    seatLabelEn: text('seat_label_en'),
     partyId: integer('party_id').references(() => parties.id),
-    /** MP, Speaker, Deputy Speaker, Leader of the House, Leader of the Opposition, Chief Whip, Whip, Minister… */
+    /** MP, Speaker, Deputy Speaker, Leader of the House, Leader of the Opposition, Chief Whip, Whip, Prime Minister… */
     role: text('role').notNull().default('MP'),
     startDate: date('start_date'),
     endDate: date('end_date'),
+    /** How an earlier term was tied to this person: person-id, name+dob, name+seat. Null for the current parliament. */
+    matchedBy: text('matched_by'),
     sourceUrl: text('source_url'),
   },
   (t) => [
@@ -159,7 +185,8 @@ export const memberAliases = pgTable(
       .references(() => members.id, { onDelete: 'cascade' }),
     alias: text('alias').notNull(),
     language: aliasLanguageEnum('language').notNull(),
-    addedBy: uuid('added_by'),
+    /** 'source' for aliases derived from parliament.gov.bd, otherwise the admin who added it. */
+    addedBy: text('added_by'),
     createdAt: createdAt(),
   },
   (t) => [unique('member_aliases_member_alias').on(t.memberId, t.alias), index('member_aliases_alias_idx').on(t.alias)],
@@ -257,8 +284,10 @@ export const committees = pgTable(
     type: text('type'),
     /** False while the source still lists the previous parliament's members. */
     rosterCurrent: boolean('roster_current').notNull().default(false),
+    /** How many people the source lists, current or not; shown so a hidden roster is not mistaken for an empty one. */
+    sourceMemberCount: integer('source_member_count').notNull().default(0),
     startDate: date('start_date'),
-    sourceId: integer('source_id'),
+    sourceId: integer('source_id').unique(),
     sourceUrl: text('source_url'),
   },
   (t) => [unique('committees_parliament_slug').on(t.parliamentId, t.slug)],
@@ -277,6 +306,79 @@ export const memberCommittees = pgTable(
     role: text('role').notNull().default('Member'),
   },
   (t) => [unique('member_committees_pair').on(t.committeeId, t.memberId)],
+);
+
+/* ---------------- what the House is doing ---------------- */
+
+/** A session of a parliament as the secretariat records it. */
+export const parliamentSessions = pgTable('parliament_sessions', {
+  id: serial('id').primaryKey(),
+  parliamentId: integer('parliament_id')
+    .notNull()
+    .references(() => parliaments.id),
+  sourceId: integer('source_id').notNull().unique(),
+  titleBn: text('title_bn'),
+  titleEn: text('title_en'),
+  startDate: date('start_date'),
+  endDate: date('end_date'),
+  sourceUrl: text('source_url'),
+});
+
+/** One sitting day, with its order-of-the-day PDF on the parliament's own server. */
+export const sittings = pgTable(
+  'sittings',
+  {
+    id: serial('id').primaryKey(),
+    sessionId: integer('session_id')
+      .notNull()
+      .references(() => parliamentSessions.id, { onDelete: 'cascade' }),
+    sourceId: integer('source_id').notNull().unique(),
+    titleBn: text('title_bn'),
+    date: date('date'),
+    pdfUrl: text('pdf_url'),
+    /** The circular (পরিপত্র) this sitting was announced under, when the source says. */
+    circularNo: integer('circular_no'),
+  },
+  (t) => [index('sittings_date_idx').on(t.date)],
+);
+
+/**
+ * Secretariat notices worth showing: government orders about individual
+ * members, committee meeting notices, and general notifications. Staff
+ * office orders, tenders and downloads are filtered out by the worker.
+ */
+export const notices = pgTable(
+  'notices',
+  {
+    id: serial('id').primaryKey(),
+    sourceId: integer('source_id').notNull().unique(),
+    type: text('type').notNull(),
+    category: text('category'),
+    date: date('date'),
+    titleBn: text('title_bn'),
+    titleEn: text('title_en'),
+    pdfUrl: text('pdf_url'),
+    committeeId: integer('committee_id').references(() => committees.id, { onDelete: 'set null' }),
+    sourceUrl: text('source_url'),
+    fetchedAt: timestamp('fetched_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index('notices_date_idx').on(t.date), index('notices_committee_idx').on(t.committeeId)],
+);
+
+export const noticeMembers = pgTable(
+  'notice_members',
+  {
+    id: serial('id').primaryKey(),
+    noticeId: integer('notice_id')
+      .notNull()
+      .references(() => notices.id, { onDelete: 'cascade' }),
+    memberId: integer('member_id')
+      .notNull()
+      .references(() => members.id, { onDelete: 'cascade' }),
+    /** 'seat' when the title carried the seat number, 'name' when only the name matched. */
+    matchedBy: text('matched_by').notNull(),
+  },
+  (t) => [unique('notice_members_pair').on(t.noticeId, t.memberId), index('notice_members_member_idx').on(t.memberId)],
 );
 
 /* ---------------- biography ---------------- */
