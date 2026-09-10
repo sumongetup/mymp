@@ -1,11 +1,12 @@
 import type { MetadataRoute } from 'next';
+import { SITE_DESCRIPTION, SITE_NAME } from '@/lib/seo';
 
 /** Home-screen name and icons. The icons are rendered from the logo paths in src/components/Brand.tsx. */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'আমার এমপি — বাংলাদেশের সংসদ সদস্যদের তথ্য',
-    short_name: 'আমার এমপি',
-    description: 'বাংলাদেশের সংসদ সদস্য, আসন, দল, কমিটি ও অধিবেশনের তথ্য।',
+    name: SITE_NAME,
+    short_name: SITE_NAME,
+    description: SITE_DESCRIPTION,
     lang: 'bn',
     start_url: '/',
     display: 'browser',

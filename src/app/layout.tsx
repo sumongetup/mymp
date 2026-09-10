@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Noto_Sans_Bengali } from 'next/font/google';
 import './globals.css';
 import { siteUrl } from '@/lib/site';
+import { BASE_OPEN_GRAPH, BASE_TWITTER, SITE_DESCRIPTION, SITE_TITLE } from '@/lib/seo';
 
 /*
  * Noto Sans Bengali, as one variable file covering every weight. It is the
@@ -20,14 +21,12 @@ const notoBn = Noto_Sans_Bengali({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'আমার এমপি — বাংলাদেশের সংসদ সদস্যদের তথ্য',
+    default: SITE_TITLE,
     template: '%s · আমার এমপি',
   },
-  description:
-    'ত্রয়োদশ জাতীয় সংসদের ৩৪৯ জন সদস্য, ৩০০ আসন, দল, সংসদীয় কমিটি ও অধিবেশনের তথ্য। সূত্র বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন।',
-  openGraph: { type: 'website', locale: 'bn_BD', siteName: 'আমার এমপি' },
-  // The share image itself is src/app/opengraph-image.png (file convention, inherited by every page).
-  twitter: { card: 'summary_large_image' },
+  description: SITE_DESCRIPTION,
+  openGraph: BASE_OPEN_GRAPH,
+  twitter: BASE_TWITTER,
 };
 
 /**

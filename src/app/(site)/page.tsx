@@ -5,9 +5,14 @@ import { latestSession, latestSitting, sessionLabel, officers, memberNoticeCount
 import { Page, Card, MemberCard, CompositionBar, Empty, NewsCard, SectionHead, DocLink } from '@/components/ui';
 import SiteSearch from '@/components/SiteSearch';
 import Icon from '@/components/Icon';
+import { siteUrl } from '@/lib/site';
+import { BASE_OPEN_GRAPH, BASE_TWITTER, SITE_DESCRIPTION, SITE_TITLE } from '@/lib/seo';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
+  // A child segment replaces the whole openGraph/twitter object, so the shared parts are spread back in.
+  openGraph: { ...BASE_OPEN_GRAPH, url: siteUrl, title: SITE_TITLE, description: SITE_DESCRIPTION },
+  twitter: { ...BASE_TWITTER, title: SITE_TITLE, description: SITE_DESCRIPTION },
 };
 
 export default function Home() {
