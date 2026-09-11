@@ -157,6 +157,23 @@ async function loadMirror() {
   return { fetchedAt: doc.fetchedAt, responses: doc.responses, photos };
 }
 
+/**
+ * The engine's link-preview cards (og:cards): member id → version. Read on its
+ * own, whether or not tonight's data comes from the mirror; without it every
+ * page keeps the site's share image.
+ */
+async function loadShareCards() {
+  try {
+    // The storage CDN keeps a copy for a few minutes; ask past it so a fresh card list counts at once.
+    const doc = await fetchUrlJson(`${MIRROR_URL}/og/latest.json?t=${Date.now()}`);
+    return doc?.version === 1 && doc.cards && typeof doc.cards === 'object' ? doc.cards : {};
+  } catch (err) {
+    console.warn(`  share cards unavailable (${err.message}); pages keep the site's share image`);
+    return {};
+  }
+}
+let shareCards = {};
+
 /** One API list from the mirror; the caller has already decided the mirror is in use. */
 function fromMirror(path) {
   const rows = mirror.responses[path];
@@ -310,6 +327,8 @@ async function main() {
     }
   }
   if (!mirror) console.log(`Syncing the ${PARLIAMENT}th parliament from ${BASE}\n`);
+  shareCards = await loadShareCards();
+  console.log(`  share cards: ${Object.keys(shareCards).length}`);
 
   const rawMembers = await getAllPages(`/api/members?parliamentNo=${PARLIAMENT}`);
   const rawCommittees = await getAllPages('/api/committees', 50);
@@ -368,11 +387,15 @@ async function main() {
       email: clean(m.email),
       // The number itself is deliberately not stored; the engine's copy carries only this yes/no.
       hasMobile: typeof m.hasMobile === 'boolean' ? m.hasMobile : !!m.mobile,
+      // The member's link-preview card, versioned so a changed card is fetched afresh.
+      shareImage: shareCards[m.externalId] ? `${MIRROR_URL}/og/mp/${m.externalId}.jpg?v=${shareCards[m.externalId]}` : null,
       // The source carries a written biography only for the Speaker and Deputy
       // Speaker. Everyone else's stays null unless an admin writes one.
       bioBn: htmlToText(m.speakerDetailsBioBn),
       summaryBn: clean(m.speakerHeroSummaryBn),
-      term: { start: clean(term.startDate), end: clean(term.endDate) },
+      // parliament.gov.bd gives four sitting members an end (2022-12-11, their 11th-parliament
+      // resignation) before this term's start; an end before the start is dropped, so it reads "চলমান".
+      term: { start: clean(term.startDate), end: clean(term.endDate) && clean(term.startDate) && clean(term.endDate) < clean(term.startDate) ? null : clean(term.endDate) },
       // Official pages, from admin overrides only: an editor's own entry, or
       // the engine's reading of the member's Wikipedia article (socialSource
       // then names it). Nothing here comes from parliament.gov.bd.

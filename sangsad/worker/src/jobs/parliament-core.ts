@@ -115,6 +115,17 @@ const isoDate = (v: string | null | undefined) => {
   return s && /^\d{4}-\d{2}-\d{2}/.test(s) ? s.slice(0, 10) : null;
 };
 const dobOrNull = (v: string | null | undefined) => (realDob(isoDate(v)) ? isoDate(v) : null);
+/**
+ * A term's end, unless it falls before the term's start. parliament.gov.bd
+ * gives four members of the 13th parliament (start 2026-02-17, status Active)
+ * the end 2022-12-11 of their 11th-parliament resignation; such an end is
+ * dropped, so the term reads as running.
+ */
+export const termEnd = (start: string | null | undefined, end: string | null | undefined) => {
+  const s = isoDate(start);
+  const e = isoDate(end);
+  return e && s && e < s ? null : e;
+};
 
 /** The Speaker biographies arrive as HTML; the site renders plain paragraphs. */
 export const htmlToText = (html: string | null | undefined) =>
@@ -308,7 +319,7 @@ export async function syncMembers(
       seatLabelEn: clean(c.constituencyEng),
       partyId,
       startDate: isoDate(term.startDate),
-      endDate: isoDate(term.endDate),
+      endDate: termEnd(term.startDate, term.endDate),
       matchedBy: null,
       sourceUrl: `${PARLIAMENT_BASE}/api/members/${m.id}`,
     };
@@ -613,7 +624,7 @@ export async function syncEarlierTerms(db: Db, earlier: Record<number, RawMember
           partyId: term.party?.id !== undefined ? (partyIdBySource.get(term.party.id) ?? null) : null,
           role: 'MP',
           startDate: isoDate(term.startDate),
-          endDate: isoDate(term.endDate),
+          endDate: termEnd(term.startDate, term.endDate),
           matchedBy: reason,
           sourceUrl: `${PARLIAMENT_BASE}/api/members/${m.id}`,
         })

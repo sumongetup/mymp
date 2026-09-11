@@ -38,6 +38,18 @@ export const BASE_TWITTER: NonNullable<Metadata['twitter']> = {
  * own address (og:url), and a page image where it has one. Next fills
  * og:title and og:description from the page's title and description.
  */
+/** A member's card as an Open Graph / Twitter image, or null when the engine has none. */
+export function memberShareImage(m: { shareImage?: string | null; nameBn: string | null; nameEn: string | null; seat: { nameBn: string | null } | null }) {
+  if (!m.shareImage) return null;
+  const who = m.nameBn ?? m.nameEn ?? '';
+  return { url: m.shareImage, width: 1200, height: 630, type: 'image/jpeg', alt: m.seat?.nameBn ? `${who}, ${m.seat.nameBn}` : who };
+}
+
+/** Twitter's copy of a page image; without one the site's image stays. */
+export function shareTwitter(image?: { url: string; width: number; height: number; alt?: string } | null): NonNullable<Metadata['twitter']> {
+  return { ...BASE_TWITTER, ...(image ? { images: [image] } : {}) };
+}
+
 export function shareGraph(
   path: string,
   image?: { url: string; width: number; height: number; alt?: string } | null,

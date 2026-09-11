@@ -11,12 +11,14 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@fontsource-variable/noto-sans-bengali": "^5.3.0",
     "@sangsad/db": "workspace:*",
     "@sangsad/shared": "workspace:*",
     "@supabase/supabase-js": "^2.116.0",
     "dotenv": "^17.2.0",
     "drizzle-orm": "^0.45.2",
     "postgres": "^3.4.9",
+    "puppeteer-core": "^25.10.0",
     "rss-parser": "^3.13.0"
   },
   "devDependencies": {

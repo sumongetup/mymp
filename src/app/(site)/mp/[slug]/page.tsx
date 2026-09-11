@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { shareGraph } from '@/lib/seo';
+import { memberShareImage, shareGraph, shareTwitter } from '@/lib/seo';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -26,7 +26,8 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
   return {
     title: `${m.nameBn ?? m.nameEn}`,
     alternates: { canonical: `/mp/${m.slug}` },
-    openGraph: shareGraph(`/mp/${m.slug}`),
+    openGraph: shareGraph(`/mp/${m.slug}`, memberShareImage(m)),
+    twitter: shareTwitter(memberShareImage(m)),
     description: m.resignedOn
       ? `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সাবেক সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}; ${dateBn(m.resignedOn)} তারিখে পদত্যাগ করেছেন। পরিচিতি, আগের মেয়াদ ও কমিটি। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`
       : `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। পরিচিতি, আগের মেয়াদ, কমিটি, সংসদ সচিবালয়ের প্রজ্ঞাপন ও যোগাযোগ। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,

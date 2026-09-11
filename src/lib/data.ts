@@ -78,6 +78,8 @@ export interface Member {
   bioFromWiki?: string | null;
   /** The Wikipedia article(s) those came from, space-separated. */
   bioSource?: string | null;
+  /** The member's 1200x630 link-preview card from the engine (og:cards), or null. */
+  shareImage?: string | null;
   party: { abbr: string; nameBn: string | null; nameEn: string | null } | null;
   seat: Seat | null;
   offices: string[];

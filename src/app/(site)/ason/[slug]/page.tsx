@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { shareGraph } from '@/lib/seo';
+import { memberShareImage, shareGraph, shareTwitter } from '@/lib/seo';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
-  seats, getSeat, getMemberById, districtOf, bn, initial, dateBn, meta, partyColor,
+  seats, getSeat, getMemberById, districtOf, bn, bnGroup, initial, dateBn, meta, partyColor,
 } from '@/lib/data';
 import { Page, Card, Breadcrumb, Empty, PartyDot } from '@/components/ui';
 import MemberPhoto from '@/components/MemberPhoto';
 import { ResultCard } from '@/components/results';
-import { seatHolders, resultsForSeat, parliamentLabel, SAME_AREA_SINCE } from '@/lib/history';
+import { seatHolders, resultsForSeat, resultForSeat, parliamentLabel, SAME_AREA_SINCE, electionYear } from '@/lib/history';
 
 export function generateStaticParams() {
   return seats.map((s) => ({ slug: s.slug }));
@@ -18,12 +18,24 @@ export async function generateMetadata({ params }: PageProps<'/ason/[slug]'>): P
   const { slug } = await params;
   const s = getSeat(slug);
   if (!s) return { title: 'আসন পাওয়া যায়নি' };
-  const m = s.memberId ? getMemberById(s.memberId) : undefined;
+  // A seat whose member resigned is vacant: it shares as vacant, not as the former member.
+  const m = s.memberId && !s.vacantSince ? getMemberById(s.memberId) : undefined;
+  const name = m ? (m.nameBn ?? m.nameEn) : null;
+  // The seat shares as its member: name in the title, party and this election's votes in the description,
+  // and the member's card as the image. A vacant seat says so and keeps the site image.
+  const r = m && !s.reserved ? resultForSeat(s.no, meta.parliamentNo) : null;
+  const top = r ? [...r.candidates].sort((a, b) => b.votes - a.votes)[0] : undefined;
+  const year = electionYear(meta.parliamentNo);
+  const won = top && m && top.name === m.nameBn ? ` ${year ? `${bn(year)} সালের` : 'এই'} নির্বাচনে ${bnGroup(top.votes)} ভোট পেয়ে নির্বাচিত।` : '';
+  const where = s.reserved ? s.nameBn : `${s.nameBn} আসন`;
   return {
-    title: `${s.nameBn} আসন`,
+    title: name ? `${where} · ${name}` : s.vacantSince ? `${where} (শূন্য)` : where,
     alternates: { canonical: `/ason/${s.slug}` },
-    openGraph: shareGraph(`/ason/${s.slug}`),
-    description: `${s.nameBn} আসনের বর্তমান সংসদ সদস্য${m ? ` ${m.nameBn ?? m.nameEn}` : ''}। ত্রয়োদশ জাতীয় সংসদ।`,
+    openGraph: shareGraph(`/ason/${s.slug}`, m ? memberShareImage(m) : null),
+    twitter: shareTwitter(m ? memberShareImage(m) : null),
+    description: name
+      ? `${s.reserved ? `${s.nameBn}-এর` : `${s.nameBn} আসনের`} সংসদ সদস্য ${name}${m?.party?.nameBn ? `, ${m.party.nameBn}` : ''}।${won} ${s.reserved ? 'দল ও সংসদের তথ্য।' : 'প্রার্থীদের ভোট, আগের সংসদ সদস্য ও আসনের এলাকা।'}`
+      : `${where} ${s.vacantSince ? `${dateBn(s.vacantSince)} থেকে শূন্য` : 'এখন শূন্য'}। ত্রয়োদশ জাতীয় সংসদ; আসনের নির্বাচনী ফল ও আগের সংসদ সদস্য।`,
   };
 }
 

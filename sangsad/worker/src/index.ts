@@ -18,6 +18,7 @@ import { runNews, runNewsRematch } from './jobs/news';
 import { runResults2026 } from './jobs/results-wiki';
 import { runSocialWiki } from './jobs/social-wiki';
 import { runBioWiki } from './jobs/bio-wiki';
+import { runOgCards } from './jobs/og-cards';
 
 config({ path: resolve(import.meta.dirname, '../../.env') });
 
@@ -53,6 +54,8 @@ const jobs: Record<string, Job> = {
   'social:wikipedia': () => runSocialWiki(getDb()),
   /** Education, birthplace and missing professions of sitting members from their Wikipedia infobox, into mymp.bd. */
   'bio:wikipedia': () => runBioWiki(getDb()),
+  /** Link-preview cards (photo, name, seat, party) for every sitting member, into the public mirror. */
+  'og:cards': () => runOgCards(getDb()),
 };
 
 async function run(name: string) {

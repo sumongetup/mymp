@@ -168,7 +168,7 @@ export function storageClientFromEnv(): SupabaseClient | null {
   return url && key ? createClient(url, key, { auth: { persistSession: false } }) : null;
 }
 
-async function ensureBucket(supabase: SupabaseClient) {
+export async function ensureBucket(supabase: SupabaseClient) {
   const { error } = await supabase.storage.createBucket(MIRROR_BUCKET, { public: true, fileSizeLimit: 20 * 1024 * 1024 });
   if (error && !/already exists/i.test(error.message)) throw new Error(`mirror bucket: ${error.message}`);
 }

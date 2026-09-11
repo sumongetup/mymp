@@ -17,6 +17,7 @@
   "permanentAddressBn": "নয়াবাড়ী, ভজনপুর, তেঁতুলিয়া, পঞ্চগড়, তেঁতুলিয়া, পঞ্চগড়, রংপুর বিভাগ",
   "email": "panchagarh.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000101.jpg?v=1eecd1cdbd7e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -69,6 +70,7 @@
   "permanentAddressBn": "গ্রাম- মেনাগ্রাম, ডাকঘর- পাঁচপীর-৫-১০, উপজেলা- বোদা, পঞ্চগড়।, বোদা, পঞ্চগড়, রংপুর বিভাগ",
   "email": "panchagarh.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000201.jpg?v=421a4e4ae2d8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -121,6 +123,7 @@
   "permanentAddressBn": "সড়ক নং- ৭১, বাসা নং-১৮, ফ্লাট নং- এ-২, গুলশান-০২, ঢাকা, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "thakurgaon.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": null,
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -173,6 +176,7 @@
   "permanentAddressBn": "গ্রাম- বড় পলাশবাড়ী, ডাকঘর- সমিরনগর, উপজেলা- বালিয়াডাঙ্গী, জেলা- ঠাকুরগাঁও।, বালিয়াডাংগী, ঠাকুরগাঁও, রংপুর বিভাগ",
   "email": "thakurgaon.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000401.jpg?v=9f52fd45fe26",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -225,11 +229,12 @@
   "permanentAddressBn": "গ্রামঃ রঘুনাথপুর, ডাকঘরঃ পীরগঞ্জ-৫১১০, পীরগঞ্জ, ঠাকুরগাঁও, রংপুর বিভাগ",
   "email": "thakurgaon.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000501.jpg?v=3c15f3cb41e8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
    "start": "2026-02-17",
-   "end": "2022-12-11"
+   "end": null
   },
   "facebook": null,
   "x": null,
@@ -277,6 +282,7 @@
   "permanentAddressBn": "ভাবকী, ভোগনগর, বীরগঞ্জ, দিনাজপুর, রংপুর ।, বীরগঞ্জ, দিনাজপুর, রংপুর বিভাগ",
   "email": "dinajpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000601.jpg?v=607924dacab0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -329,6 +335,7 @@
   "permanentAddressBn": "সাং-দৌলা, ডাকঘর- হাটমাধবপুর, থানা- বোচাগঞ্জ, জেলা- দিনাজপুর, রংপুর।, বোচাগঞ্জ, দিনাজপুর, রংপুর বিভাগ",
   "email": "dinajpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000701.jpg?v=0d1e596dea0a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -381,6 +388,7 @@
   "permanentAddressBn": "গ্রাম: নিমনগর বালুবাড়ী ডাকঘর: দিনাজপুর-৫২০০, দিনাজপুর সদর, দিনাজপুর, রংপুর বিভাগ",
   "email": "dinajpur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000801.jpg?v=1f05ef11444e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -433,6 +441,7 @@
   "permanentAddressBn": "গ্রাম- মিয়াপাড়া, দক্ষিণ পলাশবাড়ী, পো- দক্ষিণ পলাশবাড়ী-৫২৪০, চিরিরবন্দর, দিনাজপুর, রংপুর বিভাগ",
   "email": "dinajpur.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013000901.jpg?v=6eab1170277c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -485,6 +494,7 @@
   "permanentAddressBn": "বাসা:২৭০-০০, রাস্তা:আব্দুল জব্বার সড়ক, আমিরগঞ্জ, ডাকঘর: পার্বতীপুর-৫২৫০, পার্বতীপুর, দিনাজপুর, রংপুর বিভাগ",
   "email": "dinajpur.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001001.jpg?v=a6feec978266",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -537,6 +547,7 @@
   "permanentAddressBn": "৩২, ব্রাহ্মণপল্লী রোড,, ময়মনসিংহ সদর, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "dinajpur.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001101.jpg?v=b0dc21e5cf6b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -589,6 +600,7 @@
   "permanentAddressBn": "গ্রাম- দঃ তিতপাড়া, ডাকঘর- ডিমলা-৫৩৫০, ইউনিয়ন-৩নং ডিমলা, ডিমলা, নীলফামারী, রংপুর বিভাগ",
   "email": "nilphamari.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001201.jpg?v=0f77d242376d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -641,6 +653,7 @@
   "permanentAddressBn": "হাভেলি, উকিলপাড়া, নীলফামারী- ৫৩০০, নীলফামারী সদর, নীলফামারী, রংপুর বিভাগ",
   "email": "nilphamari.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001301.jpg?v=03c7287079bd",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -693,6 +706,7 @@
   "permanentAddressBn": "গ্রাম- পূর্ব খুটামারা ডাঙ্গাপাড়া, ডাঙ্গাপাড়া, রাজার হাট- ৬৩৩০, জলঢাকা, নীলফামারী, রংপুর বিভাগ",
   "email": "nilphamari.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001401.jpg?v=6c5301bbebfc",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -745,6 +759,7 @@
   "permanentAddressBn": "শহীদ ডাঃ জিকরুল্লাহ রোড, মহল্লা রেলবাজার, পোস্ট-সৈয়দপুর, জেলা-নীলফামারী, সৈয়দপুর, নীলফামারী, রংপুর বিভাগ",
   "email": "nilphamari.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001501.jpg?v=c544928accda",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -797,6 +812,7 @@
   "permanentAddressBn": "গ্রাম- রসুলগঞ্জ, ডাকঘর- পাটগ্রাম- ৫৫৪০, পাটগ্রাম, লালমনিরহাট, রংপুর বিভাগ",
   "email": "lalmonirhat.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001601.jpg?v=445f73ec4153",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -849,6 +865,7 @@
   "permanentAddressBn": "গ্রাম: উত্তর বত্রিশ হাজারী, ডাকঘর: চাপারহাট- ৫৫২০, কালীগঞ্জ, লালমনিরহাট, রংপুর বিভাগ",
   "email": "lalmonirhat.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001701.jpg?v=fbd78949bbe3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -901,6 +918,7 @@
   "permanentAddressBn": "গ্রাম: কিসমত বিদ‌্যাবাঘিস, ডাক: বড়বাড়ী,, লালমনিরহাট সদর, লালমনিরহাট, রংপুর বিভাগ",
   "email": "lalmonirhat.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001801.jpg?v=bc44e95fa4bc",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -953,6 +971,7 @@
   "permanentAddressBn": "পশ্চিম বড়বিল (পশ্চিম), ডাকঘর: পাকুড়িয়া শরীফ- ৫৪০০, গঙ্গাচড়া, রংপুর, রংপুর বিভাগ",
   "email": "rangpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013001901.jpg?v=4a9a4cd6260a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1005,6 +1024,7 @@
   "permanentAddressBn": "গ্রাম: বালুয়াভাটা, প্রফেসরপাড়া, পোস্ট: বদরগঞ্জ-৫৪৩০, বদরগঞ্জ, রংপুর, রংপুর বিভাগ",
   "email": "rangpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002001.jpg?v=05354f37af0c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1057,6 +1077,7 @@
   "permanentAddressBn": "হোল্ডিং নং-২৮/১, রোড নং-০১/০/গ্রাম- নিউ আদর্শপাড়া, ডাকঘর- আলমনগর-৫৪০২, রংপুর সিটি কর্পোরেশন, রংপুর, রংপুর বিভাগ",
   "email": "rangpur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002101.jpg?v=32ef96058ba0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1109,6 +1130,7 @@
   "permanentAddressBn": "গ্রাম: সদরা তালুক, ডাকঘর: ভায়ারহাট-৫৪০৪, কাউনিয়া, রংপুর, রংপুর বিভাগ",
   "email": "rangpur.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002201.jpg?v=82cb0e0c8d06",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1161,6 +1183,7 @@
   "permanentAddressBn": "গ্রাম- কৃষ্ণপুর, ডাকঘর- মিঠাপুকুর- ৫৪৬০, মিঠাপুকুর, রংপুর, রংপুর বিভাগ",
   "email": "rangpur.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002301.jpg?v=16fab7a2c422",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1213,6 +1236,7 @@
   "permanentAddressBn": "গ্রাম: ওসমানপুর, ডাকঘর: পীরগঞ্জ- ৫৪৭০, পীরগঞ্জ, রংপুর, রংপুর বিভাগ",
   "email": "speaker@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002401.jpg?v=b5c188f045c8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1265,6 +1289,7 @@
   "permanentAddressBn": "গ্রাম- বাগভান্ডার, ডাকঘর- ভুরুঙ্গামারী- ৫৬৭০, ভুরুঙ্গামারী, কুড়িগ্রাম, রংপুর বিভাগ",
   "email": "kurigram.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002501.jpg?v=43715b4f9e4b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1317,6 +1342,7 @@
   "permanentAddressBn": "হোল্ডিং- আমজাদ বাড়ি, গ্রাম- প্রতাপ, ডাকঘর: টগরাই হাট- ৫৬০০, কুড়িগ্রাম সদর, কুড়িগ্রাম, রংপুর বিভাগ",
   "email": "kurigram.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002601.jpg?v=2ea35653b8c8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1369,6 +1395,7 @@
   "permanentAddressBn": "গ্রাম: নারীর খামার, কিশোরপুর, পোস্ট: ভবনগর-৫৬২০, ইউনিয়ন: থেতরাই, উলিপুর, কুড়িগ্রাম, রংপুর বিভাগ",
   "email": "kurigram.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002701.jpg?v=fff0a88143a7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1421,6 +1448,7 @@
   "permanentAddressBn": "গ্রাম: যাদুরচর নতুন গ্রাম-পূর্ব, ডাকঘর: যাদুরচর- ৫৬৪০, রৌমারী, কুড়িগ্রাম, রংপুর বিভাগ",
   "email": "kurigram.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002801.jpg?v=f9cd016a56db",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1473,6 +1501,7 @@
   "permanentAddressBn": "গ্রাম-নিজপাড়া, ডাক-বাজারপাড়া, উপজেলা-সুন্দরগঞ্জ, জেলা-গাইবান্ধা।, সুন্দরগঞ্জ, গাইবান্ধা, রংপুর বিভাগ",
   "email": "gaibandha.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013002901.jpg?v=7a292abce681",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1525,6 +1554,7 @@
   "permanentAddressBn": "গ্রাম- গোবিন্দপুর, ডাকঘর- হাট লক্ষীপুর- ৫৭০০, গাইবান্ধা সদর, গাইবান্ধা, রংপুর বিভাগ",
   "email": "gaibandha.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003001.jpg?v=538352406c02",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1577,6 +1607,7 @@
   "permanentAddressBn": "গ্রাম- গিরীধারীপুর, ডাকঘর- পলাশবাড়ী-৫৭৩০, পলাশবাড়ী, গাইবান্ধা, রংপুর বিভাগ",
   "email": "gaibandha.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003101.jpg?v=cf1c31b2a201",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1629,6 +1660,7 @@
   "permanentAddressBn": "গ্রাম- জগদীশপুর, ডাকঘর- জগদীশপুর-৫৭৪০, গোবিন্দগঞ্জ, গাইবান্ধা, রংপুর বিভাগ",
   "email": "gaibandha.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003201.jpg?v=89b72f8461e0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1681,6 +1713,7 @@
   "permanentAddressBn": "গ্রাম: মেছট উপজেলা-সাঘাটা ্আগেরপাড়া ডাকঘর: জুমারবাড়ী- ৫৭৫০, গাইবান্ধা, রংপুর।, সাঘাটা, গাইবান্ধা, রংপুর বিভাগ",
   "email": "gaibandha.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003301.jpg?v=6501df056746",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1733,6 +1766,7 @@
   "permanentAddressBn": "কুজি শহর, ডাক: নারায়নপাড়া, জয়পুরহাট সদর, জয়পুরহাট, জয়পুরহাট সদর, জয়পুরহাট, রাজশাহী বিভাগ",
   "email": "jaipurhat.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003401.jpg?v=153f84bcf9bb",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1785,6 +1819,7 @@
   "permanentAddressBn": "গ্রাম- বলিশিব সমুদ্র, ডাকঘর- মাত্রাই-৫৯৩০, কালাই, জয়পুরহাট, রাজশাহী বিভাগ",
   "email": "jaipurhat.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003501.jpg?v=e34e949c1997",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1837,6 +1872,7 @@
   "permanentAddressBn": "বাড়ি: ্বএম পি বাড়ী, গ্রাম: বাড়ইপাড়া (অংশ), ডাকঘর-সারিয়াকান্দি, সারিয়াকান্দি, বগুড়া, রাজশাহী বিভাগ",
   "email": "bogra.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003601.jpg?v=6c16f02fbf3d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1889,6 +1925,7 @@
   "permanentAddressBn": "গ্রাম/রাস্তাঃ বানাইল, ডাকঘর- শিবগঞ্জ ৫৮১০, শিবগঞ্জ, বগুড়া, রাজশাহী বিভাগ",
   "email": "bogra.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003701.jpg?v=a8651c114822",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1941,6 +1978,7 @@
   "permanentAddressBn": "কালাইকুড়ী, আদমদিঘী, বগুড়া।, আদমদীঘি, বগুড়া, রাজশাহী বিভাগ",
   "email": "bogra.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003801.jpg?v=078d5d77f347",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -1993,11 +2031,12 @@
   "permanentAddressBn": "গ্রাম- বুড়ইল, পো- বীরকলি, থানা-নন্দিগ্রাম, জেলা-বগুড়া, নন্দিগ্রাম, বগুড়া, রাজশাহী বিভাগ",
   "email": "bogra.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013003901.jpg?v=f03705417b89",
   "bioBn": null,
   "summaryBn": null,
   "term": {
    "start": "2026-02-17",
-   "end": "2022-12-11"
+   "end": null
   },
   "facebook": null,
   "x": null,
@@ -2045,11 +2084,12 @@
   "permanentAddressBn": "সাং ধনকুন্ডী, ডাকঘর: চান্দাইকোনা-৫৮৪১, সীমাবাড়ি, শেরপুর, বগুড়া, রাজশাহী বিভাগ",
   "email": "bogra.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004001.jpg?v=8b6dc376325d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
    "start": "2026-02-17",
-   "end": "2022-12-11"
+   "end": null
   },
   "facebook": null,
   "x": null,
@@ -2097,6 +2137,7 @@
   "permanentAddressBn": "বাসা- ৩৯৭ বি, হাছনা জাহান স্কুল, শিববাটী, ডাকঘর- বগুড়া-৫৮০০, বগুড়া সদর, বগুড়া, রাজশাহী বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004101.jpg?v=f5d4261c8d11",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2149,6 +2190,7 @@
   "permanentAddressBn": "বাড়ি নং-৪৮৫, গ্রাম- গাবতলী পূর্বপাড়া, উপজেলা-গাবতলী, ডাকঘর- গাবতলী-৫৮২০, জেলা-বগুড়া।, গাবতলী , বগুড়া, রাজশাহী বিভাগ",
   "email": "bogra.7@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004201.jpg?v=624a33bd3030",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2201,6 +2243,7 @@
   "permanentAddressBn": "বাসাঃ ১৮৩, গ্রামঃ জালমাছমারী হাজী পাড়া, ডাকঘর- শিবগঞ্জ-৬৩৪০, শিবগঞ্জ, চাঁপাইনবাবগঞ্জ, রাজশাহী বিভাগ",
   "email": "mdkeramatalisuzc@gmail.com",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004301.jpg?v=076826cb007a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2253,6 +2296,7 @@
   "permanentAddressBn": "পুরাতন প্রসাদপুর, গোমস্তাপুর, চাঁপাইনবাবগঞ্জ, রাজশাহী বিভাগ",
   "email": "chapainawabganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004401.jpg?v=b56c98c9b08b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2305,6 +2349,7 @@
   "permanentAddressBn": "গ্রাম-আঙ্গারিয়াপাড়া, ডাক-নামোশংকরবাটী, উপজেলা-চাপাইনবাবগঞ্জ সদর, জেলা-চাপাইনবাবগঞ্জ।, চাঁপাইনবাবগঞ্জ সদর, চাঁপাইনবাবগঞ্জ, রাজশাহী বিভাগ",
   "email": "chapainawabganj.3@parliament.gmail",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004501.jpg?v=313e67f092f9",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2357,6 +2402,7 @@
   "permanentAddressBn": "গ্রাম: রাউতাড়া সোনারপাড়া, ডাকঘর: বালুবাজার, নিয়ামতপুর, নওগাঁ, রাজশাহী বিভাগ",
   "email": "naogaon.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004601.jpg?v=6ceebf206ea3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2409,6 +2455,7 @@
   "permanentAddressBn": "গ্রাম: চক চন্ডি, ডাকঘর: ফার্শিপাড়া-৫৯৫০, ধামইরহাট, নওগাঁ, রাজশাহী বিভাগ",
   "email": "naogaon.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004701.jpg?v=6e89cde49962",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2461,6 +2508,7 @@
   "permanentAddressBn": "গ্রাম+ডাকঘর: বদলগাছী, বদলগাছী, নওগাঁ, রাজশাহী বিভাগ",
   "email": "naogaon.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004801.jpg?v=dcbd49821499",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2513,6 +2561,7 @@
   "permanentAddressBn": "গ্রাম: শুকটিবাদাল, ডাকঘর: চকউলী, মান্দা, নওগাঁ, রাজশাহী বিভাগ",
   "email": "naogaon.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013004901.jpg?v=e744ccdeefad",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2565,6 +2614,7 @@
   "permanentAddressBn": "মহল্লা: পার-নওগাঁ ঈদগাহ পাড়া, ডাকঘর: নওগঁঁঁঁঁঁঁাঁ, নওগাঁ সদর, নওগাঁ, রাজশাহী বিভাগ",
   "email": "naogaon.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005001.jpg?v=03d63602306f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2617,6 +2667,7 @@
   "permanentAddressBn": "গ্রাম: জাতআমরুল, পো: আহসানগঞ্জ, থানা-আত্রাই, জেলা-নওগাঁ।, আত্রাই, নওগাঁ, রাজশাহী বিভাগ",
   "email": "naogaon.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005101.jpg?v=af00a87e3e92",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2669,6 +2720,7 @@
   "permanentAddressBn": "গ্রাম: মহিশালবাড়ী, ডাকঘর:মহিশালবাড়ী-৬২৯০, গোদাগাড়ী, রাজশাহী, রাজশাহী বিভাগ",
   "email": "rajshahi.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005201.jpg?v=4b63c96b7c2b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2721,6 +2773,7 @@
   "permanentAddressBn": "২৫১, শালবাগান, সপুরা, থানা: বোয়ালিয়া, রাজশাহী সিটি কর্পোরেশন, রাজশাহী, রাজশাহী বিভাগ",
   "email": "rajshahi.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005301.jpg?v=b5311b8434f2",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2773,6 +2826,7 @@
   "permanentAddressBn": "হোল্ডিং নং-১৩৭, জিন্নাহনগর, ডাকঘর- সপুরা-৬২০৩, থানা- বোয়ালিয়া, জেলা-রাজশাহী।, রাজশাহী সিটি কর্পোরেশন, রাজশাহী, রাজশাহী বিভাগ",
   "email": "rajshahi.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005401.jpg?v=8c6dca64ab34",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2825,6 +2879,7 @@
   "permanentAddressBn": "গ্রাম: চানপাড়া, পোস্ট: ভবানীগঞ্জ-৬২৫০, বাগমারা, রাজশাহী, রাজশাহী বিভাগ",
   "email": "rajshahi.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005501.jpg?v=658a273786da",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2877,6 +2932,7 @@
   "permanentAddressBn": "গ্রামঃ কাঠালবাড়ীয়া ডাকঘরঃ পুঠিয়া-৬২৬০, পুঠিয়া, রাজশাহী, রাজশাহী বিভাগ",
   "email": "rajshahi.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005601.jpg?v=617cc0037984",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2929,6 +2985,7 @@
   "permanentAddressBn": "গ্রাম:-মাড়িয়া , ডাকঘর:- শলুয়া-৬২৭১, ্উপজেলা:-চারঘাট, জেলা:-রাজশাহী।, চারঘাট, রাজশাহী, রাজশাহী বিভাগ",
   "email": "rajshahi.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005701.jpg?v=c50a1118195c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -2981,6 +3038,7 @@
   "permanentAddressBn": "গ্রাম: গৌরীপুর , ডাকঘর: গৌরীপুর-৬৬২০, লালপুর, নাটোর, রাজশাহী বিভাগ",
   "email": "natore.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005801.jpg?v=70103cda8f33",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3033,6 +3091,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং: আলাইপুর, গ্রাম/রাস্তা: আলাইপুর, ০৬ নং ওয়ার্ড ডাক: নাটোর-৬৪০০,, নাটোর সদর, নাটোর, রাজশাহী বিভাগ",
   "email": "natore.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013005901.jpg?v=f5f332ced876",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3085,6 +3144,7 @@
   "permanentAddressBn": "গ্রামঃ দুরমল্লিকা, ডাকঃ সিংড়া-৬৪৫০, সিংড়া, নাটোর, রাজশাহী বিভাগ",
   "email": "natore.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006001.jpg?v=f33c168cb7b3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3137,6 +3197,7 @@
   "permanentAddressBn": "গ্রাম/রাস্তা-ধারাবারিষা, উপজেলা-গুরুদাসপুর, ডাকঘর- ধারাবারিষা-৬৪৪০, জেলা-নাটোর।, গুরুদাসপুর, নাটোর, রাজশাহী বিভাগ",
   "email": "natore.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006101.jpg?v=5a041b3d0098",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3189,6 +3250,7 @@
   "permanentAddressBn": "গ্রাম: চালিতাডাঙ্গা, উপজেলা: কাজীপুর, সিরাজগঞ্জ সদর, সিরাজগঞ্জ, রাজশাহী বিভাগ",
   "email": "sirajganj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006201.jpg?v=92aef274a3b1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3241,6 +3303,7 @@
   "permanentAddressBn": "গ্রাম/রাস্তাঃ আল-মাহমুদ-এভিনিউ (হোসেইনপুর), ডাকঘরঃ সিরাজগঞ্জ সদর- ৬৭০০, সিরাজগঞ্জ সদর, সিরাজগঞ্জ, রাজশাহী বিভাগ",
   "email": "sirajganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006301.jpg?v=e0a677aa3446",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3293,6 +3356,7 @@
   "permanentAddressBn": "গ্রাম-চান্দাইকোনা, ডাকঘর-চান্দাইকোনা-৫৮৪১, রায়গঞ্জ, সিরাজগঞ্জ, রাজশাহী বিভাগ",
   "email": "vpaynulofficial@gmail.com",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006401.jpg?v=90bca012e6c9",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3345,6 +3409,7 @@
   "permanentAddressBn": "গ্রাম: নওকৈড়, ডাকঘর: ডিক্রীরচর-৬৭৭০, উল্লাপাড়া, সিরাজগঞ্জ, রাজশাহী বিভাগ",
   "email": "sirajganj.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006501.jpg?v=5f0000fa3db0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3397,6 +3462,7 @@
   "permanentAddressBn": "গ্রাম: তামাই, ডাকঘর: তামাই-৬৭৩০, উপজেলা-বেলকুচি, জেলা-সিরাজগঞ্জ।, বেলকুচি, সিরাজগঞ্জ, রাজশাহী বিভাগ",
   "email": "sirajganj.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006601.jpg?v=1111b3bfed77",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3449,6 +3515,7 @@
   "permanentAddressBn": "গ্রাম: খঞ্জনদিয়া, ডাক: শাহাজাদপুর-৬৭৭০, শাহাজাদপুর পৌরসভা, সিরাজগঞ্জ, শাহজাদপুর, সিরাজগঞ্জ, রাজশাহী বিভাগ",
   "email": "sirajganj.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006701.jpg?v=0407389db114",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3501,6 +3568,7 @@
   "permanentAddressBn": "গ্রামঃ বোয়াইলমারী, ডাকঘরঃ সাঁথিয়া ৬৬৭০, সাঁথিয়া, পাবনা, রাজশাহী বিভাগ",
   "email": "pabna.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006801.jpg?v=d87087cad7f0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3553,6 +3621,7 @@
   "permanentAddressBn": "গ্রাম: মালিফা, ডাকঘর: রাইপুর ক্ষেতুপাড়া, ইউনিয়ন: মানিকহাট, সুজানগর, পাবনা, রাজশাহী বিভাগ",
   "email": "pabna.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013006901.jpg?v=83772025de25",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3605,6 +3674,7 @@
   "permanentAddressBn": "ঝিনাইগাড়ী কলকতি,, ভাঙ্গুড়া, পাবনা, রাজশাহী বিভাগ",
   "email": "pabna.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007001.jpg?v=8798bcd59d4d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3657,6 +3727,7 @@
   "permanentAddressBn": "৭১, ভেলুপাড়া, ভেলুপাড়া পশ্চিম, ঈশ্বরদী, ঈশ্বরদী, পাবনা, রাজশাহী বিভাগ",
   "email": "pabna.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007101.jpg?v=f7c90b41b644",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3709,6 +3780,7 @@
   "permanentAddressBn": "পুরান কুঠিপাড়া, পাবনা সদর, পাবনা, রাজশাহী বিভাগ",
   "email": "pabna.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007201.jpg?v=d4374c0cca9d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3761,6 +3833,7 @@
   "permanentAddressBn": "গ্রাম: বল্লভপুর, ডাকঘর: কেদারগঞ্জ-৭১০২, মুজিব নগর, মেহেরপুর, খুলনা বিভাগ",
   "email": "meherpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007301.jpg?v=279d1b90663d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3813,6 +3886,7 @@
   "permanentAddressBn": "গ্রাম/রাস্তাঃ বাজারপাড়া, ডাকঘর-গাংনী-৭১১০, গাংনী, মেহেরপুর, খুলনা বিভাগ",
   "email": "meherpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007401.jpg?v=59af43c1a2ef",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3865,6 +3939,7 @@
   "permanentAddressBn": "বাড়ি নং: ৮২৫, গ্রাম:গঙ্গারামপুর, চরহোগল বাড়িয়া, ডাকঘর: তারাগুনিয়া-৭০৫১, দৌলতপুর, কুষ্টিয়া, খুলনা বিভাগ",
   "email": "kushtia.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007501.jpg?v=f44ca5738392",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3917,6 +3992,7 @@
   "permanentAddressBn": "গ্রাম:চৌদুয়ার, নিমতলা বাজার, ডাকঘর: খয়েরপুর, মিরপুর, কুষ্টিয়া, খুলনা বিভাগ",
   "email": "kushtia.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007601.jpg?v=678495a8df48",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -3969,6 +4045,7 @@
   "permanentAddressBn": "বাসা নং: ৪/৬, রাস্তা কালিবাড়ী লেন, আমলাপাড়া, বাহাদুরখালী, ডাকঘর: কুষ্টিয়া, কুষ্টিয়া সদর, কুষ্টিয়া, খুলনা বিভাগ",
   "email": "kushtia.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007701.jpg?v=c0edd5e799b5",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4021,6 +4098,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং- ১৬/১৭, গ্রাম/রাস্তা- রেলপাড়া সড়ক, এলঙ্গী, ডাকঘরঃ কুমারখালী-৭০১০, কুমারখালী, কুষ্টিয়া, খুলনা বিভাগ",
   "email": "kushtia.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007801.jpg?v=ab92bcefc9df",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4073,6 +4151,7 @@
   "permanentAddressBn": "গ্রাম: ছত্রপাড়া, ডাকঘর: জামজামী, আলমডাঙ্গা, চুয়াডাঙ্গা, খুলনা বিভাগ",
   "email": "chuadanga.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013007901.jpg?v=86d99f294c17",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4125,6 +4204,7 @@
   "permanentAddressBn": "গ্রামঃ ধোপাখালী, ধোপাখালী মন্ডল পাড়া, ডাকঘরঃ ধোপাখালী, জীবননগর, চুয়াডাঙ্গা, খুলনা বিভাগ",
   "email": "chuadanga.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008001.jpg?v=d40e7e7f2653",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4177,6 +4257,7 @@
   "permanentAddressBn": "গ্রাম: বারইপাড়া, মধ‌্যপাড়া, ডাক-গাড়াগঞ্জ-৭৩২০,, শৈলকুপা, ঝিনাইদহ, খুলনা বিভাগ",
   "email": "jhenaidah.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008101.jpg?v=58758fb58a5d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4229,6 +4310,7 @@
   "permanentAddressBn": "আলহেরাপাড়া হামদহ, আলহেরাপাড়া, ডাকঘরঃ ঝিনাইদহ-৭৩০০, ঝিনাইদহ সদর, ঝিনাইদহ, খুলনা বিভাগ",
   "email": "jhenaidah.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008201.jpg?v=6066d9dfc158",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4281,6 +4363,7 @@
   "permanentAddressBn": "গ্রাম- কোটচাঁদপুর পশুহাসপাতাল পাড়া, ডাকঘর কোটচাঁদপুর পূর্বপাড়া, কোটচাঁদপুর, ঝিনাইদহ, খুলনা বিভাগ",
   "email": "jhenaidah.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008301.jpg?v=770d93d363e1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4333,6 +4416,7 @@
   "permanentAddressBn": "গ্রাম: থানা পাড়া, থানা উত্তরপাড়া, ডাকঘর: নলডাঙ্গা-৭৩৫০, কালীগঞ্জ, ঝিনাইদহ, খুলনা বিভাগ",
   "email": "jhenaidah.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008401.jpg?v=393b8a9cacaf",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4385,6 +4469,7 @@
   "permanentAddressBn": "বাগআচঁড়া বাইতুল আমান পাড়া, বাগআচঁড়া দক্ষিণ পাড়া, শার্শা, যশোর, খুলনা বিভাগ",
   "email": "jessore.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008501.jpg?v=14604064bca5",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4437,6 +4522,7 @@
   "permanentAddressBn": "গ্রাম: নাভারণ, ডাকঘর: যাদবপুর-৭৪৩২, ঝিকরগাছা, যশোর, খুলনা বিভাগ",
   "email": "jessore.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008601.jpg?v=cbe6ca7528c3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4489,6 +4575,7 @@
   "permanentAddressBn": "২৩৬/এ (পুরাতন),১৯৯ (নতুন),পিলু খান সড়ক, ঘোপ যশোর-৭৪০০, যশোর সদর, যশোর, খুলনা বিভাগ",
   "email": "jessore.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008701.jpg?v=672063de05b5",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4541,6 +4628,7 @@
   "permanentAddressBn": "গ্রাম: পাইকপাড়া,ডাকঘর: বাঘারপাড়া-৭৪৭০, বাঘারপাড়া, যশোর, খুলনা বিভাগ",
   "email": "jessore.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008801.jpg?v=0c919d85a34d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4593,6 +4681,7 @@
   "permanentAddressBn": "গ্রাম: পর্ট্রি, ডাকঘর: সরসকাটী-৭৪২০, মনিরামপুর, যশোর, খুলনা বিভাগ",
   "email": "jessore.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013008901.jpg?v=047c2196ceb7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4645,6 +4734,7 @@
   "permanentAddressBn": "গ্রাম: কায়েমখোলা, ১১৯ নং কায়েমখোলা, ডাক: সারুটিয়া-৭৪৫০, কেশবপুর, যশোর, খুলনা বিভাগ",
   "email": "jessore.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009001.jpg?v=fd32d559feac",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4697,6 +4787,7 @@
   "permanentAddressBn": "গ্রাম: আবালপুর, ডাকঘর: মাগুরা-৭৬০০, মাগুরা সদর, মাগুরা, খুলনা বিভাগ",
   "email": "magura.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009101.jpg?v=89477ec94ac7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4749,6 +4840,7 @@
   "permanentAddressBn": "গ্রাম: ৯ নং হাটবাড়িয়া, ডাকঘর: দীঘা-৭৬৩০, মহম্মদপুর, মাগুরা, খুলনা বিভাগ",
   "email": "magura.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009201.jpg?v=f8d6e873c7bb",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4801,6 +4893,7 @@
   "permanentAddressBn": "গ্রাম: খাশিয়াল-(দক্ষিণ), ডাকঘর:খাশিয়াল-৭৫১৪, ্উপজেলা-কালিয়া, জেলা-নড়াইল।, কালিয়া, নড়াইল, খুলনা বিভাগ",
   "email": "narail.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009301.jpg?v=4d8c571389bf",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4853,6 +4946,7 @@
   "permanentAddressBn": "রাস্তা: শহীদ মিজান সড়ক, ডাকঘর-নড়াইল-৭৫০০, উপজেলা-নড়াইল সদর, নড়াইল পৌরসভা, জেলা-নড়াইল।, নড়াইল সদর, নড়াইল, খুলনা বিভাগ",
   "email": "narail.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009401.jpg?v=2b2b8a752b8c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4905,6 +4999,7 @@
   "permanentAddressBn": "গ্রাম-আড়ুয়াবর্নি, ডাকঘর-চিতলমারী-৯৩৬০, উপজেলা-চিতলমারী, জেলা-বাগেরহাট।, চিতলমারী, বাগেরহাট, খুলনা বিভাগ",
   "email": "bagerhat.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009501.jpg?v=404afa62e30a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -4957,6 +5052,7 @@
   "permanentAddressBn": "দেওয়ানবাটী, বাগেরহাট সদর, বাগেরহাট।, বাগেরহাট সদর, বাগেরহাট, খুলনা বিভাগ",
   "email": "bagerhat.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009601.jpg?v=b0dbd984c36e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5009,6 +5105,7 @@
   "permanentAddressBn": "গ্রাম-বড়দিয়া, ডাকঘড়- ইসলামগঞ্জ-৯৩০০, ইউনিয়ন-বাঁশতলী, থানা- রামপাল, জেলা- বাগেরহাট।, রামপাল, বাগেরহাট, খুলনা বিভাগ",
   "email": "bagerhat.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009701.jpg?v=141581113b53",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5061,6 +5158,7 @@
   "permanentAddressBn": "গ্রাম/রাস্তা- কুঠিবাড়ী, ডাকঘড়- মোড়েলগঞ্জ-৯৩২০, উপজেলা- মোড়লগঞ্জ, জেলা-বাগেরহাট।, মোড়েলগঞ্জ, বাগেরহাট, খুলনা বিভাগ",
   "email": "bagerhat.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009801.jpg?v=e76b6d290a0e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5113,6 +5211,7 @@
   "permanentAddressBn": "১৭, সরকার পাড়া, টুটপাড়া, খুলনা, খুলনা সিটি কর্পোরেশন, খুলনা, খুলনা বিভাগ",
   "email": "khulna.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013009901.jpg?v=15415869d526",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5165,6 +5264,7 @@
   "permanentAddressBn": "৯, মতিয়াখালী ৪র্থ গলি, খুলনা সদর, খুলনা (বর্তমান থানা-লবনচরা)।, খুলনা সিটি কর্পোরেশন, খুলনা, খুলনা বিভাগ",
   "email": "khulna.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010001.jpg?v=e38035cd2c3c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5217,6 +5317,7 @@
   "permanentAddressBn": "প্লট নং-৬৩, রোড নং-১১, নতুন কলোনী, ডাকঘর- খুলনা জিপিও-৯০০০, খালিসপুর, খুলনা।, খুলনা সিটি কর্পোরেশন, খুলনা, খুলনা বিভাগ",
   "email": "khulna.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010101.jpg?v=31cd8bd1e326",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5269,6 +5370,7 @@
   "permanentAddressBn": "গ্রাম: আইচগাতী, ডাকঘর: বেলফুলিয়া, রূপসা, খুলনা, খুলনা বিভাগ",
   "email": "khulna.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010201.jpg?v=ce97d214a293",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5321,6 +5423,7 @@
   "permanentAddressBn": "বাড়ি নং: ২২, রোড: ইউসুফ রোড, ডাকঘর: খুলনা, খুলনা সিটি কর্পোরেশন, খুলনা, খুলনা বিভাগ",
   "email": "khulna.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010301.jpg?v=7a7ef4b249c1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5373,6 +5476,7 @@
   "permanentAddressBn": "গ্রাম: ৬নং কয়রা, ডাকঘর: কয়রা-৯২৯০, কয়রা, খুলনা, খুলনা বিভাগ",
   "email": "khulna.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010401.jpg?v=7f603611cfa6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5425,6 +5529,7 @@
   "permanentAddressBn": "গ্রামঃ ফয়জুল্যাপুর, ডাকঘরঃ হামিদপুর, কলারোয়া, সাতক্ষীরা, খুলনা বিভাগ",
   "email": "Satkhira.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010501.jpg?v=894e24568460",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5477,6 +5582,7 @@
   "permanentAddressBn": "গ্রামঃ ধলবাড়ীয়া, ডাকঘর: আগরদাড়ী মাদ্রাসা-৯৪০০, সাতক্ষীরা সদর, সাতক্ষীরা, খুলনা বিভাগ",
   "email": "Satkhira.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010601.jpg?v=30c0707aeab9",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5529,6 +5635,7 @@
   "permanentAddressBn": "গ্রামঃ মাঝ পারুলিয়া, ডাকঘরঃ পারুলিয়া-৯৪৩০, দেবহাটা, সাতক্ষীরা, খুলনা বিভাগ",
   "email": "Satkhira.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010701.jpg?v=0bf8d7694777",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5581,6 +5688,7 @@
   "permanentAddressBn": "ইসমাইলপুর, শ্যামনগর, সাতক্ষীরা।, শ্যামনগর, সাতক্ষীরা, খুলনা বিভাগ",
   "email": "satkhira.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010801.jpg?v=ff1479627103",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5633,6 +5741,7 @@
   "permanentAddressBn": "বাড়ি: ২৩৬,গ্রামঃ কেওড়াবুনিয়া, ডাকঘরঃ আশাখালী-৮৭০০, বরগুনা সদর, বরগুনা, বরিশাল বিভাগ",
   "email": "barguna.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013010901.jpg?v=fc9cfe111210",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5685,6 +5794,7 @@
   "permanentAddressBn": "রাস্তা/ব্লক/গ্রাম: মণিপুর, ডাকঘর: মণিপুর, পাথরঘাটা, বরগুনা, বরিশাল বিভাগ",
   "email": "barguna.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011001.jpg?v=fa96ff3722e0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5737,6 +5847,7 @@
   "permanentAddressBn": "বাড়ি নং: কাঠালতলী চৌধুরী বাড়ী, গ্রাম+ডাকঘর: কাঠালতলী, মির্জাগঞ্জ, পটুয়াখালী, বরিশাল বিভাগ",
   "email": "patuakhali.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011101.jpg?v=5d7e771f6a1d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5789,6 +5900,7 @@
   "permanentAddressBn": "গ্রাম- মদনপুরা, ডাকঘর- মদনপুরা-৮৬২০, বাউফল, পটুয়াখালী, বরিশাল বিভাগ",
   "email": "patuakhali.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011201.jpg?v=249f7606b718",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5841,6 +5953,7 @@
   "permanentAddressBn": "২৩৮/১, মসজিদ মহল্লা, ওয়ার্ড নং-০৫, গলাচিপা পৌরসভা, ডাকঘর- গলাচিপা-৮৬৪০, গলাচিপা, জেলা-পটুয়াখালী।, গলাচিপা, পটুয়াখালী, বরিশাল বিভাগ",
   "email": "patuakhali.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011301.jpg?v=a47df4846cca",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5893,6 +6006,7 @@
   "permanentAddressBn": "হোল্ডিং: ১০২, এতিমখানা সড়ক, ডাকঘর: খেপুপাড়া-৮৬৫০, কলাপাড়া, পটুয়াখালী, বরিশাল বিভাগ",
   "email": "patuakhali.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011401.jpg?v=6087b0b178f0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5945,6 +6059,7 @@
   "permanentAddressBn": "বাড়ী নং-২৫, সড়ক নং ০৭, বারিধারা, কূটনৈতিক অঞ্চল, গুলশান-২, ঢাকা ১২১২।, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "bhola.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011501.jpg?v=6d36ca468de9",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -5997,6 +6112,7 @@
   "permanentAddressBn": "গ্রাম: উত্তর কুড়ালিয়া, ডাকঘর: নূর মিয়ার হাট-৮৩২০, বোরহানউদ্দীন, ভোলা, বরিশাল বিভাগ",
   "email": "bhola.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011601.jpg?v=5ff6f9638e8f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6049,6 +6165,7 @@
   "permanentAddressBn": "বাড়ী নং K-২১, সড়ক নং ২৭, বনানী, ঢাকা ১২১৩।, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "bhola.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011701.jpg?v=782a5492043c",
   "bioBn": "হাফিজ উদ্দিন আহমদ বীর বিক্রম: পেশাগত জীবনী\nহাফিজ উদ্দিন আহমদ ক্রীড়া, সেনা কর্মকর্তা এবং রাজনৈতিক নেতৃত্বের ক্ষেত্রে উল্লেখযোগ‌্য অর্জনের জন্য সুপরিচিত। ১৯৬০-এর দশকে পেশাদার ফুটবলার হতে শুরু করে ২০২৬ সালে জাতীয় সংসদের স্পীকার হওয়া পর্যন্ত তাঁর দীর্ঘ কর্মজীবন অবিচল প্রতিশ্রুতি, দৃঢ়তা এবং জনসেবার এক অনন্য দৃষ্টান্ত।\n\nপ্রারম্ভিক জীবন ও শিক্ষা\n১৯৪৪ সালের ২৯ অক্টোবর ভোলা জেলার লালমোহনে এক সম্ভ্রান্ত বাঙালি মুসলিম পরিবারে হাফিজ উদ্দিন আহমদ জন্মগ্রহণ করেন। তাঁর পিতা ড. আজহার উদ্দিন ছিলেন একজন প্রভাবশালী রাজনৈতিক ব্যক্তিত্ব এবং পাকিস্তান জাতীয় পরিষদের সদস্য। তাঁর মাতা মোসাম্মৎ করিমুন নেছা ছিলেন একজন গৃহিণী। তিনি ১৯৬৫ সালে ঢাকা বিশ্ববিদ্যালয় থেকে রাষ্ট্রবিজ্ঞানে স্নাতকোত্তর (এমএ) ডিগ্রি লাভ করেন, যা তাঁর পরবর্তী রাজনৈতিক জীবনের ভিত্তি স্থাপন করেছিল।\n\nক্রীড়ায় অবদান ও সাফল্য\nসামরিক ও রাজনৈতিক জীবন শুরুর আগে তিনি একজন ফুটবলার হিসেবে বিশেষ খ্যাতি অর্জন করেছিলেন এবং তাঁর সময়ের অন্যতম সেরা প্রতিভাবান খেলোয়ার হিসেবে তিনি স্বীকৃত ছিলেন। একজন গতিশীল ফরোয়ার্ড হিসেবে তিনি মোহামেডান স্পোর্টিং ক্লাবসহ বেশ কিছু শীর্ষস্থানীয় ক্লাবে খেলেছেন। তিনি ১৯৬৭ থেকে ১৯৭১ সালে বাংলাদেশের স্বাধীনতা লাভ করা পর্যন্ত পাকিস্তান জাতীয় ফুটবল দলের প্রতিনিধিত্ব করেছেন। আন্তর্জাতিক পর্যায়ে তিনি ইরান, তুরস্ক এবং মিয়ানমারে ম্যাচ খেলেছেন। তিনি ১৯৬৪-১৯৬৬ সালের মধ্যে ১০০ মিটার এবং ২০০ মিটার স্প্রিন্টে তৎকালীন পূর্ব পাকিস্তানে রেকর্ড খেতাব অর্জন করেন। তাঁর অসাধারণ গতি এবং প্রতিযোগিতামূলক মনোভাব সম্পন্ন ক্রীড়া নৈপুণ‌্য তাঁকে দক্ষিণ এশিয়ার ফুটবলে একটি বিশিষ্ট অবস্থানে নিয়ে যায়। ফুটবলে তাঁর এই অবদানের স্বীকৃতিস্বরূপ, ২০০৫ সালে ফিফা (FIFA) তাঁকে তাদের শতবর্ষী 'অর্ডার অব মেরিট'-এ ভূষিত করে, যা বিশ্ব ক্রীড়ায় অন্যতম মর্যাদাপূর্ণ সম্মাননা।\n\nবাংলাদেশের স্বাধীনতা যুদ্ধে সামরিক অবদান\n১৯৭১ সালের বাংলাদেশের স্বাধীনতা যুদ্ধে হাফিজ উদ্দিন আহমদ গভীর দেশপ্রেমের পরিচয় দেন। পাকিস্তান সেনাবাহিনীতে কমিশনপ্রাপ্ত কর্মকর্তা হিসেবে তিনি ক্যাপ্টেন থাকাকালীন কৌশলগতভাবে গুরুত্বপূর্ণ বিভিন্ন সেক্টরে, বিশেষ করে ৮ নম্বর সেক্টর এবং 'জেড' ফোর্সের অধীনে সম্মুখ সমরে সক্রিয়ভাবে অংশ নেন। ১৯৭১ সালের ৩০শে মার্চ তিনি ইস্ট বেঙ্গল রেজিমেন্ট এর একজন কর্মকর্তা হিসেবে যশোর সেনানিবাসে পাকিস্তান সরকারের বিরুদ্ধে বিদ্রোহ ঘোষণা করেন। সেই সময় তিনি পাকিস্তানি সেনাবাহিনীর বিরুদ্ধে প্রায় আট ঘণ্টা যুদ্ধ করেন এবং দুইশত সৈন্য নিয়ে সেনানিবাস থেকে বেরিয়ে আসেন। তাঁর অসামান্য সাহসিকতা এবং যুদ্ধকৌশলের জন্য তাঁকে বাংলাদেশের তৃতীয় সর্বোচ্চ সামরিক পদক 'বীর বিক্রম'-এ ভূষিত করা হয়, যা তাঁকে একজন বিশিষ্ট বীর মুক্তিযোদ্ধা হিসেবে প্রতিষ্ঠিত করে। তাঁর মহান আত্মত্যাগ দেশের স্বাধীনতা অর্জনে বড় ভূমিকা রাখে। ১৯৭১ সালের ১৫ই ডিসেম্বর তৎকালীন মেজর জিয়াউর রহমানের নেতৃত্বাধীন 'জেড' ফোর্সের অধীনে দিনব্যাপী যুদ্ধের পর তিনি সিলেট শহর দখল করেন।\n\nরাজনৈতিক জীবন\nজনাব হাফিজ ১৯৮৬ সালে ভোলা-৩ সংসদীয় আসন থেকে প্রথম সংসদ সদস্য নির্বাচিত হন এবং পরবর্তীতে ১৯৯২ সালে তিনি বিএনপিতে যোগদান করেন। তাঁর সংসদীয় কর্মজীবনে তিনি ৩য় (১৯৮৬), ৪র্থ (১৯৮৮), ৫ম (১৯৯১), ৬ষ্ঠ (১৯৯৬), ৭ম (১৯৯৬), ৮ম (২০০১) এবং ১৩শ (২০২৬) জাতীয় সংসদে সংসদ সদস‌্য হিসেবে বিজয়ী হন। রাজনৈতিক জীবনে তিনি বিএনপির দলীয় পদ ও স্থায়ী কমিটিতে যোগদান করেন যা দলে তাঁর বিশেষ মর্যাদার প্রতিফলন। পরবর্তীতে তিনি বিএনপির সর্বোচ্চ নীতিনির্ধারণী ফোরাম 'জাতীয় স্থায়ী কমিটি'র সদস্য নির্বাচিত হন।\nমন্ত্রী হিসেবে তিনি একাধিক গুরুত্বপূর্ণ মন্ত্রণালয়ে সাফল‌্যের সাথে দায়িত্ব পালন করেছেন, যার মধ্যে রয়েছে বাণিজ্য প্রতিমন্ত্রী (১৯৯৬), পানিসম্পদ মন্ত্রী, বাণিজ্য মন্ত্রী ও পাট মন্ত্রী (২০০১-২০০৬) এবং অতি সম্প্রতি মুক্তিযুদ্ধ বিষয়ক মন্ত্রী (২০২৬) হিসেবে দায়িত্ব পালন।\n২০২৬ সালের মার্চ মাসে তিনি সর্বসম্মতিক্রমে বাংলাদেশের ত্রয়োদশ জাতীয় সংসদের স্পীকার নির্বাচিত হন এবং মহামান্য রাষ্ট্রপতি তাঁকে শপথ বাক্য পাঠ করান। জাতীয় সংসদের স্পীকার হিসেবে তিনি সংসদীয় কার্যক্রম পরিচালনায় জাতীয় সংসদের অধিবেশনে সভাপতিত্ব করেন এবং বাংলাদেশের গণতান্ত্রিক উন্নয়নের এক গুরুত্বপূর্ণ সন্ধিক্ষণে নেতৃত্ব দিয়ে যাচ্ছেন।\n\nব্যক্তিগত জীবন ও মতাদর্শ\nবিশিষ্ট শিক্ষাবিদ দিলারা হাফিজ ছিলেন হাফিজ উদ্দিন আহমদ এর সহধর্মিণী। দিলারা হাফিজ ঢাকা ইডেন মহিলা কলেজ ও শহীদ সোহরাওয়ার্দী কলেজের অধ্যক্ষ এবং মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তরের মহাপরিচালক (ডিজি) হিসেবে দায়িত্ব পালন করেন। দিলারা হাফিজ ২০২৬ সালের ২৮শে মার্চ মৃত্যুবরণ করেন।\nহাফিজ উদ্দিন আহমদ দুই পুত্র ও এক কন‌্যার পিতা। পুত্র শাহরুখ হাফিজ পেশায় একজন কম্পিউটার প্রকৌশলী ও তাহারাত হাফিজ একজন ব্যবসায়ী এবং কন‌্যা শামা‌মা শাহরীন হাফিজ কানাডার উইন্ডসর বিশ্ববিদ্যালয় থেকে এমবিএ সম্পন্ন করেছেন। ব‌্যক্তিগত ও খেলোয়াড় জীবনে শৃঙ্খলাবোধ, সামরিক নিয়মানুবর্তীতা, রাজনৈতিক অভিজ্ঞতা এবং সততার জন‌্য তিনি সর্বজনস্বীকৃত ।\nতিনি স্বাধীনতা যুদ্ধের মূল চেতনার একজন একনিষ্ঠ সমর্থক এবং একটি শক্তিশালী গণতন্ত্র, প্রাতিষ্ঠানিক জবাবদিহিতা, জাতীয় উন্নয়ন ও আইনের শাসনের পক্ষে সর্বদা সোচ্চার। সমসাময়িক বিষয়াবলীতে তাঁর সুস্পষ্ট অবস্থান ও অকপট দৃষ্টিভঙ্গি তাঁকে একজন নীতিবান রাজনীতিক হিসেবে প্রতিষ্ঠিত করেছে।\n\nকীর্তি\nহাফিজ উদ্দিন আহমদের কর্মময় জীবন বিভিন্ন ক্ষেত্রে সাফল্যের এক বিশাল ক্যানভাস: তিনি একাধারে ফিফা-স্বীকৃত ফুটবলার, বীর বিক্রম খেতাবপ্রাপ্ত বীর মুক্তিযোদ্ধা, একজন পদকপ্রাপ্ত সামরিক কর্মকর্তা, সাতবারের নির্বাচিত সংসদ সদস্য এবং একজন অভিজ্ঞ মন্ত্রী। বর্তমানে জাতীয় সংসদের স্পীকার হিসেবে দায়িত্ব পালনরত তাঁর ছয় দশকেরও বেশি সময়ের এই কর্মজীবন জাতীয় অগ্রগতির প্রতি তাঁর দায়বদ্ধতাকে প্রকাশ করে এবং বাংলাদেশের গণতান্ত্রিক বিবর্তনে ব্যক্তিগত উৎকর্ষ ও জনসেবার এক অনন্য মেলবন্ধন ফুটিয়ে তোলে।",
   "summaryBn": "হাফিজ উদ্দিন আহমদ বীর বিক্রম একজন বাংলাদেশি রাজনীতিবিদ ও মুক্তিযোদ্ধা, যিনি ১৯৭১ সালের মুক্তিযুদ্ধে বীরত্বপূর্ণ অবদানের জন্য বীর বিক্রম খেতাবে ভূষিত হন। বর্তমানে তিনি বাংলাদেশের ১৩তম জাতীয় সংসদের স্পিকার হিসেবে দায়িত্ব পালন করছেন।",
   "term": {
@@ -6103,6 +6220,7 @@
   "permanentAddressBn": "গ্রাম/হোল্ডিং- ক্বারী বাড়ী, গ্রাম/রাস্তা- শরীফ পাড়া, ওয়ার্ড নং-০৫, চরফ্যাশন পৌরসভা, ডাকঘর- চরফ্যাশন-৮৩৪০, উপজেলা-চরফ‌্যাশন, জেলা-ভোলা।, চরফ্যাশন, ভোলা, বরিশাল বিভাগ",
   "email": "bhola.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011801.jpg?v=26cfbc0e38a8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6155,6 +6273,7 @@
   "permanentAddressBn": "বাসা নং-০১, রোড নং-০১, বনানী আবাসিক এলাকা, ঢাকা-১২১৩।, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "barisal.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013011901.jpg?v=dc8b4dbf5f27",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6207,6 +6326,7 @@
   "permanentAddressBn": "গ্রাম: চাংগুরিয়া, গুঠিয়া, ডাকঘর: গুঠিয়া-৮২০০, উজিরপুর, বরিশাল, বরিশাল বিভাগ",
   "email": "barisal.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012001.jpg?v=7232d0e69bd3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6259,6 +6379,7 @@
   "permanentAddressBn": "গ্রাম: পূর্ব হোসনাবাদ, ডাকঘর: গাছুয়া-৮২৫০, মুলাদী, বরিশাল, বরিশাল বিভাগ",
   "email": "barisal.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012101.jpg?v=b4d2c6e3ff8a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6311,6 +6432,7 @@
   "permanentAddressBn": "৫২৯, বদরপুর, মেহেন্দিগঞ্জ-৮২৭০, মেহেন্দিগঞ্জ পৌরসভা, বরিশাল ।, মেহেন্দীগঞ্জ, বরিশাল, বরিশাল বিভাগ",
   "email": "barisal.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012201.jpg?v=2f964a30c67a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6363,6 +6485,7 @@
   "permanentAddressBn": "সৈয়দ ভিলা, সাং-লাকুটিয়া সড়ক, সাধুরবটতলা, পশ্চিম কাউন্দিয়া, ডাকঘর-বরিশাল, বরিশাল সদর,বরিশাল ।, বরিশাল সদর, বরিশাল, বরিশাল বিভাগ",
   "email": "barisal.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012301.jpg?v=02d420d2cc8e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6415,6 +6538,7 @@
   "permanentAddressBn": "বাড়ি নংঃ খান বাড়ী গ্রামঃ কৃষ্ণকাঠী, ডাকঘরঃ কৃষ্ণকাঠী-৮২৮০, বাকেরগঞ্জ, বরিশাল, বরিশাল বিভাগ",
   "email": "barisal.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012401.jpg?v=6ee201b9023b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6467,6 +6591,7 @@
   "permanentAddressBn": "গ্রাম: বড়ইয়া, ডাকঘর: পালট-৮৪১০, রাজাপুর, ঝালকাঠী, বরিশাল বিভাগ",
   "email": "jhalokathi.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012501.jpg?v=c47e87d2a9d0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6519,6 +6644,7 @@
   "permanentAddressBn": "বাড়ি নং-১২, রোড নং- ০৩ সেক্টর নং- ১০, উত্তরা, ঢাকা।, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "jhalokathi.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012601.jpg?v=4168b18ede24",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6571,6 +6697,7 @@
   "permanentAddressBn": "সাঈদখালী, উপজেলা- ইন্দুরকানী ডাকঘর- বালিপাড়া, , জেলা- পিরোজপুর, বরিশাল ।, ইন্দুরকানী, পিরোজপুর, বরিশাল বিভাগ",
   "email": "pirojpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012701.jpg?v=a0084c9551e6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6623,6 +6750,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং: জোমাদ্দার বাড়ী, গ্রাম/রাস্তা: চরখালী ডাকঘর: চরখালী-৮৫০২, ভান্ডারিয়া, পিরোজপুর।, ভান্ডারিয়া, পিরোজপুর, বরিশাল বিভাগ",
   "email": "pirojpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012801.jpg?v=d9d813936ec6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6675,6 +6803,7 @@
   "permanentAddressBn": "বাড়ি নং: ৩৭, মোতাহার আলী সড়ক, উত্তর মিঠাখালী, মঠবাড়ীয়া-৮৫৬০, মঠবাড়িয়া, পিরোজপুর, বরিশাল বিভাগ",
   "email": "pirojpur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013012901.jpg?v=64277f2554a0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6727,6 +6856,7 @@
   "permanentAddressBn": "গ্রাম- মহিষমারা, ইউনিয়ন- মহিষমারা, ডাকঘর- আশ্রা-১৯৯৬, মধুপুর, টাঙ্গাইল।, মধুপুর, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013001.jpg?v=3434c67587c8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6779,6 +6909,7 @@
   "permanentAddressBn": "গ্রামঃ গুলিপেচা, ডাকঘর-অর্জুনা, উপজেলা-গোপালপুর, জেলা-টাংগাইল।, গোপালপুর, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013101.jpg?v=ecc650f97533",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6831,6 +6962,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং-খান বাড়ী, গ্রাম/রাস্তা-বাগুন্তা, ডাকঘর-রাজাফৈর-১৯৭০, ঘাটাইল, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013201.jpg?v=109d4cd90485",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6883,6 +7015,7 @@
   "permanentAddressBn": "বাড়ি নং: শিকদার বাড়ী গ্রাম- রাজাবাড়ী, ডাকঘর- এলেঙ্গা-১৯৭৪, কালিহাতী, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013301.jpg?v=ce8cf5e23bce",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6935,6 +7068,7 @@
   "permanentAddressBn": "গ্রাম-বি. বি. গার্লস স্কুল রোড, রেজিষ্ট্রিপাড়া, ডাকঘর- টাঙ্গাইল সদর, উপজেলা- টাঙ্গাইল সদর, জেলা-টাঙ্গাইল।, টাঙ্গাইল সদর, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013401.jpg?v=9d73833dbb86",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -6987,6 +7121,7 @@
   "permanentAddressBn": "গ্রাম- নাগরপুর, ডাকঘর- নাগরপুর-১৯৩৬, নাগরপুর, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013501.jpg?v=5e65e238c53d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7039,6 +7174,7 @@
   "permanentAddressBn": "গ্রাম- গাড়াইল,ত্রিমোহন ডাকঘর- মির্জাপুর-১৯৪০, মির্জাপুর, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.7@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013601.jpg?v=d0662eaa198d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7091,6 +7227,7 @@
   "permanentAddressBn": "বাসাইল পশ্চিম পাড়া, বাসাইল, বাসাইল পৌরসভা, টাঙ্গাইল।, বাসাইল, টাঙ্গাইল, ঢাকা বিভাগ",
   "email": "tangail.8@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013701.jpg?v=465f8afbf5ca",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7143,6 +7280,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং- প্রধানবাড়ী, গ্রাম/রাস্তা- কালিকাপুর, ডাকঘর- দেওয়ানগঞ্জ-২০৩০, দেওয়ানগঞ্জ, জামালপুর, ময়মনসিংহ বিভাগ",
   "email": "jamalpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013801.jpg?v=db5b39fd6a37",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7195,6 +7333,7 @@
   "permanentAddressBn": "সরকার পাড়া, গাইবান্ধা, ইসলামপুর, জামালপুর।, ইসলামপুর, জামালপুর, ময়মনসিংহ বিভাগ",
   "email": "jamalpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013013901.jpg?v=e0f821616495",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7247,6 +7386,7 @@
   "permanentAddressBn": "গ্রাম: নাউঘাটা, ডাকঘর: থুরী-২১১০, মেলান্দহ, জামালপুর, ময়মনসিংহ বিভাগ",
   "email": "jamalpur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014001.jpg?v=19bbc113ba6b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7299,6 +7439,7 @@
   "permanentAddressBn": "গ্রাম: মূলবাড়ী, ডাকঘর: সরিষাবাড়ী-১২৫০, সরিষাবাড়ী, জামালপুর, ময়মনসিংহ বিভাগ",
   "email": "jamalpur.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014101.jpg?v=c1fab75939d0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7351,6 +7492,7 @@
   "permanentAddressBn": "১০৯৭, রশিদপুর, জামালপুর, ওয়ার্ড নং-১০, জামালপুর সদর, জামালপুর, ময়মনসিংহ বিভাগ",
   "email": "jamalpur.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014201.jpg?v=6fc920484677",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7403,6 +7545,7 @@
   "permanentAddressBn": "গ্রাম: কুমরী মুর্দি পাড়া, ডাঘর: বাজিতপুর-২১০০, শেরপুর সদর, শেরপুর, ময়মনসিংহ বিভাগ",
   "email": "sherpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014301.jpg?v=7d150ce03bc0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7455,6 +7598,7 @@
   "permanentAddressBn": "গ্রাম: চেয়ারম্যান বাড়ী, ডাকঘর: নারায়নখোলা-২১৫০, নকলা, শেরপুর, ময়মনসিংহ বিভাগ",
   "email": "sherpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014401.jpg?v=0dea7eb7c81a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7507,6 +7651,7 @@
   "permanentAddressBn": "গ্রাম- হালগড়া, ডাকঘর- হালগড়া-২১০০,, শ্রীবরদী , শেরপুর, ময়মনসিংহ বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014501.jpg?v=0bb737d84ecd",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7559,6 +7704,7 @@
   "permanentAddressBn": "গ্রাম: নাশুল্লা, ডাকঘর: নাশুল্লাহ বাজার-২২৫০, হালুয়াঘাট, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014601.jpg?v=963541477cdd",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7611,6 +7757,7 @@
   "permanentAddressBn": "গ্রাম: বাশুয়া কবিরপুর, ডাকঘর: রহিমগঞ্জ, ফুলপুর, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014701.jpg?v=e8616240d7dc",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7663,6 +7810,7 @@
   "permanentAddressBn": "্রগ্রাম: তাতরা কান্দা, সিধ্লা, ডাক-সিধলা-২৪১১, গৌরীপুর, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014801.jpg?v=cb77d02b6a7c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7715,6 +7863,7 @@
   "permanentAddressBn": "বাড়ি নং: ৪৯/বি, রাস্তা: রাম বাবু রোড, ডাকঘর: ময়মনসিংহ সদর -২২০০, ময়মনসিংহ সদর, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013014901.jpg?v=638931a64326",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7767,6 +7916,7 @@
   "permanentAddressBn": "গ্রাম: কান্দিগাঁও, ডাকঘর: মুক্তাগাছা-২২১০, মুক্তাগাছা, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015001.jpg?v=fa7cd75c9e50",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7819,6 +7969,7 @@
   "permanentAddressBn": "বাড়ি নং: খলিফা বাড়ী, গ্রাম+ডাকঘর: তেলীগ্রাম-২২১৬, ফুলবাড়ীয়া, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015101.jpg?v=5771f92cd56c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7871,6 +8022,7 @@
   "permanentAddressBn": "সিংরাইল, কাঠাল বাজার, ত্রিশাল, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.7@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015201.jpg?v=989b3f25d16d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7923,6 +8075,7 @@
   "permanentAddressBn": "বাসা: বসুন্ধরা রোড, ঈশ্বরগঞ্জ, উপজেলা- ময়মনসিংহ সদর, ঈশ্বরগঞ্জ, জেলা- ময়মনসিংহ।, ময়মনসিংহ সদর, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.8@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015301.jpg?v=9fb06a0fbc77",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -7975,6 +8128,7 @@
   "permanentAddressBn": "বাহাদুরপুর হাউজ, নান্দাইল, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.9@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015401.jpg?v=505e19ad9eee",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8027,6 +8181,7 @@
   "permanentAddressBn": "গ্রাম: সৈয়দপাড়া, ডাকঘর: মাইজবাড়ী, থানা: পাগলা, উপজেলা-গফরগাঁও, জেলা-ময়মনসিংহ।, গফরগাঁও, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.10@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015501.jpg?v=d6376fd0dc8c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8079,6 +8234,7 @@
   "permanentAddressBn": "সাং-পারুলদিয়া, ডাকঘর: জামিরাপাড়া, উপজেলা-ভালুকা, জেলা-ময়মনসিংহ।, ভালুকা, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": "mymensingh.11@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015601.jpg?v=d66a7ba11bd1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8131,6 +8287,7 @@
   "permanentAddressBn": "গ্রাম: চত্রংপুর, ডাক-কলমাকান্দা, কলমাকান্দা, নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": "netrokona.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015701.jpg?v=2f0f86d57e5c",
   "bioBn": "ব্যারিষ্টার কায়সার কামাল একজন বিশিষ্ট বাংলাদেশি রাজনীতিবিদ ও সুপ্রিম কোর্টের সিনিয়র এডভোকেট, বর্তমানে বাংলাদেশের ১৩তম সংসদের ডেপুটি স্পীকার হিসেবে দায়িত্ব পালন করছেন। নেত্রকোণা-১ আসনের প্রতিনিধিত্বকারী তিনি তার বিস্তৃত আইনগত ও সরকারি অভিজ্ঞতা নেতৃত্বে নিয়ে আসেন, পূর্বে ভূমি মন্ত্রণালয়ের প্রতিমন্ত্রী হিসেবে কর্মরত ছিলেন।\n\n১৯৭২ সালে নেত্রকোণায় জন্মগ্রহণ করেন। ঢাকা বিশ্ববিদ্যালয় থেকে স্নাতক ও স্নাতকোত্তর ডিগ্রি অর্জনের পর যুক্তরাজ্যে আইন শিক্ষা সম্পন্ন করেন, যেখানে তিনি এলএলবি (অনার্স) লাভ করেন এবং ২০০৫ সালে দ্য অনারেবল সোসাইটি অফ লিঙ্কন’স ইন কর্তৃক বারে অন্তর্ভুক্ত হন।\n\n২০২৬ সালের মার্চে সর্বসম্মতিক্রমে ডেপুটি স্পীকার হিসেবে নির্বাচিত, ব্যারিষ্টার কামাল অন্তর্ভুক্তিমূলক অংশগ্রহণ বৃদ্ধি, স্বচ্ছ শাসন নিশ্চিত করা এবং দেশের কেন্দ্রীয় গণতান্ত্রিক সংস্থায় নিরপেক্ষ নেতৃত্ব বজায় রাখার ক্ষেত্রে অঙ্গীকারবদ্ধ রয়েছেন।",
   "summaryBn": "ব্যারিষ্টার কায়সার কামাল একজন বিশিষ্ট বাংলাদেশি রাজনীতিবিদ ও সুপ্রিম কোর্টের সিনিয়র এডভোকেট, বর্তমানে বাংলাদেশের ১৩তম সংসদের ডেপুটি স্পীকার হিসেবে দায়িত্ব পালন করছেন। নেত্রকোণা-১ আসনের প্রতিনিধিত্বকারী তিনি তার বিস্তৃত আইনগত ও সরকারি অভিজ্ঞতা নেতৃত্বে নিয়ে আসেন, পূর্বে ভূমি মন্ত্রণালয়ের প্রতিমন্ত্রী হিসেবে কর্মরত ছিলেন।\n\n১৯৭২ সালে নেত্রকোণায় জন্মগ্রহণ করেন। ঢাকা বিশ্ববিদ্যালয় থেকে স্নাতক ও স্নাতকোত্তর ডিগ্রি অর্জনের পর যুক্তরাজ্যে আইন শিক্ষা সম্পন্ন করেন, যেখানে তিনি এলএলবি (অনার্স) লাভ করেন এবং ২০০৫ সালে দ্য অনারেবল সোসাইটি অফ লিঙ্কন’স ইন কর্তৃক বারে অন্তর্ভুক্ত হন।\n\n২০২৬ সালের মার্চে সর্বসম্মতিক্রমে ডেপুটি স্পীকার হিসেবে নির্বাচিত, ব্যারিষ্টার কামাল অন্তর্ভুক্তিমূলক অংশগ্রহণ বৃদ্ধি, স্বচ্ছ শাসন নিশ্চিত করা এবং দেশের কেন্দ্রীয় গণতান্ত্রিক সংস্থায় নিরপেক্ষ নেতৃত্ব বজায় রাখার ক্ষেত্রে অঙ্গীকারবদ্ধ রয়েছেন।",
   "term": {
@@ -8185,6 +8342,7 @@
   "permanentAddressBn": "৪১২/২, হাসপাতাল রোড, জয়নগর নেত্রকোণা সদর, নেত্রকোণা।, নেত্রকোণা সদর, নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": "netrokona.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015801.jpg?v=8e8a4ca70754",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8237,6 +8395,7 @@
   "permanentAddressBn": "গ্রামঃ বাদে আঠারবাড়ী, ডাকঘরঃ কেন্দুয়া-২৪৮০, কেন্দুয়া পৌরসভা, জেলা-নেত্রকোনা।, কেন্দুয়া, নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": "netrokona.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013015901.jpg?v=5666fd399c68",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8289,6 +8448,7 @@
   "permanentAddressBn": "গ্রাম: বাড়ীভাদেরা, ডাকঘর: জাহঙ্গীরপুর, মদন , নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": "netrokona.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016001.jpg?v=283bee109657",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8341,6 +8501,7 @@
   "permanentAddressBn": "গ্রাম: নারান্দিয়া, ডাকঘর: হিরনপু-২৪০০, পূর্বধলা, নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": "netrokona.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016101.jpg?v=9580152a0ef8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8393,6 +8554,7 @@
   "permanentAddressBn": "বাসা: ৬০৪, গ্রাম: গাইটাল-১, ডাকঘর: কিশোরগঞ্জ-২৩০০, কিশোরগঞ্জ সদর, কিশোরগঞ্জ পৌরসভা, জেলা-কিশোরগঞ্জ।, কিশোরগঞ্জ সদর, কিশোরগঞ্জ, ঢাকা বিভাগ",
   "email": "kishoreganj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016201.jpg?v=e1614e25a982",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8445,6 +8607,7 @@
   "permanentAddressBn": "গ্রাম- সৈয়দগাঁও পূর্বপাড়া, সৈয়দগাঁও, ডাকঘর- আঙ্গীয়াদী, উপজেলা-পাকুন্দিয়া, জেলা-কিশোরগঞ্জ।, পাকুন্দিয়া, কিশোরগঞ্জ, ঢাকা বিভাগ",
   "email": "kishoreganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016301.jpg?v=6a27e77361a6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8497,6 +8660,7 @@
   "permanentAddressBn": "গ্রামঃ বৈরাটিয়া পাড়া, ডাকঘরঃ নামাপাড়া, করিমগঞ্জ, কিশোরগঞ্জ, ঢাকা বিভাগ",
   "email": "kishoreganj.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016401.jpg?v=d182ba1aaba7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8549,6 +8713,7 @@
   "permanentAddressBn": "করনসী, করনসী, জয়সিদ্ধি, ইটনা, কিশোরগঞ্জ, ঢাকা বিভাগ",
   "email": "kishoreganj.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016501.jpg?v=aa88546f523a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8601,6 +8766,7 @@
   "permanentAddressBn": "রহমান ম্যানশন, গ্রাম: তৈঘরিয়া, ডাকঘর: সরারচর, বাজিতপুর, কিশোরগঞ্জ, ঢাকা বিভাগ",
   "email": "kishoreganj.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016601.jpg?v=81d7b42feddc",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8653,6 +8819,7 @@
   "permanentAddressBn": "গ্রাম: বেতিয়ারকান্দি, ডাকঘর: কুলিয়ারচর-২৩৪০, কুলিয়ারচর, কিশোরগঞ্জ, ঢাকা বিভাগ",
   "email": "kishoreganj.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016701.jpg?v=e982974f2aee",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8705,6 +8872,7 @@
   "permanentAddressBn": "৬৯, শহীদ স্বরনী সড়ক, উত্তর সেওতা, ডাকঘরঃ মানিকগঞ্জ সদর-১৮০০, মানিকগঞ্জ সদর, মানিকগঞ্জ, ঢাকা বিভাগ",
   "email": "manikganj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016801.jpg?v=a8e04fb57d1d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8757,6 +8925,7 @@
   "permanentAddressBn": "চারিগ্রাম, নর্থ চারিগ্রাম-১৮২০, সিংগাইর, মানিকগঞ্জ, ঢাকা বিভাগ",
   "email": "manikganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013016901.jpg?v=e5b9f66f6ce3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8809,6 +8978,7 @@
   "permanentAddressBn": "হারুণার রশিদ খান মুন্নুর বাড়ী, গ্রাম: গিলন্ড ডাকঘর: জয়নগর- ১৮০০, মানিকগঞ্জ সদর, মানিকগঞ্জ, ঢাকা বিভাগ",
   "email": "manikganj.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017001.jpg?v=b1736b8a137d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8861,6 +9031,7 @@
   "permanentAddressBn": "১৩নং- গোপালপুর, সিরাজদিখান, মুন্সিগঞ্জ, ঢাকা বিভাগ",
   "email": "munshiganj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017101.jpg?v=47f80bb321ec",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8913,6 +9084,7 @@
   "permanentAddressBn": "গ্রাম: হাড়িদিয়া, ডাকঘর: হাড়িদিয়া, উপজেলা-লৌহজং, জেলা-মুন্সিগঞ্জ।, লৌহজং, মুন্সিগঞ্জ, ঢাকা বিভাগ",
   "email": "munshiganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017201.jpg?v=e089e870916c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -8965,6 +9137,7 @@
   "permanentAddressBn": "গ্রাম: লক্ষীপুর, লক্ষীপুর, ডাকঘর: ভবেরচর-১৫১০, গজারিয়া, মুন্সিগঞ্জ, ঢাকা বিভাগ",
   "email": "munshiganj.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017301.jpg?v=8036a5c5db26",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9017,6 +9190,7 @@
   "permanentAddressBn": "গ্রাম: পুকুরপাড় কলাকুপা, ডাকঘর: নবাবগঞ্জ, উপজেলা- নবাবগঞ্জ, জেলা-ঢাকা।, নবাবগঞ্জ, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017401.jpg?v=2320fda1fa65",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9069,6 +9243,7 @@
   "permanentAddressBn": "গ্রাম- বয়াতীকান্দি, ডাকঘর- ইটাভাড়া-১৩১৩, কেরানীগঞ্জ, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017501.jpg?v=c7328061407d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9121,6 +9296,7 @@
   "permanentAddressBn": "বাসা: ০১, গ্রাম: মির্জাপুর, ডাকঘর: তেঘরিয়া-১৩১১, কেরানীগঞ্জ, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017601.jpg?v=bac9ded6a960",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9173,6 +9349,7 @@
   "permanentAddressBn": "গ্রাম- পশ্চিম চরামদ্দি, ডাকঘর- রানীর হাট-৮২৮১, ইউনিয়ন: চরামদ্দি, বাকেরগঞ্জ, বরিশাল, বরিশাল বিভাগ",
   "email": "dhaka.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017701.jpg?v=72086d8a8620",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9225,6 +9402,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং: ৩৪৬/৩, গ্রাম/রাস্তা: নিউ টাউন, ডাকঘর: সারুলিয়া-১৩৬১, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017801.jpg?v=1d0d6f9b6fdd",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9277,6 +9455,7 @@
   "permanentAddressBn": "বাড়ি নং: ৩/১, রাস্তা: ২য় লেন গোপিবাগ, ডাকঘর ওয়ারি-১২০৩, মতিঝিল, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013017901.jpg?v=9d8c07bb00c1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9329,6 +9508,7 @@
   "permanentAddressBn": "বাড়ী-১৯/১, বিসিসি রোড, ওয়ারী, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.7@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018001.jpg?v=cf0bd0d42528",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9381,6 +9561,7 @@
   "permanentAddressBn": "৮৭১, দক্ষিণ শাহজাহানপুর,, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.8@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018101.jpg?v=8c92d1babe3f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9433,6 +9614,7 @@
   "permanentAddressBn": "২০, পূর্ব মাদারকে, ২নং রোড শরীফবাগ, পূর্ব মাদারটেক, ডাকঘর: বাসাবো-১২১৪, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.9@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018201.jpg?v=51fb657c3aa7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9485,6 +9667,7 @@
   "permanentAddressBn": "গ্রাম: গাওলা, ডাক-গাওলা বাজার,, মোল্লাহাট, বাগেরহাট, খুলনা বিভাগ",
   "email": "dhaka.10@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018301.jpg?v=0f7060893b81",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9537,6 +9720,7 @@
   "permanentAddressBn": "এইচ ৮৪/সি, দক্ষিন বনশ্রী, গোড়ান, ডাকঘর-খিলগাঁও টিএসও-১২১৯, থানা-খিলগাঁও, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.11@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018401.jpg?v=25d9f171c0b4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9589,6 +9773,7 @@
   "permanentAddressBn": "বাসা-৯৪, ফ্লাট-৪-বি, তেজকুনী পাড়া, তেজগাঁও, ঢাকা-১২১৫, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.12@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018501.jpg?v=10518c07a0d7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9641,6 +9826,7 @@
   "permanentAddressBn": "বাসা নং-১৫, রোড নং-৮৪, গুলশান-২, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.13@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018601.jpg?v=c5a9efbad62f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9693,6 +9879,7 @@
   "permanentAddressBn": "১২,রোড-১,ব্লক-জি, সেকশন-২, মিরপুর, ঢাকা, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.14@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018701.jpg?v=6f2f71349289",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9745,6 +9932,7 @@
   "permanentAddressBn": "বাসা নং: ১৭, রোড নং:২, পপুলার হাউজিং-১, বড়বাগ, মিরপুর, ঢাকা-১২১৬, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.15@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018801.jpg?v=a6f956a42d72",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9799,6 +9987,7 @@
   "permanentAddressBn": "বাড়ি নং-১, গ্রাম- নটাবাড়ী, ডাকঘর- কান্দিরহাট-৫৪৫০, পীরগাছা, রংপুর, রংপুর বিভাগ",
   "email": "dhaka.16@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013018901.jpg?v=b3b95a098a6f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9851,6 +10040,7 @@
   "permanentAddressBn": null,
   "email": "dhaka.17@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019001.jpg?v=9891e0927f5e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9905,6 +10095,7 @@
   "permanentAddressBn": "গ্রাম: উত্তর চর কুমারিয়া, উপজেলা: সখীপুর, ডাকঘর: চর বয়রা-৮০৩০, শরীয়তপুর সদর, শরীয়তপুর, ঢাকা বিভাগ",
   "email": "dhaka.18@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019101.jpg?v=79dd26cb7789",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -9957,6 +10148,7 @@
   "permanentAddressBn": "গ্রাম: জিরাবো, ডাকঘর: জিরাবো-১৩৪১, সাভার, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.19@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019201.jpg?v=a0158d135276",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10009,6 +10201,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং-১১৮,গ্রাম/রাস্তা-আইংগন, ডাকঘর: ধামরাই-১৩৫০, ধামরাই, ঢাকা, ঢাকা বিভাগ",
   "email": "dhaka.20@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019301.jpg?v=3d57f2cceca8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10061,6 +10254,7 @@
   "permanentAddressBn": "সাবেক ডি-২০, বর্তমান এ-২০, পীরের টেকী কালিয়াকৈর, গাজীপুর, কালিয়াকৈর, গাজীপুর, ঢাকা বিভাগ",
   "email": "gazipur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019401.jpg?v=3efbb77ea0be",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10113,6 +10307,7 @@
   "permanentAddressBn": "মন্ত্রী বাড়ী, দক্ষিন সালনা, সালনা বাজার, ওয়ার্ড নং-১৯, গাজীপুর সিটি কর্পোরেশন, গাজীপুর সদর, গাজীপুর, ঢাকা |, গাজীপুর সিটি কর্পোরেশন, গাজীপুর, ঢাকা বিভাগ",
   "email": "gazipur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019501.jpg?v=6f183953809a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10165,6 +10360,7 @@
   "permanentAddressBn": "বাসা-৬৫৩, গ্রাম- টেপিরবাড়ী, ডাকঘর- টেংরা, পোস্ট কোড-১৭৪০ উপজেলা- শ্রীপুর, জেলা- গাজীপুর।, শ্রীপুর, গাজীপুর, ঢাকা বিভাগ",
   "email": "gazipur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019601.jpg?v=7a829b7e8b9b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10217,6 +10413,7 @@
   "permanentAddressBn": "গ্রাম- বেলাশী, ডাকঘর- রায়েদ, কাপাসিয়া, গাজীপুর, ঢাকা বিভাগ",
   "email": "gazipur.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019701.jpg?v=f85bfb02cbc8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10269,6 +10466,7 @@
   "permanentAddressBn": "গ্রাম: বরতুল, ডাক-সোম নতুন বাজার,, কালীগঞ্জ, গাজীপুর, ঢাকা বিভাগ",
   "email": "gazipur.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019801.jpg?v=8de488359c9d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10321,6 +10519,7 @@
   "permanentAddressBn": "বাড়ি নং: ৪৮৩, গ্রাম: চিনিশপুর, ডাকঘর: নরসিংদী সরকারি কলেজ-১৬০২, নরসিংদী সদর, নরসিংদী, ঢাকা বিভাগ",
   "email": "narsingdi.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013019901.jpg?v=e0b02d5551bf",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10373,6 +10572,7 @@
   "permanentAddressBn": "চরনগরদী, চরনগরদী, গয়েশপুর, জিনারদী, পলাশ, নরসিংদী, ঢাকা |, পলাশ, নরসিংদী, ঢাকা বিভাগ",
   "email": "narsingdi.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020001.jpg?v=171d6a49ee51",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10425,6 +10625,7 @@
   "permanentAddressBn": "১৯৪ পূর্ব ব্রাহ্মন্দী, পূর্ব ব্রাহ্মন্দী, নরসিংদী সরকারী কলেজ, ওয়ার্ড নং-০২, নরসিংদী পৌরসভা, নরসিংদী সদর, নরসিংদী, ঢাকা |, নরসিংদী সদর, নরসিংদী, ঢাকা বিভাগ",
   "email": "narsingdi.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020101.jpg?v=c11039ff68e1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10477,6 +10678,7 @@
   "permanentAddressBn": "এম.পির বাড়ী, হাফিজপুর, হাফিজপুর, হাফিজপুর, চালাকচর, মনোহরদী, নরসিংদী, ঢাকা |, মনোহরদী, নরসিংদী, ঢাকা বিভাগ",
   "email": "narsingdi.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020201.jpg?v=a2689bae9167",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10529,6 +10731,7 @@
   "permanentAddressBn": "চরমরজাল, মরজাল, মরজাল বাজার, মরজাল, রায়পুরা, নরসিংদী, ঢাকা |, রায়পুরা, নরসিংদী, ঢাকা বিভাগ",
   "email": "narsingdi.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020301.jpg?v=f36f4e6d2054",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10581,6 +10784,7 @@
   "permanentAddressBn": "শরীয়তগঞ্জ, শরীয়তগঞ্জ, মুড়াপাড়া, মুড়াপাড়া, রূপগঞ্জ, নারায়ণগঞ্জ, ঢাকা |, রূপগঞ্জ, নারায়ণগঞ্জ, ঢাকা বিভাগ",
   "email": "narayanganj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020401.jpg?v=b91897ca753d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10633,6 +10837,7 @@
   "permanentAddressBn": "গ্রাম: পাঁচরুখী ভূঁইয়াপাড়া, ডাক-পাঁচরুখী-১৪৬০, আড়াইহাজার, নারায়ণগঞ্জ, ঢাকা বিভাগ",
   "email": "narayanganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020501.jpg?v=33920db29c82",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10685,6 +10890,7 @@
   "permanentAddressBn": "গ্রাম: প্রতাপের চর, চর রমজান সোনাউল্ল‌্যাহ, ডাক- নিউ টাউন-১৪০০, সোনারগাঁও, নারায়ণগঞ্জ, ঢাকা বিভাগ",
   "email": "narayanganj.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020601.jpg?v=16af20bbc0c0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10737,6 +10943,7 @@
   "permanentAddressBn": "অপটিমাম আশালয়, ৭৪৯,৭৫০,গিরিধারা আবাসিক এলাকা, রোড নং-৭,ভূইগড়,কুতুবপুর, নারায়ণগঞ্জ সদর, নারায়ণগঞ্জ, ঢাকা বিভাগ",
   "email": "narayanganj.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020701.jpg?v=3012fe4ec5fe",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10789,6 +10996,7 @@
   "permanentAddressBn": "রাহেমা মঞ্জিল, ০৩ নং শায়েস্তা খান রোড, নারায়ণগঞ্জ সদর (ফ্রেন্ডস মার্কেট), নারায়ণগঞ্জ ।, নারায়ণগঞ্জ সিটি কর্পোরেশন, নারায়ণগঞ্জ, ঢাকা বিভাগ",
   "email": "narayanganj.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020801.jpg?v=b4cea93017b0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10841,6 +11049,7 @@
   "permanentAddressBn": "২২, সজ্জনকান্দা, রাজবাড়ী, ওয়ার্ড নং-০৫, রাজবাড়ী পৌরসভা, রাজবাড়ী সদর, রাজবাড়ী, ঢাকা |, রাজবাড়ী সদর, রাজবাড়ী, ঢাকা বিভাগ",
   "email": "rajbari.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013020901.jpg?v=a34742d705b1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10893,6 +11102,7 @@
   "permanentAddressBn": "মাছপাড়া, রামকোল, মাছপাড়া, পাংশা, রাজবাড়ী, ঢাকা |, পাংশা, রাজবাড়ী, ঢাকা বিভাগ",
   "email": "rajbari.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021001.jpg?v=2afbdb380b42",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10945,6 +11155,7 @@
   "permanentAddressBn": "বি,৪ জাহাঙগীরনগর কো অপারেটিভ হাউজিং সোসাইটি, গ্রাম: ভাটপাড়া, ডাক-বিপিএটিসি, সাভার, ঢাকা, ঢাকা বিভাগ",
   "email": "faridpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021101.jpg?v=bd798b179931",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -10997,6 +11208,7 @@
   "permanentAddressBn": "গ্রাম: লস্করদিয়া, ইউনিয়ন + ডাক-লস্করদিয়া-৭৮৪১, নগরকান্দা, ফরিদপুর, ঢাকা বিভাগ",
   "email": "faridpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021201.jpg?v=b2346ab0c54c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11049,6 +11261,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিংঃ ময়েজ মঞ্জিল, গ্রাম/রাস্তাঃ কুঠিবাড়ী, ডাকঘরঃ ফরিদপুর-৭৮০০, ফরিদপুর পৌরসভা, ফরিদপুর সদর, ফরিদপুর, ঢাকা বিভাগ",
   "email": "faridpur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021301.jpg?v=db08fc33293c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11101,6 +11314,7 @@
   "permanentAddressBn": "৯৩২, পূর্ব শ্যামপুর, ইউনিয়ন ও পোস্ট: সদরপুর, উপজেলা: সদরপুর জেলা: ফরিদপুর।, সদরপুর, ফরিদপুর, ঢাকা বিভাগ",
   "email": "faridpur.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021401.jpg?v=3998a9095836",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11153,6 +11367,7 @@
   "permanentAddressBn": "গ্রাম: পশ্চিম মাঝিগাতী, ডাকঘর: জোনাসুর, কাশিয়ানী, গোপালগঞ্জ, ঢাকা বিভাগ",
   "email": "gopalgonj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021501.jpg?v=29b949320781",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11205,6 +11420,7 @@
   "permanentAddressBn": "গোপীনাথপুর, মাঝিগাতী, মাঝিগাতী, গোপালগঞ্জ সদর, গোপালগঞ্জ, ঢাকা |, গোপালগঞ্জ সদর, গোপালগঞ্জ, ঢাকা বিভাগ",
   "email": "gopalgonj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021601.jpg?v=d1dd52b7f659",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11257,6 +11473,7 @@
   "permanentAddressBn": "গ্রাম- ভেন্নাবাড়ী, ডাকঘর- কান্দি-৮১১০, কোটালিপাড়া, গোপালগঞ্জ |, কোটালীপাড়া, গোপালগঞ্জ, ঢাকা বিভাগ",
   "email": "gopalgonj.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021701.jpg?v=8c9a0ef66377",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11309,6 +11526,7 @@
   "permanentAddressBn": "গ্রাম: বড় বাহাদুরপুর,ডাকঘর-বাহাদুরপুর-৭৯৩২,থানা-শিবচর, মাদারীপুর, শিবচর, মাদারীপুর, ঢাকা বিভাগ",
   "email": "madaripur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021801.jpg?v=617f3a2edbf8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11361,6 +11579,7 @@
   "permanentAddressBn": "গ্রাম: কুলপদ্দি চৌরাস্তা, পানিছত্র, পোস্ট: মাদারিপুর-৭৯০০, মাদারীপুর সদর, মাদারীপুর, ঢাকা বিভাগ",
   "email": "madaripur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013021901.jpg?v=69112f0ad2f5",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11413,6 +11632,7 @@
   "permanentAddressBn": "পশ্চিম খান্দুলী, ডাসার, কাজীবাকাই, কালকিনী, মাদারীপুর, ঢাকা |, কালকিনি, মাদারীপুর, ঢাকা বিভাগ",
   "email": "madaripur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022001.jpg?v=c9919db651d3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11465,6 +11685,7 @@
   "permanentAddressBn": "১৮২, দক্ষিন-পূর্ব কাফরুল, ঢাকা ক্যান্টনমেন্ট, ওয়ার্ড নং-১৬, ঢাকা উত্তর সিটি কর্পোরেশন, কাফরুল, ঢাকা, ঢাকা |, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "shariatpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022101.jpg?v=05fa79e7633c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11517,6 +11738,7 @@
   "permanentAddressBn": "গ্রাম: কিরণনগর, ডাক-বালারহাট, থানা-সখীপুর, ভেদরগঞ্জ, শরীয়তপুর, ঢাকা বিভাগ",
   "email": "shariatpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022201.jpg?v=6f4a817359ed",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11569,6 +11791,7 @@
   "permanentAddressBn": "বাড়ী-মৃধা বাড়ী, গ্রাম-কোদালপুর, উপজেলা- গোসাইরহাট, ডাকঘর-কোদালপুর, কোড-৮০৫০, জেলা-শরীয়তপুর।, গোসাইরহাট, শরীয়তপুর, ঢাকা বিভাগ",
   "email": "shariatpur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022301.jpg?v=e4e480ae7d0e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11621,6 +11844,7 @@
   "permanentAddressBn": "গ্রাম:- উজান তাহিরপুর, ডাকঘর: তাহিরপুর ৩০৩০, থানা+উপজেলা:- তাহিরপুর, জেলা: সুনামগঞ্জ।, তাহিরপুর, সুনামগঞ্জ, সিলেট বিভাগ",
   "email": "sunamganj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022401.jpg?v=92d92e3f0ffa",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11673,6 +11897,7 @@
   "permanentAddressBn": "পূর্বাশা খ-১৩, আনোয়ারপুর, দিরাই, সুনামগঞ্জ।, দিরাই, সুনামগঞ্জ, সিলেট বিভাগ",
   "email": "sunamganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022501.jpg?v=0bad4cb6556f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11725,6 +11950,7 @@
   "permanentAddressBn": "ছিলিমপুর, জগন্নাথপুর, ওয়ার্ড নং-০৮, জগন্নাথপুর পৌরসভা,, জগন্নাথপুর, সুনামগঞ্জ, সিলেট বিভাগ",
   "email": "sunamganj.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022601.jpg?v=179dd580fdac",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11777,6 +12003,7 @@
   "permanentAddressBn": "১৪ সৈকত আবাসিক এলাকা, দক্ষিণ আরপিন নগর, পোস্ট: সুনামগঞ্জ-৩০০০, সুনামগঞ্জ সদর, সুনামগঞ্জ, সিলেট বিভাগ",
   "email": "sunamganj.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022701.jpg?v=65655e879f40",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11829,6 +12056,7 @@
   "permanentAddressBn": "বাগবাড়ী- ২১৬, পোঃ ছাতক-৩০৮০, ছাতক পৌরসভা, থানা- ছাতক, জেলা- সুনামগঞ্জ।, ছাতক, সুনামগঞ্জ, সিলেট বিভাগ",
   "email": "sunamganj.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022801.jpg?v=84d3ad00eb7f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11881,6 +12109,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং নং-১০১, সুরমা ভ‌্যালি, গ্রাম/রাস্তা-তোপখানা, ডাকঘর-সিলেট সদর-৩১০০, সিলেট সদর, সিলেট সিটি কর্পোরেশন, সিলেট, সিলেট সিটি কর্পোরেশন , সিলেট, সিলেট বিভাগ",
   "email": "sylhet.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013022901.jpg?v=611f2a965251",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11933,6 +12162,7 @@
   "permanentAddressBn": "বাড়ি - রামধানা, রাস্তা-রামধানা, ডাকঘর- রামধানা-৩১৩০, বিশ্বনাথ, সিলেট, সিলেট বিভাগ",
   "email": "sylhet.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023001.jpg?v=e661fd8150e9",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -11985,6 +12215,7 @@
   "permanentAddressBn": "গ্রাম:তেতলী,তেতুঁলিয়া, লালাবাজার, তেতলী, দক্ষিণ সুরমা, সিলেট, সিলেট |, দক্ষিণ সুরমা, সিলেট, সিলেট বিভাগ",
   "email": "sylhet.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023101.jpg?v=ae98581f63a9",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12037,6 +12268,7 @@
   "permanentAddressBn": "বাসা নং ০১, ব্লক-বি, কুমারপাড়া আ/এ, সদর-৩১০০,, গোয়াইনঘাট, সিলেট, সিলেট বিভাগ",
   "email": "sylhet.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023201.jpg?v=48dd026843c7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12089,6 +12321,7 @@
   "permanentAddressBn": "গ্রাম- মাঝরগ্রাম, ডাকঘর- শেরুলবাগ- ৩১৯০, জকিগঞ্জ, সিলেট, সিলেট বিভাগ",
   "email": "sylhet.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023301.jpg?v=49e63f0a2b12",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12141,6 +12374,7 @@
   "permanentAddressBn": "গ্রাম- কতোয়ালপুর, ডাকঘর- হেতিমগঞ্জ, লক্ষ্মীপাশা, গোলাপগঞ্জ, সিলেট।, গোলাপগঞ্জ, সিলেট, সিলেট বিভাগ",
   "email": "sylhet.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023401.jpg?v=3f353448b6ef",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12193,6 +12427,7 @@
   "permanentAddressBn": "১১/বি, সেন্ট্রাল রোড, নিউমার্কেট, ওয়ার্ড নং-১৮, ঢাকা -১২০৫|, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "maulvibazar.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023501.jpg?v=896e559ee0fe",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12245,6 +12480,7 @@
   "permanentAddressBn": "হোল্ডিং নং-২৪৪, উত্তর বাজার, ওয়ার্ড নং-০৩, ডাকঘর- কুলাউড়া, থানা- কুলাউড়া জেলা মৌলভীবাজার, কুলাউড়া, মৌলভীবাজার, সিলেট বিভাগ",
   "email": "maulvibazar.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023601.jpg?v=f79f724a7138",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12297,6 +12533,7 @@
   "permanentAddressBn": "গ্রাম: বাহারমর্দন, পোস্ট: মৌলভীবাজার-৩২০০, মৌলভীবাজার সদর, মৌলভীবাজার, সিলেট বিভাগ",
   "email": "maulvibazar.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023701.jpg?v=ac63c1adaec6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12349,6 +12586,7 @@
   "permanentAddressBn": "উত্তরা স্কয়ার, প্লট: ৩৯ ও ৪১, সোনারগাঁও জনপদ রোড, সেক্টর: ১৩, উত্তরা, ঢাকা-১২৩০।, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "maulvibazar.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023801.jpg?v=d254e90c2f2e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12401,6 +12639,7 @@
   "permanentAddressBn": "বাড়ি নং-২০ (এপার্টমেন্ট-৫ বি), সড়ক-৫৫, গুলশান-২, ঢাকা-১২১২ |, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "habiganj.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013023901.jpg?v=e2fb425de532",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12453,6 +12692,7 @@
   "permanentAddressBn": "হাসান মঞ্জিল, কামালখালী-৩৩৫০, বানিয়াচং, সিলেট।, বানিয়াচং, হবিগঞ্জ, সিলেট বিভাগ",
   "email": "habiganj.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024001.jpg?v=8ed0040b7501",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12505,6 +12745,7 @@
   "permanentAddressBn": "সায়েস্তা নগর আ/এ, ডাকঘর- হবিগঞ্জ-৩৩০০, হবিগঞ্জ সদর, হবিগঞ্জ, সিলেট বিভাগ",
   "email": "habiganj.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024101.jpg?v=cbcf16cb8d36",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12557,6 +12798,7 @@
   "permanentAddressBn": "সাহেব বাড়ি, গ্রাম- ইটাখোলা, ডাকঘর- সায়হাম নগর- ৩৩৩৩, নোয়াপাড়া, মাধবপুর, হবিগঞ্জ, সিলেট |, মাধবপুর, হবিগঞ্জ, সিলেট বিভাগ",
   "email": "habiganj.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024201.jpg?v=dccf7ef8a5e6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12609,6 +12851,7 @@
   "permanentAddressBn": "চেয়ারম্যান সাহেবের বাড়ি, গ্রাম- লাহাজুড়া, ডাকঘর- নুরপুর মাদ্রাসা-৩৪৪৯ , ব্রাহ্মণবাড়িয়া, চট্টগ্রাম, নাসিরনগর, ব্রাহ্মণবাড়িয়া, চট্টগ্রাম বিভাগ",
   "email": "brahmanbaria.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024301.jpg?v=d65a65f6a3c3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12661,11 +12904,12 @@
   "permanentAddressBn": "বাসা- কমিউনিটি হল পাড়া, গ্রাম- শাহবাজপুর, ডাকঘর- শাহবাজপুর- ৩৪৩১, সরাইল, ব্রাহ্মণবাড়িয়া, চট্টগ্রাম বিভাগ",
   "email": "brahmanbaria.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024401.jpg?v=b045191926d7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
    "start": "2026-02-17",
-   "end": "2022-12-11"
+   "end": null
   },
   "facebook": null,
   "x": null,
@@ -12713,6 +12957,7 @@
   "permanentAddressBn": "বাসা- ১৩২৮, গ্রাগ/রাস্তা- পুনিয়াউট, ডাকঘর- ব্রাহ্মণবাড়িয়া-৩৪০০ ওয়ার্ড নং-০৯, ব্রাহ্মণবাড়িয়া সদর, ব্রাহ্মণবাড়িয়া, চট্টগ্রাম বিভাগ",
   "email": "brahmanbaria.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024501.jpg?v=3ede08d7603d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12765,6 +13010,7 @@
   "permanentAddressBn": "গ্রাম: ছতুরা শরীফ, পোস্ট: ছতুরা শরীফ-৩৪৫২, ইউনিয়ন: ধরখার, আখাউড়া, ব্রাহ্মণবাড়িয়া, চট্টগ্রাম বিভাগ",
   "email": "brahmanbaria.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024601.jpg?v=b1eb1fcae160",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12817,6 +13063,7 @@
   "permanentAddressBn": "বাড়ী-মোল্লা বাড়ি, গ্রাম- আলীয়াবাদ পঃ পাড়া, পো- নবীনগর, উপজেলা-নবীনগর, জেলা-ব্রাহ্মণবাড়িয়া।, নবীনগর, ব্রাহ্মণবাড়িয়া, চট্টগ্রাম বিভাগ",
   "email": "brahmanbaria.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024701.jpg?v=f415b67bfd98",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12869,6 +13116,7 @@
   "permanentAddressBn": "হাজী আব্দুর রহিম সরকার গার্ডেন, গ্রাম- চর লহনিয়া, রাম কৃষ্ণপুর, বাঞ্ছারামপুর, ব্রাহ্মণবাড়িয়া, চট্টগ্রাম বিভাগ",
   "email": "brahmanbaria.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024801.jpg?v=6cb26cde19aa",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12921,6 +13169,7 @@
   "permanentAddressBn": "খন্দকার বাড়ী, গ্রামঃ গয়েশপুর, ডাকঘরঃ চরগোয়ালী-৩৫১৭, দাউদকান্দি, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013024901.jpg?v=2b64fe951835",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -12973,6 +13222,7 @@
   "permanentAddressBn": "গ্রাম: মাধবপুর, পোস্ট: মেঘনা-৩৫১৫, ইউ:মানিকারচর, মেঘনা, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025001.jpg?v=9236df7a7967",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13025,6 +13275,7 @@
   "permanentAddressBn": "317/বি, খিলগাও, তালতলা, রামপুরা, ঢাকা-1219, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "comilla.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025101.jpg?v=387241d55a4e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13077,6 +13328,7 @@
   "permanentAddressBn": "ব্যাপারী বাড়ী, গোপালনগর, নবীপুর-৩৫৪২, দেবীদ্বার, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025201.jpg?v=0ce13cbef9bc",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13129,6 +13381,7 @@
   "permanentAddressBn": "গ্রাম- বাগড়া (ওয়ালী মেম্বারের বাড়ী) ডাকঘর- সালদানদী, ব্রাহ্মণপাড়া, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025301.jpg?v=d9d2ff4f4c4f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13181,6 +13434,7 @@
   "permanentAddressBn": "চৌধুরী বাড়ী, গ্রাম: নোয়াগ্রাম, পোস্ট: বাজার চৌয়ারা-৩৫০০, কুমিল্লা সদর দক্ষিণ, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025401.jpg?v=205d2eacfee6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13233,6 +13487,7 @@
   "permanentAddressBn": "গ্রাম: চান্দিনা, পোস্ট: চান্দিনা-৩৫১০, চান্দিনা, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.7@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025501.jpg?v=9d92af8965bb",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13285,6 +13540,7 @@
   "permanentAddressBn": "এম পি সাহেবের বাড়ী, গ্রাম- সোনাইমুড়ী, ডাকঘর- সোনাইমুড়ী-৩৫৬১, বরুড়া, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.8@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025601.jpg?v=e41dc4a8d283",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13337,6 +13593,7 @@
   "permanentAddressBn": "আবুল কালাম এর বাড়ি, গ্রাম- পাশাপুর, ডাকঘর- মুদাফরগঞ্জ-৩৫৬২, লাকসাম, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.9@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025701.jpg?v=f38a7a5aed16",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13389,6 +13646,7 @@
   "permanentAddressBn": "বাসা- ভূঁইয়া বাড়ী, গ্রাম- নিশ্চিন্তপুর, ডাকঘর- সোংদাইল, নাঙ্গলকোট, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.10@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025801.jpg?v=9873233332cf",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13441,6 +13699,7 @@
   "permanentAddressBn": "বাড়ি নং: সৈয়দ বাড়ী, গ্রাম: পশ্চিম তেকরা, ডাকঘর: পদুয়া বাজার, চৌদ্দগ্রাম, কুমিল্লা, চট্টগ্রাম বিভাগ",
   "email": "comilla.11@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013025901.jpg?v=61e56561a650",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13493,6 +13752,7 @@
   "permanentAddressBn": "বাড়ি নং- ০৬ (আনন্দদ্বীপ), ফ্ল‌্যাট- বি টু, রোড নং-১৩৭. গুলশান-০১, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": "chandpur.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026001.jpg?v=16be4f14d337",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13545,6 +13805,7 @@
   "permanentAddressBn": "লুধুয়া, (হাওলাদার বাড়ি), পো-লধুয়া, পিএস-মটলব উত্তর, জেলা-চাঁদপুর, মতলব উত্তর, চাঁদপুর, চট্টগ্রাম বিভাগ",
   "email": "chandpur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026101.jpg?v=d69f9f7d5f06",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13597,6 +13858,7 @@
   "permanentAddressBn": "বাসা-০৯৩৯-০০ মুনিরা ভবন, বেগম মসজিদ সংলগ্ন, চাঁদপুর সদর, চাঁদপুর, চট্টগ্রাম বিভাগ",
   "email": "chandpur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026201.jpg?v=54daeb73e984",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13649,6 +13911,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং: চৌধুরী বাড়ী, গ্রাম/রাস্তা: চৌরাঙ্গা, ২২১ চৌরাঙ্গা, ডাকঘর: শোল্লা-৩৬১০, ফরিদগঞ্জ, চাঁদপুর, চট্টগ্রাম বিভাগ",
   "email": "chandpur.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026301.jpg?v=a668b34bb11f",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13701,6 +13964,7 @@
   "permanentAddressBn": "বাড়ির নম্বর: ০৪/১, রোড/ব্লক/গ্রাম: ২১৩, মোকীমাবাদ, পোস্ট: হাজীগঞ্জ-৩৬০০, হাজীগঞ্জ, চাঁদপুর, চট্টগ্রাম বিভাগ",
   "email": "chandpur.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026401.jpg?v=7f1da762afb7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13753,6 +14017,7 @@
   "permanentAddressBn": "পশ্চিম ছাগলনাইয়া, কলেজ রোড, ছাগলনাইয়া, ছাগলনাইয়া, ফেনী, চট্টগ্রাম বিভাগ",
   "email": "feni.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026501.jpg?v=62111bc386b1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13805,6 +14070,7 @@
   "permanentAddressBn": "হোল্ডিং নং: ৭৭, গ্রাম: ফলেশ্বর, ডাকঘর: ফেনী-৩৯০০, ফেনী সদর, ফেনী, চট্টগ্রাম বিভাগ",
   "email": "feni.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026601.jpg?v=e983a3270567",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13857,6 +14123,7 @@
   "permanentAddressBn": "১৭১, ফরাজী বাড়ী, আলাইয়ারপুর, পোস্ট: দাগনভূঞা-৩৯২০, দাগনভূঞাঁ, ফেনী, চট্টগ্রাম বিভাগ",
   "email": "feni.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026701.jpg?v=0ca53e0c4c4a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13909,6 +14176,7 @@
   "permanentAddressBn": "ব‌্যারিস্টার মাহবুব উদ্দিন খোকনের বাড়ী, সোনাপুর, পোস্ট: নয়াহাট, সোনাইমুড়ী, নোয়াখালী, চট্টগ্রাম বিভাগ",
   "email": "noakhali.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026801.jpg?v=f62585cff803",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -13961,6 +14229,7 @@
   "permanentAddressBn": "গ্রাম: ইয়ারপুর , ডাকঘর: ছমির মুন্সীর হাট-৩৮০০, সেনবাগ, নোয়াখালী, চট্টগ্রাম বিভাগ",
   "email": "noakhali.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013026901.jpg?v=93a60535eb20",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14013,6 +14282,7 @@
   "permanentAddressBn": "গ্রাম: মির্জানগর, পোস্ট: নাটেশ্বর-৩৮২১, সোনাইমুড়ী, নোয়াখালী, চট্টগ্রাম বিভাগ",
   "email": "noakhali.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027001.jpg?v=e5c978784d3d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14065,6 +14335,7 @@
   "permanentAddressBn": "১৮৪/রশিদ কলোনী, ফকির পুর, নোয়াখালী সদর, নোয়াখালী-৩৮০০, নোয়াখালী সদর, নোয়াখালী, চট্টগ্রাম বিভাগ",
   "email": "noakhali.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027101.jpg?v=81ad82723ac3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14117,6 +14388,7 @@
   "permanentAddressBn": "বাড়ী: ওয়াজি উল্যাহ মাস্টার বাড়ি, গ্রাম: মুছাপুর, কোম্পানীগঞ্জ, নোয়াখালী, চট্টগ্রাম বিভাগ",
   "email": "noakhali.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027201.jpg?v=a1805800f32e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14169,6 +14441,7 @@
   "permanentAddressBn": "গ্রাম: সাগরিয়া, ডাকঘর: বুড়িরচর-৩৮৯০, হাতিয়া, নোয়াখালী, চট্টগ্রাম বিভাগ",
   "email": "noakhali.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027301.jpg?v=665e9ee1ccea",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14221,6 +14494,7 @@
   "permanentAddressBn": "আলহাজ্ব আলী হোসেন মিয়ার বাড়ী, পূর্ব করপাড়া, রামগঞ্জ, লক্ষ্মীপুর, চট্টগ্রাম বিভাগ",
   "email": "laxmipur.1@parliament.gov.bd / shahadatsalim66@gmail.com",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027401.jpg?v=acd21375b3d0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14273,6 +14547,7 @@
   "permanentAddressBn": "বাড়ী নং: হায়দার আলী ভুঁইয়া বাড়ী, গ্রাম: মাছিমনগর, ডাকঘর: খিলবাইছা-৩৭০০, লক্ষ্মীপুর সদর, লক্ষ্মীপুর, চট্টগ্রাম বিভাগ",
   "email": "laxmipur.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027501.jpg?v=3cc2381d6199",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14325,6 +14600,7 @@
   "permanentAddressBn": "বসির ভিলা, বাঞ্ছানগর, ডাক-লক্ষ্মীপুর সদর, লক্ষ্মীপুর সদর, লক্ষ্মীপুর, চট্টগ্রাম বিভাগ",
   "email": "laxmipur.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027601.jpg?v=dc10da2e02b7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14377,6 +14653,7 @@
   "permanentAddressBn": "আঃ হাদী মিয়া বাড়ী, গ্রাম-চরটবগী, ডাকঘর- রামদয়াল বাজার-৩৭৩০, রামগতি, লক্ষ্মীপুর, চট্টগ্রাম বিভাগ",
   "email": "laxmipur.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027701.jpg?v=598a59a3826b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14429,6 +14706,7 @@
   "permanentAddressBn": "নুরুল অামিন চেযারম্যানবাড়ী, গ্রাম-পাতাকোট, ডাক-আজমপুর-৪৩২৫, মিরসরাই, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027801.jpg?v=cd61fa3875e2",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14481,6 +14759,7 @@
   "permanentAddressBn": null,
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013027901.jpg?v=cf3d57fc5780",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14533,6 +14812,7 @@
   "permanentAddressBn": "বাড়ি নং:২০১, দক্ষিণ তালতলী সড়ক, সন্দ্বীপ-৪৩০০, সন্দ্বীপ, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028001.jpg?v=6fe71b2d6afd",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14585,6 +14865,7 @@
   "permanentAddressBn": "মীরবাবাড়ি, মীরের খীল, মীরের হাট-৪৩৩৪, হাটহাজারী, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.5@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028201.jpg?v=d15aceb0ce59",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14637,6 +14918,7 @@
   "permanentAddressBn": "বক্স আলী, চৌধুরী বাড়ি, গহিরা,, রাউজান, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.6@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028301.jpg?v=f0a5b756e87e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14689,6 +14971,7 @@
   "permanentAddressBn": "গুডসহিল, রহমতগঞ্জ।, কোতয়ালী, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.7@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028401.jpg?v=a5e551789447",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14741,6 +15024,7 @@
   "permanentAddressBn": "ুশরাফত উল্লাহ বাড়ী, আরাকান রোড, মৌলভীপুকুর পাড়, ডাকঘর-চান্দগাঁও-৪২১২।, চট্টগ্রাম সিটি কর্পোরেশন, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.8@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028501.jpg?v=1c38224865d4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14793,6 +15077,7 @@
   "permanentAddressBn": "গ্রাম: সাহারবিল, পোস্ট: সাহারবিল-৪৭৪০, চকরিয়া, কক্সবাজার, চট্টগ্রাম বিভাগ",
   "email": "chittagong.9@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028601.jpg?v=358c0aa6c506",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14845,6 +15130,7 @@
   "permanentAddressBn": "২৬, কাতালগঞ্জ, আ/এ, চকবাজার-৪২০৩ পাঁচলাইন, চট্রগ্রাম সিটি কর্পোরেশন, চট্রগ্রাম।, চট্টগ্রাম সিটি কর্পোরেশন, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.10@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028701.jpg?v=e65fd713f91a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14897,6 +15183,7 @@
   "permanentAddressBn": "নাজির বাড়ি, উত্তর কাট্টলি, পাহাড়তলি, চট্টগ্রাম সিটি কর্পোরেশন, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.11@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028801.jpg?v=cbd31196df66",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -14949,6 +15236,7 @@
   "permanentAddressBn": "ঈদা গাজীর বাড়ী, গ্রাম: কৈয়গ্রাম, ডাকঘর: ফাজিল খান হাট-৪৩৭১, পটিয়া, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.12@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013028901.jpg?v=b8992f833eae",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15001,6 +15289,7 @@
   "permanentAddressBn": "বারখাইন (এম পি সাহেবের বাড়ী ), বারখাইন, আনোয়ারা, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.13@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029001.jpg?v=7c02e6ae3858",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15053,6 +15342,7 @@
   "permanentAddressBn": "আলহাজ্ব মনির আহমেদর বাড়ী, গ্রাম: উত্তর গাছবাড়ীয়া, বদুরপাড়া, ওয়ার্ড নং-০১,ডাকঘর:গাছবাড়িয়া, চন্দনাইশ, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.14@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029101.jpg?v=cbeaa904650d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15105,6 +15395,7 @@
   "permanentAddressBn": "৪ নং ওয়ার্ড, ছমদর পাড়া, সাতকানিয়া, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.15@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029201.jpg?v=b0a1ccdcbca4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15157,6 +15448,7 @@
   "permanentAddressBn": "কাচারী পাড়া, ইছহাক হুজুর রোড, ডাকঘর- শেখের খীল, বাঁশখালী, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "chittagong.16@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029301.jpg?v=dc504832e454",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15209,6 +15501,7 @@
   "permanentAddressBn": "বাসা: সাঈদ মঞ্জিল, গ্রাম: পেকুয়া সিকদারপাড়া, পেকুয়া, কক্সবাজার, চট্টগ্রাম বিভাগ",
   "email": "coxbazar.1@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029401.jpg?v=9eca8f2d1af3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15261,6 +15554,7 @@
   "permanentAddressBn": "এম পি বাড়ী, আমতলী, বড় মহেশখালী, বাঁশখালী, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": "coxbazar.2@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029501.jpg?v=bcb8beb64e95",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15313,6 +15607,7 @@
   "permanentAddressBn": "গ্রাম: উত্তর বাহারছড়া (আংশিক), পোস্ট: কক্সবাজার, কক্সবাজার সদর, কক্সবাজার, চট্টগ্রাম বিভাগ",
   "email": "coxbazar.3@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029601.jpg?v=323cb2835a6e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15365,6 +15660,7 @@
   "permanentAddressBn": "গ্রাম: মধ্য রাজাপালং, রাজাপালং, ডাকঘর: উখিয়া, উখিয়া, কক্সবাজার, চট্টগ্রাম বিভাগ",
   "email": "coxsbazar.4@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029701.jpg?v=55a3ce28e9d1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15417,6 +15713,7 @@
   "permanentAddressBn": "বৈঠক- ০৬০০-০১, পশ্চিম কালেক্টরিয়েট (কলা বাগান), ডাকঘর- খাগড়াছড়ি- ৪৪০০, খাগড়াছড়ি সদর, খাগড়াছড়ি, চট্টগ্রাম বিভাগ",
   "email": "khagrachari@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029801.jpg?v=fdb5a7082cb3",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15469,6 +15766,7 @@
   "permanentAddressBn": "আরপি ৪৫৮, কলেজ গেইট (মন্ত্রী পাড়া), ১০২নং রাঙ্গাপানি, রাঙ্গামাটি সদর, রাঙ্গামাটি, চট্টগ্রাম বিভাগ",
   "email": "rangamati@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013029901.jpg?v=0401a14a4f83",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15521,6 +15819,7 @@
   "permanentAddressBn": "ক্যাংভিটা, চেয়ারম্যান পাড়া, মধ্যম পাড়া (দক্ষিণ অংশ) ০৪ নং ওয়ার্ড, বান্দরবান পৌরসভার, বান্দরবান সদর, বান্দরবান।, বান্দরবান সদর, বান্দরবান, চট্টগ্রাম বিভাগ",
   "email": "bandarban@parliament.gov.bd",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030001.jpg?v=c7bf2ad552c6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15573,6 +15872,7 @@
   "permanentAddressBn": "গ্রাম: বাহেরচর ক্ষুদ্রকাঠি, ডাকঘর: বাহেরচর ক্ষুদ্রকাঠি, বাবুগঞ্জ, বরিশাল, বরিশাল বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030101.jpg?v=d2b2c31b3109",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15625,6 +15925,7 @@
   "permanentAddressBn": "বাসা:১৩৪, উত্তর বাসাবো, ডাকঘর-বাসাবো টিএসও-১২১৪, সবুজবাগ, ঢাকা দক্ষিণ সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030201.jpg?v=fd6f46830e69",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15677,6 +15978,7 @@
   "permanentAddressBn": "বাড়ী: তপাদার বাড়ী, গ্রাম-আলগী, ডাকঘর-আলগী পাঁচগাও, ইউনিয়ন-৫ নং রামপুর, চাঁদপুর সদর, চাঁদপুর, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030301.jpg?v=fa6cd9b22fd4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15729,6 +16031,7 @@
   "permanentAddressBn": "গ্রাম-কাজির বাগ, ডাকঘর-ডি.টি.এম-৩৯০০, ফেনী সদর, ফেনী, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030401.jpg?v=118c7dcd80b2",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15781,6 +16084,7 @@
   "permanentAddressBn": "গ্রাম-চরগোয়ালপাড়া-২১, ডাকঘর-শ্রীপুর, শ্রীপুর, মাগুরা, খুলনা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030501.jpg?v=24bf6817c98b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15833,6 +16137,7 @@
   "permanentAddressBn": "গ্রাম-নওদা পাড়া, ভেড়ামারা, কুষ্টিয়া, খুলনা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030601.jpg?v=8b32871bf071",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15885,6 +16190,7 @@
   "permanentAddressBn": "গ্রাম-পানিয়ালপুকুর, ডাকঘর-পানিয়ালপুকুর, কিশোরগঞ্জ, নীলফামারী, রংপুর বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030701.jpg?v=f26b97314eed",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15937,6 +16243,7 @@
   "permanentAddressBn": "গ্রাম: বড় মীর পাড়া, ৭নং ওয়ার্ড,ইউনিয়ন: ১২ নং চিকনদন্ডী ইউনিয়ন পরিষদ, হাটহাজারী, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030801.jpg?v=03427d62810e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -15989,6 +16296,7 @@
   "permanentAddressBn": "গ্রাম-খাগদী, ওয়ার্ড-৯, মাদারীপুর সদর, মাদারীপুর, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013030901.jpg?v=855c23268f6e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16041,6 +16349,7 @@
   "permanentAddressBn": "বাসা: পাথালিয়া পশ্চিম পাড়া,ডাকঘর-জামালপুর-২০০০, জামালপুর সদর, জামালপুর, ময়মনসিংহ বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031001.jpg?v=18d4c3fbad48",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16093,6 +16402,7 @@
   "permanentAddressBn": "বাসা নং-০১, গ্রাম-মির্জাপুর, ডাকঘর-তেঘরিয়া-১৩১১, কেরানীগঞ্জ, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031101.jpg?v=24d1648224f6",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16145,6 +16455,7 @@
   "permanentAddressBn": "গ্রামঃ মক্রমপুর, ডাকঘরঃ নবগ্রাম- ৮৪০১, ইউনিয়নঃ ৩ নং নবগ্রাম, ঝালকাঠী সদর, ঝালকাঠী, বরিশাল বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031201.jpg?v=31ec37662c8c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16197,6 +16508,7 @@
   "permanentAddressBn": "গ্রাম: জামিরা, জামিরা, ডাকঘর: জামিরা-৬২৭১, পুঠিয়া, রাজশাহী, রাজশাহী বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031301.jpg?v=f32a9c522c97",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16249,6 +16561,7 @@
   "permanentAddressBn": "গ্রামঃ কীর্তিপুর, ডাকঘরঃ ঝিকরগাছা-৭৪২০, ঝিকরগাছা, যশোর, খুলনা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031401.jpg?v=a06abd3647ea",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16301,6 +16614,7 @@
   "permanentAddressBn": "বাড়ি নং: ০১২৮-০১, গ্রাম: মাধবপুর, ডাকঘর: শেরপুর টাউন, শেরপুর সদর, শেরপুর, ময়মনসিংহ বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031501.jpg?v=b6333d7f8b66",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16353,6 +16667,7 @@
   "permanentAddressBn": "৫৫৩, শাহীনবাগ, তেজগাঁও, ঢাকা-১২১৫, তেজঁগাও, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031601.jpg?v=0f63d2d69c49",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16405,6 +16720,7 @@
   "permanentAddressBn": "গ্রাম: রাজাপুর, ডাকঘর: রাজাপুর-১৯৪৩, ধামরাই, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031701.jpg?v=16bed4361bb8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16457,6 +16773,7 @@
   "permanentAddressBn": "গ্রাম: চরজুশিরগাঁও,ডাকঘর: গোসাইরহাট, গোসাইরহাট, শরীয়তপুর, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031801.jpg?v=0fa17760503a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16509,6 +16826,7 @@
   "permanentAddressBn": "গ্রাম- দিঘইর, ডাকঘর-জোনাইল, বড়াইগ্রাম, নাটোর, রাজশাহী বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013031901.jpg?v=26855725d09b",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16561,6 +16879,7 @@
   "permanentAddressBn": "বাড়ি: ঠাকুর বাড়ী, গ্রাম: ওড়াকান্দী পূর্বপাড়া, ডাকঘর: ওড়াকান্দী ৮১৩১, কাশিয়ানী, গোপালগঞ্জ, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032001.jpg?v=a2b0a1275719",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16613,6 +16932,7 @@
   "permanentAddressBn": "বাসা:৩০৭, মধ্যম টেকপাড়া, ৪নং ওয়ার্ড, কক্সবাজার পৌরসভা, কক্সবাজার সদর, কক্সবাজার, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032101.jpg?v=35ce449ea1f4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16665,6 +16985,7 @@
   "permanentAddressBn": "বাসা:১৬১/ক পূর্ব উলন, ডাকঘর-খিলগাঁও, হাতিরঝিল, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032201.jpg?v=b96e59817f34",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16717,6 +17038,7 @@
   "permanentAddressBn": "বাসা: ১/৬, ব্লক: ১/জি, ওয়ার্ড: ০৮, ডাকঘর: মিরপুর-১২১৬, শাহআলী, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032301.jpg?v=79c1008937dd",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16769,6 +17091,7 @@
   "permanentAddressBn": "শফিউল বারী বাবুর বাড়ি, গ্রাম-রামদয়াল বাজার, ডাকঘর-রামদয়াল বাজার, ইউনিয়ন: চর আলগী, রামগতি, লক্ষ্মীপুর, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032401.jpg?v=48aab192d436",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16821,6 +17144,7 @@
   "permanentAddressBn": "গ্রাম: গাবতলী, গাবতলী (অংশ), ডাকঘর: গাবতলী-৫৮২০, গাবতলী , বগুড়া, রাজশাহী বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032501.jpg?v=eff462cf02c1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16873,6 +17197,7 @@
   "permanentAddressBn": "গ্রাম: জামুদ, পোস্ট: দেওটুকুন, পূর্বধলা, নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032601.jpg?v=9cd8ad3748c7",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16925,6 +17250,7 @@
   "permanentAddressBn": "গ্রাম: গাংকুল, ডাকঘর: দক্ষিণভাগ-৩২৫২, বড়লেখা, মৌলভীবাজার, সিলেট বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032701.jpg?v=b53490c8f1ab",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -16977,6 +17303,7 @@
   "permanentAddressBn": "গ্রাম: পূর্ব রাখী, ইউনিয়ন-শিলই, পোঃ- দিঘীর পাড়, মুন্সিগঞ্জ সদর, মুন্সিগঞ্জ, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032801.jpg?v=dd94a834218e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17029,6 +17356,7 @@
   "permanentAddressBn": "গ্রাম-পূর্ব দেওসার, পোস্ট অফিস-রামপাল, ওয়ার্ড-৫ হোল্ডিং-৯৯৯, মুন্সিগঞ্জ সদর, মুন্সিগঞ্জ, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013032901.jpg?v=cfb04ee4dce8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17081,6 +17409,7 @@
   "permanentAddressBn": "গ্রাম: চাটমোহর পৌরসভা, ডাকঘর: চাটমোহর-৬৬৩০, চাটমোহর, পাবনা, রাজশাহী বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033001.jpg?v=1a61ede3ce29",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17133,6 +17462,7 @@
   "permanentAddressBn": "গ্রাম: সাদীপুর মধ‌্যপাড়া, সাদীপুর, ডাকঘর: গৌরীপুর-৬৬২০, লালপুর, নাটোর, রাজশাহী বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033101.jpg?v=5ad857a649eb",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17185,6 +17515,7 @@
   "permanentAddressBn": "বাড়ি নং: হাজী বাড়ী, গ্রাম: চান্দুরা, ডাকঘর: চান্দুরা বাজার-৩৪৩২, বিজয়নগর, ব্রাহ্মণবাড়িয়া, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033201.jpg?v=c7e1dace88d0",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17237,6 +17568,7 @@
   "permanentAddressBn": "গ্রাম: পখমসার, ডাকঘর:গোসাইরহাট, গোসাইরহাট, শরীয়তপুর, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033301.jpg?v=554f483592f4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17289,6 +17621,7 @@
   "permanentAddressBn": "গ্রাম: মধ‌্যম পাড়া, ডাকঘর: বান্দরবান-৪৬০০, বান্দরবান সদর, বান্দরবান, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033401.jpg?v=2df0129227a4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17341,6 +17674,7 @@
   "permanentAddressBn": "গ্রাম+পোস্ট: হাফিজপুর, পোস্ট কোড: ১৬৫২, মনোহরদী, নরসিংদী, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033501.jpg?v=19b6b3e7df45",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17393,6 +17727,7 @@
   "permanentAddressBn": "বাসা: ৩৬, গ্রাম/রাস্তা-টার্মিনাল রোড, কেরানীপাড়া, ডাকঘর: রংপুর-৫৪০০, রংপুর সদর, রংপুর, রংপুর বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033601.jpg?v=44730e01bdf4",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17445,6 +17780,7 @@
   "permanentAddressBn": "বাসাা: হাজিবাড়ি, গ্রাম: কেউটিল, পোস্ট: পাটুরিয়া, গোয়ালন্দ, রাজবাড়ী, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033701.jpg?v=f8051a887a3a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17497,6 +17833,7 @@
   "permanentAddressBn": "বাসা: কাউসার মঞ্জিল, রায়পুর রোড, গ্রাম: ২নং ওয়ার্ড, বাঞ্চানগর, ডাকঘর: লক্ষীপুর, লক্ষ্মীপুর সদর, লক্ষ্মীপুর, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033801.jpg?v=d373530812f8",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17549,6 +17886,7 @@
   "permanentAddressBn": "গ্রাম: কান্দিগাঁও, ডাকঘর: মুক্তাগাছা-২২১০, মুক্তাগাছা, ময়মনসিংহ, ময়মনসিংহ বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013033901.jpg?v=98073b6d9e83",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17601,6 +17939,7 @@
   "permanentAddressBn": "গ্রাম: চত্রংপুর, কলমাকান্দা, নেত্রকোণা, ময়মনসিংহ বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034001.jpg?v=167040ca106e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17653,6 +17992,7 @@
   "permanentAddressBn": "গ্রাম- ছোট ধিরারাই, ডাক- নতুন বাজার-৩১২৯, ইউনিয়ন: দয়ামীর, ওসমানী নগর, সিলেট, সিলেট বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034101.jpg?v=67fd313609ee",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17705,6 +18045,7 @@
   "permanentAddressBn": "ঠনঠনিয়া গোয়াল পাড়া রোড, ঠনঠনিয়া পশ্চিম পাড়া, ডাকঘর: বগুড়া-৫৮০০, বগুড়া সদর, বগুড়া, রাজশাহী বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034201.jpg?v=f730633b243c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17757,6 +18098,7 @@
   "permanentAddressBn": "অনাইর বাড়ি, গ্রাম-পশ্চিম মলিয়াইশ, ডাকঘর-সুফিয়া মাদ্রাসা-৪৩২০, মিরসরাই, চট্টগ্রাম, চট্টগ্রাম বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034301.jpg?v=a0ed6ffa15fc",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17809,6 +18151,7 @@
   "permanentAddressBn": "১২০/৮, কবি বেনজীর বাগান, ডাকঘর-শান্তিনগর, টিএসও-১২১৭, মতিঝিল, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034401.jpg?v=9ad5a6d6040d",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17861,6 +18204,7 @@
   "permanentAddressBn": "বাসা/হোল্ডিং- ৯২, পশ্চিম মোল্লারটেক,ওয়ার্ড :৫০, ডাকঘর-আশকোনা-১২৩০, থানা:দক্ষিণখান, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034501.jpg?v=d3f0bbe6b9bb",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17913,6 +18257,7 @@
   "permanentAddressBn": "গ্রাম/রাস্তা: দঃ কৈখালী, মৌজা/মহল্লা: ২৪ নং কৈখালী, পোস্ট অফিস: বীনাপানি, পোস্ট কোড: ৮৪৩০, কাঁঠালিয়া, ঝালকাঠী, বরিশাল বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034601.jpg?v=e3c0042921ba",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -17965,6 +18310,7 @@
   "permanentAddressBn": "বাড়ি নং: ১/২, আসাদগেট , ব্লক: এ, থানা: মোহাম্মদপুর, ঢাকা উত্তর সিটি কর্পোরেশন, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034701.jpg?v=a698287bbfa1",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -18017,6 +18363,7 @@
   "permanentAddressBn": "৩২/১, রোড-এ, উত্তর তালবাগ, সাভার, ঢাকা, ঢাকা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034801.jpg?v=abc0d812212e",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -18069,6 +18416,7 @@
   "permanentAddressBn": "পশ্চিম ছোট বুইচাকাঠী, শেখমাটিয়া, নাজিরপুর, পিরোজপুর, বরিশাল বিভাগ",
   "email": "sultanajesmen349@gmail.com",
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013034901.jpg?v=94bd92f0059a",
   "bioBn": null,
   "summaryBn": null,
   "term": {
@@ -18121,6 +18469,7 @@
   "permanentAddressBn": "গ্রাম: বাগোয়ান, ডাকঘর: ডাংমড়কা বাজার-৭০৫২, দৌলতপুর, কুষ্টিয়া, খুলনা বিভাগ",
   "email": null,
   "hasMobile": true,
+  "shareImage": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/og/mp/013035001.jpg?v=93d0974c950c",
   "bioBn": null,
   "summaryBn": null,
   "term": {
