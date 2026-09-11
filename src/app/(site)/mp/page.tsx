@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
-import { members, parties, bn, statistics } from '@/lib/data';
+import { members, parties, bn, statistics, partyShortBn } from '@/lib/data';
 import { Page, PageHead, Stat } from '@/components/ui';
 import MemberFilter from '@/components/MemberFilter';
 
@@ -39,13 +39,13 @@ export default function AllMps() {
             nameEn: m.nameEn,
             photoUrl: m.photoUrl,
             party: m.party?.abbr ?? null,
-            partyBn: m.party?.nameBn ?? null,
+            partyBn: partyShortBn(m.party),
             seatBn: m.seat?.nameBn ?? null,
             seatNo: m.seat?.no ?? null,
             reserved: !!m.seat?.reserved,
             gender: m.gender,
           }))}
-          parties={parties.map((p) => ({ abbr: p.abbr, label: p.nameBn ?? p.abbr, seats: p.seats }))}
+          parties={parties.map((p) => ({ abbr: p.abbr, label: partyShortBn(p) ?? p.abbr, seats: p.seats }))}
         />
       </div>
     </Page>

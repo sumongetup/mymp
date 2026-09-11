@@ -311,6 +311,21 @@ export function ageFrom(dob: string | null): number | null {
 const BN_MONTHS = ['জানুয়ারি', 'ফেব্রুয়ারি', 'মার্চ', 'এপ্রিল', 'মে', 'জুন',
   'জুলাই', 'আগস্ট', 'সেপ্টেম্বর', 'অক্টোবর', 'নভেম্বর', 'ডিসেম্বর'];
 
+/** parliament.gov.bd writes 81 members' English names in capitals ("MD. NURUL HAQUE"); pages show them in title case. */
+export function nameEnDisplay(s: string | null | undefined): string | null {
+  if (!s) return null;
+  if (s !== s.toUpperCase() || !/[A-Z]{2}/.test(s)) return s;
+  return s.toLowerCase().replace(/(^|[\s.\-('])([a-z])/g, (_, p: string, c: string) => p + c.toUpperCase());
+}
+
+/** A party's everyday short name, for chips and narrow rows; the full name everywhere else. */
+const PARTY_SHORT_BN: Record<string, string> = {
+  BNP: 'বিএনপি', BJEI: 'জামায়াতে ইসলামী', Ind: 'স্বতন্ত্র', NCP: 'এনসিপি', BKM: 'বাংলাদেশ খেলাফত মজলিস',
+  IMB: 'ইসলামী আন্দোলন', GOP: 'গণঅধিকার পরিষদ', BJP: 'বিজেপি', KM: 'খেলাফত মজলিস', PSM: 'গণসংহতি আন্দোলন', JAGPA: 'জাগপা',
+};
+export const partyShortBn = (p: { abbr: string; nameBn?: string | null } | null | undefined) =>
+  p ? PARTY_SHORT_BN[p.abbr] ?? p.nameBn ?? p.abbr : null;
+
 export function dateBn(iso: string | null): string | null {
   if (!iso) return null;
   const d = new Date(iso);

@@ -66,11 +66,14 @@ export default function CommitteesPage() {
                       </span>
                       {summaryOf(c) && <span className="text-[14.5px] leading-relaxed text-inksoft text-pretty">{summaryOf(c)}</span>}
                       {chairMember && (
-                        <span className="flex items-center gap-2 text-[14px]">
-                          <span className="text-muted">সভাপতি</span>
+                        <span className="flex items-start gap-2 text-[14px]">
+                          <span className="text-muted shrink-0">সভাপতি</span>
                           <PartyDot abbr={chairMember.party?.abbr} />
-                          <span className="font-semibold">{chairMember.nameBn ?? chairMember.nameEn}</span>
-                          {chairMember.seat?.nameBn && <span className="text-muted">· {chairMember.seat.nameBn}</span>}
+                          {/* Name and seat wrap as one run of text, so a long name never strands the seat on its own. */}
+                          <span className="min-w-0 leading-snug">
+                            <span className="font-semibold">{chairMember.nameBn ?? chairMember.nameEn}</span>
+                            {chairMember.seat?.nameBn && <span className="text-muted">, {chairMember.seat.nameBn}</span>}
+                          </span>
                         </span>
                       )}
                     </span>

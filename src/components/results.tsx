@@ -35,19 +35,18 @@ export function ResultCard({ r, compact = false }: { r: SeatResult; compact?: bo
           const share = cast ? (c.votes / cast) * 100 : 0;
           return (
             <li key={`${c.name}-${i}`} className="px-5 py-3 flex flex-col gap-1.5">
-              <div className="flex items-center gap-3">
-                <span className="grow min-w-0 flex items-center gap-2">
-                  <span className={`truncate ${i === 0 ? 'font-bold' : 'font-medium'}`}>{c.name}</span>
-                  {/* The party's logo beside its short name; a colour dot where no logo is on record. */}
-                  {c.party && (
-                    <span className="shrink-0 inline-flex items-center gap-1.5 ps-1.5 pe-2 py-0.5 rounded-full bg-sunk text-[12px] text-inksoft">
-                      <PartyDot abbr={c.party} size={16} />
-                      {c.party}
-                    </span>
-                  )}
-                  {i === 0 && <span className="shrink-0 px-2 py-0.5 rounded-full bg-brandsoft text-brand text-[11px] font-bold">বিজয়ী</span>}
-                </span>
-                <span className="tnum text-[14px] font-semibold shrink-0">{bnGroup(c.votes)}</span>
+              {/* On a phone the name has a line of its own; party, votes and share follow on the next. */}
+              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1">
+                <span className={`w-full sm:w-auto sm:flex-1 sm:min-w-0 sm:truncate leading-snug ${i === 0 ? 'font-bold' : 'font-medium'}`}>{c.name}</span>
+                {/* The party's logo beside its short name; a colour dot where no logo is on record. */}
+                {c.party && (
+                  <span className="shrink-0 inline-flex items-center gap-1.5 ps-1.5 pe-2 py-0.5 rounded-full bg-sunk text-[12px] text-inksoft">
+                    <PartyDot abbr={c.party} size={16} />
+                    {c.party}
+                  </span>
+                )}
+                {i === 0 && <span className="shrink-0 px-2 py-0.5 rounded-full bg-brandsoft text-brand text-[11px] font-bold">বিজয়ী</span>}
+                <span className="ms-auto tnum text-[14px] font-semibold shrink-0">{bnGroup(c.votes)}</span>
                 <span className="tnum text-[12.5px] text-muted w-12 text-end shrink-0">{bn(share.toFixed(1))}%</span>
               </div>
               <div className="h-1.5 rounded-full bg-sunk overflow-hidden">

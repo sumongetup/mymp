@@ -3,7 +3,7 @@ import { shareGraph, shareTwitter } from '@/lib/seo';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
-  seats, getSeat, getMemberById, districtOf, bn, bnGroup, initial, dateBn, meta, partyColor,
+  seats, getSeat, getMemberById, districtOf, bn, bnGroup, initial, dateBn, meta, partyColor, nameEnDisplay,
 } from '@/lib/data';
 import { Page, Card, Breadcrumb, Empty, PartyDot } from '@/components/ui';
 import MemberPhoto from '@/components/MemberPhoto';
@@ -112,12 +112,12 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
             {member ? (
               <Link
                 href={`/mp/${member.slug}`}
-                className="bg-surface border-[1.5px] rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5 hover:shadow-sm transition-shadow"
+                className="bg-surface border-[1.5px] rounded-xl p-4 sm:p-6 flex items-center gap-4 sm:gap-5 hover:shadow-sm transition-shadow"
                 style={{ borderColor: partyColor(member.party?.abbr) }}
               >
-                <MemberPhoto src={member.photoUrl} alt="" initial={initial(member)} size={88} />
-                <span className="grow flex flex-col gap-2">
-                  <span className="display text-[24px] sm:text-[28px] font-extrabold leading-tight">
+                <MemberPhoto src={member.photoUrl} alt="" initial={initial(member)} size={88} sizeClass="w-[72px] h-[72px] sm:w-[88px] sm:h-[88px]" />
+                <span className="grow min-w-0 flex flex-col gap-1.5 sm:gap-2">
+                  <span className="display text-[21px] sm:text-[28px] font-extrabold leading-tight">
                     {member.nameBn ?? member.nameEn}
                   </span>
                   <span className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[15px] text-inksoft">
@@ -128,7 +128,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                     {member.professionBn && <span>{member.professionBn}</span>}
                   </span>
                 </span>
-                <span className="text-[14px] font-semibold text-brand shrink-0">প্রোফাইল →</span>
+                <span className="hidden sm:inline text-[14px] font-semibold text-brand shrink-0">প্রোফাইল →</span>
               </Link>
             ) : (
               <Empty title="এই আসনে বর্তমানে কোনো সদস্য নেই।" />
@@ -158,10 +158,17 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                       // A sitting member is shown under the name the site uses for them; the
                       // source's own spelling for that year stays underneath.
                       const name = cur?.nameBn ?? h.nameBn ?? h.nameEn ?? '—';
-                      const sub = cur ? (h.nameEn ?? h.nameBn) : h.nameBn ? h.nameEn : null;
+                      const sub = cur ? (nameEnDisplay(h.nameEn) ?? h.nameBn) : h.nameBn ? nameEnDisplay(h.nameEn) : null;
                       return (
-                        <div key={`${h.parliamentNo}-${name}`} className="px-4 sm:px-5 py-3 flex items-center gap-3 sm:gap-4">
-                          <span className="w-[104px] sm:w-[190px] shrink-0 text-[12.5px] sm:text-[13.5px] text-muted leading-snug">{parliamentLabel(h.parliamentNo)}</span>
+                        <div key={`${h.parliamentNo}-${name}`} className="px-4 sm:px-5 py-3 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+                          {/* On a phone the parliament and party share a small line above the name, which then has the full width. */}
+                          <span className="sm:w-[190px] sm:shrink-0 flex items-center justify-between gap-3">
+                            <span className="text-[12.5px] sm:text-[13.5px] text-muted leading-snug">{parliamentLabel(h.parliamentNo)}</span>
+                            <span className="sm:hidden flex items-center gap-1.5 text-[12.5px] font-semibold text-inksoft">
+                              <PartyDot abbr={h.partyAbbr} size={16} />
+                              {h.partyAbbr ?? '—'}
+                            </span>
+                          </span>
                           <span className="grow min-w-0 flex flex-col">
                             {cur ? (
                               <Link href={`/mp/${cur.slug}`} className="font-semibold text-brand hover:underline wrap-anywhere">{name}</Link>
@@ -170,10 +177,9 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                             )}
                             {sub && sub !== name && <span className="text-[12.5px] text-muted wrap-anywhere">{sub}</span>}
                           </span>
-                          <span className="shrink-0 flex items-center gap-2 text-[13px] font-semibold text-inksoft">
+                          <span className="hidden sm:flex shrink-0 items-center gap-2 text-[13px] font-semibold text-inksoft">
                             <PartyDot abbr={h.partyAbbr} />
-                            <span className="hidden sm:inline">{h.partyNameBn ?? h.partyAbbr ?? '—'}</span>
-                            <span className="sm:hidden">{h.partyAbbr ?? '—'}</span>
+                            {h.partyNameBn ?? h.partyAbbr ?? '—'}
                           </span>
                         </div>
                       );

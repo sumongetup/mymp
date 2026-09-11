@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
-import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
+import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs, partyShortBn } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
 import { parliament } from '@/lib/activity';
 import { parliamentsWithRecords, partySeatsOf, parliamentLabel, resultForSeat } from '@/lib/history';
@@ -78,9 +78,9 @@ export default function ElectionPage() {
         <div className="border-t border-rule pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-[14px]">
           {parties.slice(0, 4).map((p) => (
             <div key={p.abbr} className="flex flex-col gap-1">
-              <span className="flex items-center gap-2 text-muted">
+              <span className="flex items-center gap-2 text-muted" title={p.nameBn ?? p.abbr}>
                 <PartyDot abbr={p.abbr} />
-                {p.nameBn ?? p.abbr}
+                {partyShortBn(p)}
               </span>
               <span className="tnum">
                 <strong className="text-[17px]">{bn(p.seatsTerritorial)}</strong>
@@ -98,7 +98,8 @@ export default function ElectionPage() {
             সারা দেশের হিসাব, নির্বাচন কমিশনের প্রকাশিত তথ্য অনুযায়ী
           </p>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Crore-sized figures in Bangla grouping are wide: one column on a narrow phone, so two never run together. */}
+        <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="flex flex-col gap-1">
             <span className="display tnum text-[26px] font-extrabold leading-none">{bnGroup(ecs.national.registeredVoters)}</span>
             <span className="text-[13px] text-muted">মোট ভোটার</span>

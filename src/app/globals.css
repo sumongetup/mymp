@@ -277,6 +277,12 @@ html.intro-play .intro {
   @keyframes reveal {
     from { opacity: 0; transform: translateY(18px); }
   }
+  /* Asked for less motion: cards are simply there. (A shorter duration alone does nothing here, since scrolling drives the animation.) */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal:not(.rise) {
+      animation: none;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

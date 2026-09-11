@@ -100,7 +100,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
 
       <main id="main" className="grow">{children}</main>
 
-      <section aria-label="তথ্যের সূত্র ও হালনাগাদ" className="mt-16 border-t border-brandring bg-brandsoft">
+      <section aria-label="তথ্যের সূত্র ও হালনাগাদ" className="mt-6 sm:mt-16 border-t border-brandring bg-brandsoft">
         <div className="mx-auto max-w-[1200px] px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {HOW_IT_WORKS.map((h) => (
             <div key={h.title} className="flex gap-4">

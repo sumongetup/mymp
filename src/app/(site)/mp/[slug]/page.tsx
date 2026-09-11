@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   members, allMembers, getMember, committeesOfMember, membersOfParty, districtOf,
-  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor, governmentPostsOf, postsCheckedOnBn,
+  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor, governmentPostsOf, postsCheckedOnBn, nameEnDisplay,
 } from '@/lib/data';
 import { storiesForMember } from '@/lib/newsView';
 import StoryCard from '@/components/StoryCard';
@@ -43,9 +43,9 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="flex justify-between gap-4 py-2.5 border-b border-rulesoft last:border-0">
-      <span className="text-muted shrink-0">{label}</span>
-      <span className="text-end font-medium wrap-anywhere">{children}</span>
+    <div className="grid grid-cols-[96px_1fr] sm:grid-cols-[150px_1fr] gap-x-4 py-2.5 border-b border-rulesoft last:border-0">
+      <span className="text-muted">{label}</span>
+      <span className="font-medium wrap-anywhere">{children}</span>
     </div>
   );
 }
@@ -136,7 +136,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: m.nameBn ?? m.nameEn,
-    ...(m.nameEn && m.nameBn ? { alternateName: m.nameEn } : {}),
+    ...(m.nameEn && m.nameBn ? { alternateName: nameEnDisplay(m.nameEn) } : {}),
     jobTitle: 'সংসদ সদস্য',
     ...(party && !isIndependent(m) ? { memberOf: { '@type': 'Organization', name: party.name } } : {}),
     worksFor: { '@type': 'Organization', name: 'বাংলাদেশ জাতীয় সংসদ', url: 'https://www.parliament.gov.bd' },
@@ -164,11 +164,43 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
       />
 
       <header
-        className="mt-5 bg-surface border border-rule rounded-card shadow-card p-5 sm:p-7 flex flex-col md:flex-row gap-5 md:gap-8 items-start"
+        className="mt-5 bg-surface border border-rule rounded-card shadow-card p-5 sm:p-7 flex flex-col gap-4"
         style={{ borderTopColor: partyColor(m.party?.abbr), borderTopWidth: 4 }}
       >
-        <MemberPhoto src={m.photoUrl} alt={m.nameBn ?? m.nameEn ?? ''} initial={initial(m)} size={120} className="ring-4 ring-paper" />
-        <div className="grow flex flex-col gap-3 min-w-0">
+        {/* Photo and name side by side on every screen; the rest runs below, in line with the name from sm up. */}
+        <div className="flex items-center gap-4 sm:gap-7">
+          <MemberPhoto
+            src={m.photoUrl}
+            alt={m.nameBn ?? m.nameEn ?? ''}
+            initial={initial(m)}
+            size={120}
+            sizeClass="w-[88px] h-[88px] sm:w-[120px] sm:h-[120px]"
+            className="ring-4 ring-paper"
+          />
+          <div className="min-w-0 flex flex-col gap-1">
+            <h1 className="display text-[26px] sm:text-[40px] leading-[1.15] text-balance wrap-anywhere">
+              {m.nameBn ?? m.nameEn}
+            </h1>
+            {m.nameEn && m.nameBn && <p className="text-[14px] sm:text-[15.5px] text-muted">{nameEnDisplay(m.nameEn)}</p>}
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 sm:ps-[148px]">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[15px]">
+            {m.party && (
+              <Link href={`/dol/${m.party.abbr.toLowerCase()}`} className="flex items-center gap-2 font-semibold hover:text-brand">
+                <PartyDot abbr={m.party.abbr} />
+                {m.party.nameBn ?? m.party.abbr}
+              </Link>
+            )}
+            {m.seat && (
+              <Link href={`/ason/${m.seat.slug}`} className="font-semibold text-brand hover:underline">
+                {m.seat.nameBn}
+              </Link>
+            )}
+            {district && (
+              <Link href={`/jela/${district.slug}`} className="text-inksoft hover:text-brand">{district.bn} জেলা</Link>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2">
             {m.resignedOn ? (
               <span className="px-3 py-1 rounded-full bg-warnsoft text-warn text-[12.5px] font-bold">
@@ -202,26 +234,6 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               <Link href="/ministers" className="underline decoration-rule underline-offset-2 hover:text-brand">মন্ত্রিসভা</Link>
             </p>
           )}
-          <h1 className="display text-[28px] sm:text-[40px] leading-[1.15] text-balance wrap-anywhere">
-            {m.nameBn ?? m.nameEn}
-          </h1>
-          {m.nameEn && m.nameBn && <p className="text-[15.5px] text-muted -mt-1">{m.nameEn}</p>}
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
-            {m.party && (
-              <Link href={`/dol/${m.party.abbr.toLowerCase()}`} className="flex items-center gap-2 font-semibold hover:text-brand">
-                <PartyDot abbr={m.party.abbr} />
-                {m.party.nameBn ?? m.party.abbr}
-              </Link>
-            )}
-            {m.seat && (
-              <Link href={`/ason/${m.seat.slug}`} className="font-semibold text-brand hover:underline">
-                {m.seat.nameBn}
-              </Link>
-            )}
-            {district && (
-              <Link href={`/jela/${district.slug}`} className="text-inksoft hover:text-brand">{district.bn} জেলা</Link>
-            )}
-          </div>
           {m.resignedOn && (
             <div role="note" className="flex items-start gap-2.5 rounded-lg border-s-[3px] border-warn bg-warnsoft px-4 py-3 text-[14.5px] leading-relaxed text-ink">
               <Icon name="info" size={18} className="mt-[3px] text-warn shrink-0" />
@@ -239,7 +251,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             </div>
           )}
           {socials.length > 0 && (
-            <div className="flex flex-wrap gap-2 pt-1">
+            <div className="flex flex-wrap gap-2">
               {socials.map((s) => (
                 <a
                   key={s.key}

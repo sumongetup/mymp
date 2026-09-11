@@ -125,12 +125,13 @@ export default function MemberFilter({
           ))}
         </div>
 
-        <div className="flex gap-2 flex-wrap lg:ms-auto">
+        {/* One row that scrolls sideways on a phone, rather than three rows of party names. */}
+        <div className="flex gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap lg:ms-auto">
           <button
             type="button"
             onClick={() => { setParty(null); setShown(60); }}
             aria-pressed={party === null}
-            className={`px-3.5 h-11 rounded-full text-[14px] font-medium border ${
+            className={`shrink-0 px-3.5 h-11 rounded-full text-[14px] font-medium border ${
               party === null ? 'bg-brand text-white border-brand' : 'bg-surface border-rule'
             }`}
           >
@@ -142,7 +143,7 @@ export default function MemberFilter({
               type="button"
               onClick={() => { setParty(p.abbr); setShown(60); }}
               aria-pressed={party === p.abbr}
-              className={`px-3.5 h-11 rounded-full text-[14px] font-medium border flex items-center gap-2 ${
+              className={`shrink-0 px-3.5 h-11 rounded-full text-[14px] font-medium border flex items-center gap-2 ${
                 party === p.abbr ? 'bg-brand text-white border-brand' : 'bg-surface border-rule'
               }`}
             >

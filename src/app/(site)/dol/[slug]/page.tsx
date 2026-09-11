@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { shareGraph, shareTwitter } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import {
-  parties, getParty, membersOfParty, getMemberById, bn, dateBn, partyColor, initial, statistics, OFFICE_LABELS, type Party,
+  parties, getParty, membersOfParty, getMemberById, bn, dateBn, partyColor, initial, statistics, OFFICE_LABELS, type Party, type Member,
 } from '@/lib/data';
 import { rolesOf, officers, ROLE_LABELS } from '@/lib/activity';
 import { Page, PageHead, Card, Stat, MemberRow, Breadcrumb, PartyMark, LogoCredit } from '@/components/ui';
@@ -16,6 +16,29 @@ import { siteUrl } from '@/lib/site';
 
 export function generateStaticParams() {
   return parties.map((p) => ({ slug: p.slug }));
+}
+
+/**
+ * A party's members: the first dozen, the rest one tap away. All stay in the
+ * page for search engines; a phone no longer scrolls past 246 cards.
+ */
+function MemberList({ list }: { list: Member[] }) {
+  const SHOWN = 12;
+  const grid = 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3';
+  return (
+    <>
+      <ul className={grid}>{list.slice(0, SHOWN).map((m) => <li key={m.id}><MemberRow m={m} /></li>)}</ul>
+      {list.length > SHOWN && (
+        <details className="group flex flex-col">
+          <summary className="list-none [&::-webkit-details-marker]:hidden cursor-pointer self-start inline-flex items-center gap-2 h-11 px-5 rounded-full border border-ink font-semibold text-[15px] hover:bg-surface transition-colors">
+            <span className="group-open:hidden">আরও {bn(list.length - SHOWN)} জন দেখুন</span>
+            <span className="hidden group-open:inline">কম দেখুন</span>
+          </summary>
+          <ul className={`${grid} mt-3`}>{list.slice(SHOWN).map((m) => <li key={m.id}><MemberRow m={m} /></li>)}</ul>
+        </details>
+      )}
+    </>
+  );
 }
 
 /** "১ সেপ্টেম্বর ১৯৭৮", or "১৯৭৮ সাল" when only the year is on record. */
@@ -310,9 +333,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
             <h2 className="display text-[24px] font-bold">
               আসন থেকে নির্বাচিত <span className="text-muted font-semibold text-[19px]">({bn(territorial.length)})</span>
             </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
-              {territorial.map((m) => <li key={m.id}><MemberRow m={m} /></li>)}
-            </ul>
+            <MemberList list={territorial} />
           </section>
         )}
 
@@ -321,9 +342,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
             <h2 className="display text-[24px] font-bold">
               সংরক্ষিত নারী আসন <span className="text-muted font-semibold text-[19px]">({bn(reserved.length)})</span>
             </h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
-              {reserved.map((m) => <li key={m.id}><MemberRow m={m} /></li>)}
-            </ul>
+            <MemberList list={reserved} />
           </section>
         )}
 

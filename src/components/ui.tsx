@@ -152,30 +152,31 @@ export function DocLink({ href, children }: { href: string; children: React.Reac
   );
 }
 
+/** A member as a card: photo beside the name on a phone, photo above it in a grid from sm up. */
 export function MemberCard({ m, badge }: { m: Member; badge?: string }) {
+  const badgeClass = 'px-2.5 py-1 rounded-full bg-ink text-white text-[11.5px] font-bold whitespace-nowrap';
   return (
     <Link
       href={`/mp/${m.slug}`}
-      className="reveal group bg-surface border border-rule rounded-card shadow-card p-5 flex flex-col gap-4 hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
+      className="reveal group bg-surface border border-rule rounded-card shadow-card p-4 sm:p-5 flex sm:flex-col gap-3.5 sm:gap-4 hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
       style={{ borderTopColor: partyColor(m.party?.abbr), borderTopWidth: 3 }}
     >
-      <div className="flex items-start justify-between gap-3">
-        <MemberPhoto src={m.photoUrl} alt="" initial={initial(m)} size={64} />
-        {badge && (
-          <span className="px-2.5 py-1 rounded-full bg-ink text-white text-[11.5px] font-bold whitespace-nowrap">{badge}</span>
-        )}
+      <div className="shrink-0 flex items-start justify-between gap-3">
+        <MemberPhoto src={m.photoUrl} alt="" initial={initial(m)} size={64} sizeClass="w-14 h-14 sm:w-16 sm:h-16" />
+        {badge && <span className={`hidden sm:inline-block ${badgeClass}`}>{badge}</span>}
       </div>
-      <span className="flex flex-col gap-1">
-        <span className="display text-[17px] leading-snug min-h-[2.6em] group-hover:text-brand transition-colors">
+      <span className="grow min-w-0 flex flex-col gap-1">
+        {badge && <span className={`sm:hidden self-start mb-0.5 ${badgeClass}`}>{badge}</span>}
+        <span className="display text-[16.5px] sm:text-[17px] leading-snug sm:min-h-[2.6em] group-hover:text-brand transition-colors">
           {m.nameBn || m.nameEn}
         </span>
         <span className="text-[13.5px] text-muted">
           {m.seat?.nameBn ?? 'আসন নেই'}
         </span>
-      </span>
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-inksoft mt-auto">
-        <PartyDot abbr={m.party?.abbr} />
-        <span className="truncate">{m.party?.nameBn ?? m.party?.abbr ?? '—'}</span>
+        <span className="flex items-center gap-2 text-[13px] font-semibold text-inksoft mt-1 sm:mt-auto sm:pt-3">
+          <PartyDot abbr={m.party?.abbr} />
+          <span className="truncate">{m.party?.nameBn ?? m.party?.abbr ?? '—'}</span>
+        </span>
       </span>
     </Link>
   );

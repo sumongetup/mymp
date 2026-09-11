@@ -75,16 +75,17 @@ export default function ShareButtons({ url, title, text }: { url: string; title:
   }
 
   const button =
-    'inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border border-rule bg-surface text-[13px] font-semibold hover:border-brand hover:text-brand transition-colors';
+    // On a phone the networks are icons in one row (their names stay for screen readers); words from sm up.
+    'inline-flex items-center justify-center gap-1.5 h-9 w-9 sm:h-8 sm:w-auto sm:px-3 rounded-lg border border-rule bg-surface text-[13px] font-semibold hover:border-brand hover:text-brand transition-colors';
 
   return (
     <div className="flex flex-wrap items-center gap-2" role="group" aria-label="এই পাতা শেয়ার করুন">
-      <span className="text-[12.5px] font-semibold text-muted me-0.5">শেয়ার করুন</span>
+      <span className="hidden sm:inline text-[12.5px] font-semibold text-muted me-0.5">শেয়ার করুন</span>
       {canShare && (
         <button
           type="button"
           onClick={() => navigator.share({ title, text, url }).catch(() => {})}
-          className="inline-flex items-center gap-1.5 h-8 px-3 rounded-lg bg-brand text-white text-[13px] font-semibold hover:bg-branddark transition-colors"
+          className="inline-flex items-center gap-1.5 h-9 sm:h-8 px-3.5 sm:px-3 rounded-lg bg-brand text-white text-[13px] font-semibold hover:bg-branddark transition-colors"
         >
           <Icon name="share" size={14} />
           শেয়ার
@@ -100,16 +101,16 @@ export default function ShareButtons({ url, title, text }: { url: string; title:
           className={button}
           aria-label={l.key === 'messenger' ? 'Messenger-এ পাঠান' : `${l.label}-এ শেয়ার করুন`}
         >
-          <BrandIcon name={l.key} size={15} />
-          {l.key === 'messenger' && copied === 'messenger' ? 'লিংক কপি হয়েছে, চ্যাটে পেস্ট করুন' : l.label}
+          <BrandIcon name={l.key} size={16} />
+          <span className="hidden sm:inline">{l.key === 'messenger' && copied === 'messenger' ? 'লিংক কপি হয়েছে, চ্যাটে পেস্ট করুন' : l.label}</span>
         </a>
       ))}
-      <button type="button" onClick={() => copy('link')} className={button} aria-live="polite">
-        <Icon name={copied === 'link' ? 'check' : 'link'} size={14} />
-        {copied === 'link' ? 'লিংক কপি হয়েছে' : 'লিংক কপি'}
+      <button type="button" onClick={() => copy('link')} className={button} aria-label={copied === 'link' ? 'লিংক কপি হয়েছে' : 'লিংক কপি করুন'}>
+        <Icon name={copied === 'link' ? 'check' : 'link'} size={15} className={copied === 'link' ? 'text-brand' : undefined} />
+        <span className="hidden sm:inline">{copied === 'link' ? 'লিংক কপি হয়েছে' : 'লিংক কপি'}</span>
       </button>
       <span className="sr-only" role="status">
-        {copied === 'messenger' ? 'লিংক কপি হয়েছে। Messenger খুলেছে, যাকে পাঠাতে চান তার চ্যাটে পেস্ট করুন।' : ''}
+        {copied === 'messenger' ? 'লিংক কপি হয়েছে। Messenger খুলেছে, যাকে পাঠাতে চান তার চ্যাটে পেস্ট করুন।' : copied === 'link' ? 'লিংক কপি হয়েছে।' : ''}
       </span>
     </div>
   );

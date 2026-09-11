@@ -13,22 +13,26 @@ export default function MemberPhoto({
   initial,
   size = 56,
   className = '',
+  sizeClass,
 }: {
   src: string | null;
   alt: string;
   initial: string;
   size?: number;
   className?: string;
+  /** Responsive size classes (e.g. "w-20 h-20 sm:w-[120px] sm:h-[120px]"); `size` then only sets the image's own dimensions. */
+  sizeClass?: string;
 }) {
   const [failed, setFailed] = useState(false);
-  const style = { width: size, height: size };
+  const style = sizeClass ? {} : { width: size, height: size };
+  const cls = `${sizeClass ?? ''} ${className}`.trim();
 
   if (!src || failed) {
     return (
       <span
         style={{ ...style, fontSize: Math.round(size * 0.38) }}
         aria-hidden="true"
-        className={`display shrink-0 rounded-full bg-brandsoft text-brand font-bold grid place-items-center ${className}`}
+        className={`display shrink-0 rounded-full bg-brandsoft text-brand font-bold grid place-items-center ${cls}`}
       >
         {initial}
       </span>
@@ -46,7 +50,7 @@ export default function MemberPhoto({
       decoding="async"
       onError={() => setFailed(true)}
       style={style}
-      className={`shrink-0 rounded-full object-cover bg-sunk ${className}`}
+      className={`shrink-0 rounded-full object-cover bg-sunk ${cls}`}
     />
   );
 }

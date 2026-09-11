@@ -59,9 +59,12 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_LD) }} />
-      <section className="relative overflow-hidden bg-[radial-gradient(ellipse_at_top_left,_var(--color-brandsoft),_transparent_55%)]">
-        <div aria-hidden="true" className="hero-glow w-[420px] h-[420px] -top-40 -left-24 bg-[#17cf54]/15" />
-        <div aria-hidden="true" className="hero-glow w-[360px] h-[360px] top-10 right-[-120px] bg-[#0f6a4b]/12 [animation-delay:-9s]" />
+      <section className="relative bg-[radial-gradient(ellipse_at_top_left,_var(--color-brandsoft),_transparent_55%)]">
+        {/* The glows are clipped on their own layer, so the search results can open past the hero's edge. */}
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="hero-glow w-[420px] h-[420px] -top-40 -left-24 bg-[#17cf54]/15" />
+          <div className="hero-glow w-[360px] h-[360px] top-10 right-[-120px] bg-[#0f6a4b]/12 [animation-delay:-9s]" />
+        </div>
         <Page>
           <div className="pt-9 sm:pt-14 pb-10 sm:pb-14 flex flex-col lg:flex-row gap-9 lg:gap-14 items-start">
             <div className="grow flex flex-col gap-5 sm:gap-6 w-full min-w-0">
@@ -78,7 +81,8 @@ export default function Home() {
                 {bn(stats.total)} জন সদস্য, {bn(300)} আসন, {bn(parties.length)}টি দল। প্রতিটি সদস্যের পরিচিতি, ভোটের ফল,
                 কমিটি ও সংসদের প্রজ্ঞাপন, সবই সূত্রসহ
               </p>
-              <div className="rise [--rise-i:3]">
+              {/* Above the chips and the card that follow: each animates on its own layer, and later ones paint on top. */}
+              <div className="rise [--rise-i:3] relative z-20">
                 <SiteSearch withButton placeholder="আসন, জেলা, এমপি বা দলের নাম, বাংলা বা ইংরেজিতে" />
               </div>
               <div className="rise [--rise-i:4] flex items-center gap-2.5 text-[13.5px] text-muted overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">

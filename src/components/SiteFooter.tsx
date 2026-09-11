@@ -17,6 +17,8 @@ import { SITE_EMAIL, SITE_FACEBOOK } from '@/lib/site';
  */
 const HEADING = 'text-[15px] font-bold text-[#6ee79a]';
 const LINK = 'text-white hover:text-[#6ee79a] transition-colors';
+const NAV = 'flex flex-col gap-4 border-t border-white/15 pt-6 md:border-0 md:pt-0';
+const LINKS = 'grid grid-cols-2 md:grid-cols-1 gap-x-5 gap-y-3.5 text-[15.5px] sm:text-[16px] leading-snug';
 const PILL = 'h-11 px-4 inline-flex items-center gap-2 rounded-full bg-white/10 text-white text-[15px] font-semibold hover:bg-white/20 transition-colors';
 
 function FooterItem({ item }: { item: FooterLink }) {
@@ -34,8 +36,9 @@ function FooterItem({ item }: { item: FooterLink }) {
 export default function SiteFooter() {
   return (
     <footer className="bg-[#10281f] text-[#cfdad3] border-t-[3px] border-transparent [border-image:linear-gradient(90deg,var(--color-brand),var(--color-logo),var(--color-brand))_1]">
-      <div className="mx-auto max-w-[1200px] px-5 py-12 flex flex-col gap-10">
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10">
+      <div className="mx-auto max-w-[1200px] px-5 py-10 sm:py-12 flex flex-col gap-8 sm:gap-10">
+        {/* On a phone: brand, then both link groups in the same two-column grid, each under a thin rule. */}
+        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-8 md:gap-10">
           <div className="flex flex-col gap-5 max-w-[440px]">
             <Brand tone="light" />
             <p className="text-[16px] leading-relaxed text-[#dbe6df]">
@@ -62,18 +65,18 @@ export default function SiteFooter() {
             </div>
           </div>
 
-          <nav aria-label="বিভাগ" className="flex flex-col gap-4">
+          <nav aria-label="বিভাগ" className={NAV}>
             <span className={HEADING}>বিভাগ</span>
-            <div className="grid grid-cols-2 md:grid-cols-1 gap-x-4 gap-y-3 text-[16px]">
+            <div className={LINKS}>
               {FOOTER_SECTIONS.map((item) => (
                 <FooterItem key={item.label} item={item} />
               ))}
             </div>
           </nav>
 
-          <nav aria-label="আমার এমপি" className="flex flex-col gap-4">
+          <nav aria-label="আমার এমপি" className={NAV}>
             <span className={HEADING}>আমার এমপি</span>
-            <div className="flex flex-col gap-3 text-[16px]">
+            <div className={LINKS}>
               {FOOTER_ABOUT.map((item) => (
                 <FooterItem key={item.label} item={item} />
               ))}
