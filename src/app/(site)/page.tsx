@@ -74,7 +74,7 @@ export default function Home() {
               {/* The owner's line said "সংসদে উপস্থিতি"; no open source has attendance (see /parisonkhan), so it names the notices member pages do carry. */}
               <p className="rise [--rise-i:2] text-[16px] sm:text-[19px] leading-relaxed text-inksoft max-w-[600px] text-pretty">
                 {bn(stats.total)} জন সদস্য, {bn(300)} আসন, {bn(parties.length)}টি দল। প্রতিটি সদস্যের পরিচিতি, ভোটের ফল,
-                কমিটি ও সংসদের প্রজ্ঞাপন, সবই সূত্রসহ।
+                কমিটি ও সংসদের প্রজ্ঞাপন, সবই সূত্রসহ
               </p>
               <div className="rise [--rise-i:3]">
                 <SiteSearch withButton placeholder="আসন, জেলা, এমপি বা দলের নাম, বাংলা বা ইংরেজিতে" />
