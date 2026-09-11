@@ -8,7 +8,27 @@ import HeaderClock from '@/components/HeaderClock';
 import Intro from '@/components/Intro';
 import NewsTicker from '@/components/NewsTicker';
 import SiteFooter from '@/components/SiteFooter';
+import Icon from '@/components/Icon';
 import { siteUrl, SITE_EMAIL, SITE_FACEBOOK } from '@/lib/site';
+
+/** How the site works, in three lines, above the footer (owner, 2026-09-12). */
+const HOW_IT_WORKS = [
+  {
+    icon: 'file',
+    title: 'কোথা থেকে তথ্য আসে',
+    body: 'বাংলাদেশ জাতীয় সংসদের ওয়েবসাইট ও সংসদ সচিবালয়ের প্রজ্ঞাপন, নির্বাচন কমিশনের প্রকাশিত তথ্য; ভোটের ফল ও দলের ইতিহাসের মতো বাকি তথ্যের সূত্র প্রতিটি পাতায় লেখা। কোনো তথ্য অনুমান করে বসানো হয় না।',
+  },
+  {
+    icon: 'refresh',
+    title: 'কত দিন পরপর হালনাগাদ',
+    body: 'প্রতিদিন। সংসদের নতুন প্রজ্ঞাপন, বৈঠকের কার্যসূচি ও কমিটির পরিবর্তন প্রকাশের পরদিনের মধ্যে যুক্ত হয়; সংবাদ শিরোনাম আরও ঘন ঘন।',
+  },
+  {
+    icon: 'flag',
+    title: 'ভুল পেলে',
+    body: 'প্রতিটি সদস্যের পাতায় “সংশোধন জানান” বোতাম আছে। সূত্রসহ জানালে ২৪ ঘণ্টার মধ্যে যাচাই করে ঠিক করা হয়।',
+  },
+];
 
 /** Tells search engines who publishes the site, which image is its logo, and its own page and address. */
 const ORGANIZATION = {
@@ -80,29 +100,19 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
 
       <main id="main" className="grow">{children}</main>
 
-      {/* How the site works, in three lines, above the footer (owner, 2026-09-12). */}
-      <section aria-label="তথ্যের সূত্র ও হালনাগাদ" className="mt-16 border-t border-rule bg-sunk/60">
-        <div className="mx-auto max-w-[1200px] px-5 py-9 grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10">
-          <div className="flex flex-col gap-1.5">
-            <h2 className="display text-[16.5px] font-bold">কোথা থেকে তথ্য আসে</h2>
-            <p className="text-[14px] leading-relaxed text-inksoft">
-              বাংলাদেশ জাতীয় সংসদের ওয়েবসাইট ও সংসদ সচিবালয়ের প্রজ্ঞাপন, নির্বাচন কমিশনের প্রকাশিত তথ্য; ভোটের ফল ও দলের
-              ইতিহাসের মতো বাকি তথ্যের সূত্র প্রতিটি পাতায় লেখা। কোনো তথ্য অনুমান করে বসানো হয় না।
-            </p>
-          </div>
-          <div className="flex flex-col gap-1.5">
-            <h2 className="display text-[16.5px] font-bold">কত দিন পরপর হালনাগাদ</h2>
-            <p className="text-[14px] leading-relaxed text-inksoft">
-              প্রতিদিন। সংসদের নতুন প্রজ্ঞাপন, বৈঠকের কার্যসূচি ও কমিটির পরিবর্তন প্রকাশের পরদিনের মধ্যে যুক্ত হয়; সংবাদ
-              শিরোনাম আরও ঘন ঘন।
-            </p>
-          </div>
-          <div className="flex flex-col gap-1.5">
-            <h2 className="display text-[16.5px] font-bold">ভুল পেলে</h2>
-            <p className="text-[14px] leading-relaxed text-inksoft">
-              প্রতিটি সদস্যের পাতায় “সংশোধন জানান” বোতাম আছে। সূত্রসহ জানালে ২৪ ঘণ্টার মধ্যে যাচাই করে ঠিক করা হয়।
-            </p>
-          </div>
+      <section aria-label="তথ্যের সূত্র ও হালনাগাদ" className="mt-16 border-t border-brandring bg-brandsoft">
+        <div className="mx-auto max-w-[1200px] px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          {HOW_IT_WORKS.map((h) => (
+            <div key={h.title} className="flex gap-4">
+              <span className="shrink-0 w-11 h-11 rounded-xl bg-surface text-brand grid place-items-center ring-1 ring-brandring">
+                <Icon name={h.icon} size={21} />
+              </span>
+              <div className="flex flex-col gap-1.5">
+                <h2 className="display text-[19px] font-bold text-ink">{h.title}</h2>
+                <p className="text-[16px] leading-relaxed text-inksoft">{h.body}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
