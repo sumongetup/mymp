@@ -42,10 +42,11 @@ export function normalizeName(raw: string): string {
     raw
       .normalize('NFC')
       .replace(/\([^)]*\)/g, ' ') // (অব:), (অবঃ)
-      .split(',')[0]! // ", সিএফএ"
+      // A credential after a final comma (", সিএফএ") goes; commas between initials ("এ, কে, এম, …") are just spaces.
+      .replace(/,\s*[^,\s]{1,6}\s*$/, '')
       .replace(GALLANTRY, ' '),
   )
-    .replace(/[ঃ.:;'"‘’“”\-–—/]/g, ' ') // visarga in মোঃ/ডাঃ, dots, dashes
+    .replace(/[ঃ.,:;'"‘’“”\-–—/]/g, ' ') // visarga in মোঃ/ডাঃ, dots, commas, dashes
     .replace(/\s+/g, ' ')
     .trim();
   return s

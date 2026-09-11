@@ -29,6 +29,13 @@ test('the cabinet list\'s জনাব, ranks, (অব:) and a trailing credenti
   assert.equal(normalizeName('চৌধুরী আশিক মাহমুদ বিন হারুন, সিএফএ'), normalizeName('চৌধুরী আশিক মাহমুদ বিন হারুন'));
 });
 
+test('commas between initials are not a credential', () => {
+  assert.equal(normalizeName('এ, জেড, এম, রেজওয়ানুল হক'), normalizeName('এ জেড এম রেজওয়ানুল হক'));
+  assert.notEqual(normalizeName('এ, জেড, এম, রেজওয়ানুল হক'), normalizeName('এ, কে, এম, সেলিম রেজা হাবিব'));
+  assert.equal(normalizeName('এস,এম, রফিকুল ইসলাম'), normalizeName('এস এম রফিকুল ইসলাম'));
+  assert.equal(normalizeName('ড, আবদুল মঈন খান'), normalizeName('আবদুল মঈন খান'));
+});
+
 test('zero-width joiners and extra spaces do not matter', () => {
   assert.equal(normalizeName('মাহ্‌দী   আমিন'), normalizeName('মাহ্দী আমিন'));
 });
