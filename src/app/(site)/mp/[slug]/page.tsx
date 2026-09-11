@@ -520,18 +520,6 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 )}
               </div>
             )}
-            {m.presentAddressBn && (
-              <div className="flex flex-col gap-1 border-t border-rule pt-3">
-                <span className="text-[12px] font-bold tracking-[1px] text-muted">{m.permanentAddressBn && m.permanentAddressBn !== m.presentAddressBn ? 'বর্তমান ঠিকানা' : 'ঠিকানা'}</span>
-                <span className="text-[14px] leading-relaxed">{m.presentAddressBn}</span>
-              </div>
-            )}
-            {m.permanentAddressBn && m.permanentAddressBn !== m.presentAddressBn && (
-              <div className="flex flex-col gap-1 border-t border-rule pt-3">
-                <span className="text-[12px] font-bold tracking-[1px] text-muted">স্থায়ী ঠিকানা</span>
-                <span className="text-[14px] leading-relaxed">{m.permanentAddressBn}</span>
-              </div>
-            )}
           </Card>
 
           {partyMates.length > 0 && m.party && (

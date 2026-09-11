@@ -12,7 +12,7 @@
  */
 export const dynamic = 'force-dynamic';
 
-const LIMIT = { message: 1500, source: 500, name: 100, email: 200 };
+const LIMIT = { message: 1500, source: 500 };
 const WINDOW_MS = 10 * 60_000;
 const PER_WINDOW = 5;
 const recent = new Map<string, number[]>();
@@ -38,13 +38,9 @@ export async function POST(request: Request) {
   const page = text('page');
   const message = text('message');
   const source = text('source');
-  const name = text('name');
-  const email = text('email');
   if (!PAGE.test(page)) return bad('page');
   if (message.length < 10 || message.length > LIMIT.message) return bad('message');
   if (source && (source.length > LIMIT.source || !/^https?:\/\/\S+$/.test(source))) return bad('source');
-  if (name.length > LIMIT.name) return bad('name');
-  if (email && (email.length > LIMIT.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) return bad('email');
 
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
   const now = Date.now();
@@ -63,8 +59,9 @@ export async function POST(request: Request) {
       page_path: page,
       // The table has no source column; the link goes under the message, where the queue shows it.
       message: source ? `${message}\n\nসূত্র: ${source}` : message,
-      reporter_name: name || null,
-      reporter_email: email || null,
+      // The form asks for neither, as the privacy policy says.
+      reporter_name: null,
+      reporter_email: null,
     }),
   });
   if (!r.ok) return Response.json({ ok: false, field: 'server' }, { status: 502 });

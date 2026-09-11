@@ -36,7 +36,8 @@ function pick(obj: unknown, keys: readonly string[]): Rec {
 
 const MEMBER_KEYS = [
   'id', 'externalId', 'empId', 'nameEng', 'nameBng', 'fatherNameEng', 'fatherNameBng', 'motherNameEng', 'motherNameBng',
-  'dateOfBirth', 'isFreedomFighter', 'email', 'presentAddressBng', 'permanentAddressBng', 'gender', 'photoUrl',
+  // Home addresses stay out: parliament.gov.bd publishes them, but mymp.bd does not (owner's privacy policy, 2026-09-12).
+  'dateOfBirth', 'isFreedomFighter', 'email', 'gender', 'photoUrl',
   'professionBn', 'speakerHeroSummaryBn', 'speakerDetailsBioBn', 'updatedAt',
 ] as const;
 /** `count` is how many times the member has been elected, as the secretariat records it. */

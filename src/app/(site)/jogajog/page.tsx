@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/jogajog' },
   openGraph: shareGraph('/jogajog'),
   title: 'যোগাযোগ',
-  description: `আমার এমপির সঙ্গে যোগাযোগ করুন ইমেইলে (${SITE_EMAIL}) বা ফেসবুক পেজে। কোনো সংসদ সদস্যের দাপ্তরিক ঠিকানা কোথায় পাবেন আর সাইটে ভুল তথ্য পেলে কীভাবে জানাবেন, এই পাতায়।`,
+  description: `আমার এমপির সঙ্গে যোগাযোগ করুন ইমেইলে (${SITE_EMAIL}) বা ফেসবুক পেজে। কোনো সংসদ সদস্যের দাপ্তরিক ইমেইল কোথায় পাবেন আর সাইটে ভুল তথ্য পেলে কীভাবে জানাবেন, এই পাতায়।`,
 };
 
 const REPO_ISSUES = 'https://github.com/sumongetup/mymp/issues';
@@ -56,7 +56,7 @@ export default function ContactPage() {
           <h2 className="display text-[21px] font-bold">কোনো সংসদ সদস্যের সঙ্গে যোগাযোগ</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
             এই সাইট কোনো সদস্যের পক্ষে বার্তা নেয় না। প্রত্যেক সদস্যের পাতায় সংসদ কর্তৃক প্রকাশিত
-            দাপ্তরিক ইমেইল ও ঠিকানা দেওয়া আছে, সরাসরি সেখানে লিখুন।{' '}
+            দাপ্তরিক ইমেইল দেওয়া আছে, সরাসরি সেখানে লিখুন।{' '}
             <Link href="/mp" className="text-brand font-semibold hover:underline">সদস্যদের তালিকা →</Link>
           </p>
         </Card>
@@ -64,7 +64,7 @@ export default function ContactPage() {
         <Card className="p-6 flex flex-col gap-3">
           <h2 className="display text-[21px] font-bold">GitHub-এ জানাতে চাইলে</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
-            সাইটের কোড ও তথ্য উন্মুক্ত। GitHub ব্যবহার করলে সেখানেও একটি ইস্যু খুলে ভুল বা অসংগতি জানাতে
+            সাইটের কোড GitHub-এ দেখা যায়। GitHub ব্যবহার করলে সেখানেও একটি ইস্যু খুলে ভুল বা অসংগতি জানাতে
             পারেন; প্রতিটি রিপোর্ট সূত্র মিলিয়ে যাচাই করা হয়।
           </p>
           <a

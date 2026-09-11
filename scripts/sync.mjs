@@ -382,8 +382,9 @@ async function main() {
       motherBn: clean(m.motherNameBng),
       motherEn: clean(m.motherNameEng),
       isFreedomFighter: !!m.isFreedomFighter,
-      presentAddressBn: clean(m.presentAddressBng),
-      permanentAddressBn: clean(m.permanentAddressBng),
+      // parliament.gov.bd publishes home addresses; mymp.bd does not (owner's privacy policy, 2026-09-12).
+      presentAddressBn: null,
+      permanentAddressBn: null,
       email: clean(m.email),
       // The number itself is deliberately not stored; the engine's copy carries only this yes/no.
       hasMobile: typeof m.hasMobile === 'boolean' ? m.hasMobile : !!m.mobile,

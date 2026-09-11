@@ -15,7 +15,6 @@ export const EDITABLE: Record<EntityType, { key: string; label: string; multilin
     { key: 'ministryBn', label: 'মন্ত্রণালয়', hint: 'যেমন স্বরাষ্ট্র মন্ত্রণালয়; নিচে সরকারি পদও দিন।' },
     { key: 'govPost', label: 'সরকারি পদ', hint: 'মন্ত্রী, প্রতিমন্ত্রী অথবা উপমন্ত্রী।' },
     { key: 'email', label: 'দাপ্তরিক ইমেইল' },
-    { key: 'presentAddressBn', label: 'বর্তমান ঠিকানা', multiline: true },
     { key: 'bioBn', label: 'জীবনী', multiline: true },
     { key: 'facebook', label: 'Facebook পেজ', url: true, group: 'অফিসিয়াল সোশ্যাল মিডিয়া', hint: 'শুধু সদস্যের নিজের বা তাঁর দপ্তরের নিশ্চিত পেজ। পুরো লিংক দিন, যেমন https://www.facebook.com/…' },
     { key: 'x', label: 'X (Twitter)', url: true },

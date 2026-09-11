@@ -39,9 +39,9 @@ describe('the public mirror', () => {
     const m = mirrorMember(rawMember(1, '01711111111'));
     expect(m).toMatchObject({
       externalId: 'TEST_01301', empId: 5001, nameBng: 'TEST_সদস্য 1', fatherNameEng: 'TEST_Father', email: 'test1@parliament.gov.bd',
-      permanentAddressBng: 'TEST_গ্রাম', hasMobile: true,
+      hasMobile: true,
     });
-    for (const k of ['mobile', 'additionalMobile', 'additionalEmail', 'signUrl', 'userId', 'presentAddressEng']) expect(m).not.toHaveProperty(k);
+    for (const k of ['mobile', 'additionalMobile', 'additionalEmail', 'signUrl', 'userId', 'presentAddressEng', 'presentAddressBng', 'permanentAddressBng']) expect(m).not.toHaveProperty(k);
     const term = (m.terms as Record<string, unknown>[])[0]!;
     expect(term.party).toEqual({ id: 7, abbreviation: 'TEST', nameEng: 'TEST_Party', nameBng: 'TEST_দল' });
     expect(term.constituency).toEqual({ constituencyNo: 1, constituencyEng: 'TEST_Seat-1', constituencyBng: 'TEST_আসন-1', boundaryDetails: 'TEST_সীমানা' });

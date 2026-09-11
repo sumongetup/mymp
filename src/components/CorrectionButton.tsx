@@ -7,14 +7,13 @@ import { SITE_EMAIL } from '@/lib/site';
 const FIELD_ERROR: Record<string, string> = {
   message: 'কী ভুল, তা অন্তত এক লাইনে লিখুন (১০ থেকে ১৫০০ অক্ষর)।',
   source: 'সূত্রের লিংক http:// বা https:// দিয়ে শুরু হতে হবে।',
-  email: 'ইমেইল ঠিকানাটি সঠিক নয়।',
-  name: 'নাম ১০০ অক্ষরের কম হতে হবে।',
   rate: 'অল্প সময়ে অনেকগুলো পাঠানো হয়েছে। কিছুক্ষণ পরে আবার চেষ্টা করুন।',
 };
 
 /**
  * "সংশোধন জানান" on a member's page: a short form that lands in the admin
- * correction queue through /api/corrections. The hidden "website" field and
+ * correction queue through /api/corrections. It asks for no name or email, as
+ * the privacy policy promises; someone who wants a reply writes by email. The hidden "website" field and
  * the time since the form opened keep most bots out without a captcha.
  */
 export default function CorrectionButton({ page, subject }: { page: string; subject: string }) {
@@ -41,8 +40,6 @@ export default function CorrectionButton({ page, subject }: { page: string; subj
           page,
           message: f.get('message'),
           source: f.get('source'),
-          name: f.get('name'),
-          email: f.get('email'),
           website: f.get('website'),
           elapsed: Date.now() - openedAt.current,
         }),
@@ -91,16 +88,6 @@ export default function CorrectionButton({ page, subject }: { page: string; subj
                 <span className="text-[13px] font-semibold">সূত্রের লিংক</span>
                 <input name="source" type="url" maxLength={500} placeholder="https://" className={input} />
               </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <label className="flex flex-col gap-1.5">
-                  <span className="text-[13px] font-semibold">আপনার নাম (ঐচ্ছিক)</span>
-                  <input name="name" maxLength={100} className={input} />
-                </label>
-                <label className="flex flex-col gap-1.5">
-                  <span className="text-[13px] font-semibold">ইমেইল (উত্তর চাইলে)</span>
-                  <input name="email" type="email" maxLength={200} className={input} />
-                </label>
-              </div>
               {/* People never see this; bots fill it in. */}
               <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] w-px h-px opacity-0" />
               {state === 'error' && (
@@ -116,7 +103,9 @@ export default function CorrectionButton({ page, subject }: { page: string; subj
                 >
                   {state === 'sending' ? 'পাঠানো হচ্ছে…' : 'পাঠান'}
                 </button>
-                <span className="text-[12.5px] text-muted">নাম ও ইমেইল শুধু যাচাইয়ের কাজে রাখা হয়, কোথাও প্রকাশ হয় না।</span>
+                <span className="text-[12.5px] text-muted">
+                  নাম বা ইমেইল চাওয়া হয় না। উত্তর পেতে চাইলে <a href={`mailto:${SITE_EMAIL}`} className="underline hover:text-brand">{SITE_EMAIL}</a> ঠিকানায় লিখুন।
+                </span>
               </div>
             </form>
           )}
