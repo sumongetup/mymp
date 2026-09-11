@@ -223,8 +223,8 @@ interface StoredArticle {
   publishedAt: Date;
 }
 
-/** Matches articles to members, records every match here, and hands them to mymp.bd. */
-async function matchAndDeliver(db: Db, list: StoredArticle[], sourceList: SourceConfig[]) {
+/** Matches articles to members, records every match here, and (unless told not to) hands them to mymp.bd. */
+async function matchAndDeliver(db: Db, list: StoredArticle[], sourceList: SourceConfig[], deliver = true) {
   const index = buildIndex(await loadMatchMembers(db));
   const sourceName = new Map(sourceList.map((s) => [s.id, s.name_bn]));
   const deliveries: Delivery[] = [];
@@ -242,8 +242,45 @@ async function matchAndDeliver(db: Db, list: StoredArticle[], sourceList: Source
       deliveries.push({ title: a.title, url: a.url, sourceName: sourceName.get(a.sourceId) ?? a.sourceId, publishedAt: a.publishedAt, externalId: m.externalId, status: m.status });
     }
   }
-  const delivered = await deliverToMymp(deliveries);
+  const delivered = deliver ? await deliverToMymp(deliveries) : null;
   return { auto, pending, delivered };
+}
+
+const DELIVERY_WINDOW_HOURS = 48;
+
+/**
+ * Every automatic or pending match on a headline fetched in the last 48 hours,
+ * ready for mymp.bd. Delivering this window on every run (mymp.bd skips what
+ * it already has) means a run without the mymp secrets, or a failed delivery,
+ * loses nothing: the next good run catches up.
+ */
+async function recentDeliveries(db: Db, sourceList: SourceConfig[]): Promise<Delivery[]> {
+  const since = new Date(Date.now() - DELIVERY_WINDOW_HOURS * 3600e3);
+  const sourceName = new Map(sourceList.map((x) => [x.id, x.name_bn]));
+  const rows = await db
+    .select({
+      title: articles.title,
+      url: articles.url,
+      sourceId: articles.sourceId,
+      publishedAt: articles.publishedAt,
+      fetchedAt: articles.fetchedAt,
+      externalId: members.sourceExternalId,
+      status: articleMembers.status,
+    })
+    .from(articleMembers)
+    .innerJoin(articles, eq(articles.id, articleMembers.articleId))
+    .innerJoin(members, eq(members.id, articleMembers.memberId))
+    .where(and(gte(articles.fetchedAt, since), inArray(articleMembers.status, ['auto', 'pending'])));
+  return rows
+    .filter((r) => r.externalId && usableTitle(r.title))
+    .map((r) => ({
+      title: r.title,
+      url: r.url,
+      sourceName: sourceName.get(r.sourceId) ?? r.sourceId,
+      publishedAt: r.publishedAt ?? r.fetchedAt,
+      externalId: r.externalId!,
+      status: r.status === 'auto' ? ('auto' as const) : ('pending' as const),
+    }));
 }
 
 /**
@@ -330,7 +367,8 @@ export async function runNews(db: Db): Promise<{ itemsFound: number; itemsNew: n
     const f = byUrl.get(a.url);
     return f ? [{ id: a.id, url: a.url, sourceId: f.sourceId, title: f.item.title, summary: f.item.summary, publishedAt: f.item.publishedAt ?? now }] : [];
   });
-  const { auto, pending, delivered } = await matchAndDeliver(db, toMatch, list);
+  const { auto, pending } = await matchAndDeliver(db, toMatch, list, false);
+  const delivered = await deliverToMymp(await recentDeliveries(db, list));
 
   const itemsSeen = [...fetched.values()].reduce((n, l) => n + l.length, 0);
   process.stdout.write(`  sources read ${fetched.size} of ${active.length}; items in the last ${MAX_AGE_DAYS} days ${itemsSeen}; new articles ${inserted.length}\n`);
