@@ -80,7 +80,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
     m.dateOfBirth && { label: 'জন্ম', value: `${dateBn(m.dateOfBirth)}${age !== null ? ` · ${bn(age)} বছর` : ''}` },
     m.birthPlaceBn && { label: 'জন্মস্থান', value: m.birthPlaceBn, wiki: fromWiki.has('birthPlaceBn') },
     m.gender && { label: 'লিঙ্গ', value: m.gender === 'Female' ? 'নারী' : 'পুরুষ' },
-    m.educationBn && { label: 'শিক্ষা', value: m.educationBn, wiki: fromWiki.has('educationBn') },
+    m.educationBn && { label: 'শিক্ষা', value: m.educationBn, wiki: fromWiki.has('educationBn'), lines: true },
     m.professionBn && { label: 'পেশা', value: m.professionBn, wiki: fromWiki.has('professionBn') },
     m.fatherBn && { label: 'পিতা', value: m.fatherBn },
     m.motherBn && { label: 'মাতা', value: m.motherBn },
@@ -88,7 +88,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
     m.term?.start && { label: m.resignedOn ? 'মেয়াদ' : 'বর্তমান মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
     m.resignedOn && { label: 'পদত্যাগ', value: dateBn(m.resignedOn) ?? 'তারিখ পাওয়া যায়নি' },
     m.termsCount && { label: 'সংসদ সদস্য নির্বাচিত', value: `মোট ${bn(m.termsCount)} বার` },
-  ].filter(Boolean) as { label: string; value: string; wiki?: boolean }[];
+  ].filter(Boolean) as { label: string; value: string; wiki?: boolean; lines?: boolean }[];
   const wikiSources = facts.some((f) => f.wiki) ? (m.bioSource ?? '').split(' ').filter(Boolean) : [];
 
   const paragraphs = (m.bioBn ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
@@ -208,8 +208,12 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               <Card className="px-5 py-2 text-[14.5px]">
                 {facts.map((b) => (
                   <Row key={b.label} label={b.label}>
-                    {b.value}
-                    {b.wiki && <sup className="ms-0.5 text-brand font-bold" title="উইকিপিডিয়া থেকে">*</sup>}
+                    {(b.lines ? b.value.split(/;\s*/) : [b.value]).map((part, i, all) => (
+                      <span key={i} className={b.lines ? 'block' : undefined}>
+                        {part}
+                        {b.wiki && i === all.length - 1 && <sup className="ms-0.5 text-brand font-bold" title="উইকিপিডিয়া থেকে">*</sup>}
+                      </span>
+                    ))}
                   </Row>
                 ))}
                 {wikiSources.length > 0 && (

@@ -18,12 +18,15 @@
  * - "politician" is not a profession here (every member is one), and a
  *   profession parliament.gov.bd already records is never replaced.
  *
+ * Facts the owner asked for by hand, checked against a cited article, live in
+ * config/bio-manual.json and are applied over the infobox on every run.
+ *
  * mymp.bd gets each value as a member override, never over one an editor
  * saved, plus `bioFromWiki` (which fields) and `bioSource` (which articles),
  * so the profile can say where each fact came from.
  */
 import { createClient } from '@supabase/supabase-js';
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { toLatinDigits } from '@sangsad/shared';
 import type { Db } from './parliament-core';
@@ -210,11 +213,33 @@ export function bioFrom(reads: { page: WikiPage; host: string }[], officialDob: 
 
 const FIELDS: BioField[] = ['educationBn', 'birthPlaceBn', 'professionBn'];
 
+/** Hand-checked facts by member id: fields to set and the article they were checked against. */
+type Manual = Partial<Record<BioField, string>> & { source: string };
+function manualFacts(): Map<string, Manual> {
+  const file = resolve(import.meta.dirname, '../../../config/bio-manual.json');
+  const json = JSON.parse(readFileSync(file, 'utf8')) as { members: Record<string, Manual> };
+  return new Map(Object.entries(json.members));
+}
+
+/** Applies a hand-checked entry over what the infobox gave: its fields win, and its article joins the sources. */
+export function withManual(bio: Bio, manual: Manual | undefined): Bio {
+  if (!manual) return bio;
+  const out: Bio = { ...bio, from: { ...bio.from }, sources: [...bio.sources] };
+  for (const k of FIELDS) {
+    if (!manual[k]) continue;
+    out[k] = manual[k];
+    out.from[k] = manual.source.includes('//bn.') ? 'bn' : 'en';
+  }
+  if (!out.sources.includes(manual.source)) out.sources.unshift(manual.source);
+  return out;
+}
+
 export async function runBioWiki(db: Db): Promise<{ itemsFound: number; itemsNew: number }> {
   const { sitting, reads } = await memberArticles(db);
+  const manual = manualFacts();
   const found: ({ id: string; seat: string; name: string } & Bio)[] = [];
   for (const m of sitting) {
-    const bio = bioFrom(reads.get(m.id!) ?? [], m.dateOfBirth ? String(m.dateOfBirth) : null, m.professionBn);
+    const bio = withManual(bioFrom(reads.get(m.id!) ?? [], m.dateOfBirth ? String(m.dateOfBirth) : null, m.professionBn), manual.get(m.id!));
     if (bio.sources.length || bio.setAside) found.push({ id: m.id!, seat: m.seatBn, name: m.nameBn ?? m.nameEn ?? m.id!, ...bio });
   }
 

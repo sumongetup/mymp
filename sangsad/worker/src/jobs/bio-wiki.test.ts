@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bioFrom, birthYear, items, professions, tidy } from './bio-wiki';
+import { bioFrom, birthYear, items, professions, tidy, withManual } from './bio-wiki';
 
 const page = (title: string, box: string) => ({ page: { title, wikitext: `{{Infobox officeholder\n${box}\n}}\nTEST article text.` }, host: title.startsWith('TEST_bn') ? 'bn.wikipedia.org' : 'en.wikipedia.org' });
 
@@ -32,6 +32,14 @@ describe('biography facts from a Wikipedia infobox', () => {
     expect(bio).toMatchObject({ educationBn: 'টেস্ট বিশ্ববিদ্যালয়', birthPlaceBn: 'TEST Upazila, TEST District', professionBn: 'আইনজীবী', from: { educationBn: 'bn', birthPlaceBn: 'en', professionBn: 'en' } });
     expect(bio.sources).toHaveLength(2);
     expect(bioFrom([en], '1970-01-01', 'ব্যবসায়ী').professionBn).toBeUndefined();
+  });
+
+  it('lets a hand-checked entry replace an infobox field and cite its article', () => {
+    const bio = bioFrom([page('TEST_en', '| alma_mater = [[TEST College]]\n| birth_place = TEST Town')], null, null);
+    const out = withManual(bio, { educationBn: 'টেস্ট স্কুল; টেস্ট বিশ্ববিদ্যালয়', source: 'https://en.wikipedia.org/wiki/TEST' });
+    expect(out).toMatchObject({ educationBn: 'টেস্ট স্কুল; টেস্ট বিশ্ববিদ্যালয়', birthPlaceBn: 'TEST Town', from: { educationBn: 'en' } });
+    expect(out.sources[0]).toBe('https://en.wikipedia.org/wiki/TEST');
+    expect(withManual(bio, undefined)).toBe(bio);
   });
 
   it('sets aside an article whose birth year is not the member\'s', () => {
