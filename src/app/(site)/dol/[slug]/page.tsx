@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { shareGraph, shareTwitter } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import {
-  parties, getParty, membersOfParty, getMemberById, bn, dateBn, partyColor, initial, OFFICE_LABELS,
+  parties, getParty, membersOfParty, getMemberById, bn, dateBn, partyColor, initial, statistics, OFFICE_LABELS, type Party,
 } from '@/lib/data';
-import { rolesOf } from '@/lib/activity';
+import { rolesOf, officers, ROLE_LABELS } from '@/lib/activity';
 import { Page, PageHead, Card, Stat, MemberRow, Breadcrumb, PartyMark, LogoCredit } from '@/components/ui';
 import MemberPhoto from '@/components/MemberPhoto';
 import ShareButtons from '@/components/ShareButtons';
@@ -116,8 +116,38 @@ function LeaderCard({ profile, color }: { profile: ResolvedProfile; color: strin
 const sourceLabel = (url: string) =>
   url.includes('bn.wikipedia.org') ? 'বাংলা উইকিপিডিয়া' : url.includes('en.wikipedia.org') ? 'ইংরেজি উইকিপিডিয়া' : new URL(url).hostname;
 
-/** Who founded the party, when and how, what it has done since, and who leads it now. */
-function ProfileSection({ profile, color }: { profile: ResolvedProfile; color: string }) {
+const HOUSE_ROLES = ['SPEAKER', 'DEPUTY_SPEAKER', 'LEADER_OF_HOUSE', 'OPPOSITION_LEADER'];
+const ALL_OF = ['', '', 'দুজনই', 'তিনজনই', 'চারজনই'];
+
+/**
+ * "ত্রয়োদশ সংসদে", in the owner's words for BNP (2026-09-12), built from the
+ * parliament's data for every party so it stays true after a by-election:
+ * seats held now (not a claim about election night, which the data cannot
+ * confirm), the majority where it is passed, and the House offices held.
+ */
+function inParliamentBn(p: Party, majority: number): string {
+  const t = p.seatsTerritorial;
+  const r = p.seatsReserved;
+  const n = p.seats;
+  const beyond = n >= majority ? `, যা সংখ্যাগরিষ্ঠতার জন্য প্রয়োজনীয় ${bn(majority)}-এর ${n - majority >= 30 ? 'অনেক ' : ''}বেশি` : '';
+  const seats =
+    t > 0
+      ? `৩০০টি নির্বাচনী আসনের মধ্যে ${bn(t)}টি এখন দলটির${r > 0 ? `; সংরক্ষিত নারী আসন যোগ করে সংসদে দলের মোট সদস্য ${bn(n)} জন` : ''}${beyond}।`
+      : `দলটির কোনো নির্বাচনী আসন নেই; সংরক্ষিত নারী আসনে দলের সদস্য ${bn(r)} জন।`;
+  const held = HOUSE_ROLES.filter((role) =>
+    officers.some((o) => o.role === role && !!o.memberId && getMemberById(o.memberId)?.party?.abbr === p.abbr),
+  ).map((role) => ROLE_LABELS[role] ?? role);
+  const offices =
+    held.length === 1
+      ? `${held[0]} এই দলের।`
+      : held.length > 1
+        ? `${held.slice(0, -1).join(', ')} ও ${held[held.length - 1]} ${ALL_OF[held.length]} এই দলের।`
+        : '';
+  return [seats, offices, 'দলের সব সদস্যের তালিকা ও আসন নিচে।'].filter(Boolean).join(' ');
+}
+
+/** Who founded the party, when and how, what it has done since, who leads it now, and where it stands in this House. */
+function ProfileSection({ profile, color, party }: { profile: ResolvedProfile; color: string; party: Party }) {
   const rows: { label: string; value: React.ReactNode }[] = [
     ...(profile.foundedOn ? [{ label: 'প্রতিষ্ঠা', value: foundedBn(profile.foundedOn) }] : []),
     ...(profile.founderBn ? [{ label: 'প্রতিষ্ঠাতা', value: profile.founderBn }] : []),
@@ -138,6 +168,7 @@ function ProfileSection({ profile, color }: { profile: ResolvedProfile; color: s
       : []),
   ];
   const story = paragraphs(profile.originBn);
+  const inParliament = inParliamentBn(party, statistics().majority);
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-[1.55fr_1fr] gap-5 items-start">
@@ -147,26 +178,35 @@ function ProfileSection({ profile, color }: { profile: ResolvedProfile; color: s
           দলের পরিচিতি
         </h2>
         {profile.summaryBn && (
-          <p className="text-[17px] sm:text-[18.5px] leading-relaxed font-semibold text-ink text-pretty">{profile.summaryBn}</p>
+          <p className="text-[17px] sm:text-[18.5px] leading-relaxed font-semibold text-ink text-pretty">
+            {profile.summaryBn} ত্রয়োদশ সংসদে দলটির সদস্য {bn(party.seats)} জন।
+          </p>
         )}
         {story.map((t, i) => (
           <p key={i} className="text-[15.5px] sm:text-[16.5px] leading-[1.9] text-inksoft text-pretty">{t}</p>
         ))}
-        {profile.sources.length > 0 && (
-          <p className="mt-1 pt-4 border-t border-rulesoft text-[12.5px] text-muted leading-relaxed">
-            সূত্র:{' '}
-            {profile.sources.map((u, i) => (
-              <span key={u}>
-                {i > 0 && ', '}
-                <a href={u} target="_blank" rel="noopener noreferrer" className="underline decoration-rule underline-offset-2 hover:text-brand">
-                  {sourceLabel(u)}
-                </a>
-              </span>
-            ))}
-            {profile.checked && <>, যাচাই {dateBn(profile.checked)}</>}
-            {profile.edited && <>। কিছু তথ্য আমার এমপির সম্পাদক হালনাগাদ করেছেন।</>}
-          </p>
-        )}
+        <div className="flex flex-col gap-2 pt-1">
+          <h3 className="display text-[18px] sm:text-[19.5px]">ত্রয়োদশ সংসদে</h3>
+          <p className="text-[15.5px] sm:text-[16.5px] leading-[1.9] text-inksoft text-pretty">{inParliament}</p>
+        </div>
+        <p className="mt-1 pt-4 border-t border-rulesoft text-[12.5px] text-muted leading-relaxed">
+          সূত্র:{' '}
+          {profile.sources.map((u, i) => (
+            <span key={u}>
+              {i > 0 && ', '}
+              <a href={u} target="_blank" rel="noopener noreferrer" className="underline decoration-rule underline-offset-2 hover:text-brand">
+                {sourceLabel(u)}
+              </a>
+            </span>
+          ))}
+          {profile.sources.length > 0 && ' (দলের ইতিহাস); '}
+          <a href="https://www.parliament.gov.bd/" target="_blank" rel="noopener noreferrer" className="underline decoration-rule underline-offset-2 hover:text-brand">
+            বাংলাদেশ জাতীয় সংসদ
+          </a>{' '}
+          (বর্তমান সদস্য ও পদ)।
+          {profile.checked && <> সর্বশেষ যাচাই {dateBn(profile.checked)}।</>}
+          {profile.edited && <> কিছু তথ্য আমার এমপির সম্পাদক হালনাগাদ করেছেন।</>}
+        </p>
       </Card>
 
       <div className="flex flex-col gap-4">
@@ -258,7 +298,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
       <div className="mt-6 h-1.5 rounded-full" style={{ background: color }} aria-hidden="true" />
 
       <div className="pt-8 pb-14 flex flex-col gap-10">
-        {profile && <ProfileSection profile={profile} color={color} />}
+        {profile && <ProfileSection profile={profile} color={color} party={party} />}
         {party.abbr === 'Ind' && (
           <p className="text-[15.5px] text-inksoft leading-relaxed max-w-[720px]">
             স্বতন্ত্র কোনো রাজনৈতিক দল নয়: এই সংসদ সদস্যরা কোনো দলের প্রার্থী হিসেবে নির্বাচিত হননি, তাই এখানে দলের পরিচিতি নেই।

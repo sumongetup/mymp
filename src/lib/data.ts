@@ -294,6 +294,9 @@ export function initial(m: Member): string {
 
 /* ---------------- statistics, all computed from the snapshot ---------------- */
 
+/** Seats in the House: 300 elected and 50 reserved for women (Constitution art. 65). */
+export const HOUSE_SEATS = 350;
+
 export function statistics() {
   const territorial = members.filter((m) => m.seat && !m.seat.reserved);
   const reserved = members.filter((m) => m.seat?.reserved);
@@ -339,6 +342,7 @@ export function statistics() {
     medianAge: ages.length ? ages[Math.floor(ages.length / 2)].age : null,
     ageBands: bands,
     professions: [...profs.values()].sort((a, b) => b.count - a.count),
-    majority: Math.floor(members.length / 2) + 1,
+    // A majority of the whole House, not of whoever sits today: a vacancy does not lower the bar.
+    majority: Math.floor(HOUSE_SEATS / 2) + 1,
   };
 }
