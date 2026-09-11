@@ -33,10 +33,11 @@ export const metadata: Metadata = {
  * The root layout carries only fonts and global styles. The public site's
  * header and footer live in the (site) group, and the admin panel has its own
  * shell, so nothing here reads a session and every public page stays static.
+ * suppressHydrationWarning: the intro's script marks <html> before React arrives.
  */
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="bn" className={`${notoBn.variable} h-full`}>
+    <html lang="bn" className={`${notoBn.variable} h-full`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

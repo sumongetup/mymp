@@ -17,6 +17,16 @@ const LOCKUP_INK = 'M 0.1,-0.3 L 47.6,39.1 L 97,-0.4 L 97,24.1 L 48.3,63 L 17.7,
 const LOCKUP_DOT = 'M 109.8,25.1 C 109.8,32.9 114.9,42.1 126.4,42.1 C 137.2,42.1 143.6,33.9 143.6,25.7 C 143.6,14.3 134.7,6.6 120.9,6.6 C 116.4,6.6 112.6,8.1 110.7,8.8 Q 109.8,9.2 109.8,10.3 Z';
 const LOCKUP_BAR = { x: 432.3, y: 82.3, w: 33.5, h: 7.9 };
 
+/** The lockup in its parts, for the intro that builds it piece by piece: the "mymp" letters start at "m". */
+const WORD_START = LOCKUP_INK.indexOf(' M 198.2,23.1');
+export const LOCKUP_PARTS = {
+  ...LOCKUP,
+  icon: LOCKUP_INK.slice(0, WORD_START),
+  word: LOCKUP_INK.slice(WORD_START + 1),
+  dot: LOCKUP_DOT,
+  bar: LOCKUP_BAR,
+};
+
 type Tone = 'dark' | 'light';
 const ink = (tone: Tone) => (tone === 'light' ? 'text-white' : 'text-ink');
 

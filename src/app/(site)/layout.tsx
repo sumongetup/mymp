@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import { meta, dateBn } from '@/lib/data';
+import { meta, dateBn, publishedNews } from '@/lib/data';
 import { NAV, NAV_MORE } from '@/lib/nav';
 import SiteSearch from '@/components/SiteSearch';
 import Brand from '@/components/Brand';
 import MobileNav from '@/components/MobileNav';
 import HeaderClock from '@/components/HeaderClock';
+import Intro from '@/components/Intro';
+import NewsTicker from '@/components/NewsTicker';
 import { siteUrl } from '@/lib/site';
 
 /** Tells search engines who publishes the site and which image is its logo. */
@@ -20,8 +22,14 @@ const ORGANIZATION = {
 
 /** Public site shell. Reads no session, so every page beneath it can be prerendered. */
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
+  // The ticker starts from this build's headlines and then asks for newer ones itself.
+  const headlines = publishedNews()
+    .slice(0, 12)
+    .map(({ id, titleBn, sourceName, sourceUrl }) => ({ id, titleBn, sourceName, sourceUrl }));
+
   return (
     <>
+      <Intro />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION) }} />
       <a
         href="#main"
@@ -30,9 +38,11 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         মূল বিষয়ে যান
       </a>
 
-      {/* Today's date and time (Bangladesh), above the bar; it scrolls away and the bar stays. */}
+      {/* Today's date and time (Bangladesh), above the bar; it scrolls away and the bar stays.
+          Centred on a phone, where a lone line at one edge looked lost. */}
       <div className="bg-[#10281f] text-[#cfdad3] text-[12.5px]">
-        <div className="mx-auto max-w-[1200px] px-4 sm:px-5 h-7 flex items-center justify-end">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-5 h-7 flex items-center justify-center sm:justify-end gap-2">
+          <span className="live-dot text-logo" aria-hidden="true" />
           <HeaderClock />
         </div>
       </div>
@@ -63,9 +73,11 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         </div>
       </header>
 
+      <NewsTicker initial={headlines} />
+
       <main id="main" className="grow">{children}</main>
 
-      <footer className="mt-16 bg-[#10281f] text-[#cfdad3]">
+      <footer className="mt-16 bg-[#10281f] text-[#cfdad3] border-t-[3px] border-transparent [border-image:linear-gradient(90deg,var(--color-brand),var(--color-logo),var(--color-brand))_1]">
         <div className="mx-auto max-w-[1200px] px-5 py-12 flex flex-col gap-10">
           <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10">
             <div className="flex flex-col gap-4 max-w-[420px]">

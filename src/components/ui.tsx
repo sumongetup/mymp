@@ -54,7 +54,8 @@ export function SectionHead({
 }) {
   return (
     <div className="flex items-baseline justify-between gap-4">
-      <h2 className="display text-[22px] sm:text-[26px]">
+      <h2 className="display text-[22px] sm:text-[26px] flex items-center gap-2.5">
+        <span aria-hidden="true" className="w-1.5 h-[0.85em] rounded-full bg-gradient-to-b from-logo to-brand shrink-0" />
         {title}
         {count && <span className="ms-2 text-[15px] font-semibold text-muted tnum">{count}</span>}
       </h2>
@@ -75,7 +76,7 @@ export function Card({
   className?: string;
 }) {
   return (
-    <div className={`bg-surface border border-rule rounded-card shadow-card ${className}`}>{children}</div>
+    <div className={`reveal bg-surface border border-rule rounded-card shadow-card ${className}`}>{children}</div>
   );
 }
 
@@ -176,7 +177,7 @@ export function MemberCard({ m, badge }: { m: Member; badge?: string }) {
   return (
     <Link
       href={`/mp/${m.slug}`}
-      className="group bg-surface border border-rule rounded-card shadow-card p-5 flex flex-col gap-4 hover:border-brand hover:shadow-lift transition-all"
+      className="reveal group bg-surface border border-rule rounded-card shadow-card p-5 flex flex-col gap-4 hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
       style={{ borderTopColor: partyColor(m.party?.abbr), borderTopWidth: 3 }}
     >
       <div className="flex items-start justify-between gap-3">
@@ -259,7 +260,7 @@ export function CompositionBar({
           সংখ্যাগরিষ্ঠতা {bn(majority)}
         </div>
         <div
-          className="flex gap-0.5 h-[30px] rounded-md overflow-hidden"
+          className="bar-fill flex gap-0.5 h-[30px] rounded-md overflow-hidden"
           role="img"
           aria-label={rows.map((r) => `${r.label} ${r.seats}`).join(', ')}
         >
@@ -303,7 +304,7 @@ export function NewsCard({ n }: { n: NewsPost }) {
       href={n.sourceUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-surface border border-rule rounded-card shadow-card p-5 flex flex-col gap-2 hover:border-brand hover:shadow-lift transition-all"
+      className="reveal bg-surface border border-rule rounded-card shadow-card p-5 flex flex-col gap-2 hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
     >
       <span className="text-[13px] text-muted">{n.sourceName} · {dateBn(n.publishedOn)}</span>
       <span className="display text-[17px] leading-snug">{n.titleBn}</span>

@@ -1,0 +1,84 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+
+export type TickerItem = { id: string; titleBn: string; sourceName: string; sourceUrl: string };
+
+// The news job adds headlines every 30 minutes; the site rebuilds only every three hours.
+const REFRESH_MS = 5 * 60_000;
+
+/*
+ * The latest published headlines under the header, sliding right to left
+ * (owner, 2026-09-11). The page arrives with the headlines of its build; the
+ * browser then asks /api/news/latest, which is at most five minutes old, and
+ * asks again every five minutes while the tab is open. Each headline links to
+ * the outlet that published it; hovering or focusing stops the slide.
+ */
+export default function NewsTicker({ initial }: { initial: TickerItem[] }) {
+  const [items, setItems] = useState(initial);
+
+  useEffect(() => {
+    let alive = true;
+    const load = () =>
+      fetch('/api/news/latest')
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d: { items?: TickerItem[] } | null) => {
+          if (alive && d?.items?.length) setItems(d.items);
+        })
+        .catch(() => {});
+    load();
+    const id = window.setInterval(() => {
+      if (document.visibilityState === 'visible') load();
+    }, REFRESH_MS);
+    return () => {
+      alive = false;
+      window.clearInterval(id);
+    };
+  }, []);
+
+  if (!items.length) return null;
+
+  // A steady reading speed whatever the number of headlines: about 6.5 characters a second.
+  const chars = items.reduce((n, i) => n + i.titleBn.length + 6, 0);
+  const duration = Math.max(25, Math.round(chars / 6.5));
+
+  const row = (copy: boolean) => (
+    <ul className="ticker-row flex shrink-0" aria-hidden={copy || undefined}>
+      {items.map((n) => (
+        <li key={n.id} className="flex items-center whitespace-nowrap">
+          <a
+            href={n.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            tabIndex={copy ? -1 : undefined}
+            className="hover:text-brand"
+          >
+            {n.titleBn}
+            <span className="ms-1.5 text-[12.5px] font-normal text-muted">({n.sourceName})</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+
+  return (
+    <section aria-label="সর্বশেষ সংবাদ" className="ticker bg-surface border-b border-rule">
+      <div className="mx-auto max-w-[1200px] ps-4 sm:ps-5 flex items-center h-10 gap-3">
+        <Link
+          href="/songbad"
+          className="shrink-0 inline-flex items-center gap-2 h-7 px-3 rounded-md bg-live text-white text-[13px] font-bold hover:bg-danger transition-colors"
+        >
+          <span className="live-dot" aria-hidden="true" />
+          সর্বশেষ
+        </Link>
+        <div className="ticker-viewport grow min-w-0 overflow-hidden no-scrollbar">
+          <div className="ticker-track text-[14px] font-semibold text-ink" style={{ '--ticker-duration': `${duration}s` } as React.CSSProperties}>
+            {row(false)}
+            {row(true)}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -56,22 +56,28 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_LD) }} />
-      <section className="bg-[radial-gradient(ellipse_at_top_left,_var(--color-brandsoft),_transparent_55%)]">
+      <section className="relative overflow-hidden bg-[radial-gradient(ellipse_at_top_left,_var(--color-brandsoft),_transparent_55%)]">
+        <div aria-hidden="true" className="hero-glow w-[420px] h-[420px] -top-40 -left-24 bg-[#17cf54]/15" />
+        <div aria-hidden="true" className="hero-glow w-[360px] h-[360px] top-10 right-[-120px] bg-[#0f6a4b]/12 [animation-delay:-9s]" />
         <Page>
           <div className="pt-9 sm:pt-14 pb-10 sm:pb-14 flex flex-col lg:flex-row gap-9 lg:gap-14 items-start">
             <div className="grow flex flex-col gap-5 sm:gap-6 w-full min-w-0">
-              <span className="text-[12.5px] font-bold tracking-[1.5px] text-brand">
+              <span className="rise text-[12.5px] font-bold tracking-[1.5px] text-brand">
                 ত্রয়োদশ জাতীয় সংসদ · ২০২৬
               </span>
-              <h1 className="display text-[34px] sm:text-[50px] lg:text-[56px] leading-[1.12] text-balance">
-                আপনার সংসদ সদস্যকে চিনুন
+              <h1 className="rise [--rise-i:1] display text-[34px] sm:text-[50px] lg:text-[56px] leading-[1.12] text-balance">
+                আপনার{' '}
+                <span className="bg-gradient-to-r from-brand to-[#139a55] bg-clip-text text-transparent">সংসদ সদস্যকে</span>{' '}
+                চিনুন
               </h1>
-              <p className="text-[16px] sm:text-[19px] leading-relaxed text-inksoft max-w-[600px] text-pretty">
+              <p className="rise [--rise-i:2] text-[16px] sm:text-[19px] leading-relaxed text-inksoft max-w-[600px] text-pretty">
                 {bn(stats.total)} জন সংসদ সদস্য, {bn(300)} আসন, {bn(parties.length)}টি দল, প্রতিটি অধিবেশন।
                 আসন, জেলা, এমপি বা দলের নাম বাংলা বা ইংরেজিতে লিখে খুঁজুন।
               </p>
-              <SiteSearch />
-              <div className="flex items-center gap-2.5 text-[13.5px] text-muted overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
+              <div className="rise [--rise-i:3]">
+                <SiteSearch />
+              </div>
+              <div className="rise [--rise-i:4] flex items-center gap-2.5 text-[13.5px] text-muted overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
                 <span className="shrink-0">জনপ্রিয়:</span>
                 {[
                   { label: 'ঢাকা জেলা', href: '/jela/dhaka' },
@@ -90,7 +96,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Card className="w-full lg:w-[440px] shrink-0 p-5 sm:p-7 flex flex-col gap-4">
+            <Card className="rise [--rise-i:2] w-full lg:w-[440px] shrink-0 p-5 sm:p-7 flex flex-col gap-4">
               <div className="flex justify-between items-baseline">
                 <h2 className="display text-[20px]">সংসদের গঠন</h2>
                 <Link href="/parisonkhan" className="text-[13.5px] font-semibold text-brand hover:underline">
@@ -165,13 +171,13 @@ export default function Home() {
               <Link
                 key={d.slug}
                 href={`/jela/${d.slug}`}
-                className="bg-surface border border-rule rounded-card shadow-card p-4 sm:p-5 flex items-center justify-between gap-3 hover:border-brand hover:shadow-lift transition-all"
+                className="reveal group bg-surface border border-rule rounded-card shadow-card p-4 sm:p-5 flex items-center justify-between gap-3 hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
               >
                 <span className="flex flex-col gap-0.5 min-w-0">
                   <span className="display text-[18px] truncate">{d.bn}</span>
                   <span className="text-[13px] text-muted">{bn(d.count)} আসন</span>
                 </span>
-                <Icon name="arrow" size={16} className="text-muted" />
+                <Icon name="arrow" size={16} className="text-muted group-hover:text-brand group-hover:translate-x-0.5 transition-transform" />
               </Link>
             ))}
           </div>

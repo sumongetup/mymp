@@ -34,7 +34,7 @@ export default function PartiesPage() {
           <li key={p.abbr}>
             <Link
               href={`/dol/${p.slug}`}
-              className="bg-surface border border-rule rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-brand transition-colors"
+              className="reveal bg-surface border border-rule rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
             >
               <span className="flex items-center gap-4 grow min-w-0">
                 <PartyMark abbr={p.abbr} size={52} />
