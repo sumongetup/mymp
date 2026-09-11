@@ -6,6 +6,10 @@
  * canonical links and the sitemap point at the site people can actually open
  * rather than a domain that is not serving this build yet.
  */
+/** The site's own public channels, from the owner (2026-09-12). */
+export const SITE_EMAIL = 'mymp.bangladesh@gmail.com';
+export const SITE_FACEBOOK = 'https://www.facebook.com/mymp.bd';
+
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL

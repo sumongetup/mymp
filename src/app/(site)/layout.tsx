@@ -7,9 +7,11 @@ import MobileNav from '@/components/MobileNav';
 import HeaderClock from '@/components/HeaderClock';
 import Intro from '@/components/Intro';
 import NewsTicker from '@/components/NewsTicker';
-import { siteUrl } from '@/lib/site';
+import Icon from '@/components/Icon';
+import BrandIcon from '@/components/BrandIcon';
+import { siteUrl, SITE_EMAIL, SITE_FACEBOOK } from '@/lib/site';
 
-/** Tells search engines who publishes the site and which image is its logo. */
+/** Tells search engines who publishes the site, which image is its logo, and its own page and address. */
 const ORGANIZATION = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -18,6 +20,8 @@ const ORGANIZATION = {
   alternateName: 'mymp',
   url: siteUrl,
   logo: `${siteUrl}/icon-512.png`,
+  email: SITE_EMAIL,
+  sameAs: [SITE_FACEBOOK],
 };
 
 /** Public site shell. Reads no session, so every page beneath it can be prerendered. */
@@ -86,6 +90,24 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                 বাংলাদেশের সংসদ সদস্য, আসন, কমিটি ও অধিবেশনের উন্মুক্ত তথ্যভান্ডার। প্রতিটি
                 তথ্যের সূত্র বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন; কোনো তথ্য অনুমান করে বসানো হয় না।
               </p>
+              <div className="flex flex-wrap gap-2.5 pt-1">
+                <a
+                  href={SITE_FACEBOOK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-10 px-4 inline-flex items-center gap-2 rounded-full bg-white/10 text-white text-[14px] font-semibold hover:bg-white/20 transition-colors"
+                >
+                  <BrandIcon name="facebook" size={17} color="#ffffff" />
+                  ফেসবুক পেজ
+                </a>
+                <a
+                  href={`mailto:${SITE_EMAIL}`}
+                  className="h-10 px-4 inline-flex items-center gap-2 rounded-full bg-white/10 text-white text-[14px] font-semibold hover:bg-white/20 transition-colors"
+                >
+                  <Icon name="mail" size={16} />
+                  {SITE_EMAIL}
+                </a>
+              </div>
             </div>
             <div className="flex flex-col gap-3">
               <span className="text-[11px] font-bold tracking-[1.8px] text-white/45">বিভাগ</span>
