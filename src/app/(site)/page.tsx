@@ -66,11 +66,10 @@ export default function Home() {
               <span className="rise text-[12.5px] font-bold tracking-[1.5px] text-brand">
                 ত্রয়োদশ জাতীয় সংসদ, ২০২৬ থেকে
               </span>
-              <h1 className="rise [--rise-i:1] display text-[34px] sm:text-[46px] lg:text-[52px] leading-[1.15] text-balance">
-                আপনার এলাকার{' '}
-                <span className="bg-gradient-to-r from-brand to-[#139a55] bg-clip-text text-transparent">সংসদ সদস্য</span>
-                {/* No-break spaces keep each phrase whole: "সদস্য কে", "কী করছেন", "এক জায়গায়". */}
-                {'\u00A0কে, কী\u00A0করছেন, এক\u00A0জায়গায়'}
+              <h1 className="rise [--rise-i:1] display text-[34px] sm:text-[50px] lg:text-[56px] leading-[1.12] text-balance">
+                আপনার{' '}
+                <span className="bg-gradient-to-r from-brand to-[#139a55] bg-clip-text text-transparent">সংসদ সদস্যকে</span>{' '}
+                চিনুন
               </h1>
               {/* The owner's line said "সংসদে উপস্থিতি"; no open source has attendance (see /parisonkhan), so it names the notices member pages do carry. */}
               <p className="rise [--rise-i:2] text-[16px] sm:text-[19px] leading-relaxed text-inksoft max-w-[600px] text-pretty">
