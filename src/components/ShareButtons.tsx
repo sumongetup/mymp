@@ -2,6 +2,7 @@
 
 import { useState, useSyncExternalStore } from 'react';
 import Icon from './Icon';
+import BrandIcon, { type Brand } from './BrandIcon';
 
 /** Whether the browser has a share sheet; false while rendering on the server. */
 const noSubscribe = () => () => {};
@@ -24,10 +25,10 @@ export default function ShareButtons({ url, title, text }: { url: string; title:
   const [copied, setCopied] = useState(false);
 
   const u = encodeURIComponent(url);
-  const links = [
-    { key: 'facebook', label: 'Facebook', icon: 'facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
-    { key: 'whatsapp', label: 'WhatsApp', icon: 'whatsapp', href: `https://wa.me/?text=${encodeURIComponent(`${text}\n${url}`)}` },
-    { key: 'x', label: 'X', icon: 'x', href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${u}` },
+  const links: { key: Brand; label: string; href: string }[] = [
+    { key: 'facebook', label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+    { key: 'whatsapp', label: 'WhatsApp', href: `https://wa.me/?text=${encodeURIComponent(`${text}\n${url}`)}` },
+    { key: 'x', label: 'X', href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${u}` },
   ];
 
   async function copy() {
@@ -67,7 +68,7 @@ export default function ShareButtons({ url, title, text }: { url: string; title:
       )}
       {links.map((l) => (
         <a key={l.key} href={l.href} target="_blank" rel="noopener noreferrer" className={button} aria-label={`${l.label}-এ শেয়ার করুন`}>
-          <Icon name={l.icon} size={14} />
+          <BrandIcon name={l.key} size={15} />
           {l.label}
         </a>
       ))}

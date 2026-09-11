@@ -13,6 +13,7 @@ import { ResultCard, sourceOf } from '@/components/results';
 import { introOf } from '@/lib/intro';
 import MemberPhoto from '@/components/MemberPhoto';
 import Icon from '@/components/Icon';
+import BrandIcon, { isBrand } from '@/components/BrandIcon';
 import ShareButtons from '@/components/ShareButtons';
 import { siteUrl } from '@/lib/site';
 
@@ -208,7 +209,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                   rel="noopener noreferrer me"
                   className="inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border border-rule bg-surface text-[13px] font-semibold hover:border-brand hover:text-brand transition-colors"
                 >
-                  <Icon name={s.icon} size={14} />
+                  {isBrand(s.key) ? <BrandIcon name={s.key} size={14} /> : <Icon name={s.icon} size={14} />}
                   {s.label}
                 </a>
               ))}
@@ -474,7 +475,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                   {socials.map((s) => (
                     <li key={s.key}>
                       <a href={s.url} target="_blank" rel="noopener noreferrer me" className="flex items-center gap-2 text-[14px] font-semibold hover:text-brand">
-                        <Icon name={s.icon} size={15} className="text-muted" />
+                        {isBrand(s.key) ? <BrandIcon name={s.key} size={15} /> : <Icon name={s.icon} size={15} className="text-muted" />}
                         {s.label}
                         <Icon name="external" size={12} className="text-muted" />
                       </a>
