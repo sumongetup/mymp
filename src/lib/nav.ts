@@ -15,6 +15,9 @@ export const NAV_MORE = [
   { href: '/gopaniyota', label: 'গোপনীয়তা নীতি' },
 ];
 
+/** /mp opens on the reserved-seat filter when its address ends in this. */
+export const RESERVED_HASH = '#songrokkhito';
+
 export type FooterLink = { href: string; label: string; external?: boolean };
 
 /*

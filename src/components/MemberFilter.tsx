@@ -1,8 +1,9 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { normalise } from '@/lib/search';
+import { RESERVED_HASH } from '@/lib/nav';
 import MemberPhoto from './MemberPhoto';
 
 export interface FilterMember {
@@ -36,6 +37,11 @@ const initialOf = (m: FilterMember) => {
 
 type SeatKind = 'all' | 'territorial' | 'reserved';
 
+const subscribeHash = (onChange: () => void) => {
+  window.addEventListener('hashchange', onChange);
+  return () => window.removeEventListener('hashchange', onChange);
+};
+
 export default function MemberFilter({
   members,
   parties,
@@ -45,7 +51,19 @@ export default function MemberFilter({
 }) {
   const [q, setQ] = useState('');
   const [party, setParty] = useState<string | null>(null);
-  const [kind, setKind] = useState<SeatKind>('all');
+  // A link ending in RESERVED_HASH (the home page's "সংরক্ষিত আসন") opens on
+  // reserved seats; once a filter is tapped, that choice wins and the address follows it.
+  const fromHash = useSyncExternalStore(
+    subscribeHash,
+    () => (window.location.hash === RESERVED_HASH ? 'reserved' : null),
+    () => null,
+  );
+  const [picked, setPicked] = useState<SeatKind | null>(null);
+  const kind: SeatKind = picked ?? fromHash ?? 'all';
+  const setKind = (k: SeatKind) => {
+    setPicked(k);
+    window.history.replaceState(null, '', k === 'reserved' ? RESERVED_HASH : window.location.pathname);
+  };
   const [shown, setShown] = useState(60);
 
   // Match keys are built once for the whole list, then reused on every keystroke.

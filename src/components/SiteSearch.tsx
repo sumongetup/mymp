@@ -27,10 +27,13 @@ function loadIndex(): Promise<Entry[]> {
 export default function SiteSearch({
   compact = false,
   autoFocus = false,
+  withButton = false,
   placeholder = 'আসন, জেলা, এমপি বা দলের নাম লিখুন',
 }: {
   compact?: boolean;
   autoFocus?: boolean;
+  /** A "খুঁজুন" button inside the box that opens the highlighted result. */
+  withButton?: boolean;
   placeholder?: string;
 }) {
   const router = useRouter();
@@ -40,6 +43,7 @@ export default function SiteSearch({
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const boxRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     let alive = true;
@@ -64,6 +68,13 @@ export default function SiteSearch({
     router.push(entry.url);
   }
 
+  /** The button: an empty box gets the cursor, no match shows the "nothing found" line. */
+  function submit() {
+    if (!q.trim()) { inputRef.current?.focus(); return; }
+    if (hits.length) go(hits[active] ?? hits[0]);
+    else setOpen(true);
+  }
+
   function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === 'ArrowDown') { e.preventDefault(); setActive((i) => Math.min(i + 1, hits.length - 1)); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setActive((i) => Math.max(i - 1, 0)); }
@@ -80,7 +91,7 @@ export default function SiteSearch({
         className={
           compact
             ? 'flex items-center gap-2 h-10 w-[128px] sm:w-[260px] px-3 rounded-[10px] border border-rule bg-paper'
-            : 'flex items-center gap-3 h-14 sm:h-[62px] px-4 sm:px-5 rounded-[14px] border-[1.5px] border-ink bg-surface'
+            : `flex items-center gap-3 h-14 sm:h-[62px] ps-4 sm:ps-5 ${withButton ? 'pe-2 sm:pe-2.5' : 'pe-4 sm:pe-5'} rounded-[14px] border-[1.5px] border-ink bg-surface`
         }
       >
         <svg width={compact ? 16 : 20} height={compact ? 16 : 20} viewBox="0 0 24 24" fill="none"
@@ -89,6 +100,7 @@ export default function SiteSearch({
           <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
         </svg>
         <input
+          ref={inputRef}
           id={`${listId}-input`}
           value={q}
           onChange={(e) => { setQ(e.target.value); setOpen(true); setActive(0); }}
@@ -102,8 +114,17 @@ export default function SiteSearch({
           aria-controls={listId}
           aria-autocomplete="list"
           placeholder={compact ? 'খুঁজুন…' : placeholder}
-          className={`grow min-w-0 w-full bg-transparent outline-none placeholder:text-muted ${compact ? 'text-[14px]' : 'text-[16px] sm:text-[18px]'}`}
+          className={`grow min-w-0 w-full bg-transparent outline-none text-ellipsis placeholder:text-muted ${compact ? 'text-[14px]' : 'text-[16px] sm:text-[18px]'}`}
         />
+        {withButton && !compact && (
+          <button
+            type="button"
+            onClick={submit}
+            className="shrink-0 h-10 sm:h-11 px-4 sm:px-5 rounded-[10px] bg-brand text-white text-[15px] sm:text-[16px] font-bold hover:bg-branddark transition-colors"
+          >
+            খুঁজুন
+          </button>
+        )}
       </div>
 
       {showResults && (

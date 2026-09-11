@@ -4,6 +4,7 @@ import { members, parties, meta, bn, dateBn, statistics, districtOf, publishedNe
 import { latestSession, latestSitting, sessionLabel, officers, memberNoticeCount, totalSittings, ROLE_LABELS, daysSince } from '@/lib/activity';
 import { Page, Card, MemberCard, CompositionBar, Empty, NewsCard, SectionHead, DocLink } from '@/components/ui';
 import SiteSearch from '@/components/SiteSearch';
+import { RESERVED_HASH } from '@/lib/nav';
 import Icon from '@/components/Icon';
 import { siteUrl } from '@/lib/site';
 import { BASE_OPEN_GRAPH, BASE_TWITTER, SITE_DESCRIPTION, SITE_TITLE } from '@/lib/seo';
@@ -63,27 +64,30 @@ export default function Home() {
           <div className="pt-9 sm:pt-14 pb-10 sm:pb-14 flex flex-col lg:flex-row gap-9 lg:gap-14 items-start">
             <div className="grow flex flex-col gap-5 sm:gap-6 w-full min-w-0">
               <span className="rise text-[12.5px] font-bold tracking-[1.5px] text-brand">
-                ত্রয়োদশ জাতীয় সংসদ · ২০২৬
+                ত্রয়োদশ জাতীয় সংসদ, ২০২৬ থেকে
               </span>
-              <h1 className="rise [--rise-i:1] display text-[34px] sm:text-[50px] lg:text-[56px] leading-[1.12] text-balance">
-                আপনার{' '}
-                <span className="bg-gradient-to-r from-brand to-[#139a55] bg-clip-text text-transparent">সংসদ সদস্যকে</span>{' '}
-                চিনুন
+              <h1 className="rise [--rise-i:1] display text-[34px] sm:text-[46px] lg:text-[52px] leading-[1.15] text-balance">
+                আপনার এলাকার{' '}
+                <span className="bg-gradient-to-r from-brand to-[#139a55] bg-clip-text text-transparent">সংসদ সদস্য</span>
+                {/* No-break spaces keep each phrase whole: "সদস্য কে", "কী করছেন", "এক জায়গায়". */}
+                {'\u00A0কে, কী\u00A0করছেন, এক\u00A0জায়গায়'}
               </h1>
+              {/* The owner's line said "সংসদে উপস্থিতি"; no open source has attendance (see /parisonkhan), so it names the notices member pages do carry. */}
               <p className="rise [--rise-i:2] text-[16px] sm:text-[19px] leading-relaxed text-inksoft max-w-[600px] text-pretty">
-                {bn(stats.total)} জন সংসদ সদস্য, {bn(300)} আসন, {bn(parties.length)}টি দল, প্রতিটি অধিবেশন।
-                আসন, জেলা, এমপি বা দলের নাম বাংলা বা ইংরেজিতে লিখে খুঁজুন।
+                {bn(stats.total)} জন সদস্য, {bn(300)} আসন, {bn(parties.length)}টি দল। প্রতিটি সদস্যের পরিচিতি, ভোটের ফল,
+                কমিটি ও সংসদের প্রজ্ঞাপন, সবই সূত্রসহ।
               </p>
               <div className="rise [--rise-i:3]">
-                <SiteSearch />
+                <SiteSearch withButton placeholder="আসন, জেলা, এমপি বা দলের নাম, বাংলা বা ইংরেজিতে" />
               </div>
               <div className="rise [--rise-i:4] flex items-center gap-2.5 text-[13.5px] text-muted overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
-                <span className="shrink-0">জনপ্রিয়:</span>
+                <span className="shrink-0">বেশি খোঁজা হয়:</span>
                 {[
-                  { label: 'ঢাকা জেলা', href: '/jela/dhaka' },
+                  { label: 'ঢাকা-১৭', href: '/ason/dhaka-17' },
                   { label: 'সিলেট', href: '/jela/sylhet' },
                   { label: 'বিএনপি', href: '/dol/bnp' },
                   { label: 'স্পিকার', href: featured[0] ? `/mp/${featured[0].m.slug}` : '/mp' },
+                  { label: 'সংরক্ষিত আসন', href: `/mp${RESERVED_HASH}` },
                 ].map((t) => (
                   <Link
                     key={t.label}
