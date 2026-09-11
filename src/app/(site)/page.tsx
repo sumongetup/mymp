@@ -28,6 +28,12 @@ const WEBSITE_LD = {
   inLanguage: 'bn-BD',
   description: SITE_DESCRIPTION,
   publisher: { '@id': `${siteUrl}/#organization` },
+  // Search engines may offer a search box for the site; it lands on the member list, filtered.
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: `${siteUrl}/mp?q={search_term_string}` },
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export default function Home() {
