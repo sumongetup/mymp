@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { committees, getMemberById, bn, dateBn, meta } from '@/lib/data';
-import { Page, PageHead, Card, Stat, Notice, PartyDot } from '@/components/ui';
+import { Page, PageHead, Stat, Notice, PartyDot } from '@/components/ui';
+import { committeeDuty, typeBn } from '@/lib/committeeDuties';
 
 const currentCommittees = committees.filter((c) => c.rosterCurrent).length;
 export const metadata: Metadata = {
@@ -17,14 +18,18 @@ export default function CommitteesPage() {
   const pending = committees.filter((c) => !c.rosterCurrent);
 
   const byType = new Map<string, number>();
-  for (const c of committees) byType.set(c.type ?? 'অন্যান্য', (byType.get(c.type ?? 'অন্যান্য') ?? 0) + 1);
+  for (const c of committees) {
+    const t = typeBn(c.type) ?? 'অন্যান্য';
+    byType.set(t, (byType.get(t) ?? 0) + 1);
+  }
+  const summaryOf = (c: (typeof committees)[number]) => committeeDuty(c, committees)?.summary;
 
   return (
     <Page>
       <PageHead
         eyebrow="ত্রয়োদশ জাতীয় সংসদ"
         title="সংসদীয় কমিটি"
-        lede={`মোট ${bn(committees.length)}টি কমিটি। ${[...byType].map(([t, n]) => `${t} ${bn(n)}টি`).join(', ')}।`}
+        lede={`মোট ${bn(committees.length)}টি কমিটি: ${[...byType].sort((a, b) => b[1] - a[1]).map(([t, n]) => `${t} ${bn(n)}টি`).join(', ')}। প্রতিটি কমিটি কী কাজ করে, তা নামের নিচে লেখা; বিস্তারিত কমিটির পাতায়।`}
         aside={
           <div className="grid grid-cols-2 gap-3">
             <Stat label="তালিকা হালনাগাদ" value={bn(current.length)} />
@@ -46,7 +51,7 @@ export default function CommitteesPage() {
                 <li key={c.id}>
                   <Link
                     href={`/committee/${c.slug}`}
-                    className="bg-surface border border-rule rounded-xl p-5 flex flex-col sm:flex-row gap-4 sm:items-center hover:border-brand transition-colors"
+                    className="reveal bg-surface border border-rule rounded-xl p-5 flex flex-col sm:flex-row gap-4 sm:items-center hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
                   >
                     <span className="grow min-w-0 flex flex-col gap-2">
                       <span className="flex items-center gap-2.5 flex-wrap">
@@ -59,6 +64,7 @@ export default function CommitteesPage() {
                         {c.nameEn}
                         {c.startDate ? ` · গঠিত ${dateBn(c.startDate)}` : ''}
                       </span>
+                      {summaryOf(c) && <span className="text-[14.5px] leading-relaxed text-inksoft text-pretty">{summaryOf(c)}</span>}
                       {chairMember && (
                         <span className="flex items-center gap-2 text-[14px]">
                           <span className="text-muted">সভাপতি</span>
@@ -97,13 +103,17 @@ export default function CommitteesPage() {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {pending.map((c) => (
               <li key={c.id}>
-                <Card className="p-5 flex flex-col gap-1.5 h-full">
+                <Link
+                  href={`/committee/${c.slug}`}
+                  className="reveal h-full bg-surface border border-rule rounded-card shadow-card p-5 flex flex-col gap-1.5 hover:border-brand hover:shadow-lift transition-all"
+                >
                   <span className="display text-[16px] font-bold leading-snug">{c.nameBn ?? c.nameEn}</span>
                   <span className="text-[13px] text-muted">{c.nameEn}</span>
+                  {summaryOf(c) && <span className="text-[14px] leading-relaxed text-inksoft text-pretty">{summaryOf(c)}</span>}
                   <span className="text-[13px] font-semibold text-warn mt-auto pt-1">
                     সদস্য তালিকা হালনাগাদের অপেক্ষায়
                   </span>
-                </Card>
+                </Link>
               </li>
             ))}
           </ul>

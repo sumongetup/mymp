@@ -3,7 +3,10 @@ import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { committees, getCommittee, getMemberById, bn, dateBn, meta } from '@/lib/data';
 import { noticesForCommittee } from '@/lib/activity';
+import Link from 'next/link';
 import { Page, PageHead, Card, Breadcrumb, Notice, MemberRow, Empty, DocLink } from '@/components/ui';
+import { committeeDuty, typeBn, RULES_URL, type CommitteeDuty } from '@/lib/committeeDuties';
+import { charCount, DESCRIPTION_MAX } from '@/lib/seo/mpDescription';
 
 export function generateStaticParams() {
   return committees.map((c) => ({ slug: c.slug }));
@@ -16,6 +19,11 @@ function committeeDescription(c: NonNullable<ReturnType<typeof getCommittee>>): 
   const chair = chairId ? getMemberById(chairId) : undefined;
   const count = c.members.length;
   const who = [chair ? `সভাপতি ${chair.nameBn ?? chair.nameEn}` : null, count ? `সদস্য ${bn(count)} জন` : null].filter(Boolean).join(', ');
+  // What the committee does comes first, while the whole sentence still fits what search engines show.
+  const duty = committeeDuty(c, committees)?.summary;
+  const withDuty = duty ? `${name}: ${duty}${who ? ` ${who}।` : ''}` : null;
+  if (withDuty && charCount(withDuty) <= DESCRIPTION_MAX) return withDuty;
+  if (duty && charCount(`${name}: ${duty}`) <= DESCRIPTION_MAX) return `${name}: ${duty}`;
   return `${name}: ত্রয়োদশ জাতীয় সংসদের একটি সংসদীয় কমিটি।${who ? ` ${who};` : ''} সদস্যদের তালিকা ও বৈঠকের বিজ্ঞপ্তি এই পাতায়।`;
 }
 
@@ -29,6 +37,43 @@ export async function generateMetadata({ params }: PageProps<'/committee/[slug]'
     openGraph: shareGraph(`/committee/${c.slug}`),
     description: committeeDescription(c),
   };
+}
+
+/** What the committee is for, from the parliament's Rules of Procedure. */
+function DutySection({ duty }: { duty: CommitteeDuty }) {
+  return (
+    <section className="flex flex-col gap-4">
+      <h2 className="display text-[22px] flex items-center gap-2.5">
+        <span aria-hidden="true" className="w-1.5 h-[0.85em] rounded-full bg-gradient-to-b from-logo to-brand shrink-0" />
+        কমিটির কাজ
+      </h2>
+      <Card className="p-5 sm:p-6 flex flex-col gap-4">
+        <p className="text-[16.5px] sm:text-[17.5px] leading-relaxed font-semibold text-ink text-pretty">{duty.summary}</p>
+        {duty.parent && (
+          <p className="text-[14.5px] text-inksoft">
+            মূল কমিটি:{' '}
+            <Link href={`/committee/${duty.parent.slug}`} className="font-semibold text-brand hover:underline">{duty.parent.nameBn}</Link>
+          </p>
+        )}
+        <ul className="flex flex-col gap-2.5">
+          {duty.duties.map((d) => (
+            <li key={d} className="flex gap-3 text-[15.5px] leading-relaxed text-inksoft">
+              <span aria-hidden="true" className="mt-[0.6em] w-1.5 h-1.5 rounded-full bg-brand shrink-0" />
+              <span className="text-pretty">{d}</span>
+            </li>
+          ))}
+        </ul>
+        {duty.note && <p className="text-[14px] leading-relaxed text-muted border-t border-rulesoft pt-3">{duty.note}</p>}
+        <p className="text-[12.5px] text-muted">
+          সূত্র:{' '}
+          <a href={RULES_URL} target="_blank" rel="noopener noreferrer" className="underline decoration-rule underline-offset-2 hover:text-brand">
+            জাতীয় সংসদের কার্যপ্রণালী বিধি
+          </a>
+          , {duty.rule}
+        </p>
+      </Card>
+    </section>
+  );
 }
 
 const ROLE_BN: Record<string, string> = {
@@ -48,6 +93,8 @@ export default async function CommitteePage({ params }: PageProps<'/committee/[s
     .map((x) => ({ role: x.role, m: getMemberById(x.memberId) }))
     .filter((x): x is { role: string; m: NonNullable<ReturnType<typeof getMemberById>> } => !!x.m);
   const notices = noticesForCommittee(c.id);
+  const duty = committeeDuty(c, committees);
+  const type = typeBn(c.type);
 
   return (
     <Page>
@@ -60,13 +107,14 @@ export default async function CommitteePage({ params }: PageProps<'/committee/[s
       />
 
       <PageHead
-        eyebrow={c.type ?? undefined}
+        eyebrow={type ?? undefined}
         title={c.nameBn ?? c.nameEn ?? ''}
         lede={[c.nameEn, c.startDate ? `গঠিত ${dateBn(c.startDate)}` : null].filter(Boolean).join(' · ')}
       />
 
       <div className="pt-8 pb-14 grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
         <div className="flex flex-col gap-8 min-w-0">
+          {duty && <DutySection duty={duty} />}
           {!c.rosterCurrent ? (
             <Notice title="এই কমিটির সদস্য তালিকা ত্রয়োদশ সংসদের জন্য এখনো হালনাগাদ হয়নি">
               সংসদের তথ্যভান্ডারে এই কমিটির তালিকায় এখনো দ্বাদশ সংসদের সদস্যদের নাম রয়েছে। যাঁরা এখন আর
@@ -134,9 +182,9 @@ export default async function CommitteePage({ params }: PageProps<'/committee/[s
           <Card className="p-5 flex flex-col gap-2">
             <span className="display text-[16.5px]">কমিটি তথ্য</span>
             <div className="flex flex-col text-[14.5px]">
-              {c.type && (
+              {type && (
                 <div className="flex justify-between gap-3 py-2 border-b border-rulesoft">
-                  <span className="text-muted">ধরন</span><span className="font-medium text-end">{c.type}</span>
+                  <span className="text-muted">ধরন</span><span className="font-medium text-end">{type}</span>
                 </div>
               )}
               <div className="flex justify-between gap-3 py-2 border-b border-rulesoft">
