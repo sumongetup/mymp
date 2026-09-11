@@ -6,7 +6,8 @@
   "nameEn": "Panchagarh-1",
   "slug": "panchagarh-1",
   "boundaryBn": "(ক) পঞ্চগড় সদর, (খ) তেঁতুলিয়া এবং (গ)আটোয়ারী উপজেলা",
-  "memberId": "013000101"
+  "memberId": "013000101",
+  "vacantSince": null
  },
  {
   "no": 2,
@@ -15,7 +16,8 @@
   "nameEn": "Panchagarh-2",
   "slug": "panchagarh-2",
   "boundaryBn": "(ক) বোদা এবং (খ) দেবীগঞ্জ উপজেলা",
-  "memberId": "013000201"
+  "memberId": "013000201",
+  "vacantSince": null
  },
  {
   "no": 3,
@@ -24,7 +26,8 @@
   "nameEn": "Thakurgaon-1",
   "slug": "thakurgaon-1",
   "boundaryBn": "ঠাকুরগাঁও সদর উপজেলা",
-  "memberId": "013000301"
+  "memberId": "013000301",
+  "vacantSince": "2026-08-21"
  },
  {
   "no": 4,
@@ -33,7 +36,8 @@
   "nameEn": "Thakurgaon-2",
   "slug": "thakurgaon-2",
   "boundaryBn": "(ক)বালিয়াডাঙ্গী, (খ) হরিপুর এবং (গ) রানিসংকাইল উপজেলার নিম্নলিখিত ইউনিয়ন সমূহ: (১)ধর্মগড় ও (২)কাশিপুর",
-  "memberId": "013000401"
+  "memberId": "013000401",
+  "vacantSince": null
  },
  {
   "no": 5,
@@ -42,7 +46,8 @@
   "nameEn": "Thakurgaon-3",
   "slug": "thakurgaon-3",
   "boundaryBn": "(ক)পীরগঞ্জ উপজেলা এবং (খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত রানিশংকাইল উপজেলা: (১)ধর্মগড় ও(২) কাশিপুর",
-  "memberId": "013000501"
+  "memberId": "013000501",
+  "vacantSince": null
  },
  {
   "no": 6,
@@ -51,7 +56,8 @@
   "nameEn": "Dinajpur-1",
   "slug": "dinajpur-1",
   "boundaryBn": "(ক)বীরগঞ্জ এবং (খ)কাহারোল উপজেলা",
-  "memberId": "013000601"
+  "memberId": "013000601",
+  "vacantSince": null
  },
  {
   "no": 7,
@@ -60,7 +66,8 @@
   "nameEn": "Dinajpur-2",
   "slug": "dinajpur-2",
   "boundaryBn": "(ক)বোচাগঞ্জ এবং(খ) বিরল উপজেলা",
-  "memberId": "013000701"
+  "memberId": "013000701",
+  "vacantSince": null
  },
  {
   "no": 8,
@@ -69,7 +76,8 @@
   "nameEn": "Dinajpur-3",
   "slug": "dinajpur-3",
   "boundaryBn": "দিনাজপুর সদর উপজেলা",
-  "memberId": "013000801"
+  "memberId": "013000801",
+  "vacantSince": null
  },
  {
   "no": 9,
@@ -78,7 +86,8 @@
   "nameEn": "Dinajpur-4",
   "slug": "dinajpur-4",
   "boundaryBn": "(ক)খানসামা এবং (খ) চিরিরবন্দর",
-  "memberId": "013000901"
+  "memberId": "013000901",
+  "vacantSince": null
  },
  {
   "no": 10,
@@ -87,7 +96,8 @@
   "nameEn": "Dinajpur-5",
   "slug": "dinajpur-5",
   "boundaryBn": "(ক)পার্বতীপুর এবং (খ) ফুলবাড়ী উপজেলা",
-  "memberId": "013001001"
+  "memberId": "013001001",
+  "vacantSince": null
  },
  {
   "no": 11,
@@ -96,7 +106,8 @@
   "nameEn": "Dinajpur-6",
   "slug": "dinajpur-6",
   "boundaryBn": "(ক)নবাবগঞ্জ,(খ) বিরামপুর,(গ) হাকিমপুর এবং (ঘ)ঘোড়াঘাট উপজেলা",
-  "memberId": "013001101"
+  "memberId": "013001101",
+  "vacantSince": null
  },
  {
   "no": 12,
@@ -105,7 +116,8 @@
   "nameEn": "Nilphamari-1",
   "slug": "nilphamari-1",
   "boundaryBn": "(ক)ডোমার এবং(খ) ডিমলা উপজেলা",
-  "memberId": "013001201"
+  "memberId": "013001201",
+  "vacantSince": null
  },
  {
   "no": 13,
@@ -114,7 +126,8 @@
   "nameEn": "Nilphamari-2",
   "slug": "nilphamari-2",
   "boundaryBn": "নীলফামারী সদর উপজেলা",
-  "memberId": "013001301"
+  "memberId": "013001301",
+  "vacantSince": null
  },
  {
   "no": 14,
@@ -123,7 +136,8 @@
   "nameEn": "Nilphamari-3",
   "slug": "nilphamari-3",
   "boundaryBn": "জলঢাকা উপজেলা",
-  "memberId": "013001401"
+  "memberId": "013001401",
+  "vacantSince": null
  },
  {
   "no": 15,
@@ -132,7 +146,8 @@
   "nameEn": "Nilphamari-4",
   "slug": "nilphamari-4",
   "boundaryBn": "(ক)সৈয়দপুর এবং(খ) কিশোরগঞ্জ উপজেলা",
-  "memberId": "013001501"
+  "memberId": "013001501",
+  "vacantSince": null
  },
  {
   "no": 16,
@@ -141,7 +156,8 @@
   "nameEn": "Lalmonirhat-1",
   "slug": "lalmonirhat-1",
   "boundaryBn": "(ক)পাটগ্রাম এবং(খ) হাতীবান্ধা উপজেলা",
-  "memberId": "013001601"
+  "memberId": "013001601",
+  "vacantSince": null
  },
  {
   "no": 17,
@@ -150,7 +166,8 @@
   "nameEn": "Lalmonirhat-2",
   "slug": "lalmonirhat-2",
   "boundaryBn": "(ক)কালিগঞ্জ এবং(খ)আদিতমারী উপজেলা",
-  "memberId": "013001701"
+  "memberId": "013001701",
+  "vacantSince": null
  },
  {
   "no": 18,
@@ -159,7 +176,8 @@
   "nameEn": "Lalmonirhat-3",
   "slug": "lalmonirhat-3",
   "boundaryBn": "লালমনিরহাট সদর উপজেলা",
-  "memberId": "013001801"
+  "memberId": "013001801",
+  "vacantSince": null
  },
  {
   "no": 19,
@@ -168,7 +186,8 @@
   "nameEn": "Rangpur-1",
   "slug": "rangpur-1",
   "boundaryBn": "(ক)গংগাচড়া উপজেলা এবং(খ) রংপুর সিটি কর্পোরেশনের ওয়ার্ড- ১,২,৩,৪,৫,৬,৭ ও ৮",
-  "memberId": "013001901"
+  "memberId": "013001901",
+  "vacantSince": null
  },
  {
   "no": 20,
@@ -177,7 +196,8 @@
   "nameEn": "Rangpur-2",
   "slug": "rangpur-2",
   "boundaryBn": "(ক)তারাগঞ্জ এবং(খ) বদরগঞ্জ উপজেলা",
-  "memberId": "013002001"
+  "memberId": "013002001",
+  "vacantSince": null
  },
  {
   "no": 21,
@@ -186,7 +206,8 @@
   "nameEn": "Rangpur-3",
   "slug": "rangpur-3",
   "boundaryBn": "(ক)রংপুর সদর উপজেলা এবং (খ)রংপুর সিটি কর্পোরেশনের- ১,২,৩,৪,৫,৬,৭ ও ৮ ব্যতীত রংপুর সিটি কর্পোরেশনের এলাকা সমূহ।",
-  "memberId": "013002101"
+  "memberId": "013002101",
+  "vacantSince": null
  },
  {
   "no": 22,
@@ -195,7 +216,8 @@
   "nameEn": "Rangpur-4",
   "slug": "rangpur-4",
   "boundaryBn": "(ক)পীরগাছা এবং(খ) কাউনিয়া উপজেলা",
-  "memberId": "013002201"
+  "memberId": "013002201",
+  "vacantSince": null
  },
  {
   "no": 23,
@@ -204,7 +226,8 @@
   "nameEn": "Rangpur-5",
   "slug": "rangpur-5",
   "boundaryBn": "মিঠাপুকুর উপজেলা",
-  "memberId": "013002301"
+  "memberId": "013002301",
+  "vacantSince": null
  },
  {
   "no": 24,
@@ -213,7 +236,8 @@
   "nameEn": "Rangpur-6",
   "slug": "rangpur-6",
   "boundaryBn": "পীরগঞ্জ উপজেলা",
-  "memberId": "013002401"
+  "memberId": "013002401",
+  "vacantSince": null
  },
  {
   "no": 25,
@@ -222,7 +246,8 @@
   "nameEn": "Kurigram-1",
   "slug": "kurigram-1",
   "boundaryBn": "(ক)ভূরুঙ্গামারী এবং(খ) নাগেশ্বরী উপজেলা",
-  "memberId": "013002501"
+  "memberId": "013002501",
+  "vacantSince": null
  },
  {
   "no": 26,
@@ -231,7 +256,8 @@
   "nameEn": "Kurigram-2",
   "slug": "kurigram-2",
   "boundaryBn": "(ক)কুড়িগ্রাম সদর,(খ) রাজারহাট এবং(গ) ফুলবাড়ী উপজেলা",
-  "memberId": "013002601"
+  "memberId": "013002601",
+  "vacantSince": null
  },
  {
   "no": 27,
@@ -240,7 +266,8 @@
   "nameEn": "Kurigram-3",
   "slug": "kurigram-3",
   "boundaryBn": "উলিপুর উপজেলা",
-  "memberId": "013002701"
+  "memberId": "013002701",
+  "vacantSince": null
  },
  {
   "no": 28,
@@ -249,7 +276,8 @@
   "nameEn": "Kurigram-4",
   "slug": "kurigram-4",
   "boundaryBn": "(ক)রৌমারী,(খ) চর রাজিবপুর এবং(গ) চিলমারী উপজেলা",
-  "memberId": "013002801"
+  "memberId": "013002801",
+  "vacantSince": null
  },
  {
   "no": 29,
@@ -258,7 +286,8 @@
   "nameEn": "Gaibandha-1",
   "slug": "gaibandha-1",
   "boundaryBn": "সুন্দরগঞ্জ উপজেলা",
-  "memberId": "013002901"
+  "memberId": "013002901",
+  "vacantSince": null
  },
  {
   "no": 30,
@@ -267,7 +296,8 @@
   "nameEn": "Gaibandha-2",
   "slug": "gaibandha-2",
   "boundaryBn": "গাইবান্ধা সদর উপজেলা",
-  "memberId": "013003001"
+  "memberId": "013003001",
+  "vacantSince": null
  },
  {
   "no": 31,
@@ -276,7 +306,8 @@
   "nameEn": "Gaibandha-3",
   "slug": "gaibandha-3",
   "boundaryBn": "(ক)সাদুল্যাপুর এবং(খ) পলাশবাড়ী উপজেলা",
-  "memberId": "013003101"
+  "memberId": "013003101",
+  "vacantSince": null
  },
  {
   "no": 32,
@@ -285,7 +316,8 @@
   "nameEn": "Gaibandha-4",
   "slug": "gaibandha-4",
   "boundaryBn": "গোবিন্দগঞ্জ উপজেলা",
-  "memberId": "013003201"
+  "memberId": "013003201",
+  "vacantSince": null
  },
  {
   "no": 33,
@@ -294,7 +326,8 @@
   "nameEn": "Gaibandha-5",
   "slug": "gaibandha-5",
   "boundaryBn": "(ক)ফুলছড়ি এবং(খ) সাঘাটা উপজেলা",
-  "memberId": "013003301"
+  "memberId": "013003301",
+  "vacantSince": null
  },
  {
   "no": 34,
@@ -303,7 +336,8 @@
   "nameEn": "Jaipurhat-1",
   "slug": "jaipurhat-1",
   "boundaryBn": "(ক)জয়পুরহাট সদর এবং(খ) পাঁচবিবি উপজেলা",
-  "memberId": "013003401"
+  "memberId": "013003401",
+  "vacantSince": null
  },
  {
   "no": 35,
@@ -312,7 +346,8 @@
   "nameEn": "Jaipurhat-2",
   "slug": "jaipurhat-2",
   "boundaryBn": "(ক)আক্কেলপুর,(খ) ক্ষেতলাল এবং(গ) কালাই উপজেলা",
-  "memberId": "013003501"
+  "memberId": "013003501",
+  "vacantSince": null
  },
  {
   "no": 36,
@@ -321,7 +356,8 @@
   "nameEn": "Bogura-1",
   "slug": "bogura-1",
   "boundaryBn": "(ক)সারিয়াকান্দি এবং(খ) সোনাতলা উপজেলা",
-  "memberId": "013003601"
+  "memberId": "013003601",
+  "vacantSince": null
  },
  {
   "no": 37,
@@ -330,7 +366,8 @@
   "nameEn": "Bogura-2",
   "slug": "bogura-2",
   "boundaryBn": "শিবগঞ্জ উপজেলা",
-  "memberId": "013003701"
+  "memberId": "013003701",
+  "vacantSince": null
  },
  {
   "no": 38,
@@ -339,7 +376,8 @@
   "nameEn": "Bogura-3",
   "slug": "bogura-3",
   "boundaryBn": "(ক)আদমদীঘি এবং(খ) দুপচাঁচিয়া উপজেলা",
-  "memberId": "013003801"
+  "memberId": "013003801",
+  "vacantSince": null
  },
  {
   "no": 39,
@@ -348,7 +386,8 @@
   "nameEn": "Bogura-4",
   "slug": "bogura-4",
   "boundaryBn": "(ক)কাহালু এবং (খ)নন্দীগ্রাম উপজেলা",
-  "memberId": "013003901"
+  "memberId": "013003901",
+  "vacantSince": null
  },
  {
   "no": 40,
@@ -357,7 +396,8 @@
   "nameEn": "Bogura-5",
   "slug": "bogura-5",
   "boundaryBn": "(ক)শেরপুর এবং(খ) ধুনট উপজেলা",
-  "memberId": "013004001"
+  "memberId": "013004001",
+  "vacantSince": null
  },
  {
   "no": 41,
@@ -366,7 +406,8 @@
   "nameEn": "Bogura-6",
   "slug": "bogura-6",
   "boundaryBn": "বগুড়া সদর উপজেলা",
-  "memberId": "013004101"
+  "memberId": "013004101",
+  "vacantSince": null
  },
  {
   "no": 42,
@@ -375,7 +416,8 @@
   "nameEn": "Bogura-7",
   "slug": "bogura-7",
   "boundaryBn": "(ক)গাবতলী এবং(খ) শাজাহানপুর উপজেলা",
-  "memberId": "013004201"
+  "memberId": "013004201",
+  "vacantSince": null
  },
  {
   "no": 43,
@@ -384,7 +426,8 @@
   "nameEn": "ChapaiNawabganj-1",
   "slug": "chapainawabganj-1",
   "boundaryBn": "শিবগঞ্জ উপজেলা",
-  "memberId": "013004301"
+  "memberId": "013004301",
+  "vacantSince": null
  },
  {
   "no": 44,
@@ -393,7 +436,8 @@
   "nameEn": "ChapaiNawabganj-2",
   "slug": "chapainawabganj-2",
   "boundaryBn": "(ক)ভোলাহাট,(খ) গোমস্তাপুর এবং(গ) নাচোল উপজেলা",
-  "memberId": "013004401"
+  "memberId": "013004401",
+  "vacantSince": null
  },
  {
   "no": 45,
@@ -402,7 +446,8 @@
   "nameEn": "ChapaiNawabganj-3",
   "slug": "chapainawabganj-3",
   "boundaryBn": "চাঁপাইনবাবগঞ্জ সদর উপজেলা",
-  "memberId": "013004501"
+  "memberId": "013004501",
+  "vacantSince": null
  },
  {
   "no": 46,
@@ -411,7 +456,8 @@
   "nameEn": "Naogaon-1",
   "slug": "naogaon-1",
   "boundaryBn": "(ক)পোরশা,(খ) সাপাহার এবং(গ) নিয়ামতপুর উপজেলা",
-  "memberId": "013004601"
+  "memberId": "013004601",
+  "vacantSince": null
  },
  {
   "no": 47,
@@ -420,7 +466,8 @@
   "nameEn": "Naogaon-2",
   "slug": "naogaon-2",
   "boundaryBn": "(ক)পত্নীতলা এবং(খ) ধামইরহাট উপজেলা",
-  "memberId": "013004701"
+  "memberId": "013004701",
+  "vacantSince": null
  },
  {
   "no": 48,
@@ -429,7 +476,8 @@
   "nameEn": "Naogaon-3",
   "slug": "naogaon-3",
   "boundaryBn": "(ক)বদলগাছি এবং(খ) মহাদেবপুর উপজেলা",
-  "memberId": "013004801"
+  "memberId": "013004801",
+  "vacantSince": null
  },
  {
   "no": 49,
@@ -438,7 +486,8 @@
   "nameEn": "Naogaon-4",
   "slug": "naogaon-4",
   "boundaryBn": "মান্দা উপজেলা",
-  "memberId": "013004901"
+  "memberId": "013004901",
+  "vacantSince": null
  },
  {
   "no": 50,
@@ -447,7 +496,8 @@
   "nameEn": "Naogaon-5",
   "slug": "naogaon-5",
   "boundaryBn": "নওগাঁ সদর উপজেলা",
-  "memberId": "013005001"
+  "memberId": "013005001",
+  "vacantSince": null
  },
  {
   "no": 51,
@@ -456,7 +506,8 @@
   "nameEn": "Naogaon-6",
   "slug": "naogaon-6",
   "boundaryBn": "(ক) রাণীনগর এবং(খ) আত্রাই উপজেলা",
-  "memberId": "013005101"
+  "memberId": "013005101",
+  "vacantSince": null
  },
  {
   "no": 52,
@@ -465,7 +516,8 @@
   "nameEn": "Rajshahi-1",
   "slug": "rajshahi-1",
   "boundaryBn": "(ক)গোদাগাড়ী এবং(খ) তানোর উপজেলা",
-  "memberId": "013005201"
+  "memberId": "013005201",
+  "vacantSince": null
  },
  {
   "no": 53,
@@ -474,7 +526,8 @@
   "nameEn": "Rajshahi-2",
   "slug": "rajshahi-2",
   "boundaryBn": "রাজশাহী সিটি কর্পোরেশনের এলাকা সমূহ",
-  "memberId": "013005301"
+  "memberId": "013005301",
+  "vacantSince": null
  },
  {
   "no": 54,
@@ -483,7 +536,8 @@
   "nameEn": "Rajshahi-3",
   "slug": "rajshahi-3",
   "boundaryBn": "(ক)পবা এবং(খ) মোহনপুর উপজেলা",
-  "memberId": "013005401"
+  "memberId": "013005401",
+  "vacantSince": null
  },
  {
   "no": 55,
@@ -492,7 +546,8 @@
   "nameEn": "Rajshahi-4",
   "slug": "rajshahi-4",
   "boundaryBn": "বাগমারা উপজেলা",
-  "memberId": "013005501"
+  "memberId": "013005501",
+  "vacantSince": null
  },
  {
   "no": 56,
@@ -501,7 +556,8 @@
   "nameEn": "Rajshahi-5",
   "slug": "rajshahi-5",
   "boundaryBn": "(ক)দূর্গাপুর এবং(খ) পুঠিয়া উপজেলা",
-  "memberId": "013005601"
+  "memberId": "013005601",
+  "vacantSince": null
  },
  {
   "no": 57,
@@ -510,7 +566,8 @@
   "nameEn": "Rajshahi-6",
   "slug": "rajshahi-6",
   "boundaryBn": "(ক)চারঘাট এবং(খ) বাঘা উপজেলা",
-  "memberId": "013005701"
+  "memberId": "013005701",
+  "vacantSince": null
  },
  {
   "no": 58,
@@ -519,7 +576,8 @@
   "nameEn": "Natore-1",
   "slug": "natore-1",
   "boundaryBn": "(ক)লালপুর এবং(খ) বাগাতিপাড়া",
-  "memberId": "013005801"
+  "memberId": "013005801",
+  "vacantSince": null
  },
  {
   "no": 59,
@@ -528,7 +586,8 @@
   "nameEn": "Natore-2",
   "slug": "natore-2",
   "boundaryBn": "(ক)নাটোর সদর এবং(খ) নলডাঙ্গা",
-  "memberId": "013005901"
+  "memberId": "013005901",
+  "vacantSince": null
  },
  {
   "no": 60,
@@ -537,7 +596,8 @@
   "nameEn": "Natore-3",
   "slug": "natore-3",
   "boundaryBn": "সিংড়া উপজেলা",
-  "memberId": "013006001"
+  "memberId": "013006001",
+  "vacantSince": null
  },
  {
   "no": 61,
@@ -546,7 +606,8 @@
   "nameEn": "Natore-4",
   "slug": "natore-4",
   "boundaryBn": "(ক)গুরুদাসপুর এবং (খ)বড়াইগ্রাম উপজেলা",
-  "memberId": "013006101"
+  "memberId": "013006101",
+  "vacantSince": null
  },
  {
   "no": 62,
@@ -555,7 +616,8 @@
   "nameEn": "Sirajganj-1",
   "slug": "sirajganj-1",
   "boundaryBn": "(ক)কাজিপুর এবং(খ) সিরাজগঞ্জ সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)মেছড়া,(২) রতনকান্দি,(৩) বাগবাটি,(৪) ছোনগাছা ও(৫) বহুলী",
-  "memberId": "013006201"
+  "memberId": "013006201",
+  "vacantSince": null
  },
  {
   "no": 63,
@@ -564,7 +626,8 @@
   "nameEn": "Sirajganj-2",
   "slug": "sirajganj-2",
   "boundaryBn": "(ক) নিম্নলিখিত ইউনিয়ন ব্যাতীত সিরাজগঞ্জ সদরঃ- (১)মেছড়া,(২) (৩)রতনকান্দি,(৪) বাগবাটি,(৫) ছোনগাছা ও(৫) বহুলী এবং(খ) কামারখন্দ",
-  "memberId": "013006301"
+  "memberId": "013006301",
+  "vacantSince": null
  },
  {
   "no": 64,
@@ -573,7 +636,8 @@
   "nameEn": "Sirajganj-3",
   "slug": "sirajganj-3",
   "boundaryBn": "(ক)রায়গঞ্জ এবং(খ) তাড়াশ উপজেলা",
-  "memberId": "013006401"
+  "memberId": "013006401",
+  "vacantSince": null
  },
  {
   "no": 65,
@@ -582,7 +646,8 @@
   "nameEn": "Sirajganj-4",
   "slug": "sirajganj-4",
   "boundaryBn": "উল্লাপাড়া উপজেলা",
-  "memberId": "013006501"
+  "memberId": "013006501",
+  "vacantSince": null
  },
  {
   "no": 66,
@@ -591,7 +656,8 @@
   "nameEn": "Sirajganj-5",
   "slug": "sirajganj-5",
   "boundaryBn": "(ক)বেলকুচি এবং(খ) চৌহালী উপজেলা",
-  "memberId": "013006601"
+  "memberId": "013006601",
+  "vacantSince": null
  },
  {
   "no": 67,
@@ -600,7 +666,8 @@
   "nameEn": "Sirajganj-6",
   "slug": "sirajganj-6",
   "boundaryBn": "শাহজাদপুর উপজেলা",
-  "memberId": "013006701"
+  "memberId": "013006701",
+  "vacantSince": null
  },
  {
   "no": 68,
@@ -609,7 +676,8 @@
   "nameEn": "Pabna-1",
   "slug": "pabna-1",
   "boundaryBn": "(ক)সাঁথিয়া উপজেলা এবং(খ) বেড়া উপজেলার নিম্নিলিখিত এলাকাসমূহঃ (১)বেড়া পৌরসভা, (২)হাটুরিয়া নাকালিয়া ইউনিয়ন,(৩) নতুন ভারেংগা ইউনিয়ন,(৪) চাকলা ইউনিয়ন ও(৫) কৈটোলা ইউনিয়ন",
-  "memberId": "013006801"
+  "memberId": "013006801",
+  "vacantSince": null
  },
  {
   "no": 69,
@@ -618,7 +686,8 @@
   "nameEn": "Pabna-2",
   "slug": "pabna-2",
   "boundaryBn": "(ক)সুজানগর এবং(খ) নিম্নিলিখিত এলাকা ব্যতীত বেড়া উপজেলাঃ (১)বেড়া পৌরসভা, (২)হাটুরিয়া নাকালিয়া ইউনিয়ন,(৩) নতুন ভারেংগা ইউনিয়ন,(৪) চাকলা ইউনিয়ন ও(৫) কৈটোলা ইউনিয়ন",
-  "memberId": "013006901"
+  "memberId": "013006901",
+  "vacantSince": null
  },
  {
   "no": 70,
@@ -627,7 +696,8 @@
   "nameEn": "Pabna-3",
   "slug": "pabna-3",
   "boundaryBn": "(ক)চাটমোহর,(খ) ভাংগুড়া এবং(গ) ফরিদপুর উপজেলা",
-  "memberId": "013007001"
+  "memberId": "013007001",
+  "vacantSince": null
  },
  {
   "no": 71,
@@ -636,7 +706,8 @@
   "nameEn": "Pabna-4",
   "slug": "pabna-4",
   "boundaryBn": "(ক)আটঘরিয়া এবং(খ) ঈশ্বরদী উপজেলা",
-  "memberId": "013007101"
+  "memberId": "013007101",
+  "vacantSince": null
  },
  {
   "no": 72,
@@ -645,7 +716,8 @@
   "nameEn": "Pabna 5",
   "slug": "pabna-5",
   "boundaryBn": "পাবনা সদর উপজেলা",
-  "memberId": "013007201"
+  "memberId": "013007201",
+  "vacantSince": null
  },
  {
   "no": 73,
@@ -654,7 +726,8 @@
   "nameEn": "Meherpur-1",
   "slug": "meherpur-1",
   "boundaryBn": "(ক)মেহেরপুর সদর এবং (খ)মুজিবনগর উপজেলা",
-  "memberId": "013007301"
+  "memberId": "013007301",
+  "vacantSince": null
  },
  {
   "no": 74,
@@ -663,7 +736,8 @@
   "nameEn": "Meherpur-2",
   "slug": "meherpur-2",
   "boundaryBn": "গাংনী উপজেলা",
-  "memberId": "013007401"
+  "memberId": "013007401",
+  "vacantSince": null
  },
  {
   "no": 75,
@@ -672,7 +746,8 @@
   "nameEn": "Kushtia-1",
   "slug": "kushtia-1",
   "boundaryBn": "দৌলতপুর উপজেলা",
-  "memberId": "013007501"
+  "memberId": "013007501",
+  "vacantSince": null
  },
  {
   "no": 76,
@@ -681,7 +756,8 @@
   "nameEn": "Kushtia-2",
   "slug": "kushtia-2",
   "boundaryBn": "(ক)ভেড়ামারা এবং(খ) মিরপুর উপজেলা",
-  "memberId": "013007601"
+  "memberId": "013007601",
+  "vacantSince": null
  },
  {
   "no": 77,
@@ -690,7 +766,8 @@
   "nameEn": "Kushtia-3",
   "slug": "kushtia-3",
   "boundaryBn": "কুষ্টিয়া সদর উপজেলা",
-  "memberId": "013007701"
+  "memberId": "013007701",
+  "vacantSince": null
  },
  {
   "no": 78,
@@ -699,7 +776,8 @@
   "nameEn": "Kushtia-4",
   "slug": "kushtia-4",
   "boundaryBn": "(ক)কুমারখালী এবং(খ) খোকশা উপজেলা",
-  "memberId": "013007801"
+  "memberId": "013007801",
+  "vacantSince": null
  },
  {
   "no": 79,
@@ -708,7 +786,8 @@
   "nameEn": "Chuadanga-1",
   "slug": "chuadanga-1",
   "boundaryBn": "(ক)আলমডাঙ্গা এবং(খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত চুয়াডাঙ্গা সদর উপজেলাঃ(১) তিতুদহ,(২) বেগমপুর(৩) নেহালপুর ও(৪) গড়াইটুপি ইউনিয়ন",
-  "memberId": "013007901"
+  "memberId": "013007901",
+  "vacantSince": null
  },
  {
   "no": 80,
@@ -717,7 +796,8 @@
   "nameEn": "Chuadanga-2",
   "slug": "chuadanga-2",
   "boundaryBn": "(ক)দামুড়হুদা, (খ)জীবননগর এবং (গ)চুয়াডাঙ্গা সদর উপজেলার নিম্নলিখিত ইউনিয়নসমূহঃ (১) তিতুদহ,(২) বেগমপুর(৩) নেহালপুর ও(৪) গড়াইটুপি ইউনিয়ন",
-  "memberId": "013008001"
+  "memberId": "013008001",
+  "vacantSince": null
  },
  {
   "no": 81,
@@ -726,7 +806,8 @@
   "nameEn": "Jhenaidah-1",
   "slug": "jhenaidah-1",
   "boundaryBn": "শৈলকূপা উপজেলা",
-  "memberId": "013008101"
+  "memberId": "013008101",
+  "vacantSince": null
  },
  {
   "no": 82,
@@ -735,7 +816,8 @@
   "nameEn": "Jhenaidah-2",
   "slug": "jhenaidah-2",
   "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত ঝিনাইদহ সদরঃ নলডাঙ্গা, ঘোড়াশাল, ফুরসুন্দি ও মহারাজপুর এবং (খ)হরিণাকুণ্ডু উপজেলা",
-  "memberId": "013008201"
+  "memberId": "013008201",
+  "vacantSince": null
  },
  {
   "no": 83,
@@ -744,7 +826,8 @@
   "nameEn": "Jhenaidah-3",
   "slug": "jhenaidah-3",
   "boundaryBn": "(ক)কোর্টচাদপুর এবং(খ) মহেশপুর উপজেলা",
-  "memberId": "013008301"
+  "memberId": "013008301",
+  "vacantSince": null
  },
  {
   "no": 84,
@@ -753,7 +836,8 @@
   "nameEn": "Jhenaidah-4",
   "slug": "jhenaidah-4",
   "boundaryBn": "(ক)কালীগঞ্জ এবং(খ) ঝিনাইদহ সদর উপজেলার (১)নলডাঙ্গা,(২) ঘোড়াশাল,(৩) ফুরসুন্দি ও(৪) মহারাজপুর ইউনিয়ন",
-  "memberId": "013008401"
+  "memberId": "013008401",
+  "vacantSince": null
  },
  {
   "no": 85,
@@ -762,7 +846,8 @@
   "nameEn": "Jashore-1",
   "slug": "jashore-1",
   "boundaryBn": "শার্শা উপজেলা",
-  "memberId": "013008501"
+  "memberId": "013008501",
+  "vacantSince": null
  },
  {
   "no": 86,
@@ -771,7 +856,8 @@
   "nameEn": "Jashore-2",
   "slug": "jashore-2",
   "boundaryBn": "(ক)ঝিকরগাছা এবং (খ)চৌগাছা উপজেলা",
-  "memberId": "013008601"
+  "memberId": "013008601",
+  "vacantSince": null
  },
  {
   "no": 87,
@@ -780,7 +866,8 @@
   "nameEn": "Jashore-3",
   "slug": "jashore-3",
   "boundaryBn": "বসুন্দিয়া ইউনিয়ন ব্যতীত যশোর সদর উপজেলা",
-  "memberId": "013008701"
+  "memberId": "013008701",
+  "vacantSince": null
  },
  {
   "no": 88,
@@ -789,7 +876,8 @@
   "nameEn": "Jashore-4",
   "slug": "jashore-4",
   "boundaryBn": "(ক)বাঘারপাড়া,(খ) অভয়নগর এবং(গ) যশোর সদর উপজেলার বসুন্দিয়া ইউনিয়ন",
-  "memberId": "013008801"
+  "memberId": "013008801",
+  "vacantSince": null
  },
  {
   "no": 89,
@@ -798,7 +886,8 @@
   "nameEn": "Jashore-5",
   "slug": "jashore-5",
   "boundaryBn": "মনিরামপুর উপজেলা",
-  "memberId": "013008901"
+  "memberId": "013008901",
+  "vacantSince": null
  },
  {
   "no": 90,
@@ -807,7 +896,8 @@
   "nameEn": "Jashore-6",
   "slug": "jashore-6",
   "boundaryBn": "কেশবপুর উপজেলা",
-  "memberId": "013009001"
+  "memberId": "013009001",
+  "vacantSince": null
  },
  {
   "no": 91,
@@ -816,7 +906,8 @@
   "nameEn": "Magura-1",
   "slug": "magura-1",
   "boundaryBn": "(ক)শ্রীপুর এবং(খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত মাগুরা সদর উপজেলাঃ(১) শত্রুজিৎপুর,(২) গোপালগ্রাম,(৩) কুচিয়ামোড়া,(৪) বেরইল পলিতা ইউনিয়ন",
-  "memberId": "013009101"
+  "memberId": "013009101",
+  "vacantSince": null
  },
  {
   "no": 92,
@@ -825,7 +916,8 @@
   "nameEn": "Magura-2",
   "slug": "magura-2",
   "boundaryBn": "(ক)মহম্মদপুর উপজেলা(খ)শালিখা উপজেলা এবং(গ) মাগুরা সদর উপজেলার নিম্নলিখিত ইউনিয়নসমূহ : (১)শত্রুজিৎপুর,(২) গোপালগ্রাম, (৩)কুচিয়ামোড়া,(৪) বেরইল পলিতা ইউনিয়ন",
-  "memberId": "013009201"
+  "memberId": "013009201",
+  "vacantSince": null
  },
  {
   "no": 93,
@@ -834,7 +926,8 @@
   "nameEn": "Narail-1",
   "slug": "narail-1",
   "boundaryBn": "(ক)কালিয়া এবং(খ) নড়াইল সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)কলোড়া,(২) বিচালি,(৩) ভদ্রবিলা,(৪) সিংগা শোলপুর ও(৫) শেখ হাটি",
-  "memberId": "013009301"
+  "memberId": "013009301",
+  "vacantSince": null
  },
  {
   "no": 94,
@@ -843,7 +936,8 @@
   "nameEn": "Narail-2",
   "slug": "narail-2",
   "boundaryBn": "(ক)লোহাগড়া উপজেলা এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নড়াইল সদর উপজেলা:(১)কলোড়া,(২) বিচালি,(৩) ভদ্রবিলা,(৪) সিঙগা শোলপুর ও(৫) শেখ হাটি",
-  "memberId": "013009401"
+  "memberId": "013009401",
+  "vacantSince": null
  },
  {
   "no": 95,
@@ -852,7 +946,8 @@
   "nameEn": "Bagerhat-1",
   "slug": "bagerhat-1",
   "boundaryBn": "(ক)ফকিরহাট,(খ) মোল্লাহাট এবং(গ) চিতলমারী উপজেলা",
-  "memberId": "013009501"
+  "memberId": "013009501",
+  "vacantSince": null
  },
  {
   "no": 96,
@@ -861,7 +956,8 @@
   "nameEn": "Bagerhat-2",
   "slug": "bagerhat-2",
   "boundaryBn": "(ক)বাগেরহাট সদর এবং(খ) কচুয়া উপজেলা",
-  "memberId": "013009601"
+  "memberId": "013009601",
+  "vacantSince": null
  },
  {
   "no": 97,
@@ -870,7 +966,8 @@
   "nameEn": "Bagerhat-3",
   "slug": "bagerhat-3",
   "boundaryBn": "(ক)রামপাল এবং(খ) মোংলা উপজেলা",
-  "memberId": "013009701"
+  "memberId": "013009701",
+  "vacantSince": null
  },
  {
   "no": 98,
@@ -879,7 +976,8 @@
   "nameEn": "Bagerhat-4",
   "slug": "bagerhat-4",
   "boundaryBn": "(ক)মোড়েলগঞ্জ এবং(খ) শরণখোলা উপজেলা",
-  "memberId": "013009801"
+  "memberId": "013009801",
+  "vacantSince": null
  },
  {
   "no": 99,
@@ -888,7 +986,8 @@
   "nameEn": "Khulna-1",
   "slug": "khulna-1",
   "boundaryBn": "(ক)বটিয়াঘাটা এবং(খ) দাকোপ উপজেলা",
-  "memberId": "013009901"
+  "memberId": "013009901",
+  "vacantSince": null
  },
  {
   "no": 100,
@@ -897,7 +996,8 @@
   "nameEn": "Khulna-2",
   "slug": "khulna-2",
   "boundaryBn": "খুলনা সিটি কর্পোরেশনের ওয়ার্ড ১৬ থেকে ৩১ পর্যন্ত",
-  "memberId": "013010001"
+  "memberId": "013010001",
+  "vacantSince": null
  },
  {
   "no": 101,
@@ -906,7 +1006,8 @@
   "nameEn": "Khulna-3",
   "slug": "khulna-3",
   "boundaryBn": "(ক)খুলনা সিটি কর্পোরেশনের ওয়ার্ড ১ থেকে ১৫ এবং (খ)দিঘলিয়া উপজেলার আঢ়ংঘাটা ও যোগীপোল ইউনিয়ন",
-  "memberId": "013010101"
+  "memberId": "013010101",
+  "vacantSince": null
  },
  {
   "no": 102,
@@ -915,7 +1016,8 @@
   "nameEn": "Khulna-4",
   "slug": "khulna-4",
   "boundaryBn": "(ক)আঢ়ংঘাটা ও যোগীপোল ইউনিয়ন ব্যতীত দিঘলিয়া, (খ)রূপসা এবং (গ)তেরখাদা উপজেলা",
-  "memberId": "013010201"
+  "memberId": "013010201",
+  "vacantSince": null
  },
  {
   "no": 103,
@@ -924,7 +1026,8 @@
   "nameEn": "Khulna-5",
   "slug": "khulna-5",
   "boundaryBn": "(ক)ফুলতলা,(খ) ডুমুরিয়া উপজেলা এবং(গ) গিলাতলা ক্যান্টনমেন্ট এলাকা",
-  "memberId": "013010301"
+  "memberId": "013010301",
+  "vacantSince": null
  },
  {
   "no": 104,
@@ -933,7 +1036,8 @@
   "nameEn": "Khulna-6",
   "slug": "khulna-6",
   "boundaryBn": "(ক)কয়রা এবং(খ) পাইকগাছা উপজেলা",
-  "memberId": "013010401"
+  "memberId": "013010401",
+  "vacantSince": null
  },
  {
   "no": 105,
@@ -942,7 +1046,8 @@
   "nameEn": "Satkhira-1",
   "slug": "satkhira-1",
   "boundaryBn": "(ক)কলারোয়া এবং(খ) তালা উপজেলা",
-  "memberId": "013010501"
+  "memberId": "013010501",
+  "vacantSince": null
  },
  {
   "no": 106,
@@ -951,7 +1056,8 @@
   "nameEn": "Satkhira-2",
   "slug": "satkhira-2",
   "boundaryBn": "সাতক্ষীরা সদর উপজেলা",
-  "memberId": "013010601"
+  "memberId": "013010601",
+  "vacantSince": null
  },
  {
   "no": 107,
@@ -960,7 +1066,8 @@
   "nameEn": "Satkhira-3",
   "slug": "satkhira-3",
   "boundaryBn": "(ক)আশাশুনি, (খ)দেবহাটা এবং(গ) কালিগঞ্জ উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)চাম্পাফুল,(২) ভাড়াশিমলা,(৩) তারালী ও(৪) নলতা",
-  "memberId": "013010701"
+  "memberId": "013010701",
+  "vacantSince": null
  },
  {
   "no": 108,
@@ -969,7 +1076,8 @@
   "nameEn": "Satkhira-4",
   "slug": "satkhira-4",
   "boundaryBn": "(ক)শ্যামনগর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কালিগঞ্জ উপজেলাঃ (১)চাম্পাফুল,(২) ভাড়াশিমলা,(৩) তারালী ও(৪) নলতা",
-  "memberId": "013010801"
+  "memberId": "013010801",
+  "vacantSince": null
  },
  {
   "no": 109,
@@ -978,7 +1086,8 @@
   "nameEn": "Barguna-1",
   "slug": "barguna-1",
   "boundaryBn": "(ক)বরগুনা সদর,(খ) আমতলী এবং(গ) তালতলি উপজেলা",
-  "memberId": "013010901"
+  "memberId": "013010901",
+  "vacantSince": null
  },
  {
   "no": 110,
@@ -987,7 +1096,8 @@
   "nameEn": "Barguna-2",
   "slug": "barguna-2",
   "boundaryBn": "(ক)বামনা উপজেলা,(খ) পাথরঘাটা এবং(গ) বেতাগী উপজেলা",
-  "memberId": "013011001"
+  "memberId": "013011001",
+  "vacantSince": null
  },
  {
   "no": 111,
@@ -996,7 +1106,8 @@
   "nameEn": "Patuakhali-1",
   "slug": "patuakhali-1",
   "boundaryBn": "(ক)পটুয়াখালী সদর,(খ) মির্জাগঞ্জ এবং(গ) দুমকি উপজেলা",
-  "memberId": "013011101"
+  "memberId": "013011101",
+  "vacantSince": null
  },
  {
   "no": 112,
@@ -1005,7 +1116,8 @@
   "nameEn": "Patuakhali-2",
   "slug": "patuakhali-2",
   "boundaryBn": "বাউফল উপজেলা",
-  "memberId": "013011201"
+  "memberId": "013011201",
+  "vacantSince": null
  },
  {
   "no": 113,
@@ -1014,7 +1126,8 @@
   "nameEn": "Patuakhali-3",
   "slug": "patuakhali-3",
   "boundaryBn": "(ক)দশমিনা এবং(খ) গলাচিপা উপজেলা",
-  "memberId": "013011301"
+  "memberId": "013011301",
+  "vacantSince": null
  },
  {
   "no": 114,
@@ -1023,7 +1136,8 @@
   "nameEn": "Patuakhali-4",
   "slug": "patuakhali-4",
   "boundaryBn": "(ক)কলাপাড়া এবং(খ) রাঙ্গাবালী উপজেলা",
-  "memberId": "013011401"
+  "memberId": "013011401",
+  "vacantSince": null
  },
  {
   "no": 115,
@@ -1032,7 +1146,8 @@
   "nameEn": "Bhola-1",
   "slug": "bhola-1",
   "boundaryBn": "ভোলা সদর উপজেলা",
-  "memberId": "013011501"
+  "memberId": "013011501",
+  "vacantSince": null
  },
  {
   "no": 116,
@@ -1041,7 +1156,8 @@
   "nameEn": "Bhola-2",
   "slug": "bhola-2",
   "boundaryBn": "(ক)দৌলতখান এবং(খ) বোরহানউদ্দিন উপজেলা",
-  "memberId": "013011601"
+  "memberId": "013011601",
+  "vacantSince": null
  },
  {
   "no": 117,
@@ -1050,7 +1166,8 @@
   "nameEn": "Bhola-3",
   "slug": "bhola-3",
   "boundaryBn": "(ক)তজুমদ্দিন এবং(খ) লালমোহন উপজেলা",
-  "memberId": "013011701"
+  "memberId": "013011701",
+  "vacantSince": null
  },
  {
   "no": 118,
@@ -1059,7 +1176,8 @@
   "nameEn": "Bhola-4",
   "slug": "bhola-4",
   "boundaryBn": "(ক)মনপুরা এবং(খ) চরফ্যাশন উপজেলা",
-  "memberId": "013011801"
+  "memberId": "013011801",
+  "vacantSince": null
  },
  {
   "no": 119,
@@ -1068,7 +1186,8 @@
   "nameEn": "Barishal-1",
   "slug": "barishal-1",
   "boundaryBn": "(ক) গৌরনদী এবং (খ)আগৈলঝাড়া উপজেলা",
-  "memberId": "013011901"
+  "memberId": "013011901",
+  "vacantSince": null
  },
  {
   "no": 120,
@@ -1077,7 +1196,8 @@
   "nameEn": "Barishal-2",
   "slug": "barishal-2",
   "boundaryBn": "(ক)উজিরপুর এবং(খ) বানারীপাড়া উপজেলা",
-  "memberId": "013012001"
+  "memberId": "013012001",
+  "vacantSince": null
  },
  {
   "no": 121,
@@ -1086,7 +1206,8 @@
   "nameEn": "Barishal-3",
   "slug": "barishal-3",
   "boundaryBn": "(ক)মুলাদী এবং(খ) বাবুগঞ্জ উপজেলা",
-  "memberId": "013012101"
+  "memberId": "013012101",
+  "vacantSince": null
  },
  {
   "no": 122,
@@ -1095,7 +1216,8 @@
   "nameEn": "Barishal-4",
   "slug": "barishal-4",
   "boundaryBn": "(ক)মেহেন্দিগঞ্জ এবং(খ) হিজলা উপজেলা",
-  "memberId": "013012201"
+  "memberId": "013012201",
+  "vacantSince": null
  },
  {
   "no": 123,
@@ -1104,7 +1226,8 @@
   "nameEn": "Barishal-5",
   "slug": "barishal-5",
   "boundaryBn": "(ক)বরিশাল সিটি কর্পোরেশনভুক্ত এলাকা এবং(খ) বরিশাল সদর উপজেলা",
-  "memberId": "013012301"
+  "memberId": "013012301",
+  "vacantSince": null
  },
  {
   "no": 124,
@@ -1113,7 +1236,8 @@
   "nameEn": "Barishal-6",
   "slug": "barishal-6",
   "boundaryBn": "বাকেরগঞ্জ উপজেলা",
-  "memberId": "013012401"
+  "memberId": "013012401",
+  "vacantSince": null
  },
  {
   "no": 125,
@@ -1122,7 +1246,8 @@
   "nameEn": "Jhalokathi-1",
   "slug": "jhalokathi-1",
   "boundaryBn": "(ক)রাজাপুর এবং (খ)কাঁঠালিয়া উপজেলা",
-  "memberId": "013012501"
+  "memberId": "013012501",
+  "vacantSince": null
  },
  {
   "no": 126,
@@ -1131,7 +1256,8 @@
   "nameEn": "Jhalokathi-2",
   "slug": "jhalokathi-2",
   "boundaryBn": "(ক)ঝালকাঠি সদর এবং(খ) নলছিটি উপজেলা",
-  "memberId": "013012601"
+  "memberId": "013012601",
+  "vacantSince": null
  },
  {
   "no": 127,
@@ -1140,7 +1266,8 @@
   "nameEn": "Pirojpur-1",
   "slug": "pirojpur-1",
   "boundaryBn": "(ক)পিরোজপুর সদর,(খ) নাজিরপুর এবং (গ)ইন্দুরকানী উপজেলা",
-  "memberId": "013012701"
+  "memberId": "013012701",
+  "vacantSince": null
  },
  {
   "no": 128,
@@ -1149,7 +1276,8 @@
   "nameEn": "Pirojpur-2",
   "slug": "pirojpur-2",
   "boundaryBn": "(ক)কাউখালি,(খ) ভান্ডারিয়া এবং(গ) নেছারাবাদ উপজেলা",
-  "memberId": "013012801"
+  "memberId": "013012801",
+  "vacantSince": null
  },
  {
   "no": 129,
@@ -1158,7 +1286,8 @@
   "nameEn": "Pirojpur-3",
   "slug": "pirojpur-3",
   "boundaryBn": "মঠবাড়ীয়া উপজেলা",
-  "memberId": "013012901"
+  "memberId": "013012901",
+  "vacantSince": null
  },
  {
   "no": 130,
@@ -1167,7 +1296,8 @@
   "nameEn": "Tangail-1",
   "slug": "tangail-1",
   "boundaryBn": "(ক)মধুপুর এবং(খ) ধনবাড়ী উপজেলা",
-  "memberId": "013013001"
+  "memberId": "013013001",
+  "vacantSince": null
  },
  {
   "no": 131,
@@ -1176,7 +1306,8 @@
   "nameEn": "Tangail-2",
   "slug": "tangail-2",
   "boundaryBn": "(ক)গোপালপুর এবং(খ) ভুয়াপুর উপজেলা",
-  "memberId": "013013101"
+  "memberId": "013013101",
+  "vacantSince": null
  },
  {
   "no": 132,
@@ -1185,7 +1316,8 @@
   "nameEn": "Tangail-3",
   "slug": "tangail-3",
   "boundaryBn": "ঘাটাইল উপজেলা",
-  "memberId": "013013201"
+  "memberId": "013013201",
+  "vacantSince": null
  },
  {
   "no": 133,
@@ -1194,7 +1326,8 @@
   "nameEn": "Tangail-4",
   "slug": "tangail-4",
   "boundaryBn": "কালিহাতী উপজেলা",
-  "memberId": "013013301"
+  "memberId": "013013301",
+  "vacantSince": null
  },
  {
   "no": 134,
@@ -1203,7 +1336,8 @@
   "nameEn": "Tangail-5",
   "slug": "tangail-5",
   "boundaryBn": "টাংগাইল সদর উপজেলা",
-  "memberId": "013013401"
+  "memberId": "013013401",
+  "vacantSince": null
  },
  {
   "no": 135,
@@ -1212,7 +1346,8 @@
   "nameEn": "Tangail-6",
   "slug": "tangail-6",
   "boundaryBn": "(ক)দেলদুয়ার এবং(খ) নাগরপুর উপজেলা",
-  "memberId": "013013501"
+  "memberId": "013013501",
+  "vacantSince": null
  },
  {
   "no": 136,
@@ -1221,7 +1356,8 @@
   "nameEn": "Tangail-7",
   "slug": "tangail-7",
   "boundaryBn": "মির্জাপুর উপজেলা",
-  "memberId": "013013601"
+  "memberId": "013013601",
+  "vacantSince": null
  },
  {
   "no": 137,
@@ -1230,7 +1366,8 @@
   "nameEn": "Tangail-8",
   "slug": "tangail-8",
   "boundaryBn": "(ক)বাসাইল এবং (খ)সখিপুর উপজেলা",
-  "memberId": "013013701"
+  "memberId": "013013701",
+  "vacantSince": null
  },
  {
   "no": 138,
@@ -1239,7 +1376,8 @@
   "nameEn": "Jamalpur-1",
   "slug": "jamalpur-1",
   "boundaryBn": "(ক)বকশীগঞ্জ এবং(খ) দেওয়ানগঞ্জ উপজেলা",
-  "memberId": "013013801"
+  "memberId": "013013801",
+  "vacantSince": null
  },
  {
   "no": 139,
@@ -1248,7 +1386,8 @@
   "nameEn": "Jamalpur-2",
   "slug": "jamalpur-2",
   "boundaryBn": "ইসলামপুর উপজেলা",
-  "memberId": "013013901"
+  "memberId": "013013901",
+  "vacantSince": null
  },
  {
   "no": 140,
@@ -1257,7 +1396,8 @@
   "nameEn": "Jamalpur-3",
   "slug": "jamalpur-3",
   "boundaryBn": "(ক)মাদারগঞ্জ এবং(খ) মেলান্দহ উপজেলা",
-  "memberId": "013014001"
+  "memberId": "013014001",
+  "vacantSince": null
  },
  {
   "no": 141,
@@ -1266,7 +1406,8 @@
   "nameEn": "Jamalpur-4",
   "slug": "jamalpur-4",
   "boundaryBn": "সরিষাবাড়ী উপজেলা",
-  "memberId": "013014101"
+  "memberId": "013014101",
+  "vacantSince": null
  },
  {
   "no": 142,
@@ -1275,7 +1416,8 @@
   "nameEn": "Jamalpur-5",
   "slug": "jamalpur-5",
   "boundaryBn": "জামালপুর সদর উপজেলা",
-  "memberId": "013014201"
+  "memberId": "013014201",
+  "vacantSince": null
  },
  {
   "no": 143,
@@ -1284,7 +1426,8 @@
   "nameEn": "Sherpur-1",
   "slug": "sherpur-1",
   "boundaryBn": "শেরপুর সদর উপজেলা",
-  "memberId": "013014301"
+  "memberId": "013014301",
+  "vacantSince": null
  },
  {
   "no": 144,
@@ -1293,7 +1436,8 @@
   "nameEn": "Sherpur-2",
   "slug": "sherpur-2",
   "boundaryBn": "(ক)নকলা এবং(খ) নালিতাবাড়ী উপজেলা",
-  "memberId": "013014401"
+  "memberId": "013014401",
+  "vacantSince": null
  },
  {
   "no": 145,
@@ -1302,7 +1446,8 @@
   "nameEn": "Sherpur-3",
   "slug": "sherpur-3",
   "boundaryBn": "(ক)শ্রীবরদী এবং(খ) ঝিনাইগাতী উপজেলা",
-  "memberId": "013014501"
+  "memberId": "013014501",
+  "vacantSince": null
  },
  {
   "no": 146,
@@ -1311,7 +1456,8 @@
   "nameEn": "Mymensingh-1",
   "slug": "mymensingh-1",
   "boundaryBn": "(ক)হালুয়াঘাট এবং(খ) ধোবাউড়া উপজেলা",
-  "memberId": "013014601"
+  "memberId": "013014601",
+  "vacantSince": null
  },
  {
   "no": 147,
@@ -1320,7 +1466,8 @@
   "nameEn": "Mymensingh-2",
   "slug": "mymensingh-2",
   "boundaryBn": "(ক)ফুলপুর এবং(খ) তারাকান্দা উপজেলা",
-  "memberId": "013014701"
+  "memberId": "013014701",
+  "vacantSince": null
  },
  {
   "no": 148,
@@ -1329,7 +1476,8 @@
   "nameEn": "Mymensingh-3",
   "slug": "mymensingh-3",
   "boundaryBn": "গৌরীপুর উপজেলা",
-  "memberId": "013014801"
+  "memberId": "013014801",
+  "vacantSince": null
  },
  {
   "no": 149,
@@ -1338,7 +1486,8 @@
   "nameEn": "Mymensingh-4",
   "slug": "mymensingh-4",
   "boundaryBn": "(ক)ময়মনসিংহ সিটি কর্পোরেশনভুক্ত এলাকা এবং (খ) ময়মনসিংহ সদর উপজেলা",
-  "memberId": "013014901"
+  "memberId": "013014901",
+  "vacantSince": null
  },
  {
   "no": 150,
@@ -1347,7 +1496,8 @@
   "nameEn": "Mymensingh-5",
   "slug": "mymensingh-5",
   "boundaryBn": "মুক্তাগাছা উপজেলা",
-  "memberId": "013015001"
+  "memberId": "013015001",
+  "vacantSince": null
  },
  {
   "no": 151,
@@ -1356,7 +1506,8 @@
   "nameEn": "Mymensingh-6",
   "slug": "mymensingh-6",
   "boundaryBn": "ফুলবাড়ীয়া উপজেলা",
-  "memberId": "013015101"
+  "memberId": "013015101",
+  "vacantSince": null
  },
  {
   "no": 152,
@@ -1365,7 +1516,8 @@
   "nameEn": "Mymensingh-7",
   "slug": "mymensingh-7",
   "boundaryBn": "ত্রিশাল উপজেলা",
-  "memberId": "013015201"
+  "memberId": "013015201",
+  "vacantSince": null
  },
  {
   "no": 153,
@@ -1374,7 +1526,8 @@
   "nameEn": "Mymensingh-8",
   "slug": "mymensingh-8",
   "boundaryBn": "ঈশ্বরগঞ্জ উপজেলা",
-  "memberId": "013015301"
+  "memberId": "013015301",
+  "vacantSince": null
  },
  {
   "no": 154,
@@ -1383,7 +1536,8 @@
   "nameEn": "Mymensingh-9",
   "slug": "mymensingh-9",
   "boundaryBn": "নান্দাইল উপজেলা",
-  "memberId": "013015401"
+  "memberId": "013015401",
+  "vacantSince": null
  },
  {
   "no": 155,
@@ -1392,7 +1546,8 @@
   "nameEn": "Mymensingh-10",
   "slug": "mymensingh-10",
   "boundaryBn": "গফরগাঁও উপজেলা",
-  "memberId": "013015501"
+  "memberId": "013015501",
+  "vacantSince": null
  },
  {
   "no": 156,
@@ -1401,7 +1556,8 @@
   "nameEn": "Mymensingh-11",
   "slug": "mymensingh-11",
   "boundaryBn": "ভালুকা উপজেলা",
-  "memberId": "013015601"
+  "memberId": "013015601",
+  "vacantSince": null
  },
  {
   "no": 157,
@@ -1410,7 +1566,8 @@
   "nameEn": "Netrokona-1",
   "slug": "netrokona-1",
   "boundaryBn": "(ক)কলমাকান্দা এবং(খ) দূর্গাপুর উপজেলা",
-  "memberId": "013015701"
+  "memberId": "013015701",
+  "vacantSince": null
  },
  {
   "no": 158,
@@ -1419,7 +1576,8 @@
   "nameEn": "Netrokona-2",
   "slug": "netrokona-2",
   "boundaryBn": "(ক)নেত্রকোনা সদর এবং(খ) বারহাট্টা উপজেলা",
-  "memberId": "013015801"
+  "memberId": "013015801",
+  "vacantSince": null
  },
  {
   "no": 159,
@@ -1428,7 +1586,8 @@
   "nameEn": "Netrokona-3",
   "slug": "netrokona-3",
   "boundaryBn": "(ক)আটপাড়া এবং(খ) কেন্দুয়া উপজেলা",
-  "memberId": "013015901"
+  "memberId": "013015901",
+  "vacantSince": null
  },
  {
   "no": 160,
@@ -1437,7 +1596,8 @@
   "nameEn": "Netrokona-4",
   "slug": "netrokona-4",
   "boundaryBn": "(ক)মোহনগঞ্জ,(খ) মদন এবং(গ) খালিয়াজুড়ী উপজেলা",
-  "memberId": "013016001"
+  "memberId": "013016001",
+  "vacantSince": null
  },
  {
   "no": 161,
@@ -1446,7 +1606,8 @@
   "nameEn": "Netrokona-5",
   "slug": "netrokona-5",
   "boundaryBn": "পূর্বধলা উপজেলা",
-  "memberId": "013016101"
+  "memberId": "013016101",
+  "vacantSince": null
  },
  {
   "no": 162,
@@ -1455,7 +1616,8 @@
   "nameEn": "Kishoreganj-1",
   "slug": "kishoreganj-1",
   "boundaryBn": "(ক)কিশোরগঞ্জ সদর এবং(খ) হোসেনপুর উপজেলা",
-  "memberId": "013016201"
+  "memberId": "013016201",
+  "vacantSince": null
  },
  {
   "no": 163,
@@ -1464,7 +1626,8 @@
   "nameEn": "Kishoreganj-2",
   "slug": "kishoreganj-2",
   "boundaryBn": "(ক)কটিয়াদী এবং(খ) পাকুন্দিয়া উপজেলা",
-  "memberId": "013016301"
+  "memberId": "013016301",
+  "vacantSince": null
  },
  {
   "no": 164,
@@ -1473,7 +1636,8 @@
   "nameEn": "Kishoreganj-3",
   "slug": "kishoreganj-3",
   "boundaryBn": "(ক)তাড়াইল এবং(খ) করিমগঞ্জ উপজেলা",
-  "memberId": "013016401"
+  "memberId": "013016401",
+  "vacantSince": null
  },
  {
   "no": 165,
@@ -1482,7 +1646,8 @@
   "nameEn": "Kishoreganj-4",
   "slug": "kishoreganj-4",
   "boundaryBn": "(ক)ইটনা,(খ) মিঠামইন এবং(গ) অষ্টগ্রাম উপজেলা",
-  "memberId": "013016501"
+  "memberId": "013016501",
+  "vacantSince": null
  },
  {
   "no": 166,
@@ -1491,7 +1656,8 @@
   "nameEn": "Kishoreganj-5",
   "slug": "kishoreganj-5",
   "boundaryBn": "(ক)নিকলী এবং(খ) বাজিতপুর উপজেলা",
-  "memberId": "013016601"
+  "memberId": "013016601",
+  "vacantSince": null
  },
  {
   "no": 167,
@@ -1500,7 +1666,8 @@
   "nameEn": "Kishoreganj-6",
   "slug": "kishoreganj-6",
   "boundaryBn": "(ক)কুলিয়ারচর এবং(খ) ভৈরব উপজেলা",
-  "memberId": "013016701"
+  "memberId": "013016701",
+  "vacantSince": null
  },
  {
   "no": 168,
@@ -1509,7 +1676,8 @@
   "nameEn": "Manikganj-1",
   "slug": "manikganj-1",
   "boundaryBn": "(ক)দৌলতপুর,(খ) ঘিওর এবং(গ) শিবালয় উপজেলা",
-  "memberId": "013016801"
+  "memberId": "013016801",
+  "vacantSince": null
  },
  {
   "no": 169,
@@ -1518,7 +1686,8 @@
   "nameEn": "Manikganj-2",
   "slug": "manikganj-2",
   "boundaryBn": "(ক)সিঙ্গাইর,(খ) হরিরামপুর এবং(গ) মানিকগঞ্জ সদর উপজেলার হাটিপাড়া, ভাড়ারিয়া ও পুটাইল ইউনিয়ন সমূহ",
-  "memberId": "013016901"
+  "memberId": "013016901",
+  "vacantSince": null
  },
  {
   "no": 170,
@@ -1527,7 +1696,8 @@
   "nameEn": "Manikganj-3",
   "slug": "manikganj-3",
   "boundaryBn": "(ক)হাটিপাড়া, ভাড়ারিয়া ও পুটাইল ইউনিয়ন সমূহ ব্যতীত মানিকগঞ্জ সদর এবং(খ) সাটুরিয়া উপজেলা",
-  "memberId": "013017001"
+  "memberId": "013017001",
+  "vacantSince": null
  },
  {
   "no": 171,
@@ -1536,7 +1706,8 @@
   "nameEn": "Munshiganj-1",
   "slug": "munshiganj-1",
   "boundaryBn": "(ক)শ্রীনগর এবং(খ) সিরাজদিখান উপজেলা",
-  "memberId": "013017101"
+  "memberId": "013017101",
+  "vacantSince": null
  },
  {
   "no": 172,
@@ -1545,7 +1716,8 @@
   "nameEn": "Munshiganj-2",
   "slug": "munshiganj-2",
   "boundaryBn": "(ক)লৌহজং এবং(খ) টংগীবাড়ী উপজেলা",
-  "memberId": "013017201"
+  "memberId": "013017201",
+  "vacantSince": null
  },
  {
   "no": 173,
@@ -1554,7 +1726,8 @@
   "nameEn": "Munshiganj-3",
   "slug": "munshiganj-3",
   "boundaryBn": "(ক)মুন্সীগঞ্জ সদর এবং(খ) গজারিয়া উপজেলা",
-  "memberId": "013017301"
+  "memberId": "013017301",
+  "vacantSince": null
  },
  {
   "no": 174,
@@ -1563,7 +1736,8 @@
   "nameEn": "Dhaka-1",
   "slug": "dhaka-1",
   "boundaryBn": "(ক)দোহার এবং(খ) নবাবগঞ্জ উপজেলা",
-  "memberId": "013017401"
+  "memberId": "013017401",
+  "vacantSince": null
  },
  {
   "no": 175,
@@ -1572,7 +1746,8 @@
   "nameEn": "Dhaka-2",
   "slug": "dhaka-2",
   "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কেরানিগঞ্জ উপজেলাঃ(১) জিনজিরা, (২)আগানগর,(৩) তেঘরিয়া,(৪) কোন্ডা ও(৫) শুভাট্যা, (খ)ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড ৫৫,৫৬, ও ৫৭ এবং (গ)সাভার উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) আমিনবাজার,(২) তেতুলঝড়া ও(৩) ভাকুর্তা",
-  "memberId": "013017501"
+  "memberId": "013017501",
+  "vacantSince": null
  },
  {
   "no": 176,
@@ -1581,7 +1756,8 @@
   "nameEn": "Dhaka-3",
   "slug": "dhaka-3",
   "boundaryBn": "কেরানীগঞ্জ উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)জিনজিরা,(২) আগানগর,(৩) তেঘরিয়া,(৪) কোন্ডা ও(৫) শুভাট্যা",
-  "memberId": "013017601"
+  "memberId": "013017601",
+  "vacantSince": null
  },
  {
   "no": 177,
@@ -1590,7 +1766,8 @@
   "nameEn": "Dhaka-4",
   "slug": "dhaka-4",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ৪৭,৫১,৫২,৫৩,৫৪,৫৮ এবং ৫৯",
-  "memberId": "013017701"
+  "memberId": "013017701",
+  "vacantSince": null
  },
  {
   "no": 178,
@@ -1599,7 +1776,8 @@
   "nameEn": "Dhaka-5",
   "slug": "dhaka-5",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড-৪৮,৪৯,৫০,৬০,৬১,৬২,৬৩,৬৪,৬৫,৬৬,৬৭,৬৮,৬৯, এবং ৭০",
-  "memberId": "013017801"
+  "memberId": "013017801",
+  "vacantSince": null
  },
  {
   "no": 179,
@@ -1608,7 +1786,8 @@
   "nameEn": "Dhaka-6",
   "slug": "dhaka-6",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড-৩৪,৩৭,৩৮,৩৯,৪০,৪১,৪২,৪৩,৪৪,৪৫ ও ৪৬",
-  "memberId": "013017901"
+  "memberId": "013017901",
+  "vacantSince": null
  },
  {
   "no": 180,
@@ -1617,7 +1796,8 @@
   "nameEn": "Dhaka-7",
   "slug": "dhaka-7",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২৩,২৪,২৫,২৬,২৭,২৮,২৯,৩০,৩১,৩২,৩৩,৩৫, ও ৩৬",
-  "memberId": "013018001"
+  "memberId": "013018001",
+  "vacantSince": null
  },
  {
   "no": 181,
@@ -1626,7 +1806,8 @@
   "nameEn": "Dhaka-8",
   "slug": "dhaka-8",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ৮,৯,১০,১১,১২,১৩,১৯,২০,২১",
-  "memberId": "013018101"
+  "memberId": "013018101",
+  "vacantSince": null
  },
  {
   "no": 182,
@@ -1635,7 +1816,8 @@
   "nameEn": "Dhaka-9",
   "slug": "dhaka-9",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ১,২,৩,৪,৫,৬,৭,৭১,৭২,৭৩,৭৪ ও ৭৫",
-  "memberId": "013018201"
+  "memberId": "013018201",
+  "vacantSince": null
  },
  {
   "no": 183,
@@ -1644,7 +1826,8 @@
   "nameEn": "Dhaka-10",
   "slug": "dhaka-10",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ১৪,১৫,১৬,১৭,১৮ ও ২২",
-  "memberId": "013018301"
+  "memberId": "013018301",
+  "vacantSince": null
  },
  {
   "no": 184,
@@ -1653,7 +1836,8 @@
   "nameEn": "Dhaka-11",
   "slug": "dhaka-11",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২১,২২,২৩,৩৭,৩৮,৩৯,৪০,৪১, ও ৪২",
-  "memberId": "013018401"
+  "memberId": "013018401",
+  "vacantSince": null
  },
  {
   "no": 185,
@@ -1662,7 +1846,8 @@
   "nameEn": "Dhaka-12",
   "slug": "dhaka-12",
   "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২৪,২৫,২৬,২৭,৩৫ ও ৩৬",
-  "memberId": "013018501"
+  "memberId": "013018501",
+  "vacantSince": null
  },
  {
   "no": 186,
@@ -1671,7 +1856,8 @@
   "nameEn": "Dhaka-13",
   "slug": "dhaka-13",
   "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ২৮,২৯,৩০,৩১,৩২,৩৩, ও ৩৪",
-  "memberId": "013018601"
+  "memberId": "013018601",
+  "vacantSince": null
  },
  {
   "no": 187,
@@ -1680,7 +1866,8 @@
   "nameEn": "Dhaka-14",
   "slug": "dhaka-14",
   "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড ৭ থেকে ১২ পর্যন্ত এবং (খ)সাভার উপজেলার কাউন্দিয়া ইউনিয়ন",
-  "memberId": "013018701"
+  "memberId": "013018701",
+  "vacantSince": null
  },
  {
   "no": 188,
@@ -1689,7 +1876,8 @@
   "nameEn": "Dhaka-15",
   "slug": "dhaka-15",
   "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০৪,১৩,১৪, ও ১৬",
-  "memberId": "013018801"
+  "memberId": "013018801",
+  "vacantSince": null
  },
  {
   "no": 189,
@@ -1698,7 +1886,8 @@
   "nameEn": "Dhaka-16",
   "slug": "dhaka-16",
   "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০২,০৩,০৫, ও ০৬",
-  "memberId": "013018901"
+  "memberId": "013018901",
+  "vacantSince": null
  },
  {
   "no": 190,
@@ -1707,7 +1896,8 @@
   "nameEn": "Dhaka-17",
   "slug": "dhaka-17",
   "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ১৫,১৮,১৯ ও ২০ এবং (খ)ঢাকা ক্যান্টনমেন্ট এলাকা",
-  "memberId": "013019001"
+  "memberId": "013019001",
+  "vacantSince": null
  },
  {
   "no": 191,
@@ -1716,7 +1906,8 @@
   "nameEn": "Dhaka-18",
   "slug": "dhaka-18",
   "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০১,১৭,৪৩,৪৪,৪৫,৪৬,৪৭,৪৮,৪৯,৫০,৫১,৫২,৫৩,৫৪ ও (খ)ঢাকা বিমানবন্দর উপজেলা",
-  "memberId": "013019101"
+  "memberId": "013019101",
+  "vacantSince": null
  },
  {
   "no": 192,
@@ -1725,7 +1916,8 @@
   "nameEn": "Dhaka-19",
   "slug": "dhaka-19",
   "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত সাভার উপজেলালঃ (১)আমিনবাজার, (২)তেতুলঝড়া,(৩) ভাকুর্তা ও(৪) কাউন্দিয়া ইউনিয়ন",
-  "memberId": "013019201"
+  "memberId": "013019201",
+  "vacantSince": null
  },
  {
   "no": 193,
@@ -1734,7 +1926,8 @@
   "nameEn": "Dhaka-20",
   "slug": "dhaka-20",
   "boundaryBn": "ধামরাই উপজেলা",
-  "memberId": "013019301"
+  "memberId": "013019301",
+  "vacantSince": null
  },
  {
   "no": 194,
@@ -1743,7 +1936,8 @@
   "nameEn": "Gazipur-1",
   "slug": "gazipur-1",
   "boundaryBn": "(ক)কালিয়াকৈর এবং(খ) গাজীপুর সিটি কর্পোরেশনের ১ হতে ১৮ নং ওয়ার্ড",
-  "memberId": "013019401"
+  "memberId": "013019401",
+  "vacantSince": null
  },
  {
   "no": 195,
@@ -1752,7 +1946,8 @@
   "nameEn": "Gazipur-2",
   "slug": "gazipur-2",
   "boundaryBn": "(ক)গাজীপুর সিটি কর্পোরেশনের ১৯ হতে ৩৯ নং ওয়ার্ড, (খ)গাজীপুর সিটি কর্পোরেশনের ৪৩ হতে ৫৭ নং ওয়ার্ড এবং (গ)গাজীপুর ক্যান্টনমেন্ট এলাকা",
-  "memberId": "013019501"
+  "memberId": "013019501",
+  "vacantSince": null
  },
  {
   "no": 196,
@@ -1761,7 +1956,8 @@
   "nameEn": "Gazipur-3",
   "slug": "gazipur-3",
   "boundaryBn": "(ক)শ্রীপুর এবং (খ)গাজিপুর সদর উপজেলারঃ মির্জাপুর, ভাওয়াল গড় ও পিরুজালী ইউনিয়ন",
-  "memberId": "013019601"
+  "memberId": "013019601",
+  "vacantSince": null
  },
  {
   "no": 197,
@@ -1770,7 +1966,8 @@
   "nameEn": "Gazipur-4",
   "slug": "gazipur-4",
   "boundaryBn": "কাপাসিয়া উপজেলা",
-  "memberId": "013019701"
+  "memberId": "013019701",
+  "vacantSince": null
  },
  {
   "no": 198,
@@ -1779,7 +1976,8 @@
   "nameEn": "Gazipur-5",
   "slug": "gazipur-5",
   "boundaryBn": "(ক)কালীগঞ্জ,(খ) গাজীপুর সিটি কর্পোরেশনের ৪০ হতে ৪২ নং ওয়ার্ড এবং (গ)গাজিপুর সদর উপজেলার বাড়িয়া ইউনিয়ন",
-  "memberId": "013019801"
+  "memberId": "013019801",
+  "vacantSince": null
  },
  {
   "no": 199,
@@ -1788,7 +1986,8 @@
   "nameEn": "Narsingdi-1",
   "slug": "narsingdi-1",
   "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নরসিংদী সদর উপজেলাঃ (১)আমদিয়া, (২)পাঁচদোনা ও(৩) মেহেরপাড়া",
-  "memberId": "013019901"
+  "memberId": "013019901",
+  "vacantSince": null
  },
  {
   "no": 200,
@@ -1797,7 +1996,8 @@
   "nameEn": "Narsingdi-2",
   "slug": "narsingdi-2",
   "boundaryBn": "পলাশ এবং নরসিংদী সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)আমদিয়া,(২) পাঁচদোনা,(৩) মেহেরপাড়া",
-  "memberId": "013020001"
+  "memberId": "013020001",
+  "vacantSince": null
  },
  {
   "no": 201,
@@ -1806,7 +2006,8 @@
   "nameEn": "Narsingdi-3",
   "slug": "narsingdi-3",
   "boundaryBn": "শিবপুর উপজেলা",
-  "memberId": "013020101"
+  "memberId": "013020101",
+  "vacantSince": null
  },
  {
   "no": 202,
@@ -1815,7 +2016,8 @@
   "nameEn": "Narsingdi-4",
   "slug": "narsingdi-4",
   "boundaryBn": "(ক)মনোহরদী এবং(খ) বেলাব উপজেলা",
-  "memberId": "013020201"
+  "memberId": "013020201",
+  "vacantSince": null
  },
  {
   "no": 203,
@@ -1824,7 +2026,8 @@
   "nameEn": "Narsingdi-5",
   "slug": "narsingdi-5",
   "boundaryBn": "রায়পুরা উপজেলা",
-  "memberId": "013020301"
+  "memberId": "013020301",
+  "vacantSince": null
  },
  {
   "no": 204,
@@ -1833,7 +2036,8 @@
   "nameEn": "Narayanganj-1",
   "slug": "narayanganj-1",
   "boundaryBn": "রূপগঞ্জ উপজেলা",
-  "memberId": "013020401"
+  "memberId": "013020401",
+  "vacantSince": null
  },
  {
   "no": 205,
@@ -1842,7 +2046,8 @@
   "nameEn": "Narayanganj-2",
   "slug": "narayanganj-2",
   "boundaryBn": "আড়াইহাজার উপজেলা",
-  "memberId": "013020501"
+  "memberId": "013020501",
+  "vacantSince": null
  },
  {
   "no": 206,
@@ -1851,7 +2056,8 @@
   "nameEn": "Narayanganj-3",
   "slug": "narayanganj-3",
   "boundaryBn": "সোনারগাঁও উপজেলা",
-  "memberId": "013020601"
+  "memberId": "013020601",
+  "vacantSince": null
  },
  {
   "no": 207,
@@ -1860,7 +2066,8 @@
   "nameEn": "Narayanganj-4",
   "slug": "narayanganj-4",
   "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নারায়ণগঞ্জ সদর উপজেলাঃ (১)আলির টেক,(২) গোগনগর এবং(খ) নারায়ণগঞ্জ সিটি কর্পোরেশনের ওয়ার্ড নং ০১,০২,০৩,০৪,০৫,০৬,০৭,০৮,০৯ ও ১০",
-  "memberId": "013020701"
+  "memberId": "013020701",
+  "vacantSince": null
  },
  {
   "no": 208,
@@ -1869,7 +2076,8 @@
   "nameEn": "Narayanganj-5",
   "slug": "narayanganj-5",
   "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ নারায়ণগঞ্জ সদর উপজেলাঃ (১)আলিরটেক, (২)গোগননগর,(খ) বন্দর উপজেলা এবং (গ)নারায়ণগঞ্জ সিটি কর্পোরেশনের ওয়ার্ড নং ১১,১২,১৩,১৪,১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,২৪,২৫,২৬ ও ২৭",
-  "memberId": "013020801"
+  "memberId": "013020801",
+  "vacantSince": null
  },
  {
   "no": 209,
@@ -1878,7 +2086,8 @@
   "nameEn": "Rajbari-1",
   "slug": "rajbari-1",
   "boundaryBn": "(ক)রাজবাড়ী সদর এবং(খ) গোয়ালন্দ উপজেলা",
-  "memberId": "013020901"
+  "memberId": "013020901",
+  "vacantSince": null
  },
  {
   "no": 210,
@@ -1887,7 +2096,8 @@
   "nameEn": "Rajbari-2",
   "slug": "rajbari-2",
   "boundaryBn": "(ক)পাংশা, (খ)কালুখালী এবং(গ) বালিয়াকান্দি উপজেলা",
-  "memberId": "013021001"
+  "memberId": "013021001",
+  "vacantSince": null
  },
  {
   "no": 211,
@@ -1896,7 +2106,8 @@
   "nameEn": "Faridpur-1",
   "slug": "faridpur-1",
   "boundaryBn": "(ক)মধুখালী,(খ) বোয়ালমারী এবং(গ) আলফাডাংগা উপজেলা",
-  "memberId": "013021101"
+  "memberId": "013021101",
+  "vacantSince": null
  },
  {
   "no": 212,
@@ -1905,7 +2116,8 @@
   "nameEn": "Faridpur-2",
   "slug": "faridpur-2",
   "boundaryBn": "(ক)নগরকান্দা,(খ) সালথা উপজেলা",
-  "memberId": "013021201"
+  "memberId": "013021201",
+  "vacantSince": null
  },
  {
   "no": 213,
@@ -1914,7 +2126,8 @@
   "nameEn": "Faridpur-3",
   "slug": "faridpur-3",
   "boundaryBn": "ফরিদপুর সদর উপজেলা",
-  "memberId": "013021301"
+  "memberId": "013021301",
+  "vacantSince": null
  },
  {
   "no": 214,
@@ -1923,7 +2136,8 @@
   "nameEn": "Faridpur-4",
   "slug": "faridpur-4",
   "boundaryBn": "(ক)ভাঙ্গা, (খ)চরভদ্রাসন এবং (গ) সদরপুর উপজেলা",
-  "memberId": "013021401"
+  "memberId": "013021401",
+  "vacantSince": null
  },
  {
   "no": 215,
@@ -1932,7 +2146,8 @@
   "nameEn": "Gopalgonj-1",
   "slug": "gopalgonj-1",
   "boundaryBn": "(ক)মুকসুদপুর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কাশিয়ানী উপজেলাঃ(১) সিঙ্গা,(২) হাতিয়াড়া,(৩) পুইশুর,(৪) বেথুড়ী,(৫) নিজামকান্দি,(৬) ওড়াকান্দি,(৭) ফুকরা",
-  "memberId": "013021501"
+  "memberId": "013021501",
+  "vacantSince": null
  },
  {
   "no": 216,
@@ -1941,7 +2156,8 @@
   "nameEn": "Gopalgonj-2",
   "slug": "gopalgonj-2",
   "boundaryBn": "(ক)গোপালগঞ্জ সদর এবং (খ)কাশিয়ানী উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) সিঙ্গা,(২) হাতিয়াড়া,(৩) পুইশুর,(৪) বেথুড়ী,(৫) নিজামকান্দি, (৬)ওড়াকান্দি ও(৭) ফুকরা",
-  "memberId": "013021601"
+  "memberId": "013021601",
+  "vacantSince": null
  },
  {
   "no": 217,
@@ -1950,7 +2166,8 @@
   "nameEn": "Gopalgonj-3",
   "slug": "gopalgonj-3",
   "boundaryBn": "(ক)টুঙ্গীপাড়া এবং(খ) কোটালীপাড়া উপজেলা",
-  "memberId": "013021701"
+  "memberId": "013021701",
+  "vacantSince": null
  },
  {
   "no": 218,
@@ -1959,7 +2176,8 @@
   "nameEn": "Madaripur-1",
   "slug": "madaripur-1",
   "boundaryBn": "শিবচর উপজেলা",
-  "memberId": "013021801"
+  "memberId": "013021801",
+  "vacantSince": null
  },
  {
   "no": 219,
@@ -1968,7 +2186,8 @@
   "nameEn": "Madaripur-2",
   "slug": "madaripur-2",
   "boundaryBn": "(ক)রাজৈর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত মাদারীপুর সদর উপজেলাঃ (১)খোয়াজপুর,(২) ঝাউদি,(৩) ঘটমাঝি,(৪) মস্তফাপুর ও (৫)কেন্দুয়া",
-  "memberId": "013021901"
+  "memberId": "013021901",
+  "vacantSince": null
  },
  {
   "no": 220,
@@ -1977,7 +2196,8 @@
   "nameEn": "Madaripur-3",
   "slug": "madaripur-3",
   "boundaryBn": "(ক)কালকিনি (খ)ডাসার উপজেলা এবং(গ) মাদারিপুর সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) খোয়াজপুর,(২) ঝাউদি,(৩) ঘটমাঝি, (৪)মস্তফাপুর ও(৫) কেন্দুয়া",
-  "memberId": "013022001"
+  "memberId": "013022001",
+  "vacantSince": null
  },
  {
   "no": 221,
@@ -1986,7 +2206,8 @@
   "nameEn": "Shariatpur-1",
   "slug": "shariatpur-1",
   "boundaryBn": "(ক)শরীয়তপুর সদর এবং(খ) জাজিরা উপজেলা",
-  "memberId": "013022101"
+  "memberId": "013022101",
+  "vacantSince": null
  },
  {
   "no": 222,
@@ -1995,7 +2216,8 @@
   "nameEn": "Shariatpur-2",
   "slug": "shariatpur-2",
   "boundaryBn": "(ক)নড়িয়া এবং(খ) সখিপুর থানা, ভেদরগঞ্জ উপজেলা",
-  "memberId": "013022201"
+  "memberId": "013022201",
+  "vacantSince": null
  },
  {
   "no": 223,
@@ -2004,7 +2226,8 @@
   "nameEn": "Shariatpur-3",
   "slug": "shariatpur-3",
   "boundaryBn": "(ক) ডামুড্যা উপজেলা (খ) গোসাইরহাট উপজেলা (গ) ভেদরগঞ্জ থানা,উপজেলা-ভেদরগঞ্জ",
-  "memberId": "013022301"
+  "memberId": "013022301",
+  "vacantSince": null
  },
  {
   "no": 224,
@@ -2013,7 +2236,8 @@
   "nameEn": "Sunamganj-1",
   "slug": "sunamganj-1",
   "boundaryBn": "(ক)ধর্মপাশা,(খ)মধ্যনগর(গ) তাহিরপুর এবং(ঘ) জামালগঞ্জ উপজেলা",
-  "memberId": "013022401"
+  "memberId": "013022401",
+  "vacantSince": null
  },
  {
   "no": 225,
@@ -2022,7 +2246,8 @@
   "nameEn": "Sunamganj-2",
   "slug": "sunamganj-2",
   "boundaryBn": "(ক)দিরাই এবং(খ) শাল্লা উপজেলা",
-  "memberId": "013022501"
+  "memberId": "013022501",
+  "vacantSince": null
  },
  {
   "no": 226,
@@ -2031,7 +2256,8 @@
   "nameEn": "Sunamganj-3",
   "slug": "sunamganj-3",
   "boundaryBn": "(ক)জগন্নাথপুর এবং(খ) শান্তিগঞ্জ উপজেলা",
-  "memberId": "013022601"
+  "memberId": "013022601",
+  "vacantSince": null
  },
  {
   "no": 227,
@@ -2040,7 +2266,8 @@
   "nameEn": "Sunamganj-4",
   "slug": "sunamganj-4",
   "boundaryBn": "(ক)সুনামগঞ্জ সদর এবং(খ) বিশ্বম্ভরপুর উপজেলা",
-  "memberId": "013022701"
+  "memberId": "013022701",
+  "vacantSince": null
  },
  {
   "no": 228,
@@ -2049,7 +2276,8 @@
   "nameEn": "Sunamganj-5",
   "slug": "sunamganj-5",
   "boundaryBn": "(ক)ছাতক এবং(খ) দোয়ারাবাজার উপজেলা",
-  "memberId": "013022801"
+  "memberId": "013022801",
+  "vacantSince": null
  },
  {
   "no": 229,
@@ -2058,7 +2286,8 @@
   "nameEn": "Sylhet-1",
   "slug": "sylhet-1",
   "boundaryBn": "(ক)সিলেট সিটি কর্পোরেশনের ওয়ার্ড নম্বর-১,২,৩,৪,৫,৬,৭,৮,৯,১০,১১,১২,১৩,১৪,১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,২৪,২৫,২৬,২৭,৩১,৩২,৩৩,৩৪,৩৫,৩৬,৩৭,৩৮,৩৯ এবং (খ) সিলেট সদর উপজেলা",
-  "memberId": "013022901"
+  "memberId": "013022901",
+  "vacantSince": null
  },
  {
   "no": 230,
@@ -2067,7 +2296,8 @@
   "nameEn": "Sylhet-2",
   "slug": "sylhet-2",
   "boundaryBn": "(ক)বিশ্বনাথ এবং(খ) ওসমানী নগর উপজেলা",
-  "memberId": "013023001"
+  "memberId": "013023001",
+  "vacantSince": null
  },
  {
   "no": 231,
@@ -2076,7 +2306,8 @@
   "nameEn": "Sylhet-3",
   "slug": "sylhet-3",
   "boundaryBn": "(ক) সিলেট সিটি কর্পেোরেশনের ওয়ার্ড নম্বর-২৮,২৯,৩০,৪০,৪১ ও ৪২ (খ)দক্ষিন সুরমা,(গ) ফেঞ্চুগঞ্জ এবং(ঘ) বালাগঞ্জ উপজেলা",
-  "memberId": "013023101"
+  "memberId": "013023101",
+  "vacantSince": null
  },
  {
   "no": 232,
@@ -2085,7 +2316,8 @@
   "nameEn": "Sylhet-4",
   "slug": "sylhet-4",
   "boundaryBn": "(ক)কোম্পানীগঞ্জ,(খ) গোয়াইনঘাট এবং(গ) জৈন্তাপুর উপজেলা",
-  "memberId": "013023201"
+  "memberId": "013023201",
+  "vacantSince": null
  },
  {
   "no": 233,
@@ -2094,7 +2326,8 @@
   "nameEn": "Sylhet-5",
   "slug": "sylhet-5",
   "boundaryBn": "(ক)কানাইঘাট এবং(খ) জকিগঞ্জ উপজেলা",
-  "memberId": "013023301"
+  "memberId": "013023301",
+  "vacantSince": null
  },
  {
   "no": 234,
@@ -2103,7 +2336,8 @@
   "nameEn": "Sylhet-6",
   "slug": "sylhet-6",
   "boundaryBn": "(ক)বিয়ানী বাজার এবং(খ) গোলাপগঞ্জ উপজেলা",
-  "memberId": "013023401"
+  "memberId": "013023401",
+  "vacantSince": null
  },
  {
   "no": 235,
@@ -2112,7 +2346,8 @@
   "nameEn": "Maulvibazar-1",
   "slug": "maulvibazar-1",
   "boundaryBn": "(ক)বড়লেখা এবং(খ) জুড়ী উপজেলা",
-  "memberId": "013023501"
+  "memberId": "013023501",
+  "vacantSince": null
  },
  {
   "no": 236,
@@ -2121,7 +2356,8 @@
   "nameEn": "Maulvibazar-2",
   "slug": "maulvibazar-2",
   "boundaryBn": "কুলাউড়া উপজেলা",
-  "memberId": "013023601"
+  "memberId": "013023601",
+  "vacantSince": null
  },
  {
   "no": 237,
@@ -2130,7 +2366,8 @@
   "nameEn": "Maulvibazar-3",
   "slug": "maulvibazar-3",
   "boundaryBn": "(ক)মৌলভীবাজার সদর এবং(খ) রাজনগর উপজেলা",
-  "memberId": "013023701"
+  "memberId": "013023701",
+  "vacantSince": null
  },
  {
   "no": 238,
@@ -2139,7 +2376,8 @@
   "nameEn": "Maulvibazar-4",
   "slug": "maulvibazar-4",
   "boundaryBn": "(ক)শ্রীমঙ্গল এবং(খ) কমলগঞ্জ উপজেলা",
-  "memberId": "013023801"
+  "memberId": "013023801",
+  "vacantSince": null
  },
  {
   "no": 239,
@@ -2148,7 +2386,8 @@
   "nameEn": "Habiganj-1",
   "slug": "habiganj-1",
   "boundaryBn": "(ক)নবীগঞ্জ এবং(খ) বাহুবল উপজেলা",
-  "memberId": "013023901"
+  "memberId": "013023901",
+  "vacantSince": null
  },
  {
   "no": 240,
@@ -2157,7 +2396,8 @@
   "nameEn": "Habiganj-2",
   "slug": "habiganj-2",
   "boundaryBn": "(ক)আজমিরীগঞ্জ এবং(খ) বানিয়াচং উপজেলা",
-  "memberId": "013024001"
+  "memberId": "013024001",
+  "vacantSince": null
  },
  {
   "no": 241,
@@ -2166,7 +2406,8 @@
   "nameEn": "Habiganj-3",
   "slug": "habiganj-3",
   "boundaryBn": "(ক)হবিগঞ্জ সদর,(খ) লাখাই এবং(গ) সায়েস্তাগঞ্জ উপজেলা",
-  "memberId": "013024101"
+  "memberId": "013024101",
+  "vacantSince": null
  },
  {
   "no": 242,
@@ -2175,7 +2416,8 @@
   "nameEn": "Habiganj-4",
   "slug": "habiganj-4",
   "boundaryBn": "(ক)চুনারুঘাট এবং(খ) মাধবপুর উপজেলা",
-  "memberId": "013024201"
+  "memberId": "013024201",
+  "vacantSince": null
  },
  {
   "no": 243,
@@ -2184,7 +2426,8 @@
   "nameEn": "Brahmanbaria-1",
   "slug": "brahmanbaria-1",
   "boundaryBn": "নাসিরনগর উপজেলা",
-  "memberId": "013024301"
+  "memberId": "013024301",
+  "vacantSince": null
  },
  {
   "no": 244,
@@ -2193,7 +2436,8 @@
   "nameEn": "Brahmanbaria-2",
   "slug": "brahmanbaria-2",
   "boundaryBn": "(ক)সরাইল এবং(খ) আশুগঞ্জ উপজেলা",
-  "memberId": "013024401"
+  "memberId": "013024401",
+  "vacantSince": null
  },
  {
   "no": 245,
@@ -2202,7 +2446,8 @@
   "nameEn": "Brahmanbaria-3",
   "slug": "brahmanbaria-3",
   "boundaryBn": "(ক)ব্রাহ্মণবাড়িয়া সদর ও(খ) বিজয়নগর উপজেলা",
-  "memberId": "013024501"
+  "memberId": "013024501",
+  "vacantSince": null
  },
  {
   "no": 246,
@@ -2211,7 +2456,8 @@
   "nameEn": "Brahmanbaria-4",
   "slug": "brahmanbaria-4",
   "boundaryBn": "(ক)আখাউড়া এবং(খ) কসবা উপজেলা",
-  "memberId": "013024601"
+  "memberId": "013024601",
+  "vacantSince": null
  },
  {
   "no": 247,
@@ -2220,7 +2466,8 @@
   "nameEn": "Brahmanbaria-5",
   "slug": "brahmanbaria-5",
   "boundaryBn": "নবীনগর উপজেলা",
-  "memberId": "013024701"
+  "memberId": "013024701",
+  "vacantSince": null
  },
  {
   "no": 248,
@@ -2229,7 +2476,8 @@
   "nameEn": "Brahmanbaria-6",
   "slug": "brahmanbaria-6",
   "boundaryBn": "বাঞ্ছারামপুর উপজেলা",
-  "memberId": "013024801"
+  "memberId": "013024801",
+  "vacantSince": null
  },
  {
   "no": 249,
@@ -2238,7 +2486,8 @@
   "nameEn": "Cumilla-1",
   "slug": "cumilla-1",
   "boundaryBn": "(ক)দাউদকান্দি এবং(খ) তিতাস উপজেলা",
-  "memberId": "013024901"
+  "memberId": "013024901",
+  "vacantSince": null
  },
  {
   "no": 250,
@@ -2247,7 +2496,8 @@
   "nameEn": "Cumilla-2",
   "slug": "cumilla-2",
   "boundaryBn": "(ক)হোমনা এবং(খ) মেঘনা উপজেলা",
-  "memberId": "013025001"
+  "memberId": "013025001",
+  "vacantSince": null
  },
  {
   "no": 251,
@@ -2256,7 +2506,8 @@
   "nameEn": "Cumilla-3",
   "slug": "cumilla-3",
   "boundaryBn": "মুরাদনগর উপজেলা",
-  "memberId": "013025101"
+  "memberId": "013025101",
+  "vacantSince": null
  },
  {
   "no": 252,
@@ -2265,7 +2516,8 @@
   "nameEn": "Cumilla-4",
   "slug": "cumilla-4",
   "boundaryBn": "দেবীদ্বার উপজেলা",
-  "memberId": "013025201"
+  "memberId": "013025201",
+  "vacantSince": null
  },
  {
   "no": 253,
@@ -2274,7 +2526,8 @@
   "nameEn": "Cumilla-5",
   "slug": "cumilla-5",
   "boundaryBn": "(ক)ব্রাহ্মণপাড়া এবং(খ) বুড়িচং উপজেলা",
-  "memberId": "013025301"
+  "memberId": "013025301",
+  "vacantSince": null
  },
  {
   "no": 254,
@@ -2283,7 +2536,8 @@
   "nameEn": "Cumilla-6",
   "slug": "cumilla-6",
   "boundaryBn": "(ক)কুমিল্লা আদর্শ সদর,(খ) কুমিল্লা সিটি কর্পোরেশন এবং(গ) কুমিল্লা সেনানিবাস এলাকা",
-  "memberId": "013025401"
+  "memberId": "013025401",
+  "vacantSince": null
  },
  {
   "no": 255,
@@ -2292,7 +2546,8 @@
   "nameEn": "Cumilla-7",
   "slug": "cumilla-7",
   "boundaryBn": "চান্দিনা উপজেলা",
-  "memberId": "013025501"
+  "memberId": "013025501",
+  "vacantSince": null
  },
  {
   "no": 256,
@@ -2301,7 +2556,8 @@
   "nameEn": "Cumilla-8",
   "slug": "cumilla-8",
   "boundaryBn": "বরুড়া উপজেলা",
-  "memberId": "013025601"
+  "memberId": "013025601",
+  "vacantSince": null
  },
  {
   "no": 257,
@@ -2310,7 +2566,8 @@
   "nameEn": "Cumilla-9",
   "slug": "cumilla-9",
   "boundaryBn": "(ক)লাকসাম এবং(খ) মনোহরগঞ্জ উপজেলা",
-  "memberId": "013025701"
+  "memberId": "013025701",
+  "vacantSince": null
  },
  {
   "no": 258,
@@ -2319,7 +2576,8 @@
   "nameEn": "Cumilla-10",
   "slug": "cumilla-10",
   "boundaryBn": "(ক)কুমিল্লা সদর দক্ষিন,(খ) লালমাই এবং(গ) নাঙ্গলকোট উপজেলা",
-  "memberId": "013025801"
+  "memberId": "013025801",
+  "vacantSince": null
  },
  {
   "no": 259,
@@ -2328,7 +2586,8 @@
   "nameEn": "Cumilla-11",
   "slug": "cumilla-11",
   "boundaryBn": "চৌদ্দগ্রাম উপজেলা",
-  "memberId": "013025901"
+  "memberId": "013025901",
+  "vacantSince": null
  },
  {
   "no": 260,
@@ -2337,7 +2596,8 @@
   "nameEn": "Chandpur-1",
   "slug": "chandpur-1",
   "boundaryBn": "কচুয়া উপজেলা",
-  "memberId": "013026001"
+  "memberId": "013026001",
+  "vacantSince": null
  },
  {
   "no": 261,
@@ -2346,7 +2606,8 @@
   "nameEn": "Chandpur-2",
   "slug": "chandpur-2",
   "boundaryBn": "(ক)মতলব উত্তর এবং(খ) মতলব দক্ষিন উপজেলা",
-  "memberId": "013026101"
+  "memberId": "013026101",
+  "vacantSince": null
  },
  {
   "no": 262,
@@ -2355,7 +2616,8 @@
   "nameEn": "Chandpur-3",
   "slug": "chandpur-3",
   "boundaryBn": "(ক)চাঁদপুর সদর এবং(খ) হাইমচর উপজেলা",
-  "memberId": "013026201"
+  "memberId": "013026201",
+  "vacantSince": null
  },
  {
   "no": 263,
@@ -2364,7 +2626,8 @@
   "nameEn": "Chandpur-4",
   "slug": "chandpur-4",
   "boundaryBn": "ফরিদগঞ্জ উপজেলা",
-  "memberId": "013026301"
+  "memberId": "013026301",
+  "vacantSince": null
  },
  {
   "no": 264,
@@ -2373,7 +2636,8 @@
   "nameEn": "Chandpur-5",
   "slug": "chandpur-5",
   "boundaryBn": "(ক)হাজীগঞ্জ এবং(খ) শাহরাস্তি উপজেলা",
-  "memberId": "013026401"
+  "memberId": "013026401",
+  "vacantSince": null
  },
  {
   "no": 265,
@@ -2382,7 +2646,8 @@
   "nameEn": "Feni-1",
   "slug": "feni-1",
   "boundaryBn": "(ক)পরশুরাম,(খ) ছাগলনাইয়া এবং (গ)ফুলগাজী উপজেলা",
-  "memberId": "013026501"
+  "memberId": "013026501",
+  "vacantSince": null
  },
  {
   "no": 266,
@@ -2391,7 +2656,8 @@
   "nameEn": "Feni-2",
   "slug": "feni-2",
   "boundaryBn": "ফেনী সদর উপজেলা",
-  "memberId": "013026601"
+  "memberId": "013026601",
+  "vacantSince": null
  },
  {
   "no": 267,
@@ -2400,7 +2666,8 @@
   "nameEn": "Feni-3",
   "slug": "feni-3",
   "boundaryBn": "(ক)সোনাগাজী এবং(খ) দাগনভুঁঞা উপজেলা",
-  "memberId": "013026701"
+  "memberId": "013026701",
+  "vacantSince": null
  },
  {
   "no": 268,
@@ -2409,7 +2676,8 @@
   "nameEn": "Noakhali-1",
   "slug": "noakhali-1",
   "boundaryBn": "(ক)চাটখিল এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত সোনাইমুড়ী উপজেলাঃ (১)বারগাঁও,(২) নাটেশ্বর,(৩) অম্বর নগর,ও(৪) বাজরা",
-  "memberId": "013026801"
+  "memberId": "013026801",
+  "vacantSince": null
  },
  {
   "no": 269,
@@ -2418,7 +2686,8 @@
   "nameEn": "Noakhali-2",
   "slug": "noakhali-2",
   "boundaryBn": "(ক)সেনবাগ এবং(খ) সোনাইমুড়ি উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)বারগাও, (২)নাটেশ্বর, (৩)অম্বর নগর ও (৪) বাজরা",
-  "memberId": "013026901"
+  "memberId": "013026901",
+  "vacantSince": null
  },
  {
   "no": 270,
@@ -2427,7 +2696,8 @@
   "nameEn": "Noakhali-3",
   "slug": "noakhali-3",
   "boundaryBn": "বেগমগঞ্জ উপজেলা",
-  "memberId": "013027001"
+  "memberId": "013027001",
+  "vacantSince": null
  },
  {
   "no": 271,
@@ -2436,7 +2706,8 @@
   "nameEn": "Noakhali-4",
   "slug": "noakhali-4",
   "boundaryBn": "(ক)সুবর্ণচরএবং(খ) নোয়াখালী সদর উপজেলা",
-  "memberId": "013027101"
+  "memberId": "013027101",
+  "vacantSince": null
  },
  {
   "no": 272,
@@ -2445,7 +2716,8 @@
   "nameEn": "Noakhali-5",
   "slug": "noakhali-5",
   "boundaryBn": "(ক)কোম্পানীগঞ্জ এবং(খ) কবিরহাট উপজেলা",
-  "memberId": "013027201"
+  "memberId": "013027201",
+  "vacantSince": null
  },
  {
   "no": 273,
@@ -2454,7 +2726,8 @@
   "nameEn": "Noakhali-6",
   "slug": "noakhali-6",
   "boundaryBn": "হাতিয়া উপজেলা",
-  "memberId": "013027301"
+  "memberId": "013027301",
+  "vacantSince": null
  },
  {
   "no": 274,
@@ -2463,7 +2736,8 @@
   "nameEn": "Laxmipur-1",
   "slug": "laxmipur-1",
   "boundaryBn": "রামগঞ্জ উপজেলা",
-  "memberId": "013027401"
+  "memberId": "013027401",
+  "vacantSince": null
  },
  {
   "no": 275,
@@ -2472,7 +2746,8 @@
   "nameEn": "Laxmipur-2",
   "slug": "laxmipur-2",
   "boundaryBn": "(ক)রায়পুর এবং(খ) লক্ষীপুর সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)উত্তর হামছাদী,(২) দক্ষিন হামছাদী,(৩) দালাল বাজার,(৪) চর রুহিতা, (৫)পার্বতী নগর,(৬) শাকচর,(৭) টুমচর,(৮) চর রমনীমোহন ও(৯) বশিকপুর",
-  "memberId": "013027501"
+  "memberId": "013027501",
+  "vacantSince": null
  },
  {
   "no": 276,
@@ -2481,7 +2756,8 @@
   "nameEn": "Laxmipur-3",
   "slug": "laxmipur-3",
   "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত লক্ষীপুর সদর উপজেলা: (১)উত্তর হামছাদী,(২) দক্ষিন হামছাদী,(৩) দালাল বাজার,(৪) চর রুহিতা, (৫)পার্বতী নগর,(৬) শাকচর,(৭) টুমচর,(৮) চর রমনীমোহন ও(৯) বশিকপুর",
-  "memberId": "013027601"
+  "memberId": "013027601",
+  "vacantSince": null
  },
  {
   "no": 277,
@@ -2490,7 +2766,8 @@
   "nameEn": "Laxmipur-4",
   "slug": "laxmipur-4",
   "boundaryBn": "(ক)রামগতি এবং(খ) কমলনগর উপজেলা",
-  "memberId": "013027701"
+  "memberId": "013027701",
+  "vacantSince": null
  },
  {
   "no": 278,
@@ -2499,7 +2776,8 @@
   "nameEn": "Chattogram-1",
   "slug": "chattogram-1",
   "boundaryBn": "মীরশ্বরাই উপজেলা",
-  "memberId": "013027801"
+  "memberId": "013027801",
+  "vacantSince": null
  },
  {
   "no": 279,
@@ -2508,7 +2786,8 @@
   "nameEn": "Chattogram-2",
   "slug": "chattogram-2",
   "boundaryBn": "ফটিকছড়ি উপজেলা",
-  "memberId": "013027901"
+  "memberId": "013027901",
+  "vacantSince": null
  },
  {
   "no": 280,
@@ -2517,7 +2796,8 @@
   "nameEn": "Chattogram-3",
   "slug": "chattogram-3",
   "boundaryBn": "সন্দীপ উপজেলা",
-  "memberId": "013028001"
+  "memberId": "013028001",
+  "vacantSince": null
  },
  {
   "no": 282,
@@ -2526,7 +2806,8 @@
   "nameEn": "Chattogram-5",
   "slug": "chattogram-5",
   "boundaryBn": "(ক)হাটহাজারী উপজেলা এবং (খ)চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড ০১ ও ০২",
-  "memberId": "013028201"
+  "memberId": "013028201",
+  "vacantSince": null
  },
  {
   "no": 283,
@@ -2535,7 +2816,8 @@
   "nameEn": "Chattogram-6",
   "slug": "chattogram-6",
   "boundaryBn": "রাউজান উপজেলা",
-  "memberId": "013028301"
+  "memberId": "013028301",
+  "vacantSince": null
  },
  {
   "no": 284,
@@ -2544,7 +2826,8 @@
   "nameEn": "Chattogram-7",
   "slug": "chattogram-7",
   "boundaryBn": "(ক) রাংগুনিয়া উপজেলা (খ) বোয়ালখালী উপজেলার শ্রীপুর-খরনদ্বীপ ইউনিয়ন।",
-  "memberId": "013028401"
+  "memberId": "013028401",
+  "vacantSince": null
  },
  {
   "no": 285,
@@ -2553,7 +2836,8 @@
   "nameEn": "Chittagong-8",
   "slug": "chittagong-8",
   "boundaryBn": "(ক) শ্রীপুর-খরনদ্বীপ ইউনিয় ব্যতীত বোয়ালখালী উপজেলা এবং (খ) চট্টগ্রাম সিটি কর্পোরেশরে ওয়ার্ড নম্বর-০৩,০৪,০৫,০৬, ও ০৭",
-  "memberId": "013028501"
+  "memberId": "013028501",
+  "vacantSince": null
  },
  {
   "no": 286,
@@ -2562,7 +2846,8 @@
   "nameEn": "Chattogram-9",
   "slug": "chattogram-9",
   "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,৩১,৩২,৩৩,৩৪,ও ৩৫",
-  "memberId": "013028601"
+  "memberId": "013028601",
+  "vacantSince": null
  },
  {
   "no": 287,
@@ -2571,7 +2856,8 @@
   "nameEn": "Chattogram-10",
   "slug": "chattogram-10",
   "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-০৮,১১,১২,১৩,১৪,২৪,২৫ ও ২৬",
-  "memberId": "013028701"
+  "memberId": "013028701",
+  "vacantSince": null
  },
  {
   "no": 288,
@@ -2580,7 +2866,8 @@
   "nameEn": "Chattogram-11",
   "slug": "chattogram-11",
   "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-২৭,২৮,২৯,৩০,৩৬,৩৭,৩৮,৩৯,৪০ ও ৪১",
-  "memberId": "013028801"
+  "memberId": "013028801",
+  "vacantSince": null
  },
  {
   "no": 289,
@@ -2589,7 +2876,8 @@
   "nameEn": "Chattogram-12",
   "slug": "chattogram-12",
   "boundaryBn": "পটিয়া উপজেলা",
-  "memberId": "013028901"
+  "memberId": "013028901",
+  "vacantSince": null
  },
  {
   "no": 290,
@@ -2598,7 +2886,8 @@
   "nameEn": "Chattogram-13",
   "slug": "chattogram-13",
   "boundaryBn": "(ক)আনোয়ারা উপজেলা এবং (খ)কর্ণফুলী উপজেলা",
-  "memberId": "013029001"
+  "memberId": "013029001",
+  "vacantSince": null
  },
  {
   "no": 291,
@@ -2607,7 +2896,8 @@
   "nameEn": "Chattogram-14",
   "slug": "chattogram-14",
   "boundaryBn": "(ক) চন্দনাইশ উপজেলা এবং (খ) সাতকানিয়া উপজেলার নিম্নলিখিত ইউনিয়নসমূহ: (১) কেওচিয়া (২)কালিয়াইশ (৩)বাজালিয়া (৪)ধর্মপুর (৫)পুরানগড় ও(৬) খাগরিয়া",
-  "memberId": "013029101"
+  "memberId": "013029101",
+  "vacantSince": null
  },
  {
   "no": 292,
@@ -2616,7 +2906,8 @@
   "nameEn": "Chattogram-15",
   "slug": "chattogram-15",
   "boundaryBn": "(ক) লোহাগাড়া উপজেলা এবং (খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত সাতকানিয়া উপজেলা: (১) কেওচিয়া (২)কালিয়াইশ (৩)বাজালিয়া (৪)ধর্মপুর (৫)পুরানগড় ও(৬) খাগরিয়া",
-  "memberId": "013029201"
+  "memberId": "013029201",
+  "vacantSince": null
  },
  {
   "no": 293,
@@ -2625,7 +2916,8 @@
   "nameEn": "Chattogram-16",
   "slug": "chattogram-16",
   "boundaryBn": "বাঁশখালী উপজেলা",
-  "memberId": "013029301"
+  "memberId": "013029301",
+  "vacantSince": null
  },
  {
   "no": 294,
@@ -2634,7 +2926,8 @@
   "nameEn": "Cox'sBazar-1",
   "slug": "coxsbazar-1",
   "boundaryBn": "(ক) চকরিয়া উপজেলা এবং (খ)পেকুয়া উপজেলা",
-  "memberId": "013029401"
+  "memberId": "013029401",
+  "vacantSince": null
  },
  {
   "no": 295,
@@ -2643,7 +2936,8 @@
   "nameEn": "Cox'sBazar-2",
   "slug": "coxsbazar-2",
   "boundaryBn": "(ক)কুতুবদিয়া উপজেলা এবং (খ)মহেশখালী উপজেলা",
-  "memberId": "013029501"
+  "memberId": "013029501",
+  "vacantSince": null
  },
  {
   "no": 296,
@@ -2652,7 +2946,8 @@
   "nameEn": "Cox'sBazar-3",
   "slug": "coxsbazar-3",
   "boundaryBn": "(ক)কক্সবাজার সদর উপজেলা (খ) ঈদগাঁও উপজেলা এবং(গ) রামু উপজেলা",
-  "memberId": "013029601"
+  "memberId": "013029601",
+  "vacantSince": null
  },
  {
   "no": 297,
@@ -2661,7 +2956,8 @@
   "nameEn": "Cox'sBazar-4",
   "slug": "coxsbazar-4",
   "boundaryBn": "(ক)উখিয়া উপজেলা এবং(খ) টেকনাফ উপজেলা",
-  "memberId": "013029701"
+  "memberId": "013029701",
+  "vacantSince": null
  },
  {
   "no": 298,
@@ -2670,7 +2966,8 @@
   "nameEn": "Khagrachhari",
   "slug": "khagrachhari",
   "boundaryBn": "খাগড়াছড়ি পার্বত্য জেলা",
-  "memberId": "013029801"
+  "memberId": "013029801",
+  "vacantSince": null
  },
  {
   "no": 299,
@@ -2679,7 +2976,8 @@
   "nameEn": "Rangamati",
   "slug": "rangamati",
   "boundaryBn": "রাংগামাটি পার্বত্য জেলা",
-  "memberId": "013029901"
+  "memberId": "013029901",
+  "vacantSince": null
  },
  {
   "no": 300,
@@ -2688,7 +2986,8 @@
   "nameEn": "Bandarban",
   "slug": "bandarban",
   "boundaryBn": "বান্দরবান পার্বত্য জেলা",
-  "memberId": "013030001"
+  "memberId": "013030001",
+  "vacantSince": null
  },
  {
   "no": 301,
@@ -2697,7 +2996,8 @@
   "nameEn": "Women Seat-1",
   "slug": "women-seat-1",
   "boundaryBn": null,
-  "memberId": "013030101"
+  "memberId": "013030101",
+  "vacantSince": null
  },
  {
   "no": 302,
@@ -2706,7 +3006,8 @@
   "nameEn": "Women Seat-2",
   "slug": "women-seat-2",
   "boundaryBn": null,
-  "memberId": "013030201"
+  "memberId": "013030201",
+  "vacantSince": null
  },
  {
   "no": 303,
@@ -2715,7 +3016,8 @@
   "nameEn": "Women Seat-3",
   "slug": "women-seat-3",
   "boundaryBn": null,
-  "memberId": "013030301"
+  "memberId": "013030301",
+  "vacantSince": null
  },
  {
   "no": 304,
@@ -2724,7 +3026,8 @@
   "nameEn": "Women Seat-4",
   "slug": "women-seat-4",
   "boundaryBn": null,
-  "memberId": "013030401"
+  "memberId": "013030401",
+  "vacantSince": null
  },
  {
   "no": 305,
@@ -2733,7 +3036,8 @@
   "nameEn": "Women Seat-5",
   "slug": "women-seat-5",
   "boundaryBn": null,
-  "memberId": "013030501"
+  "memberId": "013030501",
+  "vacantSince": null
  },
  {
   "no": 306,
@@ -2742,7 +3046,8 @@
   "nameEn": "Women Seat-6",
   "slug": "women-seat-6",
   "boundaryBn": null,
-  "memberId": "013030601"
+  "memberId": "013030601",
+  "vacantSince": null
  },
  {
   "no": 307,
@@ -2751,7 +3056,8 @@
   "nameEn": "Women Seat-7",
   "slug": "women-seat-7",
   "boundaryBn": null,
-  "memberId": "013030701"
+  "memberId": "013030701",
+  "vacantSince": null
  },
  {
   "no": 308,
@@ -2760,7 +3066,8 @@
   "nameEn": "Women Seat-8",
   "slug": "women-seat-8",
   "boundaryBn": null,
-  "memberId": "013030801"
+  "memberId": "013030801",
+  "vacantSince": null
  },
  {
   "no": 309,
@@ -2769,7 +3076,8 @@
   "nameEn": "Women Seat-9",
   "slug": "women-seat-9",
   "boundaryBn": null,
-  "memberId": "013030901"
+  "memberId": "013030901",
+  "vacantSince": null
  },
  {
   "no": 310,
@@ -2778,7 +3086,8 @@
   "nameEn": "Women Seat-10",
   "slug": "women-seat-10",
   "boundaryBn": null,
-  "memberId": "013031001"
+  "memberId": "013031001",
+  "vacantSince": null
  },
  {
   "no": 311,
@@ -2787,7 +3096,8 @@
   "nameEn": "Women Seat-11",
   "slug": "women-seat-11",
   "boundaryBn": null,
-  "memberId": "013031101"
+  "memberId": "013031101",
+  "vacantSince": null
  },
  {
   "no": 312,
@@ -2796,7 +3106,8 @@
   "nameEn": "Women Seat-12",
   "slug": "women-seat-12",
   "boundaryBn": null,
-  "memberId": "013031201"
+  "memberId": "013031201",
+  "vacantSince": null
  },
  {
   "no": 313,
@@ -2805,7 +3116,8 @@
   "nameEn": "Women Seat-13",
   "slug": "women-seat-13",
   "boundaryBn": null,
-  "memberId": "013031301"
+  "memberId": "013031301",
+  "vacantSince": null
  },
  {
   "no": 314,
@@ -2814,7 +3126,8 @@
   "nameEn": "Women Seat-14",
   "slug": "women-seat-14",
   "boundaryBn": null,
-  "memberId": "013031401"
+  "memberId": "013031401",
+  "vacantSince": null
  },
  {
   "no": 315,
@@ -2823,7 +3136,8 @@
   "nameEn": "Women Seat-15",
   "slug": "women-seat-15",
   "boundaryBn": null,
-  "memberId": "013031501"
+  "memberId": "013031501",
+  "vacantSince": null
  },
  {
   "no": 316,
@@ -2832,7 +3146,8 @@
   "nameEn": "Women Seat-16",
   "slug": "women-seat-16",
   "boundaryBn": null,
-  "memberId": "013031601"
+  "memberId": "013031601",
+  "vacantSince": null
  },
  {
   "no": 317,
@@ -2841,7 +3156,8 @@
   "nameEn": "Women Seat-17",
   "slug": "women-seat-17",
   "boundaryBn": null,
-  "memberId": "013031701"
+  "memberId": "013031701",
+  "vacantSince": null
  },
  {
   "no": 318,
@@ -2850,7 +3166,8 @@
   "nameEn": "Women Seat-18",
   "slug": "women-seat-18",
   "boundaryBn": null,
-  "memberId": "013031801"
+  "memberId": "013031801",
+  "vacantSince": null
  },
  {
   "no": 319,
@@ -2859,7 +3176,8 @@
   "nameEn": "Women Seat-19",
   "slug": "women-seat-19",
   "boundaryBn": null,
-  "memberId": "013031901"
+  "memberId": "013031901",
+  "vacantSince": null
  },
  {
   "no": 320,
@@ -2868,7 +3186,8 @@
   "nameEn": "Women Seat-20",
   "slug": "women-seat-20",
   "boundaryBn": null,
-  "memberId": "013032001"
+  "memberId": "013032001",
+  "vacantSince": null
  },
  {
   "no": 321,
@@ -2877,7 +3196,8 @@
   "nameEn": "Women Seat-21",
   "slug": "women-seat-21",
   "boundaryBn": null,
-  "memberId": "013032101"
+  "memberId": "013032101",
+  "vacantSince": null
  },
  {
   "no": 322,
@@ -2886,7 +3206,8 @@
   "nameEn": "Women Seat-22",
   "slug": "women-seat-22",
   "boundaryBn": null,
-  "memberId": "013032201"
+  "memberId": "013032201",
+  "vacantSince": null
  },
  {
   "no": 323,
@@ -2895,7 +3216,8 @@
   "nameEn": "Women Seat-23",
   "slug": "women-seat-23",
   "boundaryBn": null,
-  "memberId": "013032301"
+  "memberId": "013032301",
+  "vacantSince": null
  },
  {
   "no": 324,
@@ -2904,7 +3226,8 @@
   "nameEn": "Women Seat-24",
   "slug": "women-seat-24",
   "boundaryBn": null,
-  "memberId": "013032401"
+  "memberId": "013032401",
+  "vacantSince": null
  },
  {
   "no": 325,
@@ -2913,7 +3236,8 @@
   "nameEn": "Women Seat-25",
   "slug": "women-seat-25",
   "boundaryBn": null,
-  "memberId": "013032501"
+  "memberId": "013032501",
+  "vacantSince": null
  },
  {
   "no": 326,
@@ -2922,7 +3246,8 @@
   "nameEn": "Women Seat-26",
   "slug": "women-seat-26",
   "boundaryBn": null,
-  "memberId": "013032601"
+  "memberId": "013032601",
+  "vacantSince": null
  },
  {
   "no": 327,
@@ -2931,7 +3256,8 @@
   "nameEn": "Women Seat-27",
   "slug": "women-seat-27",
   "boundaryBn": null,
-  "memberId": "013032701"
+  "memberId": "013032701",
+  "vacantSince": null
  },
  {
   "no": 328,
@@ -2940,7 +3266,8 @@
   "nameEn": "Women Seat-28",
   "slug": "women-seat-28",
   "boundaryBn": null,
-  "memberId": "013032801"
+  "memberId": "013032801",
+  "vacantSince": null
  },
  {
   "no": 329,
@@ -2949,7 +3276,8 @@
   "nameEn": "Women Seat-29",
   "slug": "women-seat-29",
   "boundaryBn": null,
-  "memberId": "013032901"
+  "memberId": "013032901",
+  "vacantSince": null
  },
  {
   "no": 330,
@@ -2958,7 +3286,8 @@
   "nameEn": "Women Seat-30",
   "slug": "women-seat-30",
   "boundaryBn": null,
-  "memberId": "013033001"
+  "memberId": "013033001",
+  "vacantSince": null
  },
  {
   "no": 331,
@@ -2967,7 +3296,8 @@
   "nameEn": "Women Seat-31",
   "slug": "women-seat-31",
   "boundaryBn": null,
-  "memberId": "013033101"
+  "memberId": "013033101",
+  "vacantSince": null
  },
  {
   "no": 332,
@@ -2976,7 +3306,8 @@
   "nameEn": "Women Seat-32",
   "slug": "women-seat-32",
   "boundaryBn": null,
-  "memberId": "013033201"
+  "memberId": "013033201",
+  "vacantSince": null
  },
  {
   "no": 333,
@@ -2985,7 +3316,8 @@
   "nameEn": "Women Seat-33",
   "slug": "women-seat-33",
   "boundaryBn": null,
-  "memberId": "013033301"
+  "memberId": "013033301",
+  "vacantSince": null
  },
  {
   "no": 334,
@@ -2994,7 +3326,8 @@
   "nameEn": "Women Seat-34",
   "slug": "women-seat-34",
   "boundaryBn": null,
-  "memberId": "013033401"
+  "memberId": "013033401",
+  "vacantSince": null
  },
  {
   "no": 335,
@@ -3003,7 +3336,8 @@
   "nameEn": "Women Seat-35",
   "slug": "women-seat-35",
   "boundaryBn": null,
-  "memberId": "013033501"
+  "memberId": "013033501",
+  "vacantSince": null
  },
  {
   "no": 336,
@@ -3012,7 +3346,8 @@
   "nameEn": "Women Seat-36",
   "slug": "women-seat-36",
   "boundaryBn": null,
-  "memberId": "013033601"
+  "memberId": "013033601",
+  "vacantSince": null
  },
  {
   "no": 337,
@@ -3021,7 +3356,8 @@
   "nameEn": "Women Seat-37",
   "slug": "women-seat-37",
   "boundaryBn": null,
-  "memberId": "013033701"
+  "memberId": "013033701",
+  "vacantSince": null
  },
  {
   "no": 338,
@@ -3030,7 +3366,8 @@
   "nameEn": "Women Seat-38",
   "slug": "women-seat-38",
   "boundaryBn": null,
-  "memberId": "013033801"
+  "memberId": "013033801",
+  "vacantSince": null
  },
  {
   "no": 339,
@@ -3039,7 +3376,8 @@
   "nameEn": "Women Seat-39",
   "slug": "women-seat-39",
   "boundaryBn": null,
-  "memberId": "013033901"
+  "memberId": "013033901",
+  "vacantSince": null
  },
  {
   "no": 340,
@@ -3048,7 +3386,8 @@
   "nameEn": "Women Seat-40",
   "slug": "women-seat-40",
   "boundaryBn": null,
-  "memberId": "013034001"
+  "memberId": "013034001",
+  "vacantSince": null
  },
  {
   "no": 341,
@@ -3057,7 +3396,8 @@
   "nameEn": "Women Seat-41",
   "slug": "women-seat-41",
   "boundaryBn": null,
-  "memberId": "013034101"
+  "memberId": "013034101",
+  "vacantSince": null
  },
  {
   "no": 342,
@@ -3066,7 +3406,8 @@
   "nameEn": "Women Seat-42",
   "slug": "women-seat-42",
   "boundaryBn": null,
-  "memberId": "013034201"
+  "memberId": "013034201",
+  "vacantSince": null
  },
  {
   "no": 343,
@@ -3075,7 +3416,8 @@
   "nameEn": "Women Seat-43",
   "slug": "women-seat-43",
   "boundaryBn": null,
-  "memberId": "013034301"
+  "memberId": "013034301",
+  "vacantSince": null
  },
  {
   "no": 344,
@@ -3084,7 +3426,8 @@
   "nameEn": "Women Seat-44",
   "slug": "women-seat-44",
   "boundaryBn": null,
-  "memberId": "013034401"
+  "memberId": "013034401",
+  "vacantSince": null
  },
  {
   "no": 345,
@@ -3093,7 +3436,8 @@
   "nameEn": "Women Seat-45",
   "slug": "women-seat-45",
   "boundaryBn": null,
-  "memberId": "013034501"
+  "memberId": "013034501",
+  "vacantSince": null
  },
  {
   "no": 346,
@@ -3102,7 +3446,8 @@
   "nameEn": "Women Seat-46",
   "slug": "women-seat-46",
   "boundaryBn": null,
-  "memberId": "013034601"
+  "memberId": "013034601",
+  "vacantSince": null
  },
  {
   "no": 347,
@@ -3111,7 +3456,8 @@
   "nameEn": "Women Seat-47",
   "slug": "women-seat-47",
   "boundaryBn": null,
-  "memberId": "013034701"
+  "memberId": "013034701",
+  "vacantSince": null
  },
  {
   "no": 348,
@@ -3120,7 +3466,8 @@
   "nameEn": "Women Seat-48",
   "slug": "women-seat-48",
   "boundaryBn": null,
-  "memberId": "013034801"
+  "memberId": "013034801",
+  "vacantSince": null
  },
  {
   "no": 349,
@@ -3129,7 +3476,8 @@
   "nameEn": "Women Seat-49",
   "slug": "women-seat-49",
   "boundaryBn": null,
-  "memberId": "013034901"
+  "memberId": "013034901",
+  "vacantSince": null
  },
  {
   "no": 350,
@@ -3138,6 +3486,7 @@
   "nameEn": "Women Seat-50",
   "slug": "women-seat-50",
   "boundaryBn": null,
-  "memberId": "013035001"
+  "memberId": "013035001",
+  "vacantSince": null
  }
 ]

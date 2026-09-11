@@ -112,7 +112,9 @@ export const resultForSeat = (seatNo: number, parliamentNo: number): SeatResult 
 
 /** How many sitting members are new to the House, and who has served most. */
 export function experienceStats() {
-  const withTerms = members.map((m) => ({ m, prior: priorTermsOf(m.id).length }));
+  // Earlier terms: the secretariat's own count when it has one (it also covers the 1st to 3rd
+  // and 6th parliaments, whose lists are not in the database), otherwise the terms matched here.
+  const withTerms = members.map((m) => ({ m, prior: m.termsCount ? m.termsCount - 1 : priorTermsOf(m.id).length }));
   const bands = [
     { label: 'প্রথমবার', count: withTerms.filter((x) => x.prior === 0).length },
     { label: 'দ্বিতীয় মেয়াদ', count: withTerms.filter((x) => x.prior === 1).length },

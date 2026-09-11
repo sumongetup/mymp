@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { members, seats, parties, committees, meta, districtOf } from '@/lib/data';
+import { allMembers as members, seats, parties, committees, meta, districtOf } from '@/lib/data';
 import { siteUrl } from '@/lib/site';
 
 /**

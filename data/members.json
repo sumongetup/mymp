@@ -42,7 +42,9 @@
    "boundaryBn": "(ক) পঞ্চগড় সদর, (খ) তেঁতুলিয়া এবং (গ)আটোয়ারী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013000201",
@@ -87,7 +89,9 @@
    "boundaryBn": "(ক) বোদা এবং (খ) দেবীগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013000301",
@@ -132,7 +136,9 @@
    "boundaryBn": "ঠাকুরগাঁও সদর উপজেলা"
   },
   "offices": [],
-  "status": "Resigned"
+  "status": "Resigned",
+  "termsCount": 3,
+  "resignedOn": "2026-08-21"
  },
  {
   "id": "013000401",
@@ -177,7 +183,9 @@
    "boundaryBn": "(ক)বালিয়াডাঙ্গী, (খ) হরিপুর এবং (গ) রানিসংকাইল উপজেলার নিম্নলিখিত ইউনিয়ন সমূহ: (১)ধর্মগড় ও (২)কাশিপুর"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013000501",
@@ -222,7 +230,9 @@
    "boundaryBn": "(ক)পীরগঞ্জ উপজেলা এবং (খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত রানিশংকাইল উপজেলা: (১)ধর্মগড় ও(২) কাশিপুর"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013000601",
@@ -267,7 +277,9 @@
    "boundaryBn": "(ক)বীরগঞ্জ এবং (খ)কাহারোল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013000701",
@@ -312,7 +324,9 @@
    "boundaryBn": "(ক)বোচাগঞ্জ এবং(খ) বিরল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013000801",
@@ -357,7 +371,9 @@
    "boundaryBn": "দিনাজপুর সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013000901",
@@ -402,7 +418,9 @@
    "boundaryBn": "(ক)খানসামা এবং (খ) চিরিরবন্দর"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013001001",
@@ -447,7 +465,9 @@
    "boundaryBn": "(ক)পার্বতীপুর এবং (খ) ফুলবাড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013001101",
@@ -492,7 +512,9 @@
    "boundaryBn": "(ক)নবাবগঞ্জ,(খ) বিরামপুর,(গ) হাকিমপুর এবং (ঘ)ঘোড়াঘাট উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013001201",
@@ -537,7 +559,9 @@
    "boundaryBn": "(ক)ডোমার এবং(খ) ডিমলা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013001301",
@@ -582,7 +606,9 @@
    "boundaryBn": "নীলফামারী সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013001401",
@@ -627,7 +653,9 @@
    "boundaryBn": "জলঢাকা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013001501",
@@ -672,7 +700,9 @@
    "boundaryBn": "(ক)সৈয়দপুর এবং(খ) কিশোরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013001601",
@@ -717,7 +747,9 @@
    "boundaryBn": "(ক)পাটগ্রাম এবং(খ) হাতীবান্ধা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013001701",
@@ -762,7 +794,9 @@
    "boundaryBn": "(ক)কালিগঞ্জ এবং(খ)আদিতমারী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013001801",
@@ -807,7 +841,9 @@
    "boundaryBn": "লালমনিরহাট সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013001901",
@@ -852,7 +888,9 @@
    "boundaryBn": "(ক)গংগাচড়া উপজেলা এবং(খ) রংপুর সিটি কর্পোরেশনের ওয়ার্ড- ১,২,৩,৪,৫,৬,৭ ও ৮"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002001",
@@ -897,7 +935,9 @@
    "boundaryBn": "(ক)তারাগঞ্জ এবং(খ) বদরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002101",
@@ -942,7 +982,9 @@
    "boundaryBn": "(ক)রংপুর সদর উপজেলা এবং (খ)রংপুর সিটি কর্পোরেশনের- ১,২,৩,৪,৫,৬,৭ ও ৮ ব্যতীত রংপুর সিটি কর্পোরেশনের এলাকা সমূহ।"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002201",
@@ -987,7 +1029,9 @@
    "boundaryBn": "(ক)পীরগাছা এবং(খ) কাউনিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002301",
@@ -1032,7 +1076,9 @@
    "boundaryBn": "মিঠাপুকুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002401",
@@ -1077,7 +1123,9 @@
    "boundaryBn": "পীরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002501",
@@ -1122,7 +1170,9 @@
    "boundaryBn": "(ক)ভূরুঙ্গামারী এবং(খ) নাগেশ্বরী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002601",
@@ -1167,7 +1217,9 @@
    "boundaryBn": "(ক)কুড়িগ্রাম সদর,(খ) রাজারহাট এবং(গ) ফুলবাড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002701",
@@ -1212,7 +1264,9 @@
    "boundaryBn": "উলিপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002801",
@@ -1257,7 +1311,9 @@
    "boundaryBn": "(ক)রৌমারী,(খ) চর রাজিবপুর এবং(গ) চিলমারী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013002901",
@@ -1302,7 +1358,9 @@
    "boundaryBn": "সুন্দরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013003001",
@@ -1347,7 +1405,9 @@
    "boundaryBn": "গাইবান্ধা সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013003101",
@@ -1392,7 +1452,9 @@
    "boundaryBn": "(ক)সাদুল্যাপুর এবং(খ) পলাশবাড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013003201",
@@ -1437,7 +1499,9 @@
    "boundaryBn": "গোবিন্দগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013003301",
@@ -1482,7 +1546,9 @@
    "boundaryBn": "(ক)ফুলছড়ি এবং(খ) সাঘাটা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013003401",
@@ -1527,7 +1593,9 @@
    "boundaryBn": "(ক)জয়পুরহাট সদর এবং(খ) পাঁচবিবি উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013003501",
@@ -1572,7 +1640,9 @@
    "boundaryBn": "(ক)আক্কেলপুর,(খ) ক্ষেতলাল এবং(গ) কালাই উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": null,
+  "resignedOn": null
  },
  {
   "id": "013003601",
@@ -1617,7 +1687,9 @@
    "boundaryBn": "(ক)সারিয়াকান্দি এবং(খ) সোনাতলা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013003701",
@@ -1662,7 +1734,9 @@
    "boundaryBn": "শিবগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013003801",
@@ -1707,7 +1781,9 @@
    "boundaryBn": "(ক)আদমদীঘি এবং(খ) দুপচাঁচিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013003901",
@@ -1752,7 +1828,9 @@
    "boundaryBn": "(ক)কাহালু এবং (খ)নন্দীগ্রাম উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013004001",
@@ -1797,7 +1875,9 @@
    "boundaryBn": "(ক)শেরপুর এবং(খ) ধুনট উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 6,
+  "resignedOn": null
  },
  {
   "id": "013004101",
@@ -1842,7 +1922,9 @@
    "boundaryBn": "বগুড়া সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004201",
@@ -1887,7 +1969,9 @@
    "boundaryBn": "(ক)গাবতলী এবং(খ) শাজাহানপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004301",
@@ -1932,7 +2016,9 @@
    "boundaryBn": "শিবগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004401",
@@ -1977,7 +2063,9 @@
    "boundaryBn": "(ক)ভোলাহাট,(খ) গোমস্তাপুর এবং(গ) নাচোল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004501",
@@ -2022,7 +2110,9 @@
    "boundaryBn": "চাঁপাইনবাবগঞ্জ সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004601",
@@ -2067,7 +2157,9 @@
    "boundaryBn": "(ক)পোরশা,(খ) সাপাহার এবং(গ) নিয়ামতপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004701",
@@ -2112,7 +2204,9 @@
    "boundaryBn": "(ক)পত্নীতলা এবং(খ) ধামইরহাট উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004801",
@@ -2157,7 +2251,9 @@
    "boundaryBn": "(ক)বদলগাছি এবং(খ) মহাদেবপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013004901",
@@ -2202,7 +2298,9 @@
    "boundaryBn": "মান্দা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": null,
+  "resignedOn": null
  },
  {
   "id": "013005001",
@@ -2247,7 +2345,9 @@
    "boundaryBn": "নওগাঁ সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013005101",
@@ -2292,7 +2392,9 @@
    "boundaryBn": "(ক) রাণীনগর এবং(খ) আত্রাই উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013005201",
@@ -2337,7 +2439,9 @@
    "boundaryBn": "(ক)গোদাগাড়ী এবং(খ) তানোর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013005301",
@@ -2382,7 +2486,9 @@
    "boundaryBn": "রাজশাহী সিটি কর্পোরেশনের এলাকা সমূহ"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013005401",
@@ -2427,7 +2533,9 @@
    "boundaryBn": "(ক)পবা এবং(খ) মোহনপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013005501",
@@ -2472,7 +2580,9 @@
    "boundaryBn": "বাগমারা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013005601",
@@ -2517,7 +2627,9 @@
    "boundaryBn": "(ক)দূর্গাপুর এবং(খ) পুঠিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013005701",
@@ -2562,7 +2674,9 @@
    "boundaryBn": "(ক)চারঘাট এবং(খ) বাঘা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013005801",
@@ -2607,7 +2721,9 @@
    "boundaryBn": "(ক)লালপুর এবং(খ) বাগাতিপাড়া"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013005901",
@@ -2652,7 +2768,9 @@
    "boundaryBn": "(ক)নাটোর সদর এবং(খ) নলডাঙ্গা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013006001",
@@ -2697,7 +2815,9 @@
    "boundaryBn": "সিংড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006101",
@@ -2742,7 +2862,9 @@
    "boundaryBn": "(ক)গুরুদাসপুর এবং (খ)বড়াইগ্রাম উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006201",
@@ -2787,7 +2909,9 @@
    "boundaryBn": "(ক)কাজিপুর এবং(খ) সিরাজগঞ্জ সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)মেছড়া,(২) রতনকান্দি,(৩) বাগবাটি,(৪) ছোনগাছা ও(৫) বহুলী"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006301",
@@ -2832,7 +2956,9 @@
    "boundaryBn": "(ক) নিম্নলিখিত ইউনিয়ন ব্যাতীত সিরাজগঞ্জ সদরঃ- (১)মেছড়া,(২) (৩)রতনকান্দি,(৪) বাগবাটি,(৫) ছোনগাছা ও(৫) বহুলী এবং(খ) কামারখন্দ"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013006401",
@@ -2877,7 +3003,9 @@
    "boundaryBn": "(ক)রায়গঞ্জ এবং(খ) তাড়াশ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006501",
@@ -2922,7 +3050,9 @@
    "boundaryBn": "উল্লাপাড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006601",
@@ -2967,7 +3097,9 @@
    "boundaryBn": "(ক)বেলকুচি এবং(খ) চৌহালী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006701",
@@ -3012,7 +3144,9 @@
    "boundaryBn": "শাহজাদপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006801",
@@ -3057,7 +3191,9 @@
    "boundaryBn": "(ক)সাঁথিয়া উপজেলা এবং(খ) বেড়া উপজেলার নিম্নিলিখিত এলাকাসমূহঃ (১)বেড়া পৌরসভা, (২)হাটুরিয়া নাকালিয়া ইউনিয়ন,(৩) নতুন ভারেংগা ইউনিয়ন,(৪) চাকলা ইউনিয়ন ও(৫) কৈটোলা ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013006901",
@@ -3102,7 +3238,9 @@
    "boundaryBn": "(ক)সুজানগর এবং(খ) নিম্নিলিখিত এলাকা ব্যতীত বেড়া উপজেলাঃ (১)বেড়া পৌরসভা, (২)হাটুরিয়া নাকালিয়া ইউনিয়ন,(৩) নতুন ভারেংগা ইউনিয়ন,(৪) চাকলা ইউনিয়ন ও(৫) কৈটোলা ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013007001",
@@ -3147,7 +3285,9 @@
    "boundaryBn": "(ক)চাটমোহর,(খ) ভাংগুড়া এবং(গ) ফরিদপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007101",
@@ -3192,7 +3332,9 @@
    "boundaryBn": "(ক)আটঘরিয়া এবং(খ) ঈশ্বরদী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007201",
@@ -3237,7 +3379,9 @@
    "boundaryBn": "পাবনা সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007301",
@@ -3282,7 +3426,9 @@
    "boundaryBn": "(ক)মেহেরপুর সদর এবং (খ)মুজিবনগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007401",
@@ -3327,7 +3473,9 @@
    "boundaryBn": "গাংনী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007501",
@@ -3372,7 +3520,9 @@
    "boundaryBn": "দৌলতপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013007601",
@@ -3417,7 +3567,9 @@
    "boundaryBn": "(ক)ভেড়ামারা এবং(খ) মিরপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007701",
@@ -3462,7 +3614,9 @@
    "boundaryBn": "কুষ্টিয়া সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007801",
@@ -3507,7 +3661,9 @@
    "boundaryBn": "(ক)কুমারখালী এবং(খ) খোকশা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013007901",
@@ -3552,7 +3708,9 @@
    "boundaryBn": "(ক)আলমডাঙ্গা এবং(খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত চুয়াডাঙ্গা সদর উপজেলাঃ(১) তিতুদহ,(২) বেগমপুর(৩) নেহালপুর ও(৪) গড়াইটুপি ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008001",
@@ -3597,7 +3755,9 @@
    "boundaryBn": "(ক)দামুড়হুদা, (খ)জীবননগর এবং (গ)চুয়াডাঙ্গা সদর উপজেলার নিম্নলিখিত ইউনিয়নসমূহঃ (১) তিতুদহ,(২) বেগমপুর(৩) নেহালপুর ও(৪) গড়াইটুপি ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008101",
@@ -3642,7 +3802,9 @@
    "boundaryBn": "শৈলকূপা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008201",
@@ -3687,7 +3849,9 @@
    "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত ঝিনাইদহ সদরঃ নলডাঙ্গা, ঘোড়াশাল, ফুরসুন্দি ও মহারাজপুর এবং (খ)হরিণাকুণ্ডু উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008301",
@@ -3732,7 +3896,9 @@
    "boundaryBn": "(ক)কোর্টচাদপুর এবং(খ) মহেশপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008401",
@@ -3777,7 +3943,9 @@
    "boundaryBn": "(ক)কালীগঞ্জ এবং(খ) ঝিনাইদহ সদর উপজেলার (১)নলডাঙ্গা,(২) ঘোড়াশাল,(৩) ফুরসুন্দি ও(৪) মহারাজপুর ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008501",
@@ -3822,7 +3990,9 @@
    "boundaryBn": "শার্শা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008601",
@@ -3867,7 +4037,9 @@
    "boundaryBn": "(ক)ঝিকরগাছা এবং (খ)চৌগাছা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008701",
@@ -3912,7 +4084,9 @@
    "boundaryBn": "বসুন্দিয়া ইউনিয়ন ব্যতীত যশোর সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008801",
@@ -3957,7 +4131,9 @@
    "boundaryBn": "(ক)বাঘারপাড়া,(খ) অভয়নগর এবং(গ) যশোর সদর উপজেলার বসুন্দিয়া ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013008901",
@@ -4002,7 +4178,9 @@
    "boundaryBn": "মনিরামপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009001",
@@ -4047,7 +4225,9 @@
    "boundaryBn": "কেশবপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009101",
@@ -4092,7 +4272,9 @@
    "boundaryBn": "(ক)শ্রীপুর এবং(খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত মাগুরা সদর উপজেলাঃ(১) শত্রুজিৎপুর,(২) গোপালগ্রাম,(৩) কুচিয়ামোড়া,(৪) বেরইল পলিতা ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009201",
@@ -4137,7 +4319,9 @@
    "boundaryBn": "(ক)মহম্মদপুর উপজেলা(খ)শালিখা উপজেলা এবং(গ) মাগুরা সদর উপজেলার নিম্নলিখিত ইউনিয়নসমূহ : (১)শত্রুজিৎপুর,(২) গোপালগ্রাম, (৩)কুচিয়ামোড়া,(৪) বেরইল পলিতা ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013009301",
@@ -4182,7 +4366,9 @@
    "boundaryBn": "(ক)কালিয়া এবং(খ) নড়াইল সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)কলোড়া,(২) বিচালি,(৩) ভদ্রবিলা,(৪) সিংগা শোলপুর ও(৫) শেখ হাটি"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009401",
@@ -4227,7 +4413,9 @@
    "boundaryBn": "(ক)লোহাগড়া উপজেলা এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নড়াইল সদর উপজেলা:(১)কলোড়া,(২) বিচালি,(৩) ভদ্রবিলা,(৪) সিঙগা শোলপুর ও(৫) শেখ হাটি"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009501",
@@ -4272,7 +4460,9 @@
    "boundaryBn": "(ক)ফকিরহাট,(খ) মোল্লাহাট এবং(গ) চিতলমারী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009601",
@@ -4317,7 +4507,9 @@
    "boundaryBn": "(ক)বাগেরহাট সদর এবং(খ) কচুয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009701",
@@ -4362,7 +4554,9 @@
    "boundaryBn": "(ক)রামপাল এবং(খ) মোংলা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009801",
@@ -4407,7 +4601,9 @@
    "boundaryBn": "(ক)মোড়েলগঞ্জ এবং(খ) শরণখোলা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013009901",
@@ -4452,7 +4648,9 @@
    "boundaryBn": "(ক)বটিয়াঘাটা এবং(খ) দাকোপ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010001",
@@ -4497,7 +4695,9 @@
    "boundaryBn": "খুলনা সিটি কর্পোরেশনের ওয়ার্ড ১৬ থেকে ৩১ পর্যন্ত"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010101",
@@ -4542,7 +4742,9 @@
    "boundaryBn": "(ক)খুলনা সিটি কর্পোরেশনের ওয়ার্ড ১ থেকে ১৫ এবং (খ)দিঘলিয়া উপজেলার আঢ়ংঘাটা ও যোগীপোল ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010201",
@@ -4587,7 +4789,9 @@
    "boundaryBn": "(ক)আঢ়ংঘাটা ও যোগীপোল ইউনিয়ন ব্যতীত দিঘলিয়া, (খ)রূপসা এবং (গ)তেরখাদা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010301",
@@ -4632,7 +4836,9 @@
    "boundaryBn": "(ক)ফুলতলা,(খ) ডুমুরিয়া উপজেলা এবং(গ) গিলাতলা ক্যান্টনমেন্ট এলাকা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013010401",
@@ -4677,7 +4883,9 @@
    "boundaryBn": "(ক)কয়রা এবং(খ) পাইকগাছা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010501",
@@ -4722,7 +4930,9 @@
    "boundaryBn": "(ক)কলারোয়া এবং(খ) তালা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010601",
@@ -4767,7 +4977,9 @@
    "boundaryBn": "সাতক্ষীরা সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010701",
@@ -4812,7 +5024,9 @@
    "boundaryBn": "(ক)আশাশুনি, (খ)দেবহাটা এবং(গ) কালিগঞ্জ উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)চাম্পাফুল,(২) ভাড়াশিমলা,(৩) তারালী ও(৪) নলতা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013010801",
@@ -4857,7 +5071,9 @@
    "boundaryBn": "(ক)শ্যামনগর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কালিগঞ্জ উপজেলাঃ (১)চাম্পাফুল,(২) ভাড়াশিমলা,(৩) তারালী ও(৪) নলতা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013010901",
@@ -4902,7 +5118,9 @@
    "boundaryBn": "(ক)বরগুনা সদর,(খ) আমতলী এবং(গ) তালতলি উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013011001",
@@ -4947,7 +5165,9 @@
    "boundaryBn": "(ক)বামনা উপজেলা,(খ) পাথরঘাটা এবং(গ) বেতাগী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013011101",
@@ -4992,7 +5212,9 @@
    "boundaryBn": "(ক)পটুয়াখালী সদর,(খ) মির্জাগঞ্জ এবং(গ) দুমকি উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013011201",
@@ -5037,7 +5259,9 @@
    "boundaryBn": "বাউফল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013011301",
@@ -5082,7 +5306,9 @@
    "boundaryBn": "(ক)দশমিনা এবং(খ) গলাচিপা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013011401",
@@ -5127,7 +5353,9 @@
    "boundaryBn": "(ক)কলাপাড়া এবং(খ) রাঙ্গাবালী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013011501",
@@ -5172,7 +5400,9 @@
    "boundaryBn": "ভোলা সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013011601",
@@ -5217,7 +5447,9 @@
    "boundaryBn": "(ক)দৌলতখান এবং(খ) বোরহানউদ্দিন উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013011701",
@@ -5264,7 +5496,9 @@
   "offices": [
    "speaker"
   ],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 7,
+  "resignedOn": null
  },
  {
   "id": "013011801",
@@ -5309,7 +5543,9 @@
    "boundaryBn": "(ক)মনপুরা এবং(খ) চরফ্যাশন উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013011901",
@@ -5354,7 +5590,9 @@
    "boundaryBn": "(ক) গৌরনদী এবং (খ)আগৈলঝাড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013012001",
@@ -5399,7 +5637,9 @@
    "boundaryBn": "(ক)উজিরপুর এবং(খ) বানারীপাড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013012101",
@@ -5444,7 +5684,9 @@
    "boundaryBn": "(ক)মুলাদী এবং(খ) বাবুগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013012201",
@@ -5489,7 +5731,9 @@
    "boundaryBn": "(ক)মেহেন্দিগঞ্জ এবং(খ) হিজলা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013012301",
@@ -5534,7 +5778,9 @@
    "boundaryBn": "(ক)বরিশাল সিটি কর্পোরেশনভুক্ত এলাকা এবং(খ) বরিশাল সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013012401",
@@ -5579,7 +5825,9 @@
    "boundaryBn": "বাকেরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013012501",
@@ -5624,7 +5872,9 @@
    "boundaryBn": "(ক)রাজাপুর এবং (খ)কাঁঠালিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013012601",
@@ -5669,7 +5919,9 @@
    "boundaryBn": "(ক)ঝালকাঠি সদর এবং(খ) নলছিটি উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013012701",
@@ -5714,7 +5966,9 @@
    "boundaryBn": "(ক)পিরোজপুর সদর,(খ) নাজিরপুর এবং (গ)ইন্দুরকানী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013012801",
@@ -5759,7 +6013,9 @@
    "boundaryBn": "(ক)কাউখালি,(খ) ভান্ডারিয়া এবং(গ) নেছারাবাদ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013012901",
@@ -5804,7 +6060,9 @@
    "boundaryBn": "মঠবাড়ীয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013013001",
@@ -5849,7 +6107,9 @@
    "boundaryBn": "(ক)মধুপুর এবং(খ) ধনবাড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013013101",
@@ -5894,7 +6154,9 @@
    "boundaryBn": "(ক)গোপালপুর এবং(খ) ভুয়াপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013013201",
@@ -5939,7 +6201,9 @@
    "boundaryBn": "ঘাটাইল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013013301",
@@ -5984,7 +6248,9 @@
    "boundaryBn": "কালিহাতী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013013401",
@@ -6029,7 +6295,9 @@
    "boundaryBn": "টাংগাইল সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013013501",
@@ -6074,7 +6342,9 @@
    "boundaryBn": "(ক)দেলদুয়ার এবং(খ) নাগরপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013013601",
@@ -6119,7 +6389,9 @@
    "boundaryBn": "মির্জাপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013013701",
@@ -6164,7 +6436,9 @@
    "boundaryBn": "(ক)বাসাইল এবং (খ)সখিপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013013801",
@@ -6209,7 +6483,9 @@
    "boundaryBn": "(ক)বকশীগঞ্জ এবং(খ) দেওয়ানগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013013901",
@@ -6254,7 +6530,9 @@
    "boundaryBn": "ইসলামপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013014001",
@@ -6299,7 +6577,9 @@
    "boundaryBn": "(ক)মাদারগঞ্জ এবং(খ) মেলান্দহ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014101",
@@ -6344,7 +6624,9 @@
    "boundaryBn": "সরিষাবাড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014201",
@@ -6389,7 +6671,9 @@
    "boundaryBn": "জামালপুর সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014301",
@@ -6434,7 +6718,9 @@
    "boundaryBn": "শেরপুর সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014401",
@@ -6479,7 +6765,9 @@
    "boundaryBn": "(ক)নকলা এবং(খ) নালিতাবাড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014501",
@@ -6524,7 +6812,9 @@
    "boundaryBn": "(ক)শ্রীবরদী এবং(খ) ঝিনাইগাতী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013014601",
@@ -6569,7 +6859,9 @@
    "boundaryBn": "(ক)হালুয়াঘাট এবং(খ) ধোবাউড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014701",
@@ -6614,7 +6906,9 @@
    "boundaryBn": "(ক)ফুলপুর এবং(খ) তারাকান্দা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014801",
@@ -6659,7 +6953,9 @@
    "boundaryBn": "গৌরীপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013014901",
@@ -6704,7 +7000,9 @@
    "boundaryBn": "(ক)ময়মনসিংহ সিটি কর্পোরেশনভুক্ত এলাকা এবং (খ) ময়মনসিংহ সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015001",
@@ -6749,7 +7047,9 @@
    "boundaryBn": "মুক্তাগাছা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015101",
@@ -6794,7 +7094,9 @@
    "boundaryBn": "ফুলবাড়ীয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015201",
@@ -6839,7 +7141,9 @@
    "boundaryBn": "ত্রিশাল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015301",
@@ -6884,7 +7188,9 @@
    "boundaryBn": "ঈশ্বরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015401",
@@ -6929,7 +7235,9 @@
    "boundaryBn": "নান্দাইল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015501",
@@ -6974,7 +7282,9 @@
    "boundaryBn": "গফরগাঁও উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015601",
@@ -7019,7 +7329,9 @@
    "boundaryBn": "ভালুকা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015701",
@@ -7066,7 +7378,9 @@
   "offices": [
    "deputy-speaker"
   ],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015801",
@@ -7111,7 +7425,9 @@
    "boundaryBn": "(ক)নেত্রকোনা সদর এবং(খ) বারহাট্টা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013015901",
@@ -7156,7 +7472,9 @@
    "boundaryBn": "(ক)আটপাড়া এবং(খ) কেন্দুয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013016001",
@@ -7201,7 +7519,9 @@
    "boundaryBn": "(ক)মোহনগঞ্জ,(খ) মদন এবং(গ) খালিয়াজুড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013016101",
@@ -7246,7 +7566,9 @@
    "boundaryBn": "পূর্বধলা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013016201",
@@ -7291,7 +7613,9 @@
    "boundaryBn": "(ক)কিশোরগঞ্জ সদর এবং(খ) হোসেনপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013016301",
@@ -7336,7 +7660,9 @@
    "boundaryBn": "(ক)কটিয়াদী এবং(খ) পাকুন্দিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013016401",
@@ -7381,7 +7707,9 @@
    "boundaryBn": "(ক)তাড়াইল এবং(খ) করিমগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013016501",
@@ -7426,7 +7754,9 @@
    "boundaryBn": "(ক)ইটনা,(খ) মিঠামইন এবং(গ) অষ্টগ্রাম উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013016601",
@@ -7471,7 +7801,9 @@
    "boundaryBn": "(ক)নিকলী এবং(খ) বাজিতপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013016701",
@@ -7516,7 +7848,9 @@
    "boundaryBn": "(ক)কুলিয়ারচর এবং(খ) ভৈরব উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013016801",
@@ -7561,7 +7895,9 @@
    "boundaryBn": "(ক)দৌলতপুর,(খ) ঘিওর এবং(গ) শিবালয় উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013016901",
@@ -7606,7 +7942,9 @@
    "boundaryBn": "(ক)সিঙ্গাইর,(খ) হরিরামপুর এবং(গ) মানিকগঞ্জ সদর উপজেলার হাটিপাড়া, ভাড়ারিয়া ও পুটাইল ইউনিয়ন সমূহ"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013017001",
@@ -7651,7 +7989,9 @@
    "boundaryBn": "(ক)হাটিপাড়া, ভাড়ারিয়া ও পুটাইল ইউনিয়ন সমূহ ব্যতীত মানিকগঞ্জ সদর এবং(খ) সাটুরিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017101",
@@ -7696,7 +8036,9 @@
    "boundaryBn": "(ক)শ্রীনগর এবং(খ) সিরাজদিখান উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017201",
@@ -7741,7 +8083,9 @@
    "boundaryBn": "(ক)লৌহজং এবং(খ) টংগীবাড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017301",
@@ -7786,7 +8130,9 @@
    "boundaryBn": "(ক)মুন্সীগঞ্জ সদর এবং(খ) গজারিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017401",
@@ -7831,7 +8177,9 @@
    "boundaryBn": "(ক)দোহার এবং(খ) নবাবগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017501",
@@ -7876,7 +8224,9 @@
    "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কেরানিগঞ্জ উপজেলাঃ(১) জিনজিরা, (২)আগানগর,(৩) তেঘরিয়া,(৪) কোন্ডা ও(৫) শুভাট্যা, (খ)ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড ৫৫,৫৬, ও ৫৭ এবং (গ)সাভার উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) আমিনবাজার,(২) তেতুলঝড়া ও(৩) ভাকুর্তা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013017601",
@@ -7921,7 +8271,9 @@
    "boundaryBn": "কেরানীগঞ্জ উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)জিনজিরা,(২) আগানগর,(৩) তেঘরিয়া,(৪) কোন্ডা ও(৫) শুভাট্যা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017701",
@@ -7966,7 +8318,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ৪৭,৫১,৫২,৫৩,৫৪,৫৮ এবং ৫৯"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017801",
@@ -8011,7 +8365,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড-৪৮,৪৯,৫০,৬০,৬১,৬২,৬৩,৬৪,৬৫,৬৬,৬৭,৬৮,৬৯, এবং ৭০"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013017901",
@@ -8056,7 +8412,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড-৩৪,৩৭,৩৮,৩৯,৪০,৪১,৪২,৪৩,৪৪,৪৫ ও ৪৬"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018001",
@@ -8101,7 +8459,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২৩,২৪,২৫,২৬,২৭,২৮,২৯,৩০,৩১,৩২,৩৩,৩৫, ও ৩৬"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018101",
@@ -8146,7 +8506,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ৮,৯,১০,১১,১২,১৩,১৯,২০,২১"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013018201",
@@ -8191,7 +8553,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ১,২,৩,৪,৫,৬,৭,৭১,৭২,৭৩,৭৪ ও ৭৫"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018301",
@@ -8236,7 +8600,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ১৪,১৫,১৬,১৭,১৮ ও ২২"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018401",
@@ -8281,7 +8647,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২১,২২,২৩,৩৭,৩৮,৩৯,৪০,৪১, ও ৪২"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018501",
@@ -8326,7 +8694,9 @@
    "boundaryBn": "ঢাকা দক্ষিন সিটি কর্পোরেশনের ওয়ার্ড- ২৪,২৫,২৬,২৭,৩৫ ও ৩৬"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018601",
@@ -8371,7 +8741,9 @@
    "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ২৮,২৯,৩০,৩১,৩২,৩৩, ও ৩৪"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018701",
@@ -8416,7 +8788,9 @@
    "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড ৭ থেকে ১২ পর্যন্ত এবং (খ)সাভার উপজেলার কাউন্দিয়া ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018801",
@@ -8463,7 +8837,9 @@
   "offices": [
    "opposition-leader"
   ],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013018901",
@@ -8508,7 +8884,9 @@
    "boundaryBn": "ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০২,০৩,০৫, ও ০৬"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019001",
@@ -8555,7 +8933,9 @@
   "offices": [
    "pm"
   ],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019101",
@@ -8600,7 +8980,9 @@
    "boundaryBn": "(ক)ঢাকা উত্তর সিটি কর্পোরেশনের ওয়ার্ড- ০১,১৭,৪৩,৪৪,৪৫,৪৬,৪৭,৪৮,৪৯,৫০,৫১,৫২,৫৩,৫৪ ও (খ)ঢাকা বিমানবন্দর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019201",
@@ -8645,7 +9027,9 @@
    "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত সাভার উপজেলালঃ (১)আমিনবাজার, (২)তেতুলঝড়া,(৩) ভাকুর্তা ও(৪) কাউন্দিয়া ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013019301",
@@ -8690,7 +9074,9 @@
    "boundaryBn": "ধামরাই উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019401",
@@ -8735,7 +9121,9 @@
    "boundaryBn": "(ক)কালিয়াকৈর এবং(খ) গাজীপুর সিটি কর্পোরেশনের ১ হতে ১৮ নং ওয়ার্ড"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019501",
@@ -8780,7 +9168,9 @@
    "boundaryBn": "(ক)গাজীপুর সিটি কর্পোরেশনের ১৯ হতে ৩৯ নং ওয়ার্ড, (খ)গাজীপুর সিটি কর্পোরেশনের ৪৩ হতে ৫৭ নং ওয়ার্ড এবং (গ)গাজীপুর ক্যান্টনমেন্ট এলাকা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019601",
@@ -8825,7 +9215,9 @@
    "boundaryBn": "(ক)শ্রীপুর এবং (খ)গাজিপুর সদর উপজেলারঃ মির্জাপুর, ভাওয়াল গড় ও পিরুজালী ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019701",
@@ -8870,7 +9262,9 @@
    "boundaryBn": "কাপাসিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013019801",
@@ -8915,7 +9309,9 @@
    "boundaryBn": "(ক)কালীগঞ্জ,(খ) গাজীপুর সিটি কর্পোরেশনের ৪০ হতে ৪২ নং ওয়ার্ড এবং (গ)গাজিপুর সদর উপজেলার বাড়িয়া ইউনিয়ন"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013019901",
@@ -8960,7 +9356,9 @@
    "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নরসিংদী সদর উপজেলাঃ (১)আমদিয়া, (২)পাঁচদোনা ও(৩) মেহেরপাড়া"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013020001",
@@ -9005,7 +9403,9 @@
    "boundaryBn": "পলাশ এবং নরসিংদী সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)আমদিয়া,(২) পাঁচদোনা,(৩) মেহেরপাড়া"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013020101",
@@ -9050,7 +9450,9 @@
    "boundaryBn": "শিবপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013020201",
@@ -9095,7 +9497,9 @@
    "boundaryBn": "(ক)মনোহরদী এবং(খ) বেলাব উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013020301",
@@ -9140,7 +9544,9 @@
    "boundaryBn": "রায়পুরা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013020401",
@@ -9185,7 +9591,9 @@
    "boundaryBn": "রূপগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013020501",
@@ -9230,7 +9638,9 @@
    "boundaryBn": "আড়াইহাজার উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013020601",
@@ -9275,7 +9685,9 @@
    "boundaryBn": "সোনারগাঁও উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013020701",
@@ -9320,7 +9732,9 @@
    "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত নারায়ণগঞ্জ সদর উপজেলাঃ (১)আলির টেক,(২) গোগনগর এবং(খ) নারায়ণগঞ্জ সিটি কর্পোরেশনের ওয়ার্ড নং ০১,০২,০৩,০৪,০৫,০৬,০৭,০৮,০৯ ও ১০"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013020801",
@@ -9365,7 +9779,9 @@
    "boundaryBn": "(ক)নিম্নলিখিত ইউনিয়ন সমূহ নারায়ণগঞ্জ সদর উপজেলাঃ (১)আলিরটেক, (২)গোগননগর,(খ) বন্দর উপজেলা এবং (গ)নারায়ণগঞ্জ সিটি কর্পোরেশনের ওয়ার্ড নং ১১,১২,১৩,১৪,১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,২৪,২৫,২৬ ও ২৭"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013020901",
@@ -9410,7 +9826,9 @@
    "boundaryBn": "(ক)রাজবাড়ী সদর এবং(খ) গোয়ালন্দ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013021001",
@@ -9455,7 +9873,9 @@
    "boundaryBn": "(ক)পাংশা, (খ)কালুখালী এবং(গ) বালিয়াকান্দি উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021101",
@@ -9500,7 +9920,9 @@
    "boundaryBn": "(ক)মধুখালী,(খ) বোয়ালমারী এবং(গ) আলফাডাংগা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021201",
@@ -9545,7 +9967,9 @@
    "boundaryBn": "(ক)নগরকান্দা,(খ) সালথা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021301",
@@ -9590,7 +10014,9 @@
    "boundaryBn": "ফরিদপুর সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021401",
@@ -9635,7 +10061,9 @@
    "boundaryBn": "(ক)ভাঙ্গা, (খ)চরভদ্রাসন এবং (গ) সদরপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021501",
@@ -9680,7 +10108,9 @@
    "boundaryBn": "(ক)মুকসুদপুর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত কাশিয়ানী উপজেলাঃ(১) সিঙ্গা,(২) হাতিয়াড়া,(৩) পুইশুর,(৪) বেথুড়ী,(৫) নিজামকান্দি,(৬) ওড়াকান্দি,(৭) ফুকরা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021601",
@@ -9725,7 +10155,9 @@
    "boundaryBn": "(ক)গোপালগঞ্জ সদর এবং (খ)কাশিয়ানী উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) সিঙ্গা,(২) হাতিয়াড়া,(৩) পুইশুর,(৪) বেথুড়ী,(৫) নিজামকান্দি, (৬)ওড়াকান্দি ও(৭) ফুকরা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021701",
@@ -9770,7 +10202,9 @@
    "boundaryBn": "(ক)টুঙ্গীপাড়া এবং(খ) কোটালীপাড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021801",
@@ -9815,7 +10249,9 @@
    "boundaryBn": "শিবচর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013021901",
@@ -9860,7 +10296,9 @@
    "boundaryBn": "(ক)রাজৈর এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত মাদারীপুর সদর উপজেলাঃ (১)খোয়াজপুর,(২) ঝাউদি,(৩) ঘটমাঝি,(৪) মস্তফাপুর ও (৫)কেন্দুয়া"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013022001",
@@ -9905,7 +10343,9 @@
    "boundaryBn": "(ক)কালকিনি (খ)ডাসার উপজেলা এবং(গ) মাদারিপুর সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ(১) খোয়াজপুর,(২) ঝাউদি,(৩) ঘটমাঝি, (৪)মস্তফাপুর ও(৫) কেন্দুয়া"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013022101",
@@ -9950,7 +10390,9 @@
    "boundaryBn": "(ক)শরীয়তপুর সদর এবং(খ) জাজিরা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013022201",
@@ -9995,7 +10437,9 @@
    "boundaryBn": "(ক)নড়িয়া এবং(খ) সখিপুর থানা, ভেদরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013022301",
@@ -10040,7 +10484,9 @@
    "boundaryBn": "(ক) ডামুড্যা উপজেলা (খ) গোসাইরহাট উপজেলা (গ) ভেদরগঞ্জ থানা,উপজেলা-ভেদরগঞ্জ"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013022401",
@@ -10085,7 +10531,9 @@
    "boundaryBn": "(ক)ধর্মপাশা,(খ)মধ্যনগর(গ) তাহিরপুর এবং(ঘ) জামালগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013022501",
@@ -10130,7 +10578,9 @@
    "boundaryBn": "(ক)দিরাই এবং(খ) শাল্লা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013022601",
@@ -10175,7 +10625,9 @@
    "boundaryBn": "(ক)জগন্নাথপুর এবং(খ) শান্তিগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013022701",
@@ -10220,7 +10672,9 @@
    "boundaryBn": "(ক)সুনামগঞ্জ সদর এবং(খ) বিশ্বম্ভরপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013022801",
@@ -10265,7 +10719,9 @@
    "boundaryBn": "(ক)ছাতক এবং(খ) দোয়ারাবাজার উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013022901",
@@ -10310,7 +10766,9 @@
    "boundaryBn": "(ক)সিলেট সিটি কর্পোরেশনের ওয়ার্ড নম্বর-১,২,৩,৪,৫,৬,৭,৮,৯,১০,১১,১২,১৩,১৪,১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,২৪,২৫,২৬,২৭,৩১,৩২,৩৩,৩৪,৩৫,৩৬,৩৭,৩৮,৩৯ এবং (খ) সিলেট সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023001",
@@ -10355,7 +10813,9 @@
    "boundaryBn": "(ক)বিশ্বনাথ এবং(খ) ওসমানী নগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023101",
@@ -10400,7 +10860,9 @@
    "boundaryBn": "(ক) সিলেট সিটি কর্পেোরেশনের ওয়ার্ড নম্বর-২৮,২৯,৩০,৪০,৪১ ও ৪২ (খ)দক্ষিন সুরমা,(গ) ফেঞ্চুগঞ্জ এবং(ঘ) বালাগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023201",
@@ -10445,7 +10907,9 @@
    "boundaryBn": "(ক)কোম্পানীগঞ্জ,(খ) গোয়াইনঘাট এবং(গ) জৈন্তাপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023301",
@@ -10490,7 +10954,9 @@
    "boundaryBn": "(ক)কানাইঘাট এবং(খ) জকিগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023401",
@@ -10535,7 +11001,9 @@
    "boundaryBn": "(ক)বিয়ানী বাজার এবং(খ) গোলাপগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023501",
@@ -10580,7 +11048,9 @@
    "boundaryBn": "(ক)বড়লেখা এবং(খ) জুড়ী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023601",
@@ -10625,7 +11095,9 @@
    "boundaryBn": "কুলাউড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023701",
@@ -10670,7 +11142,9 @@
    "boundaryBn": "(ক)মৌলভীবাজার সদর এবং(খ) রাজনগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013023801",
@@ -10715,7 +11189,9 @@
    "boundaryBn": "(ক)শ্রীমঙ্গল এবং(খ) কমলগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013023901",
@@ -10760,7 +11236,9 @@
    "boundaryBn": "(ক)নবীগঞ্জ এবং(খ) বাহুবল উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013024001",
@@ -10805,7 +11283,9 @@
    "boundaryBn": "(ক)আজমিরীগঞ্জ এবং(খ) বানিয়াচং উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013024101",
@@ -10850,7 +11330,9 @@
    "boundaryBn": "(ক)হবিগঞ্জ সদর,(খ) লাখাই এবং(গ) সায়েস্তাগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013024201",
@@ -10895,7 +11377,9 @@
    "boundaryBn": "(ক)চুনারুঘাট এবং(খ) মাধবপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013024301",
@@ -10940,7 +11424,9 @@
    "boundaryBn": "নাসিরনগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013024401",
@@ -10985,7 +11471,9 @@
    "boundaryBn": "(ক)সরাইল এবং(খ) আশুগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013024501",
@@ -11030,7 +11518,9 @@
    "boundaryBn": "(ক)ব্রাহ্মণবাড়িয়া সদর ও(খ) বিজয়নগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013024601",
@@ -11075,7 +11565,9 @@
    "boundaryBn": "(ক)আখাউড়া এবং(খ) কসবা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013024701",
@@ -11120,7 +11612,9 @@
    "boundaryBn": "নবীনগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013024801",
@@ -11165,7 +11659,9 @@
    "boundaryBn": "বাঞ্ছারামপুর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013024901",
@@ -11210,7 +11706,9 @@
    "boundaryBn": "(ক)দাউদকান্দি এবং(খ) তিতাস উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013025001",
@@ -11255,7 +11753,9 @@
    "boundaryBn": "(ক)হোমনা এবং(খ) মেঘনা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013025101",
@@ -11300,7 +11800,9 @@
    "boundaryBn": "মুরাদনগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 6,
+  "resignedOn": null
  },
  {
   "id": "013025201",
@@ -11345,7 +11847,9 @@
    "boundaryBn": "দেবীদ্বার উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013025301",
@@ -11390,7 +11894,9 @@
    "boundaryBn": "(ক)ব্রাহ্মণপাড়া এবং(খ) বুড়িচং উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013025401",
@@ -11435,7 +11941,9 @@
    "boundaryBn": "(ক)কুমিল্লা আদর্শ সদর,(খ) কুমিল্লা সিটি কর্পোরেশন এবং(গ) কুমিল্লা সেনানিবাস এলাকা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013025501",
@@ -11480,7 +11988,9 @@
    "boundaryBn": "চান্দিনা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013025601",
@@ -11525,7 +12035,9 @@
    "boundaryBn": "বরুড়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013025701",
@@ -11570,7 +12082,9 @@
    "boundaryBn": "(ক)লাকসাম এবং(খ) মনোহরগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013025801",
@@ -11615,7 +12129,9 @@
    "boundaryBn": "(ক)কুমিল্লা সদর দক্ষিন,(খ) লালমাই এবং(গ) নাঙ্গলকোট উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013025901",
@@ -11660,7 +12176,9 @@
    "boundaryBn": "চৌদ্দগ্রাম উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013026001",
@@ -11705,7 +12223,9 @@
    "boundaryBn": "কচুয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013026101",
@@ -11750,7 +12270,9 @@
    "boundaryBn": "(ক)মতলব উত্তর এবং(খ) মতলব দক্ষিন উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013026201",
@@ -11795,7 +12317,9 @@
    "boundaryBn": "(ক)চাঁদপুর সদর এবং(খ) হাইমচর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013026301",
@@ -11840,7 +12364,9 @@
    "boundaryBn": "ফরিদগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013026401",
@@ -11885,7 +12411,9 @@
    "boundaryBn": "(ক)হাজীগঞ্জ এবং(খ) শাহরাস্তি উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013026501",
@@ -11930,7 +12458,9 @@
    "boundaryBn": "(ক)পরশুরাম,(খ) ছাগলনাইয়া এবং (গ)ফুলগাজী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013026601",
@@ -11975,7 +12505,9 @@
    "boundaryBn": "ফেনী সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013026701",
@@ -12020,7 +12552,9 @@
    "boundaryBn": "(ক)সোনাগাজী এবং(খ) দাগনভুঁঞা উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013026801",
@@ -12065,7 +12599,9 @@
    "boundaryBn": "(ক)চাটখিল এবং(খ) নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত সোনাইমুড়ী উপজেলাঃ (১)বারগাঁও,(২) নাটেশ্বর,(৩) অম্বর নগর,ও(৪) বাজরা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013026901",
@@ -12110,7 +12646,9 @@
    "boundaryBn": "(ক)সেনবাগ এবং(খ) সোনাইমুড়ি উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)বারগাও, (২)নাটেশ্বর, (৩)অম্বর নগর ও (৪) বাজরা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 6,
+  "resignedOn": null
  },
  {
   "id": "013027001",
@@ -12155,7 +12693,9 @@
    "boundaryBn": "বেগমগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013027101",
@@ -12200,7 +12740,9 @@
    "boundaryBn": "(ক)সুবর্ণচরএবং(খ) নোয়াখালী সদর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013027201",
@@ -12245,7 +12787,9 @@
    "boundaryBn": "(ক)কোম্পানীগঞ্জ এবং(খ) কবিরহাট উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013027301",
@@ -12290,7 +12834,9 @@
    "boundaryBn": "হাতিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013027401",
@@ -12335,7 +12881,9 @@
    "boundaryBn": "রামগঞ্জ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013027501",
@@ -12380,7 +12928,9 @@
    "boundaryBn": "(ক)রায়পুর এবং(খ) লক্ষীপুর সদর উপজেলার নিম্নলিখিত ইউনিয়ন সমূহঃ (১)উত্তর হামছাদী,(২) দক্ষিন হামছাদী,(৩) দালাল বাজার,(৪) চর রুহিতা, (৫)পার্বতী নগর,(৬) শাকচর,(৭) টুমচর,(৮) চর রমনীমোহন ও(৯) বশিকপুর"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013027601",
@@ -12425,7 +12975,9 @@
    "boundaryBn": "নিম্নলিখিত ইউনিয়ন সমূহ ব্যতীত লক্ষীপুর সদর উপজেলা: (১)উত্তর হামছাদী,(২) দক্ষিন হামছাদী,(৩) দালাল বাজার,(৪) চর রুহিতা, (৫)পার্বতী নগর,(৬) শাকচর,(৭) টুমচর,(৮) চর রমনীমোহন ও(৯) বশিকপুর"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013027701",
@@ -12470,7 +13022,9 @@
    "boundaryBn": "(ক)রামগতি এবং(খ) কমলনগর উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013027801",
@@ -12515,7 +13069,9 @@
    "boundaryBn": "মীরশ্বরাই উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013027901",
@@ -12560,7 +13116,9 @@
    "boundaryBn": "ফটিকছড়ি উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013028001",
@@ -12605,7 +13163,9 @@
    "boundaryBn": "সন্দীপ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013028201",
@@ -12650,7 +13210,9 @@
    "boundaryBn": "(ক)হাটহাজারী উপজেলা এবং (খ)চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড ০১ ও ০২"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013028301",
@@ -12695,7 +13257,9 @@
    "boundaryBn": "রাউজান উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013028401",
@@ -12740,7 +13304,9 @@
    "boundaryBn": "(ক) রাংগুনিয়া উপজেলা (খ) বোয়ালখালী উপজেলার শ্রীপুর-খরনদ্বীপ ইউনিয়ন।"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013028501",
@@ -12785,7 +13351,9 @@
    "boundaryBn": "(ক) শ্রীপুর-খরনদ্বীপ ইউনিয় ব্যতীত বোয়ালখালী উপজেলা এবং (খ) চট্টগ্রাম সিটি কর্পোরেশরে ওয়ার্ড নম্বর-০৩,০৪,০৫,০৬, ও ০৭"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013028601",
@@ -12830,7 +13398,9 @@
    "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-১৫,১৬,১৭,১৮,১৯,২০,২১,২২,২৩,৩১,৩২,৩৩,৩৪,ও ৩৫"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013028701",
@@ -12875,7 +13445,9 @@
    "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-০৮,১১,১২,১৩,১৪,২৪,২৫ ও ২৬"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013028801",
@@ -12920,7 +13492,9 @@
    "boundaryBn": "চট্টগ্রাম সিটি কর্পোরেশনের ওয়ার্ড নম্বর-২৭,২৮,২৯,৩০,৩৬,৩৭,৩৮,৩৯,৪০ ও ৪১"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013028901",
@@ -12965,7 +13539,9 @@
    "boundaryBn": "পটিয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013029001",
@@ -13010,7 +13586,9 @@
    "boundaryBn": "(ক)আনোয়ারা উপজেলা এবং (খ)কর্ণফুলী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013029101",
@@ -13055,7 +13633,9 @@
    "boundaryBn": "(ক) চন্দনাইশ উপজেলা এবং (খ) সাতকানিয়া উপজেলার নিম্নলিখিত ইউনিয়নসমূহ: (১) কেওচিয়া (২)কালিয়াইশ (৩)বাজালিয়া (৪)ধর্মপুর (৫)পুরানগড় ও(৬) খাগরিয়া"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013029201",
@@ -13100,7 +13680,9 @@
    "boundaryBn": "(ক) লোহাগাড়া উপজেলা এবং (খ) নিম্নলিখিত ইউনিয়নসমূহ ব্যতীত সাতকানিয়া উপজেলা: (১) কেওচিয়া (২)কালিয়াইশ (৩)বাজালিয়া (৪)ধর্মপুর (৫)পুরানগড় ও(৬) খাগরিয়া"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013029301",
@@ -13145,7 +13727,9 @@
    "boundaryBn": "বাঁশখালী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013029401",
@@ -13190,7 +13774,9 @@
    "boundaryBn": "(ক) চকরিয়া উপজেলা এবং (খ)পেকুয়া উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013029501",
@@ -13235,7 +13821,9 @@
    "boundaryBn": "(ক)কুতুবদিয়া উপজেলা এবং (খ)মহেশখালী উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013029601",
@@ -13280,7 +13868,9 @@
    "boundaryBn": "(ক)কক্সবাজার সদর উপজেলা (খ) ঈদগাঁও উপজেলা এবং(গ) রামু উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013029701",
@@ -13325,7 +13915,9 @@
    "boundaryBn": "(ক)উখিয়া উপজেলা এবং(খ) টেকনাফ উপজেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 5,
+  "resignedOn": null
  },
  {
   "id": "013029801",
@@ -13370,7 +13962,9 @@
    "boundaryBn": "খাগড়াছড়ি পার্বত্য জেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013029901",
@@ -13415,7 +14009,9 @@
    "boundaryBn": "রাংগামাটি পার্বত্য জেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013030001",
@@ -13460,7 +14056,9 @@
    "boundaryBn": "বান্দরবান পার্বত্য জেলা"
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013030101",
@@ -13505,7 +14103,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 4,
+  "resignedOn": null
  },
  {
   "id": "013030201",
@@ -13550,7 +14150,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013030301",
@@ -13595,7 +14197,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013030401",
@@ -13640,7 +14244,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 3,
+  "resignedOn": null
  },
  {
   "id": "013030501",
@@ -13685,7 +14291,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013030601",
@@ -13730,7 +14338,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013030701",
@@ -13775,7 +14385,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013030801",
@@ -13820,7 +14432,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013030901",
@@ -13865,7 +14479,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013031001",
@@ -13910,7 +14526,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013031101",
@@ -13955,7 +14573,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013031201",
@@ -14000,7 +14620,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013031301",
@@ -14045,7 +14667,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013031401",
@@ -14090,7 +14714,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013031501",
@@ -14135,7 +14761,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013031601",
@@ -14180,7 +14808,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013031701",
@@ -14225,7 +14855,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013031801",
@@ -14270,7 +14902,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013031901",
@@ -14315,7 +14949,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032001",
@@ -14360,7 +14996,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032101",
@@ -14405,7 +15043,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032201",
@@ -14450,7 +15090,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 2,
+  "resignedOn": null
  },
  {
   "id": "013032301",
@@ -14495,7 +15137,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032401",
@@ -14540,7 +15184,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032501",
@@ -14585,7 +15231,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032601",
@@ -14630,7 +15278,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032701",
@@ -14675,7 +15325,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032801",
@@ -14720,7 +15372,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013032901",
@@ -14765,7 +15419,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033001",
@@ -14810,7 +15466,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033101",
@@ -14855,7 +15513,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033201",
@@ -14900,7 +15560,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033301",
@@ -14945,7 +15607,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033401",
@@ -14990,7 +15654,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033501",
@@ -15035,7 +15701,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033601",
@@ -15080,7 +15748,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033701",
@@ -15125,7 +15795,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033801",
@@ -15170,7 +15842,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013033901",
@@ -15215,7 +15889,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034001",
@@ -15260,7 +15936,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034101",
@@ -15305,7 +15983,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034201",
@@ -15350,7 +16030,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034301",
@@ -15395,7 +16077,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034401",
@@ -15440,7 +16124,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034501",
@@ -15485,7 +16171,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034601",
@@ -15530,7 +16218,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034701",
@@ -15575,7 +16265,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034801",
@@ -15620,7 +16312,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013034901",
@@ -15665,7 +16359,9 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  },
  {
   "id": "013035001",
@@ -15710,6 +16406,8 @@
    "boundaryBn": null
   },
   "offices": [],
-  "status": "Active"
+  "status": "Active",
+  "termsCount": 1,
+  "resignedOn": null
  }
 ]

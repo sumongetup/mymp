@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { members, bn } from '@/lib/data';
+import { allMembers as members, bn } from '@/lib/data';
 import { normalise } from '@/lib/search';
 import { requireAdmin } from '@/lib/admin/auth';
 import { hiddenList, overrideCounts } from '@/lib/admin/store';

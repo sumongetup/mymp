@@ -2,19 +2,20 @@
  "parliamentNo": 13,
  "overridesApplied": 0,
  "hidden": 0,
- "syncedAt": "2026-09-10T21:04:49.942Z",
- "builtAt": "2026-09-10T21:30:31.682Z",
+ "syncedAt": "2026-09-11T06:56:38.283Z",
+ "builtAt": "2026-09-11T07:04:26.292Z",
  "source": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/parliament/latest.json",
  "via": "engine",
  "counts": {
-  "members": 349,
-  "territorial": 299,
+  "members": 348,
+  "territorial": 298,
   "reserved": 50,
+  "resigned": 1,
   "parties": 11,
   "committees": 66,
   "committeesCurrent": 31,
   "sittings": 61,
-  "notices": 403,
+  "notices": 404,
   "returningMembers": 63
  }
 }

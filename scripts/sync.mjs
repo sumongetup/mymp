@@ -394,6 +394,10 @@ async function main() {
         term.isOppositionLeader && 'opposition-leader',
       ].filter(Boolean),
       status: clean(term.status),
+      // How many times the secretariat records this member as elected, this term included.
+      termsCount: typeof term.count === 'number' && term.count > 0 ? term.count : null,
+      // The source keeps a member who has resigned, with status "Resigned" and the term's end date.
+      resignedOn: clean(term.status) === 'Resigned' ? clean(term.endDate) : null,
     };
   });
 
@@ -447,7 +451,7 @@ async function main() {
   // ---- parties, derived from who actually holds seats ----
   const partyMap = new Map();
   for (const m of members) {
-    if (!m.party) continue;
+    if (!m.party || m.resignedOn !== null) continue; // a resigned member no longer holds the seat
     const e = partyMap.get(m.party.abbr) ?? {
       abbr: m.party.abbr, slug: slugify(m.party.abbr),
       nameBn: m.party.nameBn, nameEn: m.party.nameEn,
@@ -462,7 +466,7 @@ async function main() {
   // ---- seats ----
   const seats = members
     .filter((m) => m.seat)
-    .map((m) => ({ ...m.seat, memberId: m.id }))
+    .map((m) => ({ ...m.seat, memberId: m.id, vacantSince: m.resignedOn }))
     .sort((a, b) => a.no - b.no);
 
   // ---- earlier parliaments ----
@@ -510,7 +514,7 @@ async function main() {
   }
   {
     const bucket = new Map();
-    for (const m of members) if (m.party) countParty(bucket, m.party.abbr, m.party.nameBn, !!m.seat?.reserved);
+    for (const m of members) if (m.party && m.resignedOn === null) countParty(bucket, m.party.abbr, m.party.nameBn, !!m.seat?.reserved);
     partySeats[PARLIAMENT] = [...bucket.values()].sort((a, b) => b.territorial + b.reserved - (a.territorial + a.reserved));
   }
   for (const list of Object.values(priorTerms)) {
@@ -634,9 +638,10 @@ async function main() {
     source: mirror ? `${MIRROR_URL}/parliament/latest.json` : `${BASE}/api`,
     via: mirror ? 'engine' : 'live',
     counts: {
-      members: members.length,
-      territorial: members.filter((m) => m.seat && !m.seat.reserved).length,
-      reserved: members.filter((m) => m.seat?.reserved).length,
+      members: members.filter((m) => m.resignedOn === null).length,
+      territorial: members.filter((m) => m.resignedOn === null && m.seat && !m.seat.reserved).length,
+      reserved: members.filter((m) => m.resignedOn === null && m.seat?.reserved).length,
+      resigned: members.filter((m) => m.resignedOn !== null).length,
       parties: parties.length,
       committees: committees.length,
       committeesCurrent: committees.filter((c) => c.rosterCurrent).length,
@@ -661,7 +666,7 @@ async function main() {
   const searchIndex = [
     ...seats.map((s) => ['seat', s.nameBn ?? '', s.nameEn ?? '', `/ason/${s.slug}`, s.reserved ? 'সংরক্ষিত আসন' : 'আসন']),
     ...members.map((m) => ['member', m.nameBn ?? '', m.nameEn ?? '', `/mp/${m.slug}`,
-      [m.seat?.nameBn, m.party?.abbr].filter(Boolean).join(' · ')]),
+      [m.seat?.nameBn, m.party?.abbr, m.resignedOn ? 'পদত্যাগ করেছেন' : null].filter(Boolean).join(' · ')]),
     ...parties.map((p) => ['party', p.nameBn ?? '', `${p.nameEn ?? ''} ${p.abbr}`, `/dol/${p.slug}`, 'দল']),
     ...[...districts].map(([en, bnName]) => ['district', bnName, en, `/jela/${slugify(en)}`, 'জেলা']),
   ];

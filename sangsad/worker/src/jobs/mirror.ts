@@ -39,7 +39,8 @@ const MEMBER_KEYS = [
   'dateOfBirth', 'isFreedomFighter', 'email', 'presentAddressBng', 'permanentAddressBng', 'gender', 'photoUrl',
   'professionBn', 'speakerHeroSummaryBn', 'speakerDetailsBioBn', 'updatedAt',
 ] as const;
-const TERM_KEYS = ['parliamentNo', 'startDate', 'endDate', 'status', 'isPm', 'isSpeaker', 'isDeputySpeaker', 'isOppositionLeader'] as const;
+/** `count` is how many times the member has been elected, as the secretariat records it. */
+const TERM_KEYS = ['parliamentNo', 'startDate', 'endDate', 'status', 'count', 'isPm', 'isSpeaker', 'isDeputySpeaker', 'isOppositionLeader'] as const;
 const PARTY_KEYS = ['id', 'abbreviation', 'nameEng', 'nameBng'] as const;
 const CONSTITUENCY_KEYS = ['constituencyNo', 'constituencyEng', 'constituencyBng', 'boundaryDetails'] as const;
 const COMMITTEE_KEYS = ['id', 'nameEn', 'nameBn', 'type', 'startDate'] as const;

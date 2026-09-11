@@ -534,6 +534,17 @@
    "committeeId": "86"
   },
   {
+   "id": "864",
+   "type": "COMMITTEE",
+   "category": null,
+   "date": "2026-09-15",
+   "titleBn": "ত্রয়োদশ জাতীয় সংসদের তথ্য ও সম্প্রচার মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটির ১ম বৈঠক",
+   "titleEn": "1st Meeting of the Standing Committee on the Ministry of Information and Broadcasting of the 13th Parliament",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/db52310d-53a4-4e95-b8cd-93d527a454da.pdf",
+   "memberId": null,
+   "committeeId": "93"
+  },
+  {
    "id": "863",
    "type": "NOC_GO",
    "category": "NOC",

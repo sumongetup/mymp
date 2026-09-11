@@ -30,6 +30,8 @@ export interface Seat {
   nameEn: string | null;
   slug: string;
   boundaryBn: string | null;
+  /** Set when the member elected for this seat has resigned: the date the seat fell vacant. */
+  vacantSince?: string | null;
 }
 
 export interface Member {
@@ -66,6 +68,10 @@ export interface Member {
   seat: Seat | null;
   offices: string[];
   status: string | null;
+  /** Times elected, this term included, as the parliament secretariat records it. */
+  termsCount?: number | null;
+  /** The date the member resigned, when the source says so. */
+  resignedOn?: string | null;
 }
 
 export interface CommitteeMemberRef {
@@ -94,7 +100,12 @@ export const committeeCounts = () => ({
   pending: committees.filter((c) => !c.rosterCurrent).length,
 });
 
-export const members = membersJson as Member[];
+/** Everyone the source lists for this parliament, including members who have since resigned. */
+export const allMembers = membersJson as Member[];
+export const isResigned = (m: Member) => !!m.resignedOn;
+/** Sitting members: every count, list and statistic on the site is about them. */
+export const members = allMembers.filter((m) => !isResigned(m));
+export const resignedMembers = allMembers.filter(isResigned);
 export const committees = committeesJson as Committee[];
 export const parties = partiesJson as Party[];
 /** A seat's memberId is null when its holder has been hidden by an admin. */
@@ -151,8 +162,9 @@ export function bnGroup(n: number): string {
   return bn(`${rest},${last3}`);
 }
 
-const bySlug = new Map(members.map((m) => [m.slug, m]));
-const byId = new Map(members.map((m) => [m.id, m]));
+// Profiles stay reachable for members who have resigned.
+const bySlug = new Map(allMembers.map((m) => [m.slug, m]));
+const byId = new Map(allMembers.map((m) => [m.id, m]));
 
 export const getMember = (slug: string) => bySlug.get(slug);
 export const getMemberById = (id: string) => byId.get(id);

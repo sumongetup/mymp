@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
-  members, getMember, committeesOfMember, membersOfParty, districtOf,
+  members, allMembers, getMember, committeesOfMember, membersOfParty, districtOf,
   bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, newsForMember, partyColor,
 } from '@/lib/data';
 import { rolesOf, noticesForMember } from '@/lib/activity';
@@ -13,7 +13,7 @@ import MemberPhoto from '@/components/MemberPhoto';
 import Icon from '@/components/Icon';
 
 export function generateStaticParams() {
-  return members.map((m) => ({ slug: m.slug }));
+  return allMembers.map((m) => ({ slug: m.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Promise<Metadata> {
@@ -76,7 +76,9 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
     m.fatherBn && { label: 'পিতা', value: m.fatherBn },
     m.motherBn && { label: 'মাতা', value: m.motherBn },
     m.isFreedomFighter && { label: 'মুক্তিযোদ্ধা', value: 'হ্যাঁ' },
-    m.term?.start && { label: 'বর্তমান মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
+    m.term?.start && { label: m.resignedOn ? 'মেয়াদ' : 'বর্তমান মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
+    m.resignedOn && { label: 'পদত্যাগ', value: dateBn(m.resignedOn) ?? 'তারিখ পাওয়া যায়নি' },
+    m.termsCount && { label: 'সংসদ সদস্য নির্বাচিত', value: `মোট ${bn(m.termsCount)} বার` },
   ].filter(Boolean) as { label: string; value: string }[];
 
   const paragraphs = (m.bioBn ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
@@ -100,15 +102,21 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
         <MemberPhoto src={m.photoUrl} alt={m.nameBn ?? m.nameEn ?? ''} initial={initial(m)} size={120} className="ring-4 ring-paper" />
         <div className="grow flex flex-col gap-3 min-w-0">
           <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 rounded-full bg-brandsoft text-brand text-[12.5px] font-bold">
-              বর্তমান সদস্য · ত্রয়োদশ সংসদ
-            </span>
+            {m.resignedOn ? (
+              <span className="px-3 py-1 rounded-full bg-warnsoft text-warn text-[12.5px] font-bold">
+                পদত্যাগ করেছেন · {dateBn(m.resignedOn)}
+              </span>
+            ) : (
+              <span className="px-3 py-1 rounded-full bg-brandsoft text-brand text-[12.5px] font-bold">
+                বর্তমান সদস্য · ত্রয়োদশ সংসদ
+              </span>
+            )}
             {roles.map((r) => (
               <span key={r} className="px-3 py-1 rounded-full bg-ink text-white text-[12.5px] font-bold">{r}</span>
             ))}
-            {prior.length > 0 && (
+            {(m.termsCount ?? prior.length + 1) > 1 && (
               <span className="px-3 py-1 rounded-full border border-rule text-[12.5px] font-semibold text-inksoft">
-                এর আগে {bn(prior.length)} বার সংসদ সদস্য
+                মোট {bn(m.termsCount ?? prior.length + 1)} বার নির্বাচিত
               </span>
             )}
             {m.seat?.reserved && (
@@ -186,7 +194,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 <span className="w-[150px] sm:w-[190px] shrink-0 text-[13.5px] font-semibold text-brand">{parliamentLabel(meta.parliamentNo)}</span>
                 <span className="grow min-w-0 flex flex-col">
                   <span className="font-semibold truncate">{m.seat?.nameBn ?? 'আসন উল্লেখ নেই'}</span>
-                  <span className="text-[12.5px] text-muted">বর্তমান মেয়াদ</span>
+                  <span className="text-[12.5px] text-muted">{m.resignedOn ? `পদত্যাগ করেছেন ${dateBn(m.resignedOn)}` : 'বর্তমান মেয়াদ'}</span>
                 </span>
                 <span className="shrink-0 flex items-center gap-2 text-[13px] font-semibold text-inksoft">
                   <PartyDot abbr={m.party?.abbr} />
@@ -210,9 +218,19 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               ))}
             </Card>
             <p className="text-[12.5px] text-muted leading-relaxed">
-              {prior.length
-                ? `সংসদের তথ্যভান্ডার অনুযায়ী এটি ${parliamentOrdinal(prior.length + 1).replace(' সংসদ', '')} মেয়াদ। `
-                : 'সংসদের তথ্যভান্ডারে এই সদস্যের আগের কোনো মেয়াদ পাওয়া যায়নি। '}
+              {m.termsCount
+                ? `সংসদ সচিবালয়ের তথ্য অনুযায়ী তিনি মোট ${bn(m.termsCount)} বার সংসদ সদস্য নির্বাচিত হয়েছেন${
+                    m.termsCount > 1
+                      ? prior.length >= m.termsCount - 1
+                        ? '। '
+                        : prior.length === 0
+                          ? `; আগের ${bn(m.termsCount - 1)}টি মেয়াদের বিস্তারিত সংসদের তথ্যভান্ডারে পাওয়া যায়নি। `
+                          : `; আগের ${bn(m.termsCount - 1)}টি মেয়াদের মধ্যে ${bn(prior.length)}টির বিস্তারিত এখানে আছে। `
+                      : '। '
+                  }`
+                : prior.length
+                  ? `সংসদের তথ্যভান্ডার অনুযায়ী এটি ${parliamentOrdinal(prior.length + 1).replace(' সংসদ', '')} মেয়াদ। `
+                  : 'সংসদের তথ্যভান্ডারে এই সদস্যের আগের কোনো মেয়াদ পাওয়া যায়নি। '}
               সেখানে ৪র্থ, ৫ম ও ৭ম থেকে ১২শ সংসদের রেকর্ড আছে; ১ম–৩য় ও ৬ষ্ঠ সংসদের তালিকা নেই, তাই তার আগের মেয়াদ থাকলে এখানে দেখা যাবে না।
             </p>
           </section>
@@ -364,8 +382,14 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             )}
             {m.presentAddressBn && (
               <div className="flex flex-col gap-1 border-t border-rule pt-3">
-                <span className="text-[12px] font-bold tracking-[1px] text-muted">ঠিকানা</span>
+                <span className="text-[12px] font-bold tracking-[1px] text-muted">{m.permanentAddressBn && m.permanentAddressBn !== m.presentAddressBn ? 'বর্তমান ঠিকানা' : 'ঠিকানা'}</span>
                 <span className="text-[14px] leading-relaxed">{m.presentAddressBn}</span>
+              </div>
+            )}
+            {m.permanentAddressBn && m.permanentAddressBn !== m.presentAddressBn && (
+              <div className="flex flex-col gap-1 border-t border-rule pt-3">
+                <span className="text-[12px] font-bold tracking-[1px] text-muted">স্থায়ী ঠিকানা</span>
+                <span className="text-[14px] leading-relaxed">{m.permanentAddressBn}</span>
               </div>
             )}
           </Card>
