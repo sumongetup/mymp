@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
-import { meta, ecs, bn, dateBn, statistics, committeeCounts } from '@/lib/data';
+import { meta, ecs, bn, dateBn, statistics, committeeCounts, GENERAL_SEATS } from '@/lib/data';
 import { Page, PageHead, Card } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function AboutPage() {
           <h2 className="display text-[21px] font-bold">এই সাইটে কী আছে</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
             ত্রয়োদশ জাতীয় সংসদের {bn(s.total)} জন সদস্যের প্রত্যেকের একটি করে পাতা: নাম, ছবি, দল, আসন,
-            জন্মতারিখ, পেশা ও দাপ্তরিক ইমেইল। {bn(300)}টি আসনের প্রতিটির পাতা, {bn(cc.total)}টি
+            জন্মতারিখ, পেশা ও দাপ্তরিক ইমেইল। {bn(GENERAL_SEATS)}টি আসনের প্রতিটির পাতা, {bn(cc.total)}টি
             সংসদীয় কমিটি, দলভিত্তিক তালিকা, আর পুরো সংসদের পরিসংখ্যান। খোঁজার ঘরে বাংলা বা ইংরেজি, যেভাবে
             খুশি লেখা যায়।
           </p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { members, parties, meta, bn, dateBn, statistics, districtOf, getMemberById } from '@/lib/data';
+import { members, parties, meta, bn, dateBn, statistics, districtOf, getMemberById, GENERAL_SEATS } from '@/lib/data';
 import { allStories } from '@/lib/newsView';
 import { latestSession, latestSitting, sessionLabel, officers, memberNoticeCount, totalSittings, ROLE_LABELS, daysSince } from '@/lib/activity';
 import { Page, Card, MemberCard, CompositionBar, Empty, SectionHead, DocLink } from '@/components/ui';
@@ -78,7 +78,7 @@ export default function Home() {
               </h1>
               {/* The owner's line said "সংসদে উপস্থিতি"; no open source has attendance (see /parisonkhan), so it names the notices member pages do carry. */}
               <p className="rise [--rise-i:2] text-[16px] sm:text-[19px] leading-relaxed text-inksoft max-w-[600px] text-pretty">
-                {bn(stats.total)} জন সদস্য, {bn(300)} আসন, {bn(parties.length)}টি দল। প্রতিটি সদস্যের পরিচিতি, ভোটের ফল,
+                {bn(stats.total)} জন সদস্য, {bn(GENERAL_SEATS)} আসন, {bn(parties.length)}টি দল। প্রতিটি সদস্যের পরিচিতি, ভোটের ফল,
                 কমিটি ও সংসদের প্রজ্ঞাপন, সবই সূত্রসহ
               </p>
               {/* Above the chips and the card that follow: each animates on its own layer, and later ones paint on top. */}

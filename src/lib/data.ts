@@ -349,8 +349,10 @@ export function initial(m: Member): string {
 
 /* ---------------- statistics, all computed from the snapshot ---------------- */
 
-/** Seats in the House: 300 elected and 50 reserved for women (Constitution art. 65). */
-export const HOUSE_SEATS = 350;
+/** Seats in the House, from the Constitution (art. 65): 300 elected and 50 reserved for women. Named here so no page writes the numbers itself. */
+export const GENERAL_SEATS = 300;
+export const RESERVED_SEATS = 50;
+export const HOUSE_SEATS = GENERAL_SEATS + RESERVED_SEATS;
 
 export function statistics() {
   const territorial = members.filter((m) => m.seat && !m.seat.reserved);

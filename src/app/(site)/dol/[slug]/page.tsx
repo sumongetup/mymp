@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { shareGraph, shareTwitter } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import {
-  parties, getParty, membersOfParty, getMemberById, bn, dateBn, partyColor, initial, statistics, OFFICE_LABELS, type Party, type Member,
+  parties, getParty, membersOfParty, getMemberById, bn, dateBn, partyColor, initial, statistics, OFFICE_LABELS, GENERAL_SEATS, type Party, type Member,
 } from '@/lib/data';
 import { rolesOf, officers, ROLE_LABELS } from '@/lib/activity';
 import { Page, PageHead, Card, Stat, MemberRow, Breadcrumb, PartyMark, LogoCredit } from '@/components/ui';
@@ -155,7 +155,7 @@ function inParliamentBn(p: Party, majority: number): string {
   const beyond = n >= majority ? `, যা সংখ্যাগরিষ্ঠতার জন্য প্রয়োজনীয় ${bn(majority)}-এর ${n - majority >= 30 ? 'অনেক ' : ''}বেশি` : '';
   const seats =
     t > 0
-      ? `৩০০টি নির্বাচনী আসনের মধ্যে ${bn(t)}টি এখন দলটির${r > 0 ? `; সংরক্ষিত নারী আসন যোগ করে সংসদে দলের মোট সদস্য ${bn(n)} জন` : ''}${beyond}।`
+      ? `${bn(GENERAL_SEATS)}টি নির্বাচনী আসনের মধ্যে ${bn(t)}টি এখন দলটির${r > 0 ? `; সংরক্ষিত নারী আসন যোগ করে সংসদে দলের মোট সদস্য ${bn(n)} জন` : ''}${beyond}।`
       : `দলটির কোনো নির্বাচনী আসন নেই; সংরক্ষিত নারী আসনে দলের সদস্য ${bn(r)} জন।`;
   const held = HOUSE_ROLES.filter((role) =>
     officers.some((o) => o.role === role && !!o.memberId && getMemberById(o.memberId)?.party?.abbr === p.abbr),

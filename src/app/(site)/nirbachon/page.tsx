@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
-import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs, partyShortBn } from '@/lib/data';
+import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs, partyShortBn, GENERAL_SEATS } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
 import { parliament } from '@/lib/activity';
 import { parliamentsWithRecords, partySeatsOf, parliamentLabel, resultForSeat } from '@/lib/history';
@@ -43,10 +43,10 @@ export default function ElectionPage() {
       <PageHead
         eyebrow="২০২৬"
         title="ত্রয়োদশ জাতীয় সংসদ নির্বাচন"
-        lede={`${bn(300)}টি আসনে নির্বাচন। বর্তমানে ${bn(s.territorial)}টি আসনে সদস্য আছেন, সেই সঙ্গে ${bn(s.reserved)}টি সংরক্ষিত নারী আসন মিলিয়ে সংসদে ${bn(s.total)} জন।`}
+        lede={`${bn(GENERAL_SEATS)}টি আসনে নির্বাচন। বর্তমানে ${bn(s.territorial)}টি আসনে সদস্য আছেন, সেই সঙ্গে ${bn(s.reserved)}টি সংরক্ষিত নারী আসন মিলিয়ে সংসদে ${bn(s.total)} জন।`}
         aside={
           <div className="grid grid-cols-3 gap-3">
-            <Stat label="আসন" value={bn(300)} />
+            <Stat label="আসন" value={bn(GENERAL_SEATS)} />
             <Stat label="পূর্ণ" value={bn(s.territorial)} />
             <Stat label="দল" value={bn(parties.length)} />
           </div>
