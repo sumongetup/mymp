@@ -210,7 +210,12 @@ export function memberLinks(wikitext: string): { target: string; label: string }
   return out;
 }
 
-export async function runSocialWiki(db: Db): Promise<{ itemsFound: number; itemsNew: number }> {
+/**
+ * Sitting territorial members and the Wikipedia articles that are theirs
+ * (Bangla and English): linked from their constituency article under their
+ * name, and naming their seat. Shared by the social and biography jobs.
+ */
+export async function memberArticles(db: Db) {
   const [parl] = await db.select({ id: parliaments.id }).from(parliaments).where(eq(parliaments.number, 13));
   if (!parl) throw new Error('parliament 13 not seeded');
   const rows = await db
@@ -221,6 +226,8 @@ export async function runSocialWiki(db: Db): Promise<{ itemsFound: number; items
       id: members.sourceExternalId,
       nameBn: members.nameBn,
       nameEn: members.nameEn,
+      dateOfBirth: members.dateOfBirth,
+      professionBn: members.professionBn,
       endDate: memberTerms.endDate,
     })
     .from(memberTerms)
@@ -266,12 +273,22 @@ export async function runSocialWiki(db: Db): Promise<{ itemsFound: number; items
   }
   process.stdout.write(`  articles set aside because they never name the member's seat: ${namesakes}\n`);
 
-  const found: { id: string; seat: string; name: string; links: Links; sources: string[]; conflicts: SocialKey[] }[] = [];
+  const reads = new Map<string, { page: WikiPage; host: string }[]>();
   for (const m of sitting) {
     const a = articleOf.get(m.id!)!;
-    const reads: { page: WikiPage; host: string }[] = [];
-    if (a.bn && bnArticles.get(a.bn)) reads.push({ page: bnArticles.get(a.bn)!, host: 'bn.wikipedia.org' });
-    if (a.en && enArticles.get(a.en)) reads.push({ page: enArticles.get(a.en)!, host: 'en.wikipedia.org' });
+    const list: { page: WikiPage; host: string }[] = [];
+    if (a.bn && bnArticles.get(a.bn)) list.push({ page: bnArticles.get(a.bn)!, host: 'bn.wikipedia.org' });
+    if (a.en && enArticles.get(a.en)) list.push({ page: enArticles.get(a.en)!, host: 'en.wikipedia.org' });
+    reads.set(m.id!, list);
+  }
+  return { sitting, reads };
+}
+
+export async function runSocialWiki(db: Db): Promise<{ itemsFound: number; itemsNew: number }> {
+  const { sitting, reads: readsOf } = await memberArticles(db);
+  const found: { id: string; seat: string; name: string; links: Links; sources: string[]; conflicts: SocialKey[] }[] = [];
+  for (const m of sitting) {
+    const reads = readsOf.get(m.id!)!;
     const merged: Links = {};
     const conflicts = new Set<SocialKey>();
     const sources = new Set<string>();
@@ -302,7 +319,7 @@ export async function runSocialWiki(db: Db): Promise<{ itemsFound: number; items
   const byNetwork = (k: SocialKey) => withLinks.filter((f) => f.links[k]).length;
   const summary = {
     members: sitting.length,
-    withArticle: [...articleOf.values()].filter((a) => a.bn || a.en).length,
+    withArticle: [...readsOf.values()].filter((r) => r.length).length,
     withAnyLink: withLinks.length,
     facebook: byNetwork('facebook'),
     x: byNetwork('x'),

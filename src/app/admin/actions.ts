@@ -7,7 +7,7 @@ import { requireAdmin, requireSuperAdmin } from '@/lib/admin/auth';
 import {
   EDITABLE, type EntityType, setOverride, clearOverride, setHidden,
   upsertNews, setNewsStatus, resolveCorrection, addAdmin, removeAdmin, audit,
-  upsertResult, setResultStatus, socialOverrides, dropSocialSource,
+  upsertResult, setResultStatus, socialOverrides, dropSocialSource, dropBioFromWiki,
 } from '@/lib/admin/store';
 import { SOCIAL_HOSTS, validSocialUrl, parseSocialLines } from '@/lib/admin/social-import';
 import { allMembers } from '@/lib/data';
@@ -69,6 +69,7 @@ export async function saveOverrides(fd: FormData) {
 
   let invalid: string | null = null;
   let socialSaved = false;
+  const bioSaved: string[] = [];
   for (const f of EDITABLE[type]) {
     const next = orNull(str(fd, `field__${f.key}`));
     const current = orNull(str(fd, `current__${f.key}`));
@@ -79,7 +80,9 @@ export async function saveOverrides(fd: FormData) {
     }
     await setOverride(me, type, id, f.key, next, current);
     if (f.key in SOCIAL_HOSTS) socialSaved = true;
+    if (['educationBn', 'birthPlaceBn', 'professionBn'].includes(f.key)) bioSaved.push(f.key);
   }
+  if (type === 'member' && bioSaved.length) await dropBioFromWiki(me, id, bioSaved);
   // The editor has now seen and saved this member's links on one form.
   if (type === 'member' && socialSaved) await dropSocialSource(me, id);
   if (invalid) redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?invalid=${invalid}`);

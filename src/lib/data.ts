@@ -70,6 +70,14 @@ export interface Member {
   website: string | null;
   /** The Wikipedia article(s) the links above were read from, space-separated; null once an editor has saved them. */
   socialSource?: string | null;
+  /** Schools and degrees, from an editor or the member's Wikipedia infobox (see bioFromWiki). */
+  educationBn?: string | null;
+  /** Birthplace, from an editor or the member's Wikipedia infobox (see bioFromWiki). */
+  birthPlaceBn?: string | null;
+  /** Which of educationBn, birthPlaceBn and professionBn came from Wikipedia, comma-separated. */
+  bioFromWiki?: string | null;
+  /** The Wikipedia article(s) those came from, space-separated. */
+  bioSource?: string | null;
   party: { abbr: string; nameBn: string | null; nameEn: string | null } | null;
   seat: Seat | null;
   offices: string[];

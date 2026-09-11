@@ -17,6 +17,7 @@ import { runSourcesInspect } from './jobs/sources-inspect';
 import { runNews, runNewsRematch } from './jobs/news';
 import { runResults2026 } from './jobs/results-wiki';
 import { runSocialWiki } from './jobs/social-wiki';
+import { runBioWiki } from './jobs/bio-wiki';
 
 config({ path: resolve(import.meta.dirname, '../../.env') });
 
@@ -50,6 +51,8 @@ const jobs: Record<string, Job> = {
   'results:2026:refresh': () => runResults2026(getDb(), 13, { refresh: true }),
   /** Official website and social links of sitting members from their Wikipedia articles, into mymp.bd. */
   'social:wikipedia': () => runSocialWiki(getDb()),
+  /** Education, birthplace and missing professions of sitting members from their Wikipedia infobox, into mymp.bd. */
+  'bio:wikipedia': () => runBioWiki(getDb()),
 };
 
 async function run(name: string) {

@@ -74,17 +74,22 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   // and the presiding-officers list (whips and leaders). Show each once.
   const roles = [...new Set([...m.offices.map((o) => OFFICE_LABELS[o] ?? o), ...rolesOf(m.id)])];
 
+  // Facts read from the member's Wikipedia infobox are marked, with the article linked under the list.
+  const fromWiki = new Set((m.bioFromWiki ?? '').split(',').map((x) => x.trim()).filter(Boolean));
   const facts = [
     m.dateOfBirth && { label: 'জন্ম', value: `${dateBn(m.dateOfBirth)}${age !== null ? ` · ${bn(age)} বছর` : ''}` },
+    m.birthPlaceBn && { label: 'জন্মস্থান', value: m.birthPlaceBn, wiki: fromWiki.has('birthPlaceBn') },
     m.gender && { label: 'লিঙ্গ', value: m.gender === 'Female' ? 'নারী' : 'পুরুষ' },
-    m.professionBn && { label: 'পেশা', value: m.professionBn },
+    m.educationBn && { label: 'শিক্ষা', value: m.educationBn, wiki: fromWiki.has('educationBn') },
+    m.professionBn && { label: 'পেশা', value: m.professionBn, wiki: fromWiki.has('professionBn') },
     m.fatherBn && { label: 'পিতা', value: m.fatherBn },
     m.motherBn && { label: 'মাতা', value: m.motherBn },
     m.isFreedomFighter && { label: 'মুক্তিযোদ্ধা', value: 'হ্যাঁ' },
     m.term?.start && { label: m.resignedOn ? 'মেয়াদ' : 'বর্তমান মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
     m.resignedOn && { label: 'পদত্যাগ', value: dateBn(m.resignedOn) ?? 'তারিখ পাওয়া যায়নি' },
     m.termsCount && { label: 'সংসদ সদস্য নির্বাচিত', value: `মোট ${bn(m.termsCount)} বার` },
-  ].filter(Boolean) as { label: string; value: string }[];
+  ].filter(Boolean) as { label: string; value: string; wiki?: boolean }[];
+  const wikiSources = facts.some((f) => f.wiki) ? (m.bioSource ?? '').split(' ').filter(Boolean) : [];
 
   const paragraphs = (m.bioBn ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
   const year = electionYear(meta.parliamentNo);
@@ -201,7 +206,26 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             )}
             {facts.length ? (
               <Card className="px-5 py-2 text-[14.5px]">
-                {facts.map((b) => <Row key={b.label} label={b.label}>{b.value}</Row>)}
+                {facts.map((b) => (
+                  <Row key={b.label} label={b.label}>
+                    {b.value}
+                    {b.wiki && <sup className="ms-0.5 text-brand font-bold" title="উইকিপিডিয়া থেকে">*</sup>}
+                  </Row>
+                ))}
+                {wikiSources.length > 0 && (
+                  <p className="py-2.5 text-[12.5px] text-muted leading-relaxed">
+                    <span className="text-brand font-bold">*</span> চিহ্নিত তথ্য সদস্যের{' '}
+                    {wikiSources.map((u, i) => (
+                      <span key={u}>
+                        <a href={u} target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">
+                          উইকিপিডিয়া নিবন্ধ{wikiSources.length > 1 ? (/\/\/bn\./.test(u) ? ' (বাংলা)' : ' (ইংরেজি)') : ''}
+                        </a>
+                        {i < wikiSources.length - 1 ? ' ও ' : ''}
+                      </span>
+                    ))}{' '}
+                    থেকে নেওয়া; সংসদ বা নির্বাচন কমিশনের নথির সঙ্গে মিলিয়ে দেখা হয়নি। ভুল দেখলে জানান।
+                  </p>
+                )}
               </Card>
             ) : (
               <Empty title="পরিচিতির তথ্য সংসদের তথ্যভান্ডারে নেই।" />

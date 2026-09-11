@@ -9,6 +9,8 @@ export const EDITABLE: Record<EntityType, { key: string; label: string; multilin
     { key: 'nameBn', label: 'নাম (বাংলা)' },
     { key: 'nameEn', label: 'নাম (English)' },
     { key: 'professionBn', label: 'পেশা' },
+    { key: 'educationBn', label: 'শিক্ষা', multiline: true, hint: 'প্রতিষ্ঠান ও ডিগ্রি; একাধিক হলে সেমিকোলন (;) দিয়ে আলাদা করুন।' },
+    { key: 'birthPlaceBn', label: 'জন্মস্থান' },
     { key: 'email', label: 'দাপ্তরিক ইমেইল' },
     { key: 'presentAddressBn', label: 'বর্তমান ঠিকানা', multiline: true },
     { key: 'bioBn', label: 'জীবনী', multiline: true },
@@ -142,7 +144,7 @@ export async function socialOverrides(ids: string[]): Promise<Map<string, Record
 }
 
 export async function setOverride(a: Actor, type: EntityType, id: string, field: string, value: string | null, oldValue: string | null) {
-  if (!EDITABLE[type].some((f) => f.key === field)) throw new Error(`Field ${field} is not editable on ${type}.`);
+  if (!EDITABLE[type].some((f) => f.key === field) && !(type === 'member' && field === 'bioFromWiki')) throw new Error(`Field ${field} is not editable on ${type}.`);
   const db = supabaseAdmin();
   await db.from('overrides').upsert(
     { entity_type: type, entity_id: id, field, value, updated_by: a.id, updated_at: new Date().toISOString() },
@@ -159,6 +161,20 @@ export async function dropSocialSource(a: Actor, id: string) {
   const { data } = await supabaseAdmin()
     .from('overrides').select('value').match({ entity_type: 'member', entity_id: id, field: 'socialSource' }).maybeSingle();
   if (data) await clearOverride(a, 'member', id, 'socialSource', (data.value as string | null) ?? null);
+}
+
+/**
+ * Once an editor saves education, birthplace or profession, that field is the
+ * editor's: it leaves the list of fields shown as read from Wikipedia.
+ */
+export async function dropBioFromWiki(a: Actor, id: string, fields: string[]) {
+  const { data } = await supabaseAdmin()
+    .from('overrides').select('value').match({ entity_type: 'member', entity_id: id, field: 'bioFromWiki' }).maybeSingle();
+  if (!data?.value) return;
+  const before = String(data.value);
+  const left = before.split(',').map((x) => x.trim()).filter((x) => x && !fields.includes(x));
+  if (left.length) await setOverride(a, 'member', id, 'bioFromWiki', left.join(','), before);
+  else await clearOverride(a, 'member', id, 'bioFromWiki', before);
 }
 
 export async function clearOverride(a: Actor, type: EntityType, id: string, field: string, oldValue: string | null) {

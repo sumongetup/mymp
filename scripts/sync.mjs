@@ -377,6 +377,10 @@ async function main() {
       // the engine's reading of the member's Wikipedia article (socialSource
       // then names it). Nothing here comes from parliament.gov.bd.
       facebook: null, x: null, youtube: null, instagram: null, website: null, socialSource: null,
+      // Education and birthplace likewise come only from overrides: an editor,
+      // or the engine's reading of the member's Wikipedia infobox (bioFromWiki
+      // names those fields, bioSource the articles).
+      educationBn: null, birthPlaceBn: null, bioFromWiki: null, bioSource: null,
       _match: { empId: m.empId ?? null, nameKey: nameKey(m.nameEng), dob: clean(m.dateOfBirth), seatNo, district: districtKey(c.constituencyEng), seatKey: seatKey(c.constituencyEng) }, // internal, stripped before writing
       party: p.abbreviation ? { abbr: p.abbreviation, nameBn: clean(p.nameBng), nameEn: clean(p.nameEng) } : null,
       seat: seatNo

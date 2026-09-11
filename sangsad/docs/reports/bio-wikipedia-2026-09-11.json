@@ -1,0 +1,2788 @@
+{
+ "generatedAt": "2026-09-11T10:30:16.400Z",
+ "members": 294,
+ "withArticle": 255,
+ "education": 75,
+ "educationFromEnglish": 24,
+ "birthPlace": 207,
+ "birthPlaceFromEnglish": 82,
+ "professionWhereParliamentHasNone": 36,
+ "setAsideForBirthYear": 2,
+ "items": [
+  {
+   "id": "013000601",
+   "seat": "দিনাজপুর-১",
+   "name": "মোঃ মনজুরুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE"
+   ],
+   "birthPlaceBn": "ভাবকী, বীরগঞ্জ, দিনাজপুর",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013000701",
+   "seat": "দিনাজপুর-২",
+   "name": "মোঃ সাদিক রিয়াজ",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A6%BF%E0%A6%95_%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%9C"
+   ],
+   "birthPlaceBn": "দৌলা, বোচাগঞ্জ, দিনাজপুর",
+   "professionBn": "ব্যবসা"
+  },
+  {
+   "id": "013000801",
+   "seat": "দিনাজপুর-৩",
+   "name": "সৈয়দ জাহাঙ্গীর আলম",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Syed_Jahangir_Alam"
+   ],
+   "educationBn": "Dinajpur Zilla School",
+   "birthPlaceBn": "Balubari, Dinajpur"
+  },
+  {
+   "id": "013000901",
+   "seat": "দিনাজপুর-৪",
+   "name": "মোঃ আখতারুজ্জামান মিয়া",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%96%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE"
+   ],
+   "birthPlaceBn": "দিনাজপুর জেলা, পূর্ব পাকিস্তান (বর্তমানে- বাংলাদেশ)"
+  },
+  {
+   "id": "013001001",
+   "seat": "দিনাজপুর-৫",
+   "name": "এ, জেড, এম, রেজওয়ানুল হক",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%9C%E0%A7%87%E0%A6%A1_%E0%A6%8F%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95"
+   ],
+   "birthPlaceBn": "পার্বতীপুর, দিনাজপুর জেলা"
+  },
+  {
+   "id": "013001201",
+   "seat": "নীলফামারী-১",
+   "name": "মোঃ আব্দুস সাত্তার",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B8_%E0%A6%B8%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "ডিমলা, নীলফামারী"
+  },
+  {
+   "id": "013001301",
+   "seat": "নীলফামারী-২",
+   "name": "আলফারুক আব্দুল লতীফ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B2_%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%95_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B2%E0%A6%A4%E0%A7%80%E0%A6%AB"
+   ],
+   "birthPlaceBn": "নীলফামারী"
+  },
+  {
+   "id": "013001401",
+   "seat": "নীলফামারী-৩",
+   "name": "ওবায়দুল্লাহ সালাফী",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Obaidullah_Salafi"
+   ],
+   "birthPlaceBn": "Nilphamari, Bangladesh"
+  },
+  {
+   "id": "013001501",
+   "seat": "নীলফামারী-৪",
+   "name": "আব্দুল মুনতাকিম",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A7%81%E0%A6%A8%E0%A6%A4%E0%A6%BE%E0%A6%95%E0%A6%BF%E0%A6%AE"
+   ],
+   "birthPlaceBn": "রেল বাজার, সৈয়দপুর, নীলফামারী",
+   "professionBn": "শিক্ষক"
+  },
+  {
+   "id": "013001601",
+   "seat": "লালমনিরহাট-১",
+   "name": "মোঃ হাসান রাজীব প্রধান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%AC_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8"
+   ],
+   "birthPlaceBn": "শ্রীরামপুর, পাটগ্রাম, লালমনিরহাট, বাংলাদেশ"
+  },
+  {
+   "id": "013001701",
+   "seat": "লালমনিরহাট-২",
+   "name": "মোঃ রোকন উদ্দীন বাবুল",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%8B%E0%A6%95%E0%A6%A8_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%AC%E0%A7%81%E0%A6%B2"
+   ],
+   "birthPlaceBn": "উত্তর বত্রিশ হাজারী, কালীগঞ্জ, লালমনিরহাট"
+  },
+  {
+   "id": "013001801",
+   "seat": "লালমনিরহাট-৩",
+   "name": "আসাদুল হাবিব দুলু",
+   "from": {
+    "educationBn": "bn",
+    "professionBn": "bn",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%AC_%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%81",
+    "https://en.wikipedia.org/wiki/Asadul_Habib_Dulu"
+   ],
+   "educationBn": "রাজশাহী বিশ্ববিদ্যালয়",
+   "professionBn": "শিক্ষকতা, ব্যবসা",
+   "birthPlaceBn": "Lalmonirhat District, East Pakistan"
+  },
+  {
+   "id": "013001901",
+   "seat": "রংপুর-১",
+   "name": "মোঃ রায়হান সিরাজী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B0%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%80"
+   ],
+   "birthPlaceBn": "পশ্চিম বড়বিল, গংগাচড়া, রংপুর"
+  },
+  {
+   "id": "013002001",
+   "seat": "রংপুর-২",
+   "name": "এ টি এম আজহারুল ইসলাম",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F._%E0%A6%9F%E0%A6%BF._%E0%A6%8F%E0%A6%AE._%E0%A6%86%E0%A6%9C%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "রংপুর জেলা, পূর্ববঙ্গ, পাকিস্তান অধিরাজ্য"
+  },
+  {
+   "id": "013002101",
+   "seat": "রংপুর-৩",
+   "name": "মোঃ মাহবুবুর রহমান (বেলাল)",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AC%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B2"
+   ],
+   "birthPlaceBn": "রংপুর মহানগর"
+  },
+  {
+   "id": "013002201",
+   "seat": "রংপুর-৪",
+   "name": "আখতার হোসেন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%96%E0%A6%A4%E0%A6%BE%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয় (এল.এল.বি)",
+   "birthPlaceBn": "সরদা তালুক, কাউনিয়া, রংপুর, বাংলাদেশ"
+  },
+  {
+   "id": "013002301",
+   "seat": "রংপুর-৫",
+   "name": "মোঃ গোলাম রব্বানী",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%97%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B0%E0%A6%AC%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A7%80"
+   ],
+   "educationBn": "রাণীপুকুর স্কুল এন্ড কলেজ; কারমাইকেল কলেজ; রাজশাহী বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "মিঠাপুকুর, রংপুর জেলা"
+  },
+  {
+   "id": "013002601",
+   "seat": "কুড়িগ্রাম-২",
+   "name": "আতিকুর রহমান মোজাহিদ",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A4%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়; আন্তর্জাতিক ইসলামি বিশ্ববিদ্যালয় মালয়েশিয়া",
+   "birthPlaceBn": "টগরাইহাট, রাজারহাট, কুড়িগ্রাম"
+  },
+  {
+   "id": "013000201",
+   "seat": "পঞ্চগড়-২",
+   "name": "ফরহাদ হোসেন আজাদ",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%B0%E0%A6%B9%E0%A6%BE%E0%A6%A6_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_%E0%A6%86%E0%A6%9C%E0%A6%BE%E0%A6%A6",
+    "https://en.wikipedia.org/wiki/Farhad_Hossain_Azad"
+   ],
+   "birthPlaceBn": "বোদা, পঞ্চগড়, পূর্ব পাকিস্তান, পাকিস্তান",
+   "professionBn": "ব্যাবসা",
+   "educationBn": "University of Dhaka"
+  },
+  {
+   "id": "013003101",
+   "seat": "গাইবান্ধা-৩",
+   "name": "আবুল কাওছার মোহাম্মদ নজরুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Abul_Kawsar_Mohammad_Nazrul_Islam"
+   ],
+   "birthPlaceBn": "Palashbari, Bangladesh"
+  },
+  {
+   "id": "013003201",
+   "seat": "গাইবান্ধা-৪",
+   "name": "মোহাম্মদ শামীম কায়সার",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shamim_Kaisar_Lincoln"
+   ],
+   "birthPlaceBn": "Gobindaganj Upazila, Gaibandha, Bangladesh"
+  },
+  {
+   "id": "013003301",
+   "seat": "গাইবান্ধা-৫",
+   "name": "মোঃ আব্দুল ওয়ারেছ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%9B"
+   ],
+   "birthPlaceBn": "গাইবান্ধা জেলা, সাঘাটা উপজেলার, জুমারবাড়ি, ইউনিয়নের মেছট গ্রামে, বাংলাদেশ"
+  },
+  {
+   "id": "013004101",
+   "seat": "বগুড়া-৬",
+   "name": "মোঃ রেজাউল করিম বাদশা",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rezaul_Karim_Badsha"
+   ],
+   "birthPlaceBn": "Bogra"
+  },
+  {
+   "id": "013004301",
+   "seat": "চাঁপাইনবাবগঞ্জ-১",
+   "name": "মোঃ কেরামত আলী",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%3A_%E0%A6%95%E0%A7%87%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%A4_%E0%A6%86%E0%A6%B2%E0%A7%80"
+   ],
+   "educationBn": "মাস্টার্স ও পিএইচডি, রাজশাহী বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "শিবগঞ্জ, চাঁপাইনবাবগঞ্জ, বাংলাদেশ"
+  },
+  {
+   "id": "013004501",
+   "seat": "চাঁপাইনবাবগঞ্জ-৩",
+   "name": "মোঃ নূরুল ইসলাম",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AC%E0%A7%81%E0%A6%B2%E0%A6%AC%E0%A7%81%E0%A6%B2"
+   ],
+   "educationBn": "বহরিমোহন উচ্চ বিদ্যালয়; নবাবগঞ্জ সরকারি কলেজ; রাজশাহী বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "রেহাইচর গ্রাম, চাঁপাইনবাবগঞ্জ জেলা, বাংলাদেশ",
+   "professionBn": "লেখক"
+  },
+  {
+   "id": "013004601",
+   "seat": "নওগাঁ-১",
+   "name": "মোঃ মোস্তাফিজুর রহমান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Mostafizur_Rahman_(Naogaon_politician)"
+   ],
+   "birthPlaceBn": "Niamatpur Upazila, Naogaon District"
+  },
+  {
+   "id": "013004701",
+   "seat": "নওগাঁ-২",
+   "name": "মোঃ এনামুল হক",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_(%E0%A6%A8%E0%A6%93%E0%A6%97%E0%A6%BE%E0%A6%81%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "চক চন্ডি, ফার্শিপাড়া, ধামইরহাট উপজেলা, নওগাঁ জেলা"
+  },
+  {
+   "id": "013004801",
+   "seat": "নওগাঁ-৩",
+   "name": "মোঃ ফজলে হুদা",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Fazley_Houda"
+   ],
+   "birthPlaceBn": "Badalgachhi Upazila, Naogaon District"
+  },
+  {
+   "id": "013004901",
+   "seat": "নওগাঁ-৪",
+   "name": "ইকরামুল বারী টিপু",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A7%80_%E0%A6%9F%E0%A6%BF%E0%A6%AA%E0%A7%81",
+    "https://en.wikipedia.org/wiki/Ekramul_Bari_Tipu"
+   ],
+   "educationBn": "রাজশাহী মেডিকেল কলেজ",
+   "birthPlaceBn": "Manda Upazila, Naogaon District"
+  },
+  {
+   "id": "013005001",
+   "seat": "নওগাঁ-৫",
+   "name": "মোঃ জাহিদুল ইসলাম ধলু",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Zahidul_Islam_Dhalu"
+   ],
+   "birthPlaceBn": "Par Naogaon Eidgah Para, Naogaon Sadar Upazila, Naogaon District"
+  },
+  {
+   "id": "013005101",
+   "seat": "নওগাঁ-৬",
+   "name": "শেখ মোঃ রেজাউল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Seikh_Md._Rejaul_Islam"
+   ],
+   "birthPlaceBn": "Jatamrul, Atrai Upazila, Naogaon District"
+  },
+  {
+   "id": "013005201",
+   "seat": "রাজশাহী-১",
+   "name": "মোঃ মুজিবুর রহমান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mujibur_Rahman_(Rajshahi_politician)"
+   ],
+   "birthPlaceBn": "Tanore Upazila, Rajshahi District, East Bengal"
+  },
+  {
+   "id": "013005301",
+   "seat": "রাজশাহী-২",
+   "name": "মোঃ মিজানুর রহমান মিনু",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mizanur_Rahman_Minu"
+   ],
+   "educationBn": "Rajshahi Collegiate School",
+   "birthPlaceBn": "Rajshahi, East Pakistan, Pakistan"
+  },
+  {
+   "id": "013005401",
+   "seat": "রাজশাহী-৩",
+   "name": "মোঃ শফিকুল হক মিলন",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en",
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shofiqul_Haque_Milon"
+   ],
+   "educationBn": "University of Rajshahi",
+   "birthPlaceBn": "Rajshahi, Bangladesh",
+   "professionBn": "আইনজীবী"
+  },
+  {
+   "id": "013005501",
+   "seat": "রাজশাহী-৪",
+   "name": "মোঃ আব্দুল বারী সরদার",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Abdul_Bari_Sarder"
+   ],
+   "educationBn": "Rajshahi Medical College",
+   "birthPlaceBn": "Bagmara Upazila, Rajshahi District, East Pakistan"
+  },
+  {
+   "id": "013005601",
+   "seat": "রাজশাহী-৫",
+   "name": "অধ্যাপক নজরুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nazrul_Islam_Mondol"
+   ],
+   "birthPlaceBn": "Puthia Upazila, Rajshahi District, East Bengal"
+  },
+  {
+   "id": "013005701",
+   "seat": "রাজশাহী-৬",
+   "name": "মোঃ আবু সাইদ চাঁদ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Abu_Sayeed_Chand"
+   ],
+   "birthPlaceBn": "Charghat Upazila, Rajshahi District, East Pakistan"
+  },
+  {
+   "id": "013005801",
+   "seat": "নাটোর-১",
+   "name": "ফারজানা শারমীন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%BE_%E0%A6%B6%E0%A6%BE%E0%A6%B0%E0%A6%AE%E0%A6%BF%E0%A6%A8_%E0%A6%AA%E0%A7%81%E0%A6%A4%E0%A7%81%E0%A6%B2"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়; লন্ডন বিশ্ববিদ্যালয়; বিপিপি বিশ্ববিদ্যালয় কলেজ",
+   "birthPlaceBn": "বাংলাদেশ",
+   "professionBn": "আইনজীবী"
+  },
+  {
+   "id": "013005901",
+   "seat": "নাটোর-২",
+   "name": "এম, রুহুল কুদ্দুস তালুকদার দুলু",
+   "from": {
+    "birthPlaceBn": "en",
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ruhul_Quddus_Talukdar"
+   ],
+   "birthPlaceBn": "Natore, Bangladesh",
+   "professionBn": "আইনজীবী"
+  },
+  {
+   "id": "013006001",
+   "seat": "নাটোর-৩",
+   "name": "মোঃ আনোয়ারুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Anwarul_Islam"
+   ],
+   "birthPlaceBn": "Durmallika, Singra Upazila, Natore District, East Pakistan"
+  },
+  {
+   "id": "013006101",
+   "seat": "নাটোর-৪",
+   "name": "মোঃ আব্দুল আজিজ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Abdul_Aziz_(Natore_politician)"
+   ],
+   "birthPlaceBn": "Dharabarisha, Gurudaspur Upazila, Natore District"
+  },
+  {
+   "id": "013006401",
+   "seat": "সিরাজগঞ্জ-৩",
+   "name": "মোঃ আয়নুল হক",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Aynul_Haque"
+   ],
+   "birthPlaceBn": "Raiganj Upazila, Sirajganj District"
+  },
+  {
+   "id": "013006501",
+   "seat": "সিরাজগঞ্জ-৪",
+   "name": "মোঃ রফিকুল ইসলাম খান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rafiqul_Islam_Khan"
+   ],
+   "birthPlaceBn": "Sirajganj"
+  },
+  {
+   "id": "013006601",
+   "seat": "সিরাজগঞ্জ-৫",
+   "name": "মোঃ আমিরুল ইসলাম খান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8_%E0%A6%86%E0%A6%B2%E0%A7%80%E0%A6%AE"
+   ],
+   "birthPlaceBn": "তামাই, বেলকুচি, সিরাজগঞ্জ জেলা"
+  },
+  {
+   "id": "013006701",
+   "seat": "সিরাজগঞ্জ-৬",
+   "name": "এম, এ, মুহিত",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/M._A._Muhit"
+   ],
+   "educationBn": "Dhaka Medical College (MBBS); University of Bristol (MSc); UCL (MSc); LSHTM (PhD)",
+   "birthPlaceBn": "Dhaka, East Pakistan"
+  },
+  {
+   "id": "013006801",
+   "seat": "পাবনা-১",
+   "name": "মোহাম্মদ নাজিবুর রহমান",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%AE%E0%A7%87%E0%A6%A8"
+   ],
+   "educationBn": "তা‘মীরুল মিল্লাত কামিল মাদ্রাসা; মাদ্রাসা-ই আলিয়া, ঢাকা; ইমাম মুহাম্মদ ইবনে সৌদ ইসলামি বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "মন্মথপুর, সাঁথিয়া, পাবনা জেলা, বাংলাদেশ",
+   "professionBn": "আইনজীবী"
+  },
+  {
+   "id": "013006901",
+   "seat": "পাবনা-২",
+   "name": "এ, কে, এম, সেলিম রেজা হাবিব",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%95%E0%A7%87_%E0%A6%8F%E0%A6%AE_%E0%A6%B8%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BE_%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%AC"
+   ],
+   "birthPlaceBn": "মালিফা, সুজানগর, পাবনা"
+  },
+  {
+   "id": "013007001",
+   "seat": "পাবনা-৩",
+   "name": "মুহাম্মাদ আলী আছগার",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Muhammad_Ali_Asgar"
+   ],
+   "birthPlaceBn": "Bhangura Upazila, Pabna District"
+  },
+  {
+   "id": "013007101",
+   "seat": "পাবনা-৪",
+   "name": "মোঃ আবু তালেব মন্ডল",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Abu_Taleb_Mondol"
+   ],
+   "birthPlaceBn": "Ishwardi Upazila, Pabna District"
+  },
+  {
+   "id": "013007401",
+   "seat": "মেহেরপুর-২",
+   "name": "মোঃ নাজমুল হুদা",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Nazmul_Huda"
+   ],
+   "birthPlaceBn": "Gangni Upazila, Meherpur District"
+  },
+  {
+   "id": "013007701",
+   "seat": "কুষ্টিয়া-৩",
+   "name": "মোঃ আমির হামজা",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A6%9C%E0%A6%BE_(%E0%A6%AE%E0%A7%81%E0%A6%AB%E0%A6%A4%E0%A6%BF)"
+   ],
+   "educationBn": "কুষ্টিয়া ইসলামী বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "পাটিকাবাড়ি ইউনিয়ন, কুষ্টিয়া সদর উপজেলা, কুষ্টিয়া জেলা"
+  },
+  {
+   "id": "013007901",
+   "seat": "চুয়াডাঙ্গা-১",
+   "name": "মোঃ মাসুদ পারভেজ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Masud_Parves"
+   ],
+   "birthPlaceBn": "Alamdanga Upazila, Chuadanga District"
+  },
+  {
+   "id": "013008101",
+   "seat": "ঝিনাইদহ-১",
+   "name": "মোঃ আসাদুজ্জামান",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A7%81%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ],
+   "educationBn": "এলএলবি, এলএলএম; ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "যশোর জেলা, পূর্ব পাকিস্তান, পাকিস্তান"
+  },
+  {
+   "id": "013008201",
+   "seat": "ঝিনাইদহ-২",
+   "name": "আলী আজম মোঃ আবু বকর",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B2%E0%A7%80_%E0%A6%86%E0%A6%9C%E0%A6%AE_%E0%A6%AE%E0%A7%8B._%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%AC%E0%A6%95%E0%A7%8D%E0%A6%95%E0%A6%B0"
+   ],
+   "birthPlaceBn": "ঝিনাইদহ সদর, পূর্ব পাকিস্তান"
+  },
+  {
+   "id": "013008301",
+   "seat": "ঝিনাইদহ-৩",
+   "name": "মোঃ মতিয়ার রহমান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%A4%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "কোটচাঁদপুর, ঝিনাইদহ, পূর্ব পাকিস্তান"
+  },
+  {
+   "id": "013008401",
+   "seat": "ঝিনাইদহ-৪",
+   "name": "মোঃ আবু তালিব",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Abu_Talib"
+   ],
+   "birthPlaceBn": "Kaliganj, Jhenaidah, East Pakistan"
+  },
+  {
+   "id": "013008501",
+   "seat": "যশোর-১",
+   "name": "মুহাম্মাদ আজীজুর রহমান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A6_%E0%A6%86%E0%A6%9C%E0%A7%80%E0%A6%9C%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ],
+   "birthPlaceBn": "শার্শা উপজেলা"
+  },
+  {
+   "id": "013008601",
+   "seat": "যশোর-২",
+   "name": "মোহাম্মদ মোসলেহউদ্দিন ফরিদ",
+   "from": {
+    "educationBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A6%B2%E0%A7%87%E0%A6%B9_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%AB%E0%A6%B0%E0%A6%BF%E0%A6%A6"
+   ],
+   "educationBn": "যশোর জেলা স্কুল; ঝিনাইদহ ক্যাডেট কলেজ; ঢাকা মেডিক্যাল কলেজ"
+  },
+  {
+   "id": "013008701",
+   "seat": "যশোর-৩",
+   "name": "অনিন্দ্য ইসলাম অমিত",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%85%E0%A6%A8%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8D%E0%A6%AF_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%85%E0%A6%AE%E0%A6%BF%E0%A6%A4"
+   ],
+   "educationBn": "ঝিনাইদহ ক্যাডেট কলেজ; ঢাকা বিশ্ববিদ্যালয়; নর্থ সাউথ বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "যশোর, বাংলাদেশ"
+  },
+  {
+   "id": "013009001",
+   "seat": "যশোর-৬",
+   "name": "মোঃ মোক্তার আলী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0_%E0%A6%86%E0%A6%B2%E0%A7%80_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A7%80%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "কেশবপুর উপজেলা, যশোর"
+  },
+  {
+   "id": "013009401",
+   "seat": "নড়াইল-২",
+   "name": "মোঃ আতাউর রহমান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ataur_Rahman_Bachchu"
+   ],
+   "birthPlaceBn": "Komkhali, Hobkhali Union, Narail District, Khulna Division, Bangladesh"
+  },
+  {
+   "id": "013009501",
+   "seat": "বাগেরহাট-১",
+   "name": "মোঃ মশিউর রহমান খান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%AE%E0%A6%B6%E0%A6%BF%E0%A6%89%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%96%E0%A6%BE%E0%A6%A8"
+   ],
+   "birthPlaceBn": "চিতলমারী উপজেলা, বাগেরহাট"
+  },
+  {
+   "id": "013009601",
+   "seat": "বাগেরহাট-২",
+   "name": "শেখ মনজুরুল হক (রাহাদ)",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A6"
+   ],
+   "educationBn": "সরকারি মজিদ মেমোরিয়াল সিটি কলেজ; সরকারি প্রফুল্ল চন্দ্র কলেজ",
+   "birthPlaceBn": "দেওয়ানহাটি গ্রাম, বাগেরহাট জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013009701",
+   "seat": "বাগেরহাট-৩",
+   "name": "শেখ ফরিদুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AB%E0%A6%B0%E0%A6%BF%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE",
+    "https://en.wikipedia.org/wiki/Shaikh_Faridul_Islam"
+   ],
+   "birthPlaceBn": "বড়দিয়া, রামপাল উপজেলা, বাগেরহাট",
+   "educationBn": "American World University"
+  },
+  {
+   "id": "013009801",
+   "seat": "বাগেরহাট-৪",
+   "name": "মোঃ আব্দুল আলীম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Abdul_Aleem"
+   ],
+   "birthPlaceBn": "Morrelganj Upazila, Bagerhat District"
+  },
+  {
+   "id": "013009901",
+   "seat": "খুলনা-১",
+   "name": "আমীর এজাজ খান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Amir_Ejaz_Khan"
+   ],
+   "birthPlaceBn": "Khulna District, Bangladesh"
+  },
+  {
+   "id": "013010001",
+   "seat": "খুলনা-২",
+   "name": "শেখ জাহাঙ্গীর হুসাইন হেলাল",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%80%E0%A6%B0_%E0%A6%B9%E0%A7%81%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%B9%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B2"
+   ],
+   "birthPlaceBn": "খুলনা"
+  },
+  {
+   "id": "013010101",
+   "seat": "খুলনা-৩",
+   "name": "রকিবুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rakibul_Islam_(politician)"
+   ],
+   "birthPlaceBn": "Khulna, East Pakistan now Bangladesh"
+  },
+  {
+   "id": "013010201",
+   "seat": "খুলনা-৪",
+   "name": "এস কে আজিজুল বারী",
+   "from": {
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/SK_Azizul_Bari_Helal"
+   ],
+   "educationBn": "University of Dhaka"
+  },
+  {
+   "id": "013010301",
+   "seat": "খুলনা-৫",
+   "name": "মোহাম্মদ আলি আসগার",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B2%E0%A7%80_%E0%A6%86%E0%A6%B8%E0%A6%97%E0%A6%B0_%E0%A6%B2%E0%A6%AC%E0%A6%BF",
+    "https://en.wikipedia.org/wiki/Mohammad_Ali_Asghar_Lobby"
+   ],
+   "educationBn": "সেন্ট জোসেফস উচ্চ বিদ্যালয়",
+   "birthPlaceBn": "Khulna, East Pakistan now Bangladesh"
+  },
+  {
+   "id": "013010401",
+   "seat": "খুলনা-৬",
+   "name": "মোঃ আবুল কালাম আজাদ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Abul_Kalam_Azad_(politician)"
+   ],
+   "birthPlaceBn": "Koyra Upazila, Khulna District"
+  },
+  {
+   "id": "013010501",
+   "seat": "সাতক্ষীরা-১",
+   "name": "মোঃ ইজ্জত উল্লাহ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%A4_%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9"
+   ],
+   "birthPlaceBn": "ফয়জুল্লাহপুর, জালালাবাদ, কলারোয়া, সাতক্ষীরা জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013010601",
+   "seat": "সাতক্ষীরা-২",
+   "name": "মুহাম্মাদ আব্দুল খালেক",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A6_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%96%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%95"
+   ],
+   "birthPlaceBn": "ধলবাড়িয়া, সাতক্ষীরা সদর সাতক্ষীরা জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013010701",
+   "seat": "সাতক্ষীরা-৩",
+   "name": "হাফেজ মুহাঃ রবিউল বাশার",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AC%E0%A6%BF%E0%A6%89%E0%A6%B2_%E0%A6%AC%E0%A6%BE%E0%A6%B6%E0%A6%BE%E0%A6%B0"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "মাঝ পারুলিয়া, দেবহাটা, সাতক্ষীরা জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013010901",
+   "seat": "বরগুনা-১",
+   "name": "মোঃ অলি উল্লাহ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%85%E0%A6%B2%E0%A6%BF%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9"
+   ],
+   "birthPlaceBn": "বরগুনা জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013011001",
+   "seat": "বরগুনা-২",
+   "name": "নূরুল ইসলাম মনি",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AE%E0%A6%A8%E0%A6%BF"
+   ],
+   "educationBn": "স্নাতকোত্তর; ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "বরগুনা, বাংলাদেশ"
+  },
+  {
+   "id": "013011101",
+   "seat": "পটুয়াখালি-১",
+   "name": "আলতাফ হোসেন চৌধুরী",
+   "from": {},
+   "sources": [],
+   "setAside": "Altaf Hossain Choudhury: birth year 2007, parliament.gov.bd 1943"
+  },
+  {
+   "id": "013011201",
+   "seat": "পটুয়াখালি-২",
+   "name": "মোঃ শফিকুল ইসলাম",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shafiqul_Islam_Masud"
+   ],
+   "educationBn": "University of Rajshahi (BA, MA, PhD)",
+   "birthPlaceBn": "Madanpura, Bauphal, Patuakhali, Barisal"
+  },
+  {
+   "id": "013011501",
+   "seat": "ভোলা-১",
+   "name": "আন্দালিভ রহমান",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en",
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Andaleeve_Rahman"
+   ],
+   "educationBn": "University of London",
+   "birthPlaceBn": "Dhaka, Bangladesh",
+   "professionBn": "ব্যারিস্টার, শিক্ষক"
+  },
+  {
+   "id": "013011701",
+   "seat": "ভোলা-৩",
+   "name": "হাফিজ উদ্দিন আহমদ বীর বিক্রম",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A6%A6"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়; সরকারি ব্রজমোহন কলেজ, বরিশাল; বরিশাল জিলা স্কুল",
+   "birthPlaceBn": "লালমোহন, ভোলা, বেঙ্গল প্রেসিডেন্সি, ব্রিটিশ ভারত (বর্তমান বাংলাদেশ)"
+  },
+  {
+   "id": "013011801",
+   "seat": "ভোলা-৪",
+   "name": "মোহাম্মদ নূরুল ইসলাম",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%A8%E0%A6%AF%E0%A6%BC%E0%A6%A8"
+   ],
+   "educationBn": "ঢাকা কলেজ; ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "জিন্নাগড়, চরফ্যাশন, বাংলাদেশ",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013011901",
+   "seat": "বরিশাল-১",
+   "name": "জহির উদ্দিন স্বপন",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B9%E0%A6%BF%E0%A6%B0_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%AA%E0%A6%A8"
+   ],
+   "birthPlaceBn": "সরিকল গ্রাম, গৌরনদী, বরিশাল"
+  },
+  {
+   "id": "013012101",
+   "seat": "বরিশাল-৩",
+   "name": "জয়নুল আবেদীন",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "বরিশাল জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013012201",
+   "seat": "বরিশাল-৪",
+   "name": "মোঃ রাজিব আহসান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%80%E0%A6%AC_%E0%A6%86%E0%A6%B9%E0%A6%B8%E0%A6%BE%E0%A6%A8"
+   ],
+   "birthPlaceBn": "মেহেন্দিগঞ্জ, বরিশাল জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013012301",
+   "seat": "বরিশাল-৫",
+   "name": "মোঃ মজিবর রহমান সরওয়ার",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0"
+   ],
+   "birthPlaceBn": "বরিশাল, পূর্ব পাকিস্তান"
+  },
+  {
+   "id": "013012701",
+   "seat": "পিরোজপুর-১",
+   "name": "মাসুদ সাঈদী",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%81%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%88%E0%A6%A6%E0%A7%80"
+   ],
+   "birthPlaceBn": "বাকেরগঞ্জ জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013012801",
+   "seat": "পিরোজপুর-২",
+   "name": "আহম্মদ সোহেল মনজুর",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%B8%E0%A7%8B%E0%A6%B9%E0%A7%87%E0%A6%B2_%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0"
+   ],
+   "birthPlaceBn": "পিরোজপুর জেলা, বাংলাদেশ",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013012901",
+   "seat": "পিরোজপুর-৩",
+   "name": "মোঃ রুহুল আমীন দুলাল",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%81%E0%A6%B9%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8_%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A6%BE%E0%A6%B2"
+   ],
+   "birthPlaceBn": "পিরোজপুর জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013013401",
+   "seat": "টাঙ্গাইল-৫",
+   "name": "সুলতান সালাউদ্দিন টুকু",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sultan_Salauddin_Tuku"
+   ],
+   "birthPlaceBn": "Tangail District, East Pakistan"
+  },
+  {
+   "id": "013013701",
+   "seat": "টাঙ্গাইল-৮",
+   "name": "আহমেদ আযম খান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_%E0%A6%86%E0%A6%AF%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8"
+   ],
+   "birthPlaceBn": "বাসাইল, টাঙ্গাইল, বাংলাদেশ"
+  },
+  {
+   "id": "013014501",
+   "seat": "শেরপুর-৩",
+   "name": "মোঃ মাহমুদুল হক রুবেল",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mahmudul_Haque_Rubel"
+   ],
+   "birthPlaceBn": "Sherpur, Bangladesh"
+  },
+  {
+   "id": "013015001",
+   "seat": "ময়মনসিংহ-৫",
+   "name": "মোহাম্মদ জাকির হোসেন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%9C%E0%A6%BE%E0%A6%95%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8"
+   ],
+   "educationBn": "আনন্দ মোহন কলেজ",
+   "birthPlaceBn": "কান্দিগাঁও, মুক্তাগাছা, ময়মনসিংহ"
+  },
+  {
+   "id": "013015201",
+   "seat": "ময়মনসিংহ-৭",
+   "name": "ডাঃ মোঃ মাহাবুবুর রহমান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B2%E0%A6%BF%E0%A6%9F%E0%A6%A8"
+   ],
+   "birthPlaceBn": "সিংরাইল, ত্রিশাল, ময়মনসিংহ"
+  },
+  {
+   "id": "013015301",
+   "seat": "ময়মনসিংহ-৮",
+   "name": "লুৎফুল্লাহেল মাজেদ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B2%E0%A7%81%E0%A7%8E%E0%A6%AB%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A7%87%E0%A6%B2_%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%A6"
+   ],
+   "birthPlaceBn": "পাড়া নারায়ণপুর, ঈশ্বরগঞ্জ, ময়মনসিংহ, বাংলাদেশ"
+  },
+  {
+   "id": "013015401",
+   "seat": "ময়মনসিংহ-৯",
+   "name": "ইয়াসের খান চৌধুরী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B8%E0%A7%87%E0%A6%B0_%E0%A6%96%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ],
+   "birthPlaceBn": "নান্দাইল, ময়মনসিংহ, বাংলাদেশ"
+  },
+  {
+   "id": "013015501",
+   "seat": "ময়মনসিংহ-১০",
+   "name": "মোহাম্মদ আক্তারুজ্জামান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%86%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A7%81"
+   ],
+   "birthPlaceBn": "দক্ষিণ গফরগাঁও, ময়মনসিংহ"
+  },
+  {
+   "id": "013015601",
+   "seat": "ময়মনসিংহ-১১",
+   "name": "ফখর উদ্দিন আহমেদ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%96%E0%A6%B0_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6"
+   ],
+   "birthPlaceBn": "ভালুকা উপজেলা, ময়মনসিংহ জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013015801",
+   "seat": "নেত্রকোনা-২",
+   "name": "ডাঃ মোঃ আনোয়ারুল হক",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Anwarul_Haque_(Bangladeshi_politician)"
+   ],
+   "birthPlaceBn": "Netrokona Sadar Upazila, Netrokona District"
+  },
+  {
+   "id": "013015901",
+   "seat": "নেত্রকোনা-৩",
+   "name": "রফিকুল ইসলাম হিলালী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BE%E0%A6%B2%E0%A7%80"
+   ],
+   "birthPlaceBn": "কেন্দুয়া উপজেলা, নেত্রকোণা জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013016001",
+   "seat": "নেত্রকোনা-৪",
+   "name": "মোঃ লুৎফুজ্জামান বাবর",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lutfozzaman_Babar"
+   ],
+   "birthPlaceBn": "Netrokona, East Pakistan"
+  },
+  {
+   "id": "013016101",
+   "seat": "নেত্রকোনা-৫",
+   "name": "মাছুম মোস্তফা",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mashum_Mostafa"
+   ],
+   "birthPlaceBn": "Purbadhala Upazila, Netrokona District"
+  },
+  {
+   "id": "013016501",
+   "seat": "কিশোরগঞ্জ-৪",
+   "name": "মোঃ ফজলুর রহমান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Fazlur_Rahman_(Bangladeshi_politician)"
+   ],
+   "birthPlaceBn": "Kishoreganj, East Pakistan"
+  },
+  {
+   "id": "013016601",
+   "seat": "কিশোরগঞ্জ-৫",
+   "name": "শেখ মজিবুর রহমান ইকবাল",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sheikh_Mujibur_Rahman_Iqbal"
+   ],
+   "birthPlaceBn": "Bajitpur Upazila, Kishoreganj District"
+  },
+  {
+   "id": "013016701",
+   "seat": "কিশোরগঞ্জ-৬",
+   "name": "মোঃ শরীফুল আলম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Shariful_Alam"
+   ],
+   "birthPlaceBn": "Kuliarchar Upazila, Kishoreganj District, Bangladesh"
+  },
+  {
+   "id": "013016801",
+   "seat": "মানিকগঞ্জ-১",
+   "name": "এস এ জিন্নাহ কবীর",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8_%E0%A6%8F_%E0%A6%9C%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%B9_%E0%A6%95%E0%A6%AC%E0%A7%80%E0%A6%B0"
+   ],
+   "birthPlaceBn": "মানিকনগর, শিবালয় উপজেলা মানিকগঞ্জ জেলা"
+  },
+  {
+   "id": "013017001",
+   "seat": "মানিকগঞ্জ-৩",
+   "name": "আফরোজা খানম",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AB%E0%A6%B0%E0%A7%8B%E0%A6%9C%E0%A6%BE_%E0%A6%96%E0%A6%BE%E0%A6%A8%E0%A6%AE_%E0%A6%B0%E0%A6%BF%E0%A6%A4%E0%A6%BE"
+   ],
+   "birthPlaceBn": "গিলন্ড, মানিকগঞ্জ সদর উপজেলা, মানিকগঞ্জ জেলা"
+  },
+  {
+   "id": "013017301",
+   "seat": "মুন্সিগঞ্জ-৩",
+   "name": "মোঃ কামরুজ্জামান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Quamruzzaman_Ratan"
+   ],
+   "birthPlaceBn": "Gazaria Upazila, Munshiganj District"
+  },
+  {
+   "id": "013017401",
+   "seat": "ঢাকা-১",
+   "name": "খোন্দকার আবু আশফাক",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%96%E0%A7%8B%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%86%E0%A6%B6%E0%A6%AB%E0%A6%BE%E0%A6%95",
+    "https://en.wikipedia.org/wiki/Khondoker_Abu_Ashfaque"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "Nawabganj Upazila, Dhaka, East Pakistan"
+  },
+  {
+   "id": "013014801",
+   "seat": "ময়মনসিংহ-৩",
+   "name": "এম ইকবাল হোসেইন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%AE_%E0%A6%87%E0%A6%95%E0%A6%AC%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%87%E0%A6%A8"
+   ],
+   "educationBn": "বাংলাদেশ প্রকৌশল বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "ময়মনসিংহ"
+  },
+  {
+   "id": "013017801",
+   "seat": "ঢাকা-৫",
+   "name": "মোহাম্মদ কামাল হোসেন",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mohammad_Kamal_Hossain"
+   ],
+   "birthPlaceBn": "Suchipara, Shahrasti, Chandpur, Bangladesh"
+  },
+  {
+   "id": "013017901",
+   "seat": "ঢাকা-৬",
+   "name": "ইশরাক হোসেন",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ishraque_Hossain"
+   ],
+   "educationBn": "University of Hertfordshire",
+   "birthPlaceBn": "Dhaka, Bangladesh"
+  },
+  {
+   "id": "013018001",
+   "seat": "ঢাকা-৭",
+   "name": "হামিদুর রহমান",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hamidur_Rahman_(Bangladeshi_politician)"
+   ],
+   "educationBn": "Jagannath University",
+   "birthPlaceBn": "Dhaka, Bangladesh (present-day Old Dhaka, Dhaka, Bangladesh)"
+  },
+  {
+   "id": "013018101",
+   "seat": "ঢাকা-৮",
+   "name": "মির্জা আব্বাস উদ্দিন আহমেদ",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8"
+   ],
+   "educationBn": "নাজিমউদ্দীন ভূইয়া ডিগ্রি কলেজ",
+   "birthPlaceBn": "কিশোরগঞ্জ, বাংলাদেশ"
+  },
+  {
+   "id": "013018201",
+   "seat": "ঢাকা-৯",
+   "name": "হাবিবুর রশিদ",
+   "from": {
+    "birthPlaceBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%A6",
+    "https://en.wikipedia.org/wiki/Habibur_Rashid_Habib"
+   ],
+   "birthPlaceBn": "বেলকুচি উপজেলা, সিরাজগঞ্জ জেলা",
+   "educationBn": "Jagannath University"
+  },
+  {
+   "id": "013018301",
+   "seat": "ঢাকা-১০",
+   "name": "শেখ রবিউল আলম",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%B0%E0%A6%AC%E0%A6%BF%E0%A6%89%E0%A6%B2_%E0%A6%86%E0%A6%B2%E0%A6%AE",
+    "https://en.wikipedia.org/wiki/Shaikh_Rabiul_Alam"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়, গণযোগাযোগ ও সাংবাদিকতা বিভাগ (MCJ)",
+   "birthPlaceBn": "মোল্লাহাট, বাগেরহাট, বাংলাদেশ",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013018401",
+   "seat": "ঢাকা-১১",
+   "name": "মোঃ নাহিদ ইসলাম",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE"
+   ],
+   "educationBn": "দক্ষিণ বনশ্রী মডেল হাই স্কুল অ্যান্ড কলেজ; সরকারি বিজ্ঞান কলেজ; ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "ঢাকা, বাংলাদেশ"
+  },
+  {
+   "id": "013018501",
+   "seat": "ঢাকা-১২",
+   "name": "মোঃ সাইফুল আলম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Saiful_Alam_Khan_Milon"
+   ],
+   "birthPlaceBn": "Dhaka, East Pakistan"
+  },
+  {
+   "id": "013018601",
+   "seat": "ঢাকা-১৩",
+   "name": "ববি হাজ্জাজ",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%AC%E0%A6%BF_%E0%A6%B9%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%9C"
+   ],
+   "educationBn": "টেক্সাস বিশ্ববিদ্যালয়; অক্সফোর্ড বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "ঢাকা, বাংলাদেশ",
+   "professionBn": "শিক্ষক"
+  },
+  {
+   "id": "013018701",
+   "seat": "ঢাকা-১৪",
+   "name": "মীর আহমাদ বিনকাসেম",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en",
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mir_Ahmad_Bin_Quasem"
+   ],
+   "educationBn": "University of London",
+   "birthPlaceBn": "Mirpur, Dhaka",
+   "professionBn": "ব্যারিস্টার"
+  },
+  {
+   "id": "013018801",
+   "seat": "ঢাকা-১৫",
+   "name": "ডাঃ মোঃ শফিকুর রহমান",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ],
+   "educationBn": "এমবিবিএস; মুরারিচাঁদ কলেজ; সিলেট এম.এ.জি. ওসমানী মেডিকেল কলেজ",
+   "birthPlaceBn": "সিলেট জেলা, পূর্ব পাকিস্তান (বর্তমানে ভাটেরা ইউনিয়ন, কুলাউড়া উপজেলা, মৌলভীবাজার জেলা, বাংলাদেশ)",
+   "professionBn": "চিকিৎসক, ব্যবসায়ী"
+  },
+  {
+   "id": "013018901",
+   "seat": "ঢাকা-১৬",
+   "name": "মোঃ আব্দুল বাতেন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%BE%E0%A6%A4%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A8%E0%A7%87%E0%A6%B2)"
+   ],
+   "educationBn": "রাজশাহী বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "টাঙ্গাইল সদর উপজেলা, টাংগাইল"
+  },
+  {
+   "id": "013019001",
+   "seat": "ঢাকা-১৭",
+   "name": "তারেক রহমান",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%95_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+    "https://en.wikipedia.org/wiki/Tarique_Rahman"
+   ],
+   "birthPlaceBn": "ঢাকা, বাংলাদেশ (তৎকালীন পূর্ব পাকিস্তান)",
+   "professionBn": "ব্যবসা",
+   "educationBn": "Dhaka Residential Model College (SSC); Adamjee Cantonment College (HSC)"
+  },
+  {
+   "id": "013019101",
+   "seat": "ঢাকা-১৮",
+   "name": "এস, এম, জাহাঙ্গীর হোসেন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8_%E0%A6%8F%E0%A6%AE_%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%80%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8"
+   ],
+   "educationBn": "স্নাতক; তেজগাঁও কলেজ",
+   "birthPlaceBn": "ঢাকা, বাংলাদেশ"
+  },
+  {
+   "id": "013019201",
+   "seat": "ঢাকা-১৯",
+   "name": "দেওয়ান মোহাম্মদ সালাউদ্দিন",
+   "from": {
+    "birthPlaceBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A6%E0%A7%87%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8",
+    "https://en.wikipedia.org/wiki/Dewan_Md._Salauddin"
+   ],
+   "birthPlaceBn": "জিরাবো, ইয়ারপুর, সাভার, ঢাকা",
+   "educationBn": "Mymensingh Medical College (M.B.B.S); Momenshahi Cadet College"
+  },
+  {
+   "id": "013019301",
+   "seat": "ঢাকা-২০",
+   "name": "মোঃ তমিজ উদ্দিন",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%A4%E0%A6%AE%E0%A6%BF%E0%A6%9C_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8"
+   ],
+   "birthPlaceBn": "ধামরাই"
+  },
+  {
+   "id": "013019401",
+   "seat": "গাজীপুর-১",
+   "name": "মোঃ মজিবুর রহমান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%AE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%AE%E0%A7%87%E0%A6%AF%E0%A6%BC%E0%A6%B0)"
+   ],
+   "birthPlaceBn": "গাজীপুর"
+  },
+  {
+   "id": "013019601",
+   "seat": "গাজীপুর-৩",
+   "name": "এস,এম, রফিকুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8.%E0%A6%8F%E0%A6%AE._%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A7%81"
+   ],
+   "birthPlaceBn": "শ্রীপুর, গাজীপুর",
+   "professionBn": "চিকিৎসক"
+  },
+  {
+   "id": "013019701",
+   "seat": "গাজীপুর-৪",
+   "name": "সালাহ উদ্দিন",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en",
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Salahuddin_Aiyubi"
+   ],
+   "educationBn": "National University",
+   "birthPlaceBn": "Kapasia Upazila, Gazipur District, Bangladesh",
+   "professionBn": "শিক্ষক"
+  },
+  {
+   "id": "013025201",
+   "seat": "কুমিল্লা-৪",
+   "name": "মোঃ আবুল হাসনাত",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%A8%E0%A6%BE%E0%A6%A4_%E0%A6%86%E0%A6%AC%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "দেবিদ্বার, কুমিল্লা",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013020101",
+   "seat": "নরসিংদী-৩",
+   "name": "মনজুর এলাহী",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Manzur_Elahi"
+   ],
+   "birthPlaceBn": "Narsingdi Sadar Upazila, Narsingdi District"
+  },
+  {
+   "id": "013020201",
+   "seat": "নরসিংদী-৪",
+   "name": "সরদার মোঃ সাখাওয়াত হোসেন",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%B0%E0%A6%A6%E0%A6%BE%E0%A6%B0_%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B8%E0%A6%BE%E0%A6%96%E0%A6%BE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A4_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8"
+   ],
+   "birthPlaceBn": "হাফিজপুর, চালাকচর ইউনিয়ন, মনোহরদী উপজেলা, নরসিংদী জেলা"
+  },
+  {
+   "id": "013020301",
+   "seat": "নরসিংদী-৫",
+   "name": "মোঃ আশরাফ উদ্দিন",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ashraf_Uddin"
+   ],
+   "birthPlaceBn": "Raipura Upazila, Narsingdi District"
+  },
+  {
+   "id": "013020401",
+   "seat": "নারায়ণগঞ্জ-১",
+   "name": "মুস্তাফিজুর রহমান ভূঁইয়া",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AD%E0%A7%82%E0%A6%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BE_%E0%A6%A6%E0%A6%BF%E0%A6%AA%E0%A7%81"
+   ],
+   "educationBn": "নর্থ সাউথ বিশ্ববিদ্যালয় থেকে এমবিএ",
+   "birthPlaceBn": "শরীয়তগঞ্জ, বাংলাদেশ",
+   "professionBn": "শিল্পপতি"
+  },
+  {
+   "id": "013020501",
+   "seat": "নারায়ণগঞ্জ-২",
+   "name": "মোঃ নজরুল ইসলাম আজাদ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nazrul_Islam_Azad"
+   ],
+   "birthPlaceBn": "Araihazar Upazila, Narayanganj District"
+  },
+  {
+   "id": "013020601",
+   "seat": "নারায়ণগঞ্জ-৩",
+   "name": "আজহারুল ইসলাম মান্নান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Azharul_Islam_Mannan"
+   ],
+   "birthPlaceBn": "Sonargaon Upazila, Narayanganj District"
+  },
+  {
+   "id": "013021101",
+   "seat": "ফরিদপুর-১",
+   "name": "মোঃ ইলিয়াস মোল্লা",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%B2%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B8_%E0%A6%AE%E0%A7%8B%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE"
+   ],
+   "birthPlaceBn": "মধুখালী উপজেলা, ফরিদপুর জেলা",
+   "professionBn": "শিক্ষক"
+  },
+  {
+   "id": "013021201",
+   "seat": "ফরিদপুর-২",
+   "name": "শামা ওবায়েদ ইসলাম",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shama_Obaed"
+   ],
+   "educationBn": "California State University; University of Phoenix",
+   "birthPlaceBn": "Faridpur, Bangladesh"
+  },
+  {
+   "id": "013021401",
+   "seat": "ফরিদপুর-৪",
+   "name": "মোঃ শহিদুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Shahidul_Islam"
+   ],
+   "birthPlaceBn": "Nagarkanda Upazila, Faridpur District"
+  },
+  {
+   "id": "013021801",
+   "seat": "মাদারিপুর-১",
+   "name": "সাইদ উদ্দিন আহমাদ হানজালা",
+   "from": {
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pirzada_Hanzala"
+   ],
+   "professionBn": "আলেম"
+  },
+  {
+   "id": "013021901",
+   "seat": "মাদারিপুর-২",
+   "name": "মোঃ জাহান্দার আলী মিয়া",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jahander_Ali_Miah"
+   ],
+   "birthPlaceBn": "Madaripur Sadar Upazila, Madaripur District"
+  },
+  {
+   "id": "013022101",
+   "seat": "শরিয়তপুর-১",
+   "name": "সাঈদ আহমেদ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sayeed_Ahmed_Aslam"
+   ],
+   "birthPlaceBn": "Damudya Upazila, Shariatpur"
+  },
+  {
+   "id": "013022701",
+   "seat": "সুনামগঞ্জ-৪",
+   "name": "নূরুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nurul_Islam_Nurul"
+   ],
+   "birthPlaceBn": "Sunamganj Sadar Upazila, Sunamganj District"
+  },
+  {
+   "id": "013022801",
+   "seat": "সুনামগঞ্জ-৫",
+   "name": "কলিম উদ্দিন আহমেদ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%B2%E0%A6%BF%E0%A6%AE_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%A8"
+   ],
+   "birthPlaceBn": "বাগবাড়ী, ছাতক, সুনামগঞ্জ"
+  },
+  {
+   "id": "013023001",
+   "seat": "সিলেট-২",
+   "name": "মোছাঃ তাহসিনা রুশদীর",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Tahsina_Rushdir_Luna"
+   ],
+   "birthPlaceBn": "Sylhet District, East Pakistan"
+  },
+  {
+   "id": "013023201",
+   "seat": "সিলেট-৪",
+   "name": "আরিফুল হক চৌধুরী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B0%E0%A6%BF%E0%A6%AB%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ],
+   "birthPlaceBn": "কুমারপাড়া, সিলেট, বাংলাদেশ"
+  },
+  {
+   "id": "013023301",
+   "seat": "সিলেট-৫",
+   "name": "মোহাম্মদ আবুল হাসান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8_(%E0%A6%AE%E0%A7%81%E0%A6%AB%E0%A6%A4%E0%A6%BF)"
+   ],
+   "birthPlaceBn": "জকিগঞ্জ, সিলেট, বাংলাদেশ"
+  },
+  {
+   "id": "013023401",
+   "seat": "সিলেট-৬",
+   "name": "এমরান আহমদ চৌধুরী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%AE%E0%A6%B0%E0%A6%BE%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A6%A6_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ],
+   "birthPlaceBn": "কতোয়ালপুর, গোলাপগঞ্জ, সিলেট"
+  },
+  {
+   "id": "013023501",
+   "seat": "মৌলভীবাজার-১",
+   "name": "নাসির উদ্দিন আহমেদ",
+   "from": {
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BE%E0%A6%B8%E0%A6%BF%E0%A6%B0_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_%E0%A6%AE%E0%A6%BF%E0%A6%A0%E0%A7%81"
+   ],
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013023601",
+   "seat": "মৌলভীবাজার-২",
+   "name": "মোঃ শওকতুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%93%E0%A6%95%E0%A6%A4%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B6%E0%A6%95%E0%A7%81"
+   ],
+   "birthPlaceBn": "কুলাউড়া, মৌলভীবাজার"
+  },
+  {
+   "id": "013023901",
+   "seat": "হবিগঞ্জ-১",
+   "name": "রেজা কিবরিয়া",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BE_%E0%A6%95%E0%A6%BF%E0%A6%AC%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE"
+   ],
+   "educationBn": "ডক্টর অব ফিলোসফি (অর্থনীতি); টেলোপিয়া পার্ক স্কুল; অক্সফোর্ড বিশ্ববিদ্যালয়; কুইন্স বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "সিলেট জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
+   "professionBn": "অধ্যাপক, অর্থনীতিবিদ, লেখক"
+  },
+  {
+   "id": "013024001",
+   "seat": "হবিগঞ্জ-২",
+   "name": "আবু মনসুর সাখাওয়াত হাসান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A7%81%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%96%E0%A6%BE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A4_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8"
+   ],
+   "birthPlaceBn": "কামালখানী, বানিয়াচং, হবিগঞ্জ"
+  },
+  {
+   "id": "013024101",
+   "seat": "হবিগঞ্জ-৩",
+   "name": "আলহাজ্ব মোঃ জি কে গউছ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/G_K_Gouse"
+   ],
+   "birthPlaceBn": "Habiganj Sadar Upazila, Habiganj District"
+  },
+  {
+   "id": "013024201",
+   "seat": "হবিগঞ্জ-৪",
+   "name": "এস, এম, ফয়সল",
+   "from": {
+    "birthPlaceBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8.%E0%A6%8F%E0%A6%AE.%E0%A6%AB%E0%A6%AF%E0%A6%BC%E0%A6%B8%E0%A6%B2",
+    "https://en.wikipedia.org/wiki/S.M._Faisal"
+   ],
+   "birthPlaceBn": "হবিগঞ্জ",
+   "educationBn": "M.A., LL.B.; University of Dhaka"
+  },
+  {
+   "id": "013024501",
+   "seat": "ব্রাহ্মণবাড়িয়া-৩",
+   "name": "মোঃ খালেদ হোসেন মাহবুব",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Khaled_Hossain_Mahbub"
+   ],
+   "educationBn": "Bangladesh University of Engineering and Technology",
+   "birthPlaceBn": "Brahmanbaria Sadar Upazila, Brahmanbaria District"
+  },
+  {
+   "id": "013024601",
+   "seat": "ব্রাহ্মণবাড়িয়া-৪",
+   "name": "মুশফিকুর রহমান",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B6%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "ছতুরা শরীফ, আখাউড়া, ব্রাহ্মণবাড়িয়া, পূর্ব পাকিস্তান (বর্তমানে বাংলাদেশ)"
+  },
+  {
+   "id": "013024701",
+   "seat": "ব্রাহ্মণবাড়িয়া-৫",
+   "name": "মোঃ আবদুল মান্নান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Abdul_Mannan_(politician)"
+   ],
+   "birthPlaceBn": "Nabinagar Upazila, Brahmanbaria District"
+  },
+  {
+   "id": "013024801",
+   "seat": "ব্রাহ্মণবাড়িয়া-৬",
+   "name": "মোঃ জোনায়েদ আব্দুর রহিম সাকি",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%95%E0%A6%BF"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "ব্রাহ্মণবাড়িয়া, বাংলাদেশ"
+  },
+  {
+   "id": "013024901",
+   "seat": "কুমিল্লা-১",
+   "name": "ড, খন্দকার মোশাররফ হোসেন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%96%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%AE%E0%A7%8B%E0%A6%B6%E0%A6%BE%E0%A6%B0%E0%A6%B0%E0%A6%AB_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A7%81%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "educationBn": "পিএইচডি (ভূতত্ত্ব); ঢাকা বিশ্ববিদ্যালয়; লন্ডন বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "গয়েশপুর, দাউদকান্দি, কুমিল্লা, বেঙ্গল প্রেসিডেন্সি, ব্রিটিশ ভারত (বর্তমান বাংলাদেশ)",
+   "professionBn": "ভূতত্ত্ববিদ"
+  },
+  {
+   "id": "013025101",
+   "seat": "কুমিল্লা-৩",
+   "name": "কাজী শাহ মোফাজ্জাল হোসাইন (কায়কোবাদ)",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%B6%E0%A6%BE%E0%A6%B9_%E0%A6%AE%E0%A7%8B%E0%A6%AB%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%95%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%95%E0%A7%8B%E0%A6%AC%E0%A6%BE%E0%A6%A6"
+   ],
+   "educationBn": "এসএসসি",
+   "birthPlaceBn": "ত্রিপুরা জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
+   "professionBn": "উদ্যোক্তা"
+  },
+  {
+   "id": "013024301",
+   "seat": "ব্রাহ্মণবাড়িয়া-১",
+   "name": "এম, এ, হান্নান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/M_A_Hannan_(politician)"
+   ],
+   "birthPlaceBn": "Nasirnagar Upazila, Brahmanbaria District"
+  },
+  {
+   "id": "013025901",
+   "seat": "কুমিল্লা-১১",
+   "name": "সৈয়দ আবদুল্লাহ মোহাম্মদ তাহের",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%88%E0%A6%AF%E0%A6%BC%E0%A6%A6_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%A4%E0%A6%BE%E0%A6%B9%E0%A7%87%E0%A6%B0"
+   ],
+   "educationBn": "ঢাকা মেডিকেল কলেজ; চট্টগ্রাম কলেজ",
+   "birthPlaceBn": "চৌদ্দগ্রাম, কুমিল্লা, পূর্ব বাংলা, পাকিস্তান (বর্তমানে বাংলাদেশ)"
+  },
+  {
+   "id": "013026001",
+   "seat": "চাঁদপুর-১",
+   "name": "আ ন ম এহছানুল হক মিলন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86_%E0%A6%A8_%E0%A6%AE_%E0%A6%8F%E0%A6%B9%E0%A6%B8%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%A8"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়; আন্তর্জাতিক ইসলামি বিশ্ববিদ্যালয় মালয়েশিয়া",
+   "birthPlaceBn": "কচুয়া, চাঁদপুর, পূর্ব পাকিস্তান"
+  },
+  {
+   "id": "013026101",
+   "seat": "চাঁদপুর-২",
+   "name": "মোঃ জালাল উদ্দিন",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Jalal_Uddin"
+   ],
+   "birthPlaceBn": "Matlab Uttar Upazila, Chandpur District"
+  },
+  {
+   "id": "013026201",
+   "seat": "চাঁদপুর-৩",
+   "name": "শেখ ফরিদ আহম্মেদ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AB%E0%A6%B0%E0%A6%BF%E0%A6%A6_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A7%87%E0%A6%A6"
+   ],
+   "birthPlaceBn": "শহীদ রেহানবাগ, চাঁদপুর সদর উপজেলা, চাঁদপুর জেলা"
+  },
+  {
+   "id": "013026301",
+   "seat": "চাঁদপুর-৪",
+   "name": "মোঃ আবদুল হান্নান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Abdul_Hannan_(politician)"
+   ],
+   "birthPlaceBn": "Faridganj Upazila, Chandpur District"
+  },
+  {
+   "id": "013026401",
+   "seat": "চাঁদপুর-৫",
+   "name": "মোঃ মমিনুল হক",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Mominul_Haque"
+   ],
+   "birthPlaceBn": "Hajiganj Upazila, Chandpur District"
+  },
+  {
+   "id": "013026601",
+   "seat": "ফেনী-২",
+   "name": "জয়নাল আবদিন",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Joynal_Abedin"
+   ],
+   "birthPlaceBn": "Feni, Bangladesh"
+  },
+  {
+   "id": "013026701",
+   "seat": "ফেনী-৩",
+   "name": "আবদুল আউয়াল মিন্টু",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Abdul_Awal_Mintoo"
+   ],
+   "educationBn": "State University of New York Maritime College",
+   "birthPlaceBn": "Feni District, East Bengal, Dominion of Pakistan"
+  },
+  {
+   "id": "013026801",
+   "seat": "নোয়াখালী-১",
+   "name": "এ এম মাহবুব উদ্দিন",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mahbub_Uddin_Khokon"
+   ],
+   "birthPlaceBn": "Noakhali District, East Pakistan"
+  },
+  {
+   "id": "013026901",
+   "seat": "নোয়াখালী-২",
+   "name": "জয়নুল আবদিন ফারুক",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Zainul_Abdin_Farroque"
+   ],
+   "birthPlaceBn": "Noakhali District, East Pakistan"
+  },
+  {
+   "id": "013027001",
+   "seat": "নোয়াখালী-৩",
+   "name": "মোঃ বরকত উল্লাহ বুলু",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%B0%E0%A6%95%E0%A6%A4_%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%AC%E0%A7%81%E0%A6%B2%E0%A7%81"
+   ],
+   "birthPlaceBn": "নোয়াখালী"
+  },
+  {
+   "id": "013027201",
+   "seat": "নোয়াখালী-৫",
+   "name": "মোহাম্মদ ফখরুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Muhammad_Fakrul_Islam"
+   ],
+   "birthPlaceBn": "Noakhali"
+  },
+  {
+   "id": "013027301",
+   "seat": "নোয়াখালী-৬",
+   "name": "আবদুল হান্নান মাসউদ",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A6%89%E0%A6%A6"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "হাতিয়া, নোয়াখালী"
+  },
+  {
+   "id": "013027401",
+   "seat": "লক্ষ্মীপুর-১",
+   "name": "মোঃ শাহাদাত হোসেন",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%A4_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_%E0%A6%B8%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AE"
+   ],
+   "birthPlaceBn": "করপাড়া ইউনিয়ন রামগঞ্জ, লক্ষ্মীপুর"
+  },
+  {
+   "id": "013027701",
+   "seat": "লক্ষ্মীপুর-৪",
+   "name": "এ. বি. এম আশরাফ উদ্দিন (নিজান)",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%AC%E0%A6%BF_%E0%A6%8F%E0%A6%AE_%E0%A6%86%E0%A6%B6%E0%A6%B0%E0%A6%BE%E0%A6%AB_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%A8%E0%A6%BF%E0%A6%9C%E0%A6%BE%E0%A6%A8"
+   ],
+   "birthPlaceBn": "রামগতি, লক্ষ্মীপুর"
+  },
+  {
+   "id": "013027801",
+   "seat": "চট্টগ্রাম-১",
+   "name": "নুরুল আমিন",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "পাতাকোট, ওসমানপুর, মীরসরাই, চট্টগ্রাম"
+  },
+  {
+   "id": "013028801",
+   "seat": "চট্টগ্রাম-১১",
+   "name": "আমির খসরু মাহমুদ চৌধুরী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%B0_%E0%A6%96%E0%A6%B8%E0%A6%B0%E0%A7%81_%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ],
+   "birthPlaceBn": "পাহাড়তলী, চট্টগ্রাম, বাংলাদেশ"
+  },
+  {
+   "id": "013029101",
+   "seat": "চট্টগ্রাম-১৪",
+   "name": "আলহাজ্ব জসীম উদ্দীন আহমেদ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B8%E0%A7%80%E0%A6%AE_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A7%80%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6"
+   ],
+   "birthPlaceBn": "চন্দনাইশ, বাংলাদেশ"
+  },
+  {
+   "id": "013029201",
+   "seat": "চট্টগ্রাম-১৫",
+   "name": "শাহজাহান চৌধুরী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "চট্টগ্রাম"
+  },
+  {
+   "id": "013029301",
+   "seat": "চট্টগ্রাম-১৬",
+   "name": "মোহাম্মদ জহিরুল ইসলাম",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B9%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "বাঁশখালী উপজেলা, চট্টগ্রাম জেলা"
+  },
+  {
+   "id": "013029401",
+   "seat": "কক্সবাজার-১",
+   "name": "সালাহউদ্দিন আহমদ",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়; চট্টগ্রাম কলেজ",
+   "birthPlaceBn": "সিকদারপাড়া, পেকুয়া, কক্সবাজার, পূর্ব পাকিস্তান বর্তমানে বাংলাদেশ"
+  },
+  {
+   "id": "013029501",
+   "seat": "কক্সবাজার-২",
+   "name": "আলমগীর মুহাম্মদ মাহফুজ উল্লাহ ফরিদ",
+   "from": {
+    "birthPlaceBn": "en",
+    "professionBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Alamgir_Mohammad_Mahfuzullah_Farid"
+   ],
+   "birthPlaceBn": "Moheshkhali Upazila, Cox's Bazar, East Pakistan",
+   "professionBn": "আইনজীবী"
+  },
+  {
+   "id": "013029601",
+   "seat": "কক্সবাজার-৩",
+   "name": "লুৎফুর রহমান",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B2%E0%A7%81%E0%A6%A4%E0%A6%AB%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%95%E0%A6%BE%E0%A6%9C%E0%A6%B2"
+   ],
+   "birthPlaceBn": "ঈদগাঁও উপজেলা, কক্সবাজার, বাংলাদেশ",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013029701",
+   "seat": "কক্সবাজার-৪",
+   "name": "শাহজাহান চৌধুরী",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_(%E0%A6%95%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AC%E0%A6%BE%E0%A6%9C%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "educationBn": "চট্রগ্রাম বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "রাজাপালং, উখিয়া, কক্সবাজার"
+  },
+  {
+   "id": "013002801",
+   "seat": "কুড়িগ্রাম-৪",
+   "name": "মোঃ মোস্তাফিজুর রহমান",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%95%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "educationBn": "কুড়িগ্রাম সরকারি কলেজ",
+   "birthPlaceBn": "রৌমারী উপজেলা, কুড়িগ্রাম"
+  },
+  {
+   "id": "013004401",
+   "seat": "চাঁপাইনবাবগঞ্জ-২",
+   "name": "মুঃ মিজানুর রহমান",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81._%E0%A6%AE%E0%A6%BF%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ],
+   "educationBn": "রাজশাহী বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "রহনপুর, গোমস্তাপুর, চাঁপাইনবাবগঞ্জ, বাংলাদেশ",
+   "professionBn": "শিক্ষকতা, শিক্ষক"
+  },
+  {
+   "id": "013006201",
+   "seat": "সিরাজগঞ্জ-১",
+   "name": "মোঃ সেলিম রেজা",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B8%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BE"
+   ],
+   "birthPlaceBn": "কাজীপুর উপজেলা, সিরাজগঞ্জ জেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013011301",
+   "seat": "পটুয়াখালি-৩",
+   "name": "মোঃ নুরুল হক",
+   "from": {
+    "educationBn": "en",
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nurul_Haque_Nur"
+   ],
+   "educationBn": "University of Dhaka",
+   "birthPlaceBn": "Patuakhali, Barishal, Bangladesh"
+  },
+  {
+   "id": "013014601",
+   "seat": "ময়মনসিংহ-১",
+   "name": "মোহাম্মদ সালমান ওমর",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%93%E0%A6%AE%E0%A6%B0_%E0%A6%B0%E0%A7%81%E0%A6%AC%E0%A7%87%E0%A6%B2"
+   ],
+   "birthPlaceBn": "ময়মনসিংহ"
+  },
+  {
+   "id": "013014901",
+   "seat": "ময়মনসিংহ-৪",
+   "name": "মোঃ আবু ওয়াহাব আকন্দ ওয়াহিদ",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%AC_%E0%A6%86%E0%A6%95%E0%A6%A8%E0%A7%8D%E0%A6%A6_%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6"
+   ],
+   "birthPlaceBn": "ময়মনসিংহ"
+  },
+  {
+   "id": "013017601",
+   "seat": "ঢাকা-৩",
+   "name": "গয়েশ্বর চন্দ্র রায়",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gayeshwar_Chandra_Roy"
+   ],
+   "birthPlaceBn": "Keraniganj, Dhaka District, East Bengal, Dominion of Pakistan"
+  },
+  {
+   "id": "013019501",
+   "seat": "গাজীপুর-২",
+   "name": "এম মঞ্জুরুল করিম রনি",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%AE_%E0%A6%AE%E0%A6%9E%E0%A7%8D%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%95%E0%A6%B0%E0%A6%BF%E0%A6%AE_%E0%A6%B0%E0%A6%A8%E0%A6%BF"
+   ],
+   "birthPlaceBn": "গাজীপুর, বাংলাদেশ"
+  },
+  {
+   "id": "013019901",
+   "seat": "নরসিংদী-১",
+   "name": "খায়রুল কবির খোকন",
+   "from": {},
+   "sources": [],
+   "setAside": "Khairul Kabir Khokon: birth year 1972, parliament.gov.bd 1959"
+  },
+  {
+   "id": "013020701",
+   "seat": "নারায়ণগঞ্জ-৪",
+   "name": "আব্দুল্লাহ আল আমিন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%86%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "নারায়ণগঞ্জ",
+   "professionBn": "আইনজীবী"
+  },
+  {
+   "id": "013022301",
+   "seat": "শরিয়তপুর-৩",
+   "name": "মিয়া নুরুদ্দিন আহাম্মেদ অপু",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mia_Nuruddin_Ahmed_Apu"
+   ],
+   "birthPlaceBn": "Gosairhat Upazila, Shariatpur District"
+  },
+  {
+   "id": "013022901",
+   "seat": "সিলেট-১",
+   "name": "খন্দকার আবদুল মুক্তাদীর",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%96%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%A6%E0%A6%BF%E0%A6%B0"
+   ],
+   "educationBn": "নর্থ সাউথ বিশ্ববিদ্যালয়, ঢাকা সিটি কলেজ, সিলেট ক্যাডেট কলেজ",
+   "birthPlaceBn": "সিলেট",
+   "professionBn": "ব্যবসায়ী"
+  },
+  {
+   "id": "013025301",
+   "seat": "কুমিল্লা-৫",
+   "name": "মোঃ জসীম উদ্দিন",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B8%E0%A6%BF%E0%A6%AE_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A7%80%E0%A6%A6)"
+   ],
+   "birthPlaceBn": "কুমিল্লা ব্রাহ্মণপাড়া উপজেলার বাগড়া গ্রাম"
+  },
+  {
+   "id": "013025401",
+   "seat": "কুমিল্লা-৬",
+   "name": "মোঃ মনিরুল হক চৌধুরী",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ],
+   "birthPlaceBn": "কুমিল্লা, সদর দক্ষিণ উপজেলা, বাংলাদেশ"
+  },
+  {
+   "id": "013028501",
+   "seat": "চট্টগ্রাম-৮",
+   "name": "এরশাদ উল্লাহ",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ershad_Ullah"
+   ],
+   "birthPlaceBn": "Chittagong, East Pakistan"
+  },
+  {
+   "id": "013000101",
+   "seat": "পঞ্চগড়-১",
+   "name": "ব্যারিস্টার মুহাম্মদ নওশাদ জমির",
+   "from": {
+    "birthPlaceBn": "bn",
+    "professionBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%A8%E0%A6%93%E0%A6%B6%E0%A6%BE%E0%A6%A6_%E0%A6%9C%E0%A6%AE%E0%A6%BF%E0%A6%B0",
+    "https://en.wikipedia.org/wiki/Muhammad_Nawshad_Zamir"
+   ],
+   "birthPlaceBn": "ধানমন্ডি, ঢাকা",
+   "professionBn": "আইনজীবী",
+   "educationBn": "University of Oxford"
+  },
+  {
+   "id": "013000401",
+   "seat": "ঠাকুরগাঁও-২",
+   "name": "মোঃ আব্দুস সালাম",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B8_%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE"
+   ],
+   "birthPlaceBn": "বালিয়াডাঙ্গী, ঠাকুরগাঁও"
+  },
+  {
+   "id": "013006301",
+   "seat": "সিরাজগঞ্জ-২",
+   "name": "ইকবাল হাসান মাহ্‌মুদ",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn",
+    "professionBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%95%E0%A6%AC%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6_%E0%A6%9F%E0%A7%81%E0%A6%95%E0%A7%81"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "কয়েলগাতি, সিরাজগঞ্জ, পূর্ববঙ্গ, পাকিস্তানের অধিরাজ্য",
+   "professionBn": "শিল্পপতি, ব্যবসায়ী"
+  },
+  {
+   "id": "013008901",
+   "seat": "যশোর-৫",
+   "name": "গাজী এনামুল হক",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "মনিরামপুর, যশোর"
+  },
+  {
+   "id": "013009201",
+   "seat": "মাগুরা-২",
+   "name": "নিতাই রায় চৌধুরী",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A6%BE%E0%A6%87_%E0%A6%B0%E0%A6%BE%E0%A6%AF%E0%A6%BC_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "মোহাম্মদপুর উপজেলা, মাগুরা জেলা, পূর্ব বাংলা, পাকিস্তান (বর্তমানে বাংলাদেশ)"
+  },
+  {
+   "id": "013015701",
+   "seat": "নেত্রকোনা-১",
+   "name": "ব্যারিষ্টার কায়সার কামাল",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%B8%E0%A6%BE%E0%A6%B0_%E0%A6%95%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B2"
+   ],
+   "educationBn": "আনন্দ মোহন কলেজ; ঢাকা বিশ্ববিদ্যালয়; ইউনিভার্সিটি অফ ল",
+   "birthPlaceBn": "নেত্রকোণা জেলা ময়মনসিংহ বিভাগ"
+  },
+  {
+   "id": "013017501",
+   "seat": "ঢাকা-২",
+   "name": "মোঃ আমানউল্লাহ আমান",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Amanullah_Aman"
+   ],
+   "birthPlaceBn": "Keraniganj Upazila, Dhaka District, East Pakistan"
+  },
+  {
+   "id": "013017701",
+   "seat": "ঢাকা-৪",
+   "name": "সৈয়দ জয়নুল আবেদীন",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%88%E0%A6%AF%E0%A6%BC%E0%A6%A6_%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "educationBn": "বাংলাদেশ ইসলামী বিশ্ববিদ্যালয়",
+   "birthPlaceBn": "বাকেরগঞ্জ, বরিশাল"
+  },
+  {
+   "id": "013020001",
+   "seat": "নরসিংদী-২",
+   "name": "ড, আবদুল মঈন খান",
+   "from": {
+    "birthPlaceBn": "bn",
+    "educationBn": "en"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A6%88%E0%A6%A8_%E0%A6%96%E0%A6%BE%E0%A6%A8",
+    "https://en.wikipedia.org/wiki/Abdul_Moyeen_Khan"
+   ],
+   "birthPlaceBn": "ঢাকা জেলা, বঙ্গ প্রদেশ, ব্রিটিশ ভারত (বর্তমান নরসিংদী জেলা, বাংলাদেশ)",
+   "educationBn": "Notre Dame College, Dhaka; University of Sussex"
+  },
+  {
+   "id": "013022401",
+   "seat": "সুনামগঞ্জ-১",
+   "name": "কামরুজ্জামান কামরুল",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Kamruzzaman_Kamrul"
+   ],
+   "birthPlaceBn": "Tahirpur Upazila, Sunamganj District"
+  },
+  {
+   "id": "013023101",
+   "seat": "সিলেট-৩",
+   "name": "মোহাম্মদ আব্দুল মালিক",
+   "from": {
+    "birthPlaceBn": "en"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mohammad_Abdul_Malek"
+   ],
+   "birthPlaceBn": "Dakshin Surma Upazila, Sylhet District"
+  },
+  {
+   "id": "013025501",
+   "seat": "কুমিল্লা-৭",
+   "name": "আতিকুল আলম",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A4%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%B2%E0%A6%AE_%E0%A6%B6%E0%A6%BE%E0%A6%93%E0%A6%A8"
+   ],
+   "birthPlaceBn": "খোরশেদ চেয়ারম্যান বাড়ি, চান্দিনা, কুমিল্লা"
+  },
+  {
+   "id": "013025801",
+   "seat": "কুমিল্লা-১০",
+   "name": "মোঃ মোবাশ্বের আলম ভুঁইয়া",
+   "from": {
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%AC%E0%A6%BE%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A7%87%E0%A6%B0_%E0%A6%86%E0%A6%B2%E0%A6%AE_%E0%A6%AD%E0%A7%81%E0%A6%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BE"
+   ],
+   "birthPlaceBn": "নিশ্চিন্তপুর, নাঙ্গলকোট উপজেলা, কুমিল্লা জেলা"
+  },
+  {
+   "id": "013027601",
+   "seat": "লক্ষ্মীপুর-৩",
+   "name": "মোঃ শহীদউদ্দীন চৌধুরী এ্যানি",
+   "from": {
+    "educationBn": "bn",
+    "birthPlaceBn": "bn"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%B9%E0%A7%80%E0%A6%A6%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A7%80%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_%E0%A6%8F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A6%BF"
+   ],
+   "educationBn": "ঢাকা বিশ্ববিদ্যালয়; সরকারি বিজ্ঞান কলেজ",
+   "birthPlaceBn": "লক্ষ্মীপুর থানা, নোয়াখালী জেলা, পূর্ব পাকিস্তান, পাকিস্তান"
+  }
+ ]
+}

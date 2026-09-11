@@ -39,6 +39,13 @@ export default async function EditMember({
         </Notice>
       )}
 
+      {m.bioFromWiki && (
+        <Notice tone="warn">
+          {m.bioFromWiki.split(',').map((k) => ({ educationBn: 'শিক্ষা', birthPlaceBn: 'জন্মস্থান', professionBn: 'পেশা' })[k.trim()] ?? k).join(', ')}{' '}
+          স্বয়ংক্রিয়ভাবে সদস্যের উইকিপিডিয়া নিবন্ধ থেকে নেওয়া ({(m.bioSource ?? '').split(' ').join(', ')})। সাইটে এগুলোর পাশে তারকাচিহ্ন ও সূত্র দেখানো হয়। যাচাই করে সংরক্ষণ করলে সেই ঘরটি আপনার সম্পাদনা হিসেবে দেখাবে।
+        </Notice>
+      )}
+
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4 items-start">
         <EntityEditor
           type="member"
