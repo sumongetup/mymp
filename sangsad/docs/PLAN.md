@@ -119,7 +119,7 @@ Estimated size: about a day and a half.
 
 ## 5. Decisions taken (owner, 2026-09-10)
 
-- **Repository:** the `sangsad/` folder inside `sumongetup/mymp` (a separate repository was the first choice). mymp.bd is untouched: its build ignores the folder, and Vercel skips mymp.bd builds for pushes that only change it (verified).
+- **Repository:** the `sangsad/` folder inside `sumongetup/mymp` (a separate repository was the first choice). mymp.bd is untouched: its build ignores the folder. (A Vercel ignored-build step for folder-only pushes was removed on 2026-09-11: it also cancelled deploy-hook rebuilds.)
 - **ECS data:** editors download result gazettes and affidavit PDFs in a normal browser and **upload them in the admin**; the worker extracts from the uploads. No bot-protection bypass, ever.
 - **Database:** a new, dedicated Supabase project (Singapore).
 - **Next.js:** 16.

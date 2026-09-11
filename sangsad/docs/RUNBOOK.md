@@ -1,6 +1,6 @@
 # Runbook
 
-The data engine behind mymp.bd lives in the `sangsad/` folder of the `sumongetup/mymp` repository. Every command below runs from that folder. Its CI workflow is `.github/workflows/sangsad-ci.yml` at the repository root (GitHub only reads workflows from the root) and triggers only on changes under `sangsad/`. mymp.bd's own build ignores this folder, and Vercel skips mymp.bd builds for pushes that only change it.
+The data engine behind mymp.bd lives in the `sangsad/` folder of the `sumongetup/mymp` repository. Every command below runs from that folder. Its CI workflow is `.github/workflows/sangsad-ci.yml` at the repository root (GitHub only reads workflows from the root) and triggers only on changes under `sangsad/`. mymp.bd's own build ignores this folder. Vercel rebuilds mymp.bd on every push, including pushes that only change this folder: an "ignored build step" for such pushes also cancelled deploy-hook builds (the admin's Publish button, the nightly rebuild, the news rebuild) whenever the latest commit touched only this folder, so it was removed on 2026-09-11.
 
 ## First-time setup
 
