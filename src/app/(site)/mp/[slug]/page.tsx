@@ -494,7 +494,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 </ul>
                 {memberStories.length > 5 && (
                   <Link
-                    href={`/songbad#mp=${m.slug}`}
+                    href={`/songbad?mp=${m.slug}`}
                     className="self-start inline-flex items-center gap-2 h-11 px-5 rounded-full border border-ink font-semibold text-[15px] hover:bg-surface transition-colors"
                   >
                     এই সদস্যের সব {bn(memberStories.length)}টি খবর দেখুন

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useQueryParam } from '@/lib/useQueryParam';
 import Link from 'next/link';
 import MemberPhoto from './MemberPhoto';
 import PartyBadge from './PartyBadge';
@@ -32,7 +32,7 @@ const bn = (n: number) => String(n).replace(/\d/g, (d) => BN_DIGITS[Number(d)]);
 
 /** The cabinet by rank, with a ministry filter. Plain props only: it reads no site data. */
 export default function MinistersBrowser({ groups, ministries }: { groups: MinisterGroup[]; ministries: { key: string; label: string; count: number }[] }) {
-  const [ministry, setMinistry] = useState('');
+  const [ministry, setMinistry] = useQueryParam('ministry');
   const shown = groups.map((g) => ({ ...g, people: ministry ? g.people.filter((p) => p.ministries.some((m) => m.key === ministry)) : g.people }));
   const total = shown.reduce((n, g) => n + g.people.length, 0);
 

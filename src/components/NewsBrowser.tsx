@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useQueryParam } from '@/lib/useQueryParam';
 import StoryCard from './StoryCard';
 import type { StoryView } from '@/lib/newsView';
 
@@ -18,19 +19,8 @@ const fold = (s: string) =>
 
 const PAGE = 30;
 
-/** The member filter lives in the address ("/songbad#mp=<slug>"), so a member page can link to its own news. */
-const subscribeHash = (onChange: () => void) => {
-  window.addEventListener('hashchange', onChange);
-  return () => window.removeEventListener('hashchange', onChange);
-};
-const memberFromHash = () => {
-  const m = window.location.hash.match(/^#mp=([\w-]+)$/);
-  return m ? m[1]! : '';
-};
-function setMemberHash(slug: string) {
-  window.history.replaceState(null, '', slug ? `#mp=${slug}` : window.location.pathname);
-  window.dispatchEvent(new HashChangeEvent('hashchange'));
-}
+/** The filters live in the address ("/songbad?mp=<slug>"), so a member page can link to its own news; "#mp=" links from before still work. */
+const legacyMember = (hash: string) => hash.match(/^#mp=([\w-]+)$/)?.[1] ?? null;
 
 export default function NewsBrowser({
   stories,
@@ -41,9 +31,9 @@ export default function NewsBrowser({
   members: { slug: string; name: string; count: number }[];
   outlets: { name: string; count: number }[];
 }) {
-  const member = useSyncExternalStore(subscribeHash, memberFromHash, () => '');
-  const [outlet, setOutlet] = useState('');
-  const [q, setQ] = useState('');
+  const [member, setMemberHash] = useQueryParam('mp', legacyMember);
+  const [outlet, setOutlet] = useQueryParam('outlet');
+  const [q, setQ] = useQueryParam('q');
   const [shown, setShown] = useState(PAGE);
   const top = useRef<HTMLDivElement>(null);
 

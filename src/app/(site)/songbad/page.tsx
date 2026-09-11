@@ -70,7 +70,7 @@ export default function NewsPage() {
                   const member = getMember(m.slug);
                   return (
                     <li key={m.slug}>
-                      <a href={`#mp=${m.slug}`} className="flex items-center gap-3 py-2 rounded-lg hover:text-brand transition-colors">
+                      <a href={`?mp=${m.slug}`} className="flex items-center gap-3 py-2 rounded-lg hover:text-brand transition-colors">
                         <MemberPhoto src={member?.photoUrl ?? null} alt="" initial={member ? initial(member) : m.name.charAt(0)} size={36} />
                         <span className="grow min-w-0 text-[14.5px] font-semibold truncate">{m.name}</span>
                         <span className="shrink-0 text-[13px] text-muted">{bn(m.count)}টি খবর</span>

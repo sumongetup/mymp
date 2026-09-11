@@ -6,7 +6,6 @@ import { latestSession, latestSitting, sessionLabel, officers, memberNoticeCount
 import { Page, Card, MemberCard, CompositionBar, Empty, SectionHead, DocLink } from '@/components/ui';
 import SiteSearch from '@/components/SiteSearch';
 import StoryCard from '@/components/StoryCard';
-import { RESERVED_HASH } from '@/lib/nav';
 import Icon from '@/components/Icon';
 import { siteUrl } from '@/lib/site';
 import { BASE_OPEN_GRAPH, BASE_TWITTER, SITE_DESCRIPTION, SITE_TITLE } from '@/lib/seo';
@@ -92,7 +91,7 @@ export default function Home() {
                   { label: 'সিলেট', href: '/jela/sylhet' },
                   { label: 'বিএনপি', href: '/dol/bnp' },
                   { label: 'স্পিকার', href: featured[0] ? `/mp/${featured[0].m.slug}` : '/mp' },
-                  { label: 'সংরক্ষিত আসন', href: `/mp${RESERVED_HASH}` },
+                  { label: 'সংরক্ষিত আসন', href: '/mp?kind=reserved' },
                 ].map((t) => (
                   <Link
                     key={t.label}
