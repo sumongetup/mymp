@@ -12,9 +12,9 @@ export const SITE_TITLE = 'আমার এমপি | বাংলাদেশ�
 export const SITE_DESCRIPTION =
   'ত্রয়োদশ জাতীয় সংসদের সব সংসদ সদস্যের তথ্য এক জায়গায়। আসন, দল, সংরক্ষিত আসন, সংসদীয় কমিটি ও অধিবেশনের তথ্য। সূত্র: বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন।';
 
-/** public/og-image-v2.png, rendered by `npm run og-image`; the -v2 name makes crawlers fetch it afresh. */
+/** public/og-image-v3.png: the mymp mark on white (npm run og-image); a new name makes crawlers and messaging apps fetch it afresh. */
 export const SHARE_IMAGE = {
-  url: '/og-image-v2.png',
+  url: '/og-image-v3.png',
   width: 1200,
   height: 630,
   type: 'image/png',

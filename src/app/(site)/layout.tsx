@@ -4,6 +4,7 @@ import { NAV, NAV_MORE } from '@/lib/nav';
 import SiteSearch from '@/components/SiteSearch';
 import Brand from '@/components/Brand';
 import MobileNav from '@/components/MobileNav';
+import HeaderClock from '@/components/HeaderClock';
 import { siteUrl } from '@/lib/site';
 
 /** Tells search engines who publishes the site and which image is its logo. */
@@ -27,6 +28,13 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       >
         মূল বিষয়ে যান
       </a>
+
+      {/* Today's date and time (Bangladesh), above the bar; it scrolls away and the bar stays. */}
+      <div className="bg-[#10281f] text-[#cfdad3] text-[12.5px]">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-5 h-7 flex items-center justify-end">
+          <HeaderClock />
+        </div>
+      </div>
 
       <header className="sticky top-0 z-40 bg-surface border-b border-rule shadow-card">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-5">
