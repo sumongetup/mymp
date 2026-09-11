@@ -10,7 +10,9 @@
  *
  * 1. each constituency article names its current member (infobox) and links
  *    the 2026 winner; the link is used only when that name is the sitting
- *    member's (or the seat is in config/results-reviewed.json);
+ *    member's (or the seat is in config/results-reviewed.json), and the
+ *    article it leads to names the member's own seat (a bare name can lead to
+ *    a namesake: one 2026 box links "Abdus Salam", the physicist);
  * 2. the member's article (Bangla, then English) gives the links in its
  *    infobox "website" and its external-link templates ({{Official website}},
  *    {{Facebook}}, {{Twitter}}, {{YouTube}}, {{Instagram}} and their Bangla
@@ -149,6 +151,40 @@ export function officialSiteInHtml(html: string): string | null {
   return m ? profileUrl('website', m[1]!.replace(/&amp;/g, '&')) : null;
 }
 
+/** Older English spellings Wikipedia still uses in titles and text. */
+const DISTRICT_ALIASES: Record<string, string[]> = {
+  bogura: ['bogra'],
+  chattogram: ['chittagong'],
+  cumilla: ['comilla'],
+  jashore: ['jessore'],
+  barishal: ['barisal'],
+  jhalokati: ['jhalokathi'],
+  chapainawabganj: ['chapai nawabganj', 'nawabganj'],
+  'chapai nawabganj': ['chapainawabganj', 'nawabganj'],
+  netrokona: ['netrakona'],
+  moulvibazar: ['maulvibazar'],
+  kishoreganj: ['kishorganj'],
+};
+const BN = '০১২৩৪৫৬৭৮৯';
+const unify = (s: string) =>
+  s
+    .normalize('NFC')
+    .replace(/[\u2010-\u2015\u2212]/g, '-')
+    .replace(/[০-৯]/g, (d) => String(BN.indexOf(d)));
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** Whether an article names this seat: "ঢাকা-১৭", "Dhaka-17", "Bogra 6", "Shariatpur 2 constituency". */
+export function mentionsSeat(wikitext: string, seatBn: string, seatEn: string): boolean {
+  const text = unify(wikitext);
+  const bn = unify(seatBn).match(/^(.*?)[\s-]*(\d+)$/);
+  if (bn && new RegExp(`${escapeRe(bn[1]!.trim())}[\\s-]?${bn[2]}(?!\\d)`).test(text)) return true;
+  const en = unify(enTitle(seatEn)).match(/^(.*?)[\s-]*(\d+)$/);
+  if (!en) return false;
+  const district = en[1]!.trim().toLowerCase();
+  const names = [district, ...(DISTRICT_ALIASES[district] ?? [])].map((d) => escapeRe(d).replace(/\\?\s+/g, '\\s?'));
+  return new RegExp(`(${names.join('|')})[\\s-]?${en[2]}(?!\\d)`, 'i').test(text);
+}
+
 const LINK = /\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]/g;
 const linksOf = (value: string) => [...value.matchAll(LINK)].map((m) => ({ target: m[1]!.trim(), label: (m[2] ?? m[1]!).trim() }));
 
@@ -215,6 +251,20 @@ export async function runSocialWiki(db: Db): Promise<{ itemsFound: number; items
     fetchPages('bn.wikipedia.org', bnTitles, 'members'),
     fetchPages('en.wikipedia.org', enTitles, 'members'),
   ]);
+  // An article that never names the member's seat is about someone else of that name.
+  let namesakes = 0;
+  for (const m of sitting) {
+    const a = articleOf.get(m.id!)!;
+    for (const [lang, articles] of [['bn', bnArticles], ['en', enArticles]] as const) {
+      const title = a[lang];
+      const page = title ? articles.get(title) : undefined;
+      if (title && (!page || !mentionsSeat(page.wikitext, m.seatBn, m.seatEn))) {
+        if (page) namesakes++;
+        delete a[lang];
+      }
+    }
+  }
+  process.stdout.write(`  articles set aside because they never name the member's seat: ${namesakes}\n`);
 
   const found: { id: string; seat: string; name: string; links: Links; sources: string[]; conflicts: SocialKey[] }[] = [];
   for (const m of sitting) {

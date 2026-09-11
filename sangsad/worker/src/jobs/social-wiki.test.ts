@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { linksIn, memberLinks, officialSiteInHtml, profileUrl } from './social-wiki';
+import { linksIn, memberLinks, mentionsSeat, officialSiteInHtml, profileUrl } from './social-wiki';
 
 describe('social links from Wikipedia', () => {
   it('keeps profiles and refuses posts, groups and shares', () => {
@@ -47,6 +47,15 @@ describe('social links from Wikipedia', () => {
     expect(officialSiteInHtml('<span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="https://test.example.bd/">Official website</a>')).toBe(
       'https://test.example.bd',
     );
+  });
+
+  it('accepts an article only when it names the member\'s seat', () => {
+    expect(mentionsSeat('… [[পঞ্চগড়-১]] আসনে …', 'পঞ্চগড়-১', 'Panchagarh-1')).toBe(true);
+    expect(mentionsSeat('elected from Bogra 6 in 2026', 'বগুড়া-৬', 'Bogura-6')).toBe(true);
+    expect(mentionsSeat('the Shariatpur 2 constituency', 'শরীয়তপুর-২', 'Shariatpur-2')).toBe(true);
+    expect(mentionsSeat('won Dhaka–17', 'ঢাকা-১৭', 'Dhaka-17')).toBe(true);
+    expect(mentionsSeat('won Dhaka-170', 'ঢাকা-১৭', 'Dhaka-17')).toBe(false);
+    expect(mentionsSeat('a theoretical physicist, Nobel Prize 1979', 'TEST-১', 'Testpur-1')).toBe(false);
   });
 
   it('finds the member article a constituency page names', () => {
