@@ -184,6 +184,11 @@ function fromMirror(path) {
 
 async function getAllPages(path, limit = 100) {
   if (mirror) return fromMirror(path);
+  return getAllPagesLive(path, limit);
+}
+
+/** Straight from parliament.gov.bd, whether or not the mirror is in use. */
+async function getAllPagesLive(path, limit = 100) {
   const rows = [];
   let page = 1;
   let total = null;
@@ -501,9 +506,31 @@ async function main() {
     .map((m) => ({ ...m.seat, memberId: m.id, vacantSince: m.resignedOn }))
     .sort((a, b) => a.no - b.no);
 
+  // The member list only shows seats that have a member. A seat with none
+  // (Chattogram-4 in the 13th parliament) would otherwise have no page, while
+  // the site says it has one for each of the 300. Its record comes from the
+  // constituency list, which the engine's mirror does not carry, so it is read
+  // live; if that fails the gap stays and scripts/qa-data.ts reports it.
+  {
+    const present = new Set(seats.map((s) => s.no));
+    const missing = Array.from({ length: 300 }, (_, i) => i + 1).filter((n) => !present.has(n));
+    if (missing.length) {
+      const electionId = (Array.isArray(rawParliaments) ? rawParliaments : []).find((x) => x.parliamentNo === PARLIAMENT)?.externalId ?? null;
+      const rows = electionId === null ? null : await optional('constituencies', () => getAllPagesLive('/api/constituencies', 400));
+      for (const c of rows ?? []) {
+        if (c.electionId !== electionId || !missing.includes(c.constituencyNo)) continue;
+        seats.push({ no: c.constituencyNo, reserved: false, nameBn: clean(c.constituencyBng), nameEn: clean(c.constituencyEng), slug: slugify(c.constituencyEng || `seat-${c.constituencyNo}`), boundaryBn: clean(c.boundaryDetails), memberId: null, vacantSince: null });
+      }
+      seats.sort((a, b) => a.no - b.no);
+      const still = missing.filter((n) => !seats.some((s) => s.no === n));
+      console.log(`  seats: ${missing.length - still.length} without a member added from the constituency list${still.length ? `; still missing ${still.join(', ')}` : ''}`);
+    }
+  }
+
   // ---- earlier parliaments ----
   const termOf = (m, n) => (m.terms ?? []).find((t) => t.parliamentNo === n) ?? (m.terms ?? [])[0] ?? {};
-  const seatNoByKey = new Map(members.filter((m) => m.seat && !m.seat.reserved).map((m) => [seatKey(m.seat.nameEn), m.seat.no]));
+  // From the seat list, not the members, so a seat with no member still collects its earlier holders.
+  const seatNoByKey = new Map(seats.filter((x) => !x.reserved).map((x) => [seatKey(x.nameEn), x.no]));
   const findCurrent = (m, n) => {
     const t = termOf(m, n);
     const c = t.constituency ?? {};

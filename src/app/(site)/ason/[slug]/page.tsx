@@ -103,7 +103,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
       <div className="pt-8 pb-14 grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-10 items-start">
         <div className="flex flex-col gap-8">
           <section className="flex flex-col gap-4">
-            <h2 className="display text-[24px] font-bold">{seat.vacantSince ? 'আসনটি শূন্য' : 'বর্তমান সংসদ সদস্য'}</h2>
+            <h2 className="display text-[24px] font-bold">{seat.vacantSince || !member ? 'আসনটি শূন্য' : 'বর্তমান সংসদ সদস্য'}</h2>
             {seat.vacantSince && member && (
               <p className="text-[15px] text-inksoft leading-relaxed -mt-1">
                 এই আসনে নির্বাচিত {member.nameBn ?? member.nameEn} {dateBn(seat.vacantSince)} তারিখে পদত্যাগ করেছেন (সংসদ সচিবালয়ের তথ্য অনুযায়ী)। নতুন সদস্য নির্বাচিত হলে এখানে দেখা যাবে।
@@ -131,7 +131,10 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                 <span className="hidden sm:inline text-[14px] font-semibold text-brand shrink-0">প্রোফাইল →</span>
               </Link>
             ) : (
-              <Empty title="এই আসনে বর্তমানে কোনো সদস্য নেই।" />
+              <Empty
+                title="সংসদের সদস্য তালিকায় এই আসনের কোনো সদস্য নেই।"
+                body="সংসদ সচিবালয় এই আসনে কাউকে সদস্য হিসেবে তালিকাভুক্ত করেনি; কারণ তাদের তথ্যভান্ডারে লেখা নেই। সদস্য যুক্ত হলে এখানে দেখা যাবে।"
+              />
             )}
           </section>
 
