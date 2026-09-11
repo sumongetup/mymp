@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { parties, getParty, membersOfParty, bn, partyColor } from '@/lib/data';
-import { Page, PageHead, Stat, MemberRow, Breadcrumb } from '@/components/ui';
+import { Page, PageHead, Stat, MemberRow, Breadcrumb, PartyMark, LogoCredit } from '@/components/ui';
+import { partyLogo } from '@/lib/partyLogos';
 import { partyBn } from '@/lib/seo/mpDescription';
 import { siteUrl } from '@/lib/site';
 
@@ -33,6 +34,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
   const list = membersOfParty(party.abbr);
   const territorial = list.filter((m) => m.seat && !m.seat.reserved);
   const reserved = list.filter((m) => m.seat?.reserved);
+  const logo = partyLogo(party.abbr);
 
   // A party is a PoliticalParty to search engines; independents are not a party, so they get none.
   const partyLd =
@@ -44,6 +46,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
           name: partyBn(party)?.name ?? party.nameBn ?? party.abbr,
           alternateName: [party.nameBn, party.nameEn, party.abbr].filter(Boolean),
           url: `${siteUrl}/dol/${party.slug}`,
+          ...(logo?.kind === 'logo' ? { logo: `${siteUrl}${logo.src}` } : {}),
         };
 
   return (
@@ -55,6 +58,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
         eyebrow="ত্রয়োদশ জাতীয় সংসদ"
         title={party.nameBn ?? party.abbr}
         lede={party.nameEn ?? undefined}
+        mark={<PartyMark abbr={party.abbr} size={76} />}
         aside={
           <div className="grid grid-cols-3 gap-3">
             <Stat label="মোট আসন" value={bn(party.seats)} />
@@ -91,6 +95,12 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
               {reserved.map((m) => <li key={m.id}><MemberRow m={m} /></li>)}
             </ul>
           </section>
+        )}
+
+        {logo && (
+          <p className="text-[13px] text-muted">
+            {logo.kind === 'flag' ? 'দলের পতাকা' : 'দলের লোগো'}: <LogoCredit abbr={party.abbr} />
+          </p>
         )}
       </div>
     </Page>

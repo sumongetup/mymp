@@ -3,6 +3,7 @@ import { bn, dateBn, initial, partyColor, getMemberById, type Member, type Party
 import MemberPhoto from './MemberPhoto';
 import Icon from './Icon';
 import { siteUrl } from '@/lib/site';
+import { partyLogo } from '@/lib/partyLogos';
 
 export function Page({ children }: { children: React.ReactNode }) {
   return <div className="mx-auto max-w-[1200px] px-4 sm:px-5">{children}</div>;
@@ -13,21 +14,27 @@ export function PageHead({
   title,
   lede,
   aside,
+  mark,
 }: {
   eyebrow?: string;
   title: string;
   lede?: string;
   aside?: React.ReactNode;
+  /** A logo beside the heading (a party's page). */
+  mark?: React.ReactNode;
 }) {
+  const text = (
+    <div className="flex flex-col gap-2.5 min-w-0">
+      {eyebrow && (
+        <span className="text-[12.5px] font-bold tracking-[1.5px] text-brand">{eyebrow}</span>
+      )}
+      <h1 className="display text-[30px] sm:text-[44px] leading-[1.15] text-balance wrap-anywhere">{title}</h1>
+      {lede && <p className="text-[15.5px] sm:text-[17px] leading-relaxed text-inksoft max-w-[660px] text-pretty">{lede}</p>}
+    </div>
+  );
   return (
     <div className="pt-8 sm:pt-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-      <div className="flex flex-col gap-2.5 min-w-0">
-        {eyebrow && (
-          <span className="text-[12.5px] font-bold tracking-[1.5px] text-brand">{eyebrow}</span>
-        )}
-        <h1 className="display text-[30px] sm:text-[44px] leading-[1.15] text-balance wrap-anywhere">{title}</h1>
-        {lede && <p className="text-[15.5px] sm:text-[17px] leading-relaxed text-inksoft max-w-[660px] text-pretty">{lede}</p>}
-      </div>
+      {mark ? <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5 min-w-0">{mark}{text}</div> : text}
       {aside && <div className="shrink-0">{aside}</div>}
     </div>
   );
@@ -82,13 +89,71 @@ export function Stat({ label, value, note }: { label: string; value: string; not
   );
 }
 
-export function PartyDot({ abbr }: { abbr: string | null | undefined }) {
+/**
+ * A party beside its name: the party's logo where one is on record, a person
+ * for an independent, and the party colour for anyone else (the parties of
+ * earlier parliaments). Always a size-square box, so names in a list line up.
+ */
+export function PartyDot({ abbr, size = 18 }: { abbr: string | null | undefined; size?: number }) {
+  const logo = partyLogo(abbr);
+  const box = { width: size, height: size };
+  if (logo) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={logo.src} alt="" width={size} height={size} loading="lazy" decoding="async" className="shrink-0 object-contain" style={box} />
+    );
+  }
+  if (abbr === 'Ind') {
+    return (
+      <span aria-hidden="true" className="inline-grid place-items-center shrink-0 rounded-full text-white" style={{ ...box, background: partyColor(abbr) }}>
+        <svg viewBox="0 0 24 24" width={Math.round(size * 0.62)} height={Math.round(size * 0.62)} fill="currentColor">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z" />
+        </svg>
+      </span>
+    );
+  }
+  return (
+    <span aria-hidden="true" className="inline-grid place-items-center shrink-0" style={box}>
+      <span className="w-2.5 h-2.5 rounded-full" style={{ background: partyColor(abbr) }} />
+    </span>
+  );
+}
+
+/** A party's logo on a white tile: the party list and the party's own page. */
+export function PartyMark({ abbr, size = 52 }: { abbr: string; size?: number }) {
+  const logo = partyLogo(abbr);
   return (
     <span
       aria-hidden="true"
-      className="inline-block w-2.5 h-2.5 rounded-full shrink-0"
-      style={{ background: partyColor(abbr) }}
-    />
+      className="inline-grid place-items-center shrink-0 rounded-xl border border-rule bg-white overflow-hidden"
+      style={{ width: size, height: size, padding: Math.round(size * 0.1) }}
+    >
+      {logo ? (
+        // Lazy even at the top of a page: an eager <img> makes every page that links
+        // to /dol preload all ten logos when Next prefetches it.
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={logo.src} alt="" width={logo.width} height={logo.height} loading="lazy" decoding="async" className="w-full h-full object-contain" />
+      ) : (
+        <PartyDot abbr={abbr} size={Math.round(size * 0.66)} />
+      )}
+    </span>
+  );
+}
+
+/** Where a party's logo came from and on what terms; a CC BY licence needs its author named. */
+export function LogoCredit({ abbr }: { abbr: string }) {
+  const logo = partyLogo(abbr);
+  if (!logo) return null;
+  const where = logo.page.includes('commons.wikimedia.org') ? 'উইকিমিডিয়া কমন্স' : 'বাংলা উইকিপিডিয়া';
+  const link = 'underline decoration-rule underline-offset-2 hover:text-brand';
+  return (
+    <span>
+      <a href={logo.page} target="_blank" rel="noopener noreferrer" className={link}>{where}</a>
+      {logo.author && <>, {logo.author}</>}
+      {', '}
+      {logo.licenceUrl ? <a href={logo.licenceUrl} target="_blank" rel="noopener noreferrer" className={link}>{logo.licence}</a> : logo.licence}
+    </span>
   );
 }
 
