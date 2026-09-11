@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }: PageProps<'/ason/[slug]'>): P
   return {
     title: `${s.nameBn} আসন`,
     alternates: { canonical: `/ason/${s.slug}` },
+    openGraph: shareGraph(`/ason/${s.slug}`),
     description: `${s.nameBn} আসনের বর্তমান সংসদ সদস্য${m ? ` ${m.nameBn ?? m.nameEn}` : ''}। ত্রয়োদশ জাতীয় সংসদ।`,
   };
 }

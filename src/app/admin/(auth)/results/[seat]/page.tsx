@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { seats, getMemberById, bn, bnGroup } from '@/lib/data';
 import { parliamentLabel, parliamentsWithRecords, seatHolders } from '@/lib/history';
@@ -5,6 +6,12 @@ import { requireAdmin } from '@/lib/admin/auth';
 import { getResult } from '@/lib/admin/store';
 import { saveResult, changeResultStatus } from '@/app/admin/actions';
 import { AdminPage, Panel, Field, Button, Badge, Notice, inputClass, when } from '@/app/admin/ui';
+
+export async function generateMetadata({ params }: { params: Promise<{ seat: string }> }): Promise<Metadata> {
+  const seatNo = Number((await params).seat);
+  const seat = seats.find((s) => s.no === seatNo && !s.reserved);
+  return { title: seat ? `${seat.nameBn ?? seat.nameEn} · নির্বাচনের ফল` : 'নির্বাচনের ফল' };
+}
 
 export default async function EditResult({
   params,

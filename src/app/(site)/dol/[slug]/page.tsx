@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { parties, getParty, membersOfParty, bn, partyColor } from '@/lib/data';
 import { Page, PageHead, Stat, MemberRow, Breadcrumb } from '@/components/ui';
@@ -14,6 +15,7 @@ export async function generateMetadata({ params }: PageProps<'/dol/[slug]'>): Pr
   return {
     title: p.nameBn ?? p.abbr,
     alternates: { canonical: `/dol/${p.slug}` },
+    openGraph: shareGraph(`/dol/${p.slug}`),
     description: `${p.nameBn ?? p.abbr} ত্রয়োদশ জাতীয় সংসদে ${p.seats}টি আসন পেয়েছে। সদস্যদের তালিকা।`,
   };
 }

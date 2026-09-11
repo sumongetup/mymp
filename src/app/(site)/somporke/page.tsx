@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { meta, ecs, bn, dateBn, statistics, committeeCounts } from '@/lib/data';
 import { Page, PageHead, Card } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/somporke' },
+    openGraph: shareGraph('/somporke'),
   title: 'সম্পর্কে',
   description: 'আমার এমপি কী, তথ্য কোথা থেকে আসে, আর কী দেখানো হয় না।',
 };

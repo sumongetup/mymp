@@ -1,9 +1,16 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { committees, getMemberById, bn, dateBn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { overridesFor, isHidden } from '@/lib/admin/store';
 import { AdminPage, Panel, Button, Notice } from '@/app/admin/ui';
 import { EntityEditor, EditFlags, HidePanel, AuditLink } from '../../EntityEditor';
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const c = committees.find((x) => x.id === id);
+  return { title: c ? `${c.nameBn ?? c.nameEn} · কমিটি` : 'কমিটি' };
+}
 
 export default async function EditCommittee({
   params,

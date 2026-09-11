@@ -1,9 +1,16 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { seats, getMemberById, bn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { overridesFor } from '@/lib/admin/store';
 import { AdminPage, Panel, Button } from '@/app/admin/ui';
 import { EntityEditor, EditFlags, AuditLink } from '../../EntityEditor';
+
+export async function generateMetadata({ params }: { params: Promise<{ no: string }> }): Promise<Metadata> {
+  const { no } = await params;
+  const seat = seats.find((s) => String(s.no) === no);
+  return { title: seat ? `${seat.nameBn ?? seat.nameEn} · আসন` : 'আসন' };
+}
 
 export default async function EditSeat({
   params,

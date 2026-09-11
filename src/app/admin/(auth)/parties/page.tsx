@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { parties, bn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { supabaseAdmin } from '@/lib/supabase/admin';
 import { AdminPage, Table, Td, Badge } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'দল' };
 
 export default async function PartiesAdmin() {
   await requireAdmin();

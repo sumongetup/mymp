@@ -32,3 +32,15 @@ export const BASE_TWITTER: NonNullable<Metadata['twitter']> = {
   card: 'summary_large_image',
   images: [SHARE_IMAGE],
 };
+
+/**
+ * The share tags for one page: the site's Open Graph defaults plus the page's
+ * own address (og:url), and a page image where it has one. Next fills
+ * og:title and og:description from the page's title and description.
+ */
+export function shareGraph(
+  path: string,
+  image?: { url: string; width: number; height: number; alt?: string } | null,
+): NonNullable<Metadata['openGraph']> {
+  return { ...BASE_OPEN_GRAPH, url: path, ...(image ? { images: [image] } : {}) };
+}

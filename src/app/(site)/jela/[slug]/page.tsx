@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { seats, getMemberById, districtOf, bn, meta, dateBn } from '@/lib/data';
 import { Page, PageHead, Card, Breadcrumb, MemberRow, PartyDot, Stat } from '@/components/ui';
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: PageProps<'/jela/[slug]'>): P
   return {
     title: `${d.bn} জেলার সংসদ সদস্য`,
     alternates: { canonical: `/jela/${d.slug}` },
+    openGraph: shareGraph(`/jela/${d.slug}`),
     description: `${d.bn} জেলার ${bn(d.seats.length)}টি সংসদীয় আসন ও তাদের বর্তমান সদস্য। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
   };
 }

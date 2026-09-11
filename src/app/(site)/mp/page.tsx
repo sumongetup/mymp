@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import { members, parties, bn, statistics } from '@/lib/data';
 import { Page, PageHead, Stat } from '@/components/ui';
 import MemberFilter from '@/components/MemberFilter';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/mp' },
+    openGraph: shareGraph('/mp'),
   title: 'সব সংসদ সদস্য',
   description: 'ত্রয়োদশ জাতীয় সংসদের সব সদস্যের তালিকা, দল ও আসনসহ।',
 };

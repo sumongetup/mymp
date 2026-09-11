@@ -1,9 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { committees, bn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { hiddenList } from '@/lib/admin/store';
 import { supabaseAdmin } from '@/lib/supabase/admin';
 import { AdminPage, Table, Td, Badge } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'কমিটি' };
 
 export default async function CommitteesAdmin() {
   await requireAdmin();

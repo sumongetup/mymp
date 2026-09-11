@@ -1,9 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { adminConfigured, adminIdentity, currentUser } from '@/lib/admin/auth';
 import { signOut } from '@/app/admin/actions';
 import { Mark } from '@/components/Brand';
 import LoginForm from './LoginForm';
+
+export const metadata: Metadata = { title: 'লগইন' };
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<{ denied?: string }> }) {
   if (!adminConfigured()) redirect('/admin/setup');

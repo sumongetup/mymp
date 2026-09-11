@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getMemberById, bn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { listNews } from '@/lib/admin/store';
 import { AdminPage, Table, Td, Badge, Button, Empty } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'সংবাদ' };
 
 const STATUS_BN = { draft: 'খসড়া', published: 'প্রকাশিত', rejected: 'বাতিল' } as const;
 const TONE = { draft: 'warn', published: 'good', rejected: 'bad' } as const;

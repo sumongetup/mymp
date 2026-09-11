@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import { meta, bn, dateBn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { listSyncRuns } from '@/lib/admin/store';
 import { AdminPage, Panel, Table, Td, Badge, Empty, when } from '@/app/admin/ui';
 import PublishButton from '../PublishButton';
+
+export const metadata: Metadata = { title: 'সিঙ্ক ও প্রকাশ' };
 
 export default async function SyncAdmin() {
   await requireAdmin();

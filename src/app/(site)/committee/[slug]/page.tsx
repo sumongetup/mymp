@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { committees, getCommittee, getMemberById, bn, dateBn, meta } from '@/lib/data';
 import { noticesForCommittee } from '@/lib/activity';
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }: PageProps<'/committee/[slug]'
   return {
     title: c.nameBn ?? c.nameEn ?? 'কমিটি',
     alternates: { canonical: `/committee/${c.slug}` },
+    openGraph: shareGraph(`/committee/${c.slug}`),
     description: `${c.nameBn ?? c.nameEn}: ত্রয়োদশ জাতীয় সংসদের কমিটি, তার সদস্যবৃন্দ ও বৈঠকের বিজ্ঞপ্তি।`,
   };
 }

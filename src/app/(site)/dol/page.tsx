@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { parties, statistics, bn, partyColor } from '@/lib/data';
 import { Page, PageHead, Card, CompositionBar } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/dol' },
+    openGraph: shareGraph('/dol'),
   title: 'রাজনৈতিক দল',
   description: 'ত্রয়োদশ জাতীয় সংসদে আসনপ্রাপ্ত দলগুলোর তালিকা ও আসনসংখ্যা।',
 };

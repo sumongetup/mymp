@@ -1,9 +1,16 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { parties, membersOfParty, bn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { overridesFor } from '@/lib/admin/store';
 import { AdminPage, Panel, Button } from '@/app/admin/ui';
 import { EntityEditor, EditFlags, AuditLink } from '../../EntityEditor';
+
+export async function generateMetadata({ params }: { params: Promise<{ abbr: string }> }): Promise<Metadata> {
+  const { abbr } = await params;
+  const p = parties.find((x) => x.abbr === abbr);
+  return { title: p ? `${p.nameBn ?? p.abbr} · দল` : 'দল' };
+}
 
 export default async function EditParty({
   params,

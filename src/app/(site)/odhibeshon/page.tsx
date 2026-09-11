@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { getMemberById, bn, dateBn, meta } from '@/lib/data';
 import {
@@ -9,6 +10,7 @@ import Icon from '@/components/Icon';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/odhibeshon' },
+    openGraph: shareGraph('/odhibeshon'),
   title: 'সংসদ অধিবেশন',
   description: 'ত্রয়োদশ জাতীয় সংসদের অধিবেশন, প্রতিটি বৈঠকের দিনের কার্যসূচি, পরিপত্র ও সংসদ সচিবালয়ের বিজ্ঞপ্তি, সংসদের প্রকাশনা থেকে সরাসরি।',
 };

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { members, committees, meta, bn, dateBn } from '@/lib/data';
 import { latestSession, latestSitting, sessionLabel, totalSittings, memberNoticeCount, activity } from '@/lib/activity';
@@ -5,6 +6,8 @@ import { requireAdmin } from '@/lib/admin/auth';
 import { counts, listAudit, listSyncRuns } from '@/lib/admin/store';
 import { AdminPage, Panel, Stat, Table, Td, Empty, Notice, when } from '@/app/admin/ui';
 import PublishButton from './PublishButton';
+
+export const metadata: Metadata = { title: 'ড্যাশবোর্ড' };
 
 export default async function Dashboard({ searchParams }: { searchParams: Promise<{ forbidden?: string }> }) {
   await requireAdmin();

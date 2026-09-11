@@ -1,7 +1,10 @@
+import type { Metadata } from 'next';
 import { AdminPage, Notice, Panel, Stat } from '@/app/admin/ui';
 import { allMembers, bn } from '@/lib/data';
 import { SOCIAL_KEYS } from '@/lib/admin/social-import';
 import SocialImportForm from './SocialImportForm';
+
+export const metadata: Metadata = { title: 'সোশ্যাল লিংক' };
 
 const linksOf = (m: (typeof allMembers)[number]) =>
   SOCIAL_KEYS.filter((k) => !!(m as unknown as Record<string, string | null>)[k]);

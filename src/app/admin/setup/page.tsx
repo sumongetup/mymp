@@ -1,5 +1,8 @@
+import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { adminConfigured } from '@/lib/admin/auth';
+
+export const metadata: Metadata = { title: 'প্রথম সেটআপ' };
 
 /** Shown until the Supabase environment variables exist. Reads nothing. */
 export default function SetupPage() {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
@@ -8,6 +9,7 @@ import { partyColor } from '@/lib/data';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/nirbachon' },
+    openGraph: shareGraph('/nirbachon'),
   title: 'ত্রয়োদশ জাতীয় সংসদ নির্বাচন',
   description: 'ত্রয়োদশ জাতীয় সংসদ নির্বাচনের আসনভিত্তিক ফলাফল ও নির্বাচিত সদস্যদের তালিকা।',
 };

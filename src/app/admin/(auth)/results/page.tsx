@@ -1,9 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { seats, bn } from '@/lib/data';
 import { parliamentLabel, parliamentsWithRecords } from '@/lib/history';
 import { requireAdmin } from '@/lib/admin/auth';
 import { listResults } from '@/lib/admin/store';
 import { AdminPage, Panel, Table, Td, Badge, Empty, Notice, Button, inputClass } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'নির্বাচনের ফল' };
 
 export default async function ResultsAdmin() {
   await requireAdmin();

@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import { requireSuperAdmin } from '@/lib/admin/auth';
 import { listAdmins } from '@/lib/admin/store';
 import { deleteAdmin } from '@/app/admin/actions';
 import { AdminPage, Panel, Table, Td, Badge, when } from '@/app/admin/ui';
 import AddAdminForm from './AddAdminForm';
+
+export const metadata: Metadata = { title: 'ব্যবহারকারী' };
 
 export default async function UsersAdmin() {
   const me = await requireSuperAdmin();

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import { publishedNews, bn } from '@/lib/data';
 import { Page, PageHead, Card, Empty, NewsCard } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/songbad' },
+    openGraph: shareGraph('/songbad'),
   title: 'সংবাদ',
   description: 'সংসদ সদস্যদের নিয়ে অনুমোদিত সংবাদমাধ্যমের শিরোনাম।',
 };

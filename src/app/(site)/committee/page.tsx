@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { committees, getMemberById, bn, dateBn, meta } from '@/lib/data';
 import { Page, PageHead, Card, Stat, Notice, PartyDot } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/committee' },
+    openGraph: shareGraph('/committee'),
   title: 'সংসদীয় কমিটি',
   description: 'ত্রয়োদশ জাতীয় সংসদের স্থায়ী ও অন্যান্য কমিটির তালিকা ও সদস্যবৃন্দ।',
 };

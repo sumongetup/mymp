@@ -1,9 +1,12 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { members, seats } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { getNews } from '@/lib/admin/store';
 import { saveNews, changeNewsStatus } from '@/app/admin/actions';
 import { AdminPage, Panel, Field, Button, Badge, Notice, when } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'সংবাদ সম্পাদনা' };
 
 const STATUS_BN = { draft: 'খসড়া', published: 'প্রকাশিত', rejected: 'বাতিল' } as const;
 

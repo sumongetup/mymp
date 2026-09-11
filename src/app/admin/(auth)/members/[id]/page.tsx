@@ -1,9 +1,15 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getMemberById, bn, dateBn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { overridesFor, isHidden } from '@/lib/admin/store';
 import { AdminPage, Panel, Button, Notice, when } from '@/app/admin/ui';
 import { EntityEditor, EditFlags, HidePanel, AuditLink } from '../../EntityEditor';
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const m = getMemberById((await params).id);
+  return { title: m ? `${m.nameBn ?? m.nameEn} · সংসদ সদস্য` : 'সংসদ সদস্য' };
+}
 
 export default async function EditMember({
   params,

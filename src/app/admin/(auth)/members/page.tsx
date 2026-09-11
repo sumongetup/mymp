@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { allMembers as members, bn } from '@/lib/data';
 import { normalise } from '@/lib/search';
@@ -5,6 +6,8 @@ import { requireAdmin } from '@/lib/admin/auth';
 import { hiddenList, overrideCounts } from '@/lib/admin/store';
 import { supabaseAdmin } from '@/lib/supabase/admin';
 import { AdminPage, Table, Td, Badge, Empty } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'সংসদ সদস্য' };
 
 export default async function MembersAdmin({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   await requireAdmin();

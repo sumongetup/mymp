@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { requireAdmin } from '@/lib/admin/auth';
 import { listCorrections } from '@/lib/admin/store';
 import { decideCorrection } from '@/app/admin/actions';
 import { AdminPage, Panel, Badge, Empty, when } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'সংশোধন অনুরোধ' };
 
 export default async function CorrectionsAdmin({ searchParams }: { searchParams: Promise<{ status?: string }> }) {
   await requireAdmin();

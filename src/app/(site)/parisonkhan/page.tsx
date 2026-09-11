@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
 import { statistics, parties, committees, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty } from '@/components/ui';
@@ -6,6 +7,7 @@ import { experienceStats } from '@/lib/history';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/parisonkhan' },
+    openGraph: shareGraph('/parisonkhan'),
   title: 'পরিসংখ্যান',
   description: 'ত্রয়োদশ জাতীয় সংসদের সদস্যদের দল, লিঙ্গ, বয়স ও পেশার পরিসংখ্যান।',
 };

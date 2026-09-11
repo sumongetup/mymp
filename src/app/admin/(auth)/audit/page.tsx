@@ -1,6 +1,9 @@
+import type { Metadata } from 'next';
 import { requireAdmin } from '@/lib/admin/auth';
 import { listAudit } from '@/lib/admin/store';
 import { AdminPage, Table, Td, Empty, when } from '@/app/admin/ui';
+
+export const metadata: Metadata = { title: 'পরিবর্তনের ইতিহাস' };
 
 export default async function AuditAdmin({ searchParams }: { searchParams: Promise<{ entity?: string }> }) {
   await requireAdmin();
