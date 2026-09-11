@@ -61,6 +61,8 @@ export async function changePassword(_prev: ActionState, fd: FormData): Promise<
  * shows. Each changed field becomes its own override row and audit entry, so a
  * later revert can be done per field.
  */
+const ADMIN_PATH: Record<EntityType, string> = { member: 'members', seat: 'seats', party: 'parties', committee: 'committees' };
+
 export async function saveOverrides(fd: FormData) {
   const me = await requireAdmin();
   const type = str(fd, 'entity_type') as EntityType;
@@ -78,6 +80,11 @@ export async function saveOverrides(fd: FormData) {
       invalid = f.key;
       continue;
     }
+    // Any other link field (a party's website) must at least be a full https address.
+    if (type !== 'member' && f.url && next && !/^https:\/\/[^\s/]+\.[^\s]+$/.test(next)) {
+      invalid = f.key;
+      continue;
+    }
     await setOverride(me, type, id, f.key, next, current);
     if (f.key in SOCIAL_HOSTS) socialSaved = true;
     if (['educationBn', 'birthPlaceBn', 'professionBn'].includes(f.key)) bioSaved.push(f.key);
@@ -85,9 +92,11 @@ export async function saveOverrides(fd: FormData) {
   if (type === 'member' && bioSaved.length) await dropBioFromWiki(me, id, bioSaved);
   // The editor has now seen and saved this member's links on one form.
   if (type === 'member' && socialSaved) await dropSocialSource(me, id);
-  if (invalid) redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?invalid=${invalid}`);
-  revalidatePath(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}`);
-  redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?saved=1`);
+  // "party" + "s" is not the route: parties live at /admin/parties.
+  const page = `/admin/${ADMIN_PATH[type]}/${id}`;
+  if (invalid) redirect(`${page}?invalid=${invalid}`);
+  revalidatePath(page);
+  redirect(`${page}?saved=1`);
 }
 
 export interface SocialImportState {

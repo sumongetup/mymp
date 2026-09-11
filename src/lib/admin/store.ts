@@ -31,6 +31,15 @@ export const EDITABLE: Record<EntityType, { key: string; label: string; multilin
   party: [
     { key: 'nameBn', label: 'দলের নাম (বাংলা)' },
     { key: 'nameEn', label: 'দলের নাম (English)' },
+    { key: 'originBn', label: 'দলটি কীভাবে গঠিত হয়', multiline: true, group: 'দলের পরিচিতি', hint: 'নিরপেক্ষ ভাষায়, শুধু নির্ভরযোগ্য সূত্রে পাওয়া তথ্য। দলের পাতার "দলের পরিচিতি" অংশে দেখায়।' },
+    { key: 'foundedOn', label: 'প্রতিষ্ঠার তারিখ', hint: 'যেমন 1978-09-01, বা শুধু সাল জানা থাকলে 1978।' },
+    { key: 'founderBn', label: 'প্রতিষ্ঠাতা' },
+    { key: 'leaderTitleBn', label: 'দলপ্রধানের পদ', hint: 'যেমন চেয়ারম্যান, আমির, আহ্বায়ক বা সভাপতি।' },
+    { key: 'leaderNameBn', label: 'দলপ্রধানের নাম' },
+    { key: 'secretaryTitleBn', label: 'দ্বিতীয় পদ', hint: 'যেমন মহাসচিব বা সাধারণ সম্পাদক।' },
+    { key: 'secretaryNameBn', label: 'দ্বিতীয় পদের নাম' },
+    { key: 'headquartersBn', label: 'প্রধান কার্যালয়' },
+    { key: 'website', label: 'দলের ওয়েবসাইট', url: true, hint: 'https:// দিয়ে শুরু পুরো লিংক।' },
   ],
   committee: [
     { key: 'nameBn', label: 'কমিটির নাম (বাংলা)' },

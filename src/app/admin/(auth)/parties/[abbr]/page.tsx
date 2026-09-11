@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { parties, membersOfParty, bn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { overridesFor } from '@/lib/admin/store';
+import { PARTY_PROFILES, PROFILE_KEYS } from '@/lib/partyProfiles';
 import { AdminPage, Panel, Button } from '@/app/admin/ui';
 import { EntityEditor, EditFlags, AuditLink } from '../../EntityEditor';
 
@@ -26,6 +27,11 @@ export default async function EditParty({
   if (!party) notFound();
 
   const overrides = await overridesFor('party', abbr);
+  const sourced = PARTY_PROFILES[abbr];
+  const snapshot: Record<string, string | null | undefined> = {
+    ...Object.fromEntries(PROFILE_KEYS.map((k) => [k, sourced?.[k] ?? null])),
+    ...(party as unknown as Record<string, string | null | undefined>),
+  };
   const list = membersOfParty(abbr);
 
   return (
@@ -40,7 +46,7 @@ export default async function EditParty({
         <EntityEditor
           type="party"
           id={abbr}
-          snapshot={party as unknown as Record<string, string | null | undefined>}
+          snapshot={snapshot}
           overrides={overrides}
           backHref="/admin/parties"
         />

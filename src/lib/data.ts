@@ -21,6 +21,16 @@ export interface Party {
   seats: number;
   seatsTerritorial: number;
   seatsReserved: number;
+  /** Profile fields an editor saved; the sourced defaults are in lib/partyProfiles. */
+  originBn?: string | null;
+  foundedOn?: string | null;
+  founderBn?: string | null;
+  leaderTitleBn?: string | null;
+  leaderNameBn?: string | null;
+  secretaryTitleBn?: string | null;
+  secretaryNameBn?: string | null;
+  headquartersBn?: string | null;
+  website?: string | null;
 }
 
 export interface Seat {

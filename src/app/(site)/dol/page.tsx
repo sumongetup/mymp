@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
-import { parties, statistics, bn } from '@/lib/data';
+import { parties, statistics, bn, type Party } from '@/lib/data';
 import { partyLogo } from '@/lib/partyLogos';
+import { partyProfile, foundedYear } from '@/lib/partyProfiles';
 import { Page, PageHead, Card, CompositionBar, PartyMark, LogoCredit } from '@/components/ui';
 
 const independents = parties.find((p) => p.abbr === 'Ind')?.seats ?? 0;
@@ -13,6 +14,18 @@ export const metadata: Metadata = {
   title: 'রাজনৈতিক দল',
   description: `ত্রয়োদশ জাতীয় সংসদে প্রতিনিধিত্বকারী ${bn(partyCount)}টি রাজনৈতিক দল ও ${bn(independents)} জন স্বতন্ত্র সংসদ সদস্যের তালিকা, প্রতিটি দলের আসনসংখ্যা ও সংসদ সদস্যদের নামসহ।`,
 };
+
+/** "১৯৭৮ সালে প্রতিষ্ঠিত · চেয়ারম্যান তারেক রহমান" under each party; the full profile is on its page. */
+function PartyLine({ p }: { p: Party }) {
+  if (p.abbr === 'Ind') return <span className="text-[13px] text-inksoft">কোনো দলের প্রার্থী নন</span>;
+  const profile = partyProfile(p);
+  const year = foundedYear(profile);
+  const parts = [
+    year && `${bn(year)} সালে প্রতিষ্ঠিত`,
+    profile?.leaderNameBn && `${profile.leaderTitleBn ?? 'প্রধান'} ${profile.leaderNameBn}`,
+  ].filter(Boolean);
+  return parts.length ? <span className="text-[13px] text-inksoft">{parts.join(' · ')}</span> : null;
+}
 
 export default function PartiesPage() {
   const stats = statistics();
@@ -41,6 +54,7 @@ export default function PartiesPage() {
                 <span className="grow min-w-0 flex flex-col gap-1">
                   <span className="display text-[19px] font-bold leading-snug">{p.nameBn ?? p.abbr}</span>
                   <span className="text-[13.5px] text-muted">{p.nameEn}</span>
+                  <PartyLine p={p} />
                 </span>
               </span>
               <span className="flex gap-6 sm:gap-8 shrink-0 ps-[68px] sm:ps-0">
