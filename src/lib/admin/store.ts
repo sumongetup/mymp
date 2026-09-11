@@ -151,6 +151,16 @@ export async function setOverride(a: Actor, type: EntityType, id: string, field:
   await audit(a, { action: 'override.set', entity_type: type, entity_id: id, field, old_value: oldValue, new_value: value });
 }
 
+/**
+ * Once an editor saves a member's links, they are the editor's: the note that
+ * the engine read them from Wikipedia is dropped (and the drop audited).
+ */
+export async function dropSocialSource(a: Actor, id: string) {
+  const { data } = await supabaseAdmin()
+    .from('overrides').select('value').match({ entity_type: 'member', entity_id: id, field: 'socialSource' }).maybeSingle();
+  if (data) await clearOverride(a, 'member', id, 'socialSource', (data.value as string | null) ?? null);
+}
+
 export async function clearOverride(a: Actor, type: EntityType, id: string, field: string, oldValue: string | null) {
   await supabaseAdmin().from('overrides').delete().match({ entity_type: type, entity_id: id, field });
   await audit(a, { action: 'override.clear', entity_type: type, entity_id: id, field, old_value: oldValue, new_value: null });

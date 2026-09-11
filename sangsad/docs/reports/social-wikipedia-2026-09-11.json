@@ -1,0 +1,374 @@
+{
+ "generatedAt": "2026-09-11T09:05:23.808Z",
+ "members": 294,
+ "withArticle": 256,
+ "withAnyLink": 28,
+ "facebook": 1,
+ "x": 0,
+ "youtube": 0,
+ "instagram": 0,
+ "website": 27,
+ "conflicts": 2,
+ "items": [
+  {
+   "id": "013002301",
+   "seat": "রংপুর-৫",
+   "name": "মোঃ গোলাম রব্বানী",
+   "links": {
+    "website": "https://www.golamrabbani.info"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%97%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B0%E0%A6%AC%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A7%80"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013002601",
+   "seat": "কুড়িগ্রাম-২",
+   "name": "আতিকুর রহমান মোজাহিদ",
+   "links": {
+    "website": "https://dratikmujahid.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A4%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013004501",
+   "seat": "চাঁপাইনবাবগঞ্জ-৩",
+   "name": "মোঃ নূরুল ইসলাম",
+   "links": {
+    "website": "https://nurulislambulbul.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AC%E0%A7%81%E0%A6%B2%E0%A6%AC%E0%A7%81%E0%A6%B2"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013005401",
+   "seat": "রাজশাহী-৩",
+   "name": "মোঃ শফিকুল হক মিলন",
+   "links": {
+    "website": "https://advshofiqulhaquemilon.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shofiqul_Haque_Milon"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013006601",
+   "seat": "সিরাজগঞ্জ-৫",
+   "name": "মোঃ আমিরুল ইসলাম খান",
+   "links": {
+    "website": "https://amirulislamkhanalim.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8_%E0%A6%86%E0%A6%B2%E0%A7%80%E0%A6%AE"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013006801",
+   "seat": "পাবনা-১",
+   "name": "মোহাম্মদ নাজিবুর রহমান",
+   "links": {},
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%AE%E0%A7%87%E0%A6%A8"
+   ],
+   "conflicts": [
+    "website"
+   ]
+  },
+  {
+   "id": "013009601",
+   "seat": "বাগেরহাট-২",
+   "name": "শেখ মনজুরুল হক (রাহাদ)",
+   "links": {
+    "website": "https://rahadbagerhat.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A6"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013010801",
+   "seat": "সাতক্ষীরা-৪",
+   "name": "জি, এম, নজরুল ইসলাম",
+   "links": {
+    "website": "https://gazinazrulislam.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gazi_Nazrul_Islam"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013013701",
+   "seat": "টাঙ্গাইল-৮",
+   "name": "আহমেদ আযম খান",
+   "links": {
+    "website": "https://azam-khan.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_%E0%A6%86%E0%A6%AF%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013015201",
+   "seat": "ময়মনসিংহ-৭",
+   "name": "ডাঃ মোঃ মাহাবুবুর রহমান",
+   "links": {
+    "website": "https://drliton.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B2%E0%A6%BF%E0%A6%9F%E0%A6%A8"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013017001",
+   "seat": "মানিকগঞ্জ-৩",
+   "name": "আফরোজা খানম",
+   "links": {
+    "website": "https://afrozakhanamrita.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Afroza_Khanam_Rita"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013017901",
+   "seat": "ঢাকা-৬",
+   "name": "ইশরাক হোসেন",
+   "links": {
+    "website": "https://www.ishraque.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ishraque_Hossain"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013018001",
+   "seat": "ঢাকা-৭",
+   "name": "হামিদুর রহমান",
+   "links": {
+    "website": "https://hamidurrahmanhamid.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hamidur_Rahman_(Bangladeshi_politician)"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013018401",
+   "seat": "ঢাকা-১১",
+   "name": "মোঃ নাহিদ ইসলাম",
+   "links": {
+    "website": "https://www.nahidislam.info"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nahid_Islam"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013018601",
+   "seat": "ঢাকা-১৩",
+   "name": "ববি হাজ্জাজ",
+   "links": {
+    "website": "https://bobbyhajjaj.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%AC%E0%A6%BF_%E0%A6%B9%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%9C"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013018801",
+   "seat": "ঢাকা-১৫",
+   "name": "ডাঃ মোঃ শফিকুর রহমান",
+   "links": {},
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ],
+   "conflicts": [
+    "website"
+   ]
+  },
+  {
+   "id": "013018901",
+   "seat": "ঢাকা-১৬",
+   "name": "মোঃ আব্দুল বাতেন",
+   "links": {
+    "website": "https://colonelabdulbaten.info"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%BE%E0%A6%A4%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A8%E0%A7%87%E0%A6%B2)"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013019001",
+   "seat": "ঢাকা-১৭",
+   "name": "তারেক রহমান",
+   "links": {
+    "website": "https://www.tariquerahman.info"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%95_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013019201",
+   "seat": "ঢাকা-১৯",
+   "name": "দেওয়ান মোহাম্মদ সালাউদ্দিন",
+   "links": {
+    "website": "https://dewansalahuddin.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Dewan_Md._Salauddin"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013019701",
+   "seat": "গাজীপুর-৪",
+   "name": "সালাহ উদ্দিন",
+   "links": {
+    "website": "https://salahuddinayubi.net"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Salahuddin_Aiyubi"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013022201",
+   "seat": "শরিয়তপুর-২",
+   "name": "মোঃ সফিকুর রহমান (কিরন)",
+   "links": {
+    "website": "https://www.kironshariatpur.com"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Safiqur_Rahman_Kiran"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013023201",
+   "seat": "সিলেট-৪",
+   "name": "আরিফুল হক চৌধুরী",
+   "links": {
+    "facebook": "https://www.facebook.com/ArifulHaqueForSylhet"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B0%E0%A6%BF%E0%A6%AB%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013024901",
+   "seat": "কুমিল্লা-১",
+   "name": "ড, খন্দকার মোশাররফ হোসেন",
+   "links": {
+    "website": "https://drkhandakermosharraf.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%96%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%AE%E0%A7%8B%E0%A6%B6%E0%A6%BE%E0%A6%B0%E0%A6%B0%E0%A6%AB_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A7%81%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013026801",
+   "seat": "নোয়াখালী-১",
+   "name": "এ এম মাহবুব উদ্দিন",
+   "links": {
+    "website": "https://mahbub.aboutbio.info"
+   },
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mahbub_Uddin_Khokon"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013029201",
+   "seat": "চট্টগ্রাম-১৫",
+   "name": "শাহজাহান চৌধুরী",
+   "links": {
+    "website": "https://shahjahanchowdhury.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013029301",
+   "seat": "চট্টগ্রাম-১৬",
+   "name": "মোহাম্মদ জহিরুল ইসলাম",
+   "links": {
+    "website": "https://zahirulislam.info"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B9%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013029601",
+   "seat": "কক্সবাজার-৩",
+   "name": "লুৎফুর রহমান",
+   "links": {
+    "website": "https://kazal.pro.bd"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B2%E0%A7%81%E0%A6%A4%E0%A6%AB%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%95%E0%A6%BE%E0%A6%9C%E0%A6%B2"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013004401",
+   "seat": "চাঁপাইনবাবগঞ্জ-২",
+   "name": "মুঃ মিজানুর রহমান",
+   "links": {
+    "website": "https://www.dmizan.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81._%E0%A6%AE%E0%A6%BF%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013000101",
+   "seat": "পঞ্চগড়-১",
+   "name": "ব্যারিস্টার মুহাম্মদ নওশাদ জমির",
+   "links": {
+    "website": "https://www.nawshadzamir.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%A8%E0%A6%93%E0%A6%B6%E0%A6%BE%E0%A6%A6_%E0%A6%9C%E0%A6%AE%E0%A6%BF%E0%A6%B0"
+   ],
+   "conflicts": []
+  },
+  {
+   "id": "013017701",
+   "seat": "ঢাকা-৪",
+   "name": "সৈয়দ জয়নুল আবেদীন",
+   "links": {
+    "website": "https://www.syedjoynulabedin.com"
+   },
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%88%E0%A6%AF%E0%A6%BC%E0%A6%A6_%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)"
+   ],
+   "conflicts": []
+  }
+ ]
+}

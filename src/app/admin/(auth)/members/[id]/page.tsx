@@ -33,6 +33,12 @@ export default async function EditMember({
         </Notice>
       )}
 
+      {m.socialSource && (
+        <Notice tone="warn">
+          এই সদস্যের সোশ্যাল লিংকগুলো স্বয়ংক্রিয়ভাবে তাঁর উইকিপিডিয়া নিবন্ধ থেকে নেওয়া ({m.socialSource.split(' ').join(', ')})। সাইটে সূত্র হিসেবে উইকিপিডিয়া দেখানো হচ্ছে। যাচাই করে কোনো লিংক বদলে সংরক্ষণ করলে সাইটে “সম্পাদক যাচাই করেছেন” দেখাবে।
+        </Notice>
+      )}
+
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4 items-start">
         <EntityEditor
           type="member"

@@ -1,9 +1,9 @@
 {
  "parliamentNo": 13,
- "overridesApplied": 0,
+ "overridesApplied": 56,
  "hidden": 0,
  "syncedAt": "2026-09-11T06:56:38.283Z",
- "builtAt": "2026-09-11T07:04:26.292Z",
+ "builtAt": "2026-09-11T09:06:15.197Z",
  "source": "https://ckeorrzppdgsutqfqdor.supabase.co/storage/v1/object/public/mirror/parliament/latest.json",
  "via": "engine",
  "counts": {

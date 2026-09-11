@@ -61,6 +61,9 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   const prior = priorTermsOf(m.id);
   const socials = socialsOf(m);
   const result = m.seat && !m.seat.reserved ? resultForSeat(m.seat.no, meta.parliamentNo) : null;
+  // The seat's result is only "this member's votes" when they are its winner;
+  // after a by-election the general-election winner is someone else.
+  const wonThisResult = !!result && [...result.candidates].sort((a, b) => b.votes - a.votes)[0]?.name === m.nameBn;
   const cc = committeeCounts();
   const partyMates = m.party ? membersOfParty(m.party.abbr).filter((x) => x.id !== m.id) : [];
   const sameDistrict = district
@@ -256,13 +259,24 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           {m.seat && !m.seat.reserved && (
             <section className="flex flex-col gap-4">
               <div className="flex justify-between items-baseline gap-4">
-                <H2>{year ? `${bn(year)} নির্বাচনে` : 'নির্বাচনে'} প্রাপ্ত ভোট</H2>
+                <H2>
+                  {result && !wonThisResult
+                    ? `${year ? `${bn(year)} সালের সাধারণ নির্বাচনে` : 'সাধারণ নির্বাচনে'} এই আসনের ফল`
+                    : `${year ? `${bn(year)} নির্বাচনে` : 'নির্বাচনে'} প্রাপ্ত ভোট`}
+                </H2>
                 <Link href={`/ason/${m.seat.slug}`} className="text-[14px] font-semibold text-brand hover:underline whitespace-nowrap">
                   আসনের সব ফল →
                 </Link>
               </div>
               {result ? (
-                <ResultCard r={result} />
+                <>
+                  {!wonThisResult && (
+                    <p className="text-[14.5px] leading-relaxed text-inksoft">
+                      এই আসনের সাধারণ নির্বাচনের বিজয়ী ও বর্তমান সংসদ সদস্যের নাম আলাদা। নিচের কার্ডের শেষে উৎসের বিবরণ দেখুন।
+                    </p>
+                  )}
+                  <ResultCard r={result} />
+                </>
               ) : (
                 <Empty
                   title="এই আসনের ভোটের সংখ্যা এখনো যোগ হয়নি।"
@@ -395,7 +409,22 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                     </li>
                   ))}
                 </ul>
-                <span className="text-[12px] text-muted leading-relaxed">আমার এমপির সম্পাদক যাচাই করে যুক্ত করেছেন।</span>
+                {m.socialSource ? (
+                  <span className="text-[12px] text-muted leading-relaxed">
+                    সূত্র: সদস্যের{' '}
+                    {m.socialSource.split(' ').filter(Boolean).map((u, i, all) => (
+                      <span key={u}>
+                        <a href={u} target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">
+                          উইকিপিডিয়া নিবন্ধ{all.length > 1 ? (/\/\/bn\./.test(u) ? ' (বাংলা)' : ' (ইংরেজি)') : ''}
+                        </a>
+                        {i < all.length - 1 ? ' ও ' : ''}
+                      </span>
+                    ))}
+                    । ভুল দেখলে জানান।
+                  </span>
+                ) : (
+                  <span className="text-[12px] text-muted leading-relaxed">আমার এমপির সম্পাদক যাচাই করে যুক্ত করেছেন।</span>
+                )}
               </div>
             )}
             {m.presentAddressBn && (

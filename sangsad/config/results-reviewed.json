@@ -1,0 +1,11 @@
+{
+  "_about": "Seats where the Wikipedia winner of the 2026 general election and the sitting member (parliament.gov.bd) were checked by hand to be the same person under a different spelling. Evidence per seat. Read by the results:wikipedia job. Checked 2026-09-11.",
+  "sameWinner": {
+    "32": "Wikipedia: Shamim Kaisar Lincoln, BNP. Parliament: Mohammad Shamim Kaiser, BNP. Same seat, party and given names.",
+    "57": "Wikipedia: Abu Sayeed Chand, BNP. Parliament: Md. Abu Sayed Chad, BNP. Same seat, party and name in another spelling.",
+    "109": "Wikipedia: Mahmudul Hossain Waliullah, Islami Andolan Bangladesh. Parliament: Md. Oli Ullah, Islamic Movement Bangladesh. Same seat and party; Waliullah and Oli Ullah are one name.",
+    "147": "TBS: Muhammadullah, Bangladesh Khelafat Majlish. Wikipedia (bn): মুহাম্মদুল্লাহ (মুফতি), বাংলাদেশ খেলাফত মজলিস, same count 146,202. Parliament: মুহাম্মদুল্লাহ / MOHAMMAD ULLAH, Bangladesh Khilafat Majlis. Same seat, party and name.",
+    "248": "Wikipedia: Zonayed Saki, Ganosamhati Andolan. Parliament: Md. Zonayed Abdur Rahim Saki, People's Solidarity Movement (Ganosamhati Andolan). Same seat, party and name.",
+    "252": "Wikipedia: Hasnat Abdullah (হাসনাত আবদুল্লাহ), NCP. Parliament: Md. Abul Hasnat, National Citizens Party. Same seat and party; the article infobox names হাসনাত আবদুল্লাহ as the current member of the seat."
+  }
+}

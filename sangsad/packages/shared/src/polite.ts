@@ -1,21 +1,24 @@
 /**
- * Polite HTTP for news sources: at most one request per second per host,
+ * Polite HTTP for news sources: at most one request per second per host (or
+ * fewer, when the host's robots.txt sets a Crawl-delay),
  * our bot string on every request, a timeout and a size cap, and an explicit
  * signal when a site answers with a bot challenge (Cloudflare and the like)
  * so callers stop instead of retrying. Nothing here ever tries to get past a
  * challenge.
  */
-import { parseRobots, robotsAllows, type Robots } from './robots';
+import { parseRobots, robotsAllows, robotsCrawlDelay, type Robots } from './robots';
 
 export const BOT_UA = process.env.SCRAPER_USER_AGENT ?? 'MyMPBot/1.0 (+https://mymp.bd/somporke)';
 const MIN_GAP_MS = 1000;
 const MAX_BYTES = 5 * 1024 * 1024;
 
 const nextSlot = new Map<string, number>();
+/** Per-host gap from robots.txt Crawl-delay, once that file has been read. */
+const hostGap = new Map<string, number>();
 async function waitForHost(host: string) {
   const now = Date.now();
   const slot = Math.max(now, nextSlot.get(host) ?? 0);
-  nextSlot.set(host, slot + MIN_GAP_MS);
+  nextSlot.set(host, slot + Math.max(MIN_GAP_MS, hostGap.get(host) ?? 0));
   if (slot > now) await new Promise((r) => setTimeout(r, slot - now));
 }
 
@@ -69,7 +72,10 @@ export function robotsFor(origin: string): Promise<Robots | 'deny'> {
       .then((r): Robots | 'deny' => {
         if (r.challenged || r.status >= 500) return 'deny';
         if (r.status >= 400) return { groups: [], sitemaps: [] };
-        return parseRobots(r.text);
+        const robots = parseRobots(r.text);
+        const delay = robotsCrawlDelay(robots, BOT_UA);
+        if (delay) hostGap.set(new URL(origin).host, delay * 1000);
+        return robots;
       })
       .catch((): 'deny' => 'deny');
     robotsCache.set(origin, p);

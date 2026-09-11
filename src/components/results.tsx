@@ -2,21 +2,32 @@ import { bn, bnGroup, partyColor } from '@/lib/data';
 import { parliamentLabel, type SeatResult } from '@/lib/history';
 import { Card, DocLink } from './ui';
 
+/** Who published the numbers, named from the source link; an editor's own entry is the gazette. */
+function sourceOf(url: string): { name: string; link: string } {
+  if (/wikipedia\.org/i.test(url)) return { name: 'উইকিপিডিয়া', link: 'উইকিপিডিয়া' };
+  if (/tbsnews\.net/i.test(url)) return { name: 'দ্য বিজনেস স্ট্যান্ডার্ড', link: 'মূল পাতা' };
+  return { name: 'নির্বাচন কমিশনের গেজেট', link: 'গেজেট' };
+}
+
 /**
  * One election's result for one seat: every candidate, votes and share,
- * with the gazette it was read from. Rendered only from published rows.
+ * with where it was read from. Rendered only from published rows.
  */
 export function ResultCard({ r, compact = false }: { r: SeatResult; compact?: boolean }) {
   const sorted = [...r.candidates].sort((a, b) => b.votes - a.votes);
   const cast = r.totalVotes ?? sorted.reduce((n, c) => n + c.votes, 0);
   const top = sorted[0]?.votes ?? 1;
+  const source = sourceOf(r.sourceUrl);
+  // Notes written by the results job open with their own "উৎস: …।" line; the footer names the source already.
+  const note = r.sourceNote?.replace(/^উৎস:[^।]*।\s*/, '') || null;
 
   return (
     <Card className="overflow-hidden">
       <div className="px-5 py-4 border-b border-rulesoft flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <span className="display text-[17px]">{parliamentLabel(r.parliamentNo)}</span>
         <span className="text-[13px] text-muted tnum">
-          {cast ? `${bnGroup(cast)} ভোট` : ''}{r.turnout != null ? ` · ভোট পড়েছে ${bn(r.turnout)}%` : ''}
+          {cast ? (r.totalVotes ? `${bnGroup(cast)} ভোট` : `প্রার্থীদের মোট ${bnGroup(cast)} ভোট`) : ''}
+          {r.turnout != null ? ` · ভোট পড়েছে ${bn(r.turnout)}%` : ''}
         </span>
       </div>
       <ol className="divide-y divide-rulesoft">
@@ -46,17 +57,8 @@ export function ResultCard({ r, compact = false }: { r: SeatResult; compact?: bo
         })}
       </ol>
       <div className="px-5 py-3 bg-paper/60 border-t border-rulesoft flex items-center justify-between gap-3 text-[12.5px] text-muted">
-        {/wikipedia\.org/i.test(r.sourceUrl) ? (
-          <>
-            <span>উৎস: উইকিপিডিয়া{r.sourceNote ? ` · ${r.sourceNote.replace(/^উৎস: উইকিপিডিয়া[^।]*।\s*/, '')}` : ''}</span>
-            <DocLink href={r.sourceUrl}>উইকিপিডিয়া</DocLink>
-          </>
-        ) : (
-          <>
-            <span>উৎস: নির্বাচন কমিশনের গেজেট{r.sourceNote ? ` · ${r.sourceNote}` : ''}</span>
-            <DocLink href={r.sourceUrl}>গেজেট</DocLink>
-          </>
-        )}
+        <span>উৎস: {source.name}{note ? ` · ${note}` : ''}</span>
+        <DocLink href={r.sourceUrl}>{source.link}</DocLink>
       </div>
     </Card>
   );

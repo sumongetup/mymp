@@ -7,7 +7,7 @@ import { requireAdmin, requireSuperAdmin } from '@/lib/admin/auth';
 import {
   EDITABLE, type EntityType, setOverride, clearOverride, setHidden,
   upsertNews, setNewsStatus, resolveCorrection, addAdmin, removeAdmin, audit,
-  upsertResult, setResultStatus, socialOverrides,
+  upsertResult, setResultStatus, socialOverrides, dropSocialSource,
 } from '@/lib/admin/store';
 import { SOCIAL_HOSTS, validSocialUrl, parseSocialLines } from '@/lib/admin/social-import';
 import { allMembers } from '@/lib/data';
@@ -68,6 +68,7 @@ export async function saveOverrides(fd: FormData) {
   if (!EDITABLE[type] || !id) throw new Error('bad entity');
 
   let invalid: string | null = null;
+  let socialSaved = false;
   for (const f of EDITABLE[type]) {
     const next = orNull(str(fd, `field__${f.key}`));
     const current = orNull(str(fd, `current__${f.key}`));
@@ -77,7 +78,10 @@ export async function saveOverrides(fd: FormData) {
       continue;
     }
     await setOverride(me, type, id, f.key, next, current);
+    if (f.key in SOCIAL_HOSTS) socialSaved = true;
   }
+  // The editor has now seen and saved this member's links on one form.
+  if (type === 'member' && socialSaved) await dropSocialSource(me, id);
   if (invalid) redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?invalid=${invalid}`);
   revalidatePath(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}`);
   redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?saved=1`);

@@ -15,7 +15,8 @@ import { runPhotos } from './jobs/photos';
 import { runReport } from './jobs/report';
 import { runSourcesInspect } from './jobs/sources-inspect';
 import { runNews, runNewsRematch } from './jobs/news';
-import { runResultsWiki } from './jobs/results-wiki';
+import { runResults2026 } from './jobs/results-wiki';
+import { runSocialWiki } from './jobs/social-wiki';
 
 config({ path: resolve(import.meta.dirname, '../../.env') });
 
@@ -43,8 +44,12 @@ const jobs: Record<string, Job> = {
   news: () => runNews(getDb()),
   /** Re-runs the matcher over the last week's articles (after the matcher changes). */
   'news:rematch': () => runNewsRematch(getDb()),
-  /** Drafts 2026 results from Wikipedia into mymp.bd's election_results for editors to verify. */
-  'results:wikipedia': () => runResultsWiki(getDb()),
+  /** 2026 results from TBS and Wikipedia into mymp.bd's election_results (new seats as drafts). */
+  'results:2026': () => runResults2026(getDb()),
+  /** The same, and rewrites its own earlier rows that no editor has saved since. */
+  'results:2026:refresh': () => runResults2026(getDb(), 13, { refresh: true }),
+  /** Official website and social links of sitting members from their Wikipedia articles, into mymp.bd. */
+  'social:wikipedia': () => runSocialWiki(getDb()),
 };
 
 async function run(name: string) {

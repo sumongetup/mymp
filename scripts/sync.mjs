@@ -373,8 +373,10 @@ async function main() {
       bioBn: htmlToText(m.speakerDetailsBioBn),
       summaryBn: clean(m.speakerHeroSummaryBn),
       term: { start: clean(term.startDate), end: clean(term.endDate) },
-      // Official pages an admin has verified. Nothing here comes from the source.
-      facebook: null, x: null, youtube: null, instagram: null, website: null,
+      // Official pages, from admin overrides only: an editor's own entry, or
+      // the engine's reading of the member's Wikipedia article (socialSource
+      // then names it). Nothing here comes from parliament.gov.bd.
+      facebook: null, x: null, youtube: null, instagram: null, website: null, socialSource: null,
       _match: { empId: m.empId ?? null, nameKey: nameKey(m.nameEng), dob: clean(m.dateOfBirth), seatNo, district: districtKey(c.constituencyEng), seatKey: seatKey(c.constituencyEng) }, // internal, stripped before writing
       party: p.abbreviation ? { abbr: p.abbreviation, nameBn: clean(p.nameBng), nameEn: clean(p.nameEng) } : null,
       seat: seatNo

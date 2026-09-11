@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseRobots, robotsAllows } from './robots';
+import { parseRobots, robotsAllows, robotsCrawlDelay } from './robots';
 
 const UA = 'MyMPBot/1.0 (+https://mymp.bd/somporke)';
 
@@ -36,5 +36,12 @@ describe('robots.txt', () => {
     expect(robotsAllows(null, UA, '/anything')).toBe(true);
     expect(robotsAllows(parseRobots(''), UA, '/anything')).toBe(true);
     expect(robotsAllows(parseRobots('User-agent: *\nDisallow: /'), UA, '/rss.xml')).toBe(false);
+  });
+
+  it('reads Crawl-delay for the group that applies to us', () => {
+    const r = parseRobots(['User-agent: *', 'Crawl-delay: 10', 'Disallow: /admin/', '', 'User-agent: OtherBot', 'Crawl-delay: 30'].join('\n'));
+    expect(robotsCrawlDelay(r, UA)).toBe(10);
+    expect(robotsCrawlDelay(parseRobots('User-agent: *'), UA)).toBeNull();
+    expect(robotsCrawlDelay(null, UA)).toBeNull();
   });
 });
