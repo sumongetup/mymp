@@ -62,6 +62,13 @@ const cases: [query: string, first: string][] = [
   ['chittagong 8', '/ason/chittagong-8'],
   ['comilla 4', '/ason/cumilla-4'],
   ['bogra', '/jela/bogura'],
+  // Misspellings: nothing matches as typed, so the search falls back to near misses.
+  ['তারিক রহমান', '/mp/tarique-rahman'],
+  ['তারেক রহমন', '/mp/tarique-rahman'],
+  ['মিরজা ফখরুল', '/mp/mirza-fakhrul-islam-alamgir'],
+  ['কুমিলা', '/ason/cumilla-1'],
+  ['জামাত', '/dol/bjei'],
+  ['Tarik Rahman', '/mp/tarique-rahman'],
 ];
 for (const [q, first] of cases) {
   const all = search(index, q, 10_000);

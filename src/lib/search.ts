@@ -45,6 +45,7 @@ const BN_FOLD: [RegExp, string][] = [
   [/ঁ/g, ''],                                     // chandrabindu
   [/মোহাম্মদ|মুহাম্মদ|মোঃ|মো\./g, 'মো'],              // "Md." is written at least four ways
   [/ঃ/g, ''],                                     // visarga, decorative in abbreviations
+  [/জামায়?াত/g, 'জামাত'],                  // the party is typed both ways (the nukta is folded away above, hence optional)
   // Conjuncts are written both ways: আব্দুল and আবদুল, মাহ্‌মুদ and মাহমুদ, লুৎফর and
   // লুতফর. So the hasanta goes (after the "Md." rule, which spells মোহাম্মদ with one)
   // and khanda ta, which is ত with a hasanta, becomes ত.
@@ -121,6 +122,49 @@ function score(entry: Entry, q: string, words: string[]): number {
   return best;
 }
 
+/** Edit distance between two words (Levenshtein), on the normalised letters and signs. */
+function edits(a: string, b: string): number {
+  const x = [...a];
+  const y = [...b];
+  let prev = Array.from({ length: y.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= x.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= y.length; j++) cur[j] = Math.min(prev[j]! + 1, cur[j - 1]! + 1, prev[j - 1]! + (x[i - 1] === y[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[y.length]!;
+}
+
+/** How far a word may be from a key word and still count: one slip in a short word, two in a longer one. */
+const allowed = (len: number) => (len >= 6 ? 2 : len >= 4 ? 1 : 0);
+
+/**
+ * When nothing matches as typed: every query word must be within a slip or
+ * two of some word of a key ("তারিক" for "তারেক", "রহমন" for "রহমান"). Scores
+ * below the exact tiers, and runs only when the exact search found nothing.
+ */
+function fuzzyScore(entry: Entry, words: string[]): number {
+  if (!words.length || words.some((w) => [...w].length < 4)) return 0;
+  let best = 0;
+  for (const key of entry.keys) {
+    const ks = key.split(' ');
+    let sum = 0;
+    let ok = true;
+    for (const w of words) {
+      let closest = 1;
+      for (const k of ks) {
+        const len = Math.max([...w].length, [...k].length);
+        const d = edits(w, k);
+        if (d <= allowed(len)) closest = Math.min(closest, d / len);
+      }
+      if (closest === 1) { ok = false; break; }
+      sum += 1 - closest;
+    }
+    if (ok) best = Math.max(best, 20 + (sum / words.length) * 20);
+  }
+  return best;
+}
+
 const TYPE_RANK: Record<EntryType, number> = {
   seat: 3, member: 2, party: 1, district: 1, division: 0,
 };
@@ -139,6 +183,11 @@ export function search(index: Entry[], raw: string, limit = 8): Entry[] {
   // Try as typed; if nothing lands, try the separator-free form of the query too.
   let hits = run(typed);
   if (!hits.length) hits = run(typed.replace(/ /g, ''));
+  // Still nothing: a misspelling, most likely. Near misses, word by word.
+  if (!hits.length) {
+    const words = typed.split(' ').filter(Boolean);
+    hits = index.map((e) => ({ e, s: fuzzyScore(e, words) })).filter((r) => r.s > 0);
+  }
 
   return hits
     .sort((a, b) =>
