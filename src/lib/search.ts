@@ -45,6 +45,11 @@ const BN_FOLD: [RegExp, string][] = [
   [/ঁ/g, ''],                                     // chandrabindu
   [/মোহাম্মদ|মুহাম্মদ|মোঃ|মো\./g, 'মো'],              // "Md." is written at least four ways
   [/ঃ/g, ''],                                     // visarga, decorative in abbreviations
+  // Conjuncts are written both ways: আব্দুল and আবদুল, মাহ্‌মুদ and মাহমুদ, লুৎফর and
+  // লুতফর. So the hasanta goes (after the "Md." rule, which spells মোহাম্মদ with one)
+  // and khanda ta, which is ত with a hasanta, becomes ত.
+  [/্/g, ''],
+  [/ৎ/g, 'ত'],
   [/[।,\-–—()'"/]/g, ' '],
 ];
 
@@ -82,7 +87,9 @@ export function normalise(raw: string): string {
     for (const [re, to] of EN_FOLD) w = w.replace(re, to);
     return w.trim();
   });
-  return s.replace(/[^\p{L}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim();
+  // Keep combining marks (\p{M}): Bangla vowel signs are marks, and turning them into
+  // spaces split "তারেক" into "ত র ক", whose one-letter pieces match almost any name.
+  return s.replace(/[^\p{L}\p{M}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim();
 }
 
 /**
