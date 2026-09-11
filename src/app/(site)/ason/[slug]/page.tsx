@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { memberPhotoImage, shareGraph, shareTwitter } from '@/lib/seo';
+import { shareGraph, shareTwitter } from '@/lib/seo';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -28,11 +28,13 @@ export async function generateMetadata({ params }: PageProps<'/ason/[slug]'>): P
   const year = electionYear(meta.parliamentNo);
   const won = top && m && top.name === m.nameBn ? ` ${year ? `${bn(year)} সালের` : 'এই'} নির্বাচনে ${bnGroup(top.votes)} ভোট পেয়ে নির্বাচিত।` : '';
   const where = s.reserved ? s.nameBn : `${s.nameBn} আসন`;
+  // The sitting member's preview image (/api/og/mp/[slug]); a vacant seat keeps the site's.
+  const card = m ? { url: `/api/og/mp/${m.slug}`, width: 1200, height: 630, type: 'image/png', alt: `${where}, ${name}` } : null;
   return {
-    title: name ? `${where} · ${name}` : s.vacantSince ? `${where} (শূন্য)` : where,
+    title: name ? `${where} | ${name}` : s.vacantSince ? `${where} (শূন্য)` : where,
     alternates: { canonical: `/ason/${s.slug}` },
-    openGraph: shareGraph(`/ason/${s.slug}`, m ? memberPhotoImage(m) : null),
-    twitter: shareTwitter(m ? memberPhotoImage(m) : null),
+    openGraph: shareGraph(`/ason/${s.slug}`, card),
+    twitter: { ...shareTwitter(card), ...(card ? { card: 'summary_large_image' as const } : {}) },
     description: name
       ? `${s.reserved ? `${s.nameBn}-এর` : `${s.nameBn} আসনের`} সংসদ সদস্য ${name}${m?.party?.nameBn ? `, ${m.party.nameBn}` : ''}।${won} ${s.reserved ? 'দল ও সংসদের তথ্য।' : 'প্রার্থীদের ভোট, আগের সংসদ সদস্য ও আসনের এলাকা।'}`
       : `${where} ${s.vacantSince ? `${dateBn(s.vacantSince)} থেকে শূন্য` : 'এখন শূন্য'}। ত্রয়োদশ জাতীয় সংসদ; আসনের নির্বাচনী ফল ও আগের সংসদ সদস্য।`,

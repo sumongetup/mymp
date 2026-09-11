@@ -38,17 +38,6 @@ export const BASE_TWITTER: NonNullable<Metadata['twitter']> = {
  * own address (og:url), and a page image where it has one. Next fills
  * og:title and og:description from the page's title and description.
  */
-/**
- * A member's official photo as the page image. The owner chose the plain photo
- * over a card (2026-09-11): WhatsApp shows a small square, and the photo reads
- * there where a card's text does not. parliament.gov.bd's photos are 300x300.
- */
-export function memberPhotoImage(m: { photoUrl: string | null; nameBn: string | null; nameEn: string | null; seat: { nameBn: string | null } | null }) {
-  if (!m.photoUrl) return null;
-  const who = m.nameBn ?? m.nameEn ?? '';
-  return { url: m.photoUrl, width: 300, height: 300, type: 'image/jpeg', alt: m.seat?.nameBn ? `${who}, ${m.seat.nameBn}` : who };
-}
-
 /** Twitter's copy of a page image; a square photo gets the square "summary" card. Without one the site's image stays. */
 export function shareTwitter(image?: { url: string; width: number; height: number; alt?: string } | null): NonNullable<Metadata['twitter']> {
   if (!image) return BASE_TWITTER;

@@ -6,9 +6,9 @@ import { Page, PageHead, Card } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/somporke' },
-    openGraph: shareGraph('/somporke'),
+  openGraph: shareGraph('/somporke'),
   title: 'সম্পর্কে',
-  description: 'আমার এমপি কী, তথ্য কোথা থেকে আসে, আর কী দেখানো হয় না।',
+  description: 'আমার এমপি বাংলাদেশের সংসদ সদস্যদের তথ্যের একটি উন্মুক্ত ওয়েবসাইট। তথ্য কোথা থেকে আসে, কীভাবে হালনাগাদ হয় আর কী দেখানো হয় না, এই পাতায় জানুন।',
 };
 
 export default function AboutPage() {

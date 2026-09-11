@@ -33,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: synced,
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+      // Google Images finds each member's official photo from here.
+      ...(m.photoUrl ? { images: [m.photoUrl] } : {}),
     })),
     ...seats.map((s) => ({
       url: url(`/ason/${s.slug}`),

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { bn, dateBn, initial, partyColor, getMemberById, type Member, type Party, type NewsPost } from '@/lib/data';
 import MemberPhoto from './MemberPhoto';
 import Icon from './Icon';
+import { siteUrl } from '@/lib/site';
 
 export function Page({ children }: { children: React.ReactNode }) {
   return <div className="mx-auto max-w-[1200px] px-4 sm:px-5">{children}</div>;
@@ -271,9 +272,21 @@ export function Notice({ title, children }: { title: string; children: React.Rea
   );
 }
 
+/** The trail above a page, and the same trail as BreadcrumbList data for search engines. */
 export function Breadcrumb({ items }: { items: { href?: string; label: string }[] }) {
+  const trail = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.label,
+      ...(it.href ? { item: `${siteUrl}${it.href === '/' ? '' : it.href}` } : {}),
+    })),
+  };
   return (
     <nav aria-label="পথ" className="flex flex-wrap gap-2 text-[13.5px] text-muted pt-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(trail) }} />
       {items.map((it, i) => (
         <span key={`${it.label}-${i}`} className="flex gap-2">
           {it.href ? <Link href={it.href} className="hover:text-brand">{it.label}</Link>

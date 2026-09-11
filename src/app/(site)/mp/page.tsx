@@ -4,11 +4,12 @@ import { members, parties, bn, statistics } from '@/lib/data';
 import { Page, PageHead, Stat } from '@/components/ui';
 import MemberFilter from '@/components/MemberFilter';
 
+const generalSeats = members.filter((m) => !m.seat?.reserved).length;
 export const metadata: Metadata = {
   alternates: { canonical: '/mp' },
-    openGraph: shareGraph('/mp'),
+  openGraph: shareGraph('/mp'),
   title: 'সব সংসদ সদস্য',
-  description: 'ত্রয়োদশ জাতীয় সংসদের সব সদস্যের তালিকা, দল ও আসনসহ।',
+  description: `ত্রয়োদশ জাতীয় সংসদের ${bn(members.length)} জন সংসদ সদস্যের তালিকা: ${bn(generalSeats)}টি সাধারণ আসন ও ${bn(members.length - generalSeats)}টি সংরক্ষিত মহিলা আসন। নাম, দল, আসন বা জেলা দিয়ে খুঁজুন।`,
 };
 
 export default function AllMps() {

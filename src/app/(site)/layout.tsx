@@ -11,6 +11,7 @@ import { siteUrl } from '@/lib/site';
 const ORGANIZATION = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   name: 'আমার এমপি',
   alternateName: 'mymp',
   url: siteUrl,

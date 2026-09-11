@@ -9,6 +9,16 @@ export function generateStaticParams() {
   return committees.map((c) => ({ slug: c.slug }));
 }
 
+/** "{committee}: … সভাপতি {name}, সদস্য {n} জন; …" from the committee's roster. */
+function committeeDescription(c: NonNullable<ReturnType<typeof getCommittee>>): string {
+  const name = c.nameBn ?? c.nameEn ?? 'কমিটি';
+  const chairId = c.members.find((x) => x.role === 'Chairman')?.memberId;
+  const chair = chairId ? getMemberById(chairId) : undefined;
+  const count = c.members.length;
+  const who = [chair ? `সভাপতি ${chair.nameBn ?? chair.nameEn}` : null, count ? `সদস্য ${bn(count)} জন` : null].filter(Boolean).join(', ');
+  return `${name}: ত্রয়োদশ জাতীয় সংসদের একটি সংসদীয় কমিটি।${who ? ` ${who};` : ''} সদস্যদের তালিকা ও বৈঠকের বিজ্ঞপ্তি এই পাতায়।`;
+}
+
 export async function generateMetadata({ params }: PageProps<'/committee/[slug]'>): Promise<Metadata> {
   const { slug } = await params;
   const c = getCommittee(slug);
@@ -17,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<'/committee/[slug]'
     title: c.nameBn ?? c.nameEn ?? 'কমিটি',
     alternates: { canonical: `/committee/${c.slug}` },
     openGraph: shareGraph(`/committee/${c.slug}`),
-    description: `${c.nameBn ?? c.nameEn}: ত্রয়োদশ জাতীয় সংসদের কমিটি, তার সদস্যবৃন্দ ও বৈঠকের বিজ্ঞপ্তি।`,
+    description: committeeDescription(c),
   };
 }
 

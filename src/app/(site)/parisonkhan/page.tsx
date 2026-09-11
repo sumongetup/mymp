@@ -7,9 +7,9 @@ import { experienceStats } from '@/lib/history';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/parisonkhan' },
-    openGraph: shareGraph('/parisonkhan'),
+  openGraph: shareGraph('/parisonkhan'),
   title: 'পরিসংখ্যান',
-  description: 'ত্রয়োদশ জাতীয় সংসদের সদস্যদের দল, লিঙ্গ, বয়স ও পেশার পরিসংখ্যান।',
+  description: 'ত্রয়োদশ জাতীয় সংসদের সদস্যদের পরিসংখ্যান: দলভিত্তিক আসন, নারী ও পুরুষ সদস্য, বয়স, পেশা ও কতবার নির্বাচিত, সংসদের তথ্যভান্ডার থেকে হিসাব করা।',
 };
 
 /** A labelled horizontal bar. One series, so the heading names it and no legend is needed. */

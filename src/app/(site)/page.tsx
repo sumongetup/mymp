@@ -15,6 +15,19 @@ export const metadata: Metadata = {
   twitter: { ...BASE_TWITTER, title: SITE_TITLE, description: SITE_DESCRIPTION },
 };
 
+/** The site itself, for search engines: its name, address and language. */
+const WEBSITE_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  name: 'আমার এমপি',
+  alternateName: 'mymp',
+  url: siteUrl,
+  inLanguage: 'bn-BD',
+  description: SITE_DESCRIPTION,
+  publisher: { '@id': `${siteUrl}/#organization` },
+};
+
 export default function Home() {
   const stats = statistics();
   const latestNews = publishedNews().slice(0, 3);
@@ -42,6 +55,7 @@ export default function Home() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_LD) }} />
       <section className="bg-[radial-gradient(ellipse_at_top_left,_var(--color-brandsoft),_transparent_55%)]">
         <Page>
           <div className="pt-9 sm:pt-14 pb-10 sm:pb-14 flex flex-col lg:flex-row gap-9 lg:gap-14 items-start">

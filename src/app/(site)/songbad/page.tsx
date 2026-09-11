@@ -5,9 +5,9 @@ import { Page, PageHead, Card, Empty, NewsCard } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/songbad' },
-    openGraph: shareGraph('/songbad'),
+  openGraph: shareGraph('/songbad'),
   title: 'সংবাদ',
-  description: 'সংসদ সদস্যদের নিয়ে অনুমোদিত সংবাদমাধ্যমের শিরোনাম।',
+  description: 'সংসদ সদস্যদের নিয়ে দেশের সংবাদমাধ্যমের সর্বশেষ শিরোনাম, মূল খবরের লিংকসহ। প্রতিটি শিরোনাম সংশ্লিষ্ট সংসদ সদস্যের পাতাতেও দেখা যায়।',
 };
 
 export default function NewsPage() {

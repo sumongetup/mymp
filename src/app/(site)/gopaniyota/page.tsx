@@ -5,9 +5,9 @@ import { Page, PageHead, Card } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/gopaniyota' },
-    openGraph: shareGraph('/gopaniyota'),
+  openGraph: shareGraph('/gopaniyota'),
   title: 'গোপনীয়তা নীতি ও ব্যবহারের শর্ত',
-  description: 'আমার এমপি সাইট আপনার কী তথ্য রাখে (কিছুই না), আর সাইটের তথ্য কীভাবে ব্যবহার করা যায়।',
+  description: 'আমার এমপি সাইট আপনার কোনো ব্যক্তিগত তথ্য রাখে না। সাইটের তথ্য কীভাবে ব্যবহার ও উদ্ধৃত করা যায় এবং কোন শর্তে, তা এই পাতায় লেখা আছে।',
 };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

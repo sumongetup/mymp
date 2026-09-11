@@ -27,10 +27,10 @@ export async function generateMetadata({ params }: PageProps<'/jela/[slug]'>): P
   const d = districts().get(slug);
   if (!d) return { title: 'জেলা পাওয়া যায়নি' };
   return {
-    title: `${d.bn} জেলার সংসদ সদস্য`,
+    title: `${d.bn} জেলার সংসদ সদস্য ও আসন`,
     alternates: { canonical: `/jela/${d.slug}` },
     openGraph: shareGraph(`/jela/${d.slug}`),
-    description: `${d.bn} জেলার ${bn(d.seats.length)}টি সংসদীয় আসন ও তাদের বর্তমান সদস্য। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
+    description: `${d.bn} জেলায় ${bn(d.seats.length)}টি সংসদীয় আসন। প্রতিটি আসনের বর্তমান সংসদ সদস্য, দল ও জেলার দলভিত্তিক আসনের হিসাব এই পাতায়; তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
   };
 }
 

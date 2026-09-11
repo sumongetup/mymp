@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: SITE_TITLE,
-    template: '%s · আমার এমপি',
+    template: '%s | আমার এমপি',
   },
   description: SITE_DESCRIPTION,
   openGraph: BASE_OPEN_GRAPH,

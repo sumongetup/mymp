@@ -4,14 +4,24 @@ import Link from 'next/link';
 import { seats, getMemberById, parties, statistics, districtOf, bn, bnGroup, dateBn, meta, ecs } from '@/lib/data';
 import { Page, PageHead, Card, Stat, CompositionBar, Empty, PartyDot } from '@/components/ui';
 import { parliament } from '@/lib/activity';
-import { parliamentsWithRecords, partySeatsOf, parliamentLabel } from '@/lib/history';
+import { parliamentsWithRecords, partySeatsOf, parliamentLabel, resultForSeat } from '@/lib/history';
 import { partyColor } from '@/lib/data';
 
+// Seats of this parliament with a published result, and each seat's winner.
+const winnerOf = (seatNo: number) => {
+  const r = resultForSeat(seatNo, 13);
+  if (!r) return null;
+  const [top] = [...r.candidates].sort((a, b) => b.votes - a.votes);
+  return top ? { votes: top.votes } : null;
+};
+const publishedSeats = seats.filter((s) => !s.reserved && winnerOf(s.no)).length;
 export const metadata: Metadata = {
   alternates: { canonical: '/nirbachon' },
-    openGraph: shareGraph('/nirbachon'),
+  openGraph: shareGraph('/nirbachon'),
   title: 'ত্রয়োদশ জাতীয় সংসদ নির্বাচন',
-  description: 'ত্রয়োদশ জাতীয় সংসদ নির্বাচনের আসনভিত্তিক ফলাফল ও নির্বাচিত সদস্যদের তালিকা।',
+  description: publishedSeats
+    ? `২০২৬ সালের ত্রয়োদশ জাতীয় সংসদ নির্বাচন: ${bn(publishedSeats)}টি আসনের প্রকাশিত ফল, প্রার্থী ও প্রাপ্ত ভোট, দলভিত্তিক আসনসংখ্যা এবং জেলা অনুযায়ী নির্বাচিত সংসদ সদস্য।`
+    : 'ত্রয়োদশ জাতীয় সংসদ নির্বাচনের আসনভিত্তিক ফলাফল ও নির্বাচিত সদস্যদের তালিকা।',
 };
 
 export default function ElectionPage() {
@@ -112,10 +122,20 @@ export default function ElectionPage() {
       </Card>
 
       <div className="mt-4">
-        <Empty
-          title="আসনভিত্তিক প্রার্থী তালিকা ও ভোটের সংখ্যা এখনো যোগ করা হয়নি"
-          body="নির্বাচন কমিশনের গেজেট থেকে প্রতিটি আসনের প্রার্থী, প্রতীক ও প্রাপ্ত ভোট যোগ করা হবে। যাচাই করা সংখ্যা ছাড়া কিছু দেখানো হবে না।"
-        />
+        {publishedSeats ? (
+          <Card className="p-5 sm:p-6 flex flex-col gap-2">
+            <h2 className="display text-[19px] font-bold">{bn(publishedSeats)}টি আসনের ফল প্রকাশিত</h2>
+            <p className="text-[14.5px] leading-relaxed text-inksoft">
+              প্রতিটি আসনের পাতায় সব প্রার্থী, দল ও প্রাপ্ত ভোট আছে; নিচে জেলা অনুযায়ী তালিকায় বিজয়ীর ভোট দেখুন। সূত্র দ্য বিজনেস স্ট্যান্ডার্ড ও উইকিপিডিয়া,
+              নির্বাচন কমিশনের গেজেটের সঙ্গে এখনো মিলিয়ে দেখা হয়নি। যেসব আসনের ফল পাওয়া যায়নি, সেগুলোর পাতায় তা লেখা আছে।
+            </p>
+          </Card>
+        ) : (
+          <Empty
+            title="আসনভিত্তিক প্রার্থী তালিকা ও ভোটের সংখ্যা এখনো যোগ করা হয়নি"
+            body="নির্বাচন কমিশনের গেজেট থেকে প্রতিটি আসনের প্রার্থী, প্রতীক ও প্রাপ্ত ভোট যোগ করা হবে। যাচাই করা সংখ্যা ছাড়া কিছু দেখানো হবে না।"
+          />
+        )}
       </div>
 
       <section className="mt-10 flex flex-col gap-4">
@@ -187,12 +207,14 @@ export default function ElectionPage() {
               <ul className="flex flex-col gap-1.5 text-[14.5px]">
                 {d.list.map((seat) => {
                   const m = seat.memberId ? getMemberById(seat.memberId) : undefined;
+                  const won = winnerOf(seat.no);
                   return (
                     <li key={seat.no}>
                       <Link href={`/ason/${seat.slug}`} className="flex items-center gap-2 hover:text-brand">
                         <PartyDot abbr={m?.party?.abbr} />
                         <span className="font-medium shrink-0">{seat.nameBn}</span>
                         <span className="text-muted truncate">{m?.nameBn ?? m?.nameEn}</span>
+                        {won && <span className="ms-auto shrink-0 tnum text-[12.5px] text-muted">{bnGroup(won.votes)} ভোট</span>}
                       </Link>
                     </li>
                   );

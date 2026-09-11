@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { parties, statistics, bn, partyColor } from '@/lib/data';
 import { Page, PageHead, Card, CompositionBar } from '@/components/ui';
 
+const independents = parties.find((p) => p.abbr === 'Ind')?.seats ?? 0;
+const partyCount = parties.filter((p) => p.abbr !== 'Ind' && p.seats > 0).length;
 export const metadata: Metadata = {
   alternates: { canonical: '/dol' },
-    openGraph: shareGraph('/dol'),
+  openGraph: shareGraph('/dol'),
   title: 'রাজনৈতিক দল',
-  description: 'ত্রয়োদশ জাতীয় সংসদে আসনপ্রাপ্ত দলগুলোর তালিকা ও আসনসংখ্যা।',
+  description: `ত্রয়োদশ জাতীয় সংসদে প্রতিনিধিত্বকারী ${bn(partyCount)}টি রাজনৈতিক দল ও ${bn(independents)} জন স্বতন্ত্র সংসদ সদস্যের তালিকা, প্রতিটি দলের আসনসংখ্যা ও সংসদ সদস্যদের নামসহ।`,
 };
 
 export default function PartiesPage() {

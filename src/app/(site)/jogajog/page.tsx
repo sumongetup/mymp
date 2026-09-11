@@ -5,9 +5,9 @@ import { Page, PageHead, Card, Empty } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/jogajog' },
-    openGraph: shareGraph('/jogajog'),
+  openGraph: shareGraph('/jogajog'),
   title: 'যোগাযোগ',
-  description: 'আমার এমপি সাইটে ভুল তথ্য জানানো বা যোগাযোগের উপায়।',
+  description: 'কোনো সংসদ সদস্যের সঙ্গে যোগাযোগের দাপ্তরিক ঠিকানা কোথায় পাবেন, আর আমার এমপি সাইটে ভুল তথ্য পেলে কীভাবে জানাবেন, এই পাতায় লেখা আছে।',
 };
 
 const REPO_ISSUES = 'https://github.com/sumongetup/mymp/issues';

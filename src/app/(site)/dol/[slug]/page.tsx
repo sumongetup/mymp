@@ -3,6 +3,8 @@ import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { parties, getParty, membersOfParty, bn, partyColor } from '@/lib/data';
 import { Page, PageHead, Stat, MemberRow, Breadcrumb } from '@/components/ui';
+import { partyBn } from '@/lib/seo/mpDescription';
+import { siteUrl } from '@/lib/site';
 
 export function generateStaticParams() {
   return parties.map((p) => ({ slug: p.slug }));
@@ -16,7 +18,10 @@ export async function generateMetadata({ params }: PageProps<'/dol/[slug]'>): Pr
     title: p.nameBn ?? p.abbr,
     alternates: { canonical: `/dol/${p.slug}` },
     openGraph: shareGraph(`/dol/${p.slug}`),
-    description: `${p.nameBn ?? p.abbr} ত্রয়োদশ জাতীয় সংসদে ${p.seats}টি আসন পেয়েছে। সদস্যদের তালিকা।`,
+    description:
+      p.abbr === 'Ind'
+        ? `ত্রয়োদশ জাতীয় সংসদে ${bn(p.seats)} জন স্বতন্ত্র সংসদ সদস্য আছেন। তাঁদের নাম, আসন, জেলা ও ছবিসহ তালিকা এই পাতায়।`
+        : `${partyBn(p)?.name ?? p.nameBn ?? p.abbr} ত্রয়োদশ জাতীয় সংসদে ${bn(p.seats)}টি আসনে প্রতিনিধিত্ব করছে। দলের সব সংসদ সদস্যের নাম, আসন, জেলা ও ছবিসহ তালিকা এই পাতায়।`,
   };
 }
 
@@ -29,8 +34,21 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
   const territorial = list.filter((m) => m.seat && !m.seat.reserved);
   const reserved = list.filter((m) => m.seat?.reserved);
 
+  // A party is a PoliticalParty to search engines; independents are not a party, so they get none.
+  const partyLd =
+    party.abbr === 'Ind'
+      ? null
+      : {
+          '@context': 'https://schema.org',
+          '@type': 'PoliticalParty',
+          name: partyBn(party)?.name ?? party.nameBn ?? party.abbr,
+          alternateName: [party.nameBn, party.nameEn, party.abbr].filter(Boolean),
+          url: `${siteUrl}/dol/${party.slug}`,
+        };
+
   return (
     <Page>
+      {partyLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(partyLd) }} />}
       <Breadcrumb items={[{ href: '/', label: 'হোম' }, { href: '/dol', label: 'দল' }, { label: party.nameBn ?? party.abbr }]} />
 
       <PageHead
