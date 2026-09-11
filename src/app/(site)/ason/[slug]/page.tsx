@@ -235,9 +235,14 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                   const holder = s.memberId ? getMemberById(s.memberId) : undefined;
                   return (
                     <li key={s.no}>
-                      <Link href={`/ason/${s.slug}`} className="flex justify-between gap-3 hover:text-brand">
-                        <span>{s.nameBn}</span>
-                        <span className="text-muted truncate max-w-[55%]">{holder?.nameBn}</span>
+                      <Link href={`/ason/${s.slug}`} className="flex justify-between items-center gap-3 hover:text-brand">
+                        <span className="shrink-0">{s.nameBn}</span>
+                        {holder && (
+                          <span className="min-w-0 flex items-center justify-end gap-2 text-muted" title={holder.party?.nameBn ?? undefined}>
+                            <span className="truncate">{holder.nameBn}</span>
+                            <PartyDot abbr={holder.party?.abbr} size={18} />
+                          </span>
+                        )}
                       </Link>
                     </li>
                   );

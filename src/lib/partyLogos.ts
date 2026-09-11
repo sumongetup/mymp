@@ -41,6 +41,13 @@ export const PARTY_LOGOS: Record<string, PartyLogo> = {
   JAGPA: { src: '/party/jagpa.svg', width: 290, height: 150, kind: 'flag', page: commons('Flag of Jagpa.svg'), licence: PD },
 };
 
+/**
+ * The 2026 results (TBS, Wikipedia) spell two parties differently from the
+ * parliament: Islami Andolan is "IAB" (Barguna-1's winner is IMB's member) and
+ * Ganosamhati "GSA" (Zonayed Saki's Brahmanbaria-6 result).
+ */
+const RESULT_ALIASES: Record<string, string> = { IAB: 'IMB', GSA: 'PSM' };
+
 export function partyLogo(abbr: string | null | undefined): PartyLogo | null {
-  return (abbr && PARTY_LOGOS[abbr]) || null;
+  return (abbr && PARTY_LOGOS[RESULT_ALIASES[abbr] ?? abbr]) || null;
 }

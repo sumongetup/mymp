@@ -31,9 +31,11 @@ export const EDITABLE: Record<EntityType, { key: string; label: string; multilin
   party: [
     { key: 'nameBn', label: 'দলের নাম (বাংলা)' },
     { key: 'nameEn', label: 'দলের নাম (English)' },
-    { key: 'originBn', label: 'দলটি কীভাবে গঠিত হয়', multiline: true, group: 'দলের পরিচিতি', hint: 'নিরপেক্ষ ভাষায়, শুধু নির্ভরযোগ্য সূত্রে পাওয়া তথ্য। দলের পাতার "দলের পরিচিতি" অংশে দেখায়।' },
+    { key: 'summaryBn', label: 'সংক্ষিপ্ত পরিচিতি', multiline: true, group: 'দলের পরিচিতি', hint: 'দলের তালিকায় নামের নিচে দেখায়; এক-দুই বাক্য।' },
+    { key: 'originBn', label: 'দলের ইতিহাস', multiline: true, hint: 'অনুচ্ছেদের মাঝে একটি ফাঁকা লাইন দিন। নিরপেক্ষ ভাষায়, শুধু নির্ভরযোগ্য সূত্রে পাওয়া তথ্য। দলের পাতার "দলের পরিচিতি" অংশে দেখায়।' },
     { key: 'foundedOn', label: 'প্রতিষ্ঠার তারিখ', hint: 'যেমন 1978-09-01, বা শুধু সাল জানা থাকলে 1978।' },
     { key: 'founderBn', label: 'প্রতিষ্ঠাতা' },
+    { key: 'symbolBn', label: 'নির্বাচনী প্রতীক' },
     { key: 'leaderTitleBn', label: 'দলপ্রধানের পদ', hint: 'যেমন চেয়ারম্যান, আমির, আহ্বায়ক বা সভাপতি।' },
     { key: 'leaderNameBn', label: 'দলপ্রধানের নাম' },
     { key: 'secretaryTitleBn', label: 'দ্বিতীয় পদ', hint: 'যেমন মহাসচিব বা সাধারণ সম্পাদক।' },

@@ -1,6 +1,6 @@
 import { bn, bnGroup, partyColor } from '@/lib/data';
 import { parliamentLabel, type SeatResult } from '@/lib/history';
-import { Card, DocLink } from './ui';
+import { Card, DocLink, PartyDot } from './ui';
 
 /** Who published the numbers, named from the source link; an editor's own entry is the gazette. */
 export function sourceOf(url: string): { name: string; link: string; by: string } {
@@ -37,13 +37,14 @@ export function ResultCard({ r, compact = false }: { r: SeatResult; compact?: bo
             <li key={`${c.name}-${i}`} className="px-5 py-3 flex flex-col gap-1.5">
               <div className="flex items-center gap-3">
                 <span className="grow min-w-0 flex items-center gap-2">
-                  <span
-                    aria-hidden="true"
-                    className="inline-block w-2.5 h-2.5 rounded-full shrink-0"
-                    style={{ background: partyColor(c.party) }}
-                  />
                   <span className={`truncate ${i === 0 ? 'font-bold' : 'font-medium'}`}>{c.name}</span>
-                  {c.party && <span className="text-[12.5px] text-muted shrink-0">{c.party}</span>}
+                  {/* The party's logo beside its short name; a colour dot where no logo is on record. */}
+                  {c.party && (
+                    <span className="shrink-0 inline-flex items-center gap-1.5 ps-1.5 pe-2 py-0.5 rounded-full bg-sunk text-[12px] text-inksoft">
+                      <PartyDot abbr={c.party} size={16} />
+                      {c.party}
+                    </span>
+                  )}
                   {i === 0 && <span className="shrink-0 px-2 py-0.5 rounded-full bg-brandsoft text-brand text-[11px] font-bold">বিজয়ী</span>}
                 </span>
                 <span className="tnum text-[14px] font-semibold shrink-0">{bnGroup(c.votes)}</span>

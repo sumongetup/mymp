@@ -534,8 +534,11 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
 
           {partyMates.length > 0 && m.party && (
             <Card className="p-5 flex flex-col gap-3">
-              <div className="flex justify-between items-baseline">
-                <h2 className="display text-[18px]">একই দলের</h2>
+              <div className="flex justify-between items-center gap-3">
+                <h2 className="display text-[18px] flex items-center gap-2">
+                  <PartyDot abbr={m.party.abbr} size={22} />
+                  একই দলের
+                </h2>
                 <Link href={`/dol/${m.party.abbr.toLowerCase()}`} className="text-[13px] font-semibold text-brand hover:underline">
                   সব {bn(partyMates.length + 1)} →
                 </Link>
@@ -562,9 +565,12 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               <ul className="flex flex-col divide-y divide-rulesoft text-[14.5px]">
                 {sameDistrict.slice(0, 6).map((x) => (
                   <li key={x.id}>
-                    <Link href={`/ason/${x.seat?.slug}`} className="flex justify-between gap-3 py-2 hover:text-brand">
-                      <span>{x.seat?.nameBn}</span>
-                      <span className="text-muted truncate max-w-[55%]">{x.nameBn ?? x.nameEn}</span>
+                    <Link href={`/ason/${x.seat?.slug}`} className="flex justify-between items-center gap-3 py-2 hover:text-brand">
+                      <span className="shrink-0">{x.seat?.nameBn}</span>
+                      <span className="min-w-0 flex items-center justify-end gap-2 text-muted" title={x.party?.nameBn ?? undefined}>
+                        <span className="truncate">{x.nameBn ?? x.nameEn}</span>
+                        <PartyDot abbr={x.party?.abbr} size={18} />
+                      </span>
                     </Link>
                   </li>
                 ))}

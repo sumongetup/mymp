@@ -22,7 +22,9 @@ export interface Party {
   seatsTerritorial: number;
   seatsReserved: number;
   /** Profile fields an editor saved; the sourced defaults are in lib/partyProfiles. */
+  summaryBn?: string | null;
   originBn?: string | null;
+  symbolBn?: string | null;
   foundedOn?: string | null;
   founderBn?: string | null;
   leaderTitleBn?: string | null;
