@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   members, allMembers, getMember, committeesOfMember, membersOfParty, districtOf,
-  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor,
+  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor, governmentPostsOf, postsCheckedOnBn,
 } from '@/lib/data';
 import { storiesForMember } from '@/lib/newsView';
 import StoryCard from '@/components/StoryCard';
@@ -85,6 +85,16 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   // Offices come from two places in the source: the term record (Speaker, PM…)
   // and the presiding-officers list (whips and leaders). Show each once.
   const roles = [...new Set([...m.offices.map((o) => OFFICE_LABELS[o] ?? o), ...rolesOf(m.id)])];
+  // Government posts from the cabinet lists (the posts sync). The PM's title is already among the offices;
+  // an adviser's entry is often a responsibility ("রাজনৈতিক উপদেষ্টা") rather than a ministry.
+  const postBadges = [
+    ...new Set(
+      governmentPostsOf(m.id)
+        .filter((p) => p.title !== 'প্রধানমন্ত্রী')
+        .map((p) => (!p.ministryBn ? p.title : p.ministryBn.includes('উপদেষ্টা') ? p.ministryBn : `${p.title}, ${p.ministryBn}`)),
+    ),
+  ].filter((b) => !roles.includes(b));
+  const postsChecked = postsCheckedOnBn();
 
   // Facts read from the member's Wikipedia infobox are marked, with the article linked under the list.
   const fromWiki = new Set((m.bioFromWiki ?? '').split(',').map((x) => x.trim()).filter(Boolean));
@@ -172,6 +182,9 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             {roles.map((r) => (
               <span key={r} className="px-3 py-1 rounded-full bg-ink text-white text-[12.5px] font-bold">{r}</span>
             ))}
+            {postBadges.map((r) => (
+              <span key={r} className="px-3 py-1 rounded-full bg-ink text-white text-[12.5px] font-bold">{r}</span>
+            ))}
             {(m.termsCount ?? prior.length + 1) > 1 && (
               <span className="px-3 py-1 rounded-full border border-rule text-[12.5px] font-semibold text-inksoft">
                 মোট {bn(m.termsCount ?? prior.length + 1)} বার নির্বাচিত
@@ -183,6 +196,12 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               </span>
             )}
           </div>
+          {postsChecked && (
+            <p className="-mt-1 text-[12.5px] text-muted">
+              সরকারি পদ সর্বশেষ যাচাই: {postsChecked},{' '}
+              <Link href="/ministers" className="underline decoration-rule underline-offset-2 hover:text-brand">মন্ত্রিসভা</Link>
+            </p>
+          )}
           <h1 className="display text-[28px] sm:text-[40px] leading-[1.15] text-balance wrap-anywhere">
             {m.nameBn ?? m.nameEn}
           </h1>

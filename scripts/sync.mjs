@@ -17,7 +17,7 @@
  * API, but bulk-publishing 349 personal numbers is a decision the site owner has
  * to make first; until then we record only whether one exists.
  */
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import https from 'node:https';
@@ -613,6 +613,64 @@ async function main() {
 
   console.log(`  activity: ${sessions.length} sessions, ${sessions.reduce((n, x) => n + x.sittings.length, 0)} sittings, ${notices.length} notices kept of ${rawNotices.length} (${notices.filter((n) => n.memberId).length} to members, ${notices.filter((n) => n.committeeId).length} to committees), ${speakers.length} presiding officers`);
 
+  // ---- government and parliamentary posts ----
+  // The posts table is kept current by the posts sync (src/lib/posts/sync.ts)
+  // from cabinet.gov.bd and parliament.gov.bd. Current government posts fill
+  // the member fields the page descriptions read (govPost, ministryBn); an
+  // editor's override below still wins. Without the table (before
+  // supabase/migrations/003_posts.sql is run), the committed data/posts.json
+  // is used as it is, so pages and descriptions still agree.
+  let posts = null;
+  if (dbConfigured()) {
+    try {
+      const [rows, lastOk, aliases] = await Promise.all([
+        db('posts?select=id,type,title,rank_note,ministry_bn,member_id,is_mp,person_name_bn,person_name_en,photo_url,from_date,to_date,source_order,source_key,source_url,auto_synced&order=from_date.desc,id.desc&limit=5000'),
+        db('post_sync_runs?select=finished_at,unmatched_names&status=eq.ok&order=finished_at.desc&limit=1'),
+        db('post_aliases?select=name_key'),
+      ]);
+      // Listed by the Cabinet Division but not yet placed: /ministers names them without a profile link.
+      const resolved = new Set(aliases.map((a) => a.name_key));
+      const pending = new Map();
+      for (const u of lastOk[0]?.unmatched_names ?? []) {
+        if (u.stored_as_non_mp || resolved.has(u.key)) continue;
+        const k = `${u.key}|${u.title}`;
+        const p = pending.get(k) ?? { nameBn: u.name_bn, title: u.title, ministries: [] };
+        if (u.ministry_bn && !p.ministries.includes(u.ministry_bn)) p.ministries.push(u.ministry_bn);
+        pending.set(k, p);
+      }
+      posts = {
+        checkedAt: lastOk[0]?.finished_at ?? null,
+        pending: [...pending.values()],
+        rows: rows.map((r) => ({
+          id: String(r.id), type: r.type, title: r.title, rankNote: r.rank_note, ministryBn: r.ministry_bn,
+          memberId: r.member_id, isMp: r.is_mp, nameBn: r.person_name_bn, nameEn: r.person_name_en, photoUrl: r.photo_url,
+          fromDate: r.from_date, toDate: r.to_date, order: r.source_order, sourceKey: r.source_key, sourceUrl: r.source_url,
+          autoSynced: r.auto_synced,
+        })),
+      };
+    } catch (err) {
+      console.warn('  posts table unavailable (run supabase/migrations/003_posts.sql?):', err.message.slice(0, 120));
+    }
+  }
+  if (!posts) {
+    try {
+      posts = JSON.parse(await readFile(join(OUT, 'posts.json'), 'utf8'));
+      console.log('  posts: using the committed data/posts.json');
+    } catch {
+      posts = null;
+    }
+  }
+  if (posts) {
+    const RANKS = new Set(['মন্ত্রী', 'প্রতিমন্ত্রী', 'উপমন্ত্রী']);
+    for (const m of members) {
+      const held = posts.rows.filter((r) => r.memberId === m.id && !r.toDate && r.type === 'government' && RANKS.has(r.title));
+      if (!held.length) continue;
+      m.govPost = held[0].title;
+      m.ministryBn = [...new Set(held.map((r) => r.ministryBn).filter(Boolean))].join(' ও ') || null;
+    }
+    console.log(`  posts: ${posts.rows.length} rows, ${posts.rows.filter((r) => !r.toDate).length} current, last checked ${posts.checkedAt ?? 'never'}`);
+  }
+
   // ---- admin overrides and hidden entities ----
   // Applied AFTER everything above so a hand edit always wins over the source,
   // and re-applied on every sync so the source can never quietly undo it.
@@ -648,6 +706,7 @@ async function main() {
       for (const c of committees) c.members = c.members.filter((x) => !hiddenMembers.has(x.memberId));
       for (const n of notices) if (n.memberId && hiddenMembers.has(n.memberId)) n.memberId = null;
       for (const s of speakers) if (s.memberId && hiddenMembers.has(s.memberId)) s.memberId = null;
+      if (posts) for (const r of posts.rows) if (r.memberId && hiddenMembers.has(r.memberId)) r.memberId = null;
       for (const id of hiddenMembers) delete priorTerms[id];
       for (const list of Object.values(seatHolders)) for (const h of list) if (h.memberId && hiddenMembers.has(h.memberId)) h.memberId = null;
       notices.splice(0, notices.length, ...notices.filter((n) => n.memberId || (n.committeeId && !hiddenCommittees.has(n.committeeId)) || (!n.committeeId && n.type === 'GENERAL')));
@@ -713,6 +772,7 @@ async function main() {
   for (const [name, value] of Object.entries({ members, committees, parties, seats, meta, activity, history })) {
     await writeFile(join(OUT, `${name}.json`), JSON.stringify(value, null, 1), 'utf8');
   }
+  if (posts) await writeFile(join(OUT, 'posts.json'), JSON.stringify(posts, null, 1), 'utf8');
   await mkdir(join(OUT, '..', 'public'), { recursive: true });
   await writeFile(join(OUT, '..', 'public', 'search-index.json'), JSON.stringify(searchIndex), 'utf8');
 

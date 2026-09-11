@@ -1,5 +1,6 @@
 import 'server-only';
 import { supabaseAdmin } from '@/lib/supabase/admin';
+import type { Unmatched } from '@/lib/posts/sync';
 
 export type EntityType = 'member' | 'seat' | 'party' | 'committee';
 
@@ -387,4 +388,52 @@ export async function setResultStatus(a: Actor, seatNo: number, parliamentNo: nu
     .eq('parliament_no', parliamentNo);
   if (error) throw error;
   await audit(a, { action: `result.${status}`, entity_type: 'seat', entity_id: String(seatNo), field: `parliament ${parliamentNo}`, old_value: null, new_value: status });
+}
+
+/* ---------------- government posts sync ---------------- */
+
+export interface PostRunRow {
+  id: number;
+  started_at: string;
+  finished_at: string | null;
+  status: 'running' | 'ok' | 'failed';
+  trigger: string | null;
+  parsed: number | null;
+  added: number;
+  closed: number;
+  unchanged: number;
+  unmatched: number;
+  unmatched_names: Unmatched[] | null;
+  changes: { kind: string; title: string; ministry_bn: string | null; name_bn: string; member_id: string | null }[] | null;
+  errors: { source: string; message: string }[] | null;
+  source_counts: Record<string, number> | null;
+}
+
+export interface PostAliasRow {
+  name_key: string;
+  name_bn: string;
+  member_id: string | null;
+  created_by: string | null;
+  created_at: string;
+}
+
+/** `missing` when supabase/migrations/003_posts.sql has not been run yet. */
+export async function listPostRuns(limit = 30): Promise<{ runs: PostRunRow[]; missing: boolean }> {
+  const { data, error } = await supabaseAdmin().from('post_sync_runs').select('*').order('started_at', { ascending: false }).limit(limit);
+  if (error) return { runs: [], missing: true };
+  return { runs: (data ?? []) as PostRunRow[], missing: false };
+}
+
+export async function listPostAliases(): Promise<PostAliasRow[]> {
+  const { data } = await supabaseAdmin().from('post_aliases').select('*').order('created_at', { ascending: false });
+  return (data ?? []) as PostAliasRow[];
+}
+
+/** Remembers who a listed name is; the posts sync reads it on every run. memberId null: not an MP. */
+export async function setPostAlias(a: Actor, nameKey: string, nameBn: string, memberId: string | null) {
+  const { error } = await supabaseAdmin()
+    .from('post_aliases')
+    .upsert({ name_key: nameKey, name_bn: nameBn, member_id: memberId, created_by: a.email, created_at: new Date().toISOString() }, { onConflict: 'name_key' });
+  if (error) throw error;
+  await audit(a, { action: 'posts.alias', entity_type: 'post_alias', entity_id: nameKey, field: null, old_value: null, new_value: memberId ?? 'not an MP' });
 }

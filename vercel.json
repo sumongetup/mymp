@@ -6,6 +6,10 @@
     {
       "path": "/api/cron/republish",
       "schedule": "0 21 * * *"
+    },
+    {
+      "path": "/api/cron/sync-posts",
+      "schedule": "10 3 * * *"
     }
   ]
 }

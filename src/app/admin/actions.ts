@@ -7,8 +7,9 @@ import { requireAdmin, requireSuperAdmin } from '@/lib/admin/auth';
 import {
   EDITABLE, type EntityType, setOverride, clearOverride, setHidden,
   upsertNews, setNewsStatus, resolveCorrection, addAdmin, removeAdmin, audit,
-  upsertResult, setResultStatus, socialOverrides, dropSocialSource, dropBioFromWiki,
+  upsertResult, setResultStatus, socialOverrides, dropSocialSource, dropBioFromWiki, setPostAlias,
 } from '@/lib/admin/store';
+import { runPostsSync } from '@/lib/posts/sync';
 import { SOCIAL_HOSTS, validSocialUrl, parseSocialLines } from '@/lib/admin/social-import';
 import { allMembers } from '@/lib/data';
 
@@ -260,6 +261,47 @@ export async function publishSite(): Promise<ActionState> {
   await audit(me, { action: 'site.publish', entity_type: null, entity_id: null, field: null, old_value: null, new_value: res.ok ? 'triggered' : `failed ${res.status}` });
   if (!res.ok) return { error: `Vercel ফিরিয়ে দিয়েছে: HTTP ${res.status}` };
   return { ok: 'সাইট নতুন করে তৈরি হচ্ছে। ২-৩ মিনিটের মধ্যে পরিবর্তন mymp.bd-তে দেখা যাবে।' };
+}
+
+/* ---------------- government posts sync ---------------- */
+
+const syncMembers = () =>
+  allMembers.filter((m) => !m.resignedOn).map((m) => ({ id: m.id, nameBn: m.nameBn, nameEn: m.nameEn, seatEn: m.seat?.nameEn ?? null }));
+
+function runSummary(r: Awaited<ReturnType<typeof runPostsSync>>): ActionState {
+  if (r.status === 'skipped') return { error: 'আরেকটি সিঙ্ক এখন চলছে; কয়েক মিনিট পরে আবার চেষ্টা করুন।' };
+  if (r.status === 'failed') return { error: `সিঙ্ক ব্যর্থ, কিছু বদলানো হয়নি: ${r.errors.map((e) => `${e.source}: ${e.message}`).join('; ')}` };
+  const bnN = (n: number) => String(n).replace(/\d/g, (d) => '০১২৩৪৫৬৭৮৯'[Number(d)]!);
+  return { ok: `সফল: ${bnN(r.add.length)}টি যুক্ত, ${bnN(r.close.length)}টি শেষ, ${bnN(r.unchanged)}টি অপরিবর্তিত, ${bnN(r.unmatched.length)}টি নাম মেলেনি।${r.deploy ? ` ${r.deploy === 'site rebuild requested' ? 'সাইট নতুন করে তৈরি হচ্ছে।' : r.deploy}` : ''}` };
+}
+
+/** Runs the posts sync now, the same run the schedule makes. */
+export async function runPostsSyncNow(): Promise<ActionState> {
+  const me = await requireAdmin();
+  try {
+    const r = await runPostsSync({ trigger: 'admin', members: syncMembers() });
+    await audit(me, { action: 'posts.sync', entity_type: null, entity_id: r.runId ? String(r.runId) : null, field: null, old_value: null, new_value: r.status });
+    revalidatePath('/admin/sync');
+    return runSummary(r);
+  } catch (e) {
+    return { error: (e as Error).message };
+  }
+}
+
+/**
+ * An editor places a listed name: an MP from the picker, or "not an MP". The
+ * choice is remembered in post_aliases and the sync runs at once to apply it.
+ */
+export async function resolvePostName(fd: FormData) {
+  const me = await requireAdmin();
+  const nameKey = str(fd, 'name_key');
+  const nameBn = str(fd, 'name_bn');
+  const memberId = orNull(str(fd, 'member_id'));
+  if (!nameKey || !nameBn) return;
+  if (memberId && !allMembers.some((m) => m.id === memberId)) return;
+  await setPostAlias(me, nameKey, nameBn, memberId);
+  await runPostsSync({ trigger: 'admin', members: syncMembers() }).catch(() => null);
+  revalidatePath('/admin/sync');
 }
 
 /* ---------------- election results ---------------- */

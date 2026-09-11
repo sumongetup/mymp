@@ -10,7 +10,9 @@
     "sync": "node scripts/sync.mjs",
     "typecheck": "tsc --noEmit",
     "build:local": "next build",
-    "og-image": "node scripts/og-image.mjs"
+    "og-image": "node scripts/og-image.mjs",
+    "test": "node --import tsx --test src/lib/posts/*.test.ts",
+    "sync:posts": "tsx scripts/sync-posts.ts"
   },
   "dependencies": {
     "@expo-google-fonts/noto-sans-bengali": "^0.4.4",
@@ -31,6 +33,7 @@
     "eslint-config-next": "16.3.4",
     "puppeteer-core": "^25.10.0",
     "tailwindcss": "^4",
+    "tsx": "^4.23.13",
     "typescript": "^5"
   }
 }

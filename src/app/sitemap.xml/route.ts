@@ -33,6 +33,7 @@ export function GET() {
     { path: '/odhibeshon', changefreq: 'daily', priority: 0.8 },
     { path: '/dol', changefreq: 'weekly', priority: 0.8 },
     { path: '/committee', changefreq: 'weekly', priority: 0.8 },
+    { path: '/ministers', changefreq: 'daily', priority: 0.8 },
     { path: '/parisonkhan', changefreq: 'weekly', priority: 0.8 },
     { path: '/songbad', changefreq: 'daily', priority: 0.6 },
     { path: '/somporke', changefreq: 'monthly', priority: 0.4 },

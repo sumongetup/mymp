@@ -11,6 +11,7 @@ import seatsJson from '../../data/seats.json';
 import metaJson from '../../data/meta.json';
 import ecsJson from '../../data/ecs.json';
 import newsJson from '../../data/news.json';
+import postsJson from '../../data/posts.json';
 import { normalise } from './search';
 
 export interface Party {
@@ -159,6 +160,46 @@ export interface NewsPost {
 export const news = newsJson as NewsPost[];
 export const publishedNews = () => [...news].sort((a, b) => b.publishedOn.localeCompare(a.publishedOn));
 export const newsForSeat = (slug: string) => publishedNews().filter((n) => n.seatSlug === slug);
+
+/**
+ * Government and parliamentary posts, from the posts table (kept current by
+ * the posts sync, src/lib/posts/sync.ts) via the build. A post with a toDate
+ * has ended; rows are never removed, so they are also the change history.
+ */
+export interface PostEntry {
+  id: string;
+  type: 'government' | 'parliament';
+  /** প্রধানমন্ত্রী, মন্ত্রী, প্রতিমন্ত্রী, উপমন্ত্রী, উপদেষ্টা, স্পিকার… */
+  title: string;
+  rankNote: string | null;
+  ministryBn: string | null;
+  /** Null for someone who is not an MP (most advisers). */
+  memberId: string | null;
+  isMp: boolean;
+  nameBn: string;
+  nameEn: string | null;
+  photoUrl: string | null;
+  fromDate: string;
+  toDate: string | null;
+  /** Position in the source list. */
+  order: number | null;
+  sourceKey: string | null;
+  sourceUrl: string | null;
+  autoSynced: boolean;
+}
+export const posts = postsJson as {
+  checkedAt: string | null;
+  /** On a cabinet list but not yet placed as an MP or a non-MP by an editor (/admin/sync). */
+  pending?: { nameBn: string; title: string; ministries: string[] }[];
+  rows: PostEntry[];
+};
+export const currentPosts = (type?: PostEntry['type']) =>
+  posts.rows.filter((r) => !r.toDate && (!type || r.type === type)).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+export const governmentPostsOf = (memberId: string) => currentPosts('government').filter((r) => r.memberId === memberId);
+/** The day, in Dhaka, the posts were last checked against their sources. */
+export const postsCheckedOnBn = () =>
+  posts.checkedAt ? dateBn(new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Dhaka' }).format(new Date(posts.checkedAt))) : null;
+
 export const meta = metaJson as {
   parliamentNo: number;
   syncedAt: string;
