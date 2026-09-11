@@ -23,6 +23,12 @@ const legacyRedirects = [
   { source: '/terms', destination: '/gopaniyota', permanent: true },
   // The old Laravel admin lived at /admin/login too; that path is now the real
   // admin panel, so there is deliberately no redirect for /admin here.
+
+  // District pages that came from irregular seat names and were in the sitemap
+  // for a day; each now belongs to its real district (see districtOf).
+  { source: '/jela/chittagong', destination: '/jela/chattogram', permanent: true },
+  { source: '/jela/pabna-5', destination: '/jela/pabna', permanent: true },
+  { source: '/jela/cox-sbazar', destination: '/jela/coxs-bazar', permanent: true },
 ];
 
 const nextConfig: NextConfig = {

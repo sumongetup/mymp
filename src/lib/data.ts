@@ -206,13 +206,25 @@ export const committeesOfMember = (id: string) =>
  * stable, but the label shown is Bengali, since the site is Bengali first.
  * Reserved seats belong to no district.
  */
+/**
+ * Seat names the source spells differently from the rest of their district:
+ * "Chittagong-8" beside "Chattogram-1…16", and "Cox'sBazar" with no space.
+ * Without this, each became a district of its own with one seat.
+ */
+const DISTRICT_EN_ALIASES: Record<string, string> = {
+  Chittagong: 'Chattogram',
+  "Cox'sBazar": "Cox's Bazar",
+};
+
 export function districtOf(
   seat: Seat | null,
 ): { en: string; bn: string; slug: string } | null {
   if (!seat || seat.reserved || !seat.nameEn) return null;
-  const en = seat.nameEn.replace(/-\d+$/, '').trim();
-  const bn = (seat.nameBn ?? en).replace(/-[০-৯\d]+$/, '').trim();
-  return { en, bn, slug: en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') };
+  // "Pabna-5" and "Pabna 5" (as the source writes one of them) are both Pabna.
+  const raw = seat.nameEn.replace(/[\s-]+\d+$/, '').trim();
+  const en = DISTRICT_EN_ALIASES[raw] ?? raw;
+  const bn = (seat.nameBn ?? en).replace(/[\s-]+[০-৯\d]+$/, '').trim();
+  return { en, bn, slug: en.toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') };
 }
 
 /** Party colour token. Anything outside the top four shares one colour. */

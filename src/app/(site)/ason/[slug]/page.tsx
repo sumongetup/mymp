@@ -66,7 +66,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
         items={[
           { href: '/', label: 'হোম' },
           { href: '/nirbachon', label: 'ত্রয়োদশ নির্বাচন' },
-          ...(district ? [{ label: district.bn }] : []),
+          ...(district ? [{ href: `/jela/${district.slug}`, label: district.bn }] : []),
           { label: seat.nameBn ?? '' },
         ]}
       />
@@ -83,7 +83,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
             {seat.nameEn && <span>{seat.nameEn}</span>}
             {seat.reserved
               ? <span className="px-3 py-1 rounded-full border border-rule text-[13px] font-semibold">সংরক্ষিত নারী আসন</span>
-              : district && <span>{district.bn} জেলা</span>}
+              : district && <Link href={`/jela/${district.slug}`} className="hover:text-brand">{district.bn} জেলা</Link>}
           </div>
         </div>
         <div className="flex gap-2 shrink-0">
@@ -217,7 +217,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
               {district && (
                 <div className="flex justify-between gap-3 py-1.5 border-b border-rulesoft">
                   <span className="text-muted">জেলা</span>
-                  <span className="font-medium">{district.bn}</span>
+                  <Link href={`/jela/${district.slug}`} className="font-medium hover:text-brand">{district.bn}</Link>
                 </div>
               )}
               <div className="flex justify-between gap-3 py-1.5">
