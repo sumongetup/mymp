@@ -81,14 +81,40 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
 
       <main id="main" className="grow">{children}</main>
 
-      <footer className="mt-16 bg-[#10281f] text-[#cfdad3] border-t-[3px] border-transparent [border-image:linear-gradient(90deg,var(--color-brand),var(--color-logo),var(--color-brand))_1]">
+      {/* How the site works, in three lines, above the footer (owner, 2026-09-12). */}
+      <section aria-label="তথ্যের সূত্র ও হালনাগাদ" className="mt-16 border-t border-rule bg-sunk/60">
+        <div className="mx-auto max-w-[1200px] px-5 py-9 grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10">
+          <div className="flex flex-col gap-1.5">
+            <h2 className="display text-[16.5px] font-bold">কোথা থেকে তথ্য আসে</h2>
+            <p className="text-[14px] leading-relaxed text-inksoft">
+              বাংলাদেশ জাতীয় সংসদের ওয়েবসাইট ও সংসদ সচিবালয়ের প্রজ্ঞাপন, নির্বাচন কমিশনের প্রকাশিত তথ্য; ভোটের ফল ও দলের
+              ইতিহাসের মতো বাকি তথ্যের সূত্র প্রতিটি পাতায় লেখা। কোনো তথ্য অনুমান করে বসানো হয় না।
+            </p>
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <h2 className="display text-[16.5px] font-bold">কত দিন পরপর হালনাগাদ</h2>
+            <p className="text-[14px] leading-relaxed text-inksoft">
+              প্রতিদিন। সংসদের নতুন প্রজ্ঞাপন, বৈঠকের কার্যসূচি ও কমিটির পরিবর্তন প্রকাশের পরদিনের মধ্যে যুক্ত হয়; সংবাদ
+              শিরোনাম আরও ঘন ঘন।
+            </p>
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <h2 className="display text-[16.5px] font-bold">ভুল পেলে</h2>
+            <p className="text-[14px] leading-relaxed text-inksoft">
+              প্রতিটি সদস্যের পাতায় “সংশোধন জানান” বোতাম আছে। সূত্রসহ জানালে ২৪ ঘণ্টার মধ্যে যাচাই করে ঠিক করা হয়।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-[#10281f] text-[#cfdad3] border-t-[3px] border-transparent [border-image:linear-gradient(90deg,var(--color-brand),var(--color-logo),var(--color-brand))_1]">
         <div className="mx-auto max-w-[1200px] px-5 py-12 flex flex-col gap-10">
           <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10">
             <div className="flex flex-col gap-4 max-w-[420px]">
               <Brand tone="light" />
               <p className="text-[14.5px] leading-relaxed text-[#a9b8b0]">
-                বাংলাদেশের সংসদ সদস্য, আসন, কমিটি ও অধিবেশনের উন্মুক্ত তথ্যভান্ডার। প্রতিটি
-                তথ্যের সূত্র বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন; কোনো তথ্য অনুমান করে বসানো হয় না।
+                বাংলাদেশের সংসদ সদস্য, আসন, কমিটি ও অধিবেশনের উন্মুক্ত তথ্যভান্ডার। প্রতিটি পাতায় তথ্যের
+                সূত্র লেখা থাকে; কোনো তথ্য অনুমান করে বসানো হয় না।
               </p>
               <div className="flex flex-wrap gap-2.5 pt-1">
                 <a

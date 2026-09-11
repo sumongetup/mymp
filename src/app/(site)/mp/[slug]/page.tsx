@@ -16,6 +16,7 @@ import MemberPhoto from '@/components/MemberPhoto';
 import Icon from '@/components/Icon';
 import BrandIcon, { isBrand } from '@/components/BrandIcon';
 import ShareButtons from '@/components/ShareButtons';
+import CorrectionButton from '@/components/CorrectionButton';
 import { siteUrl } from '@/lib/site';
 
 export function generateStaticParams() {
@@ -231,12 +232,13 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               ))}
             </div>
           )}
-          <div className="pt-1">
+          <div className="pt-1 flex flex-col gap-3">
             <ShareButtons
               url={`${siteUrl}/mp/${m.slug}`}
               title={`${m.nameBn ?? m.nameEn} · আমার এমপি`}
               text={[m.nameBn ?? m.nameEn, m.seat?.nameBn, m.party?.nameBn].filter(Boolean).join(' · ')}
             />
+            <CorrectionButton page={`/mp/${m.slug}`} subject={m.nameBn ?? m.nameEn ?? 'এই সদস্য'} />
           </div>
         </div>
       </header>
