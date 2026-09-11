@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { memberPhotoImage, shareGraph, shareTwitter } from '@/lib/seo';
+import { shareGraph, shareTwitter } from '@/lib/seo';
+import { mpDescription, mpTitle, partyBn, isIndependent } from '@/lib/seo/mpDescription';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -25,15 +26,15 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
   const { slug } = await params;
   const m = getMember(slug);
   if (!m) return { title: 'সদস্য পাওয়া যায়নি' };
-  const where = m.seat?.nameBn ? `, ${m.seat.nameBn}` : '';
+  // The member's own 1200x630 preview image (src/app/api/og/mp/[slug]/route.tsx).
+  const image = { url: `/api/og/mp/${m.slug}`, width: 1200, height: 630, type: 'image/png', alt: mpTitle(m) };
+  const description = mpDescription(m);
   return {
-    title: `${m.nameBn ?? m.nameEn}`,
+    title: { absolute: mpTitle(m) },
+    description,
     alternates: { canonical: `/mp/${m.slug}` },
-    openGraph: shareGraph(`/mp/${m.slug}`, memberPhotoImage(m)),
-    twitter: shareTwitter(memberPhotoImage(m)),
-    description: m.resignedOn
-      ? `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সাবেক সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}; ${dateBn(m.resignedOn)} তারিখে পদত্যাগ করেছেন। পরিচিতি, আগের মেয়াদ ও কমিটি। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`
-      : `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। পরিচিতি, আগের মেয়াদ, কমিটি, সংসদ সচিবালয়ের প্রজ্ঞাপন ও যোগাযোগ। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
+    openGraph: { ...shareGraph(`/mp/${m.slug}`, image), description },
+    twitter: { ...shareTwitter(image), card: 'summary_large_image', description },
   };
 }
 
@@ -112,7 +113,22 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           result: wonThisResult ? result : null,
           resultSourceBy: result ? sourceOf(result.sourceUrl).by : null,
           year,
+          skipIdentity: true,
         });
+  // The page opens with the same sentences search results and link previews show.
+  const lead = mpDescription(m);
+  const party = partyBn(m.party);
+  const personLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: m.nameBn ?? m.nameEn,
+    ...(m.nameEn && m.nameBn ? { alternateName: m.nameEn } : {}),
+    jobTitle: 'সংসদ সদস্য',
+    ...(party && !isIndependent(m) ? { memberOf: { '@type': 'Organization', name: party.name } } : {}),
+    worksFor: { '@type': 'Organization', name: 'বাংলাদেশ জাতীয় সংসদ', url: 'https://www.parliament.gov.bd' },
+    ...(m.photoUrl ? { image: m.photoUrl } : {}),
+    url: `${siteUrl}/mp/${m.slug}`,
+  };
   // Name only the sources this member's introduction actually drew on.
   const introParts = [
     'সংসদের সদস্য তালিকা',
@@ -229,6 +245,8 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
         <div className="flex flex-col gap-10 min-w-0">
           <section className="flex flex-col gap-4">
             <H2>পরিচিতি</H2>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }} />
+            <p className="text-[16px] sm:text-[17px] leading-relaxed text-inksoft">{lead}</p>
             {intro.length > 0 && (
               <div className="flex flex-col gap-3">
                 {intro.map((p, i) => (

@@ -80,6 +80,11 @@ export interface Member {
   bioSource?: string | null;
   /** The member's 1200x630 link-preview card from the engine (og:cards), or null. */
   shareImage?: string | null;
+  /** The member's office in their party ("চেয়ারম্যান"), from an editor or a hand-checked source. */
+  partyRoleBn?: string | null;
+  /** A ministry the member holds ("স্বরাষ্ট্র মন্ত্রণালয়") and the post: minister, state-minister or deputy-minister. */
+  ministryBn?: string | null;
+  govPost?: string | null;
   party: { abbr: string; nameBn: string | null; nameEn: string | null } | null;
   seat: Seat | null;
   offices: string[];

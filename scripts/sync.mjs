@@ -404,6 +404,8 @@ async function main() {
       // or the engine's reading of the member's Wikipedia infobox (bioFromWiki
       // names those fields, bioSource the articles).
       educationBn: null, birthPlaceBn: null, bioFromWiki: null, bioSource: null,
+      // A party office and a government post, likewise only from an editor or a hand-checked engine fact.
+      partyRoleBn: null, ministryBn: null, govPost: null,
       _match: { empId: m.empId ?? null, nameKey: nameKey(m.nameEng), dob: clean(m.dateOfBirth), seatNo, district: districtKey(c.constituencyEng), seatKey: seatKey(c.constituencyEng) }, // internal, stripped before writing
       party: p.abbreviation ? { abbr: p.abbreviation, nameBn: clean(p.nameBng), nameEn: clean(p.nameEng) } : null,
       seat: seatNo

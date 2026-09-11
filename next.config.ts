@@ -30,6 +30,16 @@ const nextConfig: NextConfig = {
     ? { output: 'export', images: { unoptimized: true }, basePath: process.env.BASE_PATH || '' }
     : { async redirects() { return legacyRedirects; } }),
   trailingSlash: staticExport,
+  // The member preview image shapes Bangla with HarfBuzz (WASM) and reads the font files at run time;
+  // both are loaded from node_modules, so the function must ship them.
+  serverExternalPackages: ['harfbuzzjs'],
+  outputFileTracingIncludes: {
+    '/api/og/mp/[slug]': [
+      './node_modules/harfbuzzjs/dist/**/*',
+      './node_modules/@expo-google-fonts/noto-sans-bengali/700Bold/*.ttf',
+      './node_modules/@expo-google-fonts/noto-sans-bengali/400Regular/*.ttf',
+    ],
+  },
 };
 
 export default nextConfig;

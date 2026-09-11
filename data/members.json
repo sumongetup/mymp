@@ -34,6 +34,9 @@
   "birthPlaceBn": "ধানমন্ডি, ঢাকা",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%A8%E0%A6%93%E0%A6%B6%E0%A6%BE%E0%A6%A6_%E0%A6%9C%E0%A6%AE%E0%A6%BF%E0%A6%B0 https://en.wikipedia.org/wiki/Muhammad_Nawshad_Zamir",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -87,6 +90,9 @@
   "birthPlaceBn": "বোদা, পঞ্চগড়, পূর্ব পাকিস্তান, পাকিস্তান",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%B0%E0%A6%B9%E0%A6%BE%E0%A6%A6_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_%E0%A6%86%E0%A6%9C%E0%A6%BE%E0%A6%A6 https://en.wikipedia.org/wiki/Farhad_Hossain_Azad",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -140,6 +146,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -193,6 +202,9 @@
   "birthPlaceBn": "বালিয়াডাঙ্গী, ঠাকুরগাঁও",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B8_%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -246,6 +258,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -299,6 +314,9 @@
   "birthPlaceBn": "ভাবকী, বীরগঞ্জ, দিনাজপুর",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -352,6 +370,9 @@
   "birthPlaceBn": "দৌলা, বোচাগঞ্জ, দিনাজপুর",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A6%BF%E0%A6%95_%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%9C",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -405,6 +426,9 @@
   "birthPlaceBn": "Balubari, Dinajpur",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Syed_Jahangir_Alam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -458,6 +482,9 @@
   "birthPlaceBn": "দিনাজপুর জেলা, পূর্ব পাকিস্তান (বর্তমানে- বাংলাদেশ)",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%96%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -511,6 +538,9 @@
   "birthPlaceBn": "পার্বতীপুর, দিনাজপুর জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%9C%E0%A7%87%E0%A6%A1_%E0%A6%8F%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -564,6 +594,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -617,6 +650,9 @@
   "birthPlaceBn": "ডিমলা, নীলফামারী",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B8_%E0%A6%B8%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -670,6 +706,9 @@
   "birthPlaceBn": "নীলফামারী",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B2_%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%95_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B2%E0%A6%A4%E0%A7%80%E0%A6%AB",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -723,6 +762,9 @@
   "birthPlaceBn": "Nilphamari, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Obaidullah_Salafi",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -776,6 +818,9 @@
   "birthPlaceBn": "রেল বাজার, সৈয়দপুর, নীলফামারী",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A7%81%E0%A6%A8%E0%A6%A4%E0%A6%BE%E0%A6%95%E0%A6%BF%E0%A6%AE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -829,6 +874,9 @@
   "birthPlaceBn": "শ্রীরামপুর, পাটগ্রাম, লালমনিরহাট, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%AC_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -882,6 +930,9 @@
   "birthPlaceBn": "উত্তর বত্রিশ হাজারী, কালীগঞ্জ, লালমনিরহাট",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%8B%E0%A6%95%E0%A6%A8_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%AC%E0%A7%81%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -935,6 +986,9 @@
   "birthPlaceBn": "Lalmonirhat District, East Pakistan",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%AC_%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%81 https://en.wikipedia.org/wiki/Asadul_Habib_Dulu",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -988,6 +1042,9 @@
   "birthPlaceBn": "পশ্চিম বড়বিল, গংগাচড়া, রংপুর",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B0%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1041,6 +1098,9 @@
   "birthPlaceBn": "রংপুর জেলা, পূর্ববঙ্গ, পাকিস্তান অধিরাজ্য",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F._%E0%A6%9F%E0%A6%BF._%E0%A6%8F%E0%A6%AE._%E0%A6%86%E0%A6%9C%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1094,6 +1154,9 @@
   "birthPlaceBn": "রংপুর মহানগর",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AC%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1147,6 +1210,9 @@
   "birthPlaceBn": "সরদা তালুক, কাউনিয়া, রংপুর, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%96%E0%A6%A4%E0%A6%BE%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -1200,6 +1266,9 @@
   "birthPlaceBn": "মিঠাপুকুর, রংপুর জেলা",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%97%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B0%E0%A6%AC%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1253,6 +1322,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1306,6 +1378,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1359,6 +1434,9 @@
   "birthPlaceBn": "টগরাইহাট, রাজারহাট, কুড়িগ্রাম",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A4%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -1412,6 +1490,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1465,6 +1546,9 @@
   "birthPlaceBn": "রৌমারী উপজেলা, কুড়িগ্রাম",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%95%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1518,6 +1602,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1571,6 +1658,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1624,6 +1714,9 @@
   "birthPlaceBn": "Palashbari, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Abul_Kawsar_Mohammad_Nazrul_Islam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1677,6 +1770,9 @@
   "birthPlaceBn": "Gobindaganj Upazila, Gaibandha, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Shamim_Kaisar_Lincoln",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1730,6 +1826,9 @@
   "birthPlaceBn": "গাইবান্ধা জেলা, সাঘাটা উপজেলার, জুমারবাড়ি, ইউনিয়নের মেছট গ্রামে, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%9B",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1783,6 +1882,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -1836,6 +1938,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1889,6 +1994,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1942,6 +2050,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -1995,6 +2106,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2048,6 +2162,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2101,6 +2218,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2154,6 +2274,9 @@
   "birthPlaceBn": "Bogra",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Rezaul_Karim_Badsha",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2207,6 +2330,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2260,6 +2386,9 @@
   "birthPlaceBn": "শিবগঞ্জ, চাঁপাইনবাবগঞ্জ, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%3A_%E0%A6%95%E0%A7%87%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%A4_%E0%A6%86%E0%A6%B2%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2313,6 +2442,9 @@
   "birthPlaceBn": "রহনপুর, গোমস্তাপুর, চাঁপাইনবাবগঞ্জ, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81._%E0%A6%AE%E0%A6%BF%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2366,6 +2498,9 @@
   "birthPlaceBn": "রেহাইচর গ্রাম, চাঁপাইনবাবগঞ্জ জেলা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AC%E0%A7%81%E0%A6%B2%E0%A6%AC%E0%A7%81%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2419,6 +2554,9 @@
   "birthPlaceBn": "Niamatpur Upazila, Naogaon District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Mostafizur_Rahman_(Naogaon_politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2472,6 +2610,9 @@
   "birthPlaceBn": "চক চন্ডি, ফার্শিপাড়া, ধামইরহাট উপজেলা, নওগাঁ জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_(%E0%A6%A8%E0%A6%93%E0%A6%97%E0%A6%BE%E0%A6%81%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2525,6 +2666,9 @@
   "birthPlaceBn": "Badalgachhi Upazila, Naogaon District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Fazley_Houda",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2578,6 +2722,9 @@
   "birthPlaceBn": "Manda Upazila, Naogaon District",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A7%80_%E0%A6%9F%E0%A6%BF%E0%A6%AA%E0%A7%81 https://en.wikipedia.org/wiki/Ekramul_Bari_Tipu",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2631,6 +2778,9 @@
   "birthPlaceBn": "Par Naogaon Eidgah Para, Naogaon Sadar Upazila, Naogaon District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Zahidul_Islam_Dhalu",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2684,6 +2834,9 @@
   "birthPlaceBn": "Jatamrul, Atrai Upazila, Naogaon District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Seikh_Md._Rejaul_Islam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2737,6 +2890,9 @@
   "birthPlaceBn": "Tanore Upazila, Rajshahi District, East Bengal",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mujibur_Rahman_(Rajshahi_politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2790,6 +2946,9 @@
   "birthPlaceBn": "Rajshahi, East Pakistan, Pakistan",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mizanur_Rahman_Minu",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2843,6 +3002,9 @@
   "birthPlaceBn": "Rajshahi, Bangladesh",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://en.wikipedia.org/wiki/Shofiqul_Haque_Milon",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -2896,6 +3058,9 @@
   "birthPlaceBn": "Bagmara Upazila, Rajshahi District, East Pakistan",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Abdul_Bari_Sarder",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -2949,6 +3114,9 @@
   "birthPlaceBn": "Puthia Upazila, Rajshahi District, East Bengal",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Nazrul_Islam_Mondol",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3002,6 +3170,9 @@
   "birthPlaceBn": "Charghat Upazila, Rajshahi District, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Abu_Sayeed_Chand",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3055,6 +3226,9 @@
   "birthPlaceBn": "বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%BE_%E0%A6%B6%E0%A6%BE%E0%A6%B0%E0%A6%AE%E0%A6%BF%E0%A6%A8_%E0%A6%AA%E0%A7%81%E0%A6%A4%E0%A7%81%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3108,6 +3282,9 @@
   "birthPlaceBn": "Natore, Bangladesh",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://en.wikipedia.org/wiki/Ruhul_Quddus_Talukdar",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3161,6 +3338,9 @@
   "birthPlaceBn": "Durmallika, Singra Upazila, Natore District, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Anwarul_Islam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3214,6 +3394,9 @@
   "birthPlaceBn": "Dharabarisha, Gurudaspur Upazila, Natore District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Abdul_Aziz_(Natore_politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3267,6 +3450,9 @@
   "birthPlaceBn": "কাজীপুর উপজেলা, সিরাজগঞ্জ জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B8%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3320,6 +3506,9 @@
   "birthPlaceBn": "কয়েলগাতি, সিরাজগঞ্জ, পূর্ববঙ্গ, পাকিস্তানের অধিরাজ্য",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%95%E0%A6%AC%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6_%E0%A6%9F%E0%A7%81%E0%A6%95%E0%A7%81",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3373,6 +3562,9 @@
   "birthPlaceBn": "Raiganj Upazila, Sirajganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Aynul_Haque",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3426,6 +3618,9 @@
   "birthPlaceBn": "Sirajganj",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Rafiqul_Islam_Khan",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3479,6 +3674,9 @@
   "birthPlaceBn": "তামাই, বেলকুচি, সিরাজগঞ্জ জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8_%E0%A6%86%E0%A6%B2%E0%A7%80%E0%A6%AE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3532,6 +3730,9 @@
   "birthPlaceBn": "Dhaka, East Pakistan",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/M._A._Muhit",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3585,6 +3786,9 @@
   "birthPlaceBn": "মন্মথপুর, সাঁথিয়া, পাবনা জেলা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%AE%E0%A7%87%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3638,6 +3842,9 @@
   "birthPlaceBn": "মালিফা, সুজানগর, পাবনা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%95%E0%A7%87_%E0%A6%8F%E0%A6%AE_%E0%A6%B8%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BE_%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%AC",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3691,6 +3898,9 @@
   "birthPlaceBn": "Bhangura Upazila, Pabna District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Muhammad_Ali_Asgar",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3744,6 +3954,9 @@
   "birthPlaceBn": "Ishwardi Upazila, Pabna District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Abu_Taleb_Mondol",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3797,6 +4010,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -3850,6 +4066,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3903,6 +4122,9 @@
   "birthPlaceBn": "Gangni Upazila, Meherpur District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Nazmul_Huda",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -3956,6 +4178,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4009,6 +4234,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4062,6 +4290,9 @@
   "birthPlaceBn": "পাটিকাবাড়ি ইউনিয়ন, কুষ্টিয়া সদর উপজেলা, কুষ্টিয়া জেলা",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A6%9C%E0%A6%BE_(%E0%A6%AE%E0%A7%81%E0%A6%AB%E0%A6%A4%E0%A6%BF)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4115,6 +4346,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4168,6 +4402,9 @@
   "birthPlaceBn": "Alamdanga Upazila, Chuadanga District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Masud_Parves",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4221,6 +4458,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4274,6 +4514,9 @@
   "birthPlaceBn": "যশোর জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%B8%E0%A6%BE%E0%A6%A6%E0%A7%81%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4327,6 +4570,9 @@
   "birthPlaceBn": "ঝিনাইদহ সদর, পূর্ব পাকিস্তান",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B2%E0%A7%80_%E0%A6%86%E0%A6%9C%E0%A6%AE_%E0%A6%AE%E0%A7%8B._%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%AC%E0%A6%95%E0%A7%8D%E0%A6%95%E0%A6%B0",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4380,6 +4626,9 @@
   "birthPlaceBn": "কোটচাঁদপুর, ঝিনাইদহ, পূর্ব পাকিস্তান",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%A4%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4433,6 +4682,9 @@
   "birthPlaceBn": "Kaliganj, Jhenaidah, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Abu_Talib",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4486,6 +4738,9 @@
   "birthPlaceBn": "শার্শা উপজেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A6_%E0%A6%86%E0%A6%9C%E0%A7%80%E0%A6%9C%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4539,6 +4794,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": "educationBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A6%B2%E0%A7%87%E0%A6%B9_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%AB%E0%A6%B0%E0%A6%BF%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4592,6 +4850,9 @@
   "birthPlaceBn": "যশোর, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%85%E0%A6%A8%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8D%E0%A6%AF_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%85%E0%A6%AE%E0%A6%BF%E0%A6%A4",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4645,6 +4906,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4698,6 +4962,9 @@
   "birthPlaceBn": "মনিরামপুর, যশোর",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4751,6 +5018,9 @@
   "birthPlaceBn": "কেশবপুর উপজেলা, যশোর",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0_%E0%A6%86%E0%A6%B2%E0%A7%80_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A7%80%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -4804,6 +5074,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4857,6 +5130,9 @@
   "birthPlaceBn": "মোহাম্মদপুর উপজেলা, মাগুরা জেলা, পূর্ব বাংলা, পাকিস্তান (বর্তমানে বাংলাদেশ)",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A6%BE%E0%A6%87_%E0%A6%B0%E0%A6%BE%E0%A6%AF%E0%A6%BC_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4910,6 +5186,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -4963,6 +5242,9 @@
   "birthPlaceBn": "Komkhali, Hobkhali Union, Narail District, Khulna Division, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Ataur_Rahman_Bachchu",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5016,6 +5298,9 @@
   "birthPlaceBn": "চিতলমারী উপজেলা, বাগেরহাট",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%AE%E0%A6%B6%E0%A6%BF%E0%A6%89%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%96%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5069,6 +5354,9 @@
   "birthPlaceBn": "দেওয়ানহাটি গ্রাম, বাগেরহাট জেলা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5122,6 +5410,9 @@
   "birthPlaceBn": "বড়দিয়া, রামপাল উপজেলা, বাগেরহাট",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AB%E0%A6%B0%E0%A6%BF%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE https://en.wikipedia.org/wiki/Shaikh_Faridul_Islam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5175,6 +5466,9 @@
   "birthPlaceBn": "Morrelganj Upazila, Bagerhat District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Abdul_Aleem",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5228,6 +5522,9 @@
   "birthPlaceBn": "Khulna District, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Amir_Ejaz_Khan",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5281,6 +5578,9 @@
   "birthPlaceBn": "খুলনা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%80%E0%A6%B0_%E0%A6%B9%E0%A7%81%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%B9%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5334,6 +5634,9 @@
   "birthPlaceBn": "Khulna, East Pakistan now Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Rakibul_Islam_(politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5387,6 +5690,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": "educationBn",
   "bioSource": "https://en.wikipedia.org/wiki/SK_Azizul_Bari_Helal",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5440,6 +5746,9 @@
   "birthPlaceBn": "Khulna, East Pakistan now Bangladesh",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B2%E0%A7%80_%E0%A6%86%E0%A6%B8%E0%A6%97%E0%A6%B0_%E0%A6%B2%E0%A6%AC%E0%A6%BF https://en.wikipedia.org/wiki/Mohammad_Ali_Asghar_Lobby",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5493,6 +5802,9 @@
   "birthPlaceBn": "Koyra Upazila, Khulna District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Abul_Kalam_Azad_(politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5546,6 +5858,9 @@
   "birthPlaceBn": "ফয়জুল্লাহপুর, জালালাবাদ, কলারোয়া, সাতক্ষীরা জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%A4_%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5599,6 +5914,9 @@
   "birthPlaceBn": "ধলবাড়িয়া, সাতক্ষীরা সদর সাতক্ষীরা জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A6_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%96%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%95",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5652,6 +5970,9 @@
   "birthPlaceBn": "মাঝ পারুলিয়া, দেবহাটা, সাতক্ষীরা জেলা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AC%E0%A6%BF%E0%A6%89%E0%A6%B2_%E0%A6%AC%E0%A6%BE%E0%A6%B6%E0%A6%BE%E0%A6%B0",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5705,6 +6026,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5758,6 +6082,9 @@
   "birthPlaceBn": "বরগুনা জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%85%E0%A6%B2%E0%A6%BF%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "IMB",
    "nameBn": "ইসলামী আন্দোলন বাংলাদেশ",
@@ -5811,6 +6138,9 @@
   "birthPlaceBn": "বরগুনা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AE%E0%A6%A8%E0%A6%BF",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5864,6 +6194,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -5917,6 +6250,9 @@
   "birthPlaceBn": "Madanpura, Bauphal, Patuakhali, Barisal",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Shafiqul_Islam_Masud",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -5970,6 +6306,9 @@
   "birthPlaceBn": "Patuakhali, Barishal, Bangladesh",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Nurul_Haque_Nur",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "GOP",
    "nameBn": "গণঅধিকার পরিষদ (জিওপি)",
@@ -6023,6 +6362,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6076,6 +6418,9 @@
   "birthPlaceBn": "Dhaka, Bangladesh",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://en.wikipedia.org/wiki/Andaleeve_Rahman",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJP",
    "nameBn": "বাংলাদেশ জাতীয় পার্টি-বিজেপি",
@@ -6129,6 +6474,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6182,6 +6530,9 @@
   "birthPlaceBn": "লালমোহন, ভোলা, বেঙ্গল প্রেসিডেন্সি, ব্রিটিশ ভারত (বর্তমান বাংলাদেশ)",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6237,6 +6588,9 @@
   "birthPlaceBn": "জিন্নাগড়, চরফ্যাশন, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%A8%E0%A6%AF%E0%A6%BC%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6290,6 +6644,9 @@
   "birthPlaceBn": "সরিকল গ্রাম, গৌরনদী, বরিশাল",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B9%E0%A6%BF%E0%A6%B0_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%B8%E0%A7%8D%E0%A6%AC%E0%A6%AA%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6343,6 +6700,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6396,6 +6756,9 @@
   "birthPlaceBn": "বরিশাল জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6449,6 +6812,9 @@
   "birthPlaceBn": "মেহেন্দিগঞ্জ, বরিশাল জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%80%E0%A6%AC_%E0%A6%86%E0%A6%B9%E0%A6%B8%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6502,6 +6868,9 @@
   "birthPlaceBn": "বরিশাল, পূর্ব পাকিস্তান",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6555,6 +6924,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6608,6 +6980,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6661,6 +7036,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6714,6 +7092,9 @@
   "birthPlaceBn": "বাকেরগঞ্জ জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%81%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%88%E0%A6%A6%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -6767,6 +7148,9 @@
   "birthPlaceBn": "পিরোজপুর জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%B8%E0%A7%8B%E0%A6%B9%E0%A7%87%E0%A6%B2_%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6820,6 +7204,9 @@
   "birthPlaceBn": "পিরোজপুর জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%81%E0%A6%B9%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8_%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A6%BE%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6873,6 +7260,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6926,6 +7316,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -6979,6 +7372,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -7032,6 +7428,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7085,6 +7484,9 @@
   "birthPlaceBn": "Tangail District, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Sultan_Salauddin_Tuku",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7138,6 +7540,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7191,6 +7596,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7244,6 +7652,9 @@
   "birthPlaceBn": "বাসাইল, টাঙ্গাইল, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_%E0%A6%86%E0%A6%AF%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7297,6 +7708,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7350,6 +7764,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7403,6 +7820,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7456,6 +7876,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7509,6 +7932,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7562,6 +7988,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -7615,6 +8044,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7668,6 +8100,9 @@
   "birthPlaceBn": "Sherpur, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mahmudul_Haque_Rubel",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7721,6 +8156,9 @@
   "birthPlaceBn": "ময়মনসিংহ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%93%E0%A6%AE%E0%A6%B0_%E0%A6%B0%E0%A7%81%E0%A6%AC%E0%A7%87%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -7774,6 +8212,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BKM",
    "nameBn": "বাংলাদেশ খেলাফত মজলিস",
@@ -7827,6 +8268,9 @@
   "birthPlaceBn": "ময়মনসিংহ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%AE_%E0%A6%87%E0%A6%95%E0%A6%AC%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%87%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7880,6 +8324,9 @@
   "birthPlaceBn": "ময়মনসিংহ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%AC_%E0%A6%86%E0%A6%95%E0%A6%A8%E0%A7%8D%E0%A6%A6_%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7933,6 +8380,9 @@
   "birthPlaceBn": "কান্দিগাঁও, মুক্তাগাছা, ময়মনসিংহ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%9C%E0%A6%BE%E0%A6%95%E0%A6%BF%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -7986,6 +8436,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -8039,6 +8492,9 @@
   "birthPlaceBn": "সিংরাইল, ত্রিশাল, ময়মনসিংহ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B2%E0%A6%BF%E0%A6%9F%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8092,6 +8548,9 @@
   "birthPlaceBn": "পাড়া নারায়ণপুর, ঈশ্বরগঞ্জ, ময়মনসিংহ, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B2%E0%A7%81%E0%A7%8E%E0%A6%AB%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A7%87%E0%A6%B2_%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8145,6 +8604,9 @@
   "birthPlaceBn": "নান্দাইল, ময়মনসিংহ, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B8%E0%A7%87%E0%A6%B0_%E0%A6%96%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8198,6 +8660,9 @@
   "birthPlaceBn": "দক্ষিণ গফরগাঁও, ময়মনসিংহ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%86%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A7%81",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8251,6 +8716,9 @@
   "birthPlaceBn": "ভালুকা উপজেলা, ময়মনসিংহ জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%96%E0%A6%B0_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8304,6 +8772,9 @@
   "birthPlaceBn": "নেত্রকোণা জেলা ময়মনসিংহ বিভাগ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%B8%E0%A6%BE%E0%A6%B0_%E0%A6%95%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8359,6 +8830,9 @@
   "birthPlaceBn": "Netrokona Sadar Upazila, Netrokona District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Anwarul_Haque_(Bangladeshi_politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8412,6 +8886,9 @@
   "birthPlaceBn": "কেন্দুয়া উপজেলা, নেত্রকোণা জেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BE%E0%A6%B2%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8465,6 +8942,9 @@
   "birthPlaceBn": "Netrokona, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Lutfozzaman_Babar",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8518,6 +8998,9 @@
   "birthPlaceBn": "Purbadhala Upazila, Netrokona District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mashum_Mostafa",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -8571,6 +9054,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8624,6 +9110,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8677,6 +9166,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8730,6 +9222,9 @@
   "birthPlaceBn": "Kishoreganj, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Fazlur_Rahman_(Bangladeshi_politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8783,6 +9278,9 @@
   "birthPlaceBn": "Bajitpur Upazila, Kishoreganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Sheikh_Mujibur_Rahman_Iqbal",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -8836,6 +9334,9 @@
   "birthPlaceBn": "Kuliarchar Upazila, Kishoreganj District, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Shariful_Alam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8889,6 +9390,9 @@
   "birthPlaceBn": "মানিকনগর, শিবালয় উপজেলা মানিকগঞ্জ জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8_%E0%A6%8F_%E0%A6%9C%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%B9_%E0%A6%95%E0%A6%AC%E0%A7%80%E0%A6%B0",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8942,6 +9446,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -8995,6 +9502,9 @@
   "birthPlaceBn": "গিলন্ড, মানিকগঞ্জ সদর উপজেলা, মানিকগঞ্জ জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AB%E0%A6%B0%E0%A7%8B%E0%A6%9C%E0%A6%BE_%E0%A6%96%E0%A6%BE%E0%A6%A8%E0%A6%AE_%E0%A6%B0%E0%A6%BF%E0%A6%A4%E0%A6%BE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9048,6 +9558,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9101,6 +9614,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9154,6 +9670,9 @@
   "birthPlaceBn": "Gazaria Upazila, Munshiganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Quamruzzaman_Ratan",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9207,6 +9726,9 @@
   "birthPlaceBn": "Nawabganj Upazila, Dhaka, East Pakistan",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%96%E0%A7%8B%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%86%E0%A6%B6%E0%A6%AB%E0%A6%BE%E0%A6%95 https://en.wikipedia.org/wiki/Khondoker_Abu_Ashfaque",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9260,6 +9782,9 @@
   "birthPlaceBn": "Keraniganj Upazila, Dhaka District, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Amanullah_Aman",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9313,6 +9838,9 @@
   "birthPlaceBn": "Keraniganj, Dhaka District, East Bengal, Dominion of Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Gayeshwar_Chandra_Roy",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9366,6 +9894,9 @@
   "birthPlaceBn": "বাকেরগঞ্জ, বরিশাল",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%88%E0%A6%AF%E0%A6%BC%E0%A6%A6_%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -9419,6 +9950,9 @@
   "birthPlaceBn": "Suchipara, Shahrasti, Chandpur, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mohammad_Kamal_Hossain",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -9472,6 +10006,9 @@
   "birthPlaceBn": "Dhaka, Bangladesh",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Ishraque_Hossain",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9525,6 +10062,9 @@
   "birthPlaceBn": "Dhaka, Bangladesh (present-day Old Dhaka, Dhaka, Bangladesh)",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Hamidur_Rahman_(Bangladeshi_politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9578,6 +10118,9 @@
   "birthPlaceBn": "কিশোরগঞ্জ, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%9C%E0%A6%BE_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9631,6 +10174,9 @@
   "birthPlaceBn": "বেলকুচি উপজেলা, সিরাজগঞ্জ জেলা",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%A6 https://en.wikipedia.org/wiki/Habibur_Rashid_Habib",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9684,6 +10230,9 @@
   "birthPlaceBn": "মোল্লাহাট, বাগেরহাট, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%B0%E0%A6%AC%E0%A6%BF%E0%A6%89%E0%A6%B2_%E0%A6%86%E0%A6%B2%E0%A6%AE https://en.wikipedia.org/wiki/Shaikh_Rabiul_Alam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9737,6 +10286,9 @@
   "birthPlaceBn": "ঢাকা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -9790,6 +10342,9 @@
   "birthPlaceBn": "Dhaka, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Saiful_Alam_Khan_Milon",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -9843,6 +10398,9 @@
   "birthPlaceBn": "ঢাকা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%AC%E0%A6%BF_%E0%A6%B9%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%9C",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -9896,6 +10454,9 @@
   "birthPlaceBn": "Mirpur, Dhaka",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mir_Ahmad_Bin_Quasem",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -9949,6 +10510,9 @@
   "birthPlaceBn": "সিলেট জেলা, পূর্ব পাকিস্তান (বর্তমানে ভাটেরা ইউনিয়ন, কুলাউড়া উপজেলা, মৌলভীবাজার জেলা, বাংলাদেশ)",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -10004,6 +10568,9 @@
   "birthPlaceBn": "টাঙ্গাইল সদর উপজেলা, টাংগাইল",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%BE%E0%A6%A4%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A8%E0%A7%87%E0%A6%B2)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -10057,6 +10624,9 @@
   "birthPlaceBn": "ঢাকা, বাংলাদেশ (তৎকালীন পূর্ব পাকিস্তান)",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%95_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8 https://en.wikipedia.org/wiki/Tarique_Rahman",
+  "partyRoleBn": "চেয়ারম্যান",
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10112,6 +10682,9 @@
   "birthPlaceBn": "ঢাকা, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8_%E0%A6%8F%E0%A6%AE_%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%80%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10165,6 +10738,9 @@
   "birthPlaceBn": "জিরাবো, ইয়ারপুর, সাভার, ঢাকা",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A6%E0%A7%87%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8 https://en.wikipedia.org/wiki/Dewan_Md._Salauddin",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10218,6 +10794,9 @@
   "birthPlaceBn": "ধামরাই",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%A4%E0%A6%AE%E0%A6%BF%E0%A6%9C_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10271,6 +10850,9 @@
   "birthPlaceBn": "গাজীপুর",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%AE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%AE%E0%A7%87%E0%A6%AF%E0%A6%BC%E0%A6%B0)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10324,6 +10906,9 @@
   "birthPlaceBn": "গাজীপুর, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%AE_%E0%A6%AE%E0%A6%9E%E0%A7%8D%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%95%E0%A6%B0%E0%A6%BF%E0%A6%AE_%E0%A6%B0%E0%A6%A8%E0%A6%BF",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10377,6 +10962,9 @@
   "birthPlaceBn": "শ্রীপুর, গাজীপুর",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8.%E0%A6%8F%E0%A6%AE._%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A7%81",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10430,6 +11018,9 @@
   "birthPlaceBn": "Kapasia Upazila, Gazipur District, Bangladesh",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://en.wikipedia.org/wiki/Salahuddin_Aiyubi",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -10483,6 +11074,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10536,6 +11130,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10589,6 +11186,9 @@
   "birthPlaceBn": "ঢাকা জেলা, বঙ্গ প্রদেশ, ব্রিটিশ ভারত (বর্তমান নরসিংদী জেলা, বাংলাদেশ)",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A6%88%E0%A6%A8_%E0%A6%96%E0%A6%BE%E0%A6%A8 https://en.wikipedia.org/wiki/Abdul_Moyeen_Khan",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10642,6 +11242,9 @@
   "birthPlaceBn": "Narsingdi Sadar Upazila, Narsingdi District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Manzur_Elahi",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10695,6 +11298,9 @@
   "birthPlaceBn": "হাফিজপুর, চালাকচর ইউনিয়ন, মনোহরদী উপজেলা, নরসিংদী জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%B0%E0%A6%A6%E0%A6%BE%E0%A6%B0_%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B8%E0%A6%BE%E0%A6%96%E0%A6%BE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A4_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10748,6 +11354,9 @@
   "birthPlaceBn": "Raipura Upazila, Narsingdi District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Ashraf_Uddin",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10801,6 +11410,9 @@
   "birthPlaceBn": "শরীয়তগঞ্জ, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AD%E0%A7%82%E0%A6%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BE_%E0%A6%A6%E0%A6%BF%E0%A6%AA%E0%A7%81",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10854,6 +11466,9 @@
   "birthPlaceBn": "Araihazar Upazila, Narayanganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Nazrul_Islam_Azad",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10907,6 +11522,9 @@
   "birthPlaceBn": "Sonargaon Upazila, Narayanganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Azharul_Islam_Mannan",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -10960,6 +11578,9 @@
   "birthPlaceBn": "নারায়ণগঞ্জ",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%86%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -11013,6 +11634,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11066,6 +11690,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11119,6 +11746,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11172,6 +11802,9 @@
   "birthPlaceBn": "মধুখালী উপজেলা, ফরিদপুর জেলা",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%B2%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B8_%E0%A6%AE%E0%A7%8B%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -11225,6 +11858,9 @@
   "birthPlaceBn": "Faridpur, Bangladesh",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Shama_Obaed",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11278,6 +11914,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11331,6 +11970,9 @@
   "birthPlaceBn": "Nagarkanda Upazila, Faridpur District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Shahidul_Islam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11384,6 +12026,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11437,6 +12082,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11490,6 +12138,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11543,6 +12194,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": "professionBn",
   "bioSource": "https://en.wikipedia.org/wiki/Pirzada_Hanzala",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BKM",
    "nameBn": "বাংলাদেশ খেলাফত মজলিস",
@@ -11596,6 +12250,9 @@
   "birthPlaceBn": "Madaripur Sadar Upazila, Madaripur District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Jahander_Ali_Miah",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11649,6 +12306,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11702,6 +12362,9 @@
   "birthPlaceBn": "Damudya Upazila, Shariatpur",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Sayeed_Ahmed_Aslam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11755,6 +12418,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11808,6 +12474,9 @@
   "birthPlaceBn": "Gosairhat Upazila, Shariatpur District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mia_Nuruddin_Ahmed_Apu",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11861,6 +12530,9 @@
   "birthPlaceBn": "Tahirpur Upazila, Sunamganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Kamruzzaman_Kamrul",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11914,6 +12586,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -11967,6 +12642,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12020,6 +12698,9 @@
   "birthPlaceBn": "Sunamganj Sadar Upazila, Sunamganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Nurul_Islam_Nurul",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12073,6 +12754,9 @@
   "birthPlaceBn": "বাগবাড়ী, ছাতক, সুনামগঞ্জ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%B2%E0%A6%BF%E0%A6%AE_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12126,6 +12810,9 @@
   "birthPlaceBn": "সিলেট",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%96%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%A6%E0%A6%BF%E0%A6%B0",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12179,6 +12866,9 @@
   "birthPlaceBn": "Sylhet District, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Tahsina_Rushdir_Luna",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12232,6 +12922,9 @@
   "birthPlaceBn": "Dakshin Surma Upazila, Sylhet District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mohammad_Abdul_Malek",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12285,6 +12978,9 @@
   "birthPlaceBn": "কুমারপাড়া, সিলেট, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%B0%E0%A6%BF%E0%A6%AB%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12338,6 +13034,9 @@
   "birthPlaceBn": "জকিগঞ্জ, সিলেট, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8_(%E0%A6%AE%E0%A7%81%E0%A6%AB%E0%A6%A4%E0%A6%BF)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "KM",
    "nameBn": "খেলাফত মজলিস",
@@ -12391,6 +13090,9 @@
   "birthPlaceBn": "কতোয়ালপুর, গোলাপগঞ্জ, সিলেট",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%AE%E0%A6%B0%E0%A6%BE%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A6%A6_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12444,6 +13146,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": "professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A6%BE%E0%A6%B8%E0%A6%BF%E0%A6%B0_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_%E0%A6%AE%E0%A6%BF%E0%A6%A0%E0%A7%81",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12497,6 +13202,9 @@
   "birthPlaceBn": "কুলাউড়া, মৌলভীবাজার",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%93%E0%A6%95%E0%A6%A4%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B6%E0%A6%95%E0%A7%81",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12550,6 +13258,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12603,6 +13314,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12656,6 +13370,9 @@
   "birthPlaceBn": "সিলেট জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%BE_%E0%A6%95%E0%A6%BF%E0%A6%AC%E0%A6%B0%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12709,6 +13426,9 @@
   "birthPlaceBn": "কামালখানী, বানিয়াচং, হবিগঞ্জ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A7%81%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%96%E0%A6%BE%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A4_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12762,6 +13482,9 @@
   "birthPlaceBn": "Habiganj Sadar Upazila, Habiganj District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/G_K_Gouse",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12815,6 +13538,9 @@
   "birthPlaceBn": "হবিগঞ্জ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8.%E0%A6%8F%E0%A6%AE.%E0%A6%AB%E0%A6%AF%E0%A6%BC%E0%A6%B8%E0%A6%B2 https://en.wikipedia.org/wiki/S.M._Faisal",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12868,6 +13594,9 @@
   "birthPlaceBn": "Nasirnagar Upazila, Brahmanbaria District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/M_A_Hannan_(politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -12921,6 +13650,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -12974,6 +13706,9 @@
   "birthPlaceBn": "Brahmanbaria Sadar Upazila, Brahmanbaria District",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Khaled_Hossain_Mahbub",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13027,6 +13762,9 @@
   "birthPlaceBn": "ছতুরা শরীফ, আখাউড়া, ব্রাহ্মণবাড়িয়া, পূর্ব পাকিস্তান (বর্তমানে বাংলাদেশ)",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%81%E0%A6%B6%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13080,6 +13818,9 @@
   "birthPlaceBn": "Nabinagar Upazila, Brahmanbaria District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Abdul_Mannan_(politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13133,6 +13874,9 @@
   "birthPlaceBn": "ব্রাহ্মণবাড়িয়া, বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%95%E0%A6%BF",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "PSM",
    "nameBn": "গণসংহতি আন্দোলন",
@@ -13186,6 +13930,9 @@
   "birthPlaceBn": "গয়েশপুর, দাউদকান্দি, কুমিল্লা, বেঙ্গল প্রেসিডেন্সি, ব্রিটিশ ভারত (বর্তমান বাংলাদেশ)",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%96%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A6%95%E0%A6%BE%E0%A6%B0_%E0%A6%AE%E0%A7%8B%E0%A6%B6%E0%A6%BE%E0%A6%B0%E0%A6%B0%E0%A6%AB_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A7%81%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13239,6 +13986,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13292,6 +14042,9 @@
   "birthPlaceBn": "ত্রিপুরা জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%B6%E0%A6%BE%E0%A6%B9_%E0%A6%AE%E0%A7%8B%E0%A6%AB%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%95%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%95%E0%A7%8B%E0%A6%AC%E0%A6%BE%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13345,6 +14098,9 @@
   "birthPlaceBn": "দেবিদ্বার, কুমিল্লা",
   "bioFromWiki": "educationBn,birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%A8%E0%A6%BE%E0%A6%A4_%E0%A6%86%E0%A6%AC%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -13398,6 +14154,9 @@
   "birthPlaceBn": "কুমিল্লা ব্রাহ্মণপাড়া উপজেলার বাগড়া গ্রাম",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B8%E0%A6%BF%E0%A6%AE_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A7%80%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13451,6 +14210,9 @@
   "birthPlaceBn": "কুমিল্লা, সদর দক্ষিণ উপজেলা, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13504,6 +14266,9 @@
   "birthPlaceBn": "খোরশেদ চেয়ারম্যান বাড়ি, চান্দিনা, কুমিল্লা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A4%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%B2%E0%A6%AE_%E0%A6%B6%E0%A6%BE%E0%A6%93%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -13557,6 +14322,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13610,6 +14378,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13663,6 +14434,9 @@
   "birthPlaceBn": "নিশ্চিন্তপুর, নাঙ্গলকোট উপজেলা, কুমিল্লা জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%AC%E0%A6%BE%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A7%87%E0%A6%B0_%E0%A6%86%E0%A6%B2%E0%A6%AE_%E0%A6%AD%E0%A7%81%E0%A6%81%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A6%BE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13716,6 +14490,9 @@
   "birthPlaceBn": "চৌদ্দগ্রাম, কুমিল্লা, পূর্ব বাংলা, পাকিস্তান (বর্তমানে বাংলাদেশ)",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%88%E0%A6%AF%E0%A6%BC%E0%A6%A6_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%A4%E0%A6%BE%E0%A6%B9%E0%A7%87%E0%A6%B0",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -13769,6 +14546,9 @@
   "birthPlaceBn": "কচুয়া, চাঁদপুর, পূর্ব পাকিস্তান",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86_%E0%A6%A8_%E0%A6%AE_%E0%A6%8F%E0%A6%B9%E0%A6%B8%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13822,6 +14602,9 @@
   "birthPlaceBn": "Matlab Uttar Upazila, Chandpur District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Jalal_Uddin",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13875,6 +14658,9 @@
   "birthPlaceBn": "শহীদ রেহানবাগ, চাঁদপুর সদর উপজেলা, চাঁদপুর জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AB%E0%A6%B0%E0%A6%BF%E0%A6%A6_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A7%87%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -13928,6 +14714,9 @@
   "birthPlaceBn": "Faridganj Upazila, Chandpur District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Abdul_Hannan_(politician)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -13981,6 +14770,9 @@
   "birthPlaceBn": "Hajiganj Upazila, Chandpur District",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Md._Mominul_Haque",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14034,6 +14826,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14087,6 +14882,9 @@
   "birthPlaceBn": "Feni, Bangladesh",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Joynal_Abedin",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14140,6 +14938,9 @@
   "birthPlaceBn": "Feni District, East Bengal, Dominion of Pakistan",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Abdul_Awal_Mintoo",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14193,6 +14994,9 @@
   "birthPlaceBn": "Noakhali District, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Mahbub_Uddin_Khokon",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14246,6 +15050,9 @@
   "birthPlaceBn": "Noakhali District, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Zainul_Abdin_Farroque",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14299,6 +15106,9 @@
   "birthPlaceBn": "নোয়াখালী",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%B0%E0%A6%95%E0%A6%A4_%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%AC%E0%A7%81%E0%A6%B2%E0%A7%81",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14352,6 +15162,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14405,6 +15218,9 @@
   "birthPlaceBn": "Noakhali",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Muhammad_Fakrul_Islam",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14458,6 +15274,9 @@
   "birthPlaceBn": "হাতিয়া, নোয়াখালী",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A6%89%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -14511,6 +15330,9 @@
   "birthPlaceBn": "করপাড়া ইউনিয়ন রামগঞ্জ, লক্ষ্মীপুর",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A6%E0%A6%BE%E0%A6%A4_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_%E0%A6%B8%E0%A7%87%E0%A6%B2%E0%A6%BF%E0%A6%AE",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14564,6 +15386,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14617,6 +15442,9 @@
   "birthPlaceBn": "লক্ষ্মীপুর থানা, নোয়াখালী জেলা, পূর্ব পাকিস্তান, পাকিস্তান",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%B9%E0%A7%80%E0%A6%A6%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A7%80%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_%E0%A6%8F%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A6%BF",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14670,6 +15498,9 @@
   "birthPlaceBn": "রামগতি, লক্ষ্মীপুর",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%AC%E0%A6%BF_%E0%A6%8F%E0%A6%AE_%E0%A6%86%E0%A6%B6%E0%A6%B0%E0%A6%BE%E0%A6%AB_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%A8%E0%A6%BF%E0%A6%9C%E0%A6%BE%E0%A6%A8",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14723,6 +15554,9 @@
   "birthPlaceBn": "পাতাকোট, ওসমানপুর, মীরসরাই, চট্টগ্রাম",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14776,6 +15610,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14829,6 +15666,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14882,6 +15722,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14935,6 +15778,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -14988,6 +15834,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15041,6 +15890,9 @@
   "birthPlaceBn": "Chittagong, East Pakistan",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://en.wikipedia.org/wiki/Ershad_Ullah",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15094,6 +15946,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15147,6 +16002,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15200,6 +16058,9 @@
   "birthPlaceBn": "পাহাড়তলী, চট্টগ্রাম, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%B0_%E0%A6%96%E0%A6%B8%E0%A6%B0%E0%A7%81_%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15253,6 +16114,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15306,6 +16170,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15359,6 +16226,9 @@
   "birthPlaceBn": "চন্দনাইশ, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B8%E0%A7%80%E0%A6%AE_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A7%80%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15412,6 +16282,9 @@
   "birthPlaceBn": "চট্টগ্রাম",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -15465,6 +16338,9 @@
   "birthPlaceBn": "বাঁশখালী উপজেলা, চট্টগ্রাম জেলা",
   "bioFromWiki": "birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%B9%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -15518,6 +16394,9 @@
   "birthPlaceBn": "সিকদারপাড়া, পেকুয়া, কক্সবাজার, পূর্ব পাকিস্তান বর্তমানে বাংলাদেশ",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%B9%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A6%BF%E0%A6%A8_%E0%A6%86%E0%A6%B9%E0%A6%AE%E0%A7%87%E0%A6%A6_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15571,6 +16450,9 @@
   "birthPlaceBn": "Moheshkhali Upazila, Cox's Bazar, East Pakistan",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://en.wikipedia.org/wiki/Alamgir_Mohammad_Mahfuzullah_Farid",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15624,6 +16506,9 @@
   "birthPlaceBn": "ঈদগাঁও উপজেলা, কক্সবাজার, বাংলাদেশ",
   "bioFromWiki": "birthPlaceBn,professionBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B2%E0%A7%81%E0%A6%A4%E0%A6%AB%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%95%E0%A6%BE%E0%A6%9C%E0%A6%B2",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15677,6 +16562,9 @@
   "birthPlaceBn": "রাজাপালং, উখিয়া, কক্সবাজার",
   "bioFromWiki": "educationBn,birthPlaceBn",
   "bioSource": "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_(%E0%A6%95%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AC%E0%A6%BE%E0%A6%9C%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15730,6 +16618,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15783,6 +16674,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15836,6 +16730,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15889,6 +16786,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15942,6 +16842,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -15995,6 +16898,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16048,6 +16954,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16101,6 +17010,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16154,6 +17066,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16207,6 +17122,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16260,6 +17178,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16313,6 +17234,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16366,6 +17290,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16419,6 +17346,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16472,6 +17402,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16525,6 +17458,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16578,6 +17514,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16631,6 +17570,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16684,6 +17626,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16737,6 +17682,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16790,6 +17738,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16843,6 +17794,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16896,6 +17850,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -16949,6 +17906,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17002,6 +17962,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17055,6 +18018,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17108,6 +18074,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17161,6 +18130,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17214,6 +18186,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17267,6 +18242,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17320,6 +18298,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17373,6 +18354,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17426,6 +18410,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17479,6 +18466,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17532,6 +18522,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17585,6 +18578,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17638,6 +18634,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17691,6 +18690,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17744,6 +18746,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BNP",
    "nameBn": "বাংলাদেশ জাতীয়তাবাদী দল (বি.এন.পি)",
@@ -17797,6 +18802,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -17850,6 +18858,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -17903,6 +18914,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -17956,6 +18970,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -18009,6 +19026,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -18062,6 +19082,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -18115,6 +19138,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -18168,6 +19194,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -18221,6 +19250,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BJEI",
    "nameBn": "বাংলাদেশ জামায়াতে ইসলামী",
@@ -18274,6 +19306,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",
@@ -18327,6 +19362,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "JAGPA",
    "nameBn": "জাতীয় গণতান্ত্রিক পার্টি-জাগপা",
@@ -18380,6 +19418,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "BKM",
    "nameBn": "বাংলাদেশ খেলাফত মজলিস",
@@ -18433,6 +19474,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "Ind",
    "nameBn": "স্বতন্ত্র",
@@ -18486,6 +19530,9 @@
   "birthPlaceBn": null,
   "bioFromWiki": null,
   "bioSource": null,
+  "partyRoleBn": null,
+  "ministryBn": null,
+  "govPost": null,
   "party": {
    "abbr": "NCP",
    "nameBn": "জাতীয় নাগরিক পার্টি-এনসিপি",

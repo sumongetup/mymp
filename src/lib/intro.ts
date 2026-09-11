@@ -127,6 +127,8 @@ export interface IntroContext {
   /** How the result card names its source, for "(… অনুযায়ী)". */
   resultSourceBy: string | null;
   year: number | null;
+  /** Leave out the opening "who" sentence when the page already opens with it (the SEO description). */
+  skipIdentity?: boolean;
 }
 
 /** The introduction as paragraphs, or [] when the member has too little on record for one. */
@@ -146,9 +148,9 @@ export function introOf(m: Member, ctx: IntroContext): string[] {
       ? `সংরক্ষিত ${m.seat.nameBn ?? m.seat.nameEn} থেকে`
       : `${district ? `${district.bn} জেলার ` : ''}${m.seat.nameBn ?? m.seat.nameEn} আসনের`;
   if (m.resignedOn) {
-    first.push(`${name} ${who}; ত্রয়োদশ জাতীয় সংসদে ${seat ? `${seat} ` : ''}সংসদ সদস্য ছিলেন এবং ${dateBn(m.resignedOn)} তারিখে পদত্যাগ করেন।`);
+    if (!ctx.skipIdentity) first.push(`${name} ${who}; ত্রয়োদশ জাতীয় সংসদে ${seat ? `${seat} ` : ''}সংসদ সদস্য ছিলেন এবং ${dateBn(m.resignedOn)} তারিখে পদত্যাগ করেন।`);
   } else {
-    first.push(`${name} ${who}; ত্রয়োদশ জাতীয় সংসদে ${seat ? `${seat} ` : ''}সংসদ সদস্য।`);
+    if (!ctx.skipIdentity) first.push(`${name} ${who}; ত্রয়োদশ জাতীয় সংসদে ${seat ? `${seat} ` : ''}সংসদ সদস্য।`);
     if (ctx.roles.length) first.push(`বর্তমানে তিনি ${listBn(ctx.roles)}।`);
   }
 

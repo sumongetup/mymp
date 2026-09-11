@@ -33,7 +33,7 @@ import type { Db } from './parliament-core';
 import { pageUrl, plain, splitParams, templates, type WikiPage } from './results-wiki';
 import { memberArticles } from './social-wiki';
 
-export type BioField = 'educationBn' | 'birthPlaceBn' | 'professionBn';
+export type BioField = 'educationBn' | 'birthPlaceBn' | 'professionBn' | 'partyRoleBn' | 'ministryBn' | 'govPost';
 
 const EDUCATION_KEYS = ['education', 'alma_mater', 'শিক্ষা', 'শিক্ষাগত_যোগ্যতা', 'প্রাক্তন_শিক্ষার্থী', 'মাতৃশিক্ষায়তন'];
 const PROFESSION_KEYS = ['profession', 'occupation', 'পেশা'];
@@ -166,6 +166,10 @@ export interface Bio {
   educationBn?: string;
   birthPlaceBn?: string;
   professionBn?: string;
+  /** Only from config/bio-manual.json: a party office ("চেয়ারম্যান") and a government post, each checked against its source. */
+  partyRoleBn?: string;
+  ministryBn?: string;
+  govPost?: string;
   from: Partial<Record<BioField, 'bn' | 'en'>>;
   sources: string[];
   setAside?: string;
@@ -211,7 +215,9 @@ export function bioFrom(reads: { page: WikiPage; host: string }[], officialDob: 
   return bio;
 }
 
-const FIELDS: BioField[] = ['educationBn', 'birthPlaceBn', 'professionBn'];
+const FIELDS: BioField[] = ['educationBn', 'birthPlaceBn', 'professionBn', 'partyRoleBn', 'ministryBn', 'govPost'];
+/** The fields the profile's table marks as read from Wikipedia. */
+const TABLE_FIELDS: BioField[] = ['educationBn', 'birthPlaceBn', 'professionBn'];
 
 /** Hand-checked facts by member id: fields to set and the article they were checked against. */
 type Manual = Partial<Record<BioField, string>> & { source: string };
@@ -281,7 +287,7 @@ export async function runBioWiki(db: Db): Promise<{ itemsFound: number; itemsNew
       upserts.push({ entity_type: 'member', entity_id: f.id, field: k, value: f[k]!, updated_by: null, updated_at: now });
       keep.add(`${f.id}|${k}`);
     }
-    for (const [k, v] of [['bioFromWiki', fields.join(',')], ['bioSource', f.sources.join(' ')]] as const) {
+    for (const [k, v] of [['bioFromWiki', fields.filter((x) => TABLE_FIELDS.includes(x)).join(',')], ['bioSource', f.sources.join(' ')]] as const) {
       if (edited.has(`${f.id}|${k}`)) continue;
       upserts.push({ entity_type: 'member', entity_id: f.id, field: k, value: v, updated_by: null, updated_at: now });
       keep.add(`${f.id}|${k}`);
