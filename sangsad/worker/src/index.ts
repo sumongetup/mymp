@@ -15,6 +15,7 @@ import { runPhotos } from './jobs/photos';
 import { runReport } from './jobs/report';
 import { runSourcesInspect } from './jobs/sources-inspect';
 import { runNews, runNewsRematch } from './jobs/news';
+import { runResultsWiki } from './jobs/results-wiki';
 
 config({ path: resolve(import.meta.dirname, '../../.env') });
 
@@ -42,6 +43,8 @@ const jobs: Record<string, Job> = {
   news: () => runNews(getDb()),
   /** Re-runs the matcher over the last week's articles (after the matcher changes). */
   'news:rematch': () => runNewsRematch(getDb()),
+  /** Drafts 2026 results from Wikipedia into mymp.bd's election_results for editors to verify. */
+  'results:wikipedia': () => runResultsWiki(getDb()),
 };
 
 async function run(name: string) {

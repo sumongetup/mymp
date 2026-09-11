@@ -11,6 +11,7 @@ const GROUPS: { label: string; items: (NavGroup['items'][number] & { super?: boo
       { href: '/admin/seats', label: 'আসন', icon: 'pin' },
       { href: '/admin/parties', label: 'দল', icon: 'flag' },
       { href: '/admin/committees', label: 'কমিটি', icon: 'layers' },
+      { href: '/admin/social', label: 'সোশ্যাল লিংক', icon: 'globe' },
     ],
   },
   {

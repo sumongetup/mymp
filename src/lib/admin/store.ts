@@ -126,6 +126,21 @@ export async function overrideCounts(): Promise<Record<EntityType, number>> {
   return out;
 }
 
+/** Current social-link overrides for a set of members: id → field → value. */
+export async function socialOverrides(ids: string[]): Promise<Map<string, Record<string, string | null>>> {
+  const out = new Map<string, Record<string, string | null>>();
+  for (let i = 0; i < ids.length; i += 100) {
+    const { data } = await supabaseAdmin()
+      .from('overrides')
+      .select('entity_id,field,value')
+      .eq('entity_type', 'member')
+      .in('entity_id', ids.slice(i, i + 100))
+      .in('field', ['facebook', 'x', 'youtube', 'instagram', 'website']);
+    for (const r of data ?? []) out.set(r.entity_id, { ...(out.get(r.entity_id) ?? {}), [r.field]: r.value });
+  }
+  return out;
+}
+
 export async function setOverride(a: Actor, type: EntityType, id: string, field: string, value: string | null, oldValue: string | null) {
   if (!EDITABLE[type].some((f) => f.key === field)) throw new Error(`Field ${field} is not editable on ${type}.`);
   const db = supabaseAdmin();

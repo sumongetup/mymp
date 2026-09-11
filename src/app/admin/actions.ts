@@ -7,8 +7,10 @@ import { requireAdmin, requireSuperAdmin } from '@/lib/admin/auth';
 import {
   EDITABLE, type EntityType, setOverride, clearOverride, setHidden,
   upsertNews, setNewsStatus, resolveCorrection, addAdmin, removeAdmin, audit,
-  upsertResult, setResultStatus,
+  upsertResult, setResultStatus, socialOverrides,
 } from '@/lib/admin/store';
+import { SOCIAL_HOSTS, validSocialUrl, parseSocialLines } from '@/lib/admin/social-import';
+import { allMembers } from '@/lib/data';
 
 export interface ActionState { error?: string; ok?: string }
 
@@ -18,25 +20,7 @@ const str = (fd: FormData, key: string) => {
 };
 const orNull = (s: string) => (s.trim() === '' ? null : s.trim());
 
-/** Social links must point at the network they claim to; anything else is refused, not stored. */
-const SOCIAL_HOSTS: Record<string, string[] | null> = {
-  facebook: ['facebook.com', 'fb.com', 'fb.me'],
-  x: ['x.com', 'twitter.com'],
-  youtube: ['youtube.com', 'youtu.be'],
-  instagram: ['instagram.com'],
-  website: null,
-};
-const validUrl = (value: string, hosts: string[] | null) => {
-  try {
-    const u = new URL(value);
-    if (u.protocol !== 'https:') return false;
-    if (!hosts) return true;
-    const h = u.hostname.replace(/^www\./, '').replace(/^m\./, '');
-    return hosts.some((x) => h === x || h.endsWith('.' + x));
-  } catch {
-    return false;
-  }
-};
+const validUrl = validSocialUrl;
 
 /* ---------------- session ---------------- */
 
@@ -88,7 +72,7 @@ export async function saveOverrides(fd: FormData) {
     const next = orNull(str(fd, `field__${f.key}`));
     const current = orNull(str(fd, `current__${f.key}`));
     if (next === current) continue;
-    if (type === 'member' && next && f.key in SOCIAL_HOSTS && !validUrl(next, SOCIAL_HOSTS[f.key])) {
+    if (type === 'member' && next && f.key in SOCIAL_HOSTS && !validUrl(next, SOCIAL_HOSTS[f.key as keyof typeof SOCIAL_HOSTS])) {
       invalid = f.key;
       continue;
     }
@@ -97,6 +81,54 @@ export async function saveOverrides(fd: FormData) {
   if (invalid) redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?invalid=${invalid}`);
   revalidatePath(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}`);
   redirect(`/admin/${type === 'member' ? 'members' : type + 's'}/${id}?saved=1`);
+}
+
+export interface SocialImportState {
+  error?: string;
+  saved?: number;
+  unchanged?: number;
+  lines?: { line: number; raw: string; who?: string; ok: boolean; message: string }[];
+}
+
+/**
+ * Many members' social links at once. Each changed link becomes its own
+ * override and audit entry, exactly as if it had been typed on the member's
+ * page; lines that cannot be read are reported and nothing is guessed.
+ */
+export async function importSocialLinks(_prev: SocialImportState, fd: FormData): Promise<SocialImportState> {
+  const me = await requireAdmin();
+  const text = str(fd, 'lines');
+  if (!text.trim()) return { error: 'কোনো লাইন দেওয়া হয়নি।' };
+  const parsed = parseSocialLines(text, allMembers);
+  const ids = [...new Set(parsed.filter((p) => !p.error && p.memberId).map((p) => p.memberId!))];
+  const current = await socialOverrides(ids);
+  const byId = new Map(allMembers.map((m) => [m.id, m]));
+  let saved = 0;
+  let unchanged = 0;
+  const lines: NonNullable<SocialImportState['lines']> = [];
+  const label: Record<string, string> = { facebook: 'Facebook', x: 'X', youtube: 'YouTube', instagram: 'Instagram', website: 'ওয়েবসাইট' };
+  for (const p of parsed) {
+    if (p.error || !p.memberId) {
+      lines.push({ line: p.line, raw: p.raw, ok: false, message: p.error ?? 'পড়া যায়নি' });
+      continue;
+    }
+    const shown = byId.get(p.memberId) as unknown as Record<string, string | null> | undefined;
+    const changed: string[] = [];
+    for (const l of p.links) {
+      const own = current.get(p.memberId);
+      const before = own && l.key in own ? (own[l.key] ?? null) : (shown?.[l.key] ?? null);
+      if (before === l.url) {
+        unchanged++;
+        continue;
+      }
+      await setOverride(me, 'member', p.memberId, l.key, l.url, before);
+      saved++;
+      changed.push(label[l.key] ?? l.key);
+    }
+    lines.push({ line: p.line, raw: p.raw, who: p.memberName, ok: true, message: changed.length ? `সংরক্ষিত: ${changed.join(', ')}` : 'আগের মতোই আছে' });
+  }
+  revalidatePath('/admin/social');
+  return { saved, unchanged, lines };
 }
 
 export async function revertOverride(fd: FormData) {

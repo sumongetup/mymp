@@ -46,8 +46,17 @@ export function ResultCard({ r, compact = false }: { r: SeatResult; compact?: bo
         })}
       </ol>
       <div className="px-5 py-3 bg-paper/60 border-t border-rulesoft flex items-center justify-between gap-3 text-[12.5px] text-muted">
-        <span>উৎস: নির্বাচন কমিশনের গেজেট{r.sourceNote ? ` · ${r.sourceNote}` : ''}</span>
-        <DocLink href={r.sourceUrl}>গেজেট</DocLink>
+        {/wikipedia\.org/i.test(r.sourceUrl) ? (
+          <>
+            <span>উৎস: উইকিপিডিয়া{r.sourceNote ? ` · ${r.sourceNote.replace(/^উৎস: উইকিপিডিয়া[^।]*।\s*/, '')}` : ''}</span>
+            <DocLink href={r.sourceUrl}>উইকিপিডিয়া</DocLink>
+          </>
+        ) : (
+          <>
+            <span>উৎস: নির্বাচন কমিশনের গেজেট{r.sourceNote ? ` · ${r.sourceNote}` : ''}</span>
+            <DocLink href={r.sourceUrl}>গেজেট</DocLink>
+          </>
+        )}
       </div>
     </Card>
   );

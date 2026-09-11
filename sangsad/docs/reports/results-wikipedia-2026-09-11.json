@@ -1,0 +1,4177 @@
+{
+ "generatedAt": "2026-09-11T07:39:52.717Z",
+ "drafts": 144,
+ "missing": [
+  "6 দিনাজপুর-১",
+  "11 দিনাজপুর-৬",
+  "13 নীলফামারী-২",
+  "15 নীলফামারী-৪",
+  "34 জয়পুরহাট-১",
+  "35 জয়পুরহাট-২",
+  "36 বগুড়া-১",
+  "37 বগুড়া-২",
+  "38 বগুড়া-৩",
+  "39 বগুড়া-৪",
+  "40 বগুড়া-৫",
+  "42 বগুড়া-৭",
+  "43 চাঁপাইনবাবগঞ্জ-১",
+  "44 চাঁপাইনবাবগঞ্জ-২",
+  "45 চাঁপাইনবাবগঞ্জ-৩",
+  "46 নওগাঁ-১",
+  "47 নওগাঁ-২",
+  "49 নওগাঁ-৪",
+  "51 নওগাঁ-৬",
+  "52 রাজশাহী-১",
+  "53 রাজশাহী-২",
+  "58 নাটোর-১",
+  "59 নাটোর-২",
+  "61 নাটোর-৪",
+  "62 সিরাজগঞ্জ-১",
+  "63 সিরাজগঞ্জ-২",
+  "64 সিরাজগঞ্জ-৩",
+  "66 সিরাজগঞ্জ-৫",
+  "67 সিরাজগঞ্জ-৬",
+  "69 পাবনা-২",
+  "70 পাবনা-৩",
+  "71 পাবনা-৪",
+  "72 পাবনা-৫",
+  "80 চুয়াডাঙ্গা-২",
+  "82 ঝিনাইদহ-২",
+  "83 ঝিনাইদহ-৩",
+  "84 ঝিনাইদহ-৪",
+  "85 যশোর-১",
+  "86 যশোর-২",
+  "87 যশোর-৩",
+  "88 যশোর-৪",
+  "89 যশোর-৫",
+  "90 যশোর-৬",
+  "102 খুলনা-৪",
+  "105 সাতক্ষীরা-১",
+  "106 সাতক্ষীরা-২",
+  "107 সাতক্ষীরা-৩",
+  "108 সাতক্ষীরা-৪",
+  "113 পটুয়াখালি-৩",
+  "114 পটুয়াখালি-৪",
+  "119 বরিশাল-১",
+  "120 বরিশাল-২",
+  "121 বরিশাল-৩",
+  "122 বরিশাল-৪",
+  "130 টাঙ্গাইল-১",
+  "131 টাঙ্গাইল-২",
+  "132 টাঙ্গাইল-৩",
+  "133 টাঙ্গাইল-৪",
+  "134 টাঙ্গাইল-৫",
+  "135 টাঙ্গাইল-৬",
+  "136 টাঙ্গাইল-৭",
+  "139 জামালপুর-২",
+  "140 জামালপুর-৩",
+  "141 জামালপুর-৪",
+  "142 জামালপুর-৫",
+  "143 শেরপুর-১",
+  "144 শেরপুর-২",
+  "151 ময়মনসিংহ-৬",
+  "156 ময়মনসিংহ-১১",
+  "157 নেত্রকোনা-১",
+  "158 নেত্রকোনা-২",
+  "162 কিশোরগঞ্জ-১",
+  "163 কিশোরগঞ্জ-২",
+  "164 কিশোরগঞ্জ-৩",
+  "165 কিশোরগঞ্জ-৪",
+  "166 কিশোরগঞ্জ-৫",
+  "167 কিশোরগঞ্জ-৬",
+  "169 মানিকগঞ্জ-২",
+  "171 মুন্সিগঞ্জ-১",
+  "173 মুন্সিগঞ্জ-৩",
+  "196 গাজীপুর-৩",
+  "203 নরসিংদী-৫",
+  "209 রাজবাড়ী-১",
+  "210 রাজবাড়ী-২",
+  "211 ফরিদপুর-১",
+  "213 ফরিদপুর-৩",
+  "214 ফরিদপুর-৪",
+  "215 গোপালগঞ্জ-১",
+  "216 গোপালগঞ্জ-২",
+  "217 গোপালগঞ্জ-৩",
+  "218 মাদারিপুর-১",
+  "219 মাদারিপুর-২",
+  "220 মাদারিপুর-৩",
+  "221 শরিয়তপুর-১",
+  "222 শরিয়তপুর-২",
+  "223 শরিয়তপুর-৩",
+  "224 সুনামগঞ্জ-১",
+  "226 সুনামগঞ্জ-৩",
+  "227 সুনামগঞ্জ-৪",
+  "228 সুনামগঞ্জ-৫",
+  "230 সিলেট-২",
+  "235 মৌলভীবাজার-১",
+  "236 মৌলভীবাজার-২",
+  "238 মৌলভীবাজার-৪",
+  "239 হবিগঞ্জ-১",
+  "240 হবিগঞ্জ-২",
+  "241 হবিগঞ্জ-৩",
+  "243 ব্রাহ্মণবাড়িয়া-১",
+  "244 ব্রাহ্মণবাড়িয়া-২",
+  "245 ব্রাহ্মণবাড়িয়া-৩",
+  "246 ব্রাহ্মণবাড়িয়া-৪",
+  "249 কুমিল্লা-১",
+  "250 কুমিল্লা-২",
+  "251 কুমিল্লা-৩",
+  "253 কুমিল্লা-৫",
+  "254 কুমিল্লা-৬",
+  "255 কুমিল্লা-৭",
+  "256 কুমিল্লা-৮",
+  "257 কুমিল্লা-৯",
+  "258 কুমিল্লা-১০",
+  "259 কুমিল্লা-১১",
+  "261 চাঁদপুর-২",
+  "262 চাঁদপুর-৩",
+  "264 চাঁদপুর-৫",
+  "265 ফেনী-১",
+  "267 ফেনী-৩",
+  "268 নোয়াখালী-১",
+  "269 নোয়াখালী-২",
+  "270 নোয়াখালী-৩",
+  "272 নোয়াখালী-৫",
+  "273 নোয়াখালী-৬",
+  "274 লক্ষ্মীপুর-১",
+  "275 লক্ষ্মীপুর-২",
+  "276 লক্ষ্মীপুর-৩",
+  "277 লক্ষ্মীপুর-৪",
+  "278 চট্টগ্রাম-১",
+  "279 চট্টগ্রাম-২",
+  "280 চট্টগ্রাম-৩",
+  "281 চট্টগ্রাম-৪",
+  "282 চট্টগ্রাম-৫",
+  "283 চট্টগ্রাম-৬",
+  "284 চট্টগ্রাম-৭",
+  "286 চট্টগ্রাম-৯",
+  "287 চট্টগ্রাম-১০",
+  "288 চট্টগ্রাম-১১",
+  "289 চট্টগ্রাম-১২",
+  "290 চট্টগ্রাম-১৩",
+  "291 চট্টগ্রাম-১৪",
+  "292 চট্টগ্রাম-১৫",
+  "293 চট্টগ্রাম-১৬",
+  "294 কক্সবাজার-১",
+  "295 কক্সবাজার-২",
+  "296 কক্সবাজার-৩",
+  "298 খাগড়াছড়ি",
+  "299 রাঙ্গামাটি",
+  "300 বান্দরবন"
+ ],
+ "items": [
+  {
+   "seatNo": 1,
+   "seat": "পঞ্চগড়-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "ব্যারিস্টার মুহাম্মদ নওশাদ জমির",
+      "party": "BNP",
+      "votes": 176169
+     },
+     {
+      "name": "সারজিস আলম",
+      "party": "NCP",
+      "votes": 168049
+     },
+     {
+      "name": "নাজমুল হক প্রধান",
+      "party": "বাংলাদেশ জাতীয় সমাজতান্ত্রিক দল",
+      "votes": 3009
+     },
+     {
+      "name": "আব্দুল ওয়াদুদ বাদশা",
+      "party": "বাংলাদেশ সুপ্রিম পার্টি বিএসপি",
+      "votes": 1018
+     },
+     {
+      "name": "মাহাফুজার রহমান",
+      "party": "গণ অধিকার পরিষদ",
+      "votes": 836
+     },
+     {
+      "name": "ফেরদাউস আলম",
+      "party": "বাংলাদেশ লেবার পার্টি",
+      "votes": 683
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারন নির্বাচন ২০২৬: পঞ্চগড়-১"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A6%9E%E0%A7%8D%E0%A6%9A%E0%A6%97%E0%A7%9C-%E0%A7%A7",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «পঞ্চগড়-১», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 2,
+   "seat": "পঞ্চগড়-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "ফরহাদ হোসেন আজাদ",
+      "party": "BNP",
+      "votes": 174650
+     },
+     {
+      "name": "Md. Shafiul Alam",
+      "party": "BJEI",
+      "votes": 128862
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Panchagarh-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Panchagarh-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Panchagarh-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 3,
+   "seat": "ঠাকুরগাঁও-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মির্জা ফখরুল ইসলাম আলমগীর",
+      "party": "BNP",
+      "votes": 238836
+     },
+     {
+      "name": "Delwar Hossain",
+      "party": "BJEI",
+      "votes": 141017
+     }
+    ],
+    "turnout": 74.25,
+    "title": "General election 2026: Thakurgaon-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Thakurgaon-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Thakurgaon-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 4,
+   "seat": "ঠাকুরগাঁও-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুস সালাম",
+      "party": "BNP",
+      "votes": 121017
+     },
+     {
+      "name": "Abdul Hakim",
+      "party": "BJEI",
+      "votes": 115707
+     }
+    ],
+    "turnout": 69.62,
+    "title": "General election 2026: Thakurgaon-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Thakurgaon-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Thakurgaon-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 5,
+   "seat": "ঠাকুরগাঁও-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ জাহিদুর রহমান",
+      "party": "BNP",
+      "votes": 132797
+     },
+     {
+      "name": "Md. Mizanur Rahman",
+      "party": "BJEI",
+      "votes": 91934
+     },
+     {
+      "name": "Hafiz Uddin Ahmed",
+      "party": "JP(ERSHAD)",
+      "votes": 27133
+     }
+    ],
+    "turnout": 61.72,
+    "title": "General election 2026: Thakurgaon-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Thakurgaon-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Thakurgaon-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 7,
+   "seat": "দিনাজপুর-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ সাদিক রিয়াজ",
+      "party": "BNP",
+      "votes": 144317
+     },
+     {
+      "name": "A.K.M. Afzalul Anam",
+      "party": "BJEI",
+      "votes": 101831
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Dinajpur-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dinajpur-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dinajpur-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 8,
+   "seat": "দিনাজপুর-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "সৈয়দ জাহাঙ্গীর আলম",
+      "party": "BNP",
+      "votes": 139207
+     },
+     {
+      "name": "Md. Mainul Alam",
+      "party": "BJEI",
+      "votes": 134618
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Dinajpur-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dinajpur-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dinajpur-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 9,
+   "seat": "দিনাজপুর-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আখতারুজ্জামান মিয়া",
+      "party": "BNP",
+      "votes": 165577
+     },
+     {
+      "name": "Md. Aftab Uddin Mollah",
+      "party": "BJEI",
+      "votes": 127666
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Dinajpur-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dinajpur-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dinajpur-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 10,
+   "seat": "দিনাজপুর-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "এ, জেড, এম, রেজওয়ানুল হক",
+      "party": "Ind",
+      "votes": 113650
+     },
+     {
+      "name": "Md. Abdul Ahad",
+      "party": "NCP",
+      "votes": 108948
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Dinajpur-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dinajpur-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dinajpur-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 12,
+   "seat": "নীলফামারী-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুস সাত্তার",
+      "party": "BJEI",
+      "votes": 149214
+     },
+     {
+      "name": "Monjurul Islam Afendi",
+      "party": "Jamiat Ulema-e-Islam Bangladesh",
+      "votes": 118160
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Nilphamari-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Nilphamari-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Nilphamari-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 14,
+   "seat": "নীলফামারী-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "ওবায়দুল্লাহ সালাফী",
+      "party": "BJEI",
+      "votes": 108560
+     },
+     {
+      "name": "Alhaj Syed Ali",
+      "party": "BNP",
+      "votes": 89102
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Nilphamari-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Nilphamari-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Nilphamari-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 16,
+   "seat": "লালমনিরহাট-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ হাসান রাজীব প্রধান",
+      "party": "BNP",
+      "votes": 138686
+     },
+     {
+      "name": "মো. আনোয়ারুল ইসলাম রাজু",
+      "party": "BJEI",
+      "votes": 129572
+     },
+     {
+      "name": "শিহাব আহমেদ",
+      "party": "Ind",
+      "votes": 7959
+     },
+     {
+      "name": "মসিউর রহমান রাঙ্গা",
+      "party": "JP(NA-FI)",
+      "votes": 5158
+     }
+    ],
+    "turnout": 72.2,
+    "title": "সাধারণ নির্বাচন ২০২৬: লালমনিরহাট-১"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%B2%E0%A6%BE%E0%A6%B2%E0%A6%AE%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A6%B9%E0%A6%BE%E0%A6%9F-%E0%A7%A7",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «লালমনিরহাট-১», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 17,
+   "seat": "লালমনিরহাট-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ রোকন উদ্দীন বাবুল",
+      "party": "BNP",
+      "votes": 123946
+     },
+     {
+      "name": "Md. Firoz Haider",
+      "party": "BJEI",
+      "votes": 117252
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Lalmonirhat-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lalmonirhat-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Lalmonirhat-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 18,
+   "seat": "লালমনিরহাট-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "আসাদুল হাবিব দুলু",
+      "party": "BNP",
+      "votes": 139651
+     },
+     {
+      "name": "Md. Abu Taher",
+      "party": "BJEI",
+      "votes": 56244
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Lalmonirhat-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Lalmonirhat-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Lalmonirhat-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 19,
+   "seat": "রংপুর-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ রায়হান সিরাজী",
+      "party": "BJEI",
+      "votes": 145088
+     },
+     {
+      "name": "Md. Mokarram Hossain Sujan",
+      "party": "BNP",
+      "votes": 69407
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rangpur-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rangpur-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rangpur-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 20,
+   "seat": "রংপুর-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "এ টি এম আজহারুল ইসলাম",
+      "party": "BJEI",
+      "votes": 135556
+     },
+     {
+      "name": "Mohammad Ali Sarkar",
+      "party": "BNP",
+      "votes": 80538
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rangpur-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rangpur-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rangpur-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 21,
+   "seat": "রংপুর-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মাহবুবুর রহমান (বেলাল)",
+      "party": "BJEI",
+      "votes": 178064
+     },
+     {
+      "name": "Md. Shamsuzzaman Samu",
+      "party": "BNP",
+      "votes": 85498
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rangpur-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rangpur-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rangpur-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 22,
+   "seat": "রংপুর-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "আখতার হোসেন",
+      "party": "NCP",
+      "votes": 149966
+     },
+     {
+      "name": "Mohammad Emdadul Haque Bhorsa",
+      "party": "BNP",
+      "votes": 140564
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rangpur-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rangpur-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rangpur-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 23,
+   "seat": "রংপুর-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ গোলাম রব্বানী",
+      "party": "BJEI",
+      "votes": 176411
+     },
+     {
+      "name": "Md. Golam Rabbani",
+      "party": "BNP",
+      "votes": 115116
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rangpur-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rangpur-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rangpur-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 24,
+   "seat": "রংপুর-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ নুরুল আমীন",
+      "party": "BJEI",
+      "votes": 118890
+     },
+     {
+      "name": "Md. Saiful Islam",
+      "party": "BNP",
+      "votes": 116919
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rangpur-6"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rangpur-6",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rangpur-6», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 25,
+   "seat": "কুড়িগ্রাম-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আনোয়ারুল ইসলাম",
+      "party": "BJEI",
+      "votes": 141090
+     },
+     {
+      "name": "Saifur Rahman Rana",
+      "party": "BNP",
+      "votes": 123025
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Kurigram-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Kurigram-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Kurigram-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 26,
+   "seat": "কুড়িগ্রাম-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "আতিকুর রহমান মোজাহিদ",
+      "party": "NCP",
+      "votes": 178869
+     },
+     {
+      "name": "Md. Sohel Hossain Kaikobad",
+      "party": "BNP",
+      "votes": 170335
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Kurigram-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Kurigram-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Kurigram-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 27,
+   "seat": "কুড়িগ্রাম-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মাহবুবুল আলম",
+      "party": "BJEI",
+      "votes": 106923
+     },
+     {
+      "name": "আক্কাছ আলী",
+      "party": "JP(NA-FI)",
+      "votes": 82598
+     },
+     {
+      "name": "এম এ মতিন",
+      "party": "BAL(MALEK)",
+      "votes": 79895
+     },
+     {
+      "name": "তাসভীর উল ইসলাম",
+      "party": "BNP",
+      "votes": 78645
+     },
+     {
+      "name": "মোঃ আক্কাস আলী সরকার",
+      "party": "IMB",
+      "votes": 33380
+     },
+     {
+      "name": "আব্দুস সোবহান",
+      "party": "JP(NA-FI)",
+      "votes": 2078
+     },
+     {
+      "name": "মোঃ সাফিউর",
+      "party": "Ind",
+      "votes": 596
+     },
+     {
+      "name": "সরকার মোঃ নূরে এরশাদ সিদ্দিকী",
+      "party": "গণ অধিকার পরিষদ",
+      "votes": 237
+     }
+    ],
+    "turnout": 44.3,
+    "title": "সাধারণ নির্বাচন ২০২৬: কুড়িগ্রাম-৩"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A7%81%E0%A7%9C%E0%A6%BF%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE-%E0%A7%A9",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «কুড়িগ্রাম-৩», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 28,
+   "seat": "কুড়িগ্রাম-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মোস্তাফিজুর রহমান",
+      "party": "BJEI",
+      "votes": 108210
+     },
+     {
+      "name": "মো. আজিজুর রহমান",
+      "party": "BNP",
+      "votes": 84423
+     },
+     {
+      "name": "মো. রোকনুজ্জামান",
+      "party": "Ind",
+      "votes": 20902
+     },
+     {
+      "name": "মো.হাফিজুর রহমান",
+      "party": "IMB",
+      "votes": 6231
+     },
+     {
+      "name": "কে.এম.ফজলুল মন্ডল",
+      "party": "JP(NA-FI)",
+      "votes": 2180
+     },
+     {
+      "name": "রাজু আহমেদ",
+      "party": "বাংলাদেশের সমাজতান্ত্রিক দল (মার্কসবাদী)",
+      "votes": 320
+     },
+     {
+      "name": "শেখ মোহাম্মদ আব্দুল খালেক",
+      "party": "বাংলাদেশের সমাজতান্ত্রিক দল",
+      "votes": 201
+     }
+    ],
+    "turnout": 62.34,
+    "title": "সাধারণ নির্বাচন ২০২৬: কুড়িগ্রাম-৪"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A7%81%E0%A7%9C%E0%A6%BF%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE-%E0%A7%AA",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «কুড়িগ্রাম-৪», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 29,
+   "seat": "গাইবান্ধা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মাজেদুর রহমান",
+      "party": "BJEI",
+      "votes": 140726
+     },
+     {
+      "name": "Khandaker Ziaul Islam Mohammad Ali",
+      "party": "BNP",
+      "votes": 37997
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gaibandha-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gaibandha-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gaibandha-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 30,
+   "seat": "গাইবান্ধা-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুল করিম",
+      "party": "BJEI",
+      "votes": 122930
+     },
+     {
+      "name": "Md. Anisuzzaman Khan Babu",
+      "party": "BNP",
+      "votes": 92890
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gaibandha-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gaibandha-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gaibandha-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 31,
+   "seat": "গাইবান্ধা-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "আবুল কাওছার মোহাম্মদ নজরুল ইসলাম",
+      "party": "BJEI",
+      "votes": 192457
+     },
+     {
+      "name": "Syed Mainul Hasan Sadiq",
+      "party": "BNP",
+      "votes": 139864
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gaibandha-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gaibandha-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gaibandha-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 32,
+   "seat": "গাইবান্ধা-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "Shamim Kaisar Lincoln",
+      "party": "BNP",
+      "votes": 142772
+     },
+     {
+      "name": "Md. Abdur Rahim Sarkar",
+      "party": "BJEI",
+      "votes": 139738
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gaibandha-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gaibandha-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gaibandha-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। বিজয়ীর নাম এই আসনের বর্তমান সংসদ সদস্য মোহাম্মদ শামীম কায়সার-এর সঙ্গে মেলেনি; উপনির্বাচন হয়ে থাকতে পারে, অথবা তথ্যটি ভুল।"
+  },
+  {
+   "seatNo": 33,
+   "seat": "গাইবান্ধা-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুল ওয়ারেছ",
+      "party": "BJEI",
+      "votes": 89274
+     },
+     {
+      "name": "Md. Farooq Alam Sarkar",
+      "party": "BNP",
+      "votes": 73483
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gaibandha-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gaibandha-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gaibandha-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 41,
+   "seat": "বগুড়া-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "Tarique Rahman",
+      "party": "BNP",
+      "votes": 216284
+     },
+     {
+      "name": "Md. Abidur Rahman Sohel",
+      "party": "BJEI",
+      "votes": 97626
+     }
+    ],
+    "turnout": 71.03,
+    "title": "General Election 2026: Bogra-6"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bogra-6",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bogra-6», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। বিজয়ীর নাম এই আসনের বর্তমান সংসদ সদস্য মোঃ রেজাউল করিম বাদশা-এর সঙ্গে মেলেনি; উপনির্বাচন হয়ে থাকতে পারে, অথবা তথ্যটি ভুল।"
+  },
+  {
+   "seatNo": 48,
+   "seat": "নওগাঁ-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ ফজলে হুদা",
+      "party": "BNP",
+      "votes": 165646
+     },
+     {
+      "name": "Md Mahfuzur Rahman",
+      "party": "BJEI",
+      "votes": 117838
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Naogaon-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Naogaon-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Naogaon-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 50,
+   "seat": "নওগাঁ-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ জাহিদুল ইসলাম ধলু",
+      "party": "BNP",
+      "votes": 129385
+     },
+     {
+      "name": "Abu Sadat Mohammad Sayem",
+      "party": "BJEI",
+      "votes": 104747
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Naogaon-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Naogaon-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Naogaon-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 54,
+   "seat": "রাজশাহী-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ শফিকুল হক মিলন",
+      "party": "BNP",
+      "votes": 176318
+     },
+     {
+      "name": "Md. Abul Kalam Azad",
+      "party": "BJEI",
+      "votes": 137927
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rajshahi-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rajshahi-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rajshahi-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 55,
+   "seat": "রাজশাহী-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুল বারী সরদার",
+      "party": "BJEI",
+      "votes": 115226
+     },
+     {
+      "name": "D. M. D. Ziaur Rahman",
+      "party": "BNP",
+      "votes": 109461
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rajshahi-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rajshahi-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rajshahi-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 56,
+   "seat": "রাজশাহী-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "অধ্যাপক নজরুল ইসলাম",
+      "party": "BNP",
+      "votes": 153425
+     },
+     {
+      "name": "Manzoor Rahman",
+      "party": "BJEI",
+      "votes": 73445
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rajshahi-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rajshahi-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rajshahi-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 57,
+   "seat": "রাজশাহী-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "Abu Sayeed Chand",
+      "party": "BNP",
+      "votes": 148672
+     },
+     {
+      "name": "Md. Nazmul Haque",
+      "party": "BJEI",
+      "votes": 92965
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Rajshahi-6"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Rajshahi-6",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Rajshahi-6», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। বিজয়ীর নাম এই আসনের বর্তমান সংসদ সদস্য মোঃ আবু সাইদ চাঁদ-এর সঙ্গে মেলেনি; উপনির্বাচন হয়ে থাকতে পারে, অথবা তথ্যটি ভুল।"
+  },
+  {
+   "seatNo": 60,
+   "seat": "নাটোর-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আনোয়ারুল ইসলাম",
+      "party": "BNP",
+      "votes": 119768
+     },
+     {
+      "name": "Md. Daudar Mahmud",
+      "party": "INDEPENDENT",
+      "votes": 66492
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Natore-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Natore-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Natore-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 65,
+   "seat": "সিরাজগঞ্জ-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ রফিকুল ইসলাম খান",
+      "party": "BJEI",
+      "votes": 161872
+     },
+     {
+      "name": "এম. আকবর আলী",
+      "party": "BNP",
+      "votes": 161278
+     },
+     {
+      "name": "আব্দুর রহমান",
+      "party": "IMB",
+      "votes": 2216
+     },
+     {
+      "name": "হিলটন প্রামানিক",
+      "party": "JP(NA-FI)",
+      "votes": 1213
+     }
+    ],
+    "turnout": 70,
+    "title": "সাধারণ নির্বাচন ২০২৬: সিরাজগঞ্জ-৪"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%97%E0%A6%9E%E0%A7%8D%E0%A6%9C-%E0%A7%AA",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «সিরাজগঞ্জ-৪», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 68,
+   "seat": "পাবনা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ নাজিবুর রহমান",
+      "party": "BJEI",
+      "votes": 128467
+     },
+     {
+      "name": "শামসুর রহমান",
+      "party": "BNP",
+      "votes": 103663
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬: পাবনা-১"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AA%E0%A6%BE%E0%A6%AC%E0%A6%A8%E0%A6%BE-%E0%A7%A7",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «পাবনা-১», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 73,
+   "seat": "মেহেরপুর-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ তাজউদ্দীন খান",
+      "party": "BJEI",
+      "votes": 123271
+     },
+     {
+      "name": "Masud Arun",
+      "party": "BNP",
+      "votes": 105441
+     },
+     {
+      "name": "Abdul Hamid",
+      "party": "JP(ERSHAD)",
+      "votes": 1429
+     },
+     {
+      "name": "Mizanur Rahman",
+      "party": "CPB",
+      "votes": 792
+     }
+    ],
+    "turnout": 72.9,
+    "title": "General Election 2026: Meherpur-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Meherpur-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Meherpur-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 74,
+   "seat": "মেহেরপুর-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ নাজমুল হুদা",
+      "party": "BJEI",
+      "votes": 96306
+     },
+     {
+      "name": "Amzad Hossain",
+      "party": "BNP",
+      "votes": 85988
+     },
+     {
+      "name": "Abdul Baki",
+      "party": "JP(ERSHAD)",
+      "votes": 1825
+     }
+    ],
+    "turnout": 68,
+    "title": "General Election 2026: Meherpur-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Meherpur-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Meherpur-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 75,
+   "seat": "কুষ্টিয়া-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "রেজা আহাম্মেদ",
+      "party": "BNP",
+      "votes": 165909
+     },
+     {
+      "name": "Md. Belal Uddin",
+      "party": "BJEI",
+      "votes": 86682
+     },
+     {
+      "name": "Md. Nuruzzaman",
+      "party": "INDEPENDENT",
+      "votes": 17864
+     },
+     {
+      "name": "Md. Aminul Islam",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 4063
+     },
+     {
+      "name": "Md. Shahriar Jamil",
+      "party": "JP(ERSHAD)",
+      "votes": 1094
+     },
+     {
+      "name": "Md. Shahabul Islam",
+      "party": "Gono Odhikar Parishad",
+      "votes": 613
+     },
+     {
+      "name": "Mohammad Badiruzzaman",
+      "party": "Islamic Front Bangladesh",
+      "votes": 241
+     },
+     {
+      "name": "Md. Gias Uddin",
+      "party": "JSD",
+      "votes": 203
+     }
+    ],
+    "turnout": 68.4,
+    "title": "General Election 2026: Kushtia-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Kushtia-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Kushtia-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 76,
+   "seat": "কুষ্টিয়া-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুল গফুর",
+      "party": "BJEI",
+      "votes": 192083
+     },
+     {
+      "name": "Ragib Rauf Chowdhury",
+      "party": "BNP",
+      "votes": 143821
+     },
+     {
+      "name": "Mohammad Ali",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 3887
+     },
+     {
+      "name": "Md. Babul Akter",
+      "party": "Islamic Front Bangladesh",
+      "votes": 1123
+     },
+     {
+      "name": "Nur Uddin Ahmed",
+      "party": "CPB",
+      "votes": 805
+     }
+    ],
+    "turnout": 71.5,
+    "title": "General Election 2026: Kushtia-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Kushtia-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Kushtia-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 77,
+   "seat": "কুষ্টিয়া-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আমির হামজা",
+      "party": "BJEI",
+      "votes": 182476
+     },
+     {
+      "name": "Md. Zakir Hossain Sarkar",
+      "party": "BNP",
+      "votes": 127559
+     },
+     {
+      "name": "Md. Abdullah Akhand",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 5153
+     },
+     {
+      "name": "Mosammat Rumpa Khatun",
+      "party": "Bangladesh Republican Party",
+      "votes": 475
+     },
+     {
+      "name": "Mir Nazmul Islam",
+      "party": "Socialist Party of Bangladesh",
+      "votes": 442
+     },
+     {
+      "name": "Mohammad Shariful Islam",
+      "party": "Gono Odhikar Parishad",
+      "votes": 299
+     }
+    ],
+    "turnout": 71.8,
+    "title": "General Election 2026: Kushtia-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Kushtia-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Kushtia-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 78,
+   "seat": "কুষ্টিয়া-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আফজাল হোসেন",
+      "party": "BJEI",
+      "votes": 148201
+     },
+     {
+      "name": "Syed Mehedi Ahmed Rumi",
+      "party": "BNP",
+      "votes": 139603
+     },
+     {
+      "name": "Anwar Khan",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 13739
+     },
+     {
+      "name": "Tarun Kumar Ghosh",
+      "party": "Bangladesh Minority Janata Party",
+      "votes": 671
+     },
+     {
+      "name": "Md. Shahidul Islam",
+      "party": "Bangladesh Labour Party",
+      "votes": 308
+     },
+     {
+      "name": "Md. Abdul Hakim Mia",
+      "party": "GF",
+      "votes": 255
+     }
+    ],
+    "turnout": 71.3,
+    "title": "General Election 2026: Kushtia-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Kushtia-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Kushtia-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 79,
+   "seat": "চুয়াডাঙ্গা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মাসুদ পারভেজ",
+      "party": "BJEI",
+      "votes": 211041
+     },
+     {
+      "name": "মোঃ শরীফুজ্জামান",
+      "party": "BNP",
+      "votes": 153193
+     },
+     {
+      "name": "সোলায়মান হক জোয়ার্দ্দার",
+      "party": "BAL(MALEK)",
+      "votes": 145134
+     },
+     {
+      "name": "মোঃ সোবেদ আলী",
+      "party": "জাতীয় সমাজতান্ত্রিক দল-জেএসডি",
+      "votes": 20108
+     },
+     {
+      "name": "মোহাম্মদ জহুরুল ইসলাম",
+      "party": "IMB",
+      "votes": 10122
+     }
+    ],
+    "turnout": 41.6,
+    "title": "সাধারণ নির্বাচন ২০২৬ : চুয়াডাঙ্গা-১"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%9A%E0%A7%81%E0%A7%9F%E0%A6%BE%E0%A6%A1%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A6%BE-%E0%A7%A7",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «চুয়াডাঙ্গা-১», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 81,
+   "seat": "ঝিনাইদহ-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আসাদুজ্জামান",
+      "party": "BNP",
+      "votes": 171598
+     },
+     {
+      "name": "Abu Saleh Md. Matiur Rahman",
+      "party": "BJEI",
+      "votes": 55577
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Jhenaidah-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Jhenaidah-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Jhenaidah-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 91,
+   "seat": "মাগুরা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মনোয়ার হোসেন",
+      "party": "BNP",
+      "votes": 183666
+     },
+     {
+      "name": "Abdul Matin",
+      "party": "BJEI",
+      "votes": 88036
+     },
+     {
+      "name": "Md Nazirul Islam",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 13335
+     },
+     {
+      "name": "Md Zaker Hossain Molla",
+      "party": "JP(ERSHAD)",
+      "votes": 1725
+     },
+     {
+      "name": "Shampa Basu",
+      "party": "Socialist Party of Bangladesh",
+      "votes": 1185
+     },
+     {
+      "name": "Adv Kazi Rezaul Hossain",
+      "party": "Bangladesh Congress",
+      "votes": 806
+     },
+     {
+      "name": "Md Khalilur Rahman",
+      "party": "Gono Odhikar Parishad",
+      "votes": 286
+     }
+    ],
+    "turnout": 68.4,
+    "title": "General election 2026: Magura-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Magura-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Magura-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 92,
+   "seat": "মাগুরা-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "নিতাই রায় চৌধুরী",
+      "party": "BNP",
+      "votes": 147896
+     },
+     {
+      "name": "মোঃ মুশতারশেদ বিল্লাহ",
+      "party": "BJEI",
+      "votes": 117018
+     },
+     {
+      "name": "মোস্তফা কামাল",
+      "party": "IMB",
+      "votes": 16223
+     },
+     {
+      "name": "মশিয়ার রহমান",
+      "party": "JP(NA-FI)",
+      "votes": 2947
+     }
+    ],
+    "turnout": 69,
+    "title": "সাধারণ নির্বাচন ২০২৬: মাগুরা-২"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%97%E0%A7%81%E0%A6%B0%E0%A6%BE-%E0%A7%A8",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «মাগুরা-২», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 93,
+   "seat": "নড়াইল-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "বিশ্বাস জাহাঙ্গীর আলম",
+      "party": "BNP",
+      "votes": 99975
+     },
+     {
+      "name": "Md Obaidullah",
+      "party": "BJEI",
+      "votes": 75225
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narail-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narail-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narail-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 94,
+   "seat": "নড়াইল-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আতাউর রহমান",
+      "party": "BJEI",
+      "votes": 118142
+     },
+     {
+      "name": "Md. Monirul Islam",
+      "party": "INDEPENDENT",
+      "votes": 78457
+     },
+     {
+      "name": "AZM Fariduzzaman Farhad",
+      "party": "BNP",
+      "votes": 45463
+     }
+    ],
+    "turnout": 76.1,
+    "title": "General Election 2026: Narail-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narail-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narail-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 95,
+   "seat": "বাগেরহাট-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মশিউর রহমান খান",
+      "party": "BJEI",
+      "votes": 117527
+     },
+     {
+      "name": "Kapil Krishna Mandal",
+      "party": "BNP",
+      "votes": 114323
+     }
+    ],
+    "turnout": 65.7,
+    "title": "General election 2026: Bagerhat-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bagerhat-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bagerhat-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 96,
+   "seat": "বাগেরহাট-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "শেখ মনজুরুল হক (রাহাদ)",
+      "party": "BJEI",
+      "votes": 117709
+     },
+     {
+      "name": "শেখ মোহাম্মদ জাকির হোসেন",
+      "party": "BNP",
+      "votes": 66409
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন, ২০২৬: বাগেরহাট-২"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A7%87%E0%A6%B0%E0%A6%B9%E0%A6%BE%E0%A6%9F-%E0%A7%A8",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «বাগেরহাট-২», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 97,
+   "seat": "বাগেরহাট-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "শেখ ফরিদুল ইসলাম",
+      "party": "BNP",
+      "votes": 103711
+     },
+     {
+      "name": "Mohammed Abdul Wadud Sheikh",
+      "party": "BJEI",
+      "votes": 83705
+     }
+    ],
+    "turnout": 72.3,
+    "title": "General election 2026: Bagerhat-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bagerhat-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bagerhat-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 98,
+   "seat": "বাগেরহাট-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুল আলীম",
+      "party": "BJEI",
+      "votes": 116067
+     },
+     {
+      "name": "Somnath Dey",
+      "party": "BNP",
+      "votes": 98326
+     }
+    ],
+    "turnout": 59.4,
+    "title": "General election 2026: Bagerhat-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bagerhat-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bagerhat-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 99,
+   "seat": "খুলনা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "আমীর এজাজ খান",
+      "party": "BNP",
+      "votes": 121352
+     },
+     {
+      "name": "Krishna Nandi",
+      "party": "BJEI",
+      "votes": 70346
+     }
+    ],
+    "turnout": 67.9,
+    "title": "General election 2026: Khulna-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Khulna-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Khulna-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 100,
+   "seat": "খুলনা-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "শেখ জাহাঙ্গীর হুসাইন হেলাল",
+      "party": "BJEI",
+      "votes": 93789
+     },
+     {
+      "name": "Nazrul Islam Manju",
+      "party": "BNP",
+      "votes": 88197
+     }
+    ],
+    "turnout": 56.7,
+    "title": "General Election 2026: Khulna-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Khulna-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Khulna-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 101,
+   "seat": "খুলনা-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "রকিবুল ইসলাম",
+      "party": "BNP",
+      "votes": 74845
+     },
+     {
+      "name": "Md. Mahfuzur Rahman",
+      "party": "BJEI",
+      "votes": 66010
+     }
+    ],
+    "turnout": 58.2,
+    "title": "General Election 2026: Khulna-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Khulna-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Khulna-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 103,
+   "seat": "খুলনা-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ আলি আসগার",
+      "party": "BNP",
+      "votes": 148854
+     },
+     {
+      "name": "Mia Golam Parwar",
+      "party": "BJEI",
+      "votes": 146246
+     }
+    ],
+    "turnout": 74.9,
+    "title": "General election 2026: Khulna-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Khulna-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Khulna-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 104,
+   "seat": "খুলনা-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আবুল কালাম আজাদ",
+      "party": "BJEI",
+      "votes": 150724
+     },
+     {
+      "name": "S M Monirul Hasan",
+      "party": "BNP",
+      "votes": 124710
+     }
+    ],
+    "turnout": 67.3,
+    "title": "General election 2026: Khulna-6"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Khulna-6",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Khulna-6», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 109,
+   "seat": "বরগুনা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "Mahmudul Hossain Waliullah",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 140291
+     },
+     {
+      "name": "Md. Nazrul Islam Molla",
+      "party": "BNP",
+      "votes": 136145
+     },
+     {
+      "name": "Md. Jahangir Hossain",
+      "party": "KM",
+      "votes": 6232
+     },
+     {
+      "name": "Md. Jamal Hossain",
+      "party": "JP(ERSHAD)",
+      "votes": 981
+     }
+    ],
+    "turnout": 54.61,
+    "title": "General Election 2026: Barguna-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Barguna-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Barguna-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। বিজয়ীর নাম এই আসনের বর্তমান সংসদ সদস্য মোঃ অলি উল্লাহ-এর সঙ্গে মেলেনি; উপনির্বাচন হয়ে থাকতে পারে, অথবা তথ্যটি ভুল।"
+  },
+  {
+   "seatNo": 110,
+   "seat": "বরগুনা-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "নূরুল ইসলাম মনি",
+      "party": "BNP",
+      "votes": 90643
+     },
+     {
+      "name": "Sultan Ahmad",
+      "party": "BJEI",
+      "votes": 85247
+     },
+     {
+      "name": "Mizanur Rahman",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 16463
+     }
+    ],
+    "turnout": 58.66,
+    "title": "General Election 2026: Barguna-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Barguna-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Barguna-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 111,
+   "seat": "পটুয়াখালি-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "আলতাফ হোসেন চৌধুরী",
+      "party": "BNP",
+      "votes": 152087
+     },
+     {
+      "name": "Md Firoz Alam",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 58161
+     },
+     {
+      "name": "Md Abdul Wahab",
+      "party": "Amar Bangladesh Party",
+      "votes": 46310
+     },
+     {
+      "name": "Gautam Chandra Shil",
+      "party": "Bangladesh Jatiya Samajtantrik Dal",
+      "votes": 1334
+     },
+     {
+      "name": "A Manna Hawlader",
+      "party": "JP(ERSHAD)",
+      "votes": 1055
+     },
+     {
+      "name": "Md. Shahidul",
+      "party": "Gono Odhikar Parishad",
+      "votes": 347
+     }
+    ],
+    "turnout": 51.3,
+    "title": "General election 2026: Patuakhali-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Patuakhali-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Patuakhali-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 112,
+   "seat": "পটুয়াখালি-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ শফিকুল ইসলাম",
+      "party": "BJEI",
+      "votes": 100750
+     },
+     {
+      "name": "Shahidul Alam Talukder",
+      "party": "BNP",
+      "votes": 72676
+     },
+     {
+      "name": "Malek Hossein",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 14418
+     }
+    ],
+    "turnout": 61.01,
+    "title": "General Election 2026: Patuakhali-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Patuakhali-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Patuakhali-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 115,
+   "seat": "ভোলা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "আন্দালিভ রহমান",
+      "party": "BJP",
+      "votes": 105543
+     },
+     {
+      "name": "Md. Nazrul Islam",
+      "party": "BJEI",
+      "votes": 75337
+     },
+     {
+      "name": "Obaidur Rahman",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 25245
+     }
+    ],
+    "turnout": 52.43,
+    "title": "General Election 2026: Bhola-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bhola-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bhola-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 116,
+   "seat": "ভোলা-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ হাফিজ ইব্রাহিম",
+      "party": "BNP",
+      "votes": 119085
+     },
+     {
+      "name": "Mohammad Fazlul Karim",
+      "party": "BJEI",
+      "votes": 93703
+     }
+    ],
+    "turnout": 55.24,
+    "title": "General election 2026: Bhola-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bhola-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bhola-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 117,
+   "seat": "ভোলা-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "হাফিজ উদ্দিন আহমদ বীর বিক্রম",
+      "party": "BNP",
+      "votes": 145990
+     },
+     {
+      "name": "Md. Nizamul Haque",
+      "party": "Bangladesh Development Party",
+      "votes": 57351
+     }
+    ],
+    "turnout": 55.5,
+    "title": "General election 2026: Bhola-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bhola-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bhola-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 118,
+   "seat": "ভোলা-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ নূরুল ইসলাম",
+      "party": "BNP",
+      "votes": 189351
+     },
+     {
+      "name": "Mohammad Mustafa Kamal",
+      "party": "BJEI",
+      "votes": 81437
+     }
+    ],
+    "turnout": 59.91,
+    "title": "General election 2026: Bhola-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Bhola-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Bhola-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 123,
+   "seat": "বরিশাল-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মজিবর রহমান সরওয়ার",
+      "party": "BNP",
+      "votes": 135146
+     },
+     {
+      "name": "সৈয়দ ফয়জুল করিম",
+      "party": "আইএবি",
+      "votes": 95044
+     },
+     {
+      "name": "মনীষা চক্রবর্তী",
+      "party": "বাসদ",
+      "votes": 22486
+     },
+     {
+      "name": "আখতার রহমান",
+      "party": "জাপা",
+      "votes": 909
+     },
+     {
+      "name": "আবদুল হান্নাহ শিকদার",
+      "party": "ন্যাশনাল পিপলস পার্টি",
+      "votes": 494
+     }
+    ],
+    "turnout": 50.68,
+    "title": "সাধারণ নির্বাচন ২০২৬: Barisal-5"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%B0%E0%A6%BF%E0%A6%B6%E0%A6%BE%E0%A6%B2-%E0%A7%AB",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «বরিশাল-৫», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 124,
+   "seat": "বরিশাল-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "আবুল হোসেন খান",
+      "party": "BNP",
+      "votes": 82217
+     },
+     {
+      "name": "মোঃ মাহমুদুন্নবী",
+      "party": "BJEI",
+      "votes": 55988
+     },
+     {
+      "name": "সৈয়দ ফয়জুল করিম",
+      "party": "IMB",
+      "votes": 29146
+     }
+    ],
+    "turnout": 54.23,
+    "title": "সাধারণ নির্বাচন ২০২৬: বরিশাল-৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%B0%E0%A6%BF%E0%A6%B6%E0%A6%BE%E0%A6%B2-%E0%A7%AC",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «বরিশাল-৬», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 125,
+   "seat": "ঝালকাঠি-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "রফিকুল ইসলাম জামাল",
+      "party": "BNP",
+      "votes": 62010
+     },
+     {
+      "name": "ফয়জুল হক",
+      "party": "BJEI",
+      "votes": 55120
+     },
+     {
+      "name": "ইবরাহিম",
+      "party": "আইএবি",
+      "votes": 7744
+     }
+    ],
+    "turnout": 57.61,
+    "title": "সাধারণ নির্বাচন ২০২৬: ঝালকাঠি-১"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%9D%E0%A6%BE%E0%A6%B2%E0%A6%95%E0%A6%BE%E0%A6%A0%E0%A6%BF-%E0%A7%A7",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ঝালকাঠি-১», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 126,
+   "seat": "ঝালকাঠি-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "ইসরাত সুলতানা ইলেন ভূট্টো",
+      "party": "BNP",
+      "votes": 113419
+     },
+     {
+      "name": "এস এম নেয়ামুল করিম",
+      "party": "BJEI",
+      "votes": 70756
+     },
+     {
+      "name": "সিরাজুল ইসলাম সিরাজী",
+      "party": "IMB",
+      "votes": 24543
+     }
+    ],
+    "turnout": 59.12,
+    "title": "সাধারণ নির্বাচন ২০২৬: ঝালকাঠি-২"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%9D%E0%A6%BE%E0%A6%B2%E0%A6%95%E0%A6%BE%E0%A6%A0%E0%A6%BF-%E0%A7%A8",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ঝালকাঠি-২», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 127,
+   "seat": "পিরোজপুর-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মাসুদ সাঈদী",
+      "party": "BJEI",
+      "votes": 132659
+     },
+     {
+      "name": "Alamgir Hossain",
+      "party": "BNP",
+      "votes": 107105
+     }
+    ],
+    "turnout": 61.1,
+    "title": "General Election 2026: Pirojpur-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Pirojpur-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Pirojpur-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 128,
+   "seat": "পিরোজপুর-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "আহম্মদ সোহেল মনজুর",
+      "party": "BNP",
+      "votes": 105185
+     },
+     {
+      "name": "Shameem Sayedee",
+      "party": "BJEI",
+      "votes": 96897
+     },
+     {
+      "name": "Mahmud Hossain",
+      "party": "INDEPENDENT",
+      "votes": 16219
+     },
+     {
+      "name": "Md. Abul Kalam Azad",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 6697
+     },
+     {
+      "name": "Md. Mahibul Hossain",
+      "party": "JP(ERSHAD)",
+      "votes": 4705
+     },
+     {
+      "name": "Faisal Khan",
+      "party": "Amar Bangladesh Party",
+      "votes": 390
+     },
+     {
+      "name": "Md. Anisur Rahman",
+      "party": "Gono Odhikar Parishad",
+      "votes": 145
+     }
+    ],
+    "turnout": 56.21,
+    "title": "General Election 2026: Pirojpur-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Pirojpur-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Pirojpur-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 129,
+   "seat": "পিরোজপুর-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ রুহুল আমীন দুলাল",
+      "party": "BNP",
+      "votes": 63791
+     },
+     {
+      "name": "Md. Shamim Hamidi",
+      "party": "NCP",
+      "votes": 36616
+     },
+     {
+      "name": "Md. Rustum Ali Faraji",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 35968
+     },
+     {
+      "name": "Tauhiduzzaman",
+      "party": "INDEPENDENT",
+      "votes": 231
+     },
+     {
+      "name": "Karim Sikdar",
+      "party": "JSD",
+      "votes": 212
+     },
+     {
+      "name": "Md. Mashreful Azam",
+      "party": "JP(ERSHAD)",
+      "votes": 169
+     }
+    ],
+    "turnout": 56.8,
+    "title": "General Election 2026: Pirojpur-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Pirojpur-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Pirojpur-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 137,
+   "seat": "টাঙ্গাইল-৮",
+   "result": {
+    "candidates": [
+     {
+      "name": "আহমেদ আযম খান",
+      "party": "BNP",
+      "votes": 52734
+     },
+     {
+      "name": "শফিকুল ইসলাম খান",
+      "party": "BJEI",
+      "votes": 23205
+     },
+     {
+      "name": "সালাউদ্দিন আলমগীর",
+      "party": "Ind",
+      "votes": 19073
+     },
+     {
+      "name": "নাজমুল হাসান",
+      "party": "JP(NA-FI)",
+      "votes": 221
+     },
+     {
+      "name": "আলমগীর হোসেন",
+      "party": "আমজনতার দল",
+      "votes": 116
+     },
+     {
+      "name": "আওয়াল মাহমুদ",
+      "party": "বাংলাদেশের বিপ্লবী ওয়ার্কার্স পার্টি",
+      "votes": 82
+     }
+    ],
+    "turnout": 88.8,
+    "title": "ত্রয়োদশ জাতীয় সংসদ নির্বাচন, ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%9F%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A6%BE%E0%A6%87%E0%A6%B2-%E0%A7%AE",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «টাঙ্গাইল-৮», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 138,
+   "seat": "জামালপুর-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "এম রশিদুজ্জামান মিল্লাত",
+      "party": "BNP",
+      "votes": 173656
+     },
+     {
+      "name": "Nazmul Haque Saeedi",
+      "party": "BJEI",
+      "votes": 97820
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Jamalpur-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Jamalpur-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Jamalpur-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 145,
+   "seat": "শেরপুর-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মাহমুদুল হক রুবেল",
+      "party": "BNP",
+      "votes": 166117
+     },
+     {
+      "name": "Masudur Rahman",
+      "party": "BJEI",
+      "votes": 47051
+     },
+     {
+      "name": "Mizanur Rahman",
+      "party": "Socialist Party of Bangladesh (Marxist)",
+      "votes": 480
+     }
+    ],
+    "turnout": 52.19,
+    "title": "General Election 2026: Sherpur-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sherpur-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Sherpur-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 146,
+   "seat": "ময়মনসিংহ-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ সালমান ওমর",
+      "party": "Ind",
+      "votes": 108265
+     },
+     {
+      "name": "সৈয়দ ইমরান সালেহ",
+      "party": "BNP",
+      "votes": 101926
+     },
+     {
+      "name": "মোঃ তাজুল ইসলাম",
+      "party": "BKM",
+      "votes": 53222
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%A7",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-১», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 147,
+   "seat": "ময়মনসিংহ-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "শরীফ আহমেদ",
+      "party": "BAL(MALEK)",
+      "votes": 260431
+     },
+     {
+      "name": "মুহাম্মদুল্লাহ (মুফতি)",
+      "party": "BKM",
+      "votes": 146202
+     },
+     {
+      "name": "মোতাহার হোসেন তালুকদার",
+      "party": "BNP",
+      "votes": 118438
+     },
+     {
+      "name": "শাহ শহীদ সরওয়ার",
+      "party": "Ind",
+      "votes": 48874
+     },
+     {
+      "name": "শাহ শহীদ সরওয়ার",
+      "party": "Ind",
+      "votes": 12015
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%A8",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-২», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। বিজয়ীর নাম এই আসনের বর্তমান সংসদ সদস্য মুহাম্মদুল্লাহ-এর সঙ্গে মেলেনি; উপনির্বাচন হয়ে থাকতে পারে, অথবা তথ্যটি ভুল।"
+  },
+  {
+   "seatNo": 148,
+   "seat": "ময়মনসিংহ-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "এম ইকবাল হোসেইন",
+      "party": "BNP",
+      "votes": 75320
+     },
+     {
+      "name": "আহমেদ তায়েবুর রহমান",
+      "party": "Ind",
+      "votes": 65995
+     },
+     {
+      "name": "মোঃ আবু তাহের খান",
+      "party": "বাংলাদেশ নেজামে ইসলাম পার্টি",
+      "votes": 25706
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%A9",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-৩», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 149,
+   "seat": "ময়মনসিংহ-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আবু ওয়াহাব আকন্দ ওয়াহিদ",
+      "party": "BNP",
+      "votes": 179688
+     },
+     {
+      "name": "কামরুল হাসান এমরুল",
+      "party": "BJEI",
+      "votes": 171880
+     },
+     {
+      "name": "মোঃ নাসির উদ্দিন",
+      "party": "IMB",
+      "votes": 8701
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%AA",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-৪», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 150,
+   "seat": "ময়মনসিংহ-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ জাকির হোসেন",
+      "party": "BNP",
+      "votes": 128898
+     },
+     {
+      "name": "মোঃ মতিউর রহমান আকন্দ",
+      "party": "BJEI",
+      "votes": 102228
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%AB",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-৫», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 152,
+   "seat": "ময়মনসিংহ-৭",
+   "result": {
+    "candidates": [
+     {
+      "name": "ডাঃ মোঃ মাহাবুবুর রহমান",
+      "party": "BNP",
+      "votes": 98579
+     },
+     {
+      "name": "মোঃ আছাদুজ্জামান",
+      "party": "BJEI",
+      "votes": 82962
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%AD",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-৭», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 153,
+   "seat": "ময়মনসিংহ-৮",
+   "result": {
+    "candidates": [
+     {
+      "name": "লুৎফুল্লাহেল মাজেদ",
+      "party": "BNP",
+      "votes": 107577
+     },
+     {
+      "name": "আওরঙ্গজেব বেলাল",
+      "party": "লিবারেল ডেমোক্রেটিক পার্টি - এলডিপি",
+      "votes": 45791
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%AE",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-৮», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। ইংরেজি উইকিপিডিয়ায় বিজয়ীর ভোট 108685, বাংলায় 107577।"
+  },
+  {
+   "seatNo": 154,
+   "seat": "ময়মনসিংহ-৯",
+   "result": {
+    "candidates": [
+     {
+      "name": "ইয়াসের খান চৌধুরী",
+      "party": "BNP",
+      "votes": 85761
+     },
+     {
+      "name": "AKM Anwarul Islam Chan",
+      "party": "Bangladesh Development Party",
+      "votes": 71168
+     }
+    ],
+    "turnout": 51.06,
+    "title": "General election 2026: Mymensingh-9"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Mymensingh-9",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Mymensingh-9», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 155,
+   "seat": "ময়মনসিংহ-১০",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ আক্তারুজ্জামান",
+      "party": "BNP",
+      "votes": 74638
+     },
+     {
+      "name": "আবু বকর সিদ্দিকুর রহমান",
+      "party": "Ind",
+      "votes": 66424
+     },
+     {
+      "name": "মাওলানা ইসমাঈল হোসেন সোহেল",
+      "party": "BJEI",
+      "votes": 64169
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%9F%E0%A6%AE%E0%A6%A8%E0%A6%B8%E0%A6%BF%E0%A6%82%E0%A6%B9-%E0%A7%A7%E0%A7%A6",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «ময়মনসিংহ-১০», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 159,
+   "seat": "নেত্রকোনা-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "রফিকুল ইসলাম হিলালী",
+      "party": "BNP",
+      "votes": 118469
+     },
+     {
+      "name": "দেলোয়ার হোসেন ভূইয়া দুলাল",
+      "party": "Ind",
+      "votes": 68961
+     },
+     {
+      "name": "অধ্যাপক খাইরুল কবীর নিয়োগী",
+      "party": "BJEI",
+      "votes": 41556
+     },
+     {
+      "name": "জাকির হোসেন",
+      "party": "ইসলামী আন্দোলন",
+      "votes": 2760
+     },
+     {
+      "name": "আবুল হোসেন তালুকদার",
+      "party": "JP(NA-FI)",
+      "votes": 578
+     },
+     {
+      "name": "শামছুজ্জুহা",
+      "party": "ইসলামী ফ্রন্ট বাংলাদেশ",
+      "votes": 358
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন ২০২৬: নেত্রকোণা-৩"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%87%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%95%E0%A7%8B%E0%A6%A3%E0%A6%BE-%E0%A7%A9",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «নেত্রকোণা-৩», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 160,
+   "seat": "নেত্রকোনা-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ লুৎফুজ্জামান বাবর",
+      "party": "BNP",
+      "votes": 160801
+     },
+     {
+      "name": "Md. Al Helal Talukder",
+      "party": "BJEI",
+      "votes": 39840
+     }
+    ],
+    "turnout": 55.92,
+    "title": "General election 2026: Netrokona-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Netrokona-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Netrokona-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 161,
+   "seat": "নেত্রকোনা-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মাছুম মোস্তফা",
+      "party": "BJEI",
+      "votes": 82117
+     },
+     {
+      "name": "Abu Taher Talukder",
+      "party": "BNP",
+      "votes": 79412
+     }
+    ],
+    "turnout": 57.52,
+    "title": "General Election 2026: Netrokona-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Netrokona-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Netrokona-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 168,
+   "seat": "মানিকগঞ্জ-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "এস এ জিন্নাহ কবীর",
+      "party": "BNP",
+      "votes": 137776
+     },
+     {
+      "name": "Md. Tozammel Haque",
+      "party": "INDEPENDENT",
+      "votes": 77818
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Manikganj-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Manikganj-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Manikganj-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 170,
+   "seat": "মানিকগঞ্জ-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "আফরোজা খানম",
+      "party": "BNP",
+      "votes": 166175
+     },
+     {
+      "name": "Md Sayid Nur",
+      "party": "BKM",
+      "votes": 62916
+     },
+     {
+      "name": "Ataur Rahman Ata",
+      "party": "INDEPENDENT",
+      "votes": 20375
+     },
+     {
+      "name": "Rafikul Islam Khan",
+      "party": "INDEPENDENT",
+      "votes": 3552
+     },
+     {
+      "name": "Shahjahan Ali Shazu",
+      "party": "JSD",
+      "votes": 3491
+     },
+     {
+      "name": "Shamsuddin Ahmed",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 2768
+     },
+     {
+      "name": "Abul Bashar Badshah",
+      "party": "JP(ERSHAD)",
+      "votes": 1942
+     },
+     {
+      "name": "Moazzem Hossain Khan",
+      "party": "INDEPENDENT",
+      "votes": 1321
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Manikganj-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Manikganj-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Manikganj-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 172,
+   "seat": "মুন্সিগঞ্জ-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "আব্দুস সালাম আজাদ",
+      "party": "BNP",
+      "votes": 121154
+     },
+     {
+      "name": "Majedul Islam",
+      "party": "NCP",
+      "votes": 58573
+     },
+     {
+      "name": "K M Billal",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 13367
+     },
+     {
+      "name": "Md Noman Mia",
+      "party": "JP(ERSHAD)",
+      "votes": 2857
+     },
+     {
+      "name": "Ashiq Mahmud",
+      "party": "Islamic Front Bangladesh",
+      "votes": 651
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Munshiganj-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Munshiganj-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 174,
+   "seat": "ঢাকা-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "খোন্দকার আবু আশফাক",
+      "party": "BNP",
+      "votes": 173781
+     },
+     {
+      "name": "Mohammad Najrul Islam",
+      "party": "BJEI",
+      "votes": 112622
+     },
+     {
+      "name": "Antora Salima Huda",
+      "party": "Ind",
+      "votes": 4880
+     },
+     {
+      "name": "Md. Nasir Uddin Molla",
+      "party": "JP(ERSHAD)",
+      "votes": 1362
+     },
+     {
+      "name": "Nurul Islam",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 600
+     },
+     {
+      "name": "Shek Md. Ali",
+      "party": "Bangladesh Labour Party",
+      "votes": 273
+     }
+    ],
+    "turnout": 54.95,
+    "title": "General election 2026: Dhaka-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 175,
+   "seat": "ঢাকা-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আমানউল্লাহ আমান",
+      "party": "BNP",
+      "votes": 163020
+     },
+     {
+      "name": "Md. Abdul Haq",
+      "party": "BJEI",
+      "votes": 78655
+     },
+     {
+      "name": "Md. Johirul Islam",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 12249
+     }
+    ],
+    "turnout": 60.57,
+    "title": "General election 2026: Dhaka-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 176,
+   "seat": "ঢাকা-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "গয়েশ্বর চন্দ্র রায়",
+      "party": "BNP",
+      "votes": 99163
+     },
+     {
+      "name": "Md. Shahinur Islam",
+      "party": "BJEI",
+      "votes": 83264
+     },
+     {
+      "name": "Md. Sultan Ahmad Khan",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 6286
+     }
+    ],
+    "turnout": 53.38,
+    "title": "General election 2026: Dhaka-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 177,
+   "seat": "ঢাকা-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "সৈয়দ জয়নুল আবেদীন",
+      "party": "BJEI",
+      "votes": 77367
+     },
+     {
+      "name": "Tanvir Ahmed",
+      "party": "BNP",
+      "votes": 74447
+     },
+     {
+      "name": "Syed Md. Mosaddeq Billah",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 6518
+     },
+     {
+      "name": "Md. Mizanur Rahman",
+      "party": "INDEPENDENT",
+      "votes": 2867
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Dhaka-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 178,
+   "seat": "ঢাকা-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ কামাল হোসেন",
+      "party": "BJEI",
+      "votes": 96641
+     },
+     {
+      "name": "Md. Nabi Ulla",
+      "party": "BNP",
+      "votes": 87491
+     },
+     {
+      "name": "Md. Ibrahim",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 14206
+     },
+     {
+      "name": "Mir Abdus Sobur",
+      "party": "JP(ERSHAD)",
+      "votes": 1346
+     }
+    ],
+    "turnout": 48,
+    "title": "General election 2026: Dhaka-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 179,
+   "seat": "ঢাকা-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "ইশরাক হোসেন",
+      "party": "BNP",
+      "votes": 78850
+     },
+     {
+      "name": "Md. Abdul Mannan",
+      "party": "BJEI",
+      "votes": 55697
+     },
+     {
+      "name": "Amir Uddin Ahammed",
+      "party": "JP(ERSHAD)",
+      "votes": 1778
+     },
+     {
+      "name": "Md. Younus Ali Akando",
+      "party": "Bangladesh Congress",
+      "votes": 319
+     },
+     {
+      "name": "Md. Akter Hossen",
+      "party": "Bangladesh Muslim League",
+      "votes": 245
+     },
+     {
+      "name": "Ahammad Ali Shek",
+      "party": "Gano Front",
+      "votes": 152
+     },
+     {
+      "name": "Md. Fakrul Islam",
+      "party": "Gono Odhikar Parishad",
+      "votes": 138
+     }
+    ],
+    "turnout": 46.9,
+    "title": "General election 2026: Dhaka-6"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-6",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-6», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 180,
+   "seat": "ঢাকা-৭",
+   "result": {
+    "candidates": [
+     {
+      "name": "হামিদুর রহমান",
+      "party": "BNP",
+      "votes": 104666
+     },
+     {
+      "name": "Hafez Enayet Ullah",
+      "party": "BJEI",
+      "votes": 98483
+     },
+     {
+      "name": "Mohammad Ishak Sarkar",
+      "party": "Ind",
+      "votes": 11517
+     },
+     {
+      "name": "Md. Abdur Rahman",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 5081
+     },
+     {
+      "name": "Mufti Habibullah Miyaji",
+      "party": "Bangladesh Khilafat Andolan",
+      "votes": 2783
+     },
+     {
+      "name": "Mohammad Saifuddin Ahomed Milon",
+      "party": "JP(ERSHAD)",
+      "votes": 2294
+     },
+     {
+      "name": "Shima Datta",
+      "party": "Socialist Party of Bangladesh (Marxist)",
+      "votes": 677
+     },
+     {
+      "name": "Sahana Selim",
+      "party": "JSD",
+      "votes": 208
+     },
+     {
+      "name": "Maksudur Rahman",
+      "party": "Bangladesh Sangskritik Muktijote",
+      "votes": 150
+     },
+     {
+      "name": "Md. Sohidul Islam",
+      "party": "BJP",
+      "votes": 98
+     }
+    ],
+    "turnout": 47.7,
+    "title": "General election 2026: Dhaka-7"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-7",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-7», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 181,
+   "seat": "ঢাকা-৮",
+   "result": {
+    "candidates": [
+     {
+      "name": "মির্জা আব্বাস উদ্দিন আহমেদ",
+      "party": "BNP",
+      "votes": 59366
+     },
+     {
+      "name": "Nasiruddin Patwary",
+      "party": "NCP",
+      "votes": 54127
+     },
+     {
+      "name": "Kefayet Ullah",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 1436
+     },
+     {
+      "name": "Meghna Alam",
+      "party": "Gono Odhikar Parishad",
+      "votes": 608
+     }
+    ],
+    "turnout": 43.7,
+    "title": "General election 2026: Dhaka-8"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-8",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-8», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 182,
+   "seat": "ঢাকা-৯",
+   "result": {
+    "candidates": [
+     {
+      "name": "হাবিবুর রশিদ",
+      "party": "BNP",
+      "votes": 111212
+     },
+     {
+      "name": "Mohammad Jabed Miah",
+      "party": "NCP",
+      "votes": 53460
+     },
+     {
+      "name": "Tasnim Jara",
+      "party": "Ind",
+      "votes": 44684
+     },
+     {
+      "name": "Shah Iftekhar Ahsan",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 5827
+     }
+    ],
+    "turnout": 47.2,
+    "title": "General election 2026: Dhaka-9"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-9",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-9», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 183,
+   "seat": "ঢাকা-১০",
+   "result": {
+    "candidates": [
+     {
+      "name": "শেখ রবিউল আলম",
+      "party": "BNP",
+      "votes": 80436
+     },
+     {
+      "name": "Md Jashim Uddin Sarkar",
+      "party": "BJEI",
+      "votes": 77136
+     }
+    ],
+    "turnout": 42.3,
+    "title": "General election 2026: Dhaka-10"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-10",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-10», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 184,
+   "seat": "ঢাকা-১১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ নাহিদ ইসলাম",
+      "party": "NCP",
+      "votes": 93872
+     },
+     {
+      "name": "M A Quayum",
+      "party": "BNP",
+      "votes": 91833
+     },
+     {
+      "name": "Sheikh Md. Fazle Bari Masud",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 4375
+     }
+    ],
+    "turnout": 44.7,
+    "title": "General election 2026: Dhaka-11"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-11",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-11», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 185,
+   "seat": "ঢাকা-১২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ সাইফুল আলম",
+      "party": "BJEI",
+      "votes": 53773
+     },
+     {
+      "name": "Saiful Haque",
+      "party": "Revolutionary Workers Party of Bangladesh",
+      "votes": 30963
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Dhaka-12"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-12",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-12», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 186,
+   "seat": "ঢাকা-১৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "ববি হাজ্জাজ",
+      "party": "BNP",
+      "votes": 88387
+     },
+     {
+      "name": "Mamunul Haque",
+      "party": "BKM",
+      "votes": 86067
+     },
+     {
+      "name": "Sheikh Md. Rabiul Islam",
+      "party": "INDEPENDENT",
+      "votes": 972
+     },
+     {
+      "name": "Sohel Rana",
+      "party": "INDEPENDENT",
+      "votes": 711
+     },
+     {
+      "name": "Fatema Akter Munia",
+      "party": "Insaniyat Biplob Bangladesh",
+      "votes": 513
+     },
+     {
+      "name": "Md. Khalekuzzaman",
+      "party": "Socialist Party of Bangladesh",
+      "votes": 486
+     },
+     {
+      "name": "Shahriar Iftekhar",
+      "party": "Bangladesh Muslim League",
+      "votes": 464
+     },
+     {
+      "name": "Mizanur Rahman",
+      "party": "Gono Odhikar Parishad",
+      "votes": 336
+     },
+     {
+      "name": "Md. Shahabuddin",
+      "party": "Bangladesh Minority Janata Party",
+      "votes": 331
+     }
+    ],
+    "turnout": 43.7,
+    "title": "General Election 2026: Dhaka-13"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-13",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-13», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 187,
+   "seat": "ঢাকা-১৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মীর আহমাদ বিনকাসেম",
+      "party": "BJEI",
+      "votes": 101113
+     },
+     {
+      "name": "Sanjida Islam Tulee",
+      "party": "BNP",
+      "votes": 83323
+     },
+     {
+      "name": "Syed Abu Bokor Siddique",
+      "party": "INDEPENDENT",
+      "votes": 16328
+     },
+     {
+      "name": "Muhammad Abu Yusuf",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 3760
+     }
+    ],
+    "turnout": 45.36,
+    "title": "General election 2026: Dhaka-14"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-14",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-14», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 188,
+   "seat": "ঢাকা-১৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "ডাঃ মোঃ শফিকুর রহমান",
+      "party": "BJEI",
+      "votes": 85131
+     },
+     {
+      "name": "Shafiqul Islam Khan Milton",
+      "party": "BNP",
+      "votes": 63517
+     },
+     {
+      "name": "Md. Shamsul Haque",
+      "party": "JP(ERSHAD)",
+      "votes": 1421
+     }
+    ],
+    "turnout": 45.63,
+    "title": "General election 2026: Dhaka-15"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-15",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-15», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 189,
+   "seat": "ঢাকা-১৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আব্দুল বাতেন",
+      "party": "BJEI",
+      "votes": 88828
+     },
+     {
+      "name": "Aminul Haque",
+      "party": "BNP",
+      "votes": 85467
+     },
+     {
+      "name": "Md. Saiful Islam",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 3679
+     }
+    ],
+    "turnout": 45.38,
+    "title": "General election 2026: Dhaka-16"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-16",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-16», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 190,
+   "seat": "ঢাকা-১৭",
+   "result": {
+    "candidates": [
+     {
+      "name": "তারেক রহমান",
+      "party": "BNP",
+      "votes": 72699
+     },
+     {
+      "name": "S. M. Khaliduzzaman",
+      "party": "BJEI",
+      "votes": 68300
+     },
+     {
+      "name": "Mohammad Ullah",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 1768
+     },
+     {
+      "name": "Atiq Ahmed",
+      "party": "JP(ERSHAD)",
+      "votes": 1168
+     }
+    ],
+    "turnout": 44.31,
+    "title": "General election 2026: Dhaka-17"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-17",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-17», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 191,
+   "seat": "ঢাকা-১৮",
+   "result": {
+    "candidates": [
+     {
+      "name": "এস, এম, জাহাঙ্গীর হোসেন",
+      "party": "BNP",
+      "votes": 144715
+     },
+     {
+      "name": "Ariful Islam",
+      "party": "NCP",
+      "votes": 111297
+     },
+     {
+      "name": "Md. Anwar Hossain",
+      "party": "Islami Andolan Bangladesh",
+      "votes": 4727
+     },
+     {
+      "name": "Md. Mohiuddin Howladar",
+      "party": "INDEPENDENT",
+      "votes": 3205
+     },
+     {
+      "name": "Md. Zakir Hossain",
+      "party": "JP(ERSHAD)",
+      "votes": 2557
+     }
+    ],
+    "turnout": 44.76,
+    "title": "General election 2026: Dhaka-18"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-18",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-18», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 192,
+   "seat": "ঢাকা-১৯",
+   "result": {
+    "candidates": [
+     {
+      "name": "দেওয়ান মোহাম্মদ সালাউদ্দিন",
+      "party": "BNP",
+      "votes": 192583
+     },
+     {
+      "name": "Dilshana Parul",
+      "party": "NCP",
+      "votes": 126872
+     }
+    ],
+    "turnout": 45.12,
+    "title": "General election 2026: Dhaka-19"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-19",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-19», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 193,
+   "seat": "ঢাকা-২০",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ তমিজ উদ্দিন",
+      "party": "BNP",
+      "votes": 160428
+     },
+     {
+      "name": "Nabila Tasnid",
+      "party": "NCP",
+      "votes": 56343
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Dhaka-20"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Dhaka-20",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Dhaka-20», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 194,
+   "seat": "গাজীপুর-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ মজিবুর রহমান",
+      "party": "BNP",
+      "votes": 207702
+     },
+     {
+      "name": "মোঃ শাহ্‌ আলম বকশী",
+      "party": "BJEI",
+      "votes": 147790
+     },
+     {
+      "name": "মোঃ ইমারাত হোসেইন খান",
+      "party": "Ind",
+      "votes": 6589
+     },
+     {
+      "name": "মাওলানা জিএম রুহুল আমীন",
+      "party": "IMB",
+      "votes": 5752
+     },
+     {
+      "name": "এস, এম, শফিকুল ইসলাম",
+      "party": "JP(NA-FI)",
+      "votes": 3271
+     },
+     {
+      "name": "তসলিমা আক্তার",
+      "party": "বাংলাদেশের সমাজতান্ত্রিক দল",
+      "votes": 240
+     },
+     {
+      "name": "চৌধুরী ইরাদ আহমদ সিদ্দিকী",
+      "party": "বাংলাদেশ লেবার পার্টি",
+      "votes": 186
+     },
+     {
+      "name": "আতিকুল ইসলাম",
+      "party": "জাতীয় গণ ফ্রন্ট",
+      "votes": 104
+     }
+    ],
+    "turnout": null,
+    "title": "সাধারণ নির্বাচন, ২০২৬: গাজীপুর-১"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A7%80%E0%A6%AA%E0%A7%81%E0%A6%B0-%E0%A7%A7",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «গাজীপুর-১», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। ইংরেজি উইকিপিডিয়ায় বিজয়ীর ভোট 208688, বাংলায় 207702।"
+  },
+  {
+   "seatNo": 195,
+   "seat": "গাজীপুর-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "এম মঞ্জুরুল করিম রনি",
+      "party": "BNP",
+      "votes": 188606
+     },
+     {
+      "name": "Ali Naser Khan",
+      "party": "NCP",
+      "votes": 140950
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gazipur-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gazipur-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gazipur-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 197,
+   "seat": "গাজীপুর-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "সালাহ উদ্দিন",
+      "party": "BJEI",
+      "votes": 96911
+     },
+     {
+      "name": "Shah Riyajul Hannan",
+      "party": "BNP",
+      "votes": 87505
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gazipur-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gazipur-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gazipur-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 198,
+   "seat": "গাজীপুর-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "এ, কে, এম, ফজলুল হক মিলন",
+      "party": "BNP",
+      "votes": 133869
+     },
+     {
+      "name": "Md. Khairul Hasan",
+      "party": "BJEI",
+      "votes": 78123
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Gazipur-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Gazipur-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Gazipur-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 199,
+   "seat": "নরসিংদী-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "খায়রুল কবির খোকন",
+      "party": "BNP",
+      "votes": 160676
+     },
+     {
+      "name": "Md. Ibrahim Bhuiyan",
+      "party": "BJEI",
+      "votes": 92930
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narsingdi-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narsingdi-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narsingdi-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 200,
+   "seat": "নরসিংদী-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "ড, আবদুল মঈন খান",
+      "party": "BNP",
+      "votes": 92352
+     },
+     {
+      "name": "Md. Amzad Hossain",
+      "party": "BJEI",
+      "votes": 51161
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narsingdi-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narsingdi-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narsingdi-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 201,
+   "seat": "নরসিংদী-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মনজুর এলাহী",
+      "party": "BNP",
+      "votes": 81415
+     },
+     {
+      "name": "Md. Arif-ul-Islam Mridha",
+      "party": "INDEPENDENT",
+      "votes": 45401
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narsingdi-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narsingdi-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narsingdi-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 202,
+   "seat": "নরসিংদী-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "সরদার মোঃ সাখাওয়াত হোসেন",
+      "party": "BNP",
+      "votes": 161912
+     },
+     {
+      "name": "Md. Jahangir Alam",
+      "party": "BJEI",
+      "votes": 76445
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narsingdi-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narsingdi-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narsingdi-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 204,
+   "seat": "নারায়ণগঞ্জ-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "মুস্তাফিজুর রহমান ভূঁইয়া",
+      "party": "BNP",
+      "votes": 156358
+     },
+     {
+      "name": "Md. Anwar Hossain Molla",
+      "party": "BJEI",
+      "votes": 91690
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narayanganj-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narayanganj-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narayanganj-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 205,
+   "seat": "নারায়ণগঞ্জ-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ নজরুল ইসলাম আজাদ",
+      "party": "BNP",
+      "votes": 125063
+     },
+     {
+      "name": "Md. Ilias Mollah",
+      "party": "BJEI",
+      "votes": 82687
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narayanganj-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narayanganj-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narayanganj-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 206,
+   "seat": "নারায়ণগঞ্জ-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "আজহারুল ইসলাম মান্নান",
+      "party": "BNP",
+      "votes": 155400
+     },
+     {
+      "name": "Md. Iqbal Hossain Bhuiyan",
+      "party": "BJEI",
+      "votes": 134918
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narayanganj-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narayanganj-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narayanganj-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 207,
+   "seat": "নারায়ণগঞ্জ-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "আব্দুল্লাহ আল আমিন",
+      "party": "NCP",
+      "votes": 106171
+     },
+     {
+      "name": "Monir Hossain",
+      "party": "Jamiat Ulema-e-Islam Bangladesh",
+      "votes": 80619
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narayanganj-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narayanganj-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narayanganj-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 208,
+   "seat": "নারায়ণগঞ্জ-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "আবুল কালাম",
+      "party": "BNP",
+      "votes": 114799
+     },
+     {
+      "name": "ABM Sirajul Mamun",
+      "party": "BKM",
+      "votes": 101196
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Narayanganj-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Narayanganj-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Narayanganj-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 212,
+   "seat": "ফরিদপুর-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "শামা ওবায়েদ ইসলাম",
+      "party": "BNP",
+      "votes": 120909
+     },
+     {
+      "name": "Shah Akram Ali",
+      "party": "BKM",
+      "votes": 87956
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Faridpur-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Faridpur-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Faridpur-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 225,
+   "seat": "সুনামগঞ্জ-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ নাছির চৌধুরী",
+      "party": "BNP",
+      "votes": 99522
+     },
+     {
+      "name": "Md Shishir Monir",
+      "party": "BJEI",
+      "votes": 63220
+     },
+     {
+      "name": "Niranjan Das",
+      "party": "CPB",
+      "votes": 1232
+     }
+    ],
+    "turnout": 54.73,
+    "title": "General election 2026: Sunamganj-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sunamganj-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Sunamganj-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 229,
+   "seat": "সিলেট-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "খন্দকার আবদুল মুক্তাদীর",
+      "party": "BNP",
+      "votes": 176936
+     },
+     {
+      "name": "Maulana Habibur Rahman",
+      "party": "BJEI",
+      "votes": 134983
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Sylhet-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sylhet-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Sylhet-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 231,
+   "seat": "সিলেট-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ আব্দুল মালিক",
+      "party": "BNP",
+      "votes": 115450
+     },
+     {
+      "name": "Musleh Uddin Raju",
+      "party": "BKM",
+      "votes": 73614
+     }
+    ],
+    "turnout": 48.26,
+    "title": "General election 2026: Sylhet-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sylhet-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Sylhet-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 232,
+   "seat": "সিলেট-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "আরিফুল হক চৌধুরী",
+      "party": "BNP",
+      "votes": 186846
+     },
+     {
+      "name": "Md. Joynal Abedin",
+      "party": "BJEI",
+      "votes": 71391
+     }
+    ],
+    "turnout": 52.17,
+    "title": "General election 2026: Sylhet-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sylhet-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Sylhet-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 233,
+   "seat": "সিলেট-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোহাম্মদ আবুল হাসান",
+      "party": "KM",
+      "votes": 79355
+     },
+     {
+      "name": "উবায়দুল্লাহ ফারুক",
+      "party": "জমিয়তে উলামায়ে ইসলাম বাংলাদেশ",
+      "votes": 69774
+     },
+     {
+      "name": "রশিদ (চাকসু মামুন)",
+      "party": "Ind",
+      "votes": 57251
+     }
+    ],
+    "turnout": 49.33,
+    "title": "সাধারণ নির্বাচন ২০২৬: সিলেট-৫"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BF%E0%A6%B2%E0%A7%87%E0%A6%9F-%E0%A7%AB",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «সিলেট-৫», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 234,
+   "seat": "সিলেট-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "এমরান আহমদ চৌধুরী",
+      "party": "BNP",
+      "votes": 109917
+     },
+     {
+      "name": "Mohammad Selim Uddin",
+      "party": "BJEI",
+      "votes": 101569
+     }
+    ],
+    "turnout": 46.72,
+    "title": "General election 2026: Sylhet-6"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Sylhet-6",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Sylhet-6», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 237,
+   "seat": "মৌলভীবাজার-৩",
+   "result": {
+    "candidates": [
+     {
+      "name": "নাসের রহমান",
+      "party": "BNP",
+      "votes": 156757
+     },
+     {
+      "name": "Md Abdul Mannan",
+      "party": "BJEI",
+      "votes": 77636
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Moulvibazar-3"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Moulvibazar-3",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Moulvibazar-3», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 242,
+   "seat": "হবিগঞ্জ-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "এস, এম, ফয়সল",
+      "party": "BNP",
+      "votes": 188072
+     },
+     {
+      "name": "Md. Gias Uddin",
+      "party": "BIF",
+      "votes": 84525
+     },
+     {
+      "name": "Ahmed Abdul Quader",
+      "party": "KM",
+      "votes": 26466
+     },
+     {
+      "name": "Md. Mizanur Rahman Chowdhury",
+      "party": "INDEPENDENT",
+      "votes": 652
+     },
+     {
+      "name": "Saleh Ahmed Sajan",
+      "party": "INDEPENDENT",
+      "votes": 619
+     },
+     {
+      "name": "Shah Md. Al Amin",
+      "party": "Bangladesh Muslim League",
+      "votes": 556
+     },
+     {
+      "name": "Md. Mujibur Rahman",
+      "party": "Socialist Party of Bangladesh",
+      "votes": 529
+     },
+     {
+      "name": "Md. Rashedul Islam Khokon",
+      "party": "Bangladesh Sangskritik Muktijote",
+      "votes": 484
+     },
+     {
+      "name": "Md. Rezaul Mostafa",
+      "party": "Insaniyat Biplob Bangladesh",
+      "votes": 484
+     }
+    ],
+    "turnout": 55.48,
+    "title": "General election 2026: Habiganj-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Habiganj-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Habiganj-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 247,
+   "seat": "ব্রাহ্মণবাড়িয়া-৫",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আবদুল মান্নান",
+      "party": "BNP",
+      "votes": 85769
+     },
+     {
+      "name": "Kazi Nazmul Hossain",
+      "party": "INDEPENDENT",
+      "votes": 84708
+     }
+    ],
+    "turnout": 54.78,
+    "title": "General Election 2026: Brahmanbaria-5"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Brahmanbaria-5",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Brahmanbaria-5», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 248,
+   "seat": "ব্রাহ্মণবাড়িয়া-৬",
+   "result": {
+    "candidates": [
+     {
+      "name": "Zonayed Saki",
+      "party": "Ganosanhati Andolan",
+      "votes": 95342
+     },
+     {
+      "name": "Md. Mohsin",
+      "party": "BJEI",
+      "votes": 39976
+     },
+     {
+      "name": "Md. Abu Naser",
+      "party": "BIF",
+      "votes": 2353
+     }
+    ],
+    "turnout": 52.83,
+    "title": "General Election 2026: Brahmanbaria-6"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Brahmanbaria-6",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Brahmanbaria-6», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। বিজয়ীর নাম এই আসনের বর্তমান সংসদ সদস্য মোঃ জোনায়েদ আব্দুর রহিম সাকি-এর সঙ্গে মেলেনি; উপনির্বাচন হয়ে থাকতে পারে, অথবা তথ্যটি ভুল।"
+  },
+  {
+   "seatNo": 252,
+   "seat": "কুমিল্লা-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "হাসনাত আবদুল্লাহ",
+      "party": "NCP",
+      "votes": 166583
+     },
+     {
+      "name": "মোঃ আঃ জসিম উদ্দিন",
+      "party": "GOP",
+      "votes": 49885
+     },
+     {
+      "name": "মোঃ আঃ করিম",
+      "party": "IMB",
+      "votes": 2232
+     }
+    ],
+    "turnout": 54.48,
+    "title": "সাধারণ নির্বাচন, ২০২৬: কুমিল্লা-৪"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A7%81%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE-%E0%A7%AA",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «কুমিল্লা-৪», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি। বিজয়ীর নাম এই আসনের বর্তমান সংসদ সদস্য মোঃ আবুল হাসনাত-এর সঙ্গে মেলেনি; উপনির্বাচন হয়ে থাকতে পারে, অথবা তথ্যটি ভুল।"
+  },
+  {
+   "seatNo": 260,
+   "seat": "চাঁদপুর-১",
+   "result": {
+    "candidates": [
+     {
+      "name": "আ ন ম এহছানুল হক মিলন",
+      "party": "BNP",
+      "votes": 133032
+     },
+     {
+      "name": "Abu Nohar Muhammad Makbul Ahmad",
+      "party": "BJEI",
+      "votes": 70368
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Chandpur-1"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Chandpur-1",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Chandpur-1», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 263,
+   "seat": "চাঁদপুর-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ আবদুল হান্নান",
+      "party": "Ind",
+      "votes": 73599
+     },
+     {
+      "name": "হারুনুর রশীদ",
+      "party": "BNP",
+      "votes": 67833
+     },
+     {
+      "name": "মোঃ বিল্লাল হোসেন মিয়াজি",
+      "party": "BJEI",
+      "votes": 62273
+     },
+     {
+      "name": "মকবুল হোসেন",
+      "party": "IMB",
+      "votes": 5141
+     },
+     {
+      "name": "মোঃ আব্দুল মালেক",
+      "party": "BIF",
+      "votes": 495
+     },
+     {
+      "name": "মাহমুদ আলম",
+      "party": "JP(NA-FI)",
+      "votes": 273
+     },
+     {
+      "name": "মোঃ মুনীর চৌধুরী",
+      "party": "GF",
+      "votes": 235
+     },
+     {
+      "name": "জাকির হোসেন",
+      "party": "Ind",
+      "votes": 184
+     }
+    ],
+    "turnout": 55.13,
+    "title": "সাধারণ নির্বাচন ২০২৬: চাঁদপুর-৪"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%9A%E0%A6%BE%E0%A6%81%E0%A6%A6%E0%A6%AA%E0%A7%81%E0%A6%B0-%E0%A7%AA",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «চাঁদপুর-৪», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 266,
+   "seat": "ফেনী-২",
+   "result": {
+    "candidates": [
+     {
+      "name": "জয়নাল আবদিন",
+      "party": "BNP",
+      "votes": 131210
+     },
+     {
+      "name": "Mohammad Mujibur Rahman Bhuiyan",
+      "party": "Amar Bangladesh Party",
+      "votes": 80058
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Feni-2"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Feni-2",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Feni-2», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 271,
+   "seat": "নোয়াখালী-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "মোঃ শাহজাহান",
+      "party": "BNP",
+      "votes": 219182
+     },
+     {
+      "name": "Md Isahak Khandakar",
+      "party": "BJEI",
+      "votes": 148989
+     }
+    ],
+    "turnout": null,
+    "title": "General election 2026: Noakhali-4"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Noakhali-4",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Noakhali-4», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 285,
+   "seat": "চট্টগ্রাম-৮",
+   "result": {
+    "candidates": [
+     {
+      "name": "এরশাদ উল্লাহ",
+      "party": "BNP",
+      "votes": 152969
+     },
+     {
+      "name": "Md. Abu Naser",
+      "party": "BJEI",
+      "votes": 53564
+     }
+    ],
+    "turnout": null,
+    "title": "General Election 2026: Chittagong-8"
+   },
+   "sourceUrl": "https://en.wikipedia.org/wiki/Chittagong-8",
+   "note": "উৎস: উইকিপিডিয়া (ইংরেজি), নিবন্ধ «Chittagong-8», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  },
+  {
+   "seatNo": 297,
+   "seat": "কক্সবাজার-৪",
+   "result": {
+    "candidates": [
+     {
+      "name": "শাহজাহান চৌধুরী",
+      "party": "BNP",
+      "votes": 123582
+     },
+     {
+      "name": "নুর আহমদ আনোয়ারী",
+      "party": "BJEI",
+      "votes": 122033
+     },
+     {
+      "name": "নুরুল হক",
+      "party": "IMB",
+      "votes": 4338
+     },
+     {
+      "name": "সাইফুদ্দীন খালেদ",
+      "party": "জাতীয়তাবাদী গণতান্ত্রিক আন্দোলন (বাংলাদেশ)",
+      "votes": 379
+     }
+    ],
+    "turnout": 67.94,
+    "title": "সাধারণ নির্বাচন ২০২৬: কক্সবাজার-৪"
+   },
+   "sourceUrl": "https://bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%AC%E0%A6%BE%E0%A6%9C%E0%A6%BE%E0%A6%B0-%E0%A7%AA",
+   "note": "উৎস: উইকিপিডিয়া (বাংলা), নিবন্ধ «কক্সবাজার-৪», 2026-09-11 তারিখে পড়া। নির্বাচন কমিশনের গেজেটের সঙ্গে মিলিয়ে দেখা হয়নি।"
+  }
+ ]
+}
