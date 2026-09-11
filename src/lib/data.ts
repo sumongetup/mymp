@@ -158,7 +158,6 @@ export interface NewsPost {
 /** Published news only. Written by the sync from the admin database; empty until one exists. */
 export const news = newsJson as NewsPost[];
 export const publishedNews = () => [...news].sort((a, b) => b.publishedOn.localeCompare(a.publishedOn));
-export const newsForMember = (id: string) => publishedNews().filter((n) => n.memberId === id);
 export const newsForSeat = (slug: string) => publishedNews().filter((n) => n.seatSlug === slug);
 export const meta = metaJson as {
   parliamentNo: number;

@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { bn, dateBn, initial, partyColor, getMemberById, type Member, type Party, type NewsPost } from '@/lib/data';
+import { bn, initial, partyColor, type Member, type Party } from '@/lib/data';
 import MemberPhoto from './MemberPhoto';
+import PartyBadge from './PartyBadge';
 import Icon from './Icon';
 import { siteUrl } from '@/lib/site';
 import { partyLogo } from '@/lib/partyLogos';
@@ -96,29 +97,7 @@ export function Stat({ label, value, note }: { label: string; value: string; not
  * earlier parliaments). Always a size-square box, so names in a list line up.
  */
 export function PartyDot({ abbr, size = 18 }: { abbr: string | null | undefined; size?: number }) {
-  const logo = partyLogo(abbr);
-  const box = { width: size, height: size };
-  if (logo) {
-    return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img src={logo.src} alt="" width={size} height={size} loading="lazy" decoding="async" className="shrink-0 object-contain" style={box} />
-    );
-  }
-  if (abbr === 'Ind') {
-    return (
-      <span aria-hidden="true" className="inline-grid place-items-center shrink-0 rounded-full text-white" style={{ ...box, background: partyColor(abbr) }}>
-        <svg viewBox="0 0 24 24" width={Math.round(size * 0.62)} height={Math.round(size * 0.62)} fill="currentColor">
-          <circle cx="12" cy="8" r="4" />
-          <path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z" />
-        </svg>
-      </span>
-    );
-  }
-  return (
-    <span aria-hidden="true" className="inline-grid place-items-center shrink-0" style={box}>
-      <span className="w-2.5 h-2.5 rounded-full" style={{ background: partyColor(abbr) }} />
-    </span>
-  );
+  return <PartyBadge abbr={abbr} color={partyColor(abbr)} size={size} />;
 }
 
 /** A party's logo on a white tile: the party list and the party's own page. */
@@ -293,26 +272,6 @@ export function CompositionBar({
         ))}
       </div>
     </div>
-  );
-}
-
-/** Headline, masthead, date and a link out. The article body is never reproduced. */
-export function NewsCard({ n }: { n: NewsPost }) {
-  const member = n.memberId ? getMemberById(n.memberId) : undefined;
-  return (
-    <a
-      href={n.sourceUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="reveal bg-surface border border-rule rounded-card shadow-card p-5 flex flex-col gap-2 hover:border-brand hover:shadow-lift hover:-translate-y-0.5 transition-all"
-    >
-      <span className="text-[13px] text-muted">{n.sourceName} · {dateBn(n.publishedOn)}</span>
-      <span className="display text-[17px] leading-snug">{n.titleBn}</span>
-      {n.excerptBn && <span className="text-[14px] text-inksoft leading-relaxed">{n.excerptBn}</span>}
-      <span className="flex items-center gap-2 text-[13px] font-semibold text-brand">
-        {member ? <><PartyDot abbr={member.party?.abbr} />{member.nameBn ?? member.nameEn}</> : n.seatSlug ? n.seatSlug : 'মূল সংবাদ পড়ুন ↗'}
-      </span>
-    </a>
   );
 }
 

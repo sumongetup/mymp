@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { members, parties, meta, bn, dateBn, statistics, districtOf, publishedNews, getMemberById } from '@/lib/data';
+import { members, parties, meta, bn, dateBn, statistics, districtOf, getMemberById } from '@/lib/data';
+import { allStories } from '@/lib/newsView';
 import { latestSession, latestSitting, sessionLabel, officers, memberNoticeCount, totalSittings, ROLE_LABELS, daysSince } from '@/lib/activity';
-import { Page, Card, MemberCard, CompositionBar, Empty, NewsCard, SectionHead, DocLink } from '@/components/ui';
+import { Page, Card, MemberCard, CompositionBar, Empty, SectionHead, DocLink } from '@/components/ui';
 import SiteSearch from '@/components/SiteSearch';
+import StoryCard from '@/components/StoryCard';
 import { RESERVED_HASH } from '@/lib/nav';
 import Icon from '@/components/Icon';
 import { siteUrl } from '@/lib/site';
@@ -31,7 +33,7 @@ const WEBSITE_LD = {
 
 export default function Home() {
   const stats = statistics();
-  const latestNews = publishedNews().slice(0, 3);
+  const latestNews = allStories().slice(0, 3);
   const session = latestSession();
   const sitting = latestSitting();
   const sittingAgo = daysSince(sitting?.date ?? null);
@@ -189,8 +191,8 @@ export default function Home() {
         <section className="pb-14 flex flex-col gap-5">
           <SectionHead title="সংবাদে সংসদ সদস্যরা" href="/songbad" linkLabel="সংবাদ" />
           {latestNews.length ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {latestNews.map((n) => <NewsCard key={n.id} n={n} />)}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
+              {latestNews.map((s) => <StoryCard key={s.id} s={s} />)}
             </div>
           ) : (
             <Empty

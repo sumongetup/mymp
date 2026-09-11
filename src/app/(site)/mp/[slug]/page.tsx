@@ -5,11 +5,13 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   members, allMembers, getMember, committeesOfMember, membersOfParty, districtOf,
-  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, newsForMember, partyColor,
+  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor,
 } from '@/lib/data';
+import { storiesForMember } from '@/lib/newsView';
+import StoryCard from '@/components/StoryCard';
 import { rolesOf, noticesForMember } from '@/lib/activity';
 import { priorTermsOf, parliamentLabel, parliamentOrdinal, resultForSeat, socialsOf, electionYear } from '@/lib/history';
-import { Page, Card, Breadcrumb, Empty, PartyDot, NewsCard, DocLink } from '@/components/ui';
+import { Page, Card, Breadcrumb, Empty, PartyDot, DocLink } from '@/components/ui';
 import { ResultCard, sourceOf } from '@/components/results';
 import { introOf } from '@/lib/intro';
 import MemberPhoto from '@/components/MemberPhoto';
@@ -65,7 +67,8 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   const age = ageFrom(m.dateOfBirth);
   const district = districtOf(m.seat);
   const onCommittees = committeesOfMember(m.id);
-  const memberNews = newsForMember(m.id);
+  // Same-story headlines from several outlets come folded into one story.
+  const memberStories = storiesForMember(m.slug);
   const notices = noticesForMember(m.id);
   const prior = priorTermsOf(m.id);
   const socials = socialsOf(m);
@@ -452,11 +455,22 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           </section>
 
           <section className="flex flex-col gap-4">
-            <H2 count={memberNews.length}>সংবাদ</H2>
-            {memberNews.length ? (
-              <ul className="flex flex-col gap-3">
-                {memberNews.slice(0, 30).map((n) => <li key={n.id}><NewsCard n={n} /></li>)}
-              </ul>
+            <H2 count={memberStories.length}>সংবাদ</H2>
+            {memberStories.length ? (
+              <>
+                <ul className="flex flex-col gap-3">
+                  {memberStories.slice(0, 5).map((s) => <li key={s.id}><StoryCard s={s} showMember={false} /></li>)}
+                </ul>
+                {memberStories.length > 5 && (
+                  <Link
+                    href={`/songbad#mp=${m.slug}`}
+                    className="self-start inline-flex items-center gap-2 h-11 px-5 rounded-full border border-ink font-semibold text-[15px] hover:bg-surface transition-colors"
+                  >
+                    এই সদস্যের সব {bn(memberStories.length)}টি খবর দেখুন
+                    <Icon name="arrow" size={16} />
+                  </Link>
+                )}
+              </>
             ) : (
               <Empty
                 title="এই সদস্য নিয়ে এখনো কোনো সংবাদ প্রকাশ করা হয়নি।"
