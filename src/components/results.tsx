@@ -3,10 +3,10 @@ import { parliamentLabel, type SeatResult } from '@/lib/history';
 import { Card, DocLink } from './ui';
 
 /** Who published the numbers, named from the source link; an editor's own entry is the gazette. */
-function sourceOf(url: string): { name: string; link: string } {
-  if (/wikipedia\.org/i.test(url)) return { name: 'উইকিপিডিয়া', link: 'উইকিপিডিয়া' };
-  if (/tbsnews\.net/i.test(url)) return { name: 'দ্য বিজনেস স্ট্যান্ডার্ড', link: 'মূল পাতা' };
-  return { name: 'নির্বাচন কমিশনের গেজেট', link: 'গেজেট' };
+export function sourceOf(url: string): { name: string; link: string; by: string } {
+  if (/wikipedia\.org/i.test(url)) return { name: 'উইকিপিডিয়া', link: 'উইকিপিডিয়া', by: 'উইকিপিডিয়া অনুযায়ী' };
+  if (/tbsnews\.net/i.test(url)) return { name: 'দ্য বিজনেস স্ট্যান্ডার্ড', link: 'মূল পাতা', by: 'দ্য বিজনেস স্ট্যান্ডার্ডের হিসাব অনুযায়ী' };
+  return { name: 'নির্বাচন কমিশনের গেজেট', link: 'গেজেট', by: 'নির্বাচন কমিশনের গেজেট অনুযায়ী' };
 }
 
 /**

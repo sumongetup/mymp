@@ -8,7 +8,8 @@ import {
 import { rolesOf, noticesForMember } from '@/lib/activity';
 import { priorTermsOf, parliamentLabel, parliamentOrdinal, resultForSeat, socialsOf, electionYear } from '@/lib/history';
 import { Page, Card, Breadcrumb, Empty, PartyDot, NewsCard, DocLink } from '@/components/ui';
-import { ResultCard } from '@/components/results';
+import { ResultCard, sourceOf } from '@/components/results';
+import { introOf } from '@/lib/intro';
 import MemberPhoto from '@/components/MemberPhoto';
 import Icon from '@/components/Icon';
 
@@ -93,6 +94,27 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
 
   const paragraphs = (m.bioBn ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
   const year = electionYear(meta.parliamentNo);
+  // parliament.gov.bd writes a biography for the presiding officers only (and repeats it as the summary);
+  // everyone else gets an introduction put together from the facts on this page.
+  const summaryRepeatsBio =
+    !!m.summaryBn && paragraphs.length > 0 && paragraphs.join('').replace(/\s/g, '').includes(m.summaryBn.replace(/\s/g, ''));
+  const intro =
+    m.summaryBn || paragraphs.length
+      ? []
+      : introOf(m, {
+          roles,
+          result: wonThisResult ? result : null,
+          resultSourceBy: result ? sourceOf(result.sourceUrl).by : null,
+          year,
+        });
+  // Name only the sources this member's introduction actually drew on.
+  const introParts = [
+    'সংসদের সদস্য তালিকা',
+    wonThisResult ? 'প্রকাশিত নির্বাচনী ফল' : null,
+    wikiSources.length ? 'নিচের তালিকায় তারকাচিহ্নিত উইকিপিডিয়ার তথ্য' : null,
+  ].filter(Boolean) as string[];
+  const introSources =
+    introParts.length > 1 ? `${introParts.slice(0, -1).join(', ')} এবং ${introParts[introParts.length - 1]}` : introParts[0];
 
   return (
     <Page>
@@ -194,7 +216,17 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
         <div className="flex flex-col gap-10 min-w-0">
           <section className="flex flex-col gap-4">
             <H2>পরিচিতি</H2>
-            {m.summaryBn && (
+            {intro.length > 0 && (
+              <div className="flex flex-col gap-3">
+                {intro.map((p, i) => (
+                  <p key={i} className="text-[16px] sm:text-[17px] leading-relaxed text-inksoft">{p}</p>
+                ))}
+                <p className="text-[12.5px] text-muted leading-relaxed">
+                  এই পরিচিতি এই পাতার তথ্য থেকে সাজানো: {introSources}। নিজস্ব কোনো মূল্যায়ন এতে নেই।
+                </p>
+              </div>
+            )}
+            {m.summaryBn && !summaryRepeatsBio && (
               <p className="text-[16px] sm:text-[17px] leading-relaxed text-inksoft">{m.summaryBn}</p>
             )}
             {paragraphs.length > 0 && (
