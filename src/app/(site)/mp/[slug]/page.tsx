@@ -24,7 +24,9 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
   return {
     title: `${m.nameBn ?? m.nameEn}`,
     alternates: { canonical: `/mp/${m.slug}` },
-    description: `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। পরিচিতি, আগের মেয়াদ, কমিটি, সংসদ সচিবালয়ের প্রজ্ঞাপন ও যোগাযোগ। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
+    description: m.resignedOn
+      ? `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সাবেক সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}; ${dateBn(m.resignedOn)} তারিখে পদত্যাগ করেছেন। পরিচিতি, আগের মেয়াদ ও কমিটি। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`
+      : `${m.nameBn ?? m.nameEn}${where}। ত্রয়োদশ জাতীয় সংসদের সদস্য${m.party?.nameBn ? `, ${m.party.nameBn}` : ''}। পরিচিতি, আগের মেয়াদ, কমিটি, সংসদ সচিবালয়ের প্রজ্ঞাপন ও যোগাযোগ। তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
   };
 }
 
@@ -145,6 +147,22 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               <Link href={`/jela/${district.slug}`} className="text-inksoft hover:text-brand">{district.bn} জেলা</Link>
             )}
           </div>
+          {m.resignedOn && (
+            <div role="note" className="flex items-start gap-2.5 rounded-lg border-s-[3px] border-warn bg-warnsoft px-4 py-3 text-[14.5px] leading-relaxed text-ink">
+              <Icon name="info" size={18} className="mt-[3px] text-warn shrink-0" />
+              <span>
+                <strong className="font-bold">{dateBn(m.resignedOn)} তারিখে সংসদ সদস্য পদ থেকে পদত্যাগ করেছেন।</strong>{' '}
+                {m.seat && (
+                  <>
+                    তাঁর আসন{' '}
+                    <Link href={`/ason/${m.seat.slug}`} className="font-semibold text-brand hover:underline">{m.seat.nameBn}</Link>{' '}
+                    এখন শূন্য।{' '}
+                  </>
+                )}
+                <span className="text-inksoft">সূত্র: বাংলাদেশ জাতীয় সংসদের সদস্য তালিকা।</span>
+              </span>
+            </div>
+          )}
           {socials.length > 0 && (
             <div className="flex flex-wrap gap-2 pt-1">
               {socials.map((s) => (
