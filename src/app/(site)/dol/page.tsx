@@ -99,7 +99,7 @@ export default function PartiesPage() {
       <div className="mt-5">
         <ShareButtons
           url={`${siteUrl}/dol`}
-          title="রাজনৈতিক দল · আমার এমপি"
+          title="রাজনৈতিক দল | আমার এমপি"
           text="ত্রয়োদশ জাতীয় সংসদের রাজনৈতিক দল, আসনসংখ্যা ও দলের পরিচিতি"
         />
       </div>

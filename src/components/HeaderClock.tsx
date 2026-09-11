@@ -4,7 +4,7 @@ import { useSyncExternalStore } from 'react';
 
 /*
  * Today's date and time in Bangladesh, in English, as the owner asked
- * (2026-09-11): "Friday, 11 September 2026 · 5:43 PM". The site is
+ * (2026-09-11): "Friday, 11 September 2026, 5:43 PM". The site is
  * prerendered, so the server renders nothing here and the browser fills it in,
  * then keeps it current.
  */
@@ -18,7 +18,7 @@ const subscribe = (tick: () => void) => {
 // The same string for every call within a minute, so React re-renders only when the minute changes.
 const now = () => {
   const d = new Date();
-  return `${DATE.format(d).replace(/^(\w+) /, '$1, ')} · ${TIME.format(d)}`;
+  return `${DATE.format(d).replace(/^(\w+) /, '$1, ')}, ${TIME.format(d)}`;
 };
 
 export default function HeaderClock() {

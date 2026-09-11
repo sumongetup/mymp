@@ -179,7 +179,7 @@ export default function MemberFilter({
                 <span className="grow min-w-0 flex flex-col gap-0.5">
                   <span className="display text-[15.5px] font-bold truncate">{m.nameBn || m.nameEn}</span>
                   <span className="text-[13px] text-muted truncate">
-                    {[m.seatBn, m.partyBn ?? m.party].filter(Boolean).join(' · ')}
+                    {[m.seatBn, m.partyBn ?? m.party].filter(Boolean).join(', ')}
                   </span>
                 </span>
                 <span

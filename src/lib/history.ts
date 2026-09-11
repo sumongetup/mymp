@@ -79,11 +79,11 @@ export const parliamentInfo = (no: number) => history.parliaments.find((p) => p.
 /** "নবম সংসদ" */
 export const parliamentOrdinal = (no: number) => `${ORDINALS[no] ?? `${bn(no)}তম`} সংসদ`;
 
-/** "নবম সংসদ · ২০০৮" (the year of that parliament's election, when the source has it). */
+/** "নবম সংসদ, ২০০৮" (the year of that parliament's election, when the source has it). */
 export function parliamentLabel(no: number): string {
   const p = parliamentInfo(no);
   const year = p?.electionDate ? bn(new Date(p.electionDate).getFullYear()) : null;
-  return year ? `${parliamentOrdinal(no)} · ${year}` : parliamentOrdinal(no);
+  return year ? `${parliamentOrdinal(no)}, ${year}` : parliamentOrdinal(no);
 }
 
 export const electionYear = (no: number) => {

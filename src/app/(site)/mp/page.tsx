@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/mp' },
   openGraph: shareGraph('/mp'),
   title: 'সব সংসদ সদস্য',
-  description: `ত্রয়োদশ জাতীয় সংসদের ${bn(members.length)} জন সংসদ সদস্যের তালিকা: ${bn(generalSeats)}টি সাধারণ আসন ও ${bn(members.length - generalSeats)}টি সংরক্ষিত মহিলা আসন। নাম, দল, আসন বা জেলা দিয়ে খুঁজুন।`,
+  description: `ত্রয়োদশ জাতীয় সংসদের ${bn(members.length)} জন সংসদ সদস্যের তালিকা: ${bn(generalSeats)}টি সাধারণ আসন ও ${bn(members.length - generalSeats)}টি সংরক্ষিত নারী আসন। নাম, দল, আসন বা জেলা দিয়ে খুঁজুন।`,
 };
 
 export default function AllMps() {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import Link from 'next/link';
-import { getMemberById, bn, dateBn, meta } from '@/lib/data';
+import { getMemberById, bn, dateBn, meta, bnText } from '@/lib/data';
 import {
   sessions, officers, parliament, sessionLabel, latestSitting, totalSittings, generalNotices, ROLE_LABELS, daysSince,
 } from '@/lib/activity';
@@ -19,7 +19,7 @@ function Fact({ label, value }: { label: string; value: string | null }) {
   return (
     <div className="flex flex-col gap-0.5">
       <span className="text-[12.5px] text-muted">{label}</span>
-      <span className="text-[15px] font-semibold">{value ?? '—'}</span>
+      <span className="text-[15px] font-semibold">{value ?? 'তথ্য নেই'}</span>
     </div>
   );
 }
@@ -39,7 +39,7 @@ export default function SessionsPage() {
           <div className="grid grid-cols-3 gap-3">
             <Stat label="অধিবেশন" value={bn(sessions.length)} />
             <Stat label="বৈঠক" value={bn(totalSittings())} />
-            <Stat label="শেষ বৈঠক" value={ago === null ? '—' : ago === 0 ? 'আজ' : `${bn(ago)} দিন আগে`} />
+            <Stat label="শেষ বৈঠক" value={ago === null ? 'তথ্য নেই' : ago === 0 ? 'আজ' : `${bn(ago)} দিন আগে`} />
           </div>
         }
       />
@@ -58,7 +58,7 @@ export default function SessionsPage() {
                     {i === 0 && <span className="px-2.5 py-0.5 rounded-full bg-brandsoft text-brand text-[12px] font-bold">সর্বশেষ</span>}
                   </div>
                   <span className="text-[14px] text-muted">
-                    শুরু {dateBn(s.startDate) ?? '—'}{s.endDate ? ` · শেষ ${dateBn(s.endDate)}` : ''}
+                    শুরু {dateBn(s.startDate) ?? 'তারিখ নেই'}{s.endDate ? `, শেষ ${dateBn(s.endDate)}` : ''}
                   </span>
                 </div>
                 <span className="text-[14px] font-semibold tnum">{bn(s.sittings.length)}টি বৈঠক</span>
@@ -87,7 +87,7 @@ export default function SessionsPage() {
                   <ul className="flex flex-col gap-1.5">
                     {s.circulars.map((c) => (
                       <li key={c.id} className="flex items-center justify-between gap-3 text-[14px]">
-                        <span>{c.titleBn ?? `পরিপত্র ${c.no ?? ''}`}{c.date ? <span className="text-muted"> · {dateBn(c.date)}</span> : null}</span>
+                        <span>{c.titleBn ?? `পরিপত্র ${c.no ?? ''}`}{c.date ? <span className="text-muted">, {dateBn(c.date)}</span> : null}</span>
                         {c.pdfUrl && <DocLink href={c.pdfUrl}>PDF</DocLink>}
                       </li>
                     ))}
@@ -107,7 +107,7 @@ export default function SessionsPage() {
                 {notices.slice(0, 25).map((n) => (
                   <div key={n.id} className="px-5 py-3.5 flex items-start gap-4">
                     <span className="grow min-w-0 flex flex-col gap-0.5">
-                      <span className="text-[15px] font-medium wrap-anywhere">{n.titleBn ?? n.titleEn}</span>
+                      <span className="text-[15px] font-medium wrap-anywhere">{bnText(n.titleBn) ?? n.titleEn}</span>
                       <span className="text-[12.5px] text-muted">{dateBn(n.date) ?? 'তারিখ নেই'}</span>
                     </span>
                     {n.pdfUrl && <DocLink href={n.pdfUrl}>PDF</DocLink>}
@@ -140,7 +140,7 @@ export default function SessionsPage() {
                   <>
                     <span className="flex flex-col min-w-0">
                       <span className="text-[14.5px] font-semibold truncate">{o.nameBn ?? o.nameEn}</span>
-                      <span className="text-[12.5px] text-muted">{ROLE_LABELS[o.role] ?? o.role}{o.tenureBn ? ` · ${o.tenureBn}` : ''}</span>
+                      <span className="text-[12.5px] text-muted">{ROLE_LABELS[o.role] ?? o.role}{o.tenureBn ? `, ${o.tenureBn}` : ''}</span>
                     </span>
                     {m && <PartyDot abbr={m.party?.abbr} />}
                   </>

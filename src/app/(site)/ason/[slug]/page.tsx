@@ -160,7 +160,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                       const cur = h.memberId ? getMemberById(h.memberId) : undefined;
                       // A sitting member is shown under the name the site uses for them; the
                       // source's own spelling for that year stays underneath.
-                      const name = cur?.nameBn ?? h.nameBn ?? h.nameEn ?? '—';
+                      const name = cur?.nameBn ?? h.nameBn ?? h.nameEn ?? 'নাম নেই';
                       const sub = cur ? (nameEnDisplay(h.nameEn) ?? h.nameBn) : h.nameBn ? nameEnDisplay(h.nameEn) : null;
                       return (
                         <div key={`${h.parliamentNo}-${name}`} className="px-4 sm:px-5 py-3 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
@@ -169,7 +169,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                             <span className="text-[12.5px] sm:text-[13.5px] text-muted leading-snug">{parliamentLabel(h.parliamentNo)}</span>
                             <span className="sm:hidden flex items-center gap-1.5 text-[12.5px] font-semibold text-inksoft">
                               <PartyDot abbr={h.partyAbbr} size={16} />
-                              {h.partyAbbr ?? '—'}
+                              {h.partyAbbr ?? 'দল নেই'}
                             </span>
                           </span>
                           <span className="grow min-w-0 flex flex-col">
@@ -182,14 +182,14 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
                           </span>
                           <span className="hidden sm:flex shrink-0 items-center gap-2 text-[13px] font-semibold text-inksoft">
                             <PartyDot abbr={h.partyAbbr} />
-                            {h.partyNameBn ?? h.partyAbbr ?? '—'}
+                            {h.partyNameBn ?? h.partyAbbr ?? 'দল নেই'}
                           </span>
                         </div>
                       );
                     })}
                   </Card>
                   <p className="text-[12.5px] text-muted leading-relaxed">
-                    সংসদের তথ্যভান্ডারে ৪র্থ, ৫ম ও ৭ম থেকে ১২শ সংসদের রেকর্ড আছে; ১ম–৩য় ও ৬ষ্ঠ সংসদের তালিকা সেখানে নেই।
+                    সংসদের তথ্যভান্ডারে ৪র্থ, ৫ম ও ৭ম থেকে ১২শ সংসদের রেকর্ড আছে; ১ম থেকে ৩য় ও ৬ষ্ঠ সংসদের তালিকা সেখানে নেই।
                     {oldBoundary && ' ২০০৮ সালের সীমানা পুনর্নির্ধারণের আগের আসনগুলো একই নম্বরের হলেও এলাকা ভিন্ন হতে পারে।'}
                   </p>
                 </>

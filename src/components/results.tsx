@@ -27,7 +27,7 @@ export function ResultCard({ r, compact = false }: { r: SeatResult; compact?: bo
         <span className="display text-[17px]">{parliamentLabel(r.parliamentNo)}</span>
         <span className="text-[13px] text-muted tnum">
           {cast ? (r.totalVotes ? `${bnGroup(cast)} ভোট` : `প্রার্থীদের মোট ${bnGroup(cast)} ভোট`) : ''}
-          {r.turnout != null ? ` · ভোট পড়েছে ${bn(r.turnout)}%` : ''}
+          {r.turnout != null ? `, ভোট পড়েছে ${bn(r.turnout)}%` : ''}
         </span>
       </div>
       <ol className="divide-y divide-rulesoft">
@@ -57,7 +57,7 @@ export function ResultCard({ r, compact = false }: { r: SeatResult; compact?: bo
         })}
       </ol>
       <div className="px-5 py-3 bg-paper/60 border-t border-rulesoft flex items-center justify-between gap-3 text-[12.5px] text-muted">
-        <span>উৎস: {source.name}{note ? ` · ${note}` : ''}</span>
+        <span>উৎস: {source.name}{note ? `। ${note}` : ''}</span>
         <DocLink href={r.sourceUrl}>{source.link}</DocLink>
       </div>
     </Card>

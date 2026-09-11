@@ -113,7 +113,7 @@ export default function Home() {
                 </Link>
               </div>
               <p className="text-[13.5px] text-muted -mt-2">
-                {bn(stats.total)} সদস্য · {bn(stats.territorial)} আসনভিত্তিক · {bn(stats.reserved)} সংরক্ষিত নারী আসন
+                {bn(stats.total)} সদস্য, {bn(stats.territorial)} আসনভিত্তিক, {bn(stats.reserved)} সংরক্ষিত নারী আসন
               </p>
               <CompositionBar parties={parties} total={stats.total} majority={stats.majority} />
               <p className="text-[12px] text-muted border-t border-rule pt-3 leading-relaxed">
@@ -133,17 +133,17 @@ export default function Home() {
               <span className="flex items-center gap-2 text-[12px] font-bold tracking-[1px] text-muted">
                 <Icon name="calendar" size={15} /> সর্বশেষ অধিবেশন
               </span>
-              <span className="display text-[22px] leading-tight">{session ? sessionLabel(session) : '—'}</span>
+              <span className="display text-[22px] leading-tight">{session ? sessionLabel(session) : 'তথ্য নেই'}</span>
               <span className="text-[13px] text-muted">
                 {session?.startDate ? `শুরু ${dateBn(session.startDate)}` : 'সংসদের তথ্যভান্ডারে নেই'}
-                {session ? ` · ${bn(session.sittings.length)} বৈঠক` : ''}
+                {session ? `, ${bn(session.sittings.length)} বৈঠক` : ''}
               </span>
             </Card>
             <Card className="p-5 flex flex-col gap-2">
               <span className="flex items-center gap-2 text-[12px] font-bold tracking-[1px] text-muted">
                 <Icon name="clock" size={15} /> সর্বশেষ বৈঠক
               </span>
-              <span className="display text-[22px] leading-tight">{sitting?.date ? dateBn(sitting.date) : '—'}</span>
+              <span className="display text-[22px] leading-tight">{sitting?.date ? dateBn(sitting.date) : 'তথ্য নেই'}</span>
               <span className="flex items-center justify-between gap-2 text-[13px] text-muted">
                 <span>{sittingAgo === null ? '' : sittingAgo === 0 ? 'আজ' : `${bn(sittingAgo)} দিন আগে`}</span>
                 {sitting?.pdfUrl && <DocLink href={sitting.pdfUrl}>কার্যসূচি</DocLink>}
@@ -161,7 +161,7 @@ export default function Home() {
                 <Icon name="refresh" size={15} /> হালনাগাদ
               </span>
               <span className="display text-[22px] leading-tight">{dateBn(meta.syncedAt)}</span>
-              <span className="text-[13px] text-muted">সংসদের তথ্যভান্ডার থেকে প্রতিদিন · {bn(totalSittings())} বৈঠকের নথি</span>
+              <span className="text-[13px] text-muted">সংসদের তথ্যভান্ডার থেকে প্রতিদিন, {bn(totalSittings())} বৈঠকের নথি</span>
             </Card>
           </div>
         </section>

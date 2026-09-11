@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
-import { committees, getCommittee, getMemberById, bn, dateBn, meta } from '@/lib/data';
+import { committees, getCommittee, getMemberById, bn, dateBn, meta, bnText } from '@/lib/data';
 import { noticesForCommittee } from '@/lib/activity';
 import Link from 'next/link';
 import { Page, PageHead, Card, Breadcrumb, Notice, MemberRow, Empty, DocLink } from '@/components/ui';
@@ -109,7 +109,7 @@ export default async function CommitteePage({ params }: PageProps<'/committee/[s
       <PageHead
         eyebrow={type ?? undefined}
         title={c.nameBn ?? c.nameEn ?? ''}
-        lede={[c.nameEn, c.startDate ? `গঠিত ${dateBn(c.startDate)}` : null].filter(Boolean).join(' · ')}
+        lede={[c.nameEn, c.startDate ? `গঠিত ${dateBn(c.startDate)}` : null].filter(Boolean).join(', ')}
       />
 
       <div className="pt-8 pb-14 grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 items-start">
@@ -162,7 +162,7 @@ export default async function CommitteePage({ params }: PageProps<'/committee/[s
                 {notices.map((n) => (
                   <div key={n.id} className="px-5 py-3.5 flex items-start gap-4">
                     <span className="grow min-w-0 flex flex-col gap-0.5">
-                      <span className="text-[14.5px] font-medium wrap-anywhere">{n.titleBn ?? n.titleEn}</span>
+                      <span className="text-[14.5px] font-medium wrap-anywhere">{bnText(n.titleBn) ?? n.titleEn}</span>
                       <span className="text-[12.5px] text-muted">{dateBn(n.date) ?? 'তারিখ নেই'}</span>
                     </span>
                     {n.pdfUrl && <DocLink href={n.pdfUrl}>বিজ্ঞপ্তি</DocLink>}
@@ -197,7 +197,7 @@ export default async function CommitteePage({ params }: PageProps<'/committee/[s
               </div>
               <div className="flex justify-between gap-3 py-2">
                 <span className="text-muted">তথ্যসূত্র</span>
-                <span className="font-medium text-end">বাংলাদেশ জাতীয় সংসদ · {dateBn(meta.syncedAt)}</span>
+                <span className="font-medium text-end">বাংলাদেশ জাতীয় সংসদ, {dateBn(meta.syncedAt)}</span>
               </div>
             </div>
           </Card>

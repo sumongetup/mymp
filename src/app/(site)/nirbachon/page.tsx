@@ -62,7 +62,7 @@ export default function ElectionPage() {
         ] as [string, string | null][]).map(([label, value]) => (
           <div key={label} className="flex flex-col gap-0.5">
             <span className="text-[12.5px] text-muted">{label}</span>
-            <span className="text-[15.5px] font-semibold">{dateBn(value) ?? '—'}</span>
+            <span className="text-[15.5px] font-semibold">{dateBn(value) ?? 'তারিখ নেই'}</span>
           </div>
         ))}
       </Card>
@@ -118,7 +118,7 @@ export default function ElectionPage() {
           </div>
         </div>
         <p className="text-[12.5px] text-muted border-t border-rule pt-3">
-          তথ্যসূত্র: {ecs.source} · পড়া হয়েছে {dateBn(ecs.readOn)}
+          তথ্যসূত্র: {ecs.source} | পড়া হয়েছে {dateBn(ecs.readOn)}
         </p>
       </Card>
 
@@ -176,8 +176,8 @@ export default function ElectionPage() {
                     return (
                       <tr key={p.no} className={p.no === parliament.no ? 'bg-brandsoft/40' : ''}>
                         <td className="px-4 py-2.5 font-semibold whitespace-nowrap">{parliamentLabel(p.no)}</td>
-                        {cols.map((c) => <td key={c.abbr} className="px-3 py-2.5 text-end tnum">{get(c.abbr) ? bn(get(c.abbr)) : <span className="text-muted">—</span>}</td>)}
-                        <td className="px-3 py-2.5 text-end tnum">{other ? bn(other) : <span className="text-muted">—</span>}</td>
+                        {cols.map((c) => <td key={c.abbr} className="px-3 py-2.5 text-end tnum">{get(c.abbr) ? bn(get(c.abbr)) : <span className="text-muted">০</span>}</td>)}
+                        <td className="px-3 py-2.5 text-end tnum">{other ? bn(other) : <span className="text-muted">০</span>}</td>
                         <td className="px-4 py-2.5 text-end tnum text-muted">{bn(total)}</td>
                       </tr>
                     );
@@ -189,7 +189,7 @@ export default function ElectionPage() {
         })()}
         <p className="text-[12.5px] text-muted leading-relaxed">
           সাধারণ (আসনভিত্তিক) আসনে সংসদের তথ্যভান্ডারে নথিভুক্ত সদস্য অনুযায়ী; সংরক্ষিত নারী আসন বাদ। উপনির্বাচন ও অসম্পূর্ণ রেকর্ডের কারণে
-          কোনো কোনো সংসদে সংখ্যা সরকারি ফলের সঙ্গে সামান্য ভিন্ন হতে পারে; “নথিভুক্ত” কলামে সেটি দেখা যায়। ১ম–৩য় ও ৬ষ্ঠ সংসদের রেকর্ড সেখানে নেই।
+          কোনো কোনো সংসদে সংখ্যা সরকারি ফলের সঙ্গে সামান্য ভিন্ন হতে পারে; “নথিভুক্ত” কলামে সেটি দেখা যায়। ১ম থেকে ৩য় ও ৬ষ্ঠ সংসদের রেকর্ড সেখানে নেই।
         </p>
       </section>
 
@@ -225,7 +225,7 @@ export default function ElectionPage() {
           ))}
         </div>
         <p className="text-[13px] text-muted">
-          তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ · হালনাগাদ {dateBn(meta.syncedAt)}
+          তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ | হালনাগাদ {dateBn(meta.syncedAt)}
         </p>
       </section>
     </Page>

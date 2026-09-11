@@ -54,12 +54,12 @@ export default function StatisticsPage() {
       />
 
       <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <Stat label="মোট সদস্য" value={bn(s.total)} note={`${bn(s.territorial)} আসনভিত্তিক · ${bn(s.reserved)} সংরক্ষিত`} />
-        <Stat label="নারী সদস্য" value={bn(s.women)} note={`${bn(womenPct)}% · এর ${bn(s.womenReserved)} জন সংরক্ষিত আসনে`} />
+        <Stat label="মোট সদস্য" value={bn(s.total)} note={`${bn(s.territorial)} আসনভিত্তিক, ${bn(s.reserved)} সংরক্ষিত`} />
+        <Stat label="নারী সদস্য" value={bn(s.women)} note={`${bn(womenPct)}%, এর ${bn(s.womenReserved)} জন সংরক্ষিত আসনে`} />
         <Stat
           label="গড় বয়স (মধ্যক)"
-          value={s.medianAge !== null ? bn(s.medianAge) : '—'}
-          note={s.youngest && s.oldest ? `সর্বকনিষ্ঠ ${bn(s.youngest.age)} · সর্বজ্যেষ্ঠ ${bn(s.oldest.age)}` : undefined}
+          value={s.medianAge !== null ? bn(s.medianAge) : 'তথ্য নেই'}
+          note={s.youngest && s.oldest ? `সর্বকনিষ্ঠ ${bn(s.youngest.age)}, সর্বজ্যেষ্ঠ ${bn(s.oldest.age)}` : undefined}
         />
         <Stat label="সংসদীয় কমিটি" value={bn(committees.length)} note={`${bn(currentCommittees)}টির সদস্য তালিকা হালনাগাদ`} />
       </div>
@@ -187,7 +187,7 @@ export default function StatisticsPage() {
                         <Link href={`/mp/${m.slug}`} className="py-2 flex items-center justify-between gap-3 hover:text-brand">
                           <span className="flex flex-col min-w-0">
                             <span className="font-semibold truncate">{m.nameBn ?? m.nameEn}</span>
-                            <span className="text-[12.5px] text-muted">{m.seat?.nameBn}{m.party ? ` · ${m.party.abbr}` : ''}</span>
+                            <span className="text-[12.5px] text-muted">{m.seat?.nameBn}{m.party ? `, ${m.party.abbr}` : ''}</span>
                           </span>
                           <span className="shrink-0 tnum text-[13px] font-bold text-brand">{bn(terms)} মেয়াদ</span>
                         </Link>
@@ -197,7 +197,7 @@ export default function StatisticsPage() {
                 ) : (
                   <p className="text-[14px] text-muted">সংসদের তথ্যভান্ডারে কারও আগের মেয়াদ পাওয়া যায়নি।</p>
                 )}
-                <p className="text-[12px] text-muted leading-relaxed">১ম–৩য় ও ৬ষ্ঠ সংসদের রেকর্ড সেখানে নেই, তাই তার আগের মেয়াদ গোনা যায়নি।</p>
+                <p className="text-[12px] text-muted leading-relaxed">১ম থেকে ৩য় ও ৬ষ্ঠ সংসদের রেকর্ড সেখানে নেই, তাই তার আগের মেয়াদ গোনা যায়নি।</p>
               </Card>
             </div>
           </section>
@@ -222,7 +222,7 @@ export default function StatisticsPage() {
           />
         </div>
         <p className="text-[13px] text-muted">
-          তথ্যসূত্র: {ecs.source} · পড়া হয়েছে {dateBn(ecs.readOn)}
+          তথ্যসূত্র: {ecs.source} | পড়া হয়েছে {dateBn(ecs.readOn)}
         </p>
       </section>
 
@@ -232,7 +232,7 @@ export default function StatisticsPage() {
           body="আসনভিত্তিক ভোটের সংখ্যা, ভোটার উপস্থিতি, সংসদে উপস্থিতি বা উত্থাপিত প্রশ্নের হিসাব কোনো উন্মুক্ত সূত্রে পাওয়া যায়নি। নির্ভরযোগ্য সূত্র ছাড়া এসব সংখ্যা আমরা দেখাই না।"
         />
         <p className="text-[13px] text-muted">
-          তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ · হালনাগাদ {dateBn(meta.syncedAt)} · মুক্তিযোদ্ধা সদস্য {bn(s.freedomFighters)} জন
+          তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ | হালনাগাদ {dateBn(meta.syncedAt)} | মুক্তিযোদ্ধা সদস্য {bn(s.freedomFighters)} জন
         </p>
       </div>
     </Page>

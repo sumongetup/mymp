@@ -107,7 +107,7 @@ function LeaderCard({ profile, color }: { profile: ResolvedProfile; color: strin
         </span>
       )}
       <span className="flex flex-col gap-1 min-w-0">
-        <span className="text-[12px] font-bold tracking-[1px] text-muted">দলপ্রধান · {profile.leaderTitleBn ?? 'প্রধান'}</span>
+        <span className="text-[12px] font-bold tracking-[1px] text-muted">দলপ্রধান, {profile.leaderTitleBn ?? 'প্রধান'}</span>
         <span className="display text-[19px] leading-snug">{profile.leaderNameBn}</span>
         {roles.length > 0 && (
           <span className="flex flex-wrap gap-1.5">
@@ -309,7 +309,7 @@ export default async function PartyPage({ params }: PageProps<'/dol/[slug]'>) {
       <div className="mt-5">
         <ShareButtons
           url={`${siteUrl}/dol/${party.slug}`}
-          title={`${name} · আমার এমপি`}
+          title={`${name} | আমার এমপি`}
           text={
             profile?.summaryBn
               ? `${name}: ${profile.summaryBn}`

@@ -298,13 +298,11 @@ export function bn(n: number | string): string {
 }
 
 export function ageFrom(dob: string | null): number | null {
-  if (!dob) return null;
-  const born = new Date(dob);
-  if (Number.isNaN(born.getTime())) return null;
-  const now = new Date();
-  let age = now.getFullYear() - born.getFullYear();
-  const m = now.getMonth() - born.getMonth();
-  if (m < 0 || (m === 0 && now.getDate() < born.getDate())) age--;
+  const born = dhakaYmd(dob);
+  const now = dhakaYmd(new Date().toISOString());
+  if (!born || !now) return null;
+  let age = now.y - born.y;
+  if (now.m < born.m || (now.m === born.m && now.d < born.d)) age--;
   return age >= 0 && age < 130 ? age : null;
 }
 
@@ -326,12 +324,26 @@ const PARTY_SHORT_BN: Record<string, string> = {
 export const partyShortBn = (p: { abbr: string; nameBn?: string | null } | null | undefined) =>
   p ? PARTY_SHORT_BN[p.abbr] ?? p.nameBn ?? p.abbr : null;
 
-export function dateBn(iso: string | null): string | null {
+/** Year, month and day of an instant as Bangladesh sees it; a date-only string is taken as that calendar day. */
+const DHAKA_DATE = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Dhaka', year: 'numeric', month: '2-digit', day: '2-digit' });
+export function dhakaYmd(iso: string | null): { y: number; m: number; d: number } | null {
   if (!iso) return null;
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return null;
-  return `${bn(d.getDate())} ${BN_MONTHS[d.getMonth()]} ${bn(d.getFullYear())}`;
+  const plain = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (plain) return { y: Number(plain[1]), m: Number(plain[2]), d: Number(plain[3]) };
+  const t = new Date(iso);
+  if (Number.isNaN(t.getTime())) return null;
+  const [y, m, d] = DHAKA_DATE.format(t).split('-').map(Number);
+  return { y: y!, m: m!, d: d! };
 }
+
+/** "১২ সেপ্টেম্বর ২০২৬", always the Bangladesh date, wherever the page is built or read. */
+export function dateBn(iso: string | null): string | null {
+  const x = dhakaYmd(iso);
+  return x ? `${bn(x.d)} ${BN_MONTHS[x.m - 1]} ${bn(x.y)}` : null;
+}
+
+/** Bangla digits inside Bangla text from a source (a notice title, a headline); Latin text is left as written. */
+export { bnText } from './bnText';
 
 export const OFFICE_LABELS: Record<string, string> = {
   'speaker': 'স্পিকার',

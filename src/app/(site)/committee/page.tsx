@@ -62,7 +62,7 @@ export default function CommitteesPage() {
                       </span>
                       <span className="text-[13.5px] text-muted">
                         {c.nameEn}
-                        {c.startDate ? ` · গঠিত ${dateBn(c.startDate)}` : ''}
+                        {c.startDate ? `, গঠিত ${dateBn(c.startDate)}` : ''}
                       </span>
                       {summaryOf(c) && <span className="text-[14.5px] leading-relaxed text-inksoft text-pretty">{summaryOf(c)}</span>}
                       {chairMember && (
@@ -123,7 +123,7 @@ export default function CommitteesPage() {
         </section>
 
         <p className="text-[13px] text-muted">
-          তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ · হালনাগাদ {dateBn(meta.syncedAt)}
+          তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ | হালনাগাদ {dateBn(meta.syncedAt)}
         </p>
       </div>
     </Page>

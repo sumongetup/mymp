@@ -84,6 +84,9 @@ export const rolesOf = (memberId: string) =>
 
 const ORDINALS = ['', 'প্রথম', 'দ্বিতীয়', 'তৃতীয়', 'চতুর্থ', 'পঞ্চম', 'ষষ্ঠ', 'সপ্তম', 'অষ্টম', 'নবম', 'দশম'];
 
+/** The secretariat's notice categories, for readers. */
+export const NOTICE_CATEGORY_BN: Record<string, string> = { NOC: 'অনাপত্তিপত্র', GO: 'সরকারি আদেশ', notification: 'প্রজ্ঞাপন' };
+
 /** "সেশন ৩" and "সেশন-১" both become "তৃতীয় অধিবেশন" / "প্রথম অধিবেশন". */
 export function sessionLabel(s: Session): string {
   const raw = (s.titleBn ?? s.titleEn ?? '').match(/[০-৯\d]+/)?.[0] ?? '';

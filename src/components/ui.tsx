@@ -175,7 +175,7 @@ export function MemberCard({ m, badge }: { m: Member; badge?: string }) {
         </span>
         <span className="flex items-center gap-2 text-[13px] font-semibold text-inksoft mt-1 sm:mt-auto sm:pt-3">
           <PartyDot abbr={m.party?.abbr} />
-          <span className="truncate">{m.party?.nameBn ?? m.party?.abbr ?? '—'}</span>
+          <span className="truncate">{m.party?.nameBn ?? m.party?.abbr ?? 'দল নেই'}</span>
         </span>
       </span>
     </Link>
@@ -193,7 +193,7 @@ export function MemberRow({ m }: { m: Member }) {
       <span className="grow min-w-0 flex flex-col gap-0.5">
         <span className="display text-[15.5px] truncate">{m.nameBn || m.nameEn}</span>
         <span className="text-[13px] text-muted truncate">
-          {[m.seat?.nameBn, m.party?.abbr].filter(Boolean).join(' · ')}
+          {[m.seat?.nameBn, m.party?.abbr].filter(Boolean).join(', ')}
         </span>
       </span>
       <Icon name="arrow" size={16} className="text-muted" />

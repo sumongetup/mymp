@@ -222,4 +222,4 @@ export function Empty({ children }: { children: React.ReactNode }) {
 }
 
 export const when = (iso: string | null) =>
-  iso ? new Date(iso).toLocaleString('bn-BD', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Dhaka' }) : '—';
+  iso ? new Date(iso).toLocaleString('bn-BD', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Dhaka' }) : 'নেই';

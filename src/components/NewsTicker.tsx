@@ -1,5 +1,7 @@
 'use client';
 
+import { bnText } from '@/lib/bnText';
+
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
@@ -54,7 +56,7 @@ export default function NewsTicker({ initial }: { initial: TickerItem[] }) {
             tabIndex={copy ? -1 : undefined}
             className="hover:text-brand"
           >
-            {n.titleBn}
+            {bnText(n.titleBn)}
             <span className="ms-1.5 text-[12.5px] font-normal text-muted">({n.sourceName})</span>
           </a>
         </li>

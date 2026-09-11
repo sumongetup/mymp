@@ -69,11 +69,11 @@ type SeoMember = Pick<Member, 'nameBn' | 'nameEn' | 'party' | 'seat' | 'resigned
   govPost?: string | null;
 };
 
-/** "ঢাকা-১৭", or "সংরক্ষিত মহিলা আসন-১" for a reserved seat. */
+/** "ঢাকা-১৭", or "সংরক্ষিত নারী আসন (মহিলা আসন-১)" for a reserved seat: the site's term, with the source's name of the seat. */
 export function constituencyBn(m: SeoMember): string | null {
   if (!m.seat) return null;
   const seat = m.seat.nameBn ?? m.seat.nameEn;
-  return m.seat.reserved ? `সংরক্ষিত ${seat}` : seat;
+  return m.seat.reserved ? `সংরক্ষিত নারী আসন (${seat})` : seat;
 }
 
 /** `{name} | {constituency} | আমার এমপি` */

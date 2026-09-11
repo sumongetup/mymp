@@ -49,7 +49,7 @@ export default async function DistrictPage({ params }: PageProps<'/jela/[slug]'>
       <PageHead
         eyebrow="জেলা"
         title={`${d.bn} জেলা`}
-        lede={`${d.en} · ${bn(d.seats.length)}টি সংসদীয় আসন। প্রতিটি আসনের বর্তমান সদস্য, সংসদের তথ্যভান্ডার অনুযায়ী।`}
+        lede={`${d.en}, ${bn(d.seats.length)}টি সংসদীয় আসন। প্রতিটি আসনের বর্তমান সদস্য, সংসদের তথ্যভান্ডার অনুযায়ী।`}
         aside={
           <div className="grid grid-cols-2 gap-3">
             <Stat label="আসন" value={bn(d.seats.length)} />
@@ -64,7 +64,7 @@ export default async function DistrictPage({ params }: PageProps<'/jela/[slug]'>
             <li key={seat.no} className="flex flex-col gap-1.5">
               <div className="flex items-center justify-between gap-3 px-1">
                 <Link href={`/ason/${seat.slug}`} className="text-[14px] font-bold text-brand hover:underline">
-                  {seat.nameBn} <span className="text-muted font-medium">· আসন {bn(seat.no)}</span>
+                  {seat.nameBn} <span className="text-muted font-medium">, আসন {bn(seat.no)}</span>
                 </Link>
               </div>
               {m ? (
@@ -90,7 +90,7 @@ export default async function DistrictPage({ params }: PageProps<'/jela/[slug]'>
             </ul>
           </Card>
           <p className="px-1 text-[12.5px] text-muted leading-relaxed">
-            তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ · হালনাগাদ {dateBn(meta.syncedAt)}
+            তথ্যসূত্র: বাংলাদেশ জাতীয় সংসদ | হালনাগাদ {dateBn(meta.syncedAt)}
           </p>
         </aside>
       </div>

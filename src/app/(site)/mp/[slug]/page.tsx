@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
   members, allMembers, getMember, committeesOfMember, membersOfParty, districtOf,
-  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor, governmentPostsOf, postsCheckedOnBn, nameEnDisplay,
+  bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor, governmentPostsOf, postsCheckedOnBn, nameEnDisplay, bnText,
 } from '@/lib/data';
 import { storiesForMember } from '@/lib/newsView';
 import StoryCard from '@/components/StoryCard';
-import { rolesOf, noticesForMember } from '@/lib/activity';
+import { rolesOf, noticesForMember, NOTICE_CATEGORY_BN } from '@/lib/activity';
 import { priorTermsOf, parliamentLabel, parliamentOrdinal, resultForSeat, socialsOf, electionYear } from '@/lib/history';
 import { Page, Card, Breadcrumb, Empty, PartyDot, DocLink } from '@/components/ui';
 import { ResultCard, sourceOf } from '@/components/results';
@@ -99,7 +99,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   // Facts read from the member's Wikipedia infobox are marked, with the article linked under the list.
   const fromWiki = new Set((m.bioFromWiki ?? '').split(',').map((x) => x.trim()).filter(Boolean));
   const facts = [
-    m.dateOfBirth && { label: 'জন্ম', value: `${dateBn(m.dateOfBirth)}${age !== null ? ` · ${bn(age)} বছর` : ''}` },
+    m.dateOfBirth && { label: 'জন্ম', value: `${dateBn(m.dateOfBirth)}${age !== null ? `, ${bn(age)} বছর` : ''}` },
     m.birthPlaceBn && { label: 'জন্মস্থান', value: m.birthPlaceBn, wiki: fromWiki.has('birthPlaceBn') },
     m.gender && { label: 'লিঙ্গ', value: m.gender === 'Female' ? 'নারী' : 'পুরুষ' },
     m.educationBn && { label: 'শিক্ষা', value: m.educationBn, wiki: fromWiki.has('educationBn'), lines: true },
@@ -107,7 +107,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
     m.fatherBn && { label: 'পিতা', value: m.fatherBn },
     m.motherBn && { label: 'মাতা', value: m.motherBn },
     m.isFreedomFighter && { label: 'মুক্তিযোদ্ধা', value: 'হ্যাঁ' },
-    m.term?.start && { label: m.resignedOn ? 'মেয়াদ' : 'বর্তমান মেয়াদ', value: `${dateBn(m.term.start)} – ${dateBn(m.term.end) ?? 'চলমান'}` },
+    m.term?.start && { label: m.resignedOn ? 'মেয়াদ' : 'বর্তমান মেয়াদ', value: `${dateBn(m.term.start)} থেকে ${dateBn(m.term.end) ?? 'চলমান'}` },
     m.resignedOn && { label: 'পদত্যাগ', value: dateBn(m.resignedOn) ?? 'তারিখ পাওয়া যায়নি' },
     m.termsCount && { label: 'সংসদ সদস্য নির্বাচিত', value: `মোট ${bn(m.termsCount)} বার` },
   ].filter(Boolean) as { label: string; value: string; wiki?: boolean; lines?: boolean }[];
@@ -204,11 +204,11 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           <div className="flex flex-wrap gap-2">
             {m.resignedOn ? (
               <span className="px-3 py-1 rounded-full bg-warnsoft text-warn text-[12.5px] font-bold">
-                পদত্যাগ করেছেন · {dateBn(m.resignedOn)}
+                পদত্যাগ করেছেন, {dateBn(m.resignedOn)}
               </span>
             ) : (
               <span className="px-3 py-1 rounded-full bg-brandsoft text-brand text-[12.5px] font-bold">
-                বর্তমান সদস্য · ত্রয়োদশ সংসদ
+                বর্তমান সদস্য, ত্রয়োদশ সংসদ
               </span>
             )}
             {roles.map((r) => (
@@ -269,8 +269,8 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           <div className="pt-1 flex flex-col gap-3">
             <ShareButtons
               url={`${siteUrl}/mp/${m.slug}`}
-              title={`${m.nameBn ?? m.nameEn} · আমার এমপি`}
-              text={[m.nameBn ?? m.nameEn, m.seat?.nameBn, m.party?.nameBn].filter(Boolean).join(' · ')}
+              title={`${m.nameBn ?? m.nameEn} | আমার এমপি`}
+              text={[m.nameBn ?? m.nameEn, m.seat?.nameBn, m.party?.nameBn].filter(Boolean).join(', ')}
             />
             <CorrectionButton page={`/mp/${m.slug}`} subject={m.nameBn ?? m.nameEn ?? 'এই সদস্য'} />
           </div>
@@ -346,8 +346,8 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 </span>
                 <span className="shrink-0 flex items-center gap-2 text-[13px] font-semibold text-inksoft">
                   <PartyDot abbr={m.party?.abbr} />
-                  <span className="hidden sm:inline">{m.party?.nameBn ?? m.party?.abbr ?? '—'}</span>
-                  <span className="sm:hidden">{m.party?.abbr ?? '—'}</span>
+                  <span className="hidden sm:inline">{m.party?.nameBn ?? m.party?.abbr ?? 'দল নেই'}</span>
+                  <span className="sm:hidden">{m.party?.abbr ?? 'দল নেই'}</span>
                 </span>
               </div>
               {prior.map((t) => (
@@ -359,8 +359,8 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                   </span>
                   <span className="shrink-0 flex items-center gap-2 text-[13px] font-semibold text-inksoft">
                     <PartyDot abbr={t.partyAbbr} />
-                    <span className="hidden sm:inline">{t.partyNameBn ?? t.partyAbbr ?? '—'}</span>
-                    <span className="sm:hidden">{t.partyAbbr ?? '—'}</span>
+                    <span className="hidden sm:inline">{t.partyNameBn ?? t.partyAbbr ?? 'দল নেই'}</span>
+                    <span className="sm:hidden">{t.partyAbbr ?? 'দল নেই'}</span>
                   </span>
                 </div>
               ))}
@@ -379,7 +379,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 : prior.length
                   ? `সংসদের তথ্যভান্ডার অনুযায়ী এটি ${parliamentOrdinal(prior.length + 1).replace(' সংসদ', '')} মেয়াদ। `
                   : 'সংসদের তথ্যভান্ডারে এই সদস্যের আগের কোনো মেয়াদ পাওয়া যায়নি। '}
-              সেখানে ৪র্থ, ৫ম ও ৭ম থেকে ১২শ সংসদের রেকর্ড আছে; ১ম–৩য় ও ৬ষ্ঠ সংসদের তালিকা নেই, তাই তার আগের মেয়াদ থাকলে এখানে দেখা যাবে না।
+              সেখানে ৪র্থ, ৫ম ও ৭ম থেকে ১২শ সংসদের রেকর্ড আছে; ১ম থেকে ৩য় ও ৬ষ্ঠ সংসদের তালিকা নেই, তাই তার আগের মেয়াদ থাকলে এখানে দেখা যাবে না।
             </p>
           </section>
 
@@ -420,9 +420,9 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 {notices.map((n) => (
                   <div key={n.id} className="px-5 py-3.5 flex items-start gap-4">
                     <span className="grow min-w-0 flex flex-col gap-0.5">
-                      <span className="text-[14.5px] font-medium wrap-anywhere">{n.titleBn ?? n.titleEn}</span>
+                      <span className="text-[14.5px] font-medium wrap-anywhere">{bnText(n.titleBn) ?? n.titleEn}</span>
                       <span className="text-[12.5px] text-muted">
-                        {dateBn(n.date) ?? 'তারিখ নেই'}{n.category ? ` · ${n.category}` : ''}
+                        {dateBn(n.date) ?? 'তারিখ নেই'}{n.category ? `, ${NOTICE_CATEGORY_BN[n.category] ?? n.category}` : ''}
                       </span>
                     </span>
                     {n.pdfUrl && <DocLink href={n.pdfUrl}>PDF</DocLink>}
@@ -440,7 +440,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
           {m.seat && !m.seat.reserved && (
             <section className="flex flex-col gap-4">
               <div className="flex justify-between items-baseline gap-4">
-                <H2>আসন · {m.seat.nameBn}</H2>
+                <H2>আসন: {m.seat.nameBn}</H2>
                 <Link href={`/ason/${m.seat.slug}`} className="text-[14px] font-semibold text-brand hover:underline whitespace-nowrap">
                   আসনের পাতা →
                 </Link>
