@@ -192,7 +192,7 @@ export default function ElectionPage() {
         </p>
       </section>
 
-      <section className="mt-10 pb-14 flex flex-col gap-5">
+      <section id="jela" className="mt-10 pb-14 flex flex-col gap-5">
         <div className="flex items-baseline justify-between gap-4">
           <h2 className="display text-[26px] font-bold">জেলা অনুযায়ী আসন</h2>
           <span className="text-[14px] text-muted tnum">{bn(districts.length)} জেলা</span>

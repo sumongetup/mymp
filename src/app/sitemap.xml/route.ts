@@ -36,6 +36,7 @@ export function GET() {
     { path: '/parisonkhan', changefreq: 'weekly', priority: 0.8 },
     { path: '/songbad', changefreq: 'daily', priority: 0.6 },
     { path: '/somporke', changefreq: 'monthly', priority: 0.4 },
+    { path: '/sutro', changefreq: 'monthly', priority: 0.4 },
     { path: '/jogajog', changefreq: 'monthly', priority: 0.4 },
     { path: '/gopaniyota', changefreq: 'yearly', priority: 0.2 },
     // Google Images finds each member's official photo from here.

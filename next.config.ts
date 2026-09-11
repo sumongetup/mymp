@@ -21,6 +21,9 @@ const legacyRedirects = [
   { source: '/contact', destination: '/jogajog', permanent: true },
   { source: '/privacy', destination: '/gopaniyota', permanent: true },
   { source: '/terms', destination: '/gopaniyota', permanent: true },
+  // English paths from the footer spec (2026-09-12) that the site spells in Bangla.
+  { source: '/election-2026', destination: '/nirbachon', permanent: true },
+  { source: '/sources', destination: '/sutro', permanent: true },
   // The old Laravel admin lived at /admin/login too; that path is now the real
   // admin panel, so there is deliberately no redirect for /admin here.
 
