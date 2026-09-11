@@ -790,7 +790,7 @@ async function main() {
   const searchIndex = [
     ...seats.map((s) => ['seat', s.nameBn ?? '', s.nameEn ?? '', `/ason/${s.slug}`, s.reserved ? 'সংরক্ষিত আসন' : 'আসন']),
     ...members.map((m) => ['member', m.nameBn ?? '', m.nameEn ?? '', `/mp/${m.slug}`,
-      [m.seat?.nameBn, m.party?.abbr, m.resignedOn ? 'পদত্যাগ করেছেন' : null].filter(Boolean).join(' · ')]),
+      [m.seat?.nameBn, m.party?.abbr, m.resignedOn ? 'পদত্যাগ করেছেন' : null].filter(Boolean).join(', ')]),
     ...parties.map((p) => ['party', p.nameBn ?? '', `${p.nameEn ?? ''} ${p.abbr}`, `/dol/${p.slug}`, 'দল']),
     ...[...districts].map(([en, bnName]) => ['district', bnName, en, `/jela/${slugify(en)}`, 'জেলা']),
   ];
