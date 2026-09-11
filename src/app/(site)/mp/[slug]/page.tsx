@@ -13,6 +13,8 @@ import { ResultCard, sourceOf } from '@/components/results';
 import { introOf } from '@/lib/intro';
 import MemberPhoto from '@/components/MemberPhoto';
 import Icon from '@/components/Icon';
+import ShareButtons from '@/components/ShareButtons';
+import { siteUrl } from '@/lib/site';
 
 export function generateStaticParams() {
   return allMembers.map((m) => ({ slug: m.slug }));
@@ -212,6 +214,13 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               ))}
             </div>
           )}
+          <div className="pt-1">
+            <ShareButtons
+              url={`${siteUrl}/mp/${m.slug}`}
+              title={`${m.nameBn ?? m.nameEn} · আমার এমপি`}
+              text={[m.nameBn ?? m.nameEn, m.seat?.nameBn, m.party?.nameBn].filter(Boolean).join(' · ')}
+            />
+          </div>
         </div>
       </header>
 
