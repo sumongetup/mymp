@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { memberShareImage, shareGraph, shareTwitter } from '@/lib/seo';
+import { memberPhotoImage, shareGraph, shareTwitter } from '@/lib/seo';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: PageProps<'/ason/[slug]'>): P
   return {
     title: name ? `${where} · ${name}` : s.vacantSince ? `${where} (শূন্য)` : where,
     alternates: { canonical: `/ason/${s.slug}` },
-    openGraph: shareGraph(`/ason/${s.slug}`, m ? memberShareImage(m) : null),
-    twitter: shareTwitter(m ? memberShareImage(m) : null),
+    openGraph: shareGraph(`/ason/${s.slug}`, m ? memberPhotoImage(m) : null),
+    twitter: shareTwitter(m ? memberPhotoImage(m) : null),
     description: name
       ? `${s.reserved ? `${s.nameBn}-এর` : `${s.nameBn} আসনের`} সংসদ সদস্য ${name}${m?.party?.nameBn ? `, ${m.party.nameBn}` : ''}।${won} ${s.reserved ? 'দল ও সংসদের তথ্য।' : 'প্রার্থীদের ভোট, আগের সংসদ সদস্য ও আসনের এলাকা।'}`
       : `${where} ${s.vacantSince ? `${dateBn(s.vacantSince)} থেকে শূন্য` : 'এখন শূন্য'}। ত্রয়োদশ জাতীয় সংসদ; আসনের নির্বাচনী ফল ও আগের সংসদ সদস্য।`,

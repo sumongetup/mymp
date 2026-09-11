@@ -1,9 +1,7 @@
 name: Sangsad worker
 
 # Nightly refresh of the সংসদ engine behind mymp.bd from parliament.gov.bd,
-# and on demand. Runs the parliament jobs in order, then redraws the link-preview
-# cards of members whose photo, name, seat or party changed (Chrome is on the
-# runner image); each job records itself
+# and on demand. Runs the parliament jobs in order; each job records itself
 # in ingest_runs. Reads the repository secrets SANGSAD_DATABASE_URL,
 # SANGSAD_SUPABASE_URL and SANGSAD_SUPABASE_SERVICE_ROLE_KEY.
 
@@ -52,7 +50,6 @@ jobs:
           pnpm worker parliament
           pnpm worker parliament:photos
           pnpm worker parliament:report
-          pnpm worker og:cards
       - name: Rebuild mymp.bd from the fresh copy
         if: github.event_name == 'schedule' && env.MYMP_DEPLOY_HOOK_URL != ''
         run: curl -fsS -X POST "$MYMP_DEPLOY_HOOK_URL" > /dev/null && echo 'mymp.bd rebuild requested'
