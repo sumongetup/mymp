@@ -30,6 +30,23 @@ export interface SearchProvider {
 
 const UA = 'mymp-feed/1.0 (+https://mymp.bd)';
 
+/**
+ * What the provider actually complained about. A bare status code sends the
+ * next person hunting; these APIs say plainly whether a key is wrong, an API
+ * is not enabled for the project, or a quota is spent.
+ */
+async function why(res: Response): Promise<string> {
+  try {
+    const body = await res.text();
+    const json = JSON.parse(body) as { error?: { message?: string; status?: string; errors?: { reason?: string; message?: string }[] } };
+    const e = json.error;
+    const parts = [e?.status, e?.message, e?.errors?.[0]?.reason].filter(Boolean);
+    return parts.length ? parts.join(' — ').slice(0, 220) : body.slice(0, 200);
+  } catch {
+    return 'no message';
+  }
+}
+
 const iso = (v: unknown): string | null => {
   if (typeof v !== 'string') return null;
   const t = Date.parse(v);
@@ -47,7 +64,7 @@ function bing(key: string): SearchProvider {
       url.searchParams.set('mkt', 'bn-BD');
       url.searchParams.set('sortBy', 'Date');
       const res = await fetch(url, { headers: { 'Ocp-Apim-Subscription-Key': key, 'user-agent': UA }, signal: AbortSignal.timeout(20000) });
-      if (!res.ok) throw new Error(`bing ${res.status}`);
+      if (!res.ok) throw new Error(`bing ${res.status}: ${await why(res)}`);
       const json = (await res.json()) as { value?: { name: string; url: string; description?: string; datePublished?: string; provider?: { name: string }[] }[] };
       return (json.value ?? []).map((v) => ({
         title: v.name,
@@ -73,7 +90,7 @@ function serpapi(key: string): SearchProvider {
       url.searchParams.set('num', String(limit));
       url.searchParams.set('api_key', key);
       const res = await fetch(url, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(25000) });
-      if (!res.ok) throw new Error(`serpapi ${res.status}`);
+      if (!res.ok) throw new Error(`serpapi ${res.status}: ${await why(res)}`);
       const json = (await res.json()) as { news_results?: { title: string; link: string; snippet?: string; date?: string; source?: { name?: string } }[] };
       return (json.news_results ?? []).map((v) => ({
         title: v.title,
@@ -98,7 +115,7 @@ function google(key: string, cx: string): SearchProvider {
       url.searchParams.set('num', String(Math.min(limit, 10)));
       url.searchParams.set('sort', 'date');
       const res = await fetch(url, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(20000) });
-      if (!res.ok) throw new Error(`google ${res.status}`);
+      if (!res.ok) throw new Error(`google ${res.status}: ${await why(res)}`);
       const json = (await res.json()) as { items?: { title: string; link: string; snippet?: string; pagemap?: { metatags?: Record<string, string>[] }; displayLink?: string }[] };
       return (json.items ?? []).map((v) => ({
         title: v.title,
