@@ -46,15 +46,13 @@ export function EntityEditor({
                 multiline={f.multiline}
                 type={f.url ? 'url' : 'text'}
                 badge={o ? <Badge tone="good">হাতে সম্পাদিত</Badge> : undefined}
-                hint={o ? `সংসদের মান: ${snapshot[f.key] || '(নেই)'} · বদলেছেন ${when(o.updated_at)}` : f.hint}
+                hint={o ? `সংসদের মান: ${snapshot[f.key] || '(নেই)'}, বদলেছেন ${when(o.updated_at)}` : f.hint}
               />
               <input type="hidden" name={`current__${f.key}`} value={value ?? ''} />
               {o && (
                 <button
                   type="submit"
-                  name="field"
-                  value={f.key}
-                  formAction={revertOverride}
+                  formAction={revertOverride.bind(null, f.key)}
                   className="self-start text-[12.5px] font-semibold text-brand hover:underline"
                 >
                   {f.url ? 'লিংক মুছুন' : 'সংসদের মানে ফেরান'}

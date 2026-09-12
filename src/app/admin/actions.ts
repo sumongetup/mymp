@@ -148,11 +148,13 @@ export async function importSocialLinks(_prev: SocialImportState, fd: FormData):
   return { saved, unchanged, lines };
 }
 
-export async function revertOverride(fd: FormData) {
+// The field comes bound from the button (`revertOverride.bind(null, key)`), not as a
+// name/value pair: React replaces a formAction button's name with its own action id,
+// so `fd.get('field')` was always empty and every revert threw "bad field".
+export async function revertOverride(field: string, fd: FormData) {
   const me = await requireAdmin();
   const type = str(fd, 'entity_type') as EntityType;
   const id = str(fd, 'entity_id');
-  const field = str(fd, 'field');
   if (!EDITABLE[type]?.some((f) => f.key === field)) throw new Error('bad field');
   // The revert button submits the whole edit form, so the current value travels as current__<field>.
   await clearOverride(me, type, id, field, orNull(str(fd, `current__${field}`)));
