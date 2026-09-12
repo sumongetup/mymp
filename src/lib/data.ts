@@ -203,6 +203,8 @@ export const postsCheckedOnBn = () =>
 export const meta = metaJson as {
   parliamentNo: number;
   syncedAt: string;
+  /** When the site was last built from that snapshot; the mobile app's cache key. */
+  builtAt: string;
   source: string;
   counts: Record<string, number>;
 };
