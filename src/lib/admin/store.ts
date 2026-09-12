@@ -121,7 +121,7 @@ export interface AdminUserRow {
   created_at: string;
 }
 
-interface Actor { id: string; email: string }
+export interface Actor { id: string; email: string }
 
 export async function audit(a: Actor, entry: Omit<AuditRow, 'id' | 'actor_email' | 'created_at'>) {
   await supabaseAdmin().from('audit_log').insert({ actor: a.id, actor_email: a.email, ...entry });

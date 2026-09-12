@@ -5,6 +5,9 @@ import { requireAdmin } from '@/lib/admin/auth';
 import { overridesFor, isHidden } from '@/lib/admin/store';
 import { AdminPage, Panel, Button, Notice, when } from '@/app/admin/ui';
 import { EntityEditor, EditFlags, HidePanel, AuditLink } from '../../EntityEditor';
+import { variantsFor } from '@/lib/admin/feed';
+import { addNameVariant, deleteNameVariant } from '@/app/admin/actions';
+import Link from 'next/link';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const m = getMemberById((await params).id);
@@ -24,7 +27,7 @@ export default async function EditMember({
   const m = getMemberById(id);
   if (!m) notFound();
 
-  const [overrides, hidden] = await Promise.all([overridesFor('member', id), isHidden('member', id)]);
+  const [overrides, hidden, variants] = await Promise.all([overridesFor('member', id), isHidden('member', id), variantsFor(id)]);
 
   return (
     <AdminPage
@@ -72,6 +75,41 @@ export default async function EditMember({
             </dl>
             <p className="mt-3 text-[12.5px] text-muted">
               এগুলো এখানে বদলানো যায় না; প্রতি সিঙ্কে সংসদের তথ্যভান্ডার থেকে আসে।
+            </p>
+          </Panel>
+
+          <Panel title="নামের ভিন্ন রূপ">
+            <p className="text-[13px] text-muted leading-relaxed pb-3">
+              সংবাদের শিরোনামে এই সদস্যের নাম যেভাবে লেখা হয়। সম্মানসূচক শব্দ (মোঃ, ডা, ব্যারিস্টার) ও বিভক্তি নিজে থেকেই বাদ যায়,
+              তাই শুধু ডাকনাম বা সংবাদমাধ্যমের চেনা বানানটি যোগ করুন। অন্তত দুই শব্দ লাগবে; এক শব্দে কাউকে চেনা যায় না।
+            </p>
+            <ul className="flex flex-col gap-1.5 pb-3">
+              {variants.length === 0 ? (
+                <li className="text-[13.5px] text-muted">কোনো রূপ নেই।</li>
+              ) : variants.map((v) => (
+                <li key={v.id} className="flex items-start justify-between gap-3 text-[14px] border-b border-rulesoft pb-1.5">
+                  <span className="min-w-0 break-words">
+                    {v.variant}
+                    <span className="text-muted text-[12px]"> ({v.source === 'official' ? 'তালিকা থেকে' : v.source === 'manual' ? 'হাতে লেখা' : 'শেখা'})</span>
+                  </span>
+                  {v.source !== 'official' && (
+                    <form action={deleteNameVariant}>
+                      <input type="hidden" name="id" value={v.id} />
+                      <input type="hidden" name="mp_id" value={id} />
+                      <input type="hidden" name="variant" value={v.variant} />
+                      <button className="text-[12.5px] font-semibold text-brand hover:underline">সরান</button>
+                    </form>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <form action={addNameVariant} className="flex flex-wrap items-center gap-2">
+              <input type="hidden" name="mp_id" value={id} />
+              <input name="variant" required placeholder="যেমন: মঈন খান" className="h-10 grow min-w-0 basis-[140px] rounded-lg border border-rule bg-surface px-3 text-[14px]" />
+              <button className="h-10 px-3.5 rounded-lg border border-rule text-[13.5px] font-semibold hover:border-ink">যোগ করুন</button>
+            </form>
+            <p className="pt-3 text-[13px]">
+              <Link href={`/admin/feed?mp=${id}`} className="text-brand font-semibold hover:underline">এই সদস্যের ফিড দেখুন →</Link>
             </p>
           </Panel>
 

@@ -164,7 +164,7 @@ export function Field({
       ) : (
         <input name={name} type={type} defaultValue={defaultValue ?? ''} className={inputClass} required={required} />
       )}
-      {hint && <span className="text-[12.5px] text-muted leading-relaxed">{hint}</span>}
+      {hint && <span className="text-[12.5px] text-muted leading-relaxed min-w-0 break-words">{hint}</span>}
     </label>
   );
 }
@@ -188,8 +188,9 @@ export function Notice({ tone, children }: { tone: 'good' | 'warn' | 'bad'; chil
   const icon = { good: 'check', warn: 'info', bad: 'info' }[tone];
   return (
     <div className={`px-4 py-3 rounded-lg border-s-[3px] text-[14px] leading-relaxed flex gap-2.5 ${look}`}>
-      <Icon name={icon} size={17} className="mt-[3px]" />
-      <span>{children}</span>
+      <Icon name={icon} size={17} className="mt-[3px] shrink-0" />
+      {/* min-w-0 or a long Bangla sentence pushes the notice past the page. */}
+      <span className="min-w-0 break-words">{children}</span>
     </div>
   );
 }

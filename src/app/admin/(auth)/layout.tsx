@@ -19,6 +19,9 @@ const GROUPS: { label: string; items: (NavGroup['items'][number] & { super?: boo
     label: 'প্রকাশনা',
     items: [
       { href: '/admin/news', label: 'সংবাদ', icon: 'file' },
+      { href: '/admin/feed', label: 'সংবাদ ফিড', icon: 'layers' },
+      { href: '/admin/feed/review', label: 'ফিড যাচাই', icon: 'check' },
+      { href: '/admin/feed/runs', label: 'ফিড সংগ্রহ', icon: 'history' },
       { href: '/admin/corrections', label: 'সংশোধন অনুরোধ', icon: 'message' },
       { href: '/admin/results', label: 'নির্বাচনের ফল', icon: 'chart' },
       { href: '/admin/sync', label: 'সিঙ্ক ও প্রকাশ', icon: 'refresh' },

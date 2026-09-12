@@ -90,7 +90,7 @@ export async function ingest(items: FeedItemInput[], index: FeedIndex, counts: I
         mpId: m.mpId,
         score: m.score,
         lowConfidence: m.lowConfidence || overCap,
-        signals: overCap ? [...m.signals, { signal: 'daily-cap', points: 0, detail: `${today} already today` }] : m.signals,
+        signals: overCap ? [...m.signals, { signal: 'daily-cap', points: 0, detail: `আজ ইতিমধ্যে ${today}টি` }] : m.signals,
       });
       if (result === 'new') {
         counts.attached++;

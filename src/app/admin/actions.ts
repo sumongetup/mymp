@@ -10,6 +10,13 @@ import {
   upsertResult, setResultStatus, socialOverrides, dropSocialSource, dropBioFromWiki, setPostAlias,
 } from '@/lib/admin/store';
 import { runPostsSync } from '@/lib/posts/sync';
+import { runRssCollector } from '@/lib/feed/collect';
+import { upsertItem } from '@/lib/feed/store';
+import { fetchItemForUrl } from '@/lib/feed/fetchItem';
+import { variantTokens } from '@/lib/feed/matchMp';
+import {
+  setAttachmentStatus, confirmAttachment, setPinned, attachByHand, bulkHide, addVariant, removeVariant,
+} from '@/lib/admin/feed';
 import { SOCIAL_HOSTS, validSocialUrl, parseSocialLines } from '@/lib/admin/social-import';
 import { allMembers } from '@/lib/data';
 
@@ -381,4 +388,119 @@ export async function changeResultStatus(fd: FormData) {
   await setResultStatus(me, seatNo, parliamentNo, status);
   revalidatePath('/admin/results');
   redirect(`/admin/results/${seatNo}?p=${parliamentNo}&status=${status}`);
+}
+
+/* ---------------- the news and video feed ---------------- */
+
+/**
+ * The admin corrects the feed, it does not approve it: items are live as soon
+ * as they are collected. Hiding, removing, pinning and attaching by hand all
+ * leave the item in the database with a reason and an audit row.
+ */
+export async function hideFeedItem(fd: FormData) {
+  const me = await requireAdmin();
+  const itemId = Number(str(fd, 'item_id'));
+  const mpId = str(fd, 'mp_id');
+  const status = str(fd, 'status') as 'visible' | 'hidden' | 'removed';
+  if (!itemId || !mpId || !['visible', 'hidden', 'removed'].includes(status)) return;
+  await setAttachmentStatus(me, itemId, mpId, status, orNull(str(fd, 'reason')));
+  revalidatePath('/admin/feed');
+  revalidatePath('/admin/feed/review');
+}
+
+export async function confirmFeedItem(fd: FormData) {
+  const me = await requireAdmin();
+  const itemId = Number(str(fd, 'item_id'));
+  const mpId = str(fd, 'mp_id');
+  if (!itemId || !mpId) return;
+  await confirmAttachment(me, itemId, mpId);
+  revalidatePath('/admin/feed/review');
+  revalidatePath('/admin/feed');
+}
+
+export async function pinFeedItem(fd: FormData) {
+  const me = await requireAdmin();
+  const itemId = Number(str(fd, 'item_id'));
+  const mpId = str(fd, 'mp_id');
+  if (!itemId || !mpId) return;
+  const pinned = str(fd, 'pinned') === '1';
+  const until = orNull(str(fd, 'until'));
+  await setPinned(me, itemId, mpId, pinned, until ? new Date(`${until}T23:59:59+06:00`).toISOString() : null);
+  revalidatePath('/admin/feed');
+}
+
+export async function attachFeedItem(fd: FormData) {
+  const me = await requireAdmin();
+  const itemId = Number(str(fd, 'item_id'));
+  const mpId = str(fd, 'mp_id');
+  if (!itemId || !mpId || !allMembers.some((m) => m.id === mpId)) return;
+  await attachByHand(me, itemId, mpId);
+  revalidatePath('/admin/feed');
+  revalidatePath('/admin/feed/review');
+}
+
+/** Paste an address, pick a member: the item is fetched and added. */
+export async function addFeedItemByUrl(_prev: ActionState, fd: FormData): Promise<ActionState> {
+  const me = await requireAdmin();
+  const url = str(fd, 'url').trim();
+  const mpId = str(fd, 'mp_id');
+  const title = str(fd, 'title').trim();
+  if (!/^https:\/\/[^\s]+$/.test(url)) return { error: 'পুরো ঠিকানা দিন, https:// দিয়ে শুরু।' };
+  if (!allMembers.some((m) => m.id === mpId)) return { error: 'সংসদ সদস্য বাছুন।' };
+  try {
+    const fetched = await fetchItemForUrl(url, title);
+    const stored = await upsertItem(fetched);
+    if (!stored) return { error: 'যুক্ত করা যায়নি।' };
+    await attachByHand(me, stored.id, mpId);
+    revalidatePath('/admin/feed');
+    return { ok: 'যুক্ত হয়েছে। সদস্যের পাতায় সঙ্গে সঙ্গে দেখা যাবে।' };
+  } catch (e) {
+    return { error: `আনা গেল না: ${(e as Error).message}` };
+  }
+}
+
+export async function bulkHideFeed(_prev: ActionState, fd: FormData): Promise<ActionState> {
+  const me = await requireAdmin();
+  const outlet = orNull(str(fd, 'outlet'));
+  const from = orNull(str(fd, 'from'));
+  const to = orNull(str(fd, 'to'));
+  const reason = str(fd, 'reason').trim();
+  if (!outlet && !from && !to) return { error: 'সংবাদমাধ্যম বা তারিখ বাছুন।' };
+  if (!reason) return { error: 'কারণ লিখুন।' };
+  const n = await bulkHide(me, { outlet: outlet ?? undefined, from: from ?? undefined, to: to ?? undefined }, reason);
+  revalidatePath('/admin/feed');
+  return { ok: `${n}টি সংযুক্তি লুকানো হয়েছে।` };
+}
+
+export async function addNameVariant(fd: FormData) {
+  const me = await requireAdmin();
+  const mpId = str(fd, 'mp_id');
+  const variant = str(fd, 'variant').trim();
+  if (!mpId || variant.split(/\s+/).length < 2) return;
+  await addVariant(me, mpId, variantTokens(variant).join(' '));
+  revalidatePath(`/admin/members/${mpId}`);
+}
+
+export async function deleteNameVariant(fd: FormData) {
+  const me = await requireAdmin();
+  const id = Number(str(fd, 'id'));
+  const mpId = str(fd, 'mp_id');
+  if (!id || !mpId) return;
+  await removeVariant(me, id, mpId, str(fd, 'variant'));
+  revalidatePath(`/admin/members/${mpId}`);
+}
+
+/** Runs the news collector now, the same run the schedule makes. */
+export async function runFeedCollectorNow(): Promise<ActionState> {
+  const me = await requireAdmin();
+  try {
+    const r = await runRssCollector({ trigger: 'admin', budgetMs: 50_000 });
+    await audit(me, { action: 'feed.collect', entity_type: null, entity_id: r.runId ? String(r.runId) : null, field: null, old_value: null, new_value: r.status });
+    revalidatePath('/admin/feed/runs');
+    const bnN = (n: number) => String(n).replace(/\d/g, (d) => '০১২৩৪৫৬৭৮৯'[Number(d)]!);
+    if (r.status !== 'ok') return { error: `সংগ্রহ ${r.status === 'aborted' ? 'থামানো হয়েছে' : 'ব্যর্থ'}: ${r.errors.map((e) => e.message).join('; ')}` };
+    return { ok: `${bnN(r.itemsFound)}টি দেখা হয়েছে, ${bnN(r.itemsNew)}টি নতুন, ${bnN(r.itemsAttached)}টি সদস্যের সঙ্গে যুক্ত (${bnN(r.lowConfidence)}টি যাচাইয়ের অপেক্ষায়)।` };
+  } catch (e) {
+    return { error: (e as Error).message };
+  }
 }
