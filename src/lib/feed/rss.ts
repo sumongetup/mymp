@@ -72,6 +72,22 @@ export function parseFeed(xml: string): RssItem[] {
   return items;
 }
 
+/**
+ * A Google News sitemap: what an outlet publishes for machines, with the
+ * headline and the time beside each address. bdnews24 has one and no feed, so
+ * this reads it exactly as if it were a feed.
+ */
+export function parseNewsSitemap(xml: string): RssItem[] {
+  const items: RssItem[] = [];
+  for (const block of xml.match(/<url>[\s\S]*?<\/url>/gi) ?? []) {
+    const url = tag(block, 'loc');
+    const title = tag(block, 'news:title');
+    if (!url || !title || !/^https?:\/\//i.test(url)) continue;
+    items.push({ title, url, publishedAt: toIso(tag(block, 'news:publication_date')), summary: null });
+  }
+  return items;
+}
+
 export const FEED_UA = 'mymp-feed/1.0 (+https://mymp.bd)';
 
 /** One feed, with a timeout. Errors come back as a message, never as a throw. */
@@ -86,7 +102,7 @@ export async function fetchFeed(url: string, timeoutMs = 20000): Promise<{ items
     });
     if (!res.ok) return { items: [], error: `HTTP ${res.status}` };
     const text = await res.text();
-    const items = parseFeed(text);
+    const items = /<urlset/i.test(text) ? parseNewsSitemap(text) : parseFeed(text);
     return items.length ? { items } : { items: [], error: 'no items in the feed' };
   } catch (e) {
     const err = e as Error;

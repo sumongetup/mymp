@@ -8,8 +8,12 @@
  * বাংলাদেশ প্রতিদিন, মানবজমিন — are in that second group, along with bdnews24,
  * সময় টিভি, কালবেলা and বাংলানিউজ২৪.
  *
- * `weight` is not a quality judgement; it decides nothing. It is there so the
- * admin can see at a glance which outlets flood the feed.
+ * Two free routes to that second group were tried and rejected: Google News
+ * RSS answers a name query with a hundred items and reaches every one of these
+ * outlets, but each link is an opaque news.google.com redirect whose target
+ * cannot be recovered without reverse-engineering an internal endpoint, so the
+ * feed could not link to the source; and bdnews24's news sitemap parses
+ * perfectly but the host answers 403 to anything but a browser.
  */
 export interface NewsSource {
   /** Stable key, stored on every item. */
@@ -69,6 +73,10 @@ export const NEWS_SOURCES: NewsSource[] = [
   { key: 'kalerkantho', nameBn: 'কালের কণ্ঠ', homepage: 'https://www.kalerkantho.com', searchOnly: true, lang: 'bn' },
   { key: 'bdpratidin', nameBn: 'বাংলাদেশ প্রতিদিন', homepage: 'https://www.bd-pratidin.com', searchOnly: true, lang: 'bn' },
   { key: 'mzamin', nameBn: 'মানবজমিন', homepage: 'https://mzamin.com', searchOnly: true, lang: 'bn' },
+  // Publishes a Google News sitemap (which the reader below can parse) but
+  // answers 403 to anything that is not a browser, whatever User-Agent it
+  // sends. Getting past that would mean disguising the client, so it stays
+  // here for the search collector.
   { key: 'bdnews24', nameBn: 'বিডিনিউজ২৪', homepage: 'https://bdnews24.com', searchOnly: true, lang: 'bn' },
   { key: 'somoynews', nameBn: 'সময় টিভি', homepage: 'https://www.somoynews.tv', searchOnly: true, lang: 'bn' },
   { key: 'jamuna', nameBn: 'যমুনা টিভি', homepage: 'https://jamuna.tv', searchOnly: true, lang: 'bn' },
