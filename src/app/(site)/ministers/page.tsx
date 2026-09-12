@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { shareGraph } from '@/lib/seo';
 import { posts, currentPosts, getMemberById, bn, dateBn, initial, partyColor, postsCheckedOnBn, type PostEntry } from '@/lib/data';
 import { ministryKey, normalizeName } from '@/lib/posts/names';
-import { Page, PageHead, Card, Stat } from '@/components/ui';
+import { Page, PageHead, Card } from '@/components/ui';
 import MinistersBrowser, { type MinisterGroup, type MinisterPerson } from '@/components/MinistersBrowser';
 import { CABINET_PAGE_FOR_READERS } from '../../../../config/sync-sources';
 
@@ -112,36 +112,59 @@ export default function MinistersPage() {
       <PageHead
         eyebrow="সরকার"
         title="মন্ত্রিসভা"
-        lede="প্রধানমন্ত্রী, মন্ত্রী, প্রতিমন্ত্রী, উপমন্ত্রী ও উপদেষ্টারা, কে কোন মন্ত্রণালয়ে এবং কবে থেকে। তালিকা মন্ত্রিপরিষদ বিভাগের ওয়েবসাইট থেকে দিনে কয়েকবার মিলিয়ে হালনাগাদ হয়।"
+        lede="কে কোন মন্ত্রণালয়ের দায়িত্বে, কবে থেকে, আর কে কোন আসনের সংসদ সদস্য। তালিকাটি মন্ত্রিপরিষদ বিভাগের ওয়েবসাইট থেকে দিনে কয়েকবার মিলিয়ে নেওয়া হয়; কোনো নাম হাতে বসানো হয় না।"
       />
 
-      <div className="pt-6 grid grid-cols-2 sm:grid-cols-5 gap-3">
-        {GROUPS.map((t) => <Stat key={t} label={t} value={bn(count(t))} />)}
+      <div className="pt-6 flex flex-col gap-3">
+        <div className="rounded-card border border-rule bg-surface divide-y sm:divide-y-0 sm:divide-x divide-rulesoft flex flex-col sm:flex-row overflow-hidden rtl:sm:divide-x-reverse">
+          {GROUPS.map((t) => (
+            <div key={t} className="grow px-4 py-3.5 flex items-baseline justify-between sm:flex-col sm:items-start sm:gap-1">
+              <span className="text-[13px] text-muted">{t}</span>
+              <span className="display text-[24px] font-bold leading-none">
+                {count(t) ? bn(count(t)) : <span className="text-[15px] font-normal text-muted">এখন কেউ নেই</span>}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[13px] text-muted">
+          {checked && <span>সরকারি পদ সর্বশেষ যাচাই: {checked}</span>}
+          <span>
+            সূত্র:{' '}
+            <a href={CABINET_PAGE_FOR_READERS} target="_blank" rel="noopener noreferrer" className="underline decoration-rule underline-offset-2 hover:text-brand">
+              মন্ত্রিপরিষদ বিভাগ ↗
+            </a>
+          </span>
+          {(posts.pending?.length ?? 0) > 0 && (
+            <span>{bn(posts.pending!.length)} জন সংসদ সদস্য কিনা তা এখনো যাচাই হচ্ছে; তাঁদের নামের পাশে তা লেখা আছে।</span>
+          )}
+          <Link href="/mp" className="font-semibold text-brand hover:underline">সব সংসদ সদস্য →</Link>
+        </div>
       </div>
-      <p className="mt-3 text-[13px] text-muted">
-        {checked ? <>সরকারি পদ সর্বশেষ যাচাই: {checked}, </> : null}
-        সূত্র:{' '}
-        <a href={CABINET_PAGE_FOR_READERS} target="_blank" rel="noopener noreferrer" className="underline decoration-rule underline-offset-2 hover:text-brand">
-          মন্ত্রিপরিষদ বিভাগ ↗
-        </a>
-        {(posts.pending?.length ?? 0) > 0 && <>। {bn(posts.pending!.length)} জন সংসদ সদস্য কিনা তা এখনো যাচাই হচ্ছে; তাঁদের নামের পাশে তা লেখা আছে।</>}
-      </p>
 
       <div className="pt-8 pb-10">
         <MinistersBrowser groups={data.groups} ministries={data.ministries} />
       </div>
 
       <section className="pb-14 flex flex-col gap-4" aria-labelledby="changes">
-        <h2 id="changes" className="display text-[24px]">পরিবর্তন</h2>
+        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <h2 id="changes" className="display text-[24px]">পরিবর্তন</h2>
+          <p className="text-[13.5px] text-muted">মন্ত্রিপরিষদ বিভাগের তালিকায় যেদিন যা বদলেছে।</p>
+        </div>
         <Card className="p-5 sm:p-6">
           {log.length === 0 ? (
             <p className="text-[14.5px] text-muted">এখনো কোনো পরিবর্তন লেখা হয়নি।</p>
           ) : (
-            <ol className="flex flex-col divide-y divide-rulesoft">
+            <ol className="flex flex-col">
               {log.map((c, i) => (
-                <li key={i} className="py-2.5 flex flex-col sm:flex-row sm:items-baseline gap-x-4 gap-y-0.5">
-                  <span className="shrink-0 sm:w-[150px] text-[13px] text-muted">{dateBn(c.date)}</span>
-                  <span className="text-[14.5px] leading-relaxed">
+                <li key={i} className="relative ps-6 pb-5 last:pb-0">
+                  <span
+                    aria-hidden="true"
+                    className={`absolute start-0 top-[7px] w-2.5 h-2.5 rounded-full ${c.kind === 'end' ? 'bg-rule' : 'bg-brand'}`}
+                  />
+                  {i < log.length - 1 && <span aria-hidden="true" className="absolute start-[4.5px] top-[19px] bottom-0 w-px bg-rulesoft" />}
+                  <span className="block text-[12.5px] text-muted">{dateBn(c.date)}</span>
+                  <span className="block text-[14.5px] leading-relaxed">
                     {c.href ? <Link href={c.href} className="font-semibold hover:text-brand">{c.name}</Link> : <span className="font-semibold">{c.name}</span>}
                     {', '}
                     <span className={c.kind === 'end' ? 'text-muted' : ''}>{c.text}</span>
@@ -151,10 +174,12 @@ export default function MinistersPage() {
             </ol>
           )}
           <p className="mt-4 pt-3 border-t border-rule text-[12.5px] text-muted leading-relaxed">
-            দায়িত্ব পাওয়ার তারিখ মন্ত্রিপরিষদ বিভাগের তালিকার বণ্টনের তারিখ। কারও নাম তালিকা থেকে সরে গেলে যেদিন তা ধরা পড়ে, সেদিনকে দায়িত্ব শেষের তারিখ ধরা হয়।
+            দায়িত্ব পাওয়ার তারিখ মন্ত্রিপরিষদ বিভাগের তালিকার বণ্টনের তারিখ। কারও নাম তালিকা থেকে সরে গেলে যেদিন তা ধরা পড়ে,
+            সেদিনকে দায়িত্ব শেষের তারিখ ধরা হয়।
           </p>
         </Card>
       </section>
+
     </Page>
   );
 }
