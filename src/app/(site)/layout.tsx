@@ -72,7 +72,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
 
       <header className="sticky top-0 z-40 bg-surface border-b border-rule shadow-card">
         <div className="mx-auto max-w-[1200px] px-4 sm:px-5">
-          <div className="flex items-center gap-3 lg:gap-6 h-[60px] lg:h-16">
+          <div className="flex items-center gap-3 lg:gap-4 xl:gap-6 h-[60px] lg:h-16">
             <Brand />
 
             <nav aria-label="প্রধান" className="hidden lg:flex items-center gap-0.5 grow text-[14.5px] font-semibold">
@@ -80,7 +80,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-2.5 py-1.5 rounded-md text-inksoft hover:text-brand hover:bg-brandsoft transition-colors"
+                  className="px-2 xl:px-2.5 py-1.5 rounded-md whitespace-nowrap text-inksoft hover:text-brand hover:bg-brandsoft transition-colors"
                 >
                   {item.label}
                 </Link>
