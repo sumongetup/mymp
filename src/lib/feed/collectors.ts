@@ -214,14 +214,20 @@ export async function runSearchCollector(opts: { trigger?: string; perRun?: numb
   }
 
   await ingest(items, index, counts);
+  // A provider that refuses every call on permission grounds is a credential
+  // waiting to be sorted, not a broken collector: the run says so and the
+  // schedule stays green rather than turning red every hour.
+  const allRefused = errors.length >= slice.length && errors.every((e) => /403|PERMISSION_DENIED|401/.test(e.message));
   const result: RunResult = {
-    status: errors.length === slice.length ? 'failed' : 'ok',
+    status: allRefused ? 'aborted' : errors.length === slice.length ? 'failed' : 'ok',
     itemsFound: counts.found,
     itemsNew: counts.stored,
     itemsAttached: counts.attached,
     unmatched: counts.unmatched,
     lowConfidence: counts.lowConfidence,
-    errors,
+    errors: allRefused
+      ? [{ source: 'search', message: `the search provider refused every call: ${errors[0]!.message.replace(/^[^:]*: /, '')}` }]
+      : errors,
     detail: { members: slice.length, provider: provider.name, searches: slice.length },
   };
   await finishRun(run, result);

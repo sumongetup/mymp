@@ -37,7 +37,7 @@ export async function GET(req: Request) {
       : await runRssCollector({ trigger, budgetMs: 45_000 });
     // A collector with no key has not run rather than failed, so a schedule
     // that is waiting for a credential does not turn red every hour.
-    const waiting = r.status === 'aborted' && r.errors.some((e) => /is not set/.test(e.message));
+    const waiting = r.status === 'aborted' && r.errors.some((e) => /is not set|refused every call/.test(e.message));
     return NextResponse.json(
       {
         ok: r.status === 'ok' || waiting,
