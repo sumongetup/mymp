@@ -71,13 +71,14 @@ export const POST_WORDS: { word: string; matches: (post: string, ministry: strin
 export const TRUSTED_CHANNELS: { handle: string; name: string }[] = [
   // Every handle below was opened on youtube.com and the channel's own name
   // checked, after five guesses turned out to be 404s and one (@Channel24) was
-  // a private person in another country.
+  // a private person in another country. একাত্তর came from the outlet's own
+  // site; চ্যানেল ২৪ is left out because neither its site nor any spelling
+  // tried leads to a channel whose uploads can be read.
   { handle: '@somoytvnews', name: 'সময় টিভি' },
   { handle: '@JamunaTVbd', name: 'যমুনা টিভি' },
-  { handle: '@channel24news', name: 'চ্যানেল ২৪' },
   { handle: '@dbcnewstv', name: 'ডিবিসি নিউজ' },
   { handle: '@IndependentTelevision', name: 'ইনডিপেনডেন্ট টিভি' },
-  { handle: '@ekattortvbd', name: 'একাত্তর টিভি' },
+  { handle: '@EkattorTelevision', name: 'একাত্তর টিভি' },
   { handle: '@NTVbd', name: 'এনটিভি' },
   { handle: '@rtvnews', name: 'আরটিভি নিউজ' },
   { handle: '@news24bdtv', name: 'নিউজ২৪' },
