@@ -19,11 +19,16 @@ type Hb = typeof import('harfbuzzjs');
 let hbModule: Promise<Hb> | null = null;
 const harfbuzz = () => (hbModule ??= import('harfbuzzjs'));
 
-export const OG_FONT_FILES = {
-  bold: 'node_modules/@expo-google-fonts/noto-sans-bengali/700Bold/NotoSansBengali_700Bold.ttf',
-  regular: 'node_modules/@expo-google-fonts/noto-sans-bengali/400Regular/NotoSansBengali_400Regular.ttf',
-} as const;
-export type Weight = keyof typeof OG_FONT_FILES;
+/**
+ * One read per weight, each with a literal path, so the build traces exactly
+ * these two files into the function. A computed path such as
+ * join(process.cwd(), FILES[weight]) makes Turbopack trace the whole project.
+ */
+const OG_FONT_DATA = {
+  bold: () => readFileSync(join(process.cwd(), 'node_modules/@expo-google-fonts/noto-sans-bengali/700Bold/NotoSansBengali_700Bold.ttf')),
+  regular: () => readFileSync(join(process.cwd(), 'node_modules/@expo-google-fonts/noto-sans-bengali/400Regular/NotoSansBengali_400Regular.ttf')),
+};
+export type Weight = keyof typeof OG_FONT_DATA;
 
 interface LoadedFont {
   font: Font;
@@ -39,7 +44,7 @@ function loadFont(weight: Weight): Promise<LoadedFont> {
   if (!p) {
     p = (async () => {
       const hb = await harfbuzz();
-      const data = new Uint8Array(readFileSync(join(process.cwd(), OG_FONT_FILES[weight])));
+      const data = new Uint8Array(OG_FONT_DATA[weight]());
       const face = new hb.Face(new hb.Blob(data), 0);
       const font = new hb.Font(face);
       const { ascender, descender } = font.hExtents();
@@ -102,6 +107,8 @@ interface Options {
   opacity?: number;
   /** Line spacing as a multiple of the font size. */
   leading?: number;
+  /** Where a short line sits when the text wraps. Left by default. */
+  align?: 'left' | 'center';
 }
 
 /**
@@ -146,7 +153,7 @@ export async function bnTextImage(text: string, o: Options): Promise<TextImage> 
   const paths: string[] = [];
   lines.forEach((line, li) => {
     const baseline = ascent + li * lineHeight;
-    let x = 0;
+    let x = o.align === 'center' ? (width - line.width) / 2 : 0;
     for (const run of line.runs) {
       for (const g of run.glyphs) {
         const d = pathOf(f, g.id);

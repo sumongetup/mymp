@@ -1,13 +1,21 @@
 /**
- * A member's link-preview image, 1200x630: their photo in a white ring on the
- * left, name, constituency and party on the right, on the site green, with
- * everything inside the centre 630x630 square so a square crop (WhatsApp)
- * keeps the photo and the name. The Bangla text is shaped by HarfBuzz
- * (src/lib/og/banglaText.ts) because ImageResponse alone breaks Bangla
- * conjuncts. Drawn on first request and cached for a day.
+ * A member's link-preview image, 1200x630.
+ *
+ * Everything that identifies the person sits inside the centre 630x630 square,
+ * because WhatsApp shows a link as a square cut from the middle: the photo in a
+ * white ring, the office they hold, their name, their constituency, and their
+ * party's symbol. The wide card that Facebook and X show adds the site's mark
+ * on the left and the address on the right, outside that square, so nothing
+ * important is lost either way.
+ *
+ * The Bangla is shaped by HarfBuzz (src/lib/og/banglaText.ts) because
+ * ImageResponse alone breaks Bangla conjuncts. Drawn on first request and
+ * cached for a day.
  */
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { ImageResponse } from 'next/og';
-import { getMember } from '@/lib/data';
+import { getMember, currentPosts } from '@/lib/data';
 import { bnTextImage } from '@/lib/og/banglaText';
 import { constituencyBn, isIndependent, partyBn } from '@/lib/seo/mpDescription';
 
@@ -18,11 +26,69 @@ export function generateStaticParams() {
 }
 
 const BRAND = '#0f6a4b';
+const DARK = '#0a4e37';
+const W = 1200;
+const H = 630;
 const SAFE = 630;
-const PHOTO = 360;
-const RING = 6;
-const GAP = 28;
-const TEXT_WIDTH = SAFE - (PHOTO + 2 * RING) - GAP;
+
+// The photo sits above the name rather than beside it: a Bangla name is long,
+// and the square leaves only about 280px next to a portrait, which broke even
+// "তারেক রহমান" onto two lines.
+const PHOTO = 208;
+const RING = 5;
+const TEXT_WIDTH = SAFE - 96;
+
+const SYMBOL = 44;
+
+/**
+ * The party colours as literal values. partyColor() hands back a CSS variable,
+ * which the page can resolve and this image cannot: Satori has no stylesheet.
+ * Keep these in step with --color-p* in globals.css.
+ */
+const PARTY_COLOUR: Record<string, string> = {
+  BNP: '#1f7a4f',
+  BJEI: '#8cbf2a',
+  Ind: '#5b6fb5',
+  NCP: '#e0641f',
+};
+const OTHER_COLOUR = '#9a5fc7';
+
+// One literal path per logo, so the build bundles exactly these files with the
+// function; a computed path makes Turbopack trace the whole project.
+const LOGO: Record<string, () => Buffer> = {
+  BNP: () => readFileSync(join(process.cwd(), 'public/party/og/bnp.jpg')),
+  BJEI: () => readFileSync(join(process.cwd(), 'public/party/og/bjei.jpg')),
+  NCP: () => readFileSync(join(process.cwd(), 'public/party/og/ncp.jpg')),
+  BKM: () => readFileSync(join(process.cwd(), 'public/party/og/bkm.jpg')),
+  IMB: () => readFileSync(join(process.cwd(), 'public/party/og/imb.jpg')),
+  GOP: () => readFileSync(join(process.cwd(), 'public/party/og/gop.jpg')),
+  BJP: () => readFileSync(join(process.cwd(), 'public/party/og/bjp.jpg')),
+  KM: () => readFileSync(join(process.cwd(), 'public/party/og/km.jpg')),
+  PSM: () => readFileSync(join(process.cwd(), 'public/party/og/psm.jpg')),
+  JAGPA: () => readFileSync(join(process.cwd(), 'public/party/og/jagpa.jpg')),
+};
+
+const partySymbol = (abbr: string | null | undefined): string | null => {
+  const read = abbr ? LOGO[abbr] : undefined;
+  return read ? `data:image/jpeg;base64,${read().toString('base64')}` : null;
+};
+
+/** "পররাষ্ট্র মন্ত্রণালয়" is written "পররাষ্ট্রমন্ত্রী" when it names the person. */
+function officeOf(id: string): string | null {
+  const posts = currentPosts().filter((p) => p.memberId === id);
+  if (!posts.length) return null;
+  const gov = posts.find((p) => p.type === 'government');
+  const house = posts.find((p) => p.type === 'parliament');
+  if (gov) {
+    // Only a subject ministry merges into the title: "পররাষ্ট্র মন্ত্রণালয়" +
+    // "মন্ত্রী" is পররাষ্ট্রমন্ত্রী, while প্রধানমন্ত্রী is already the whole title.
+    const mergeable = gov.title === 'মন্ত্রী' || gov.title === 'প্রতিমন্ত্রী' || gov.title === 'উপমন্ত্রী';
+    const head = (gov.ministryBn ?? '').replace(/\s*(মন্ত্রণালয়|বিভাগ).*$/, '').trim();
+    if (mergeable && head && !head.includes(' ') && !/বিভাগ$/.test(gov.ministryBn ?? '')) return `${head}${gov.title}`;
+    return gov.title;
+  }
+  return house?.title ?? null;
+}
 
 async function photoData(url: string | null): Promise<string | null> {
   if (!url) return null;
@@ -41,18 +107,57 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
   const m = getMember(slug);
   if (!m) return new Response('Not found', { status: 404 });
 
-  const partyName = isIndependent(m) ? 'স্বতন্ত্র' : (partyBn(m.party)?.name ?? null);
-  const [name, seat, party, photo] = await Promise.all([
-    bnTextImage(m.nameBn ?? m.nameEn ?? '', { weight: 'bold', maxSize: 64, minSize: 34, maxWidth: TEXT_WIDTH, maxLines: 3, color: '#ffffff', leading: 1.25 }),
-    bnTextImage(constituencyBn(m) ?? '', { weight: 'regular', maxSize: 32, minSize: 24, maxWidth: TEXT_WIDTH, maxLines: 2, color: '#ffffff', opacity: 0.85 }),
-    partyName ? bnTextImage(partyName, { weight: 'regular', maxSize: 32, minSize: 24, maxWidth: TEXT_WIDTH, maxLines: 3, color: '#ffffff', opacity: 0.85 }) : null,
+  const independent = isIndependent(m);
+  const partyName = independent ? 'স্বতন্ত্র' : (partyBn(m.party)?.name ?? null);
+  const symbol = independent ? null : partySymbol(m.party?.abbr);
+  const accent = (m.party?.abbr && PARTY_COLOUR[m.party.abbr]) || OTHER_COLOUR;
+  const office = officeOf(m.id);
+  // Beside a symbol the party's name has less room.
+  const partyWidth = TEXT_WIDTH - (symbol ? SYMBOL + 16 : 0);
+
+  const [officeText, name, seat, party, photo] = await Promise.all([
+    office ? bnTextImage(office, { weight: 'bold', maxSize: 27, minSize: 20, maxWidth: TEXT_WIDTH - 48, maxLines: 1, color: '#ffffff' }) : null,
+    bnTextImage(m.nameBn ?? m.nameEn ?? '', { weight: 'bold', maxSize: 62, minSize: 34, maxWidth: TEXT_WIDTH, maxLines: 2, color: '#ffffff', leading: 1.18, align: 'center' }),
+    bnTextImage(constituencyBn(m) ?? '', { weight: 'regular', maxSize: 30, minSize: 22, maxWidth: TEXT_WIDTH - 48, maxLines: 1, color: '#ffffff' }),
+    partyName ? bnTextImage(partyName, { weight: 'regular', maxSize: 27, minSize: 19, maxWidth: partyWidth, maxLines: 1, color: '#ffffff', opacity: 0.92 }) : null,
     photoData(m.photoUrl),
   ]);
 
   return new ImageResponse(
     (
-      <div style={{ width: 1200, height: 630, display: 'flex', alignItems: 'center', justifyContent: 'center', background: BRAND }}>
-        <div style={{ width: SAFE, height: SAFE, display: 'flex', alignItems: 'center', position: 'relative' }}>
+      <div
+        style={{
+          width: W,
+          height: H,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          background: `linear-gradient(135deg, ${BRAND} 0%, ${DARK} 100%)`,
+        }}
+      >
+        {/* The party's colour as a band down the left edge of the whole card. */}
+        <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 12, display: 'flex', background: accent }} />
+
+        {/* Outside the square on the left: the site's mark, so a wide preview is branded. */}
+        <div style={{ position: 'absolute', left: 54, top: 46, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <div style={{ width: 34, height: 34, borderRadius: 9, background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ width: 14, height: 14, borderRadius: 9999, display: 'flex', background: BRAND }} />
+          </div>
+          <div style={{ display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.9)', letterSpacing: 1 }}>MY MP</div>
+        </div>
+
+        <div
+          style={{
+            width: SAFE,
+            height: SAFE,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 18,
+          }}
+        >
           <div
             style={{
               width: PHOTO + 2 * RING,
@@ -63,6 +168,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
               alignItems: 'center',
               justifyContent: 'center',
               flexShrink: 0,
+              boxShadow: '0 18px 44px rgba(0,0,0,0.3)',
             }}
           >
             {photo ? (
@@ -72,23 +178,69 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
               <div style={{ width: PHOTO, height: PHOTO, borderRadius: 9999, background: '#e8efe9' }} />
             )}
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', marginLeft: GAP, gap: 14 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-            <img src={name.src} width={name.width} height={name.height} />
-            {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-            {seat.width > 1 && <img src={seat.src} width={seat.width} height={seat.height} />}
-            {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-            {party && <img src={party.src} width={party.width} height={party.height} />}
+
+          {officeText && (
+            <div
+              style={{
+                display: 'flex',
+                padding: '7px 18px',
+                borderRadius: 9999,
+                background: 'rgba(255,255,255,0.16)',
+                border: '1px solid rgba(255,255,255,0.34)',
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+              <img src={officeText.src} width={officeText.width} height={officeText.height} />
+            </div>
+          )}
+
+          {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+          <img src={name.src} width={name.width} height={name.height} />
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            {seat.width > 1 && (
+              <div style={{ display: 'flex', padding: '8px 20px', borderRadius: 9999, background: 'rgba(255,255,255,0.15)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+                <img src={seat.src} width={seat.width} height={seat.height} />
+              </div>
+            )}
           </div>
-          <div style={{ position: 'absolute', right: 0, bottom: 34, display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5 }}>
-            mymp.bd
-          </div>
+
+          {party && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+              {symbol && (
+                <div
+                  style={{
+                    width: SYMBOL,
+                    height: SYMBOL,
+                    borderRadius: 9999,
+                    background: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    boxShadow: '0 6px 16px rgba(0,0,0,0.24)',
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+                  <img src={symbol} width={SYMBOL - 10} height={SYMBOL - 10} style={{ borderRadius: 9999, objectFit: 'contain' }} />
+                </div>
+              )}
+              {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+              <img src={party.src} width={party.width} height={party.height} />
+            </div>
+          )}
+        </div>
+
+        {/* Outside the square on the right: where the link goes. */}
+        <div style={{ position: 'absolute', right: 54, bottom: 46, display: 'flex', fontSize: 24, color: 'rgba(255,255,255,0.8)', letterSpacing: 0.5 }}>
+          mymp.bd
         </div>
       </div>
     ),
     {
-      width: 1200,
-      height: 630,
+      width: W,
+      height: H,
       headers: { 'Cache-Control': 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800' },
     },
   );
