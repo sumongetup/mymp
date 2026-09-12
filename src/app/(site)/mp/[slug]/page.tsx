@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { shareGraph, shareTwitter } from '@/lib/seo';
+import { shareGraph, shareTwitter, cardImage } from '@/lib/seo';
 import { mpDescription, mpTitle, partyBn, isIndependent } from '@/lib/seo/mpDescription';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps<'/mp/[slug]'>): Pro
   const m = getMember(slug);
   if (!m) return { title: 'সদস্য পাওয়া যায়নি' };
   // The member's own 1200x630 preview image (src/app/api/og/mp/[slug]/route.tsx).
-  const image = { url: `/api/og/mp/${m.slug}`, width: 1200, height: 630, type: 'image/png', alt: mpTitle(m) };
+  const image = cardImage(`/api/og/mp/${m.slug}`, mpTitle(m));
   const description = mpDescription(m);
   return {
     title: { absolute: mpTitle(m) },

@@ -12,6 +12,29 @@ export const SITE_TITLE = 'আমার এমপি | বাংলাদেশ�
 export const SITE_DESCRIPTION =
   'ত্রয়োদশ জাতীয় সংসদের সব সংসদ সদস্যের তথ্য এক জায়গায়। আসন, দল, সংরক্ষিত আসন, সংসদীয় কমিটি ও অধিবেশনের তথ্য। সূত্র: বাংলাদেশ জাতীয় সংসদ ও নির্বাচন কমিশন।';
 
+/**
+ * The version stamped on the drawn preview cards, /api/og/mp/[slug] and
+ * /api/og/party/[slug].
+ *
+ * Facebook keeps the picture it fetched the first time an address was shared
+ * and does not look again, so a redrawn card went on showing the old design
+ * there while WhatsApp, which fetches afresh, showed the new one. A changed
+ * address is the only thing Facebook reads as a new picture. Raise this
+ * whenever a card's design changes. Posts already published keep the picture
+ * they were shared with; Facebook's Sharing Debugger can be asked to look at a
+ * single address again.
+ */
+export const CARD_VERSION = '2';
+
+/** A drawn preview card, at the address the crawlers are given. */
+export const cardImage = (path: string, alt: string) => ({
+  url: `${path}?v=${CARD_VERSION}`,
+  width: 1200,
+  height: 630,
+  type: 'image/png',
+  alt,
+});
+
 /** public/og-image-v3.png: the mymp mark on white (npm run og-image); a new name makes crawlers and messaging apps fetch it afresh. */
 export const SHARE_IMAGE = {
   url: '/og-image-v3.png',

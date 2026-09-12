@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { shareGraph, shareTwitter } from '@/lib/seo';
+import { shareGraph, shareTwitter, cardImage } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import {
   parties, getParty, membersOfParty, getMemberById, bn, dateBn, partyColor, initial, statistics, OFFICE_LABELS, GENERAL_SEATS, type Party, type Member,
@@ -48,7 +48,7 @@ const foundedBn = (on: string) => (/^\d{4}$/.test(on) ? `${bn(on)} সাল` : 
 const shareCard = (p: { abbr: string; slug: string; nameBn: string | null }) =>
   p.abbr === 'Ind'
     ? null
-    : { url: `/api/og/party/${p.slug}`, width: 1200, height: 630, type: 'image/png', alt: p.nameBn ?? p.abbr };
+    : cardImage(`/api/og/party/${p.slug}`, p.nameBn ?? p.abbr);
 
 export async function generateMetadata({ params }: PageProps<'/dol/[slug]'>): Promise<Metadata> {
   const { slug } = await params;
