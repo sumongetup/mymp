@@ -72,7 +72,7 @@ export default function NewsBrowser({
   for (const s of filtered) perDay.set(s.date, (perDay.get(s.date) ?? 0) + 1);
 
   const filtering = !!(member || outlet || q.trim());
-  const field = 'h-11 rounded-[10px] border border-rule bg-surface px-3 text-[14.5px] outline-none focus:border-brand';
+  const field = 'h-11 rounded-[10px] border border-rule bg-surface px-3 text-[14.5px] outline-none focus-within:border-brand focus-within:ring-4 focus-within:ring-brandring';
 
   return (
     <div ref={top} className="flex flex-col gap-6 scroll-mt-24">

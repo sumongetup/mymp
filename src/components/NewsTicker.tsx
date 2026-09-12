@@ -69,7 +69,7 @@ export default function NewsTicker({ initial }: { initial: TickerItem[] }) {
       <div className="mx-auto max-w-[1200px] ps-4 sm:ps-5 flex items-center h-10 gap-3">
         <Link
           href="/songbad"
-          className="shrink-0 inline-flex items-center gap-2 h-7 px-3 rounded-md bg-live text-white text-[13px] font-bold hover:bg-danger transition-colors"
+          className="shrink-0 inline-flex items-center gap-2 h-8 px-3 rounded-md bg-live text-white text-[13px] font-bold hover:bg-danger transition-colors"
         >
           <span className="live-dot" aria-hidden="true" />
           সর্বশেষ

@@ -24,6 +24,9 @@ function loadIndex(): Promise<Entry[]> {
   return cached;
 }
 
+/** The box, not the bare input, shows keyboard focus; the input itself has no outline. */
+const ring = 'focus-within:border-brand focus-within:ring-4 focus-within:ring-brandring';
+
 export default function SiteSearch({
   compact = false,
   autoFocus = false,
@@ -90,8 +93,8 @@ export default function SiteSearch({
       <div
         className={
           compact
-            ? 'flex items-center gap-2 h-10 w-[128px] sm:w-[260px] px-3 rounded-[10px] border border-rule bg-paper'
-            : `flex items-center gap-3 h-14 sm:h-[62px] ps-4 sm:ps-5 ${withButton ? 'pe-2 sm:pe-2.5' : 'pe-4 sm:pe-5'} rounded-[14px] border-[1.5px] border-ink bg-surface`
+            ? `flex items-center gap-2 h-10 w-[128px] sm:w-[260px] px-3 rounded-[10px] border border-rule bg-paper ${ring}`
+            : `flex items-center gap-3 h-14 sm:h-[62px] ps-4 sm:ps-5 ${withButton ? 'pe-2 sm:pe-2.5' : 'pe-4 sm:pe-5'} rounded-[14px] border-[1.5px] border-ink bg-surface ${ring}`
         }
       >
         <svg width={compact ? 16 : 20} height={compact ? 16 : 20} viewBox="0 0 24 24" fill="none"

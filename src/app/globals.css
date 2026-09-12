@@ -16,7 +16,7 @@
   --color-sunk: #eceeea;
   --color-ink: #17201b;
   --color-inksoft: #465049;
-  --color-muted: #6c766f;
+  --color-muted: #5e6863; /* 4.95:1 on the sunk grey, 5.27:1 on paper: captions stay readable */
   --color-rule: #dfe3dd;
   --color-rulesoft: #eaede8;
   --color-brand: #0f6a4b;
@@ -267,12 +267,16 @@ html.intro-play .intro {
   to { clip-path: inset(0 0 0 0 round 6px); }
 }
 
-/* Cards ease up as they scroll into view, where the browser can tie animation to scrolling. */
+/* Cards ease up as they scroll into view, where the browser can tie animation to scrolling.
+   From tablet width up only: on a phone, hundreds of scroll-driven animations cost more style
+   and layout time than the effect is worth (Lighthouse mobile: 1.4 s of style work on the home page). */
 @supports (animation-timeline: view()) {
-  .reveal:not(.rise) {
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 40%;
+  @media (min-width: 768px) {
+    .reveal:not(.rise) {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
   }
   @keyframes reveal {
     from { opacity: 0; transform: translateY(18px); }

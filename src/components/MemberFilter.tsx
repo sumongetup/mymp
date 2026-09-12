@@ -86,7 +86,7 @@ export default function MemberFilter({
   return (
     <div className="flex flex-col gap-5">
       <div className="flex flex-col lg:flex-row gap-3 lg:items-center">
-        <div className="flex items-center gap-2.5 h-11 px-3.5 rounded-[10px] border border-rule bg-surface lg:w-[300px]">
+        <div className="flex items-center gap-2.5 h-11 px-3.5 rounded-[10px] border border-rule bg-surface lg:w-[300px] focus-within:border-brand focus-within:ring-4 focus-within:ring-brandring">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
             strokeLinecap="round" strokeLinejoin="round" className="text-muted shrink-0" aria-hidden="true">
             <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />

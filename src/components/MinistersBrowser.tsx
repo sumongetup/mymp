@@ -43,7 +43,7 @@ export default function MinistersBrowser({ groups, ministries }: { groups: Minis
           aria-label="মন্ত্রণালয় বা বিভাগ"
           value={ministry}
           onChange={(e) => setMinistry(e.target.value)}
-          className="h-11 rounded-[10px] border border-rule bg-surface px-3 text-[14.5px] outline-none focus:border-brand sm:w-[420px] min-w-0"
+          className="h-11 rounded-[10px] border border-rule bg-surface px-3 text-[14.5px] outline-none focus:border-brand focus:ring-4 focus:ring-brandring sm:w-[420px] min-w-0"
         >
           <option value="">সব মন্ত্রণালয় ও বিভাগ</option>
           {ministries.map((m) => <option key={m.key} value={m.key}>{m.label} ({bn(m.count)})</option>)}
