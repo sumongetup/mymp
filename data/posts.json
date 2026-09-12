@@ -1,13 +1,6 @@
 {
- "checkedAt": "2026-09-11T21:31:23.489Z",
+ "checkedAt": "2026-09-12T07:29:00.892Z",
  "pending": [
-  {
-   "nameBn": "ড. আবদুল মঈন খান",
-   "title": "মন্ত্রী",
-   "ministries": [
-    "স্থানীয় সরকার, পল্লী উন্নয়ন ও সমবায় মন্ত্রণালয়"
-   ]
-  },
   {
    "nameBn": "ড. খলিলুর রহমান",
    "title": "মন্ত্রী",
@@ -105,6 +98,24 @@
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
+   "ministryBn": "স্থানীয় সরকার, পল্লী উন্নয়ন ও সমবায় মন্ত্রণালয়",
+   "memberId": "013020001",
+   "isMp": true,
+   "nameBn": "ড. আবদুল মঈন খান",
+   "nameEn": null,
+   "photoUrl": null,
+   "fromDate": "2026-08-21",
+   "toDate": null,
+   "order": 4,
+   "sourceKey": "cabinet_ministers",
+   "sourceUrl": "https://cabinet.gov.bd/pages/static-pages/মাননীয়-প্রধানমন্ত্রী-ও-মন্ত্রীগণ-027qky-69957f3d5bf6104b4cc91e7c",
+   "autoSynced": true
+  },
+  {
+   "id": "snapshot-5",
+   "type": "government",
+   "title": "মন্ত্রী",
+   "rankNote": null,
    "ministryBn": "অর্থ মন্ত্রণালয়",
    "memberId": "013028801",
    "isMp": true,
@@ -119,7 +130,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-5",
+   "id": "snapshot-6",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -137,7 +148,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-6",
+   "id": "snapshot-7",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -155,7 +166,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-7",
+   "id": "snapshot-8",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -173,7 +184,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-8",
+   "id": "snapshot-9",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -191,7 +202,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-9",
+   "id": "snapshot-10",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -209,7 +220,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-10",
+   "id": "snapshot-11",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -227,7 +238,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-11",
+   "id": "snapshot-12",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -245,7 +256,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-12",
+   "id": "snapshot-13",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -263,7 +274,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-13",
+   "id": "snapshot-14",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -281,7 +292,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-14",
+   "id": "snapshot-15",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -299,7 +310,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-15",
+   "id": "snapshot-16",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -317,7 +328,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-16",
+   "id": "snapshot-17",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -335,7 +346,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-17",
+   "id": "snapshot-18",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -353,7 +364,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-18",
+   "id": "snapshot-19",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -371,7 +382,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-19",
+   "id": "snapshot-20",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -389,7 +400,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-20",
+   "id": "snapshot-21",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -407,7 +418,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-21",
+   "id": "snapshot-22",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -425,7 +436,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-22",
+   "id": "snapshot-23",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -443,7 +454,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-23",
+   "id": "snapshot-24",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -461,7 +472,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-24",
+   "id": "snapshot-25",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -479,7 +490,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-25",
+   "id": "snapshot-26",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -497,7 +508,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-26",
+   "id": "snapshot-27",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -515,7 +526,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-27",
+   "id": "snapshot-28",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -533,7 +544,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-28",
+   "id": "snapshot-29",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -551,7 +562,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-29",
+   "id": "snapshot-30",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -569,7 +580,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-30",
+   "id": "snapshot-31",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -587,7 +598,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-31",
+   "id": "snapshot-32",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -605,7 +616,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-32",
+   "id": "snapshot-33",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -623,7 +634,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-33",
+   "id": "snapshot-34",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -641,7 +652,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-34",
+   "id": "snapshot-35",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -659,7 +670,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-35",
+   "id": "snapshot-36",
    "type": "government",
    "title": "মন্ত্রী",
    "rankNote": null,
@@ -677,7 +688,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-36",
+   "id": "snapshot-37",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -695,7 +706,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-37",
+   "id": "snapshot-38",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -713,7 +724,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-38",
+   "id": "snapshot-39",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -731,7 +742,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-39",
+   "id": "snapshot-40",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -749,7 +760,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-40",
+   "id": "snapshot-41",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -767,7 +778,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-41",
+   "id": "snapshot-42",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -785,7 +796,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-42",
+   "id": "snapshot-43",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -803,7 +814,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-43",
+   "id": "snapshot-44",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -821,7 +832,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-44",
+   "id": "snapshot-45",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -839,7 +850,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-45",
+   "id": "snapshot-46",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -857,7 +868,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-46",
+   "id": "snapshot-47",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -875,7 +886,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-47",
+   "id": "snapshot-48",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -893,7 +904,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-48",
+   "id": "snapshot-49",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -911,7 +922,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-49",
+   "id": "snapshot-50",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -929,7 +940,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-50",
+   "id": "snapshot-51",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -947,7 +958,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-51",
+   "id": "snapshot-52",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -965,7 +976,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-52",
+   "id": "snapshot-53",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -983,7 +994,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-53",
+   "id": "snapshot-54",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1001,7 +1012,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-54",
+   "id": "snapshot-55",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1019,7 +1030,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-55",
+   "id": "snapshot-56",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1037,7 +1048,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-56",
+   "id": "snapshot-57",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1055,7 +1066,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-57",
+   "id": "snapshot-58",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1073,7 +1084,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-58",
+   "id": "snapshot-59",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1091,7 +1102,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-59",
+   "id": "snapshot-60",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1109,7 +1120,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-60",
+   "id": "snapshot-61",
    "type": "government",
    "title": "প্রতিমন্ত্রী",
    "rankNote": null,
@@ -1127,7 +1138,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-61",
+   "id": "snapshot-62",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1145,7 +1156,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-62",
+   "id": "snapshot-63",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1163,7 +1174,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-63",
+   "id": "snapshot-64",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1181,7 +1192,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-64",
+   "id": "snapshot-65",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1199,7 +1210,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-65",
+   "id": "snapshot-66",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1217,7 +1228,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-66",
+   "id": "snapshot-67",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1235,7 +1246,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-67",
+   "id": "snapshot-68",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1253,7 +1264,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-68",
+   "id": "snapshot-69",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "মন্ত্রীর পদমর্যাদা",
@@ -1271,7 +1282,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-69",
+   "id": "snapshot-70",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1289,7 +1300,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-70",
+   "id": "snapshot-71",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1307,7 +1318,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-71",
+   "id": "snapshot-72",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1325,7 +1336,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-72",
+   "id": "snapshot-73",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1343,7 +1354,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-73",
+   "id": "snapshot-74",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1361,7 +1372,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-74",
+   "id": "snapshot-75",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1379,7 +1390,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-75",
+   "id": "snapshot-76",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1397,7 +1408,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-76",
+   "id": "snapshot-77",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1415,7 +1426,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-77",
+   "id": "snapshot-78",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1433,7 +1444,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-78",
+   "id": "snapshot-79",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1451,7 +1462,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-79",
+   "id": "snapshot-80",
    "type": "government",
    "title": "উপদেষ্টা",
    "rankNote": "প্রতিমন্ত্রীর পদমর্যাদা",
@@ -1469,7 +1480,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-80",
+   "id": "snapshot-81",
    "type": "parliament",
    "title": "স্পিকার",
    "rankNote": null,
@@ -1487,7 +1498,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-81",
+   "id": "snapshot-82",
    "type": "parliament",
    "title": "ডেপুটি স্পিকার",
    "rankNote": null,
@@ -1505,7 +1516,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-82",
+   "id": "snapshot-83",
    "type": "parliament",
    "title": "সংসদ নেতা",
    "rankNote": null,
@@ -1515,7 +1526,7 @@
    "nameBn": "তারেক রহমান",
    "nameEn": "Tarique Rahman",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
    "order": 3,
    "sourceKey": "parliament_officers",
@@ -1523,7 +1534,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-83",
+   "id": "snapshot-84",
    "type": "parliament",
    "title": "বিরোধীদলীয় নেতা",
    "rankNote": null,
@@ -1533,7 +1544,7 @@
    "nameBn": "ডাঃ মোঃ শফিকুর রহমান",
    "nameEn": "Dr. Md. Shafiqur Rahman",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
    "order": 4,
    "sourceKey": "parliament_officers",
@@ -1541,7 +1552,7 @@
    "autoSynced": true
   },
   {
-   "id": "snapshot-84",
+   "id": "snapshot-85",
    "type": "parliament",
    "title": "চিফ হুইপ",
    "rankNote": null,
@@ -1551,27 +1562,9 @@
    "nameBn": "নূরুল ইসলাম মনি",
    "nameEn": "Nurul Islam Moni",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
    "order": 5,
-   "sourceKey": "parliament_officers",
-   "sourceUrl": "https://www.parliament.gov.bd/api/speakers",
-   "autoSynced": true
-  },
-  {
-   "id": "snapshot-85",
-   "type": "parliament",
-   "title": "হুইপ",
-   "rankNote": null,
-   "ministryBn": null,
-   "memberId": "013024101",
-   "isMp": true,
-   "nameBn": "আলহাজ্ব মোঃ জি কে গউছ",
-   "nameEn": "ALHAJ MD. G.K. GOUSE",
-   "photoUrl": null,
-   "fromDate": "2026-09-11",
-   "toDate": null,
-   "order": 6,
    "sourceKey": "parliament_officers",
    "sourceUrl": "https://www.parliament.gov.bd/api/speakers",
    "autoSynced": true
@@ -1582,14 +1575,14 @@
    "title": "হুইপ",
    "rankNote": null,
    "ministryBn": null,
-   "memberId": "013010101",
+   "memberId": "013024101",
    "isMp": true,
-   "nameBn": "রকিবুল ইসলাম",
-   "nameEn": "Rakibul Islam",
+   "nameBn": "আলহাজ্ব মোঃ জি কে গউছ",
+   "nameEn": "ALHAJ MD. G.K. GOUSE",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
-   "order": 7,
+   "order": 6,
    "sourceKey": "parliament_officers",
    "sourceUrl": "https://www.parliament.gov.bd/api/speakers",
    "autoSynced": true
@@ -1600,14 +1593,14 @@
    "title": "হুইপ",
    "rankNote": null,
    "ministryBn": null,
-   "memberId": "013022301",
+   "memberId": "013010101",
    "isMp": true,
-   "nameBn": "মিয়া নুরুদ্দিন আহাম্মেদ অপু",
-   "nameEn": "MIAH NURUDDIN AHMAD APU",
+   "nameBn": "রকিবুল ইসলাম",
+   "nameEn": "Rakibul Islam",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
-   "order": 8,
+   "order": 7,
    "sourceKey": "parliament_officers",
    "sourceUrl": "https://www.parliament.gov.bd/api/speakers",
    "autoSynced": true
@@ -1618,14 +1611,14 @@
    "title": "হুইপ",
    "rankNote": null,
    "ministryBn": null,
-   "memberId": "013005901",
+   "memberId": "013022301",
    "isMp": true,
-   "nameBn": "এম, রুহুল কুদ্দুস তালুকদার দুলু",
-   "nameEn": "M. Ruhul Quddus Talukder Dulu",
+   "nameBn": "মিয়া নুরুদ্দিন আহাম্মেদ অপু",
+   "nameEn": "MIAH NURUDDIN AHMAD APU",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
-   "order": 9,
+   "order": 8,
    "sourceKey": "parliament_officers",
    "sourceUrl": "https://www.parliament.gov.bd/api/speakers",
    "autoSynced": true
@@ -1636,14 +1629,14 @@
    "title": "হুইপ",
    "rankNote": null,
    "ministryBn": null,
-   "memberId": "013000901",
+   "memberId": "013005901",
    "isMp": true,
-   "nameBn": "মোঃ আখতারুজ্জামান মিয়া",
-   "nameEn": "Md Akhtaruzzaman Mia",
+   "nameBn": "এম, রুহুল কুদ্দুস তালুকদার দুলু",
+   "nameEn": "M. Ruhul Quddus Talukder Dulu",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
-   "order": 10,
+   "order": 9,
    "sourceKey": "parliament_officers",
    "sourceUrl": "https://www.parliament.gov.bd/api/speakers",
    "autoSynced": true
@@ -1654,12 +1647,30 @@
    "title": "হুইপ",
    "rankNote": null,
    "ministryBn": null,
+   "memberId": "013000901",
+   "isMp": true,
+   "nameBn": "মোঃ আখতারুজ্জামান মিয়া",
+   "nameEn": "Md Akhtaruzzaman Mia",
+   "photoUrl": null,
+   "fromDate": "2026-09-12",
+   "toDate": null,
+   "order": 10,
+   "sourceKey": "parliament_officers",
+   "sourceUrl": "https://www.parliament.gov.bd/api/speakers",
+   "autoSynced": true
+  },
+  {
+   "id": "snapshot-91",
+   "type": "parliament",
+   "title": "হুইপ",
+   "rankNote": null,
+   "ministryBn": null,
    "memberId": "013027701",
    "isMp": true,
    "nameBn": "এ. বি. এম আশরাফ উদ্দিন (নিজান)",
    "nameEn": "A.B.M. Ashraf Uddin (Nizan)",
    "photoUrl": null,
-   "fromDate": "2026-09-11",
+   "fromDate": "2026-09-12",
    "toDate": null,
    "order": 11,
    "sourceKey": "parliament_officers",
