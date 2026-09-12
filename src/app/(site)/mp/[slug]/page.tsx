@@ -8,7 +8,6 @@ import {
   bn, ageFrom, dateBn, initial, meta, OFFICE_LABELS, committeeCounts, partyColor, governmentPostsOf, postsCheckedOnBn, nameEnDisplay, bnText,
 } from '@/lib/data';
 import { storiesForMember } from '@/lib/newsView';
-import StoryCard from '@/components/StoryCard';
 import { rolesOf, noticesForMember, NOTICE_CATEGORY_BN } from '@/lib/activity';
 import { priorTermsOf, parliamentLabel, parliamentOrdinal, resultForSeat, socialsOf, electionYear } from '@/lib/history';
 import { Page, Card, Breadcrumb, Empty, PartyDot, DocLink } from '@/components/ui';
@@ -16,6 +15,7 @@ import { ResultCard, sourceOf } from '@/components/results';
 import { introOf } from '@/lib/intro';
 import MemberPhoto from '@/components/MemberPhoto';
 import Icon from '@/components/Icon';
+import MemberFeed from '@/components/MemberFeed';
 import BrandIcon, { isBrand } from '@/components/BrandIcon';
 import ShareButtons from '@/components/ShareButtons';
 import CorrectionButton from '@/components/CorrectionButton';
@@ -485,28 +485,17 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
             )}
           </section>
 
-          <section className="flex flex-col gap-4">
-            <H2 count={memberStories.length}>সংবাদ</H2>
-            {memberStories.length ? (
-              <>
-                <ul className="flex flex-col gap-3">
-                  {memberStories.slice(0, 5).map((s) => <li key={s.id}><StoryCard s={s} showMember={false} /></li>)}
-                </ul>
-                {memberStories.length > 5 && (
-                  <Link
-                    href={`/songbad?mp=${m.slug}`}
-                    className="self-start inline-flex items-center gap-2 h-11 px-5 rounded-full border border-ink font-semibold text-[15px] hover:bg-surface transition-colors"
-                  >
-                    এই সদস্যের সব {bn(memberStories.length)}টি খবর দেখুন
-                    <Icon name="arrow" size={16} />
-                  </Link>
-                )}
-              </>
-            ) : (
-              <Empty
-                title="এই সদস্য নিয়ে এখনো কোনো সংবাদ প্রকাশ করা হয়নি।"
-                body="অনুমোদিত সংবাদমাধ্যমের শিরোনাম যাচাইয়ের পর এখানে দেখানো হবে।"
-              />
+          <section className="flex flex-col gap-4" id="songbad">
+            <H2>সংবাদ ও ভিডিও</H2>
+            <MemberFeed slug={m.slug} correctionHref="/jogajog" />
+            {memberStories.length > 0 && (
+              <Link
+                href={`/songbad?mp=${m.slug}`}
+                className="self-start inline-flex items-center gap-2 h-11 px-5 rounded-full border border-ink font-semibold text-[15px] hover:bg-surface transition-colors"
+              >
+                সম্পাদকের যাচাই করা {bn(memberStories.length)}টি খবর
+                <Icon name="arrow" size={16} />
+              </Link>
             )}
           </section>
         </div>
