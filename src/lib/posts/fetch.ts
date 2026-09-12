@@ -12,9 +12,34 @@ export const sha256 = (s: string) => createHash('sha256').update(s).digest('hex'
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function getText(url: string): Promise<{ status: number; text: string }> {
-  const res = await fetch(new URL(url).href, { headers: { 'user-agent': UA, accept: 'text/html' }, signal: AbortSignal.timeout(30_000) });
-  return { status: res.status, text: await res.text() };
+/** Node's roots plus the intermediates the government hosts leave out. */
+const agent = new https.Agent({ ca: [...tls.rootCertificates, ...PARLIAMENT_CA], keepAlive: true });
+
+/**
+ * One HTML page over node:https with the shared CA bundle. cabinet.gov.bd,
+ * like parliament.gov.bd, omits its intermediate certificate, so a plain
+ * fetch() fails on Vercel (Linux Node trusts only its bundled roots; Node on
+ * Windows and macOS also reads the system store, which hid this locally).
+ * Follows up to three redirects.
+ */
+async function getText(url: string, hops = 0): Promise<{ status: number; text: string }> {
+  const u = new URL(url);
+  const page = await new Promise<{ status: number; text: string; location?: string }>((resolve, reject) => {
+    const req = https.request(
+      { host: u.host, path: u.pathname + u.search, method: 'GET', agent, timeout: 30_000, headers: { accept: 'text/html', 'user-agent': UA } },
+      (res) => {
+        let body = '';
+        res.setEncoding('utf8');
+        res.on('data', (c) => { body += c; });
+        res.on('end', () => resolve({ status: res.statusCode ?? 0, text: body, location: res.headers.location }));
+      },
+    );
+    req.on('timeout', () => req.destroy(new Error(`${u.href} timed out`)));
+    req.on('error', (e: NodeJS.ErrnoException) => reject(new Error(`${u.href}: ${e.code ?? e.message}`)));
+    req.end();
+  });
+  if (page.location && [301, 302, 303, 307, 308].includes(page.status) && hops < 3) return getText(new URL(page.location, u).href, hops + 1);
+  return { status: page.status, text: page.text };
 }
 
 /**
@@ -49,8 +74,6 @@ export async function loadCabinet(src: CabinetSource): Promise<{ url: string; ht
   if (page.status !== 200) throw new Error(`${decodeURIComponent(url)} answered HTTP ${page.status}`);
   return { url: decodeURIComponent(url), html: page.text };
 }
-
-const agent = new https.Agent({ ca: [...tls.rootCertificates, ...PARLIAMENT_CA], keepAlive: true });
 
 function getJson(url: URL): Promise<{ data?: OfficerRow[]; total?: number; totalPages?: number }> {
   return new Promise((resolve, reject) => {
