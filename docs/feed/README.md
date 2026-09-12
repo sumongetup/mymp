@@ -28,8 +28,8 @@ is never fetched, and every item links out to the source.
 |---|---|---|---|
 | `rss` | 32 news feeds | every 30 min (GitHub Actions), daily backstop (Vercel) | nothing |
 | `press` | parliament notices already in `data/activity.json` | daily | nothing |
-| `youtube` | YouTube Data API v3, a slice of members each hour | hourly once enabled | `YOUTUBE_API_KEY` |
-| `search` | the ten outlets with no feed | every 30 min once enabled | `FEED_SEARCH_KEY` (+ `FEED_SEARCH_PROVIDER`, `FEED_SEARCH_CX` for Google) |
+| `youtube` | YouTube Data API v3, four members an hour | hourly | `YOUTUBE_API_KEY` |
+| `search` | the ten outlets with no feed, four members an hour | hourly | `FEED_SEARCH_KEY` (+ `FEED_SEARCH_PROVIDER`, `FEED_SEARCH_CX` for Google) |
 | `learn` | the editors' decisions | weekly | nothing |
 
 From the terminal:
@@ -43,11 +43,21 @@ npm run feed:seed                       # name variants and feed start dates
 
 ### Quota
 
-YouTube's `search.list` costs 100 units of a default key's 10,000 a day, so a
-full pass over 348 members costs 34,800: too much. The collector therefore
-takes a slice each hour (a full pass a day) and takes the members holding a
-government or House post twice as often. The units a run spends are written to
+Both paid collectors are paced the same way, and for the same reason: a full
+pass over 348 members in one go costs more than a day's allowance.
+
+| | allowance | cost each | so a run takes | a full pass |
+|---|---|---|---|---|
+| YouTube `search.list` | 10,000 units a day | 100 units | 4 members an hour (9,600 a day) | ~3.5 days |
+| Google Programmable Search | 100 queries a day free | 1 query | 4 members an hour (96 a day) | ~3.5 days |
+
+Members holding a government or House post sit in the cycle twice, so they come
+round twice as often. Raise `YOUTUBE_MEMBERS_PER_RUN` or `FEED_SEARCH_PER_RUN`
+when an allowance is raised. What a run spent is written to
 `feed_runs.quota_used` and shown on `/admin/feed/runs`.
+
+Bing News Search is still in `searchProvider.ts` but Microsoft retired the Bing
+Search APIs, so Google Programmable Search or SerpAPI are the live choices.
 
 ## The matcher
 

@@ -178,10 +178,12 @@ export async function runSearchCollector(opts: { trigger?: string; perRun?: numb
     return result;
   }
 
-  // A search provider is billed per call, not per quota unit, so this one takes
-  // more members at a time: twelve every half hour is a pass a day.
-  const perRun = opts.perRun ?? 12;
-  const slice = sliceFor(targets(), perRun, tickNow(30));
+  // Google Programmable Search gives 100 queries a day free and charges past
+  // that, so this keeps to four an hour like the video collector: 96 a day,
+  // inside the free tier, a full pass over the House every three and a half
+  // days. FEED_SEARCH_PER_RUN raises it when the budget allows.
+  const perRun = opts.perRun ?? Math.max(1, Number(process.env.FEED_SEARCH_PER_RUN ?? 4));
+  const slice = sliceFor(targets(), perRun, tickNow(60));
   const index = await buildIndex();
   const sites = SEARCH_ONLY_SOURCES.map((s) => new URL(s.homepage).hostname.replace(/^www\./, ''));
   const items: FeedItemInput[] = [];
@@ -220,7 +222,7 @@ export async function runSearchCollector(opts: { trigger?: string; perRun?: numb
     unmatched: counts.unmatched,
     lowConfidence: counts.lowConfidence,
     errors,
-    detail: { members: slice.length, provider: provider.name },
+    detail: { members: slice.length, provider: provider.name, searches: slice.length },
   };
   await finishRun(run, result);
   return { ...result, runId: run.id };
