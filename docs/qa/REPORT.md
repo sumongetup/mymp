@@ -70,6 +70,18 @@ In `design-questions.md`, with recommendations: (1) member photos and party logo
 2. **Photo thumbnails from the engine** (design question 1): about 50 KB less per list page on phones, the single largest remaining Lighthouse item after fonts.
 3. **Resolve Chattogram-4**: either a member from the source or a one-line note on the seat page saying why it is empty, so the 349 vs 350 gap on the home chart is explained rather than silent.
 
-## Post-deploy check
+## Post-deploy check (real requests, 2026-09-12 02:31 UTC)
 
-Filled in after the push: see the end of the session notes below.
+Deploy of `f0449e2` seen live 90 s after the push, checked on the Vercel host (mymp.bd itself is not polled: its bot checkpoint answers a loop with 403).
+
+| | `/` | `/mp/tarique-rahman` | `/ason/chattogram-4` (new) |
+|---|---|---|---|
+| Status, cache | 200, PRERENDER | 200, PRERENDER | 200, HIT |
+| Title | আমার এমপি \| বাংলাদেশের সংসদ সদস্যদের তথ্য | তারেক রহমান \| ঢাকা-১৭ \| আমার এমপি | চট্টগ্রাম-৪ আসন \| আমার এমপি |
+| Description | 157 characters | 131 graphemes (204 UTF-16 units; the limit is counted in graphemes, as the owner's own example is) | 86 characters |
+| Canonical | https://mymp.bd | https://mymp.bd/mp/tarique-rahman | https://mymp.bd/ason/chattogram-4 |
+| og:image | og-image-v3.png | /api/og/mp/tarique-rahman (200, image/png) | og-image-v3.png |
+| JSON-LD | Organization, WebSite + SearchAction | Organization, BreadcrumbList, Person | Organization, BreadcrumbList |
+| noindex | no | no | no |
+
+Also live: `/admin/members` signed out gives 307 to `/admin/login?denied=1`; the sitemap has 853 URLs including the new seat page. The only dash on the MP page is the en dash inside the editor-entered education text (section 6).
