@@ -69,24 +69,26 @@ export const POST_WORDS: { word: string; matches: (post: string, ministry: strin
  * four members being searched for by name.
  */
 export const TRUSTED_CHANNELS: { handle: string; name: string }[] = [
+  // Every handle below was opened on youtube.com and the channel's own name
+  // checked, after five guesses turned out to be 404s and one (@Channel24) was
+  // a private person in another country.
   { handle: '@somoytvnews', name: 'সময় টিভি' },
-  { handle: '@JamunaTelevision', name: 'যমুনা টিভি' },
-  { handle: '@Channel24', name: 'চ্যানেল ২৪' },
+  { handle: '@JamunaTVbd', name: 'যমুনা টিভি' },
+  { handle: '@channel24news', name: 'চ্যানেল ২৪' },
   { handle: '@dbcnewstv', name: 'ডিবিসি নিউজ' },
   { handle: '@IndependentTelevision', name: 'ইনডিপেনডেন্ট টিভি' },
-  { handle: '@ekattortv', name: 'একাত্তর টিভি' },
+  { handle: '@ekattortvbd', name: 'একাত্তর টিভি' },
   { handle: '@NTVbd', name: 'এনটিভি' },
   { handle: '@rtvnews', name: 'আরটিভি নিউজ' },
   { handle: '@news24bdtv', name: 'নিউজ২৪' },
   { handle: '@ATNNewsOfficial', name: 'এটিএন নিউজ' },
-  { handle: '@ekusheytelevision', name: 'একুশে টিভি' },
+  { handle: '@ETVNewsbd', name: 'একুশে টিভি' },
   { handle: '@BanglavisionNEWS', name: 'বাংলাভিশন' },
   { handle: '@MaasrangaTelevision', name: 'মাছরাঙা টেলিভিশন' },
-  { handle: '@ChannelIkhon', name: 'চ্যানেল আই' },
+  { handle: '@ChanneliNews', name: 'চ্যানেল আই নিউজ' },
+  { handle: '@EkhonTV', name: 'এখন টিভি' },
   { handle: '@BBCBangla', name: 'বিবিসি বাংলা' },
   { handle: '@ProthomAlo', name: 'প্রথম আলো' },
   { handle: '@thedailystarnews', name: 'দ্য ডেইলি স্টার' },
   { handle: '@jagonews24', name: 'জাগো নিউজ' },
-  { handle: '@BangladeshSangbadSangstha', name: 'বাসস' },
-  { handle: '@durbinnews', name: 'দুরবীন নিউজ' },
 ];
