@@ -49,7 +49,7 @@ export default async function NewsAdmin({ searchParams }: { searchParams: Promis
                   <span className="display font-bold">{n.title_bn}</span>
                   <span className="block text-[12.5px] text-muted">{n.source_name}</span>
                 </Td>
-                <Td className="text-[13px]">{member?.nameBn ?? n.seat_slug ?? '—'}</Td>
+                <Td className="text-[13px]">{member?.nameBn ?? n.seat_slug ?? 'নেই'}</Td>
                 <Td><Badge tone={TONE[n.status]}>{STATUS_BN[n.status]}</Badge></Td>
                 <Td className="text-end whitespace-nowrap">
                   <Link href={`/admin/news/${n.id}`} className="font-semibold text-brand hover:underline">খুলুন →</Link>

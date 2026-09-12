@@ -53,12 +53,12 @@ export default async function MembersAdmin({ searchParams }: { searchParams: Pro
         <Table head={['আসন', 'নাম', 'দল', 'অবস্থা', '']}>
           {list.map((m) => (
             <tr key={m.id}>
-              <Td className="whitespace-nowrap">{m.seat?.nameBn ?? '—'}</Td>
+              <Td className="whitespace-nowrap">{m.seat?.nameBn ?? 'নেই'}</Td>
               <Td>
                 <span className="display font-bold">{m.nameBn}</span>
                 <span className="block text-[12.5px] text-muted">{m.nameEn}</span>
               </Td>
-              <Td className="whitespace-nowrap">{m.party?.abbr ?? '—'}</Td>
+              <Td className="whitespace-nowrap">{m.party?.abbr ?? 'নেই'}</Td>
               <Td>
                 <span className="flex gap-1.5 flex-wrap">
                   {editedIds.has(m.id) && <Badge tone="good">সম্পাদিত</Badge>}

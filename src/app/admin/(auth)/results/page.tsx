@@ -39,7 +39,7 @@ export default async function ResultsAdmin() {
             <select name="seat" className={inputClass} required defaultValue="">
               <option value="" disabled>আসন বাছুন</option>
               {territorial.map((s) => (
-                <option key={s.no} value={s.no}>{bn(s.no)} · {s.nameBn}</option>
+                <option key={s.no} value={s.no}>{bn(s.no)}, {s.nameBn}</option>
               ))}
             </select>
           </label>
@@ -75,7 +75,7 @@ export default async function ResultsAdmin() {
               <tr key={r.id}>
                 <Td><span className="font-semibold">{seat?.nameBn ?? bn(r.seat_no)}</span></Td>
                 <Td className="text-muted whitespace-nowrap">{parliamentLabel(r.parliament_no)}</Td>
-                <Td>{winner ? `${winner.name}${winner.party ? ` (${winner.party})` : ''}` : '—'}</Td>
+                <Td>{winner ? `${winner.name}${winner.party ? ` (${winner.party})` : ''}` : 'নেই'}</Td>
                 <Td className="tnum">{bn(r.candidates.length)}</Td>
                 <Td>{r.status === 'published' ? <Badge tone="good">প্রকাশিত</Badge> : <Badge tone="warn">খসড়া</Badge>}</Td>
                 <Td className="text-end whitespace-nowrap">

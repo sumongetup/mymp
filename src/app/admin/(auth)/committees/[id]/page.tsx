@@ -9,7 +9,7 @@ import { EntityEditor, EditFlags, HidePanel, AuditLink } from '../../EntityEdito
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const c = committees.find((x) => x.id === id);
-  return { title: c ? `${c.nameBn ?? c.nameEn} · কমিটি` : 'কমিটি' };
+  return { title: c ? `${c.nameBn ?? c.nameEn} | কমিটি` : 'কমিটি' };
 }
 
 export default async function EditCommittee({
@@ -30,7 +30,7 @@ export default async function EditCommittee({
   return (
     <AdminPage
       title={c.nameBn ?? c.nameEn ?? id}
-      lede={[c.nameEn, c.type, c.startDate ? `গঠিত ${dateBn(c.startDate)}` : null].filter(Boolean).join(' · ')}
+      lede={[c.nameEn, c.type, c.startDate ? `গঠিত ${dateBn(c.startDate)}` : null].filter(Boolean).join(', ')}
       actions={<Button kind="secondary" href={`/committee/${c.slug}`}>সাইটে দেখুন ↗</Button>}
     >
       <EditFlags flags={flags} noun="কমিটিটি" />

@@ -29,7 +29,7 @@ export default async function EditNews({
   return (
     <AdminPage
       title={isNew ? 'নতুন সংবাদ' : n!.title_bn}
-      lede={isNew ? 'প্রকাশ না করা পর্যন্ত খসড়া হিসেবে থাকবে।' : `${n!.source_name} · ${n!.published_on}`}
+      lede={isNew ? 'প্রকাশ না করা পর্যন্ত খসড়া হিসেবে থাকবে।' : `${n!.source_name}, ${n!.published_on}`}
       actions={
         n ? (
           <form action={changeNewsStatus} className="flex gap-2">
@@ -46,7 +46,7 @@ export default async function EditNews({
       {n && (
         <p className="flex items-center gap-2 text-[13.5px] text-muted">
           অবস্থা <Badge tone={n.status === 'published' ? 'good' : n.status === 'rejected' ? 'bad' : 'warn'}>{STATUS_BN[n.status]}</Badge>
-          · শেষ বদল {when(n.updated_at)}
+          | শেষ বদল {when(n.updated_at)}
         </p>
       )}
 
@@ -66,7 +66,7 @@ export default async function EditNews({
               <select name="member_id" defaultValue={n?.member_id ?? ''} className={sel}>
                 <option value="">কেউ নয়</option>
                 {[...members].sort((a, b) => (a.seat?.no ?? 999) - (b.seat?.no ?? 999)).map((m) => (
-                  <option key={m.id} value={m.id}>{m.seat?.nameBn ? `${m.seat.nameBn} · ` : ''}{m.nameBn ?? m.nameEn}</option>
+                  <option key={m.id} value={m.id}>{m.seat?.nameBn ? `${m.seat.nameBn}, ` : ''}{m.nameBn ?? m.nameEn}</option>
                 ))}
               </select>
             </label>

@@ -23,11 +23,11 @@ export default async function AuditAdmin({ searchParams }: { searchParams: Promi
           {rows.map((r) => (
             <tr key={r.id}>
               <Td className="whitespace-nowrap text-muted">{when(r.created_at)}</Td>
-              <Td className="whitespace-nowrap">{r.actor_email ?? '—'}</Td>
+              <Td className="whitespace-nowrap">{r.actor_email ?? 'নেই'}</Td>
               <Td><code className="text-[12.5px]">{r.action}</code></Td>
-              <Td className="text-[13px] text-muted">{[r.entity_type, r.entity_id, r.field].filter(Boolean).join(' · ')}</Td>
-              <Td className="text-[13px] max-w-[220px] break-words">{r.old_value ?? '—'}</Td>
-              <Td className="text-[13px] max-w-[220px] break-words">{r.new_value ?? '—'}</Td>
+              <Td className="text-[13px] text-muted">{[r.entity_type, r.entity_id, r.field].filter(Boolean).join(', ')}</Td>
+              <Td className="text-[13px] max-w-[220px] break-words">{r.old_value ?? 'নেই'}</Td>
+              <Td className="text-[13px] max-w-[220px] break-words">{r.new_value ?? 'নেই'}</Td>
             </tr>
           ))}
         </Table>

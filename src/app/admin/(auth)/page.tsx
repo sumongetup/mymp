@@ -36,8 +36,8 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
         <Panel title="সংসদে এখন" action={<Link href="/odhibeshon" target="_blank">সাইটে দেখুন ↗</Link>}>
           <dl className="flex flex-col text-[14px]">
-            <div className="flex justify-between gap-3 py-2 border-b border-rulesoft"><dt className="text-muted">সর্বশেষ অধিবেশন</dt><dd className="font-semibold text-end">{session ? sessionLabel(session) : '—'}{session?.startDate ? <span className="text-muted font-normal"> · শুরু {dateBn(session.startDate)}</span> : null}</dd></div>
-            <div className="flex justify-between gap-3 py-2 border-b border-rulesoft"><dt className="text-muted">সর্বশেষ বৈঠক</dt><dd className="font-semibold">{dateBn(sitting?.date ?? null) ?? '—'}</dd></div>
+            <div className="flex justify-between gap-3 py-2 border-b border-rulesoft"><dt className="text-muted">সর্বশেষ অধিবেশন</dt><dd className="font-semibold text-end">{session ? sessionLabel(session) : 'নেই'}{session?.startDate ? <span className="text-muted font-normal">, শুরু {dateBn(session.startDate)}</span> : null}</dd></div>
+            <div className="flex justify-between gap-3 py-2 border-b border-rulesoft"><dt className="text-muted">সর্বশেষ বৈঠক</dt><dd className="font-semibold">{dateBn(sitting?.date ?? null) ?? 'নেই'}</dd></div>
             <div className="flex justify-between gap-3 py-2 border-b border-rulesoft"><dt className="text-muted">বৈঠকের নথি</dt><dd className="font-semibold tnum">{bn(totalSittings())}</dd></div>
             <div className="flex justify-between gap-3 py-2 border-b border-rulesoft"><dt className="text-muted">সদস্যদের প্রজ্ঞাপন</dt><dd className="font-semibold tnum">{bn(memberNoticeCount())}</dd></div>
             <div className="flex justify-between gap-3 py-2"><dt className="text-muted">সংসদ পরিচালনায়</dt><dd className="font-semibold tnum">{bn(activity.speakers.length)} জন</dd></div>
@@ -81,9 +81,9 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
               {recent.map((r) => (
                 <tr key={r.id}>
                   <Td className="whitespace-nowrap text-muted">{when(r.created_at)}</Td>
-                  <Td className="wrap-anywhere">{r.actor_email ?? '—'}</Td>
+                  <Td className="wrap-anywhere">{r.actor_email ?? 'নেই'}</Td>
                   <Td><code className="text-[12.5px]">{r.action}</code></Td>
-                  <Td className="text-muted wrap-anywhere">{[r.entity_type, r.entity_id, r.field].filter(Boolean).join(' · ')}</Td>
+                  <Td className="text-muted wrap-anywhere">{[r.entity_type, r.entity_id, r.field].filter(Boolean).join(', ')}</Td>
                 </tr>
               ))}
             </Table>

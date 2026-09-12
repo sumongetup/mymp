@@ -36,9 +36,9 @@ export default async function CorrectionsAdmin({ searchParams }: { searchParams:
               <div className="flex flex-col gap-3">
                 <div className="flex flex-wrap items-center gap-2 text-[13px] text-muted">
                   <span>{when(r.created_at)}</span>
-                  <span>·</span>
+                  <span>|</span>
                   <Link href={r.page_path} className="text-brand font-semibold hover:underline">{r.page_path}</Link>
-                  {r.reporter_name && <><span>·</span><span>{r.reporter_name}</span></>}
+                  {r.reporter_name && <><span>|</span><span>{r.reporter_name}</span></>}
                   {r.reporter_email && <span className="text-muted">({r.reporter_email})</span>}
                   <Badge tone={r.status === 'open' ? 'warn' : r.status === 'accepted' ? 'good' : 'bad'}>
                     {r.status === 'open' ? 'খোলা' : r.status === 'accepted' ? 'গৃহীত' : 'বাতিল'}

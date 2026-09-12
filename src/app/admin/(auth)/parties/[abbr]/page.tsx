@@ -10,7 +10,7 @@ import { EntityEditor, EditFlags, AuditLink } from '../../EntityEditor';
 export async function generateMetadata({ params }: { params: Promise<{ abbr: string }> }): Promise<Metadata> {
   const { abbr } = await params;
   const p = parties.find((x) => x.abbr === abbr);
-  return { title: p ? `${p.nameBn ?? p.abbr} · দল` : 'দল' };
+  return { title: p ? `${p.nameBn ?? p.abbr} | দল` : 'দল' };
 }
 
 export default async function EditParty({
@@ -37,7 +37,7 @@ export default async function EditParty({
   return (
     <AdminPage
       title={party.nameBn ?? party.abbr}
-      lede={`${party.nameEn ?? ''} · ${bn(party.seats)}টি আসন`}
+      lede={`${party.nameEn ?? ''}, ${bn(party.seats)}টি আসন`}
       actions={<Button kind="secondary" href={`/dol/${party.slug}`}>সাইটে দেখুন ↗</Button>}
     >
       <EditFlags flags={flags} noun="দলটি" />

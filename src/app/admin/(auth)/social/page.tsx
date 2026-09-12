@@ -22,7 +22,7 @@ export default function SocialPage() {
       crumbs={[{ href: '/admin', label: 'ড্যাশবোর্ড' }, { label: 'সোশ্যাল লিংক' }]}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <Stat label="অন্তত একটি লিংক আছে" value={bn(withAny.length)} hint={`${bn(sitting.length)} জন সদস্যের মধ্যে · সর্বশেষ প্রকাশ অনুযায়ী`} icon="globe" tone="good" />
+        <Stat label="অন্তত একটি লিংক আছে" value={bn(withAny.length)} hint={`${bn(sitting.length)} জন সদস্যের মধ্যে, সর্বশেষ প্রকাশ অনুযায়ী`} icon="globe" tone="good" />
         <Stat label="কোনো লিংক নেই" value={bn(missing.length)} icon="users" tone="warn" />
       </div>
       <Notice tone="warn">

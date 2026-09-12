@@ -29,7 +29,7 @@ export default function SocialImportForm({ template }: { template: string }) {
             {state.lines.map((l) => (
               <li key={l.line} className={`px-3 py-2 rounded-md border ${l.ok ? 'border-rule' : 'border-danger bg-dangersoft/40'}`}>
                 <span className="text-muted tnum">লাইন {l.line}: </span>
-                {l.who && <strong className="font-semibold">{l.who} · </strong>}
+                {l.who && <strong className="font-semibold">{l.who}: </strong>}
                 <span className={l.ok ? 'text-inksoft' : 'text-danger'}>{l.message}</span>
                 {!l.ok && <span className="block text-[12.5px] text-muted break-all">{l.raw}</span>}
               </li>

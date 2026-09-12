@@ -10,7 +10,7 @@ import { AdminPage, Panel, Field, Button, Badge, Notice, inputClass, when } from
 export async function generateMetadata({ params }: { params: Promise<{ seat: string }> }): Promise<Metadata> {
   const seatNo = Number((await params).seat);
   const seat = seats.find((s) => s.no === seatNo && !s.reserved);
-  return { title: seat ? `${seat.nameBn ?? seat.nameEn} · নির্বাচনের ফল` : 'নির্বাচনের ফল' };
+  return { title: seat ? `${seat.nameBn ?? seat.nameEn} | নির্বাচনের ফল` : 'নির্বাচনের ফল' };
 }
 
 export default async function EditResult({
@@ -41,8 +41,8 @@ export default async function EditResult({
 
   return (
     <AdminPage
-      title={`${seat.nameBn} · ${parliamentLabel(parliamentNo)}`}
-      lede={`আসন ${bn(seat.no)}${seat.nameEn ? ` · ${seat.nameEn}` : ''}। ${parliamentNo === 13 ? `বর্তমান সদস্য ${holder?.nameBn ?? 'নেই'}` : past ? `সংসদের রেকর্ডে সে সময়ের সদস্য ${past.nameBn ?? past.nameEn}${past.partyAbbr ? ` (${past.partyAbbr})` : ''}` : 'ওই সংসদের সদস্যের রেকর্ড নেই'}।`}
+      title={`${seat.nameBn}, ${parliamentLabel(parliamentNo)}`}
+      lede={`আসন ${bn(seat.no)}${seat.nameEn ? `, ${seat.nameEn}` : ''}। ${parliamentNo === 13 ? `বর্তমান সদস্য ${holder?.nameBn ?? 'নেই'}` : past ? `সংসদের রেকর্ডে সে সময়ের সদস্য ${past.nameBn ?? past.nameEn}${past.partyAbbr ? ` (${past.partyAbbr})` : ''}` : 'ওই সংসদের সদস্যের রেকর্ড নেই'}।`}
       crumbs={[{ href: '/admin/results', label: 'নির্বাচনের ফল' }, { label: seat.nameBn ?? String(seat.no) }]}
       actions={<Button kind="secondary" href={`/ason/${seat.slug}`}>সাইটে দেখুন ↗</Button>}
     >
@@ -105,7 +105,7 @@ export default async function EditResult({
                 <ol className="flex flex-col divide-y divide-rulesoft border-t border-rulesoft pt-1">
                   {[...row.candidates].sort((a, b) => b.votes - a.votes).map((c, i) => (
                     <li key={`${c.name}-${i}`} className="py-1.5 flex justify-between gap-3">
-                      <span className={i === 0 ? 'font-bold' : ''}>{c.name}{c.party ? <span className="text-muted"> · {c.party}</span> : null}</span>
+                      <span className={i === 0 ? 'font-bold' : ''}>{c.name}{c.party ? <span className="text-muted">, {c.party}</span> : null}</span>
                       <span className="tnum">{bnGroup(c.votes)}</span>
                     </li>
                   ))}

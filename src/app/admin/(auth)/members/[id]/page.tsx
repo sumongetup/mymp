@@ -8,7 +8,7 @@ import { EntityEditor, EditFlags, HidePanel, AuditLink } from '../../EntityEdito
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const m = getMemberById((await params).id);
-  return { title: m ? `${m.nameBn ?? m.nameEn} · সংসদ সদস্য` : 'সংসদ সদস্য' };
+  return { title: m ? `${m.nameBn ?? m.nameEn} | সংসদ সদস্য` : 'সংসদ সদস্য' };
 }
 
 export default async function EditMember({
@@ -29,7 +29,7 @@ export default async function EditMember({
   return (
     <AdminPage
       title={m.nameBn ?? m.nameEn ?? id}
-      lede={[m.seat?.nameBn, m.party?.nameBn, m.nameEn].filter(Boolean).join(' · ')}
+      lede={[m.seat?.nameBn, m.party?.nameBn, m.nameEn].filter(Boolean).join(', ')}
       actions={<Button kind="secondary" href={`/mp/${m.slug}`}>সাইটে দেখুন ↗</Button>}
     >
       <EditFlags flags={flags} noun="সদস্যটি" />
@@ -65,9 +65,9 @@ export default async function EditMember({
           <Panel title="সংসদের তথ্যভান্ডার থেকে">
             <dl className="flex flex-col gap-2 text-[14px]">
               <div className="flex justify-between gap-3"><dt className="text-muted">আইডি</dt><dd className="tnum">{m.id}</dd></div>
-              <div className="flex justify-between gap-3"><dt className="text-muted">জন্ম</dt><dd>{dateBn(m.dateOfBirth) ?? '—'}</dd></div>
+              <div className="flex justify-between gap-3"><dt className="text-muted">জন্ম</dt><dd>{dateBn(m.dateOfBirth) ?? 'নেই'}</dd></div>
               <div className="flex justify-between gap-3"><dt className="text-muted">লিঙ্গ</dt><dd>{m.gender === 'Female' ? 'নারী' : 'পুরুষ'}</dd></div>
-              <div className="flex justify-between gap-3"><dt className="text-muted">আসন</dt><dd>{m.seat?.nameBn ?? '—'}{m.seat ? ` (${bn(m.seat.no)})` : ''}</dd></div>
+              <div className="flex justify-between gap-3"><dt className="text-muted">আসন</dt><dd>{m.seat?.nameBn ?? 'নেই'}{m.seat ? ` (${bn(m.seat.no)})` : ''}</dd></div>
               <div className="flex justify-between gap-3"><dt className="text-muted">মোবাইল</dt><dd>{m.hasMobile ? 'আছে, প্রকাশ করা হয় না' : 'নেই'}</dd></div>
             </dl>
             <p className="mt-3 text-[12.5px] text-muted">

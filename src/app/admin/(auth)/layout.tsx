@@ -1,6 +1,7 @@
 import { requireAdmin } from '@/lib/admin/auth';
 import { signOut } from '@/app/admin/actions';
 import AdminNav, { type NavGroup } from './AdminNav';
+import FormGuard from './FormGuard';
 
 const GROUPS: { label: string; items: (NavGroup['items'][number] & { super?: boolean })[] }[] = [
   {
@@ -59,6 +60,7 @@ export default async function AdminShell({ children }: { children: React.ReactNo
 
   return (
     <div className="grow flex flex-col lg:flex-row">
+      <FormGuard />
       <AdminNav groups={groups} account={account} />
       <main className="grow min-w-0">{children}</main>
     </div>

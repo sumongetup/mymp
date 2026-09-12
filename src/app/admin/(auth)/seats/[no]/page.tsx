@@ -9,7 +9,7 @@ import { EntityEditor, EditFlags, AuditLink } from '../../EntityEditor';
 export async function generateMetadata({ params }: { params: Promise<{ no: string }> }): Promise<Metadata> {
   const { no } = await params;
   const seat = seats.find((s) => String(s.no) === no);
-  return { title: seat ? `${seat.nameBn ?? seat.nameEn} · আসন` : 'আসন' };
+  return { title: seat ? `${seat.nameBn ?? seat.nameEn} | আসন` : 'আসন' };
 }
 
 export default async function EditSeat({
@@ -31,7 +31,7 @@ export default async function EditSeat({
   return (
     <AdminPage
       title={seat.nameBn ?? seat.nameEn ?? no}
-      lede={[seat.nameEn, seat.reserved ? 'সংরক্ষিত নারী আসন' : 'সাধারণ আসন'].filter(Boolean).join(' · ')}
+      lede={[seat.nameEn, seat.reserved ? 'সংরক্ষিত নারী আসন' : 'সাধারণ আসন'].filter(Boolean).join(', ')}
       actions={<Button kind="secondary" href={`/ason/${seat.slug}`}>সাইটে দেখুন ↗</Button>}
     >
       <EditFlags flags={flags} noun="আসনটি" />

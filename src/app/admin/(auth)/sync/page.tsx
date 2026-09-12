@@ -86,7 +86,7 @@ export default async function SyncAdmin() {
                       {r.status === 'ok' ? 'সফল' : r.status === 'failed' ? 'ব্যর্থ' : 'চলছে'}
                     </Badge>
                   </Td>
-                  <Td className="tnum">{r.parsed !== null ? bn(r.parsed) : '—'}</Td>
+                  <Td className="tnum">{r.parsed !== null ? bn(r.parsed) : 'নেই'}</Td>
                   <Td className="tnum">{bn(r.added)}</Td>
                   <Td className="tnum">{bn(r.closed)}</Td>
                   <Td className="tnum">{bn(r.unchanged)}</Td>
@@ -130,7 +130,7 @@ export default async function SyncAdmin() {
                   <select name="member_id" required defaultValue={u.candidates[0]?.memberId ?? ''} className="h-9 max-w-[280px] rounded-lg border border-rule bg-surface px-2 text-[13.5px]">
                     <option value="" disabled>সংসদ সদস্য বাছুন</option>
                     {u.candidates.map((c) => <option key={`c-${c.memberId}`} value={c.memberId}>{c.nameBn} (কাছাকাছি)</option>)}
-                    {picker.map((m) => <option key={m.id} value={m.id}>{m.nameBn} ({m.seat?.nameBn ?? '—'})</option>)}
+                    {picker.map((m) => <option key={m.id} value={m.id}>{m.nameBn} ({m.seat?.nameBn ?? 'নেই'})</option>)}
                   </select>
                   <button type="submit" className="h-9 px-3.5 rounded-lg bg-brand text-white text-[13.5px] font-semibold hover:bg-branddark">মেলান</button>
                 </form>
@@ -170,9 +170,9 @@ export default async function SyncAdmin() {
               <tr key={r.id}>
                 <Td className="whitespace-nowrap text-muted">{when(r.started_at)}</Td>
                 <Td><Badge tone={r.ok ? 'good' : 'bad'}>{r.ok ? 'সফল' : 'ব্যর্থ'}</Badge></Td>
-                <Td className="tnum">{r.members !== null ? bn(r.members) : '—'}</Td>
-                <Td className="tnum">{r.committees !== null ? bn(r.committees) : '—'}</Td>
-                <Td className="tnum">{r.overrides_applied !== null ? bn(r.overrides_applied) : '—'}</Td>
+                <Td className="tnum">{r.members !== null ? bn(r.members) : 'নেই'}</Td>
+                <Td className="tnum">{r.committees !== null ? bn(r.committees) : 'নেই'}</Td>
+                <Td className="tnum">{r.overrides_applied !== null ? bn(r.overrides_applied) : 'নেই'}</Td>
                 <Td className="text-[13px] text-muted max-w-[320px] break-words">{r.message ?? ''}</Td>
               </tr>
             ))}
