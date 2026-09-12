@@ -35,9 +35,9 @@ The public site reads no database: `scripts/sync.mjs` runs at build time, pulls 
 | audit_log | 18 | every admin action | actor, actor_email, action, entity_type, entity_id, field, old_value, new_value |
 | sync_runs | 80 | one row per build-time sync | started_at, finished_at, ok, members, committees, overrides_applied, message |
 | election_results | 298 (297 published) | per-seat vote counts | seat_no, parliament_no, candidates jsonb, total_votes, turnout, source_url, source_note, status (draft, published) |
-| posts | **table missing** | government and House posts, kept by the posts sync | type, title, rank_note, ministry_bn, member_id, is_mp, person_name_bn/en, photo_url, from_date, to_date, appointed_on, source_order, source_key, source_url, source_hash, auto_synced, auto_closed |
-| post_sync_runs | **table missing** | one row per posts-sync run | status, trigger, source_hashes, source_counts, added, closed, unchanged, unmatched, unmatched_names, changes, errors |
-| post_aliases | **table missing** | names an editor resolved for the posts sync | name_key, name_bn, member_id |
+| posts | 91 | government and House posts, kept by the posts sync | type, title, rank_note, ministry_bn, member_id, is_mp, person_name_bn/en, photo_url, from_date, to_date, appointed_on, source_order, source_key, source_url, source_hash, auto_synced, auto_closed |
+| post_sync_runs | 4 | one row per posts-sync run | status, trigger, source_hashes, source_counts, added, closed, unchanged, unmatched, unmatched_names, changes, errors |
+| post_aliases | 0 | names an editor resolved for the posts sync | name_key, name_bn, member_id |
 
 `supabase/migrations/003_posts.sql` creates the three missing tables. Not run in production (see blocked.md).
 

@@ -1,8 +1,8 @@
 # Data integrity report
 
-Generated 2026-09-11 22:34 UTC by `npx tsx scripts/qa-data.ts` from the committed snapshot in `data/` (built 2026-09-11 12:06 UTC) and the live admin tables.
+Generated 2026-09-12 07:23 UTC by `npx tsx scripts/qa-data.ts` from the committed snapshot in `data/` (built 2026-09-11 12:06 UTC) and the live admin tables.
 
-**1 failing check, 20 passing, 7 notes.**
+**0 failing checks, 21 passing, 7 notes.**
 
 | | Check | Detail |
 |---|---|---|
@@ -30,7 +30,7 @@ Generated 2026-09-11 22:34 UTC by `npx tsx scripts/qa-data.ts` from the committe
 | ✅ | Dates: none in the future, no end before its start (term end 2031-02-16, 2026-08-21 is the parliament's scheduled end) |  |
 | ℹ️ | Photos | skipped (--no-photos) |
 | ✅ | overrides: all 797 rows point at an existing member, seat, party or committee |  |
-| ✅ | news_posts: all 246 rows reference existing members and seats |  |
+| ✅ | news_posts: all 259 rows reference existing members and seats |  |
 | ✅ | election_results: 298 rows (297 published), one per seat and parliament, all seats exist |  |
 | ℹ️ | hidden_entities | none |
-| ❌ | posts tables | missing: supabase/migrations/003_posts.sql has not been run (see blocked.md) |
+| ✅ | posts tables exist |  |

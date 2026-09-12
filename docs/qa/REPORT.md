@@ -41,14 +41,14 @@ No official-source value was changed or invented. `election_results` is 298 rows
 
 ## 3. Blocked (needs the owner)
 
-Contents of `blocked.md`:
-- **Production database**: run `supabase/migrations/003_posts.sql` in Supabase → SQL Editor. Until then `posts`, `post_sync_runs` and `post_aliases` do not exist, `/api/cron/sync-posts` fails cleanly, `/admin/sync` shows the "table missing" notice, and `/ministers` and the MP badges come from the committed `data/posts.json` snapshot.
-- **Credentials**: `RESEND_API_KEY` (and optionally `MAIL_FROM`) in Vercel so the posts sync can email; `MYMP_CRON_SECRET` in GitHub → Settings → Secrets → Actions (same value as Vercel's `CRON_SECRET`) so the six-hourly workflow can call the site.
+Two of the four cleared the same day the report was written (see the postscript). What is left, from `blocked.md`:
+- **Credentials**: `RESEND_API_KEY` and `MAIL_FROM` in Vercel, so the posts sync can email when something changes or a source breaks. Without it the sync runs but cannot tell anyone.
+- **Old mirror files**: `mirror/parliament/2026-09-10.json` and `2026-09-11.json` in the public bucket still carry members' home addresses from before the privacy pass; say the word and the address fields come out.
 - **Chattogram-4 (seat 281)**: parliament.gov.bd lists no member and no result was published by TBS or Wikipedia. Whether the election was postponed, is disputed, or the member is not yet entered is stated nowhere I can read; confirm, and if there is a member, give the name and source.
 
 ## 4. Migrations
 
-- `supabase/migrations/003_posts.sql` (written in the posts-sync work, still not run). Command: open Supabase → SQL Editor, paste the file, run. Safe to run twice.
+- `supabase/migrations/003_posts.sql` (written in the posts-sync work). Command: open Supabase → SQL Editor, paste the file, run; safe to run twice. **Run by the owner on 2026-09-12**, see the postscript.
 - No new migration was needed in this pass.
 
 ## 5. Design questions
@@ -66,7 +66,7 @@ In `design-questions.md`, with recommendations: (1) member photos and party logo
 
 ## 7. Three fixes to do next
 
-1. **Run `003_posts.sql`** and set the two secrets: it turns the ministers page and MP badges from a one-off snapshot into a self-updating list, and lights up the review queue on `/admin/sync`.
+1. **Clear the posts review queue** at `/admin/sync`: 13 names, 5 technocrat ministers and 8 advisers, none of them MPs. Marking them settles the list so later runs stop asking, and `RESEND_API_KEY` then makes the sync report itself by email instead of silently.
 2. **Photo thumbnails from the engine** (design question 1): about 50 KB less per list page on phones, the single largest remaining Lighthouse item after fonts.
 3. **Resolve Chattogram-4**: either a member from the source or a one-line note on the seat page saying why it is empty, so the 349 vs 350 gap on the home chart is explained rather than silent.
 
@@ -85,3 +85,13 @@ Deploy of `f0449e2` seen live 90 s after the push, checked on the Vercel host (m
 | noindex | no | no | no |
 
 Also live: `/admin/members` signed out gives 307 to `/admin/login?denied=1`; the sitemap has 853 URLs including the new seat page. The only dash on the MP page is the en dash inside the editor-entered education text (section 6).
+
+## Postscript, 2026-09-12 07:30 UTC
+
+Two blocked items cleared while the report was being written, and clearing them found one more bug.
+
+- The owner ran `003_posts.sql`. The first sync wrote **91 posts**: 63 ministers, state ministers and advisers who are MPs, 17 advisers who are not, and the 11 House offices. 13 names went to the review queue at `/admin/sync` (5 technocrat ministers, 8 advisers); none of them are members, which is why the matcher would not take them. `data-report.md` now reads **0 failing checks, 21 passing**.
+- `MYMP_CRON_SECRET` is set in GitHub Actions. Vercel refuses to show a Sensitive variable's value, so `CRON_SECRET` was rotated to a new random value and set in both places.
+- **Bug found by the first scheduled run** (commit `6119aa4`): every cabinet.gov.bd page failed with "fetch failed" on Vercel while working on this machine. That host serves its leaf certificate without the Sectigo intermediate that signs it, the same fault as parliament.gov.bd; Node on Linux trusts only its bundled roots, while Node on Windows also reads the system store, which hid it locally. The cabinet pages now go through the same `node:https` agent and CA bundle as the parliament API. Nothing was lost meanwhile: a source it cannot read closes no posts (`close 0` in the failed run). The workflow now runs green: parsed 97, unchanged 91, errors none.
+
+Lesson for any new gov.bd source: test the fetch with `ca: [...tls.rootCertificates]` passed explicitly, because a local pass on Windows proves nothing about Vercel.
