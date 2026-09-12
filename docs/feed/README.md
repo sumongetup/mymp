@@ -27,6 +27,7 @@ is never fetched, and every item links out to the source.
 | collector | what it reads | how often | needs |
 |---|---|---|---|
 | `rss` | 32 news feeds | every 30 min (GitHub Actions), daily backstop (Vercel) | nothing |
+| `sitemap` | the news sitemaps of 23 outlets | every 30 min, eight outlets per run | nothing |
 | `press` | parliament notices already in `data/activity.json` | daily | nothing |
 | `youtube` | YouTube Data API v3, four members an hour | hourly | `YOUTUBE_API_KEY` |
 | `search` | the ten outlets with no feed, four members an hour | hourly | `FEED_SEARCH_KEY` (+ `FEED_SEARCH_PROVIDER`, `FEED_SEARCH_CX` for Google) |
@@ -39,7 +40,44 @@ npm run feed:rss                        # every feed, once
 npm run feed:rss -- --dry-run           # fetch and match, write nothing
 npm run feed:rss -- --collector=press   # parliament notices
 npm run feed:seed                       # name variants and feed start dates
+npm run feed:rematch                    # match what is already stored again
+npm run feed:rematch -- --apply         # and attach what it finds
+npm run feed:backfill -- --days 30      # read the daily sitemaps backwards
 ```
+
+### Sitemaps, and why they matter more than the feeds
+
+A feed carries an outlet's top twenty stories. Those are national news, and a
+member who is not a minister is never in them — he is in the district story
+filed the same morning. The sitemap an outlet publishes for search engines
+carries every one of those, with the headline and the time beside each address,
+and our RSS reader already parses it: ইত্তেফাক answers with a thousand items,
+চ্যানেল ২৪ with five hundred, where their feeds give twenty. One sitemap run
+reads about 6,000 headlines against a feed run's 429.
+
+Five outlets that no feed could reach — কালের কণ্ঠ, বাংলাদেশ প্রতিদিন,
+বাংলানিউজ২৪, বিডিনিউজ২৪, ঢাকা পোস্ট — publish one, so they are finally in.
+
+Two things this collector must keep doing:
+
+* **only what names a member is stored.** Six thousand headlines an hour is a
+  hundred thousand rows a week, and the football results give nobody a page.
+  The matcher runs before the write (`ingest(..., { onlyMatched: true })`).
+* **requests are spaced and a slice of the outlets is read per run.** Several of
+  these hosts answer 403 to a stream of requests from one address and serve a
+  cold one happily. That is a rate limit and the answer to it is to slow down,
+  never to pretend to be a browser. A day's sitemap sits there for 48 hours;
+  reading each outlet once an hour loses nothing.
+
+`npm run feed:backfill` reads the four outlets that file one sitemap per day
+(`{d}` in `config/news-sources.ts`) backwards through their archive, one host at
+a time with a gap, and stores only what names a member. It is the only way a
+member who reaches print once a fortnight gets a page with anything on it. Days
+refused with a 403 are reported and simply come back on the next run — nothing
+is written twice, so re-running is free.
+
+Prothom Alo's own search API answers a member's name better than any of this,
+and `robots.txt` disallows `/api/`. It is therefore not used.
 
 ### Quota
 
@@ -94,6 +132,24 @@ official name, the English name, a শফিকুর/শফিকুল swap, a
 press uses ("মঈন খান") **only when it belongs to exactly one member**. Editors
 add more on the member's admin page; the weekly learning job adds what it sees
 them attach by hand twice.
+
+**The popular name.** Many members are known by a name that is not the one on
+the roll: কুমিল্লা-৪ is "মোঃ আবুল হাসনাত" in parliament's list and
+হাসনাত আবদুল্লাহ in every headline, and no rule derives the second from the
+first. 211 members carry a `bioSource` link to their Wikipedia article, and the
+article's title is that name, so the seeder decodes it and adds it — 91 of them.
+
+Two guards, because these are claims about real people:
+
+* a title of fewer than two words is ignored;
+* a title that folds onto any other member's official name or another
+  member's title is dropped. Two sitting members are called মোঃ আনোয়ারুল ইসলাম,
+  and giving either one the shared English title would have each of them
+  collecting the other's news.
+
+After adding names, run `npm run feed:rematch -- --apply`: a collector never
+fetches the same address twice, so a name added today would otherwise never
+reach a story stored yesterday.
 
 ## Where a feed starts
 
