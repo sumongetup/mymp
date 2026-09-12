@@ -150,6 +150,7 @@ export async function runRssCollector(opts: CollectorOptions = {}): Promise<RunR
             summary: it.summary,
             outletName: source.nameBn,
             outletId: source.key,
+            thumbnailUrl: it.thumbnailUrl ?? null,
             publishedAt: it.publishedAt,
             source: 'rss',
           });
@@ -249,6 +250,7 @@ export async function runSitemapCollector(opts: CollectorOptions & { perRun?: nu
           summary: it.summary,
           outletName: source.nameBn,
           outletId: source.key,
+          thumbnailUrl: it.thumbnailUrl ?? null,
           publishedAt: it.publishedAt,
           // The outlet's own machine-readable index of its own articles, which
           // is what `rss` means here; the run row says which collector fetched it.

@@ -18,6 +18,7 @@
  * to make first; until then we record only whether one exists.
  */
 import { writeFile, mkdir, readFile } from 'node:fs/promises';
+import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import https from 'node:https';
@@ -48,6 +49,21 @@ const MIRROR_URL = `${ENGINE_URL}/storage/v1/object/public/mirror`;
 const MIRROR_MAX_AGE_HOURS = 36;
 /** Set by loadMirror(): { fetchedAt, responses: { [apiPath]: rows }, photos: { [externalId]: url } }. */
 let mirror = null;
+
+/*
+ * `npm run build` starts here, under plain Node, which does not read .env.local
+ * the way Next does. Without it the admin database looks absent, and a local
+ * build quietly rewrites data/*.json with none of the editors' overrides in it
+ * — hundreds of corrections gone from the files, with nothing on screen to say
+ * so. Reading the file makes a local build produce what Vercel's build does.
+ */
+const envFile = new URL('../.env.local', import.meta.url);
+if (existsSync(envFile)) {
+  for (const line of readFileSync(envFile, 'utf8').split(/\r?\n/)) {
+    const m = line.match(/^([A-Z_]+)=(.*)$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^"|"$/g, '');
+  }
+}
 
 /**
  * Optional admin database. When the Supabase variables are present, admin

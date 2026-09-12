@@ -33,6 +33,7 @@ export default function NewsBrowser({
 }) {
   const [member, setMemberHash] = useQueryParam('mp', legacyMember);
   const [outlet, setOutlet] = useQueryParam('outlet');
+  const [kind, setKind] = useQueryParam('type');
   const [q, setQ] = useQueryParam('q');
   const [shown, setShown] = useState(PAGE);
   const top = useRef<HTMLDivElement>(null);
@@ -46,7 +47,10 @@ export default function NewsBrowser({
   }, [member]);
 
   const keyed = useMemo(
-    () => stories.map((s) => ({ s, key: fold([s.lead.title, ...s.also.map((a) => a.title), s.member?.name ?? ''].join(' ')) })),
+    () => stories.map((s) => ({
+      s,
+      key: fold([s.lead.title, ...s.also.map((a) => a.title), ...(s.members ?? (s.member ? [s.member] : [])).map((m) => m.name)].join(' ')),
+    })),
     [stories],
   );
 
@@ -54,12 +58,14 @@ export default function NewsBrowser({
     const words = fold(q).split(' ').filter(Boolean);
     return keyed
       .filter(({ s, key }) => {
-        if (member && s.member?.slug !== member) return false;
+        if (kind === 'video' && s.kind !== 'video') return false;
+        if (kind === 'news' && s.kind === 'video') return false;
+        if (member && !(s.members?.length ? s.members.some((m) => m.slug === member) : s.member?.slug === member)) return false;
         if (outlet && s.lead.source !== outlet && !s.also.some((a) => a.source === outlet)) return false;
         return words.every((w) => key.includes(w));
       })
       .map((x) => x.s);
-  }, [keyed, q, member, outlet]);
+  }, [keyed, q, member, outlet, kind]);
 
   const visible = filtered.slice(0, shown);
   const days: { date: string; label: string; items: StoryView[] }[] = [];
@@ -71,11 +77,34 @@ export default function NewsBrowser({
   const perDay = new Map<string, number>();
   for (const s of filtered) perDay.set(s.date, (perDay.get(s.date) ?? 0) + 1);
 
-  const filtering = !!(member || outlet || q.trim());
+  const filtering = !!(member || outlet || kind || q.trim());
+  const videos = useMemo(() => stories.filter((s) => s.kind === 'video').length, [stories]);
   const field = 'h-11 rounded-[10px] border border-rule bg-surface px-3 text-[14.5px] outline-none focus-within:border-brand focus-within:ring-4 focus-within:ring-brandring';
 
   return (
     <div ref={top} className="flex flex-col gap-6 scroll-mt-24">
+      {videos > 0 && (
+        <div className="flex gap-2">
+          {[
+            { value: '', label: 'সব' },
+            { value: 'news', label: 'সংবাদ' },
+            { value: 'video', label: `ভিডিও (${bn(videos)})` },
+          ].map((t) => (
+            <button
+              key={t.value}
+              type="button"
+              onClick={() => { setKind(t.value); setShown(PAGE); }}
+              aria-pressed={kind === t.value}
+              className={`px-4 h-9 rounded-full border text-[14px] font-semibold transition-colors ${
+                kind === t.value ? 'border-ink bg-ink text-paper' : 'border-rule bg-surface hover:border-brand hover:text-brand'
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div className="grid grid-cols-2 sm:flex gap-2.5">
         <label className={`${field} col-span-2 flex items-center gap-2 grow min-w-0`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-muted shrink-0" aria-hidden="true">
@@ -111,11 +140,11 @@ export default function NewsBrowser({
       </div>
 
       <p className="text-[14px] text-muted flex flex-wrap items-center gap-x-3 gap-y-1" aria-live="polite">
-        <span>{bn(filtered.length)}টি খবর</span>
+        <span>{bn(filtered.length)}টি {kind === 'video' ? 'ভিডিও' : 'খবর'}</span>
         {filtering && (
           <button
             type="button"
-            onClick={() => { setMemberHash(''); setOutlet(''); setQ(''); setShown(PAGE); }}
+            onClick={() => { setMemberHash(''); setOutlet(''); setKind(''); setQ(''); setShown(PAGE); }}
             className="font-semibold text-brand hover:underline"
           >
             সব খবর দেখুন
@@ -130,7 +159,7 @@ export default function NewsBrowser({
           <section key={d.date} className="flex flex-col gap-3">
             <h2 className="flex items-baseline gap-2.5 text-[15px] font-bold text-ink">
               {d.label}
-              <span className="text-[13px] font-medium text-muted">{bn(perDay.get(d.date) ?? d.items.length)}টি খবর</span>
+              <span className="text-[13px] font-medium text-muted">{bn(perDay.get(d.date) ?? d.items.length)}টি</span>
             </h2>
             <ul className="flex flex-col gap-3">
               {d.items.map((s) => <li key={s.id}><StoryCard s={s} showDate={false} /></li>)}

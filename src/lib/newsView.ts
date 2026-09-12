@@ -12,6 +12,8 @@ export interface StoryLink {
   url: string;
 }
 
+export interface StoryMember { slug: string; name: string; party: string | null; color: string }
+
 export interface StoryView {
   id: string;
   /** yyyy-mm-dd of the lead headline. */
@@ -20,12 +22,19 @@ export interface StoryView {
   dateLabel: string;
   lead: StoryLink;
   also: StoryLink[];
-  member: { slug: string; name: string; party: string | null; color: string } | null;
+  member: StoryMember | null;
+  /** A headline unless the feed says otherwise; the news page shows videos too. */
+  kind?: 'news' | 'video' | 'press';
+  /** The outlet's own picture, left on the outlet's server. */
+  thumbnail?: string | null;
+  durationSeconds?: number | null;
+  /** Everyone the story names. `member` is the first of them. */
+  members?: StoryMember[];
 }
 
 const WEEKDAYS = ['রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার'];
 
-const dayLabel = (iso: string) => {
+export const dayLabel = (iso: string) => {
   const d = new Date(`${iso.slice(0, 10)}T00:00:00Z`);
   return Number.isNaN(d.getTime()) ? iso : `${WEEKDAYS[d.getUTCDay()]}, ${dateBn(iso.slice(0, 10))}`;
 };

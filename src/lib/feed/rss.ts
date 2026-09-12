@@ -11,6 +11,8 @@ export interface RssItem {
   url: string;
   publishedAt: string | null;
   summary: string | null;
+  /** The outlet's own picture for the story, if its feed names one. */
+  thumbnailUrl?: string | null;
 }
 
 const strip = (s: string) =>
@@ -41,6 +43,47 @@ const atomLink = (block: string): string | null => {
   return any ? strip(any[1]!) : null;
 };
 
+/**
+ * The story's own picture, taken from the feed entry and never from the page.
+ *
+ * Outlets name it in whichever way their publishing system happens to use —
+ * `media:content` at প্রথম আলো and জাগো নিউজ, `image:loc` in a news sitemap, an
+ * `enclosure` elsewhere — and some only put an `<img>` in the summary. The
+ * address is kept; the picture itself is left on the outlet's server, where a
+ * reader's browser loads it from and where the outlet can change or remove it.
+ */
+function itemImage(block: string): string | null {
+  const attr = (name: string, extra = '') => {
+    const m = block.match(new RegExp(`<${name}\\b[^>]*${extra}[^>]*\\surl=["']([^"']+)["']`, 'i'))
+      ?? block.match(new RegExp(`<${name}\\b[^>]*\\surl=["']([^"']+)["'][^>]*${extra}`, 'i'));
+    return m?.[1] ?? null;
+  };
+  const candidates = [
+    attr('media:content', 'medium=["\']image["\']'),
+    attr('media:thumbnail'),
+    attr('media:content'),
+    tag(block, 'image:loc'),
+    block.match(/<enclosure\b[^>]*type=["']image\/[^"']*["'][^>]*\surl=["']([^"']+)["']/i)?.[1] ?? null,
+    block.match(/<enclosure\b[^>]*\surl=["']([^"']+)["'][^>]*type=["']image\/[^"']*["']/i)?.[1] ?? null,
+    // A picture inside the summary's HTML, before the tags are stripped away.
+    block.match(/<img[^>]*\ssrc=["']([^"']+)["']/i)?.[1] ?? null,
+  ];
+  for (const raw of candidates) {
+    if (!raw) continue;
+    const url = strip(raw);
+    if (!/^https?:\/\//i.test(url)) continue;
+    // Some outlets fill the picture field with their "no image" house graphic.
+    // Showing that is worse than showing nothing. The file name is what is
+    // tested, and only as a whole word: YouTube's own thumbnail is called
+    // hqdefault.jpg, and a rule that read "default" inside it threw away every
+    // video's picture.
+    const file = url.split('?')[0]!.split('/').pop() ?? '';
+    if (/^(no[-_]?image|noimg|placeholder|default|blank)[-_.]?/i.test(file)) continue;
+    return url.slice(0, 800);
+  }
+  return null;
+}
+
 function toIso(raw: string | null): string | null {
   if (!raw) return null;
   const t = Date.parse(raw);
@@ -67,6 +110,7 @@ export function parseFeed(xml: string): RssItem[] {
       url,
       publishedAt: toIso(tag(b, 'pubDate') ?? tag(b, 'published') ?? tag(b, 'updated') ?? tag(b, 'dc:date')),
       summary: summary ? summary.slice(0, 600) : null,
+      thumbnailUrl: itemImage(b),
     });
   }
   return items;
@@ -83,7 +127,7 @@ export function parseNewsSitemap(xml: string): RssItem[] {
     const url = tag(block, 'loc');
     const title = tag(block, 'news:title');
     if (!url || !title || !/^https?:\/\//i.test(url)) continue;
-    items.push({ title, url, publishedAt: toIso(tag(block, 'news:publication_date')), summary: null });
+    items.push({ title, url, publishedAt: toIso(tag(block, 'news:publication_date')), summary: null, thumbnailUrl: itemImage(block) });
   }
   return items;
 }

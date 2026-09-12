@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import { bn, initial, getMember } from '@/lib/data';
-import { allStories } from '@/lib/newsView';
+import { newsPageStories } from '@/lib/feed/storyView';
 import { Page, PageHead, Card, Empty, Stat } from '@/components/ui';
 import NewsBrowser from '@/components/NewsBrowser';
+import VideoStrip from '@/components/VideoStrip';
 import MemberPhoto from '@/components/MemberPhoto';
 
 export const metadata: Metadata = {
@@ -13,19 +14,30 @@ export const metadata: Metadata = {
   description: 'সংসদ সদস্যদের নিয়ে দেশের সংবাদমাধ্যমের সর্বশেষ শিরোনাম, মূল খবরের লিংকসহ। প্রতিটি শিরোনাম সংশ্লিষ্ট সংসদ সদস্যের পাতাতেও দেখা যায়।',
 };
 
-/** The browser gets at most this many stories; the build has them all. */
-const LIMIT = 300;
+/** How many stories the page hands the browser's filter. */
+const LIMIT = 400;
 
-export default function NewsPage() {
-  const stories = allStories().slice(0, LIMIT);
+/**
+ * Read again every five minutes. The headlines come from the live feed, which
+ * gains a few hundred a day, so a page built once at deploy time would be out
+ * of date by lunch; five minutes is soon enough for a news list and keeps the
+ * site's shape, where a reader almost never waits on a function.
+ */
+export const revalidate = 300;
+
+export default async function NewsPage() {
+  const { stories } = await newsPageStories(LIMIT);
+  const videos = stories.filter((s) => s.kind === 'video');
+  const newsCount = stories.length - videos.length;
 
   // Who is in the news, by number of stories; the list's member filter and the side card both use it.
   const counts = new Map<string, { slug: string; name: string; count: number }>();
   for (const s of stories) {
-    if (!s.member) continue;
-    const e = counts.get(s.member.slug) ?? { slug: s.member.slug, name: s.member.name, count: 0 };
-    e.count++;
-    counts.set(s.member.slug, e);
+    for (const m of s.members?.length ? s.members : s.member ? [s.member] : []) {
+      const e = counts.get(m.slug) ?? { slug: m.slug, name: m.name, count: 0 };
+      e.count++;
+      counts.set(m.slug, e);
+    }
   }
   const members = [...counts.values()].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'bn'));
 
@@ -38,11 +50,12 @@ export default function NewsPage() {
       <PageHead
         eyebrow="মিডিয়া ও সংবাদ"
         title="সংবাদ"
-        lede="সংসদ সদস্য ও আসন নিয়ে অনুমোদিত সংবাদমাধ্যমের শিরোনাম, প্রতিটির সঙ্গে মূল সংবাদের লিংক। একই খবর কয়েকটি সংবাদমাধ্যমে এলে তা একসঙ্গে দেখানো হয়।"
+        lede="সংসদ সদস্য ও আসন নিয়ে সংবাদমাধ্যমের শিরোনাম ও টেলিভিশনের ভিডিও, প্রতিটির সঙ্গে মূল সংবাদের লিংক। একই খবর কয়েকটি সংবাদমাধ্যমে এলে তা একসঙ্গে দেখানো হয়।"
         aside={
           stories.length ? (
-            <div className="grid grid-cols-2 gap-3 w-full md:w-auto">
-              <Stat label="খবর" value={bn(stories.length)} />
+            <div className="grid grid-cols-3 gap-3 w-full md:w-auto">
+              <Stat label="খবর" value={bn(newsCount)} />
+              <Stat label="ভিডিও" value={bn(videos.length)} />
               <Stat label="সংবাদমাধ্যম" value={bn(outlets.length)} />
             </div>
           ) : undefined
@@ -50,7 +63,8 @@ export default function NewsPage() {
       />
 
       <div className="pt-8 pb-14 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-8 items-start">
-        <div className="min-w-0">
+        <div className="min-w-0 flex flex-col gap-8">
+          {videos.length > 0 && <VideoStrip videos={videos} moreHref="?type=video" />}
           {stories.length ? (
             <NewsBrowser stories={stories} members={members} outlets={outlets} />
           ) : (

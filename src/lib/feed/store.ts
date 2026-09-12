@@ -97,18 +97,22 @@ export async function upsertItem(input: FeedItemInput): Promise<UpsertResult | n
   const hash = contentHash(input.title, input.summary);
   const sb = db();
 
-  const [existing] = await sb.get<{ id: number; content_hash: string | null }[]>(
-    `feed_items?canonical_url=eq.${q(canonical)}&select=id,content_hash&limit=1`,
+  const [existing] = await sb.get<{ id: number; content_hash: string | null; thumbnail_url: string | null }[]>(
+    `feed_items?canonical_url=eq.${q(canonical)}&select=id,content_hash,thumbnail_url&limit=1`,
   );
   if (existing) {
-    if (existing.content_hash !== hash) {
+    // A picture the first pass did not take is still worth having: the reader
+    // only learned to look for one after these rows were stored.
+    const gainedPicture = !existing.thumbnail_url && !!input.thumbnailUrl;
+    if (existing.content_hash !== hash || gainedPicture) {
       await sb.patch(`feed_items?id=eq.${existing.id}`, {
         title: input.title,
         summary: input.summary ?? null,
+        ...(gainedPicture ? { thumbnail_url: input.thumbnailUrl } : {}),
         content_hash: hash,
         updated_at: new Date().toISOString(),
       });
-      return { id: existing.id, isNew: false, edited: true };
+      return { id: existing.id, isNew: false, edited: existing.content_hash !== hash };
     }
     return { id: existing.id, isNew: false, edited: false };
   }
@@ -329,6 +333,41 @@ export async function monthItems(mpId: string, month: string, type?: FeedType): 
       '&order=feed_items(published_at).desc&limit=300',
   );
   return rows.map(toEntry).filter((x): x is FeedEntry => !!x);
+}
+
+/** An item as the whole-site news page shows it: with everyone it names. */
+export interface LatestEntry extends FeedEntry {
+  mpIds: string[];
+}
+
+/**
+ * The newest items across every member, for /songbad.
+ *
+ * One story often names two members — a minister and the member who answered
+ * him — so the rows are folded by item and each keeps the list of who it is
+ * about, rather than appearing twice in the list.
+ */
+export async function latestItems(opts: { limit?: number; type?: FeedType } = {}): Promise<LatestEntry[]> {
+  const limit = opts.limit ?? 300;
+  const typeFilter = opts.type ? `&feed_items.type=eq.${opts.type}` : '';
+  const rows = await db().get<(JoinRow & { mp_id: string })[]>(
+    `feed_item_mps?status=eq.visible&select=mp_id,${SELECT_ITEM}${typeFilter}` +
+      `&feed_items=not.is.null&order=feed_items(published_at).desc&limit=${Math.min(limit * 3, 2000)}`,
+  );
+  const byItem = new Map<number, LatestEntry>();
+  for (const r of rows) {
+    const entry = toEntry(r);
+    if (!entry) continue;
+    const seen = byItem.get(entry.id);
+    if (seen) {
+      if (!seen.mpIds.includes(r.mp_id)) seen.mpIds.push(r.mp_id);
+      continue;
+    }
+    byItem.set(entry.id, { ...entry, mpIds: [r.mp_id] });
+  }
+  return [...byItem.values()]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, limit);
 }
 
 /** The items pinned to the top of a member's feed. */

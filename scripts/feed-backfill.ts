@@ -107,7 +107,7 @@ async function main() {
     });
   }
 
-  async function store(items: { title: string; url: string; publishedAt: string | null; summary: string | null }[], source: (typeof NEWS_SOURCES)[number], date: string) {
+  async function store(items: { title: string; url: string; publishedAt: string | null; summary: string | null; thumbnailUrl?: string | null }[], source: (typeof NEWS_SOURCES)[number], date: string) {
     const batch: FeedItemInput[] = items
       .filter((i) => i.title && i.url)
       .map((i) => ({
@@ -117,6 +117,7 @@ async function main() {
         summary: i.summary,
         outletName: source.nameBn,
         outletId: source.key,
+        thumbnailUrl: i.thumbnailUrl ?? null,
         // A dateless entry still belongs to the day whose sitemap held it.
         publishedAt: i.publishedAt ?? `${date}T12:00:00.000Z`,
         source: 'rss' as const,
