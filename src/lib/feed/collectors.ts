@@ -17,8 +17,15 @@ import { TRUSTED_CHANNELS } from '../../../config/feed-matching';
 import { attach, finishRun, startRun, upsertItem, type FeedItemInput, type RunResult } from './store';
 
 const YOUTUBE_KEY = () => process.env.YOUTUBE_API_KEY;
-/** search.list costs 100 units of the 10,000 a day a default key gets. */
+/**
+ * search.list costs 100 units, and a default key gets 10,000 a day: a hundred
+ * searches, for 348 members. So a run takes four members, once an hour, which
+ * spends 9,600 units a day and walks the whole House in about three and a half
+ * days. Members holding a post appear twice in the cycle, so they come round
+ * twice as often. YOUTUBE_MEMBERS_PER_RUN raises it if the key's quota is.
+ */
 const SEARCH_COST = 100;
+const PER_RUN = () => Math.max(1, Number(process.env.YOUTUBE_MEMBERS_PER_RUN ?? 4));
 
 interface Target {
   id: string;
@@ -36,16 +43,24 @@ function targets(): Target[] {
 }
 
 /**
- * The slice of members this run takes. `slots` is how many runs make a full
- * pass; priority members are in every second slot as well as their own.
+ * The few members this run takes, walking the same cycle every time so that
+ * over a few days everyone is covered and nobody twice in a row. A member who
+ * holds a post sits in the cycle twice.
  */
-export function sliceFor(list: Target[], slots: number, slot: number): Target[] {
-  const mine = list.filter((_, i) => i % slots === slot % slots);
-  const extra = slot % 2 === 0 ? list.filter((t) => t.priority && !mine.includes(t)) : [];
-  return [...mine, ...extra];
+export function sliceFor(list: Target[], perRun: number, tick: number): Target[] {
+  if (!list.length) return [];
+  const cycle = [...list, ...list.filter((t) => t.priority)];
+  const start = (tick * perRun) % cycle.length;
+  const out: Target[] = [];
+  for (let i = 0; out.length < perRun && i < cycle.length; i++) {
+    const t = cycle[(start + i) % cycle.length]!;
+    if (!out.some((x) => x.id === t.id)) out.push(t);
+  }
+  return out;
 }
 
-const slotNow = (slots: number) => Math.floor(Date.now() / (86_400_000 / slots)) % slots;
+/** Which turn of the cycle it is: one per hour for videos, one per half hour for search. */
+const tickNow = (minutes: number) => Math.floor(Date.now() / (minutes * 60_000));
 
 /* ---------------------------------------------------------------- YouTube */
 
@@ -59,7 +74,7 @@ interface YtItem {
  * nothing older than the member's feed start. The quota used is recorded on
  * the run, so the admin can see how close to the ceiling a day is.
  */
-export async function runYoutubeCollector(opts: { trigger?: string; slots?: number; since?: string } = {}): Promise<RunResult & { runId?: number }> {
+export async function runYoutubeCollector(opts: { trigger?: string; perRun?: number; since?: string } = {}): Promise<RunResult & { runId?: number }> {
   const key = YOUTUBE_KEY();
   const run = await startRun('youtube', opts.trigger ?? 'manual');
   const counts: IngestCounts = { found: 0, stored: 0, attached: 0, lowConfidence: 0, unmatched: 0 };
@@ -67,15 +82,15 @@ export async function runYoutubeCollector(opts: { trigger?: string; slots?: numb
 
   if (!key) {
     const result: RunResult = {
-      status: 'failed', itemsFound: 0, itemsNew: 0, itemsAttached: 0, unmatched: 0, lowConfidence: 0, quotaUsed: 0,
+      status: 'aborted', itemsFound: 0, itemsNew: 0, itemsAttached: 0, unmatched: 0, lowConfidence: 0, quotaUsed: 0,
       errors: [{ source: 'youtube', message: 'YOUTUBE_API_KEY is not set, so no video was fetched' }],
     };
     await finishRun(run, result);
     return result;
   }
 
-  const slots = opts.slots ?? 24; // once an hour: a full pass a day
-  const slice = sliceFor(targets(), slots, slotNow(slots));
+  const perRun = opts.perRun ?? PER_RUN();
+  const slice = sliceFor(targets(), perRun, tickNow(60));
   const index = await buildIndex();
   const trusted = new Set(TRUSTED_CHANNELS.map((c) => c.id));
   let quota = 0;
@@ -135,7 +150,7 @@ export async function runYoutubeCollector(opts: { trigger?: string; slots?: numb
     lowConfidence: counts.lowConfidence,
     quotaUsed: quota,
     errors,
-    detail: { members: slice.length, priority: slice.filter((t) => t.priority).length },
+    detail: { members: slice.length, priority: slice.filter((t) => t.priority).length, searches: quota / SEARCH_COST },
   };
   await finishRun(run, result);
   return { ...result, runId: run.id };
@@ -148,7 +163,7 @@ export async function runYoutubeCollector(opts: { trigger?: string; slots?: numb
  * member's name and constituency. 348 members are spread across the six-hour
  * window, about one a minute, so no provider sees a burst.
  */
-export async function runSearchCollector(opts: { trigger?: string; slots?: number } = {}): Promise<RunResult & { runId?: number }> {
+export async function runSearchCollector(opts: { trigger?: string; perRun?: number } = {}): Promise<RunResult & { runId?: number }> {
   const provider = searchProvider();
   const run = await startRun('search', opts.trigger ?? 'manual');
   const counts: IngestCounts = { found: 0, stored: 0, attached: 0, lowConfidence: 0, unmatched: 0 };
@@ -156,15 +171,17 @@ export async function runSearchCollector(opts: { trigger?: string; slots?: numbe
 
   if (!provider) {
     const result: RunResult = {
-      status: 'failed', itemsFound: 0, itemsNew: 0, itemsAttached: 0, unmatched: 0, lowConfidence: 0,
+      status: 'aborted', itemsFound: 0, itemsNew: 0, itemsAttached: 0, unmatched: 0, lowConfidence: 0,
       errors: [{ source: 'search', message: 'FEED_SEARCH_KEY is not set, so the outlets without a feed were not searched' }],
     };
     await finishRun(run, result);
     return result;
   }
 
-  const slots = opts.slots ?? 12; // every 30 minutes over six hours
-  const slice = sliceFor(targets(), slots, slotNow(slots));
+  // A search provider is billed per call, not per quota unit, so this one takes
+  // more members at a time: twelve every half hour is a pass a day.
+  const perRun = opts.perRun ?? 12;
+  const slice = sliceFor(targets(), perRun, tickNow(30));
   const index = await buildIndex();
   const sites = SEARCH_ONLY_SOURCES.map((s) => new URL(s.homepage).hostname.replace(/^www\./, ''));
   const items: FeedItemInput[] = [];

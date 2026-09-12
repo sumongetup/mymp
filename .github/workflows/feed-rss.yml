@@ -32,3 +32,4 @@ jobs:
             "https://mymp.bd/api/cron/feed?trigger=github")
           cat result.json; echo
           test "$code" = "200"
+

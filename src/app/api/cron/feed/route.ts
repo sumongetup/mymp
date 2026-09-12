@@ -35,9 +35,13 @@ export async function GET(req: Request) {
       : collector === 'search' ? await runSearchCollector({ trigger })
       : collector === 'press' ? await runPressCollector({ trigger })
       : await runRssCollector({ trigger, budgetMs: 45_000 });
+    // A collector with no key has not run rather than failed, so a schedule
+    // that is waiting for a credential does not turn red every hour.
+    const waiting = r.status === 'aborted' && r.errors.some((e) => /is not set/.test(e.message));
     return NextResponse.json(
       {
-        ok: r.status === 'ok',
+        ok: r.status === 'ok' || waiting,
+        waiting: waiting ? r.errors[0]!.message : undefined,
         collector,
         status: r.status,
         found: r.itemsFound,
@@ -47,7 +51,7 @@ export async function GET(req: Request) {
         unmatched: r.unmatched,
         errors: r.errors,
       },
-      { status: r.status === 'ok' ? 200 : 500 },
+      { status: r.status === 'ok' || waiting ? 200 : 500 },
     );
   } catch (e) {
     if (isMissingTable(e)) {
