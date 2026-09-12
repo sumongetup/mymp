@@ -116,22 +116,46 @@ function findRun(tokens: string[], name: string[]): number {
   return -1;
 }
 
+/** A phrase split once, at index time, so a match does not re-split it per item. */
+function phraseTokens(phrase: string | null | undefined): string[] {
+  if (!phrase) return [];
+  return textTokens(phrase).filter((t) => !HONORIFICS.has(t) && !INITIALS.has(t));
+}
+
 /** Does this phrase (a seat, a party, an office) appear as whole words? */
-function hasPhrase(tokens: string[], phrase: string | null | undefined): boolean {
-  if (!phrase) return false;
-  const p = textTokens(phrase).filter((t) => !HONORIFICS.has(t) && !INITIALS.has(t));
+function hasTokens(tokens: string[], p: string[]): boolean {
   if (!p.length) return false;
   if (p.length === 1) return tokens.some((t) => wordEq(t, p[0]!, true));
   return findRun(tokens, p) >= 0;
 }
 
+/** The words that mean a namesake, split once for the whole process. */
+const NEGATIVE_TOKENS = NEGATIVE_CONTEXT.map((word) => ({ word, tokens: phraseTokens(word) }));
+
 export interface FeedIndexEntry {
   mp: FeedMp;
   names: { tokens: string[]; weight: number; label: string }[];
+  /** Seat, district, party and office, split once instead of once per headline. */
+  phrases: {
+    seat: string[][];
+    district: string[][];
+    party: string[][];
+    posts: { word: string; tokens: string[] }[];
+    ministries: { word: string; tokens: string[] }[];
+  };
+  /**
+   * Every word that could give this member a point. A headline containing none
+   * of them cannot score above zero, so the member is not examined at all —
+   * which is what makes a run over five thousand sitemap headlines finish
+   * inside a serverless minute.
+   */
+  triggers: Set<string>;
 }
 
 export interface FeedIndex {
   entries: FeedIndexEntry[];
+  /** Which members a word could possibly name, for the prefilter above. */
+  byTrigger: Map<string, FeedIndexEntry[]>;
   /**
    * Every word that appears in some member's name. A match with one of these
    * immediately in front of it is part of a longer name, so
@@ -156,11 +180,33 @@ export function buildFeedIndex(mps: FeedMp[]): FeedIndex {
     add(mp.nameBn, 1);
     add(mp.nameEn, 1);
     for (const v of mp.variants) add(v.variant, v.weight);
-    return { mp, names };
+
+    const some = (raw: string | null | undefined) => {
+      const t = phraseTokens(raw);
+      return t.length ? [t] : [];
+    };
+    const phrases = {
+      seat: [...some(mp.seatBn), ...some(mp.seatEn)],
+      district: [...some(mp.districtBn), ...some(mp.districtEn)],
+      party: [...some(mp.partyBn), ...some(mp.partyAbbr)],
+      posts: POST_WORDS.filter((w) => mp.posts.some((post) => w.matches(post, null)))
+        .map((w) => ({ word: w.word, tokens: phraseTokens(w.word) })),
+      ministries: mp.ministries
+        .map((m) => ministryWord(m))
+        .filter((w): w is string => Boolean(w))
+        .map((w) => ({ word: w, tokens: phraseTokens(w) })),
+    };
+    const triggers = new Set<string>();
+    for (const n of names) for (const t of n.tokens) triggers.add(t);
+    for (const group of [phrases.seat, phrases.district, phrases.party]) for (const t of group.flat()) triggers.add(t);
+    for (const w of [...phrases.posts, ...phrases.ministries]) for (const t of w.tokens) triggers.add(t);
+    return { mp, names, phrases, triggers };
   });
   const nameWords = new Set<string>();
   for (const e of entries) for (const n of e.names) for (const t of n.tokens) if (!HONORIFICS.has(t) && !INITIALS.has(t)) nameWords.add(t);
-  return { entries, nameWords };
+  const byTrigger = new Map<string, FeedIndexEntry[]>();
+  for (const e of entries) for (const t of e.triggers) byTrigger.set(t, [...(byTrigger.get(t) ?? []), e]);
+  return { entries, nameWords, byTrigger };
 }
 
 export interface FeedItemText {
@@ -176,7 +222,20 @@ export function matchItem(index: FeedIndex, item: FeedItemText): MpMatch[] {
   const titleTokens = textTokens(item.title);
   const summaryTokens = item.summary ? textTokens(item.summary) : [];
   const allTokens = [...titleTokens, ...summaryTokens];
-  const negative = NEGATIVE_CONTEXT.filter((w) => hasPhrase(allTokens, w));
+  const negative = NEGATIVE_TOKENS.filter((w) => hasTokens(allTokens, w.tokens)).map((w) => w.word);
+
+  // Only members whose name, seat, district, party or office actually appears
+  // are examined. A case ending is allowed for on the way in, because
+  // "রহমানকে" is how a headline writes রহমান.
+  const candidates = new Set<FeedIndexEntry>();
+  for (const t of allTokens) {
+    for (const e of index.byTrigger.get(t) ?? []) candidates.add(e);
+    for (const suffix of SUFFIXES) {
+      if (t.length > suffix.length && t.endsWith(suffix)) {
+        for (const e of index.byTrigger.get(t.slice(0, -suffix.length)) ?? []) candidates.add(e);
+      }
+    }
+  }
 
   /** A name preceded by another name word is somebody else's longer name. */
   const standsAlone = (tokens: string[], at: number) => {
@@ -186,7 +245,7 @@ export function matchItem(index: FeedIndex, item: FeedItemText): MpMatch[] {
   };
 
   const found: MpMatch[] = [];
-  for (const entry of index.entries) {
+  for (const entry of candidates) {
     const { mp } = entry;
     const signals: Signal[] = [];
     let score = 0;
@@ -210,27 +269,25 @@ export function matchItem(index: FeedIndex, item: FeedItemText): MpMatch[] {
       signals.push({ signal: best.inTitle ? 'name-in-title' : 'name-in-summary', points, detail: best.label });
     }
 
-    const seatHit = hasPhrase(allTokens, mp.seatBn) || hasPhrase(allTokens, mp.seatEn);
-    if (seatHit) {
+    const { phrases } = entry;
+    if (phrases.seat.some((p) => hasTokens(allTokens, p))) {
       score += POINTS.seat;
       signals.push({ signal: 'seat', points: POINTS.seat, detail: mp.seatBn ?? mp.seatEn ?? '' });
-    } else if (hasPhrase(allTokens, mp.districtBn) || hasPhrase(allTokens, mp.districtEn)) {
+    } else if (phrases.district.some((p) => hasTokens(allTokens, p))) {
       score += POINTS.district;
       signals.push({ signal: 'district', points: POINTS.district, detail: mp.districtBn ?? '' });
     }
 
-    if (hasPhrase(allTokens, mp.partyBn) || (mp.partyAbbr && hasPhrase(allTokens, mp.partyAbbr))) {
+    if (phrases.party.some((p) => hasTokens(allTokens, p))) {
       score += POINTS.party;
       signals.push({ signal: 'party', points: POINTS.party, detail: mp.partyBn ?? mp.partyAbbr ?? '' });
     }
 
-    const post = POST_WORDS.find(
-      (w) => hasPhrase(allTokens, w.word) && mp.posts.some((p) => w.matches(p, null)),
-    );
-    const ministry = mp.ministries.find((m) => ministryWord(m) && hasPhrase(allTokens, ministryWord(m)!));
-    if (post || ministry) {
+    const office = phrases.posts.find((w) => hasTokens(allTokens, w.tokens))
+      ?? phrases.ministries.find((w) => hasTokens(allTokens, w.tokens));
+    if (office) {
       score += POINTS.post;
-      signals.push({ signal: 'post', points: POINTS.post, detail: post?.word ?? ministryWord(ministry!) ?? '' });
+      signals.push({ signal: 'post', points: POINTS.post, detail: office.word });
     }
 
     if (named && negative.length) {

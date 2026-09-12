@@ -16,6 +16,7 @@
  */
 import fs from 'node:fs';
 import { seedVariants } from '../src/lib/feed/nameVariants';
+import { variantTokens } from '../src/lib/feed/matchMp';
 
 const env = Object.fromEntries(
   fs.readFileSync(new URL('../.env.local', import.meta.url), 'utf8')
@@ -30,7 +31,27 @@ const H = { apikey: KEY, Authorization: `Bearer ${KEY}`, 'Content-Type': 'applic
 
 const prune = process.argv.includes('--prune');
 
-interface Member { id: string; nameBn: string | null; nameEn: string | null; resignedOn?: string | null }
+interface Member { id: string; nameBn: string | null; nameEn: string | null; resignedOn?: string | null; bioSource?: string | null }
+
+/**
+ * The name the press uses, which is often not the name parliament lists.
+ * কুমিল্লা-৪ is "মোঃ আবুল হাসনাত" on the roll and হাসনাত আবদুল্লাহ in every
+ * headline. His Wikipedia article is titled the second way, and 211 members
+ * have one, so the article title is where a popular name can be read without
+ * anybody typing it in.
+ */
+function wikiNames(m: Member): string[] {
+  const urls = (m.bioSource ?? '').split(/\s+/).filter((u) => /wikipedia\.org\/wiki\//.test(u));
+  return urls
+    .map((u) => {
+      try {
+        return decodeURIComponent(u.split('/wiki/')[1] ?? '').replace(/_/g, ' ').replace(/\s*\([^)]*\)\s*$/, '').trim();
+      } catch {
+        return '';
+      }
+    })
+    .filter(Boolean);
+}
 const members = (JSON.parse(fs.readFileSync(new URL('../data/members.json', import.meta.url), 'utf8')) as Member[])
   .filter((m) => !m.resignedOn);
 
@@ -49,9 +70,38 @@ async function main() {
   const have = new Set(existing.map((e) => `${e.mp_id}|${e.variant}`));
   const wanted = new Set(seeds.map((s) => `${s.mpId}|${s.variant}`));
 
+  // A Wikipedia title only counts when it names exactly one member. Two
+  // members are both called মোঃ আনোয়ারুল ইসলাম, so one's English article
+  // title reads as the other's official name; giving it to either would have
+  // each of them collecting the other's news.
+  const claims = new Map<string, Set<string>>();
+  const claim = (name: string, id: string) => {
+    const key = variantTokens(name).join(' ');
+    if (key.split(' ').length < 2) return key;
+    claims.set(key, (claims.get(key) ?? new Set()).add(id));
+    return key;
+  };
+  for (const m of members) {
+    for (const n of [m.nameBn, m.nameEn]) if (n) claim(n, m.id);
+  }
+  const wikiSeen = new Map<string, string>();
+  for (const m of members) {
+    for (const title of wikiNames(m)) {
+      const key = claim(title, m.id);
+      if (key.split(' ').length >= 2) wikiSeen.set(key, m.id);
+    }
+  }
+  const official = new Set(seeds.map((s) => `${s.mpId}|${s.variant}`));
+  const wikiSeeds = [...wikiSeen.entries()]
+    .filter(([variant, id]) => (claims.get(variant) ?? new Set()).size === 1 && claims.get(variant)!.has(id))
+    .map(([variant, id]) => ({ mpId: id, variant, source: 'manual' as const, weight: 1 }))
+    .filter((s) => !official.has(`${s.mpId}|${s.variant}`));
+  seeds.push(...wikiSeeds);
+  console.log(`popular names from Wikipedia titles: ${wikiSeeds.length}`);
+
   const missing = seeds.filter((s) => !have.has(`${s.mpId}|${s.variant}`));
   for (let i = 0; i < missing.length; i += 200) {
-    const batch = missing.slice(i, i + 200).map((s) => ({ mp_id: s.mpId, variant: s.variant, source: s.source, weight: s.weight, created_by: 'seed' }));
+    const batch = missing.slice(i, i + 200).map((s) => ({ mp_id: s.mpId, variant: s.variant, source: s.source, weight: s.weight, created_by: s.source === 'manual' ? 'wikipedia' : 'seed' }));
     await rest('mp_name_variants', { method: 'POST', headers: { Prefer: 'resolution=ignore-duplicates' }, body: JSON.stringify(batch) });
   }
   console.log(`name variants: ${seeds.length} wanted, ${missing.length} added, ${existing.length} already there`);

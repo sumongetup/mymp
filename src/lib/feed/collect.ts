@@ -12,7 +12,7 @@
  */
 import { allMembers, currentPosts, districtOf } from '@/lib/data';
 import { buildFeedIndex, matchItem, type FeedIndex, type FeedMp } from './matchMp';
-import { RSS_SOURCES } from '../../../config/news-sources';
+import { RSS_SOURCES, SITEMAP_SOURCES } from '../../../config/news-sources';
 import { fetchFeed } from './rss';
 import {
   attach, attachedToday, finishRun, lastRun, nameVariants, startRun, upsertItem,
@@ -61,13 +61,29 @@ export interface IngestCounts { found: number; stored: number; attached: number;
  * Stores a batch of items and attaches each to the members it names. Shared by
  * every collector, so one story is matched the same way wherever it came from.
  */
-export async function ingest(items: FeedItemInput[], index: FeedIndex, counts: IngestCounts, deadline?: number) {
+export interface IngestOptions {
+  /**
+   * Store only what names a member. A feed carries an outlet's top twenty
+   * stories and keeping all of them costs nothing; a sitemap carries its whole
+   * day, and keeping the football and the weather with it would grow the table
+   * by a hundred thousand rows a week for no page.
+   */
+  onlyMatched?: boolean;
+}
+
+export async function ingest(items: FeedItemInput[], index: FeedIndex, counts: IngestCounts, deadline?: number, opts: IngestOptions = {}) {
   const givenToday = new Map<string, number>();
   for (const item of items) {
     // A serverless function has a minute; the terminal has as long as it takes.
     // Whatever is left over is picked up by the next run, which sees it as new.
     if (deadline && Date.now() > deadline) { counts.ranOut = true; break; }
     counts.found++;
+
+    // Matching first costs nothing — it is local — and saves the write.
+    if (opts.onlyMatched && !matchItem(index, { title: item.title, summary: item.summary }).length) {
+      counts.unmatched++;
+      continue;
+    }
     const stored = await upsertItem(item);
     if (!stored) continue;
     if (stored.isNew) counts.stored++;
@@ -170,6 +186,106 @@ export async function runRssCollector(opts: CollectorOptions = {}): Promise<RunR
     errors: counts.ranOut
       ? [...errors, { source: 'rss', message: `stopped at the time budget with ${items.length - counts.found} items left; the next run takes them` }]
       : errors,
+    detail,
+  };
+  if (run) await finishRun(run, result);
+  return { ...result, runId: run?.id };
+}
+
+/** One sitemap address, with the date filled in for the outlets that need one. */
+export function sitemapUrls(source: { sitemaps?: { url: string; daily?: boolean }[] }, days: string[]): string[] {
+  const out: string[] = [];
+  for (const s of source.sitemaps ?? []) {
+    if (!s.daily) out.push(s.url);
+    else for (const d of days) out.push(s.url.replace('{d}', d));
+  }
+  return out;
+}
+
+const dayString = (back: number) => new Date(Date.now() - back * 86_400_000).toISOString().slice(0, 10);
+
+/**
+ * The outlets' own news sitemaps: everything they have filed, not the top
+ * twenty their feeds carry.
+ *
+ * Two things keep this inside a serverless minute and inside what a newsroom's
+ * server should be asked for. Only a slice of the outlets is read per run —
+ * a sitemap covers a day or two, so reading each of them once an hour loses
+ * nothing — and the requests within a run are spaced, because several of these
+ * hosts answer 403 when asked twice in the same second.
+ */
+export async function runSitemapCollector(opts: CollectorOptions & { perRun?: number } = {}): Promise<RunResult & { runId?: number }> {
+  const run = opts.dryRun ? null : await startRun('sitemap', opts.trigger ?? 'manual');
+  const errors: { source: string; message: string }[] = [];
+  const detail: Record<string, number> = {};
+  const index = await buildIndex();
+  const counts: IngestCounts = { found: 0, stored: 0, attached: 0, lowConfidence: 0, unmatched: 0 };
+  const deadline = opts.budgetMs ? Date.now() + opts.budgetMs : undefined;
+
+  const perRun = opts.perRun ?? 8;
+  const tick = Math.floor(Date.now() / (30 * 60_000));
+  const all = SITEMAP_SOURCES;
+  const start = (tick * perRun) % Math.max(all.length, 1);
+  const slice = Array.from({ length: Math.min(perRun, all.length) }, (_, i) => all[(start + i) % all.length]!);
+
+  // Yesterday as well as today: a day's sitemap is complete only once the day
+  // is over, and at two in the morning today's holds almost nothing.
+  const days = [dayString(0), dayString(1)];
+  const items: FeedItemInput[] = [];
+  for (const source of slice) {
+    let got = 0;
+    for (const url of sitemapUrls(source, days)) {
+      const { items: fetched, error } = await fetchFeed(url, 25_000);
+      if (error) {
+        errors.push({ source: source.key, message: `${url}: ${error}` });
+        continue;
+      }
+      for (const it of fetched) {
+        if (!it.publishedAt) continue;
+        items.push({
+          type: 'news',
+          title: it.title,
+          url: it.url,
+          summary: it.summary,
+          outletName: source.nameBn,
+          outletId: source.key,
+          publishedAt: it.publishedAt,
+          // The outlet's own machine-readable index of its own articles, which
+          // is what `rss` means here; the run row says which collector fetched it.
+          source: 'rss',
+        });
+        got++;
+      }
+      // Spaced, so a newsroom's server is never asked twice in the same breath.
+      await new Promise((r) => setTimeout(r, 1200));
+      if (deadline && Date.now() > deadline) break;
+    }
+    detail[source.key] = got;
+    if (deadline && Date.now() > deadline) break;
+  }
+
+  const previous = opts.dryRun ? null : await lastRun('sitemap');
+  if (!items.length && (previous?.items_found ?? 0) > 50) {
+    const result: RunResult = {
+      status: 'aborted', itemsFound: 0, itemsNew: 0, itemsAttached: 0, unmatched: 0, lowConfidence: 0,
+      errors: [...errors, { source: 'sitemap', message: `no items at all, while the last run found ${previous!.items_found}: nothing was written` }],
+      detail,
+    };
+    if (run) await finishRun(run, result);
+    return result;
+  }
+
+  if (!opts.dryRun) await ingest(items, index, counts, deadline, { onlyMatched: true });
+  else counts.found = items.length;
+
+  const result: RunResult = {
+    status: slice.length && errors.length >= slice.length ? 'failed' : 'ok',
+    itemsFound: counts.found,
+    itemsNew: counts.stored,
+    itemsAttached: counts.attached,
+    unmatched: counts.unmatched,
+    lowConfidence: counts.lowConfidence,
+    errors,
     detail,
   };
   if (run) await finishRun(run, result);

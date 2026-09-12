@@ -8,7 +8,7 @@
  * serverless function inside its limit without losing a headline.
  */
 import { NextResponse } from 'next/server';
-import { runRssCollector } from '@/lib/feed/collect';
+import { runRssCollector, runSitemapCollector } from '@/lib/feed/collect';
 import { runYoutubeCollector, runSearchCollector, runPressCollector } from '@/lib/feed/collectors';
 import { learnFromFeedback } from '@/lib/feed/learn';
 import { isMissingTable } from '@/lib/posts/db';
@@ -34,6 +34,7 @@ export async function GET(req: Request) {
       collector === 'youtube' ? await runYoutubeCollector({ trigger })
       : collector === 'search' ? await runSearchCollector({ trigger })
       : collector === 'press' ? await runPressCollector({ trigger })
+      : collector === 'sitemap' ? await runSitemapCollector({ trigger, budgetMs: 45_000 })
       : await runRssCollector({ trigger, budgetMs: 45_000 });
     // A collector with no key has not run rather than failed, so a schedule
     // that is waiting for a credential does not turn red every hour.
