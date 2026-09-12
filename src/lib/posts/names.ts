@@ -6,32 +6,7 @@
  * scores what is left for the fuzzy step. Neither reads site data, so the
  * sync, the admin and the tests share them.
  */
-
-/** Spelling folds, applied to every name and to the honorific list alike. */
-function fold(s: string): string {
-  return s
-    .normalize('NFC')
-    .replace(/[\u200B-\u200D\uFEFF]/g, '')
-    .replace(/\u09CD/g, '') // hasanta: আব্দুল and আবদুল
-    .replace(/\u09BC/g, '') // nukta: য় (NFC keeps it as য + ়) and য
-    .replace(/ী/g, 'ি') // ী and ি
-    .replace(/ূ/g, 'ু') // ূ and ু
-    .replace(/ণ/g, 'ন') // ণ and ন
-    .replace(/[ষশ]/g, 'স') // ষ, শ and স
-    .replace(/ৎ/g, 'ত') // ৎ and ত
-    .replace(/\u0981/g, '') // chandrabindu
-    .toLowerCase();
-}
-
-/** Titles, honorifics and ranks: how a name is written, not whose it is. */
-const HONORIFICS = new Set(
-  [
-    'মো', 'মোহাম্মদ', 'মোহাম্মাদ', 'মুহাম্মদ', 'মুহাম্মাদ', 'মুহম্মদ', 'মোহম্মদ', 'মোহাম্মেদ',
-    'ডা', 'ডাক্তার', 'ড', 'ডক্টর', 'ব্যারিস্টার', 'ব্যারিষ্টার', 'অ্যাডভোকেট', 'এডভোকেট', 'অ্যাড',
-    'জনাব', 'বেগম', 'আলহাজ্ব', 'আলহাজ', 'আলহাজ্জ', 'অধ্যাপক', 'প্রফেসর', 'প্রকৌশলী', 'ইঞ্জিনিয়ার', 'মাননীয়',
-    'ব্রিগেডিয়ার', 'জেনারেল', 'মেজর', 'কর্নেল', 'লে', 'লেফটেন্যান্ট', 'ক্যাপ্টেন', 'কমোডর', 'অ্যাডমিরাল', 'অব',
-  ].map(fold),
-);
+import { foldBangla as fold, HONORIFICS } from '@/lib/matching/nameMatch';
 
 /** Gallantry titles written after some names: "বীর বিক্রম", "বীর উত্তম", "বীর প্রতীক". */
 const GALLANTRY = /বীর\s*(উত্তম|বিক্রম|প্রতীক|শ্রেষ্ঠ)/g;

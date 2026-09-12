@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { meta, bn, dateBn, members, getMemberById } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { listSyncRuns, listPostRuns, listPostAliases } from '@/lib/admin/store';
-import { resolvePostName } from '@/app/admin/actions';
+import { resolvePostName, resolvePostNamesNotMp } from '@/app/admin/actions';
+import { rankMatches } from '@/lib/matching/nameMatch';
+import { NAME_IDF } from '@/lib/matching/nameIdf';
 import { brokenSources } from '@/lib/posts/sync';
 import { POST_SOURCES } from '../../../../../config/sync-sources';
 import { AdminPage, Panel, Table, Td, Badge, Empty, Notice, when } from '@/app/admin/ui';
@@ -12,6 +14,8 @@ import PostsSyncButton from '../PostsSyncButton';
 export const metadata: Metadata = { title: 'সিঙ্ক ও প্রকাশ' };
 
 const TRIGGER_BN: Record<string, string> = { cron: 'Vercel, দৈনিক', github: 'GitHub, ৬ ঘণ্টা', admin: 'অ্যাডমিন', cli: 'টার্মিনাল' };
+/** Advisers are usually technocrats, so 'not an MP' is the likely answer for them. */
+const ADVISER = 'উপদেষ্টা';
 const sourceLabel = (key: string) => POST_SOURCES.find((s) => s.key === key)?.label ?? key;
 
 export default async function SyncAdmin() {
@@ -25,6 +29,10 @@ export default async function SyncAdmin() {
     (u, i, all) => !known.has(u.key) && all.findIndex((x) => x.key === u.key) === i,
   );
   const picker = [...members].sort((a, b) => (a.nameBn ?? '').localeCompare(b.nameBn ?? '', 'bn'));
+  // Candidates are ranked here rather than read from the run, so an older run's
+  // suggestions can never outlive the rules that rejected them.
+  const memberIndex = members.map((m) => ({ id: m.id, nameBn: m.nameBn }));
+  const advisers = queue.filter((u) => u.title === ADVISER);
 
   return (
     <AdminPage
@@ -106,46 +114,114 @@ export default async function SyncAdmin() {
           <Empty>{missing ? 'টেবিল তৈরি ও প্রথম সিঙ্কের পর এখানে নাম আসবে।' : 'সব নাম মিলেছে বা আগেই ঠিক করা হয়েছে।'}</Empty>
         ) : (
           <div className="flex flex-col gap-3">
-            <p className="text-[13.5px] text-muted leading-relaxed">
-              তালিকার এই নামগুলো কোনো সংসদ সদস্যের সঙ্গে নিশ্চিতভাবে মেলেনি, তাই সিঙ্ক এদের কারও পাতায় বসায়নি। সঠিক সদস্য বেছে দিন,
-              অথবা “এমপি নন” চাপুন (টেকনোক্র্যাট মন্ত্রী বা উপদেষ্টা)। আপনার বাছাই মনে রাখা হয় এবং সঙ্গে সঙ্গে সিঙ্ক চলে।
+            <p className="text-[13.5px] text-muted leading-relaxed max-w-[760px]">
+              তালিকার এই নামগুলো কোনো সংসদ সদস্যের সঙ্গে নিশ্চিতভাবে মেলেনি, তাই সিঙ্ক এদের কারও পাতায় বসায়নি। শুধু পদবি এক হলে
+              (রহমান, ইসলাম, হক) আর কোনো নাম দেখানো হয় না; ডাক নামও মিললে তবেই সম্ভাব্য নাম আসে। কিছুই বেছে না দেওয়া থাকে,
+              তাই মেলানোটা সবসময় আপনার নিজের সিদ্ধান্ত। বাছাই মনে রাখা হয় এবং সঙ্গে সঙ্গে সিঙ্ক চলে।
             </p>
-            {queue.map((u) => (
-              <div key={u.key} className="border border-rule rounded-lg p-3.5 flex flex-col lg:flex-row lg:items-center gap-3">
-                <div className="grow min-w-0">
-                  <div className="font-semibold text-[15px]">{u.name_bn}</div>
-                  <div className="text-[13px] text-muted">
-                    {u.title}{u.ministry_bn ? `, ${u.ministry_bn}` : ''}
-                    {u.stored_as_non_mp ? ' (উপদেষ্টা: আপাতত সংসদ সদস্য নন হিসেবে দেখানো হচ্ছে)' : ''}
-                  </div>
-                  {u.candidates.length > 0 && (
-                    <div className="text-[12.5px] text-muted mt-0.5">
-                      কাছাকাছি: {u.candidates.map((c) => `${c.nameBn} (${bn(Math.round(c.score * 100))}%)`).join(', ')}
-                    </div>
-                  )}
+
+            {advisers.length > 1 && (
+              <details className="rounded-lg border border-rule bg-paper px-3.5 py-2.5">
+                <summary className="cursor-pointer text-[13.5px] font-semibold">
+                  সবগুলো উপদেষ্টা এমপি নন ({bn(advisers.length)} জন)
+                </summary>
+                <div className="pt-3 flex flex-col gap-2.5">
+                  <p className="text-[13px] text-muted leading-relaxed">
+                    নিচের সবার পাশে “সংসদ সদস্য নন” লেখা হবে, আর পরের সিঙ্কে আর জিজ্ঞেস করা হবে না। কারও নাম যদি আসলে
+                    সংসদ সদস্যের হয়, আগে তাকে আলাদা করে মিলিয়ে নিন।
+                  </p>
+                  <ul className="text-[13.5px] flex flex-col gap-1 ps-4 list-disc">
+                    {advisers.map((u) => <li key={u.key}>{u.name_bn}<span className="text-muted">{u.ministry_bn ? `, ${u.ministry_bn}` : ''}</span></li>)}
+                  </ul>
+                  <form action={resolvePostNamesNotMp}>
+                    {advisers.map((u) => <input key={u.key} type="hidden" name="entry" value={JSON.stringify([u.key, u.name_bn])} />)}
+                    <button type="submit" className="h-9 px-3.5 rounded-lg bg-brand text-white text-[13.5px] font-semibold hover:bg-branddark">
+                      নিশ্চিত করুন, {bn(advisers.length)} জনকে এমপি নন লিখুন
+                    </button>
+                  </form>
                 </div>
+              </details>
+            )}
+
+            {queue.map((u) => {
+              const adviser = u.title === ADVISER;
+              const suggestions = rankMatches(u.name_bn, memberIndex, NAME_IDF);
+              const pick = (
                 <form action={resolvePostName} className="flex flex-wrap items-center gap-2">
                   <input type="hidden" name="name_key" value={u.key} />
                   <input type="hidden" name="name_bn" value={u.name_bn} />
-                  <select name="member_id" required defaultValue={u.candidates[0]?.memberId ?? ''} className="h-9 max-w-[280px] rounded-lg border border-rule bg-surface px-2 text-[13.5px]">
+                  <select name="member_id" required defaultValue="" className="h-9 max-w-[280px] rounded-lg border border-rule bg-surface px-2 text-[13.5px]">
                     <option value="" disabled>সংসদ সদস্য বাছুন</option>
-                    {u.candidates.map((c) => <option key={`c-${c.memberId}`} value={c.memberId}>{c.nameBn} (কাছাকাছি)</option>)}
                     {picker.map((m) => <option key={m.id} value={m.id}>{m.nameBn} ({m.seat?.nameBn ?? 'নেই'})</option>)}
                   </select>
-                  <button type="submit" className="h-9 px-3.5 rounded-lg bg-brand text-white text-[13.5px] font-semibold hover:bg-branddark">মেলান</button>
+                  <button type="submit" className="h-9 px-3.5 rounded-lg border border-rule text-[13.5px] font-semibold hover:border-ink">মেলান</button>
                 </form>
-                <form action={resolvePostName}>
-                  <input type="hidden" name="name_key" value={u.key} />
-                  <input type="hidden" name="name_bn" value={u.name_bn} />
-                  <input type="hidden" name="member_id" value="" />
-                  <button type="submit" className="h-9 px-3.5 rounded-lg border border-rule text-[13.5px] font-semibold hover:border-ink">এমপি নন</button>
-                </form>
-              </div>
-            ))}
+              );
+
+              return (
+                <div key={u.key} className="border border-rule rounded-lg p-3.5 flex flex-col gap-3">
+                  <div>
+                    <div className="font-semibold text-[15px]">{u.name_bn}</div>
+                    <div className="text-[13px] text-muted">
+                      {u.title}{u.ministry_bn ? `, ${u.ministry_bn}` : ''}
+                      {u.stored_as_non_mp ? ', আপাতত সংসদ সদস্য নন হিসেবে দেখানো হচ্ছে' : ''}
+                    </div>
+                  </div>
+
+                  {suggestions.length > 0 ? (
+                    <ul className="flex flex-col gap-2">
+                      {suggestions.map((s) => {
+                        const m = getMemberById(s.id);
+                        return (
+                          <li key={s.id} className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-[13.5px]">
+                            <Badge tone={s.strength === 'সম্ভাব্য' ? 'good' : 'warn'}>{s.strength}</Badge>
+                            <span className="font-semibold">{s.nameBn}</span>
+                            <span className="text-muted">{m?.seat?.nameBn ?? 'আসন নেই'}, {m?.party?.abbr ?? 'দল নেই'}</span>
+                            <form action={resolvePostName}>
+                              <input type="hidden" name="name_key" value={u.key} />
+                              <input type="hidden" name="name_bn" value={u.name_bn} />
+                              <input type="hidden" name="member_id" value={s.id} />
+                              <button type="submit" className="h-8 px-3 rounded-lg border border-rule text-[13px] font-semibold hover:border-ink">ইনিই</button>
+                            </form>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : (
+                    <p className="text-[13px] text-muted">সম্ভাব্য কোনো সদস্য পাওয়া যায়নি।</p>
+                  )}
+
+                  {adviser ? (
+                    <div className="flex flex-col gap-2">
+                      <form action={resolvePostName} className="flex items-center gap-3">
+                        <input type="hidden" name="name_key" value={u.key} />
+                        <input type="hidden" name="name_bn" value={u.name_bn} />
+                        <input type="hidden" name="member_id" value="" />
+                        <button type="submit" className="h-9 px-3.5 rounded-lg bg-brand text-white text-[13.5px] font-semibold hover:bg-branddark">এমপি নন</button>
+                        <span className="text-[12.5px] text-muted">উপদেষ্টারা সাধারণত সংসদ সদস্য নন।</span>
+                      </form>
+                      <details>
+                        <summary className="cursor-pointer text-[13px] font-semibold text-brand">তবুও মেলান</summary>
+                        <div className="pt-2.5">{pick}</div>
+                      </details>
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap items-center gap-2">
+                      {pick}
+                      <form action={resolvePostName}>
+                        <input type="hidden" name="name_key" value={u.key} />
+                        <input type="hidden" name="name_bn" value={u.name_bn} />
+                        <input type="hidden" name="member_id" value="" />
+                        <button type="submit" className="h-9 px-3.5 rounded-lg border border-rule text-[13.5px] font-semibold hover:border-ink">এমপি নন</button>
+                      </form>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </Panel>
-
       {aliases.length > 0 && (
         <Panel title="মনে রাখা নাম">
           <Table head={['তালিকার নাম', 'যা ঠিক করা হয়েছে', 'কে', 'কখন']}>

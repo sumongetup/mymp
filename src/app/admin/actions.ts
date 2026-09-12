@@ -306,6 +306,28 @@ export async function resolvePostName(fd: FormData) {
   revalidatePath('/admin/sync');
 }
 
+/**
+ * The whole adviser list at once. An editor confirms none of them are members;
+ * each name is written to post_aliases, so no later run asks about them again.
+ */
+export async function resolvePostNamesNotMp(fd: FormData) {
+  const me = await requireAdmin();
+  const entries = fd.getAll('entry').map(String).slice(0, 50);
+  let written = 0;
+  for (const raw of entries) {
+    let pair: unknown;
+    try { pair = JSON.parse(raw); } catch { continue; }
+    if (!Array.isArray(pair)) continue;
+    const [key, nameBn] = pair as string[];
+    if (!key || !nameBn) continue;
+    await setPostAlias(me, key, nameBn, null);
+    written++;
+  }
+  if (!written) return;
+  await runPostsSync({ trigger: 'admin', members: syncMembers() }).catch(() => null);
+  revalidatePath('/admin/sync');
+}
+
 /* ---------------- election results ---------------- */
 
 const toLatinDigits = (s: string) => s.replace(/[০-৯]/g, (d) => String('০১২৩৪৫৬৭৮৯'.indexOf(d)));

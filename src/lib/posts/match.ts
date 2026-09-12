@@ -1,13 +1,18 @@
-import { normalizeName, normalizeNameEn, nameSimilarity } from './names';
+import { normalizeName, normalizeNameEn } from './names';
+import { rankMatches, SUGGEST_THRESHOLD } from '@/lib/matching/nameMatch';
+import { NAME_IDF } from '@/lib/matching/nameIdf';
 import type { ParsedPost } from './parse';
 
 /**
  * Who a listed name is. In order: a name an editor resolved (post_aliases);
  * the member this exact source name was matched to before; the member list's
  * name exactly; the normalised Bangla name; the English name; and last a
- * fuzzy match of at least 0.9 on the normalised Bangla. A step only counts
- * when it points at exactly one member. Anything else is left unmatched, and
- * the sync never guesses.
+ * token match that clears every gate in lib/matching/nameMatch (the first
+ * word of both names, two matching words, and 0.92 of the rarity-weighted
+ * score). A step only counts when it points at exactly one member. Anything
+ * else is left unmatched, and the sync never guesses: before the token
+ * matcher, a shared surname could carry a whole-string score to 0.89 and put
+ * the wrong person's name in front of a tired editor.
  */
 
 export interface MatchMember {
@@ -20,7 +25,7 @@ export interface MatchMember {
 
 export type Method = 'alias' | 'alias-not-mp' | 'previous' | 'exact' | 'normalized' | 'english' | 'fuzzy';
 
-export interface Candidate { memberId: string; nameBn: string; score: number }
+export interface Candidate { memberId: string; nameBn: string; score: number; strength: string }
 
 export interface Resolution {
   memberId: string | null;
@@ -29,7 +34,7 @@ export interface Resolution {
   candidates: Candidate[];
 }
 
-export const FUZZY_THRESHOLD = 0.9;
+export const FUZZY_THRESHOLD = SUGGEST_THRESHOLD;
 
 export function buildMatcher(
   members: MatchMember[],
@@ -64,10 +69,11 @@ export function buildMatcher(
 
   return function resolve(p: ParsedPost): Resolution {
     const key = normalizeName(p.nameBn);
-    const scored = keys
-      .map(({ m, key: k }) => ({ memberId: m.id, nameBn: m.nameBn ?? '', score: nameSimilarity(key, k) }))
-      .sort((a, b) => b.score - a.score);
-    const candidates = scored.filter((c) => c.score >= 0.6).slice(0, 3).map((c) => ({ ...c, score: Math.round(c.score * 100) / 100 }));
+    // Only matches that clear every gate are ever shown or taken; the list is
+    // empty far more often than it used to be, which is the point.
+    const candidates: Candidate[] = rankMatches(p.nameBn, members, NAME_IDF).map((c) => ({
+      memberId: c.id, nameBn: c.nameBn, score: c.score, strength: c.strength,
+    }));
     const done = (memberId: string | null, method: Method, score: number | null = 1): Resolution => ({ memberId, method, score, candidates });
 
     if (aliases.has(key)) {
@@ -84,10 +90,10 @@ export function buildMatcher(
       const en = one(english.get(normalizeNameEn(p.nameEn)), p.seatEn);
       if (en) return done(en, 'english');
     }
-    const best = scored[0];
-    if (best && best.score >= FUZZY_THRESHOLD && !(scored[1] && scored[1].score >= FUZZY_THRESHOLD)) {
-      return done(best.memberId, 'fuzzy', Math.round(best.score * 100) / 100);
-    }
-    return { memberId: null, method: null, score: best ? Math.round(best.score * 100) / 100 : null, candidates };
+    // One clear candidate and nothing else close: the sync may take it. Two
+    // candidates that both clear the gates are a question for an editor.
+    const best = candidates[0];
+    if (best && candidates.length === 1) return done(best.memberId, 'fuzzy', best.score);
+    return { memberId: null, method: null, score: best?.score ?? null, candidates };
   };
 }
