@@ -1,11 +1,14 @@
 /**
- * A party's link-preview image, 1200x630, on the site green. The middle
- * 630x630 square holds nothing but the party's logo on a white disc, because
- * WhatsApp shows a link as a small square cut from the middle and the owner
- * wants the logo there (2026-09-12). The wide card that Facebook and X show
- * adds the name and founding year on the left and the seats and head on the
- * right, both outside that square. Bangla is shaped by HarfBuzz
- * (src/lib/og/banglaText.ts). Drawn on first request and cached for a day.
+ * A party's link-preview image, 1200x630.
+ *
+ * The whole centre 630x630 square is one column — symbol, name, seats in this
+ * parliament, its head — because WhatsApp shows a link as a square cut from the
+ * middle, and a symbol alone says less than a symbol with a name under it. The
+ * wide card that Facebook and X show adds the site's mark on the left and the
+ * address on the right, outside that square, so nothing is lost either way.
+ *
+ * Bangla is shaped by HarfBuzz (src/lib/og/banglaText.ts). Drawn on first
+ * request and cached for a day.
  */
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -13,6 +16,7 @@ import { ImageResponse } from 'next/og';
 import { getParty, bn } from '@/lib/data';
 import { bnTextImage } from '@/lib/og/banglaText';
 import { partyProfile, foundedYear } from '@/lib/partyProfiles';
+import { OG_BRAND, OG_DARK, ogPartyColour } from '@/lib/og/colours';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -20,19 +24,18 @@ export function generateStaticParams() {
   return [];
 }
 
-const BRAND = '#0f6a4b';
 const W = 1200;
 const H = 630;
-const SQUARE = 630;
-const SIDE = (W - SQUARE) / 2; // 285px either side of the square
-// The logo file is a white square, so it must sit wholly inside the disc: side ≤ DISC / √2.
-const DISC = 560;
-const LOGO_SIZE = 390;
-const EDGE = 40;
-const INNER = 24;
-const SIDE_TEXT = SIDE - EDGE - INNER;
+const SAFE = 630;
+const TEXT_WIDTH = SAFE - 90;
 
-// One literal path per logo, so the build bundles exactly these files with the function.
+// The logo files are white squares, so each must sit wholly inside its disc:
+// side ≤ disc / √2.
+const DISC = 220;
+const LOGO_SIZE = 150;
+
+// One literal path per logo, so the build bundles exactly these files with the
+// function; a computed path makes Turbopack trace the whole project.
 const LOGO: Record<string, () => Buffer> = {
   BNP: () => readFileSync(join(process.cwd(), 'public/party/og/bnp.jpg')),
   BJEI: () => readFileSync(join(process.cwd(), 'public/party/og/bjei.jpg')),
@@ -56,38 +59,78 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
   const year = foundedYear(profile);
   const leader = profile?.leaderNameBn ? `${profile.leaderTitleBn ?? 'প্রধান'} ${profile.leaderNameBn}` : null;
   const logo = `data:image/jpeg;base64,${read().toString('base64')}`;
+  const accent = ogPartyColour(p.abbr);
 
   const white = { color: '#ffffff' };
-  const [name, founded, seats, seatsLabel, lead] = await Promise.all([
-    bnTextImage(p.nameBn ?? p.abbr, { ...white, weight: 'bold', maxSize: 44, minSize: 26, maxWidth: SIDE_TEXT, maxLines: 4, leading: 1.22 }),
-    year ? bnTextImage(`প্রতিষ্ঠা ${bn(year)}`, { ...white, weight: 'regular', maxSize: 26, minSize: 20, maxWidth: SIDE_TEXT, maxLines: 1, opacity: 0.85 }) : null,
-    bnTextImage(bn(p.seats), { ...white, weight: 'bold', maxSize: 104, minSize: 60, maxWidth: SIDE_TEXT, maxLines: 1 }),
-    bnTextImage('সংসদে আসন', { ...white, weight: 'regular', maxSize: 28, minSize: 20, maxWidth: SIDE_TEXT, maxLines: 1, opacity: 0.85 }),
-    leader ? bnTextImage(leader, { ...white, weight: 'regular', maxSize: 25, minSize: 18, maxWidth: SIDE_TEXT, maxLines: 3, opacity: 0.8 }) : null,
+  const [name, seats, lead, founded] = await Promise.all([
+    bnTextImage(p.nameBn ?? p.abbr, { ...white, weight: 'bold', maxSize: 50, minSize: 30, maxWidth: TEXT_WIDTH, maxLines: 2, leading: 1.2, align: 'center' }),
+    bnTextImage(`ত্রয়োদশ সংসদে ${bn(p.seats)}টি আসন`, { ...white, weight: 'bold', maxSize: 28, minSize: 21, maxWidth: TEXT_WIDTH - 48, maxLines: 1 }),
+    leader ? bnTextImage(leader, { ...white, weight: 'regular', maxSize: 27, minSize: 20, maxWidth: TEXT_WIDTH, maxLines: 1, opacity: 0.9 }) : null,
+    year ? bnTextImage(`প্রতিষ্ঠা ${bn(year)}`, { ...white, weight: 'regular', maxSize: 24, minSize: 19, maxWidth: TEXT_WIDTH, maxLines: 1, opacity: 0.75 }) : null,
   ]);
 
   /* eslint-disable @next/next/no-img-element, jsx-a11y/alt-text */
   return new ImageResponse(
     (
-      <div style={{ width: W, height: H, display: 'flex', alignItems: 'center', background: BRAND, position: 'relative' }}>
-        <div style={{ width: SIDE, height: H, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: EDGE, paddingRight: INNER, gap: 16 }}>
+      <div
+        style={{
+          width: W,
+          height: H,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+          background: `linear-gradient(135deg, ${OG_BRAND} 0%, ${OG_DARK} 100%)`,
+        }}
+      >
+        {/* The party's colour as a band down the left edge of the whole card. */}
+        <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 12, display: 'flex', background: accent }} />
+
+        <div style={{ position: 'absolute', left: 54, top: 46, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <div style={{ width: 34, height: 34, borderRadius: 9, background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ width: 14, height: 14, borderRadius: 9999, display: 'flex', background: OG_BRAND }} />
+          </div>
+          <div style={{ display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.9)', letterSpacing: 1 }}>MY MP</div>
+        </div>
+
+        <div
+          style={{
+            width: SAFE,
+            height: SAFE,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 15,
+          }}
+        >
+          <div
+            style={{
+              width: DISC,
+              height: DISC,
+              borderRadius: 9999,
+              background: '#ffffff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+              boxShadow: '0 18px 44px rgba(0,0,0,0.3)',
+            }}
+          >
+            <img src={logo} width={LOGO_SIZE} height={LOGO_SIZE} style={{ objectFit: 'contain' }} />
+          </div>
+
           <img src={name.src} width={name.width} height={name.height} />
+
+          <div style={{ display: 'flex', padding: '8px 20px', borderRadius: 9999, background: 'rgba(255,255,255,0.15)' }}>
+            <img src={seats.src} width={seats.width} height={seats.height} />
+          </div>
+
+          {lead && <img src={lead.src} width={lead.width} height={lead.height} />}
           {founded && <img src={founded.src} width={founded.width} height={founded.height} />}
         </div>
 
-        <div style={{ width: SQUARE, height: H, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: DISC, height: DISC, borderRadius: 9999, background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src={logo} width={LOGO_SIZE} height={LOGO_SIZE} style={{ objectFit: 'contain' }} />
-          </div>
-        </div>
-
-        <div style={{ width: SIDE, height: H, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingLeft: INNER, paddingRight: EDGE, gap: 10 }}>
-          <img src={seats.src} width={seats.width} height={seats.height} />
-          <img src={seatsLabel.src} width={seatsLabel.width} height={seatsLabel.height} />
-          {lead && <div style={{ display: 'flex', marginTop: 18 }}><img src={lead.src} width={lead.width} height={lead.height} /></div>}
-        </div>
-
-        <div style={{ position: 'absolute', right: EDGE, bottom: 30, display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.75)', letterSpacing: 0.5 }}>
+        <div style={{ position: 'absolute', right: 54, bottom: 46, display: 'flex', fontSize: 24, color: 'rgba(255,255,255,0.8)', letterSpacing: 0.5 }}>
           mymp.bd
         </div>
       </div>

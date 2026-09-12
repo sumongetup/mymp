@@ -18,6 +18,7 @@ import { ImageResponse } from 'next/og';
 import { getMember, currentPosts } from '@/lib/data';
 import { bnTextImage } from '@/lib/og/banglaText';
 import { constituencyBn, isIndependent, partyBn } from '@/lib/seo/mpDescription';
+import { OG_BRAND, OG_DARK, ogPartyColour } from '@/lib/og/colours';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -25,8 +26,6 @@ export function generateStaticParams() {
   return [];
 }
 
-const BRAND = '#0f6a4b';
-const DARK = '#0a4e37';
 const W = 1200;
 const H = 630;
 const SAFE = 630;
@@ -39,19 +38,6 @@ const RING = 5;
 const TEXT_WIDTH = SAFE - 96;
 
 const SYMBOL = 44;
-
-/**
- * The party colours as literal values. partyColor() hands back a CSS variable,
- * which the page can resolve and this image cannot: Satori has no stylesheet.
- * Keep these in step with --color-p* in globals.css.
- */
-const PARTY_COLOUR: Record<string, string> = {
-  BNP: '#1f7a4f',
-  BJEI: '#8cbf2a',
-  Ind: '#5b6fb5',
-  NCP: '#e0641f',
-};
-const OTHER_COLOUR = '#9a5fc7';
 
 // One literal path per logo, so the build bundles exactly these files with the
 // function; a computed path makes Turbopack trace the whole project.
@@ -110,7 +96,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
   const independent = isIndependent(m);
   const partyName = independent ? 'স্বতন্ত্র' : (partyBn(m.party)?.name ?? null);
   const symbol = independent ? null : partySymbol(m.party?.abbr);
-  const accent = (m.party?.abbr && PARTY_COLOUR[m.party.abbr]) || OTHER_COLOUR;
+  const accent = ogPartyColour(m.party?.abbr);
   const office = officeOf(m.id);
   // Beside a symbol the party's name has less room.
   const partyWidth = TEXT_WIDTH - (symbol ? SYMBOL + 16 : 0);
@@ -133,7 +119,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
           alignItems: 'center',
           justifyContent: 'center',
           position: 'relative',
-          background: `linear-gradient(135deg, ${BRAND} 0%, ${DARK} 100%)`,
+          background: `linear-gradient(135deg, ${OG_BRAND} 0%, ${OG_DARK} 100%)`,
         }}
       >
         {/* The party's colour as a band down the left edge of the whole card. */}
@@ -142,7 +128,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
         {/* Outside the square on the left: the site's mark, so a wide preview is branded. */}
         <div style={{ position: 'absolute', left: 54, top: 46, display: 'flex', alignItems: 'center', gap: 12 }}>
           <div style={{ width: 34, height: 34, borderRadius: 9, background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ width: 14, height: 14, borderRadius: 9999, display: 'flex', background: BRAND }} />
+            <div style={{ width: 14, height: 14, borderRadius: 9999, display: 'flex', background: OG_BRAND }} />
           </div>
           <div style={{ display: 'flex', fontSize: 22, color: 'rgba(255,255,255,0.9)', letterSpacing: 1 }}>MY MP</div>
         </div>
