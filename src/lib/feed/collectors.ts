@@ -83,7 +83,7 @@ interface YtItem {
  * nothing older than the member's feed start. The quota used is recorded on
  * the run, so the admin can see how close to the ceiling a day is.
  */
-export async function runYoutubeCollector(opts: { trigger?: string; perRun?: number; since?: string } = {}): Promise<RunResult & { runId?: number }> {
+export async function runYoutubeCollector(opts: { trigger?: string; perRun?: number; since?: string; budgetMs?: number } = {}): Promise<RunResult & { runId?: number }> {
   const key = YOUTUBE_KEY();
   const run = await startRun('youtube', opts.trigger ?? 'manual');
   const counts: IngestCounts = { found: 0, stored: 0, attached: 0, lowConfidence: 0, unmatched: 0 };
@@ -103,14 +103,17 @@ export async function runYoutubeCollector(opts: { trigger?: string; perRun?: num
   const index = await buildIndex();
   let quota = 0;
 
-  // The cheap half first: every channel's latest uploads, matched against all.
-  const uploads = await collectChannelUploads(key, index, counts, errors);
+  // The cheap half first: a few channels' latest uploads, matched against all.
+  // Both halves share one budget, so a run always answers inside the minute a
+  // serverless function has; what is left over is the next run's work.
+  const deadline = Date.now() + (opts.budgetMs ?? 40_000);
+  const uploads = await collectChannelUploads(key, index, counts, errors, deadline);
   quota += uploads.quota;
   const items: FeedItemInput[] = [];
   const published = opts.since ?? new Date(Date.now() - 30 * 86_400_000).toISOString();
 
   for (const t of slice) {
-    if (!t.nameBn) continue;
+    if (!t.nameBn || Date.now() > deadline) continue;
     const q = [t.nameBn, t.seatBn].filter(Boolean).join(' ');
     const url = new URL('https://www.googleapis.com/youtube/v3/search');
     url.searchParams.set('part', 'snippet');
@@ -152,7 +155,7 @@ export async function runYoutubeCollector(opts: { trigger?: string; perRun?: num
     }
   }
 
-  await ingest(items, index, counts);
+  await ingest(items, index, counts, deadline);
   const result: RunResult = {
     status: errors.length && !counts.found ? 'failed' : 'ok',
     itemsFound: counts.found,
@@ -181,6 +184,7 @@ async function collectChannelUploads(
   index: FeedIndex,
   counts: IngestCounts,
   errors: { source: string; message: string }[],
+  deadline: number,
 ): Promise<{ quota: number; channels: number }> {
   const sb = db();
   // Resolving a handle costs a unit, so the uploads playlist is remembered.
@@ -195,7 +199,14 @@ async function collectChannelUploads(
   const items: FeedItemInput[] = [];
   const resolved: Record<string, string> = { ...cache };
 
-  for (const channel of TRUSTED_CHANNELS) {
+  // A few channels an hour rather than all twenty: a serverless run has a
+  // minute, and every channel still comes round three times a day.
+  const perRun = Math.max(1, Number(process.env.YOUTUBE_CHANNELS_PER_RUN ?? 5));
+  const start = (tickNow(60) * perRun) % TRUSTED_CHANNELS.length;
+  const turn = Array.from({ length: Math.min(perRun, TRUSTED_CHANNELS.length) }, (_, i) => TRUSTED_CHANNELS[(start + i) % TRUSTED_CHANNELS.length]!);
+
+  for (const channel of turn) {
+    if (Date.now() > deadline) break;
     try {
       let playlist = cache[channel.handle];
       if (!playlist) {
@@ -215,7 +226,7 @@ async function collectChannelUploads(
       const u = new URL('https://www.googleapis.com/youtube/v3/playlistItems');
       u.searchParams.set('part', 'snippet');
       u.searchParams.set('playlistId', playlist);
-      u.searchParams.set('maxResults', '50');
+      u.searchParams.set('maxResults', '25');
       u.searchParams.set('key', key);
       const r = await fetch(u, { signal: AbortSignal.timeout(20000) });
       quota += CHEAP_COST;
@@ -254,7 +265,7 @@ async function collectChannelUploads(
     }).catch(async () => { await sb.patch('app_settings?key=eq.youtube_uploads', { value: resolved }); });
   }
 
-  await ingest(items, index, counts);
+  await ingest(items, index, counts, deadline);
   return { quota, channels };
 }
 
