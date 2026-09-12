@@ -9,12 +9,19 @@
  * House post taken twice as often as the rest.
  */
 import { allMembers, currentPosts, districtOf, getMemberById } from '@/lib/data';
-import { matchItem } from './matchMp';
+import { matchItem, type FeedIndex } from './matchMp';
 import { buildIndex, ingest, type IngestCounts } from './collect';
 import { searchProvider } from './searchProvider';
 import { SEARCH_ONLY_SOURCES } from '../../../config/news-sources';
 import { TRUSTED_CHANNELS } from '../../../config/feed-matching';
 import { attach, finishRun, startRun, upsertItem, type FeedItemInput, type RunResult } from './store';
+import { restDb, type Db } from '@/lib/posts/db';
+
+function db(): Db {
+  const d = restDb();
+  if (!d) throw new Error('Supabase is not configured.');
+  return d;
+}
 
 const YOUTUBE_KEY = () => process.env.YOUTUBE_API_KEY;
 /**
@@ -25,7 +32,9 @@ const YOUTUBE_KEY = () => process.env.YOUTUBE_API_KEY;
  * twice as often. YOUTUBE_MEMBERS_PER_RUN raises it if the key's quota is.
  */
 const SEARCH_COST = 100;
-const PER_RUN = () => Math.max(1, Number(process.env.YOUTUBE_MEMBERS_PER_RUN ?? 4));
+/** channels.list and playlistItems.list cost one unit each. */
+const CHEAP_COST = 1;
+const PER_RUN = () => Math.max(0, Number(process.env.YOUTUBE_MEMBERS_PER_RUN ?? 3));
 
 interface Target {
   id: string;
@@ -90,10 +99,13 @@ export async function runYoutubeCollector(opts: { trigger?: string; perRun?: num
   }
 
   const perRun = opts.perRun ?? PER_RUN();
-  const slice = sliceFor(targets(), perRun, tickNow(60));
+  const slice = perRun ? sliceFor(targets(), perRun, tickNow(60)) : [];
   const index = await buildIndex();
-  const trusted = new Set(TRUSTED_CHANNELS.map((c) => c.id));
   let quota = 0;
+
+  // The cheap half first: every channel's latest uploads, matched against all.
+  const uploads = await collectChannelUploads(key, index, counts, errors);
+  quota += uploads.quota;
   const items: FeedItemInput[] = [];
   const published = opts.since ?? new Date(Date.now() - 30 * 86_400_000).toISOString();
 
@@ -128,7 +140,7 @@ export async function runYoutubeCollector(opts: { trigger?: string; perRun?: num
           url: `https://www.youtube.com/watch?v=${v.id.videoId}`,
           summary: v.snippet.description?.slice(0, 600) ?? null,
           outletName: v.snippet.channelTitle,
-          outletId: trusted.has(v.snippet.channelId) ? 'youtube-trusted' : 'youtube',
+          outletId: 'youtube',
           channelId: v.snippet.channelId,
           thumbnailUrl: v.snippet.thumbnails?.high?.url ?? `https://i.ytimg.com/vi/${v.id.videoId}/hqdefault.jpg`,
           publishedAt: new Date(v.snippet.publishedAt).toISOString(),
@@ -150,10 +162,100 @@ export async function runYoutubeCollector(opts: { trigger?: string; perRun?: num
     lowConfidence: counts.lowConfidence,
     quotaUsed: quota,
     errors,
-    detail: { members: slice.length, priority: slice.filter((t) => t.priority).length, searches: quota / SEARCH_COST },
+    detail: { members: slice.length, channels: uploads.channels, searches: slice.length },
   };
   await finishRun(run, result);
   return { ...result, runId: run.id };
+}
+
+/**
+ * The latest uploads of the news channels, matched against every member.
+ *
+ * A name search costs 100 units and covers one member; reading a channel's
+ * uploads costs 1 and can name any of the 348. This is where most of the video
+ * in the feed comes from, and it is why a member nobody searched for still gets
+ * their press conference on their page the same day.
+ */
+async function collectChannelUploads(
+  key: string,
+  index: FeedIndex,
+  counts: IngestCounts,
+  errors: { source: string; message: string }[],
+): Promise<{ quota: number; channels: number }> {
+  const sb = db();
+  // Resolving a handle costs a unit, so the uploads playlist is remembered.
+  let cache: Record<string, string> = {};
+  try {
+    const [row] = await sb.get<{ value: Record<string, string> }[]>("app_settings?key=eq.youtube_uploads&select=value");
+    cache = row?.value ?? {};
+  } catch { /* the settings row appears on first write */ }
+
+  let quota = 0;
+  let channels = 0;
+  const items: FeedItemInput[] = [];
+  const resolved: Record<string, string> = { ...cache };
+
+  for (const channel of TRUSTED_CHANNELS) {
+    try {
+      let playlist = cache[channel.handle];
+      if (!playlist) {
+        const u = new URL('https://www.googleapis.com/youtube/v3/channels');
+        u.searchParams.set('part', 'contentDetails');
+        u.searchParams.set('forHandle', channel.handle);
+        u.searchParams.set('key', key);
+        const r = await fetch(u, { signal: AbortSignal.timeout(15000) });
+        quota += CHEAP_COST;
+        if (!r.ok) { errors.push({ source: 'youtube', message: `${channel.handle}: ${r.status}` }); continue; }
+        const j = (await r.json()) as { items?: { contentDetails?: { relatedPlaylists?: { uploads?: string } } }[] };
+        playlist = j.items?.[0]?.contentDetails?.relatedPlaylists?.uploads ?? '';
+        if (!playlist) { errors.push({ source: 'youtube', message: `${channel.handle}: no such channel` }); continue; }
+        resolved[channel.handle] = playlist;
+      }
+
+      const u = new URL('https://www.googleapis.com/youtube/v3/playlistItems');
+      u.searchParams.set('part', 'snippet');
+      u.searchParams.set('playlistId', playlist);
+      u.searchParams.set('maxResults', '50');
+      u.searchParams.set('key', key);
+      const r = await fetch(u, { signal: AbortSignal.timeout(20000) });
+      quota += CHEAP_COST;
+      if (!r.ok) { errors.push({ source: 'youtube', message: `${channel.name}: ${r.status}` }); continue; }
+      const j = (await r.json()) as {
+        items?: { snippet: { title: string; description: string; publishedAt: string; channelId: string; channelTitle: string; thumbnails?: { high?: { url: string } }; resourceId?: { videoId?: string } } }[];
+      };
+      channels++;
+      for (const v of j.items ?? []) {
+        const id = v.snippet.resourceId?.videoId;
+        if (!id) continue;
+        items.push({
+          type: 'video',
+          title: v.snippet.title,
+          url: `https://www.youtube.com/watch?v=${id}`,
+          summary: v.snippet.description?.slice(0, 600) ?? null,
+          outletName: channel.name,
+          outletId: 'youtube-trusted',
+          channelId: v.snippet.channelId,
+          thumbnailUrl: v.snippet.thumbnails?.high?.url ?? `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+          publishedAt: new Date(v.snippet.publishedAt).toISOString(),
+          source: 'youtube',
+        });
+      }
+    } catch (e) {
+      errors.push({ source: 'youtube', message: `${channel.name}: ${(e as Error).message}` });
+    }
+  }
+
+  if (Object.keys(resolved).length !== Object.keys(cache).length) {
+    await sb.insert('app_settings', {
+      key: 'youtube_uploads',
+      value: resolved,
+      note: 'Uploads playlist of each trusted channel, so a handle is resolved once rather than every hour.',
+      updated_by: 'youtube collector',
+    }).catch(async () => { await sb.patch('app_settings?key=eq.youtube_uploads', { value: resolved }); });
+  }
+
+  await ingest(items, index, counts);
+  return { quota, channels };
 }
 
 /* ---------------------------------------------------------------- search */

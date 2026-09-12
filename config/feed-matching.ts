@@ -59,16 +59,34 @@ export const POST_WORDS: { word: string; matches: (post: string, ministry: strin
 ];
 
 /**
- * YouTube channels whose uploads are news rather than commentary. A video from
- * one of these with the member's name in the title is worth more than the same
- * title from an unknown channel.
+ * The news channels whose uploads are worth reading every hour.
+ *
+ * Handles rather than ids, because a handle is what a person can check; the
+ * collector resolves each one to its uploads playlist once and remembers it.
+ * Reading a channel's latest uploads costs one quota unit, against a hundred
+ * for a name search, which is why this list is where most of the video in the
+ * feed comes from: every upload is matched against all 348 members, instead of
+ * four members being searched for by name.
  */
-export const TRUSTED_CHANNELS: { id: string; name: string }[] = [
-  { id: 'UCOuh7lU8H5F6y-yjBHQ1rrw', name: 'Somoy TV' },
-  { id: 'UCatMkolAfJcOnGC9-KA1qpg', name: 'Jamuna TV' },
-  { id: 'UCqjIQKZBQXgqQz7QtV6y6qg', name: 'Channel 24' },
-  { id: 'UCHLqIOMPk20w-6cFgkA90jw', name: 'DBC News' },
-  { id: 'UC2P5Fd5g_OMxXmnLSSrEDXg', name: 'Independent Television' },
-  { id: 'UCd5jpRpKSbALEQRs5aVBjzA', name: 'Prothom Alo' },
-  { id: 'UC8yPmn9mqYFcYxNWzKlbEQg', name: 'BBC News Bangla' },
+export const TRUSTED_CHANNELS: { handle: string; name: string }[] = [
+  { handle: '@somoytvnews', name: 'সময় টিভি' },
+  { handle: '@JamunaTelevision', name: 'যমুনা টিভি' },
+  { handle: '@Channel24', name: 'চ্যানেল ২৪' },
+  { handle: '@dbcnewstv', name: 'ডিবিসি নিউজ' },
+  { handle: '@IndependentTelevision', name: 'ইনডিপেনডেন্ট টিভি' },
+  { handle: '@ekattortv', name: 'একাত্তর টিভি' },
+  { handle: '@NTVbd', name: 'এনটিভি' },
+  { handle: '@rtvnews', name: 'আরটিভি নিউজ' },
+  { handle: '@news24bdtv', name: 'নিউজ২৪' },
+  { handle: '@ATNNewsOfficial', name: 'এটিএন নিউজ' },
+  { handle: '@ekusheytelevision', name: 'একুশে টিভি' },
+  { handle: '@BanglavisionNEWS', name: 'বাংলাভিশন' },
+  { handle: '@MaasrangaTelevision', name: 'মাছরাঙা টেলিভিশন' },
+  { handle: '@ChannelIkhon', name: 'চ্যানেল আই' },
+  { handle: '@BBCBangla', name: 'বিবিসি বাংলা' },
+  { handle: '@ProthomAlo', name: 'প্রথম আলো' },
+  { handle: '@thedailystarnews', name: 'দ্য ডেইলি স্টার' },
+  { handle: '@jagonews24', name: 'জাগো নিউজ' },
+  { handle: '@BangladeshSangbadSangstha', name: 'বাসস' },
+  { handle: '@durbinnews', name: 'দুরবীন নিউজ' },
 ];
