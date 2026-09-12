@@ -13,7 +13,7 @@
  */
 import {
   members, parties, seats, meta, getMember, committeesOfMember, governmentPostsOf,
-  districtOf, partyColor, currentPosts, type Member,
+  districtOf, partyColor, partyShortBn, currentPosts, type Member,
 } from '@/lib/data';
 import { priorTermsOf, socialsOf } from '@/lib/history';
 
@@ -24,6 +24,8 @@ export interface AppParty {
   nameEn: string | null;
   color: string;
   seats: number;
+  /** "বিএনপি": what a chip on a phone has room for. */
+  shortBn: string;
 }
 
 export interface AppMemberBrief {
@@ -34,6 +36,8 @@ export interface AppMemberBrief {
   photoUrl: string | null;
   gender: string | null;
   party: string | null;
+  /** The party's short Bengali name, because a Bengali app should not read "BNP". */
+  partyBn: string | null;
   seatNo: number | null;
   seatBn: string | null;
   seatSlug: string | null;
@@ -56,6 +60,7 @@ const brief = (m: Member): AppMemberBrief => {
     photoUrl: m.photoUrl,
     gender: m.gender,
     party: m.party?.abbr ?? null,
+    partyBn: partyShortBn(m.party),
     seatNo: m.seat?.no ?? null,
     seatBn: m.seat?.nameBn ?? null,
     seatSlug: m.seat?.slug ?? null,
@@ -84,6 +89,7 @@ export function bootstrap() {
       nameEn: p.nameEn,
       color: partyColor(p.abbr),
       seats: seatsByParty.get(p.abbr) ?? 0,
+      shortBn: partyShortBn(p) ?? p.abbr,
     })),
     districts,
     members: members.map(brief),
