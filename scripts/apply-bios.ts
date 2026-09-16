@@ -1,10 +1,14 @@
 /**
- * Writes the cabinet biographies into the admin overrides table, exactly as an
+ * Writes members' biographies into the admin overrides table, exactly as an
  * editor saving them in /admin would: one override per field, one audit row per
  * change, so each can be seen and reverted from the admin panel.
  *
- *   npx tsx scripts/apply-cabinet-bios.ts <bios-dir>            report only
- *   npx tsx scripts/apply-cabinet-bios.ts <bios-dir> --apply    write
+ *   npx tsx scripts/apply-bios.ts <bios-dir>                        report only
+ *   npx tsx scripts/apply-bios.ts <bios-dir> --apply                write
+ *   npx tsx scripts/apply-bios.ts <bios-dir> --apply --ids a,b,c    only these members
+ *   npx tsx scripts/apply-bios.ts <bios-dir> --apply --actor "..."  the name in the audit log
+ *
+ * Used for the cabinet on 2026-09-16, then for every other member.
  *
  * <bios-dir> holds one JSON file per member: { memberId, bioBn, fields, sources }.
  * The site picks the overrides up on its next build.
@@ -27,9 +31,12 @@ const HEAD = { apikey: KEY, Authorization: `Bearer ${KEY}`, 'Content-Type': 'app
 
 const ALLOWED = new Set(['bioBn', 'bioSources', 'professionBn', 'educationBn', 'birthPlaceBn', 'partyRoleBn']);
 const WIKI_FIELDS = new Set(['educationBn', 'birthPlaceBn', 'professionBn']);
-const ACTOR = 'editorial: cabinet profiles, written from cited sources (2026-09-16)';
+const argOf = (name: string) => { const i = process.argv.indexOf(`--${name}`); return i >= 0 ? process.argv[i + 1] : undefined; };
+const ACTOR = argOf('actor') ?? 'editorial: member profiles, written from cited sources';
+/** The site's own page is where a reader already is, not a source. */
+const isOwnPage = (u: string) => /^https?:\/\/(www\.)?mymp\.bd\//.test(u);
 
-interface Bio { memberId: string; bioBn: string; fields: Record<string, string>; sources: string[] }
+interface Bio { memberId: string; bioBn: string; fields?: Record<string, string>; sources: string[] }
 interface Member { id: string; nameBn: string; bioFromWiki?: string | null; [k: string]: unknown }
 
 async function call(pathAndQuery: string, init: RequestInit = {}) {
@@ -42,12 +49,21 @@ async function call(pathAndQuery: string, init: RequestInit = {}) {
 async function main() {
   const dir = process.argv[2];
   const apply = process.argv.includes('--apply');
-  if (!dir) throw new Error('usage: apply-cabinet-bios.ts <bios-dir> [--apply]');
+  if (!dir) throw new Error('usage: apply-bios.ts <bios-dir> [--apply] [--ids a,b] [--actor name]');
+  const onlyIds = argOf('ids') ? new Set(argOf('ids')!.split(',')) : null;
 
   const members = new Map((JSON.parse(fs.readFileSync('data/members.json', 'utf8')) as Member[]).map((m) => [m.id, m]));
+  // Compare against what the site shows: the snapshot with the saved overrides on top.
+  for (let off = 0; ; off += 1000) {
+    const rows = (await call(`overrides?entity_type=eq.member&select=entity_id,field,value&order=id&limit=1000&offset=${off}`)) as { entity_id: string; field: string; value: string }[];
+    for (const o of rows) { const m = members.get(o.entity_id); if (m) m[o.field] = o.value; }
+    if (rows.length < 1000) break;
+  }
   const bios = fs.readdirSync(dir)
     .filter((f) => /^\d+\.json$/.test(f))
-    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Bio);
+    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) as Bio)
+    .filter((b) => !onlyIds || onlyIds.has(b.memberId))
+    .map((b) => ({ ...b, fields: b.fields ?? {}, sources: (b.sources ?? []).filter((u) => !isOwnPage(u)) }));
 
   const writes: { memberId: string; field: string; value: string; old: string | null }[] = [];
   for (const b of bios) {
