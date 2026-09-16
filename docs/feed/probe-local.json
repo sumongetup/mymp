@@ -1,0 +1,391 @@
+{
+ "at": "2026-09-16T16:00:39.153Z",
+ "where": "local",
+ "results": [
+  {
+   "key": "prothomalo",
+   "kind": "rss",
+   "url": "https://www.prothomalo.com/feed/",
+   "status": 200,
+   "items": 76
+  },
+  {
+   "key": "prothomalo",
+   "kind": "sitemap",
+   "url": "https://www.prothomalo.com/news_sitemap.xml",
+   "status": 200,
+   "items": 543
+  },
+  {
+   "key": "ittefaq",
+   "kind": "rss",
+   "url": "https://www.ittefaq.com.bd/feed/",
+   "status": 200,
+   "items": 101
+  },
+  {
+   "key": "ittefaq",
+   "kind": "sitemap",
+   "url": "https://www.ittefaq.com.bd/news-sitemap.xml",
+   "status": 200,
+   "items": 325
+  },
+  {
+   "key": "samakal",
+   "kind": "rss",
+   "url": "https://samakal.com/rss",
+   "status": 200,
+   "items": 100
+  },
+  {
+   "key": "samakal",
+   "kind": "sitemap",
+   "url": "https://samakal.com/news_sitemap.xml",
+   "status": 200,
+   "items": 340
+  },
+  {
+   "key": "banglatribune",
+   "kind": "rss",
+   "url": "https://www.banglatribune.com/feed/",
+   "status": 200,
+   "items": 101
+  },
+  {
+   "key": "banglatribune",
+   "kind": "sitemap",
+   "url": "https://www.banglatribune.com/news-sitemap.xml",
+   "status": 200,
+   "items": 421
+  },
+  {
+   "key": "deshrupantor",
+   "kind": "rss",
+   "url": "https://www.deshrupantor.com/feed/",
+   "status": 200,
+   "items": 101
+  },
+  {
+   "key": "deshrupantor",
+   "kind": "sitemap",
+   "url": "https://www.deshrupantor.com/news-sitemap.xml",
+   "status": 200,
+   "items": 465
+  },
+  {
+   "key": "inqilab",
+   "kind": "rss",
+   "url": "https://dailyinqilab.com/rss/rss.xml",
+   "status": 200,
+   "items": 100
+  },
+  {
+   "key": "janakantha",
+   "kind": "rss",
+   "url": "https://www.dailyjanakantha.com/rss/rss.xml",
+   "status": 200,
+   "items": 31
+  },
+  {
+   "key": "amardesh",
+   "kind": "rss",
+   "url": "https://www.dailyamardesh.com/feed",
+   "status": 200,
+   "items": 21
+  },
+  {
+   "key": "amardesh",
+   "kind": "sitemap",
+   "url": "https://www.dailyamardesh.com/news-sitemap.xml",
+   "status": 200,
+   "items": 465
+  },
+  {
+   "key": "ajkerpatrika",
+   "kind": "rss",
+   "url": "https://www.ajkerpatrika.com/feed",
+   "status": 200,
+   "items": 21
+  },
+  {
+   "key": "ajkerpatrika",
+   "kind": "sitemap",
+   "url": "https://www.ajkerpatrika.com/news-sitemap.xml",
+   "status": 200,
+   "items": 451
+  },
+  {
+   "key": "jagonews24",
+   "kind": "rss",
+   "url": "https://www.jagonews24.com/rss/rss.xml",
+   "status": 200,
+   "items": 50
+  },
+  {
+   "key": "jagonews24",
+   "kind": "sitemap",
+   "url": "https://www.jagonews24.com/sitemaps/news-sitemap.xml",
+   "status": 403,
+   "items": 0
+  },
+  {
+   "key": "dhakapost",
+   "kind": "rss",
+   "url": "https://www.dhakapost.com/rss/rss.xml",
+   "status": 200,
+   "items": 20
+  },
+  {
+   "key": "dhakapost",
+   "kind": "sitemap",
+   "url": "https://www.dhakapost.com/sitemaps/news-sitemap.xml",
+   "status": 403,
+   "items": 0
+  },
+  {
+   "key": "risingbd",
+   "kind": "rss",
+   "url": "https://www.risingbd.com/rss/rss.xml",
+   "status": 200,
+   "items": 101
+  },
+  {
+   "key": "risingbd",
+   "kind": "sitemap",
+   "url": "https://www.risingbd.com/news-sitemap.xml",
+   "status": 403,
+   "items": 0
+  },
+  {
+   "key": "sangbad",
+   "kind": "rss",
+   "url": "https://sangbad.net.bd/rss.xml",
+   "status": 200,
+   "items": 120
+  },
+  {
+   "key": "barta24",
+   "kind": "rss",
+   "url": "https://barta24.com/rss/rss.xml",
+   "status": 200,
+   "items": 121
+  },
+  {
+   "key": "alokitobangladesh",
+   "kind": "rss",
+   "url": "https://www.alokitobangladesh.com/rss/rss.xml",
+   "status": 200,
+   "items": 16
+  },
+  {
+   "key": "sarabangla",
+   "kind": "rss",
+   "url": "https://sarabangla.net/feed",
+   "status": 200,
+   "items": 11
+  },
+  {
+   "key": "sarabangla",
+   "kind": "sitemap",
+   "url": "https://sarabangla.net/sitemap.rss",
+   "status": 200,
+   "items": 50
+  },
+  {
+   "key": "arthosuchak",
+   "kind": "rss",
+   "url": "https://www.arthosuchak.com/feed/",
+   "status": 200,
+   "items": 11
+  },
+  {
+   "key": "sharebiz",
+   "kind": "rss",
+   "url": "https://sharebiz.net/rss/rss.xml",
+   "status": 429,
+   "items": 0
+  },
+  {
+   "key": "bss",
+   "kind": "rss",
+   "url": "https://www.bssnews.net/rss/rss.xml",
+   "status": 200,
+   "items": 16
+  },
+  {
+   "key": "netranews",
+   "kind": "rss",
+   "url": "https://netra.news/rss/",
+   "status": 200,
+   "items": 16
+  },
+  {
+   "key": "bbcbangla",
+   "kind": "rss",
+   "url": "https://feeds.bbci.co.uk/bengali/rss.xml",
+   "status": 200,
+   "items": 15
+  },
+  {
+   "key": "channel24",
+   "kind": "rss",
+   "url": "https://www.channel24bd.tv/rss/rss.xml",
+   "status": 200,
+   "items": 121
+  },
+  {
+   "key": "channel24",
+   "kind": "sitemap",
+   "url": "https://www.channel24bd.tv/news-sitemap.xml",
+   "status": 200,
+   "items": 500
+  },
+  {
+   "key": "itv",
+   "kind": "rss",
+   "url": "https://www.itvbd.com/feed/",
+   "status": 200,
+   "items": 101
+  },
+  {
+   "key": "itv",
+   "kind": "sitemap",
+   "url": "https://www.itvbd.com/news-sitemap.xml",
+   "status": 200,
+   "items": 115
+  },
+  {
+   "key": "ekattor",
+   "kind": "rss",
+   "url": "https://ekattor.tv/feed/",
+   "status": 200,
+   "items": 101
+  },
+  {
+   "key": "ekattor",
+   "kind": "sitemap",
+   "url": "https://ekattor.tv/news-sitemap.xml",
+   "status": 200,
+   "items": 71
+  },
+  {
+   "key": "ekushey",
+   "kind": "rss",
+   "url": "https://www.ekushey-tv.com/rss/rss.xml",
+   "status": 200,
+   "items": 31
+  },
+  {
+   "key": "channeli",
+   "kind": "rss",
+   "url": "https://www.channelionline.com/rss.xml",
+   "status": 200,
+   "items": 30
+  },
+  {
+   "key": "channeli",
+   "kind": "sitemap",
+   "url": "https://www.channelionline.com/news-sitemap.xml",
+   "status": 200,
+   "items": 143
+  },
+  {
+   "key": "news24bd",
+   "kind": "rss",
+   "url": "https://www.news24bd.tv/rss.xml",
+   "status": 200,
+   "items": 57
+  },
+  {
+   "key": "news24bd",
+   "kind": "sitemap",
+   "url": "https://www.news24bd.tv/daily-sitemap/2026-09-15/sitemap.xml",
+   "status": 200,
+   "items": 115
+  },
+  {
+   "key": "dhakatribune",
+   "kind": "rss",
+   "url": "https://www.dhakatribune.com/feed/",
+   "status": 200,
+   "items": 101
+  },
+  {
+   "key": "dhakatribune",
+   "kind": "sitemap",
+   "url": "https://www.dhakatribune.com/news-sitemap.xml",
+   "status": 200,
+   "items": 151
+  },
+  {
+   "key": "dailystar",
+   "kind": "rss",
+   "url": "https://www.thedailystar.net/rss.xml",
+   "status": 200,
+   "items": 8
+  },
+  {
+   "key": "dailystar",
+   "kind": "sitemap",
+   "url": "https://www.thedailystar.net/googlenews.xml",
+   "status": 200,
+   "items": 334
+  },
+  {
+   "key": "tbs",
+   "kind": "rss",
+   "url": "https://www.tbsnews.net/top-news/rss.xml",
+   "status": 200,
+   "items": 20
+  },
+  {
+   "key": "tbs",
+   "kind": "sitemap",
+   "url": "https://www.tbsnews.net/bangla/googlenews.xml",
+   "status": 200,
+   "items": 188
+  },
+  {
+   "key": "observerbd",
+   "kind": "rss",
+   "url": "https://www.observerbd.com/rss",
+   "status": 200,
+   "items": 16
+  },
+  {
+   "key": "durbinnews",
+   "kind": "rss",
+   "url": "https://durbinnews.com/feed.xml",
+   "status": 200,
+   "items": 50
+  },
+  {
+   "key": "kalerkantho",
+   "kind": "sitemap",
+   "url": "https://www.kalerkantho.com/daily-sitemap/2026-09-15/sitemap.xml",
+   "status": 403,
+   "items": 0
+  },
+  {
+   "key": "bdpratidin",
+   "kind": "sitemap",
+   "url": "https://www.bd-pratidin.com/daily-sitemap/2026-09-15/sitemap.xml",
+   "status": 403,
+   "items": 0
+  },
+  {
+   "key": "bdnews24",
+   "kind": "sitemap",
+   "url": "https://bdnews24.com/news_sitemap.xml",
+   "status": 403,
+   "items": 0
+  },
+  {
+   "key": "banglanews24",
+   "kind": "sitemap",
+   "url": "https://www.banglanews24.com/daily-sitemap/2026-09-15/sitemap.xml",
+   "status": 403,
+   "items": 0
+  }
+ ]
+}

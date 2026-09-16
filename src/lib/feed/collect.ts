@@ -178,7 +178,7 @@ export async function runRssCollector(opts: CollectorOptions = {}): Promise<RunR
   else counts.found = items.length;
 
   const result: RunResult = {
-    status: errors.length === RSS_SOURCES.length ? 'failed' : 'ok',
+    status: RSS_SOURCES.every((s) => !detail[s.key]) ? 'failed' : 'ok',
     itemsFound: counts.found,
     itemsNew: counts.stored,
     itemsAttached: counts.attached,
@@ -281,7 +281,10 @@ export async function runSitemapCollector(opts: CollectorOptions & { perRun?: nu
   else counts.found = items.length;
 
   const result: RunResult = {
-    status: slice.length && errors.length >= slice.length ? 'failed' : 'ok',
+    // Failed means nothing came back from any outlet. Errors were counted per
+    // address before, and a daily outlet has two, so three blocked outlets out
+    // of eight marked a run red while it had just read 942 headlines.
+    status: slice.length && errors.length && slice.every((s) => !detail[s.key]) ? 'failed' : 'ok',
     itemsFound: counts.found,
     itemsNew: counts.stored,
     itemsAttached: counts.attached,
