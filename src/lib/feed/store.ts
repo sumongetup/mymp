@@ -203,6 +203,32 @@ export async function attachedToday(mpId: string): Promise<number> {
 
 export interface RunHandle { id: number }
 
+/**
+ * Which turn of its rotation a collector is on: the number of its runs before
+ * this one. The turn used to come from the clock, which walks the rotation only
+ * when every scheduled run happens; GitHub fired the half-hourly schedules every
+ * three to six hours, so most outlets and members were never reached. Counting
+ * runs means a late or missed run still takes the next slice. Falls back to the
+ * clock when the count cannot be read.
+ */
+export async function turnOf(collector: string, run: RunHandle | null, clockMinutes: number): Promise<number> {
+  const clock = Math.floor(Date.now() / (clockMinutes * 60_000));
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, '');
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!run || !url || !key) return clock;
+  try {
+    const res = await fetch(`${url}/rest/v1/feed_runs?collector=eq.${q(collector)}&id=lt.${run.id}&status=neq.aborted&select=id`, {
+      method: 'HEAD',
+      headers: { apikey: key, Authorization: `Bearer ${key}`, Prefer: 'count=exact' },
+      signal: AbortSignal.timeout(10_000),
+    });
+    const total = Number(res.headers.get('content-range')?.split('/')[1]);
+    return res.ok && Number.isFinite(total) ? total : clock;
+  } catch {
+    return clock;
+  }
+}
+
 export async function startRun(collector: string, trigger: string): Promise<RunHandle> {
   const [row] = await db().insert<{ id: number }>('feed_runs', { collector, trigger, status: 'running' });
   return { id: row!.id };

@@ -10,8 +10,8 @@ name: MP video collector
 # YouTube key the run records itself as skipped and this job stays green.
 
 on:
-  schedule:
-    - cron: '15 * * * *'
+  # The schedule moved to feed-loop.yml, which runs this collector on a steady
+  # beat; GitHub fired this one only every few hours. Kept for manual runs.
   workflow_dispatch:
 
 concurrency:

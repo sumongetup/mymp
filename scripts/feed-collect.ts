@@ -4,6 +4,9 @@
  *   npm run feed:rss                        every configured feed, once
  *   npm run feed:rss -- --dry-run           fetch and match, write nothing
  *   npm run feed:rss -- --collector=press   parliament notices
+ *   npm run feed:rss -- --collector=sitemap every outlet sitemap in one pass; from a
+ *                                           home connection this reaches the outlets
+ *                                           that refuse the servers
  *   npm run feed:rss -- --collector=youtube needs YOUTUBE_API_KEY
  *   npm run feed:rss -- --collector=search  needs FEED_SEARCH_KEY
  *
@@ -23,14 +26,16 @@ if (fs.existsSync(envFile)) {
 }
 
 const dryRun = process.argv.includes('--dry-run');
-const which = (process.argv.find((a) => a.startsWith('--collector='))?.split('=')[1] ?? 'rss') as 'rss' | 'youtube' | 'search' | 'press';
+const which = (process.argv.find((a) => a.startsWith('--collector='))?.split('=')[1] ?? 'rss') as 'rss' | 'sitemap' | 'youtube' | 'search' | 'press';
 
 async function main() {
-  const { runRssCollector } = await import('../src/lib/feed/collect');
+  const { runRssCollector, runSitemapCollector } = await import('../src/lib/feed/collect');
+  const { SITEMAP_SOURCES } = await import('../config/news-sources');
   const { runYoutubeCollector, runSearchCollector, runPressCollector } = await import('../src/lib/feed/collectors');
   const r =
     which === 'youtube' ? await runYoutubeCollector({ trigger: 'cli' })
     : which === 'search' ? await runSearchCollector({ trigger: 'cli' })
+    : which === 'sitemap' ? await runSitemapCollector({ trigger: 'cli', dryRun, perRun: SITEMAP_SOURCES.length })
     : which === 'press' ? await runPressCollector({ trigger: 'cli' })
     : await runRssCollector({ trigger: 'cli', dryRun });
   const detail = Object.entries((r.detail ?? {}) as Record<string, number>).sort((a, b) => b[1] - a[1]);

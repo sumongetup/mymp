@@ -9,8 +9,8 @@ name: MP feed collector
 # in Vercel. A failed run turns red here and GitHub emails the owner.
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'
+  # The schedule moved to feed-loop.yml, which runs this collector on a steady
+  # beat; GitHub fired this one only every few hours. Kept for manual runs.
   workflow_dispatch:
 
 concurrency:

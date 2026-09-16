@@ -15,7 +15,7 @@ import { buildFeedIndex, matchItem, type FeedIndex, type FeedMp } from './matchM
 import { RSS_SOURCES, SITEMAP_SOURCES } from '../../../config/news-sources';
 import { fetchFeed } from './rss';
 import {
-  attach, attachedToday, finishRun, lastRun, nameVariants, startRun, upsertItem,
+  attach, attachedToday, finishRun, lastRun, nameVariants, startRun, turnOf, upsertItem,
   type FeedItemInput, type RunResult,
 } from './store';
 
@@ -224,7 +224,7 @@ export async function runSitemapCollector(opts: CollectorOptions & { perRun?: nu
   const deadline = opts.budgetMs ? Date.now() + opts.budgetMs : undefined;
 
   const perRun = opts.perRun ?? 8;
-  const tick = Math.floor(Date.now() / (30 * 60_000));
+  const tick = await turnOf('sitemap', run, 30);
   const all = SITEMAP_SOURCES;
   const start = (tick * perRun) % Math.max(all.length, 1);
   const slice = Array.from({ length: Math.min(perRun, all.length) }, (_, i) => all[(start + i) % all.length]!);

@@ -4,9 +4,9 @@
  *
  * Both work their way through the 348 members a slice at a time rather than
  * all at once, so a run is small, predictable and inside its quota. Which
- * members a run takes is decided by the clock: the day is divided into slots
- * and each member belongs to one, with the members who hold a government or
- * House post taken twice as often as the rest.
+ * members a run takes is decided by counting the collector's earlier runs, so
+ * a late or skipped run still takes the next slice, with the members who hold a
+ * government or House post taken twice as often as the rest.
  */
 import { allMembers, currentPosts, districtOf, getMemberById } from '@/lib/data';
 import { matchItem, type FeedIndex } from './matchMp';
@@ -14,7 +14,7 @@ import { buildIndex, ingest, type IngestCounts } from './collect';
 import { searchProvider } from './searchProvider';
 import { SEARCH_ONLY_SOURCES } from '../../../config/news-sources';
 import { TRUSTED_CHANNELS } from '../../../config/feed-matching';
-import { attach, finishRun, startRun, upsertItem, type FeedItemInput, type RunResult } from './store';
+import { attach, finishRun, startRun, turnOf, upsertItem, type FeedItemInput, type RunResult } from './store';
 import { restDb, type Db } from '@/lib/posts/db';
 
 function db(): Db {
@@ -68,9 +68,6 @@ export function sliceFor(list: Target[], perRun: number, tick: number): Target[]
   return out;
 }
 
-/** Which turn of the cycle it is: one per hour for videos, one per half hour for search. */
-const tickNow = (minutes: number) => Math.floor(Date.now() / (minutes * 60_000));
-
 /* ---------------------------------------------------------------- YouTube */
 
 interface YtItem {
@@ -99,7 +96,8 @@ export async function runYoutubeCollector(opts: { trigger?: string; perRun?: num
   }
 
   const perRun = opts.perRun ?? PER_RUN();
-  const slice = perRun ? sliceFor(targets(), perRun, tickNow(60)) : [];
+  const turn = await turnOf('youtube', run, 60);
+  const slice = perRun ? sliceFor(targets(), perRun, turn) : [];
   const index = await buildIndex();
   let quota = 0;
 
@@ -107,7 +105,7 @@ export async function runYoutubeCollector(opts: { trigger?: string; perRun?: num
   // Both halves share one budget, so a run always answers inside the minute a
   // serverless function has; what is left over is the next run's work.
   const deadline = Date.now() + (opts.budgetMs ?? 40_000);
-  const uploads = await collectChannelUploads(key, index, counts, errors, deadline);
+  const uploads = await collectChannelUploads(key, index, counts, errors, deadline, turn);
   quota += uploads.quota;
   const items: FeedItemInput[] = [];
   const published = opts.since ?? new Date(Date.now() - 30 * 86_400_000).toISOString();
@@ -185,6 +183,7 @@ async function collectChannelUploads(
   counts: IngestCounts,
   errors: { source: string; message: string }[],
   deadline: number,
+  turn: number,
 ): Promise<{ quota: number; channels: number }> {
   const sb = db();
   // Resolving a handle costs a unit, so the uploads playlist is remembered.
@@ -202,10 +201,10 @@ async function collectChannelUploads(
   // A few channels an hour rather than all twenty: a serverless run has a
   // minute, and every channel still comes round three times a day.
   const perRun = Math.max(1, Number(process.env.YOUTUBE_CHANNELS_PER_RUN ?? 5));
-  const start = (tickNow(60) * perRun) % TRUSTED_CHANNELS.length;
-  const turn = Array.from({ length: Math.min(perRun, TRUSTED_CHANNELS.length) }, (_, i) => TRUSTED_CHANNELS[(start + i) % TRUSTED_CHANNELS.length]!);
+  const start = (turn * perRun) % TRUSTED_CHANNELS.length;
+  const chosen = Array.from({ length: Math.min(perRun, TRUSTED_CHANNELS.length) }, (_, i) => TRUSTED_CHANNELS[(start + i) % TRUSTED_CHANNELS.length]!);
 
-  for (const channel of turn) {
+  for (const channel of chosen) {
     if (Date.now() > deadline) break;
     try {
       let playlist = cache[channel.handle];
@@ -296,7 +295,7 @@ export async function runSearchCollector(opts: { trigger?: string; perRun?: numb
   // inside the free tier, a full pass over the House every three and a half
   // days. FEED_SEARCH_PER_RUN raises it when the budget allows.
   const perRun = opts.perRun ?? Math.max(1, Number(process.env.FEED_SEARCH_PER_RUN ?? 4));
-  const slice = sliceFor(targets(), perRun, tickNow(60));
+  const slice = sliceFor(targets(), perRun, await turnOf('search', run, 60));
   const index = await buildIndex();
   const sites = SEARCH_ONLY_SOURCES.map((s) => new URL(s.homepage).hostname.replace(/^www\./, ''));
   const items: FeedItemInput[] = [];
