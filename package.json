@@ -17,7 +17,8 @@
     "feed:seed": "tsx scripts/seed-feed.ts",
     "feed:rss": "tsx scripts/feed-collect.ts",
     "feed:rematch": "tsx scripts/feed-rematch.ts",
-    "feed:backfill": "tsx scripts/feed-backfill.ts"
+    "feed:backfill": "tsx scripts/feed-backfill.ts",
+    "feed:thumbs": "tsx scripts/feed-thumbnails.ts"
   },
   "dependencies": {
     "@expo-google-fonts/noto-sans-bengali": "^0.4.4",

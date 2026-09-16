@@ -78,7 +78,7 @@ function itemImage(block: string): string | null {
     // hqdefault.jpg, and a rule that read "default" inside it threw away every
     // video's picture.
     const file = url.split('?')[0]!.split('/').pop() ?? '';
-    if (/^(no[-_]?image|noimg|placeholder|default|blank)[-_.]?/i.test(file)) continue;
+    if (/^(no[-_]?image|no[-_]?img|placeholder|default|blank)[-_.]?/i.test(file)) continue;
     return url.slice(0, 800);
   }
   return null;

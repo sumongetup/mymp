@@ -11,6 +11,7 @@ import { NextResponse } from 'next/server';
 import { runRssCollector, runSitemapCollector } from '@/lib/feed/collect';
 import { runYoutubeCollector, runSearchCollector, runPressCollector } from '@/lib/feed/collectors';
 import { learnFromFeedback } from '@/lib/feed/learn';
+import { fillThumbnails } from '@/lib/feed/thumbnails';
 import { isMissingTable } from '@/lib/posts/db';
 
 export const dynamic = 'force-dynamic';
@@ -26,6 +27,10 @@ export async function GET(req: Request) {
   const collector = url.searchParams.get('collector') ?? 'rss';
 
   try {
+    if (collector === 'thumbs') {
+      const t = await fillThumbnails({ days: 3, limit: 40, budgetMs: 45_000 });
+      return NextResponse.json({ ok: true, collector, ...t });
+    }
     if (collector === 'learn') {
       const l = await learnFromFeedback();
       return NextResponse.json({ ok: true, collector, feedback: l.feedback, learned: l.learned.length, outlets: l.outlets.slice(0, 8) });
