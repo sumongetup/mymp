@@ -19,6 +19,10 @@ name: MP feed loop
 # in Vercel. The repository is public, so the runner time costs nothing.
 
 on:
+  # A change to this file starts the loop straight away.
+  push:
+    branches: [main]
+    paths: [.github/workflows/feed-loop.yml]
   schedule:
     - cron: '7 */2 * * *'
   workflow_dispatch:
