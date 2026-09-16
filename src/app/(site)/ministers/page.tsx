@@ -25,8 +25,8 @@ function cabinet() {
         key,
         title: r.title,
         name: m?.nameBn ?? plainName(r.nameBn),
-        // An adviser from outside parliament has a profile of their own.
-        href: m ? `/mp/${m.slug}` : adviserForPost(r) ? `/upodeshta/${adviserForPost(r)!.slug}` : null,
+        // Someone from outside parliament has a profile of their own.
+        href: m ? `/mp/${m.slug}` : adviserForPost(r) ? `/ministers/${adviserForPost(r)!.slug}` : null,
         photo: m?.photoUrl ?? r.photoUrl,
         initial: m ? initial(m) : firstLetter(r.nameBn),
         party: m?.party ? { abbr: m.party.abbr, name: m.party.nameBn ?? m.party.abbr, color: partyColor(m.party.abbr) } : null,

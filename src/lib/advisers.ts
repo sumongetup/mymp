@@ -1,5 +1,6 @@
 /**
- * The Prime Minister's advisers who are not members of parliament.
+ * Cabinet members from outside parliament: the Prime Minister's advisers and
+ * the technocrat ministers.
  *
  * Everyone else on the cabinet list has a member record, and their biography
  * lives there. An adviser appointed from outside parliament has none, so the
@@ -16,6 +17,8 @@ export interface AdviserProfile {
   /** The name exactly as the cabinet list writes it, which is how a post finds its profile. */
   postNameBn: string;
   nameBn: string;
+  /** "প্রধানমন্ত্রীর উপদেষ্টা", or "পররাষ্ট্রমন্ত্রী" for a technocrat minister. */
+  roleBn: string;
   rankBn: string | null;
   bioBn: string;
   professionBn: string | null;
