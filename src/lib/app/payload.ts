@@ -13,7 +13,7 @@
  */
 import {
   members, parties, seats, meta, getMember, committeesOfMember, governmentPostsOf,
-  districtOf, partyColor, partyShortBn, currentPosts, type Member,
+  districtOf, partyColor, partyShortBn, currentPosts, OFFICE_LABELS, type Member,
 } from '@/lib/data';
 import { priorTermsOf, socialsOf } from '@/lib/history';
 import { adviserForPost, getAdviser, adviserPosts } from '@/lib/advisers';
@@ -49,8 +49,18 @@ export interface AppMemberBrief {
   reserved: boolean;
 }
 
-const office = (m: Member): string | null =>
-  m.govPost ?? m.offices?.[0] ?? (m.ministryBn ? `${m.ministryBn}` : null);
+/**
+ * What the member holds, in Bengali: a House office first (the source stores
+ * those as codes, "pm", "speaker"), then a post on the cabinet list, then an
+ * editor's entry. A code must never reach a reader: the app once showed "pm".
+ */
+const office = (m: Member): string | null => {
+  const house = (m.offices ?? []).map((o) => OFFICE_LABELS[o]).find(Boolean);
+  if (house) return house;
+  const post = governmentPostsOf(m.id)[0]?.title;
+  if (post) return post;
+  return m.govPost ?? null;
+};
 
 const brief = (m: Member): AppMemberBrief => {
   const d = m.seat ? districtOf(m.seat) : null;
