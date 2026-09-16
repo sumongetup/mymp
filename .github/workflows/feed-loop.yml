@@ -52,7 +52,8 @@ jobs:
           # A push means the loop itself changed: the running one still has the old
           # steps, so it is stopped and this one takes over.
           if [ "${{ github.event_name }}" = "push" ]; then
-            for id in $(gh run list --workflow feed-loop.yml --limit 20 --json databaseId,status \n              --jq ".[] | select(.databaseId != ${{ github.run_id }} and .status == \"in_progress\") | .databaseId"); do
+            for id in $(gh run list --workflow feed-loop.yml --limit 20 --json databaseId,status \
+              --jq ".[] | select(.databaseId != ${{ github.run_id }} and .status == \"in_progress\") | .databaseId"); do
               echo "stopping the older loop $id"; gh run cancel "$id" || true
             done
             echo "run=true" >> "$GITHUB_OUTPUT"; exit 0
