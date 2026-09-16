@@ -45,6 +45,13 @@ export interface NewsSource {
    * outlets that file one sitemap per day.
    */
   sitemaps?: { url: string; daily?: boolean }[];
+  /**
+   * The outlet's dated archive of article addresses, with no headlines: `{d}`
+   * is a day (YYYY-MM-DD) or, for `month`, the first of a month. These outlets
+   * put the headline in the address itself, so `npm run feed:archive` reads
+   * the headline from there, and opens only the articles that name a member.
+   */
+  archives?: { url: string; every: 'day' | 'month' }[];
   lang: 'bn' | 'en';
 }
 
@@ -52,9 +59,9 @@ export const NEWS_SOURCES: NewsSource[] = [
   // ---- Bangla dailies and wires with working feeds
   { key: 'prothomalo', nameBn: 'প্রথম আলো', homepage: 'https://www.prothomalo.com', rss: ['https://www.prothomalo.com/feed/'], sitemaps: [{ url: 'https://www.prothomalo.com/news_sitemap.xml' }], lang: 'bn' },
   { key: 'ittefaq', nameBn: 'ইত্তেফাক', homepage: 'https://www.ittefaq.com.bd', rss: ['https://www.ittefaq.com.bd/feed/'], sitemaps: [{ url: 'https://www.ittefaq.com.bd/news-sitemap.xml' }], lang: 'bn' },
-  { key: 'samakal', nameBn: 'সমকাল', homepage: 'https://samakal.com', rss: ['https://samakal.com/rss'], sitemaps: [{ url: 'https://samakal.com/news_sitemap.xml' }], lang: 'bn' },
-  { key: 'banglatribune', nameBn: 'বাংলা ট্রিবিউন', homepage: 'https://www.banglatribune.com', rss: ['https://www.banglatribune.com/feed/'], sitemaps: [{ url: 'https://www.banglatribune.com/news-sitemap.xml' }], lang: 'bn' },
-  { key: 'deshrupantor', nameBn: 'দেশ রূপান্তর', homepage: 'https://www.deshrupantor.com', rss: ['https://www.deshrupantor.com/feed/'], sitemaps: [{ url: 'https://www.deshrupantor.com/news-sitemap.xml' }], lang: 'bn' },
+  { key: 'samakal', nameBn: 'সমকাল', homepage: 'https://samakal.com', rss: ['https://samakal.com/rss'], sitemaps: [{ url: 'https://samakal.com/news_sitemap.xml' }], archives: [{ url: 'https://samakal.com/sitemap/sitemap-daily-{d}.xml', every: 'day' }], lang: 'bn' },
+  { key: 'banglatribune', nameBn: 'বাংলা ট্রিবিউন', homepage: 'https://www.banglatribune.com', rss: ['https://www.banglatribune.com/feed/'], sitemaps: [{ url: 'https://www.banglatribune.com/news-sitemap.xml' }], archives: [{ url: 'https://www.banglatribune.com/archive_{d}.xml', every: 'month' }], lang: 'bn' },
+  { key: 'deshrupantor', nameBn: 'দেশ রূপান্তর', homepage: 'https://www.deshrupantor.com', rss: ['https://www.deshrupantor.com/feed/'], sitemaps: [{ url: 'https://www.deshrupantor.com/news-sitemap.xml' }], archives: [{ url: 'https://www.deshrupantor.com/{d}.xml', every: 'month' }], lang: 'bn' },
   { key: 'inqilab', nameBn: 'দৈনিক ইনকিলাব', homepage: 'https://dailyinqilab.com', rss: ['https://dailyinqilab.com/rss/rss.xml'], lang: 'bn' },
   { key: 'janakantha', nameBn: 'জনকণ্ঠ', homepage: 'https://www.dailyjanakantha.com', rss: ['https://www.dailyjanakantha.com/rss/rss.xml'], lang: 'bn' },
   { key: 'amardesh', nameBn: 'আমার দেশ', homepage: 'https://www.dailyamardesh.com', rss: ['https://www.dailyamardesh.com/feed'], sitemaps: [{ url: 'https://www.dailyamardesh.com/news-sitemap.xml' }], lang: 'bn' },
@@ -73,7 +80,7 @@ export const NEWS_SOURCES: NewsSource[] = [
   { key: 'bbcbangla', nameBn: 'বিবিসি বাংলা', homepage: 'https://www.bbc.com/bengali', rss: ['https://feeds.bbci.co.uk/bengali/rss.xml'], lang: 'bn' },
 
   // ---- Television
-  { key: 'channel24', nameBn: 'চ্যানেল ২৪', homepage: 'https://www.channel24bd.tv', rss: ['https://www.channel24bd.tv/rss/rss.xml'], sitemaps: [{ url: 'https://www.channel24bd.tv/news-sitemap.xml' }], lang: 'bn' },
+  { key: 'channel24', nameBn: 'চ্যানেল ২৪', homepage: 'https://www.channel24bd.tv', rss: ['https://www.channel24bd.tv/rss/rss.xml'], sitemaps: [{ url: 'https://www.channel24bd.tv/news-sitemap.xml' }], archives: [{ url: 'https://www.channel24bd.tv/sitemap/sitemap-daily-{d}.xml', every: 'day' }], lang: 'bn' },
   { key: 'itv', nameBn: 'ইনডিপেনডেন্ট টেলিভিশন', homepage: 'https://www.itvbd.com', rss: ['https://www.itvbd.com/feed/'], sitemaps: [{ url: 'https://www.itvbd.com/news-sitemap.xml' }], lang: 'bn' },
   { key: 'ekattor', nameBn: 'একাত্তর টিভি', homepage: 'https://ekattor.tv', rss: ['https://ekattor.tv/feed/'], sitemaps: [{ url: 'https://ekattor.tv/news-sitemap.xml' }], lang: 'bn' },
   { key: 'ekushey', nameBn: 'একুশে টেলিভিশন', homepage: 'https://www.ekushey-tv.com', rss: ['https://www.ekushey-tv.com/rss/rss.xml'], lang: 'bn' },
@@ -90,7 +97,7 @@ export const NEWS_SOURCES: NewsSource[] = [
   { key: 'durbinnews', nameBn: 'দুরবীন নিউজ', homepage: 'https://durbinnews.com', rss: ['https://durbinnews.com/feed.xml'], lang: 'bn' },
 
   // ---- No usable feed: the search collector has to reach these
-  { key: 'jugantor', nameBn: 'যুগান্তর', homepage: 'https://www.jugantor.com', searchOnly: true, lang: 'bn' },
+  { key: 'jugantor', nameBn: 'যুগান্তর', homepage: 'https://www.jugantor.com', searchOnly: true, sitemaps: [{ url: 'https://www.jugantor.com/news_sitemap.xml' }], lang: 'bn' },
   { key: 'kalerkantho', nameBn: 'কালের কণ্ঠ', homepage: 'https://www.kalerkantho.com', searchOnly: true, sitemaps: [{ url: 'https://www.kalerkantho.com/daily-sitemap/{d}/sitemap.xml', daily: true }], lang: 'bn' },
   { key: 'bdpratidin', nameBn: 'বাংলাদেশ প্রতিদিন', homepage: 'https://www.bd-pratidin.com', searchOnly: true, sitemaps: [{ url: 'https://www.bd-pratidin.com/daily-sitemap/{d}/sitemap.xml', daily: true }], lang: 'bn' },
   { key: 'mzamin', nameBn: 'মানবজমিন', homepage: 'https://mzamin.com', searchOnly: true, lang: 'bn' },
@@ -98,7 +105,7 @@ export const NEWS_SOURCES: NewsSource[] = [
   // answers 403 to anything that is not a browser, whatever User-Agent it
   // sends. Getting past that would mean disguising the client, so it stays
   // here for the search collector.
-  { key: 'bdnews24', nameBn: 'বিডিনিউজ২৪', homepage: 'https://bdnews24.com', searchOnly: true, sitemaps: [{ url: 'https://bdnews24.com/news_sitemap.xml' }], lang: 'bn' },
+  { key: 'bdnews24', nameBn: 'বিডিনিউজ২৪', homepage: 'https://bdnews24.com', searchOnly: true, sitemaps: [{ url: 'https://bdnews24.com/news_sitemap.xml' }, { url: 'https://bangla.bdnews24.com/news_sitemap.xml' }], lang: 'bn' },
   { key: 'somoynews', nameBn: 'সময় টিভি', homepage: 'https://www.somoynews.tv', searchOnly: true, lang: 'bn' },
   { key: 'jamuna', nameBn: 'যমুনা টিভি', homepage: 'https://jamuna.tv', searchOnly: true, lang: 'bn' },
   { key: 'kalbela', nameBn: 'কালবেলা', homepage: 'https://www.kalbela.com', searchOnly: true, lang: 'bn' },
