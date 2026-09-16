@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { shareGraph, shareTwitter, cardImage } from '@/lib/seo';
+import { sourceLabel, sourceList } from '@/lib/sourceLabel';
 import { mpDescription, mpTitle, partyBn, isIndependent } from '@/lib/seo/mpDescription';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -114,6 +115,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   const wikiSources = facts.some((f) => f.wiki) ? (m.bioSource ?? '').split(' ').filter(Boolean) : [];
 
   const paragraphs = (m.bioBn ?? '').split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  const bioSources = sourceList(m.bioSources);
   const year = electionYear(meta.parliamentNo);
   // parliament.gov.bd writes a biography for the presiding officers only (and repeats it as the summary);
   // everyone else gets an introduction put together from the facts on this page.
@@ -301,6 +303,19 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 {paragraphs.map((p, i) => (
                   <p key={i} className="text-[15px] leading-[1.8] wrap-anywhere">{p}</p>
                 ))}
+                {bioSources.length > 0 && (
+                  // A biography is only as good as where it came from, so it says.
+                  <p className="pt-3 mt-1 border-t border-rulesoft text-[12.5px] text-muted leading-relaxed">
+                    সূত্র:{' '}
+                    {bioSources.map((u, i) => (
+                      <span key={u}>
+                        <a href={u} target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">{sourceLabel(u)}</a>
+                        {i < bioSources.length - 1 ? ', ' : ''}
+                      </span>
+                    ))}
+                    । ভুল দেখলে জানান।
+                  </p>
+                )}
               </Card>
             )}
             {facts.length ? (

@@ -1,4 +1,5 @@
 import { allMembers as members, seats, parties, committees, meta, districtOf } from '@/lib/data';
+import { allAdvisers, adviserPosts } from '@/lib/advisers';
 import { siteUrl } from '@/lib/site';
 
 // Built once per deploy like the pages it lists; the data only changes with a publish.
@@ -42,6 +43,7 @@ export function GET() {
     { path: '/gopaniyota', changefreq: 'yearly', priority: 0.2 },
     // Google Images finds each member's official photo from here.
     ...members.map((m): Entry => ({ path: `/mp/${m.slug}`, changefreq: 'weekly', priority: 0.8, image: m.photoUrl })),
+    ...allAdvisers().map((a): Entry => ({ path: `/upodeshta/${a.slug}`, changefreq: 'monthly', priority: 0.6, image: adviserPosts(a).photoUrl })),
     ...seats.map((s): Entry => ({ path: `/ason/${s.slug}`, changefreq: 'weekly', priority: 0.7 })),
     ...districtSlugs.map((d): Entry => ({ path: `/jela/${d}`, changefreq: 'weekly', priority: 0.7 })),
     ...parties.map((p): Entry => ({ path: `/dol/${p.slug}`, changefreq: 'weekly', priority: 0.6 })),

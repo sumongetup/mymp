@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { shareGraph } from '@/lib/seo';
 import { posts, currentPosts, getMemberById, bn, dateBn, initial, partyColor, postsCheckedOnBn, type PostEntry } from '@/lib/data';
 import { ministryKey, normalizeName } from '@/lib/posts/names';
+import { adviserForPost } from '@/lib/advisers';
 import { Page, PageHead, Card } from '@/components/ui';
 import MinistersBrowser, { type MinisterGroup, type MinisterPerson } from '@/components/MinistersBrowser';
 import { CABINET_PAGE_FOR_READERS } from '../../../../config/sync-sources';
@@ -24,7 +25,8 @@ function cabinet() {
         key,
         title: r.title,
         name: m?.nameBn ?? plainName(r.nameBn),
-        href: m ? `/mp/${m.slug}` : null,
+        // An adviser from outside parliament has a profile of their own.
+        href: m ? `/mp/${m.slug}` : adviserForPost(r) ? `/upodeshta/${adviserForPost(r)!.slug}` : null,
         photo: m?.photoUrl ?? r.photoUrl,
         initial: m ? initial(m) : firstLetter(r.nameBn),
         party: m?.party ? { abbr: m.party.abbr, name: m.party.nameBn ?? m.party.abbr, color: partyColor(m.party.abbr) } : null,

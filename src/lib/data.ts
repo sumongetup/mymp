@@ -69,6 +69,8 @@ export interface Member {
   bioBn: string | null;
   /** A one-paragraph summary the source provides for the presiding officers. */
   summaryBn: string | null;
+  /** Where an editor's biography (bioBn) was written from: URLs, space- or line-separated. */
+  bioSources?: string | null;
   /** This parliament: oath date to the scheduled end of the term. */
   term: { start: string | null; end: string | null };
   /**

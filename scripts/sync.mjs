@@ -414,6 +414,8 @@ async function main() {
       // The source carries a written biography only for the Speaker and Deputy
       // Speaker. Everyone else's stays null unless an admin writes one.
       bioBn: htmlToText(m.speakerDetailsBioBn),
+      // The articles or documents an editor's biography was written from.
+      bioSources: null,
       summaryBn: clean(m.speakerHeroSummaryBn),
       // parliament.gov.bd gives four sitting members an end (2022-12-11, their 11th-parliament
       // resignation) before this term's start; an end before the start is dropped, so it reads "চলমান".

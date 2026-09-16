@@ -16,6 +16,8 @@ import {
   districtOf, partyColor, partyShortBn, currentPosts, type Member,
 } from '@/lib/data';
 import { priorTermsOf, socialsOf } from '@/lib/history';
+import { adviserForPost, getAdviser, adviserPosts } from '@/lib/advisers';
+import { sourceList } from '@/lib/sourceLabel';
 
 export interface AppParty {
   abbr: string;
@@ -108,6 +110,8 @@ export function cabinet() {
         fromDate: p.fromDate ?? null,
         member: m ? brief(m) : null,
         holderBn: p.nameBn,
+        photoUrl: m ? m.photoUrl : p.photoUrl ?? null,
+        adviserSlug: adviserForPost(p)?.slug ?? null,
       };
     }),
   };
@@ -134,6 +138,7 @@ export function memberDetail(slug: string) {
     bioBn: m.bioBn,
     summaryBn: m.summaryBn,
     bioSource: m.bioSource ?? null,
+    bioSources: sourceList(m.bioSources),
     bioFromWiki: m.bioFromWiki ?? null,
     term: m.term,
     termsCount: m.termsCount ?? null,
@@ -170,5 +175,18 @@ export function seatList() {
         memberId: s.memberId,
       };
     }),
+  };
+}
+
+/** An adviser from outside parliament, for the app's profile screen. */
+export function adviserDetail(slug: string) {
+  const a = getAdviser(slug);
+  if (!a) return null;
+  const { rows, photoUrl } = adviserPosts(a);
+  return {
+    version: meta.builtAt,
+    ...a,
+    photoUrl,
+    posts: rows.map((r) => ({ title: r.title, ministryBn: r.ministryBn ?? null, fromDate: r.fromDate ?? null })),
   };
 }
