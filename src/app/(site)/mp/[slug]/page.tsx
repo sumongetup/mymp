@@ -144,6 +144,23 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
     worksFor: { '@type': 'Organization', name: 'বাংলাদেশ জাতীয় সংসদ', url: 'https://www.parliament.gov.bd' },
     ...(m.photoUrl ? { image: m.photoUrl } : {}),
     url: `${siteUrl}/mp/${m.slug}`,
+    description: lead,
+    nationality: { '@type': 'Country', name: 'বাংলাদেশ' },
+    ...(m.gender === 'Male' || m.gender === 'Female' ? { gender: m.gender } : {}),
+    ...(m.dateOfBirth ? { birthDate: m.dateOfBirth } : {}),
+    ...(m.birthPlaceBn ? { birthPlace: { '@type': 'Place', name: m.birthPlaceBn } } : {}),
+    ...(m.educationBn ? { alumniOf: { '@type': 'EducationalOrganization', name: m.educationBn } } : {}),
+    // The same person elsewhere: search engines use these to tie this page to
+    // the member's Wikipedia article and their own accounts.
+    ...(() => {
+      const same = [
+        ...(m.bioSource ?? '').split(/\s+/),
+        ...bioSources,
+        m.website, m.facebook, m.x, m.youtube, m.instagram,
+      ].filter((u): u is string => !!u && /^https?:\/\//.test(u) && (!/wikipedia\.org/.test(u) || /\/wiki\//.test(u)));
+      const unique = [...new Set(same.filter((u) => !/mymp\.bd|tbsnews\.net\/election/.test(u)))];
+      return unique.length ? { sameAs: unique } : {};
+    })(),
   };
   // Name only the sources this member's introduction actually drew on.
   const introParts = [
