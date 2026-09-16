@@ -126,6 +126,9 @@ export interface CollectorOptions {
 
 /** Every configured feed, once. */
 export async function runRssCollector(opts: CollectorOptions = {}): Promise<RunResult & { runId?: number }> {
+  // The budget counts from the start: fetching thirty feeds takes time too, and
+  // a run that outlives the serverless minute is killed and left as 'running'.
+  const deadline = opts.budgetMs ? Date.now() + opts.budgetMs : undefined;
   const run = opts.dryRun ? null : await startRun('rss', opts.trigger ?? 'manual');
   const errors: { source: string; message: string }[] = [];
   const detail: Record<string, number> = {};
@@ -136,7 +139,7 @@ export async function runRssCollector(opts: CollectorOptions = {}): Promise<RunR
     RSS_SOURCES.map(async (source) => {
       const items: FeedItemInput[] = [];
       for (const url of source.rss ?? []) {
-        const { items: got, error } = await fetchFeed(url);
+        const { items: got, error } = await fetchFeed(url, deadline ? 12_000 : 20_000);
         if (error) {
           errors.push({ source: source.key, message: `${url}: ${error}` });
           continue;
@@ -174,7 +177,7 @@ export async function runRssCollector(opts: CollectorOptions = {}): Promise<RunR
     return result;
   }
 
-  if (!opts.dryRun) await ingest(items, index, counts, opts.budgetMs ? Date.now() + opts.budgetMs : undefined);
+  if (!opts.dryRun) await ingest(items, index, counts, deadline);
   else counts.found = items.length;
 
   const result: RunResult = {
