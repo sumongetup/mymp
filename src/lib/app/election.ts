@@ -12,9 +12,32 @@ import { brief } from '@/lib/app/payload';
 /** Parties that won votes but no seat carry codes the party list does not know. */
 const VOTE_ONLY_BN: Record<string, string> = {
   IAB: 'ইসলামী আন্দোলন',
+  LDP: 'এলডিপি',
   'JP(ERSHAD)': 'জাতীয় পার্টি',
   JUIB: 'জমিয়তে উলামায়ে ইসলাম',
 };
+
+/**
+ * Professions as the secretariat typed them: "ব্যবসা", "ব্যবসায়ী" and "ব্যাবসা"
+ * are one job, and "সংসদ সদস্য" is not a profession at all.
+ */
+function professionGroups(rows: { label: string; count: number }[]) {
+  const clean = (x: string) => x.replace(/[\u200c\u200d]/g, '').trim();
+  const group = (x: string) => {
+    const t = clean(x);
+    if (/^(ব্যবসা|ব্যাবসা|ব্যবসায়ী|ব্যাবসায়ী)$/.test(t)) return 'ব্যবসা';
+    if (/^(শিক্ষক|শিক্ষকতা|অবসরপ্রাপ্ত শিক্ষক)$/.test(t)) return 'শিক্ষকতা';
+    if (/^(আইনজীবী|আইন পেশা|আইনজীবি)$/.test(t)) return 'আইনজীবী';
+    if (/^সংসদ সদস্য$/.test(t)) return null;
+    return t;
+  };
+  const out = new Map<string, number>();
+  for (const r of rows) {
+    const g = group(r.label);
+    if (g) out.set(g, (out.get(g) ?? 0) + r.count);
+  }
+  return [...out].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count);
+}
 
 const partyLabel = (abbr: string) => {
   const known = parties.find((p) => p.abbr === abbr);
@@ -42,7 +65,7 @@ export function election() {
     }
     const [top, second] = [...r.candidates].sort((a, b) => b.votes - a.votes);
     // An exact tie is a transcription error in the source (Tangail-3 as read), not a result to headline.
-    if (top && second && top.votes > second.votes) margins.push({ seatNo: seat.no, margin: top.votes - second.votes, winnerVotes: top.votes, runnerUpParty: second.party ? partyLabel(second.party) ?? second.party : null });
+    if (top && second && top.votes > second.votes) margins.push({ seatNo: seat.no, margin: top.votes - second.votes, winnerVotes: top.votes, runnerUpParty: second.party ? partyLabel(second.party) : null });
   }
 
   const ranked = [...votesByParty].sort((a, b) => b[1] - a[1]);
@@ -110,7 +133,7 @@ export function election() {
       youngest: s.youngest ? { age: s.youngest.age, member: brief(s.youngest.m) } : null,
       oldest: s.oldest ? { age: s.oldest.age, member: brief(s.oldest.m) } : null,
       ageBands: s.ageBands,
-      professions: s.professions.slice(0, 6),
+      professions: professionGroups(s.professions).slice(0, 6),
       freedomFighters: s.freedomFighters,
       firstTime: x.firstTime,
       returning: x.returning,
