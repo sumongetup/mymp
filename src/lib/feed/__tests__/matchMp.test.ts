@@ -165,3 +165,18 @@ test('a namesake described right before the name is not the member', () => {
   // The same word elsewhere in a member's own story does not count against him.
   assert.deepEqual(ids('ওয়ার্ড কাউন্সিলর প্রার্থীদের নিয়ে যা বললেন নাহিদ ইসলাম'), ['nahid']);
 });
+
+test('a police officer with a member\'s name is not the member', () => {
+  const members = [
+    { id: 'kazi', nameBn: 'কাজী রফিকুল ইসলাম', nameEn: 'Kazi Rafiqul Islam', seatBn: 'বগুড়া-১', seatEn: 'Bogura-1', districtBn: 'বগুড়া', districtEn: 'Bogura', partyBn: 'বিএনপি', partyAbbr: 'BNP', posts: [], ministries: [], variants: [{ variant: 'রফিকুল ইসলাম', weight: 1 }] },
+  ];
+  const index = buildFeedIndex(members);
+  // A Dhaka street-crime story that reached his page in September 2026.
+  assert.deepEqual(
+    matchItem(index, {
+      title: 'প্রধান শিক্ষকা রনজিলা পারভীনের মৃত্যুর ঘটনায় দুই আসামির স্বীকারোক্তি',
+      summary: 'বগুড়ার এক প্রধান শিক্ষকার মৃত্যুর ঘটনায় প্রসিকিউশন বিভাগের উপপরিদর্শক (এসআই) রফিকুল ইসলাম এতথ্য নিশ্চিত করেন।',
+    }).map((m) => m.mpId),
+    [],
+  );
+});

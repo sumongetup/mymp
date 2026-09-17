@@ -8,6 +8,7 @@
  * site's own route handler.
  */
 import { createHash } from 'node:crypto';
+import { isGenericThumbnail } from '../../../config/feed-matching';
 import { restDb, DbError, type Db } from '@/lib/posts/db';
 
 export type FeedType = 'news' | 'video' | 'press' | 'social';
@@ -93,6 +94,9 @@ export interface UpsertResult {
  * member's page shows it once.
  */
 export async function upsertItem(input: FeedItemInput): Promise<UpsertResult | null> {
+  // An outlet's stand-in picture says nothing about the story; the card's own
+  // placeholder is better than the same front page on every card.
+  if (isGenericThumbnail(input.thumbnailUrl)) input = { ...input, thumbnailUrl: null };
   const canonical = canonicalUrl(input.url);
   const hash = contentHash(input.title, input.summary);
   const sb = db();

@@ -53,7 +53,21 @@ export const NEGATIVE_CONTEXT = [
 export const NAMESAKE_TITLES = [
   'মৃত্যুদণ্ডপ্রাপ্ত', 'ফাঁসির দণ্ডপ্রাপ্ত', 'সাবেক মুখ্য সচিব', 'মুখ্য সচিব', 'পিআইও',
   'সাবেক কাউন্সিলর', 'কাউন্সিলর', 'ভাষাসৈনিক', 'সাংবাদিক', 'শিল্পী', 'উপাচার্য',
+  // Police and court officers, who are named in crime reports the same way.
+  'উপপরিদর্শক', 'এসআই', 'এ এস আই', 'এএসআই', 'সহকারী উপপরিদর্শক', 'পরিদর্শক', 'তদন্ত কর্মকর্তা',
+  'কনস্টেবল', 'সাব ইন্সপেক্টর', 'ইন্সপেক্টর', 'অতিরিক্ত পুলিশ সুপার', 'পুলিশ পরিদর্শক', 'বিচারক',
 ];
+
+/**
+ * Pictures an outlet gives to every story that has none of its own: the same
+ * file, a different name each time. dailyinqilab's "inq-graphics" front page
+ * filled three cards on the home page with one image on 18 September 2026.
+ */
+export const GENERIC_THUMBNAILS = [/\/inq-graphics-\d+\.(jpg|jpeg|png|webp)$/i];
+
+/** Is this a picture of the story, or the outlet's stand-in for one? */
+export const isGenericThumbnail = (url: string | null | undefined) =>
+  !!url && GENERIC_THUMBNAILS.some((re) => re.test(url));
 
 /**
  * Office titles the press uses, mapped to the post title the posts sync
