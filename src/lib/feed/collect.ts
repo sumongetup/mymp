@@ -100,7 +100,11 @@ export async function ingest(items: FeedItemInput[], index: FeedIndex, counts: I
         givenToday.set(m.mpId, today);
       }
       // Past the cap the match is still recorded, but as something to review.
-      const overCap = today >= DAILY_CAP_PER_MP;
+      // The cap guards against one name collision flooding a page with today's
+      // news; a backfill reading months of archive in one day is not that, so a
+      // story older than two days never counts against it.
+      const fresh = Date.now() - new Date(item.publishedAt).getTime() < 2 * 86_400_000;
+      const overCap = fresh && today >= DAILY_CAP_PER_MP;
       const result = await attach({
         itemId: stored.id,
         mpId: m.mpId,
