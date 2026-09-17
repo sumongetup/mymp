@@ -7,15 +7,7 @@
 import { members, parties, seats, meta, ecs, statistics, partyShortBn, getMemberById, GENERAL_SEATS } from '@/lib/data';
 import { parliament } from '@/lib/activity';
 import { experienceStats, resultForSeat } from '@/lib/history';
-import { brief } from '@/lib/app/payload';
-
-/** Parties that won votes but no seat carry codes the party list does not know. */
-const VOTE_ONLY_BN: Record<string, string> = {
-  IAB: 'ইসলামী আন্দোলন',
-  LDP: 'এলডিপি',
-  'JP(ERSHAD)': 'জাতীয় পার্টি',
-  JUIB: 'জমিয়তে উলামায়ে ইসলাম',
-};
+import { brief, partyLabelBn } from '@/lib/app/payload';
 
 /**
  * Professions as the secretariat typed them: "ব্যবসা", "ব্যবসায়ী" and "ব্যাবসা"
@@ -39,10 +31,7 @@ function professionGroups(rows: { label: string; count: number }[]) {
   return [...out].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count);
 }
 
-const partyLabel = (abbr: string) => {
-  const known = parties.find((p) => p.abbr === abbr);
-  return known ? partyShortBn(known) ?? abbr : VOTE_ONLY_BN[abbr] ?? null;
-};
+const partyLabel = partyLabelBn;
 
 export function election() {
   const s = statistics();

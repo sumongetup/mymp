@@ -63,6 +63,40 @@ const office = (m: Member): string | null => {
   return m.govPost ?? null;
 };
 
+/**
+ * Parties on the 2026 ballot that won no seat carry codes the party list does
+ * not know. Named here where the name is certain; any other code is shown as
+ * the source gives it rather than guessed.
+ */
+const BALLOT_PARTY_BN: Record<string, string> = {
+  IAB: 'ইসলামী আন্দোলন',
+  'JP(ERSHAD)': 'জাতীয় পার্টি',
+  JUIB: 'জমিয়তে উলামায়ে ইসলাম',
+  LDP: 'এলডিপি',
+  CPB: 'সিপিবি',
+  AB: 'এবি পার্টি',
+  JSD: 'জাসদ',
+  'Bangladesh JaSad': 'জাসদ',
+  'Jatiya Samajtantrik Dal-JASAD': 'জাসদ',
+  Basad: 'বাসদ',
+  'Socialist Party of Bangladesh (Marxist)': 'বাসদ (মার্কসবাদী)',
+  'Bangladesh Labour Party': 'বাংলাদেশ লেবার পার্টি',
+  'Bangladesh Muslim League': 'বাংলাদেশ মুসলিম লীগ',
+  'Bangladesh Congress': 'বাংলাদেশ কংগ্রেস',
+  IOJ: 'ইসলামী ঐক্যজোট',
+  'Janotar Dol': 'জনতার দল',
+  'Amjanatar Dol': 'আমজনতার দল',
+};
+
+/** A ballot party's Bengali name, or null when it is not certain. */
+export const partyLabelBn = (abbr: string | null | undefined): string | null => {
+  if (!abbr) return null;
+  const known = parties.find((p) => p.abbr === abbr);
+  return known ? partyShortBn(known) ?? abbr : BALLOT_PARTY_BN[abbr] ?? null;
+};
+
+const COMMITTEE_ROLE_BN: Record<string, string> = { Chairman: 'সভাপতি', Member: 'সদস্য' };
+
 export const brief = (m: Member): AppMemberBrief => {
   const d = m.seat ? districtOf(m.seat) : null;
   return {
@@ -193,7 +227,7 @@ export function memberDetail(slug: string) {
     committees: committeesOfMember(m.id).map((c) => ({
       slug: c.slug,
       nameBn: c.nameBn,
-      role: c.members.find((x) => x.memberId === m.id)?.role ?? null,
+      role: ((r) => (r ? COMMITTEE_ROLE_BN[r] ?? r : null))(c.members.find((x) => x.memberId === m.id)?.role),
     })),
     priorTerms: priorTermsOf(m.id),
     result: seatResult(m),
@@ -208,7 +242,7 @@ function seatResult(m: Member) {
   return {
     candidates: [...r.candidates]
       .sort((a, b) => b.votes - a.votes)
-      .map((c) => ({ name: c.name, party: c.party, partyBn: partyShortBn(parties.find((p) => p.abbr === c.party) ?? null), votes: c.votes })),
+      .map((c) => ({ name: c.name, party: c.party, partyBn: partyLabelBn(c.party), votes: c.votes })),
     sourceUrl: r.sourceUrl ?? null,
     sourceNote: r.sourceNote ?? null,
   };
