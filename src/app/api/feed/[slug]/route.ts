@@ -3,7 +3,8 @@
  *
  * The profile page itself is prerendered, so the feed is fetched from here at
  * view time. One request brings the pinned items, the current month and the
- * month list; `?m=2026-08` brings one earlier month when a reader opens it.
+ * month list; `?m=2026-08` brings one earlier month when a reader opens it, and
+ * `?recent=60` the newest items whatever their month (the app's member page).
  *
  * Cached at the edge for five minutes: a headline that lands during a coffee
  * break is soon enough, and the site keeps its "no function on the read path
@@ -11,7 +12,7 @@
  */
 import { NextResponse } from 'next/server';
 import { getMember } from '@/lib/data';
-import { monthCounts, monthItems, pinnedItems, feedSettings, type FeedType } from '@/lib/feed/store';
+import { monthCounts, monthItems, pinnedItems, recentItems, feedSettings, type FeedType } from '@/lib/feed/store';
 import { isMissingTable } from '@/lib/posts/db';
 
 export const dynamic = 'force-dynamic';
@@ -37,6 +38,13 @@ export async function GET(req: Request, ctx: { params: Promise<{ slug: string }>
   const typeFilter: FeedType | undefined = type === 'news' || type === 'video' ? type : undefined;
 
   try {
+    // The app's member page: the newest items whatever their month, with the pinned ones.
+    const recent = Number(url.searchParams.get('recent'));
+    if (recent > 0) {
+      const [pinned, items] = await Promise.all([pinnedItems(member.id), recentItems(member.id, recent, typeFilter)]);
+      const pinnedIds = new Set(pinned.map((p) => p.id));
+      return NextResponse.json({ pinned, items: items.filter((i) => !pinnedIds.has(i.id)) }, { headers: HEADERS });
+    }
     if (month) {
       if (!/^\d{4}-\d{2}$/.test(month)) return NextResponse.json({ error: 'bad month' }, { status: 400 });
       const items = await monthItems(member.id, month, typeFilter);

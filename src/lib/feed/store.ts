@@ -325,6 +325,7 @@ interface JoinRow {
 }
 
 const SELECT_ITEM = 'feed_item_id,pinned,pinned_until,low_confidence,feed_items(id,type,title,url,summary,outlet_name,thumbnail_url,duration_seconds,published_at,also_in)';
+const SELECT_ITEM_INNER = SELECT_ITEM.replace('feed_items(', 'feed_items!inner(');
 
 const toEntry = (r: JoinRow): FeedEntry | null => {
   const i = r.feed_items;
@@ -353,10 +354,23 @@ export async function monthItems(mpId: string, month: string, type?: FeedType): 
   const next = m === 12 ? `${y! + 1}-01` : `${y}-${String(m! + 1).padStart(2, '0')}`;
   const to = `${next}-01T00:00:00+06:00`;
   const typeFilter = type ? `&feed_items.type=eq.${type}` : '';
+  // An inner join, so the month filter drops rows instead of blanking their item.
+  // Without it every attachment came back, other months' with an empty item, and a
+  // member with more than 300 of them (the Prime Minister) got an empty month.
   const rows = await db().get<JoinRow[]>(
-    `feed_item_mps?mp_id=eq.${q(mpId)}&status=eq.visible&select=${SELECT_ITEM}` +
+    `feed_item_mps?mp_id=eq.${q(mpId)}&status=eq.visible&select=${SELECT_ITEM_INNER}` +
       `&feed_items.published_at=gte.${q(from)}&feed_items.published_at=lt.${q(to)}${typeFilter}` +
       '&order=feed_items(published_at).desc&limit=300',
+  );
+  return rows.map(toEntry).filter((x): x is FeedEntry => !!x);
+}
+
+/** One member's newest visible items across every month, for the app's member page. */
+export async function recentItems(mpId: string, limit: number, type?: FeedType): Promise<FeedEntry[]> {
+  const typeFilter = type ? `&feed_items.type=eq.${type}` : '';
+  const rows = await db().get<JoinRow[]>(
+    `feed_item_mps?mp_id=eq.${q(mpId)}&status=eq.visible&select=${SELECT_ITEM_INNER}${typeFilter}` +
+      `&order=feed_items(published_at).desc&limit=${Math.min(Math.max(limit, 1), 200)}`,
   );
   return rows.map(toEntry).filter((x): x is FeedEntry => !!x);
 }
@@ -411,9 +425,15 @@ export interface MonthCount { month: string; total: number; news: number; video:
  * because PostgREST cannot group, and a member's whole feed is small.
  */
 export async function monthCounts(mpId: string): Promise<{ months: MonthCount[]; total: number; news: number; video: number; outlets: string[] }> {
-  const rows = await db().get<{ feed_items: { published_at: string; type: FeedType; outlet_name: string | null } | null }[]>(
-    `feed_item_mps?mp_id=eq.${q(mpId)}&status=eq.visible&select=feed_items(published_at,type,outlet_name)&limit=5000`,
-  );
+  // A page at a time: one request stops at 1000 rows, and the Prime Minister has more.
+  const rows: { feed_items: { published_at: string; type: FeedType; outlet_name: string | null } | null }[] = [];
+  for (let from = 0; ; from += 1000) {
+    const page = await db().get<typeof rows>(
+      `feed_item_mps?mp_id=eq.${q(mpId)}&status=eq.visible&select=feed_items(published_at,type,outlet_name)&order=feed_item_id&offset=${from}&limit=1000`,
+    );
+    rows.push(...page);
+    if (page.length < 1000) break;
+  }
   const by = new Map<string, MonthCount>();
   const outlets = new Set<string>();
   let total = 0;
