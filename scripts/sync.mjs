@@ -90,6 +90,31 @@ async function db(path, init = {}) {
   return res.status === 204 || init.method === 'POST' ? null : res.json();
 }
 
+/**
+ * Every row of a table, a page at a time. PostgREST answers at most 1000 rows
+ * to one request and says nothing about the rest: on 2026-09-17 the overrides
+ * table held 1,888 rows and the build applied only the first 1,000, so most of
+ * that week's biographies never reached the site. The path must carry an order.
+ */
+async function dbAll(path) {
+  const out = [];
+  for (let from = 0; ; from += 1000) {
+    const page = await db(path, { headers: { Range: `${from}-${from + 999}`, 'Range-Unit': 'items' } });
+    out.push(...page);
+    if (page.length < 1000) return out;
+  }
+}
+
+/** Overrides are stored as text; the site reads a few fields as a number or a yes/no. */
+const NUMBER_FIELDS = new Set(['termsCount']);
+const BOOLEAN_FIELDS = new Set(['isFreedomFighter']);
+function typed(field, value) {
+  if (value == null) return value;
+  if (NUMBER_FIELDS.has(field)) return Number.isFinite(Number(value)) ? Number(value) : null;
+  if (BOOLEAN_FIELDS.has(field)) return value === 'true';
+  return value;
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /**
@@ -725,8 +750,8 @@ async function main() {
   if (dbConfigured()) {
     try {
       const [overrides, hidden] = await Promise.all([
-        db('overrides?select=entity_type,entity_id,field,value'),
-        db('hidden_entities?select=entity_type,entity_id'),
+        dbAll('overrides?select=entity_type,entity_id,field,value&order=entity_type,entity_id,field'),
+        dbAll('hidden_entities?select=entity_type,entity_id&order=entity_type,entity_id'),
       ]);
       const byType = { member: members, party: parties, committee: committees, seat: seats };
       const keyOf = { member: (x) => x.id, party: (x) => x.abbr, committee: (x) => x.id, seat: (x) => String(x.no) };
@@ -734,7 +759,7 @@ async function main() {
         const list = byType[o.entity_type];
         const target = list?.find((x) => keyOf[o.entity_type](x) === o.entity_id);
         if (!target) continue;
-        target[o.field] = o.value;
+        target[o.field] = typed(o.field, o.value);
         overridesApplied++;
         // A member's seat name lives on the member object too; keep them in step.
         if (o.entity_type === 'seat') {

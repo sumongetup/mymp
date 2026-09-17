@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { committees, bn } from '@/lib/data';
 import { normalise } from '@/lib/search';
 import { requireAdmin } from '@/lib/admin/auth';
-import { hiddenList } from '@/lib/admin/store';
-import { supabaseAdmin } from '@/lib/supabase/admin';
+import { hiddenList, editedIds } from '@/lib/admin/store';
 import { AdminPage, Table, Td, Badge, Empty } from '@/app/admin/ui';
 
 export const metadata: Metadata = { title: 'কমিটি' };
@@ -12,12 +11,8 @@ export const metadata: Metadata = { title: 'কমিটি' };
 export default async function CommitteesAdmin({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   await requireAdmin();
   const { q = '' } = await searchParams;
-  const [hidden, { data: ov }] = await Promise.all([
-    hiddenList(),
-    supabaseAdmin().from('overrides').select('entity_id').eq('entity_type', 'committee'),
-  ]);
+  const [hidden, edited] = await Promise.all([hiddenList(), editedIds('committee')]);
   const hiddenIds = new Set(hidden.filter((h) => h.entity_type === 'committee').map((h) => h.entity_id));
-  const edited = new Set((ov ?? []).map((r) => r.entity_id as string));
   const current = committees.filter((c) => c.rosterCurrent).length;
 
   const words = normalise(q).split(' ').filter(Boolean);

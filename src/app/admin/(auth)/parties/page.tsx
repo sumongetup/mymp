@@ -2,15 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { parties, bn } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
-import { supabaseAdmin } from '@/lib/supabase/admin';
+import { editedIds } from '@/lib/admin/store';
 import { AdminPage, Table, Td, Badge } from '@/app/admin/ui';
 
 export const metadata: Metadata = { title: 'দল' };
 
 export default async function PartiesAdmin() {
   await requireAdmin();
-  const { data: ov } = await supabaseAdmin().from('overrides').select('entity_id').eq('entity_type', 'party');
-  const edited = new Set((ov ?? []).map((r) => r.entity_id as string));
+  const edited = await editedIds('party');
 
   return (
     <AdminPage

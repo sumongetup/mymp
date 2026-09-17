@@ -4,11 +4,33 @@ import type { Unmatched } from '@/lib/posts/sync';
 
 export type EntityType = 'member' | 'seat' | 'party' | 'committee';
 
+export interface EditableField {
+  key: string;
+  label: string;
+  multiline?: boolean;
+  url?: boolean;
+  group?: string;
+  hint?: string;
+  /** A date written YYYY-MM-DD, not in the future. */
+  date?: boolean;
+  /** A whole number within these bounds. */
+  number?: { min: number; max: number };
+  /** A fixed choice; the value stored is the option's value. */
+  options?: { value: string; label: string }[];
+}
+
 /** Which fields an admin may override, per entity. Keys are the JSON keys in data/. */
-export const EDITABLE: Record<EntityType, { key: string; label: string; multiline?: boolean; url?: boolean; group?: string; hint?: string }[]> = {
+export const EDITABLE: Record<EntityType, EditableField[]> = {
   member: [
     { key: 'nameBn', label: 'নাম (বাংলা)' },
     { key: 'nameEn', label: 'নাম (English)' },
+    { key: 'dateOfBirth', label: 'জন্মতারিখ', date: true, hint: 'বছর-মাস-দিন, যেমন 1970-02-03। শুধু নির্ভরযোগ্য সূত্রে নিশ্চিত হলে বদলান।' },
+    { key: 'fatherBn', label: 'পিতার নাম (বাংলা)' },
+    { key: 'fatherEn', label: 'পিতার নাম (English)' },
+    { key: 'motherBn', label: 'মাতার নাম (বাংলা)' },
+    { key: 'motherEn', label: 'মাতার নাম (English)' },
+    { key: 'termsCount', label: 'মোট কতবার সংসদ সদস্য', number: { min: 1, max: 15 }, hint: 'এবারের মেয়াদসহ মোট সংখ্যা।' },
+    { key: 'isFreedomFighter', label: 'বীর মুক্তিযোদ্ধা', options: [{ value: 'false', label: 'না' }, { value: 'true', label: 'হ্যাঁ' }] },
     { key: 'professionBn', label: 'পেশা' },
     { key: 'educationBn', label: 'শিক্ষা', multiline: true, hint: 'প্রতিষ্ঠান ও ডিগ্রি; একাধিক হলে সেমিকোলন (;) দিয়ে আলাদা করুন।' },
     { key: 'birthPlaceBn', label: 'জন্মস্থান' },
@@ -136,11 +158,27 @@ export async function overridesFor(type: EntityType, id: string): Promise<Overri
   return (data ?? []) as Override[];
 }
 
+// Supabase answers at most 1000 rows to one request and says nothing about the
+// rest, so counts are asked for as counts and long lists are read a page at a time.
+
 export async function overrideCounts(): Promise<Record<EntityType, number>> {
-  const out: Record<EntityType, number> = { member: 0, seat: 0, party: 0, committee: 0 };
-  const { data } = await supabaseAdmin().from('overrides').select('entity_type');
-  for (const r of data ?? []) out[r.entity_type as EntityType]++;
-  return out;
+  const types: EntityType[] = ['member', 'seat', 'party', 'committee'];
+  const counts = await Promise.all(types.map(async (t) => {
+    const { count } = await supabaseAdmin().from('overrides').select('*', { count: 'exact', head: true }).eq('entity_type', t);
+    return count ?? 0;
+  }));
+  return Object.fromEntries(types.map((t, i) => [t, counts[i]])) as Record<EntityType, number>;
+}
+
+/** Every id of this type that has at least one hand-edited field. */
+export async function editedIds(type: EntityType): Promise<Set<string>> {
+  const out = new Set<string>();
+  for (let from = 0; ; from += 1000) {
+    const { data } = await supabaseAdmin().from('overrides').select('entity_id').eq('entity_type', type)
+      .order('entity_id').order('field').range(from, from + 999);
+    for (const r of data ?? []) out.add(r.entity_id as string);
+    if ((data ?? []).length < 1000) return out;
+  }
 }
 
 /** Current social-link overrides for a set of members: id → field → value. */

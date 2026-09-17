@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { seats, getMemberById, bn } from '@/lib/data';
 import { normalise } from '@/lib/search';
 import { requireAdmin } from '@/lib/admin/auth';
-import { supabaseAdmin } from '@/lib/supabase/admin';
+import { editedIds } from '@/lib/admin/store';
 import { AdminPage, Table, Td, Badge, Empty } from '@/app/admin/ui';
 
 export const metadata: Metadata = { title: 'আসন' };
@@ -12,8 +12,7 @@ export default async function SeatsAdmin({ searchParams }: { searchParams: Promi
   await requireAdmin();
   const { q = '' } = await searchParams;
 
-  const { data: ov } = await supabaseAdmin().from('overrides').select('entity_id').eq('entity_type', 'seat');
-  const edited = new Set((ov ?? []).map((r) => r.entity_id as string));
+  const edited = await editedIds('seat');
 
   const words = normalise(q).split(' ').filter(Boolean);
   const list = seats

@@ -1,7 +1,13 @@
 import Link from 'next/link';
-import { EDITABLE, type EntityType, type Override, type Hidden } from '@/lib/admin/store';
+import { EDITABLE, type EditableField, type EntityType, type Override, type Hidden } from '@/lib/admin/store';
 import { saveOverrides, revertOverride, toggleHidden } from '@/app/admin/actions';
 import { Panel, Field, Button, Badge, Notice, when } from '@/app/admin/ui';
+
+/** A value as the editor reads it: a choice by its label, an empty one as "(নেই)". */
+const shown = (f: EditableField, v: unknown) => {
+  if (v == null || v === '') return '(নেই)';
+  return f.options?.find((o) => o.value === String(v))?.label ?? String(v);
+};
 
 /**
  * The edit form shared by members, seats, parties and committees.
@@ -33,7 +39,9 @@ export function EntityEditor({
         <input type="hidden" name="entity_id" value={id} />
         {EDITABLE[type].map((f) => {
           const o = byField.get(f.key);
-          const value = o ? o.value : snapshot[f.key] ?? null;
+          // A number or a yes/no in the snapshot is compared and shown as text.
+          const source = snapshot[f.key];
+          const value = o ? o.value : source == null ? null : String(source);
           return (
             <div key={f.key} className="flex flex-col gap-1.5">
               {f.group && (
@@ -45,8 +53,11 @@ export function EntityEditor({
                 defaultValue={value}
                 multiline={f.multiline}
                 type={f.url ? 'url' : 'text'}
+                options={f.options}
+                inputMode={f.number ? 'numeric' : undefined}
+                pattern={f.date ? '\\d{4}-\\d{2}-\\d{2}' : f.number ? '\\d{1,2}' : undefined}
                 badge={o ? <Badge tone="good">হাতে সম্পাদিত</Badge> : undefined}
-                hint={o ? `সংসদের মান: ${snapshot[f.key] || '(নেই)'}, বদলেছেন ${when(o.updated_at)}` : f.hint}
+                hint={o ? `সংসদের মান: ${shown(f, source)}, বদলেছেন ${when(o.updated_at)}` : f.hint}
               />
               <input type="hidden" name={`current__${f.key}`} value={value ?? ''} />
               {o && (
@@ -101,6 +112,15 @@ export function HidePanel({
 
 const fieldLabel = (type: EntityType, key: string) => EDITABLE[type].find((f) => f.key === key)?.label ?? key;
 
+/** Why a field was refused, in the terms of what that field takes. */
+const invalidReason = (type: EntityType, key: string) => {
+  const f = EDITABLE[type].find((x) => x.key === key);
+  if (f?.date) return 'তারিখটি গ্রহণ করা হয়নি: বছর-মাস-দিন আকারে একটি সঠিক, ভবিষ্যতের নয় এমন তারিখ দিন (যেমন 1970-02-03)।';
+  if (f?.number) return `সংখ্যাটি গ্রহণ করা হয়নি: ${f.number.min} থেকে ${f.number.max} এর মধ্যে একটি পূর্ণসংখ্যা দিন।`;
+  if (f?.options) return 'বাছাইটি গ্রহণ করা হয়নি: তালিকা থেকে একটি বেছে নিন।';
+  return 'লিংকটি গ্রহণ করা হয়নি: পুরো https:// ঠিকানা দিন, আর সেটি সংশ্লিষ্ট সাইটেরই হতে হবে (যেমন facebook.com)।';
+};
+
 export function EditFlags({ flags, noun, type = 'member' }: { flags: Record<string, string | undefined>; noun: string; type?: EntityType }) {
   return (
     <>
@@ -110,8 +130,7 @@ export function EditFlags({ flags, noun, type = 'member' }: { flags: Record<stri
       {flags.unhidden && <Notice tone="good">{noun} আবার দেখানো হবে।</Notice>}
       {flags.invalid && (
         <Notice tone="bad">
-          “{fieldLabel(type, flags.invalid)}” ঘরের লিংকটি গ্রহণ করা হয়নি: পুরো https:// ঠিকানা দিন, আর সেটি সংশ্লিষ্ট
-          সাইটেরই হতে হবে (যেমন facebook.com)। অন্য ঘরগুলো সংরক্ষিত হয়েছে।
+          “{fieldLabel(type, flags.invalid)}” ঘরের {invalidReason(type, flags.invalid)} অন্য ঘরগুলো সংরক্ষিত হয়েছে।
         </Notice>
       )}
     </>

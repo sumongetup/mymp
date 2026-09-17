@@ -30,6 +30,13 @@ const orNull = (s: string) => (s.trim() === '' ? null : s.trim());
 
 const validUrl = validSocialUrl;
 
+/** YYYY-MM-DD that is a real calendar day, after 1900 and not in the future. */
+const validPastDate = (s: string) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return false;
+  const d = new Date(`${s}T00:00:00Z`);
+  return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === s && d.getUTCFullYear() >= 1900 && d.getTime() <= Date.now();
+};
+
 /* ---------------- session ---------------- */
 
 export async function signIn(_prev: ActionState, fd: FormData): Promise<ActionState> {
@@ -93,6 +100,10 @@ export async function saveOverrides(fd: FormData) {
       invalid = f.key;
       continue;
     }
+    // A date, a number or a choice must be one the site can read, or the page breaks.
+    if (next && f.date && !validPastDate(next)) { invalid = f.key; continue; }
+    if (next && f.number && !(/^\d+$/.test(next) && +next >= f.number.min && +next <= f.number.max)) { invalid = f.key; continue; }
+    if (next && f.options && !f.options.some((o) => o.value === next)) { invalid = f.key; continue; }
     await setOverride(me, type, id, f.key, next, current);
     if (f.key in SOCIAL_HOSTS) socialSaved = true;
     if (['educationBn', 'birthPlaceBn', 'professionBn'].includes(f.key)) bioSaved.push(f.key);

@@ -142,6 +142,9 @@ export function Field({
   type = 'text',
   required = false,
   rows = 4,
+  options,
+  inputMode,
+  pattern,
 }: {
   label: string;
   name: string;
@@ -152,6 +155,10 @@ export function Field({
   type?: string;
   required?: boolean;
   rows?: number;
+  /** A fixed choice instead of free text. */
+  options?: { value: string; label: string }[];
+  inputMode?: React.HTMLAttributes<HTMLInputElement>['inputMode'];
+  pattern?: string;
 }) {
   return (
     <label className="flex flex-col gap-1.5">
@@ -159,8 +166,15 @@ export function Field({
         {label}
         {badge}
       </span>
-      {multiline ? (
+      {options ? (
+        <select name={name} defaultValue={defaultValue ?? ''} className={inputClass} required={required}>
+          {!required && <option value="">(নেই)</option>}
+          {options.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+        </select>
+      ) : multiline ? (
         <textarea name={name} defaultValue={defaultValue ?? ''} rows={rows} className={inputClass} required={required} />
+      ) : pattern || inputMode ? (
+        <input name={name} type={type} defaultValue={defaultValue ?? ''} className={inputClass} required={required} inputMode={inputMode} pattern={pattern} />
       ) : (
         <input name={name} type={type} defaultValue={defaultValue ?? ''} className={inputClass} required={required} />
       )}
