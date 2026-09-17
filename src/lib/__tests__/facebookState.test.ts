@@ -19,9 +19,16 @@ test('verified, or no status at all, shows the link as it is', () => {
   }
 });
 
+test('a confirmed page and the website are labelled official', () => {
+  const m = member({ facebook: FB, website: WEB, fbStatus: 'verified' });
+  assert.deepEqual(socialsOf(m).map((s) => s.label), ['অফিসিয়াল ফেসবুক পেজ', 'অফিসিয়াল ওয়েবসাইট']);
+});
+
 test('pending shows the link marked as not yet checked', () => {
   const m = member({ facebook: FB, fbStatus: 'pending' });
   assert.deepEqual(socialsOf(m).map((s) => [s.key, s.unverified]), [['facebook', true]]);
+  // Not called official while it is still being checked.
+  assert.equal(socialsOf(m)[0]!.label, 'ফেসবুক পেজ');
   assert.equal(facebookNotice(m), null);
 });
 
