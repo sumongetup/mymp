@@ -119,3 +119,49 @@ test('text is tokenised past punctuation and Bangla digits', () => {
   // The chandrabindu folds away on both sides, so the seat still matches.
   assert.deepEqual(textTokens('ঠাকুরগাঁও-৩ আসনের এমপি!'), ['ঠাকুরগাও', '৩', 'আসনের', 'এমপি']);
 });
+
+test('a name running on into a longer one is somebody else', () => {
+  const members = [
+    { id: 'malik', nameBn: 'মোহাম্মদ আব্দুল মালিক', nameEn: 'Mohammad Abdul Malik', seatBn: 'কুমিল্লা-৭', seatEn: 'Cumilla-7', districtBn: 'কুমিল্লা', districtEn: 'Cumilla', partyBn: 'বাংলাদেশ জাতীয়তাবাদী দল', partyAbbr: 'BNP', posts: [], ministries: [], variants: [] },
+  ];
+  const index = buildFeedIndex(members);
+  const ids = (title: string) => matchItem(index, { title }).map((m) => m.mpId);
+  // A DBC video about the Houthi leader, attached to the member in 2026-09.
+  assert.deepEqual(ids('আব্দুল মালিক আল-হুথি, সম্প্রদায়ের দাবী থেকে বিশ্বের এক প্রভাবশালী নেতা! DBC NEWS Special'), []);
+  assert.deepEqual(ids('Abdul Malik al-Houthi speaks'), []);
+  // The member himself, followed by punctuation or an ordinary word, still counts.
+  assert.deepEqual(ids('এলাকার উন্নয়নে কাজ করছি: আব্দুল মালিক'), ['malik']);
+  assert.deepEqual(ids('আব্দুল মালিক, কুমিল্লা-৭ আসনের সংসদ সদস্য'), ['malik']);
+  assert.deepEqual(ids('আব্দুল মালিক বললেন, কাজ চলবে'), ['malik']);
+});
+
+test('a name followed by the start of another name still counts', () => {
+  assert.deepEqual(who('সন্ধ্যায় তারেক রহমান-শফিকুর রহমানের বক্তব্য সম্প্রচার করবে বিটিভি').includes('tarique'), true);
+});
+
+test('a longer name of another member wins; a nickname stays with its member', () => {
+  const members = [
+    { id: 'kazi', nameBn: 'কাজী রফিকুল ইসলাম', nameEn: 'Kazi Rafiqul Islam', seatBn: 'বগুড়া-১', seatEn: 'Bogura-1', districtBn: 'বগুড়া', districtEn: 'Bogura', partyBn: 'বিএনপি', partyAbbr: 'BNP', posts: [], ministries: [], variants: [{ variant: 'রফিকুল ইসলাম', weight: 1 }] },
+    { id: 'hilali', nameBn: 'ড. রফিকুল ইসলাম হিলালী', nameEn: 'Dr. Rafiqul Islam Hilali', seatBn: 'নেত্রকোনা-৩', seatEn: 'Netrokona-3', districtBn: 'নেত্রকোনা', districtEn: 'Netrokona', partyBn: 'বিএনপি', partyAbbr: 'BNP', posts: [], ministries: [], variants: [] },
+    { id: 'babul', nameBn: 'মোঃ শহিদুল ইসলাম', nameEn: 'Md Shahidul Islam', seatBn: 'ফরিদপুর-৪', seatEn: 'Faridpur-4', districtBn: 'ফরিদপুর', districtEn: 'Faridpur', partyBn: 'বিএনপি', partyAbbr: 'BNP', posts: [], ministries: [], variants: [] },
+    { id: 'other-babul', nameBn: 'মোস্তাফিজুর রহমান বাবুল', nameEn: 'Mostafizur Rahman Babul', seatBn: 'জামালপুর-৩', seatEn: 'Jamalpur-3', districtBn: 'জামালপুর', districtEn: 'Jamalpur', partyBn: 'বিএনপি', partyAbbr: 'BNP', posts: [], ministries: [], variants: [] },
+  ];
+  const index = buildFeedIndex(members);
+  const ids = (title: string) => matchItem(index, { title }).map((m) => m.mpId).sort();
+  assert.deepEqual(ids('জয়ের ব্যাপারে শতভাগ আশাবাদী ড. রফিকুল ইসলাম হিলালী'), ['hilali']);
+  assert.deepEqual(ids('শুধু মেধাবী নয়, ভালো মানুষ হতে হবে: এমপি শহিদুল ইসলাম বাবুল'), ['babul']);
+});
+
+test('a namesake described right before the name is not the member', () => {
+  const members = [
+    { id: 'azad', nameBn: 'মোঃ আবুল কালাম আজাদ', nameEn: 'Md Abul Kalam Azad', seatBn: 'খুলনা-৬', seatEn: 'Khulna-6', districtBn: 'খুলনা', districtEn: 'Khulna', partyBn: 'বাংলাদেশ জামায়াতে ইসলামী', partyAbbr: 'BJEI', posts: [], ministries: [], variants: [] },
+    { id: 'nahid', nameBn: 'মোঃ নাহিদ ইসলাম', nameEn: 'Md Nahid Islam', seatBn: 'ঢাকা-১১', seatEn: 'Dhaka-11', districtBn: 'ঢাকা', districtEn: 'Dhaka', partyBn: 'জাতীয় নাগরিক পার্টি', partyAbbr: 'NCP', posts: [], ministries: [], variants: [] },
+  ];
+  const index = buildFeedIndex(members);
+  const ids = (title: string, summary?: string) => matchItem(index, { title, summary }).map((m) => m.mpId);
+  assert.deepEqual(ids('সাবেক মুখ্য সচিব আবুল কালাম আজাদের দেশত্যাগে নিষেধাজ্ঞা'), []);
+  assert.deepEqual(ids('শাহজাদপুরের পিআইও আবুল কালাম আজাদ দুর্নীতির মামলায় আটক'), []);
+  assert.deepEqual(ids('জাতীয় সংসদে এলাকার উন্নয়নে কি চাইলেন খুলনা ৬ আসনের এমপি আবুল কালাম আজাদ'), ['azad']);
+  // The same word elsewhere in a member's own story does not count against him.
+  assert.deepEqual(ids('ওয়ার্ড কাউন্সিলর প্রার্থীদের নিয়ে যা বললেন নাহিদ ইসলাম'), ['nahid']);
+});

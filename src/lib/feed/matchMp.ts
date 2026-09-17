@@ -25,7 +25,7 @@
  * "প্রধানমন্ত্রী" while naming somebody else is not about the Prime Minister.
  */
 import { foldBangla, nameTokens, HONORIFICS, INITIALS } from '@/lib/matching/nameMatch';
-import { SPELLING_FOLD, CASE_SUFFIXES, NEGATIVE_CONTEXT, POST_WORDS } from '../../../config/feed-matching';
+import { SPELLING_FOLD, CASE_SUFFIXES, NEGATIVE_CONTEXT, NAMESAKE_TITLES, POST_WORDS } from '../../../config/feed-matching';
 
 export const AUTO_SCORE = 60;
 export const REVIEW_SCORE = 40;
@@ -88,6 +88,32 @@ export function textTokens(raw: string): string[] {
     .map((t) => SPELLING_FOLD[t] ?? t);
 }
 
+/**
+ * The words of running text, with where a sentence break falls: after word i
+ * when breaks[i] is true. A comma, colon, bar or দাঁড়ি ends one name and lets
+ * the next begin; a hyphen does not ("আল-হুথি" is one name running on).
+ */
+export function textTokensWithBreaks(raw: string): { tokens: string[]; breaks: boolean[] } {
+  const tokens: string[] = [];
+  const breaks: boolean[] = [];
+  for (const chunk of foldBangla(raw).split(/[,;:|।!?"“”‘’()\[\]{}]+/u)) {
+    const words = textTokens(chunk);
+    if (!words.length) continue;
+    if (breaks.length) breaks[breaks.length - 1] = true;
+    for (const w of words) {
+      tokens.push(w);
+      breaks.push(false);
+    }
+  }
+  return { tokens, breaks };
+}
+
+/**
+ * Words that carry a name on into a longer one, as in Arabic names: "আব্দুল
+ * মালিক আল-হুথি" is not the member আব্দুল মালিক.
+ */
+const NAME_PARTICLES = new Set(['আল', 'এল', 'বিন', 'ইবনে', 'ইবন', 'al', 'el', 'bin', 'ibn', 'ben', 'abu']);
+
 /** The words of a name: honorifics, initials and gallantry titles are not part of it. */
 export function variantTokens(raw: string): string[] {
   return nameTokens(raw).map((t) => SPELLING_FOLD[t] ?? t);
@@ -131,6 +157,7 @@ function hasTokens(tokens: string[], p: string[]): boolean {
 
 /** The words that mean a namesake, split once for the whole process. */
 const NEGATIVE_TOKENS = NEGATIVE_CONTEXT.map((word) => ({ word, tokens: phraseTokens(word) }));
+const NAMESAKE_TITLE_TOKENS = NAMESAKE_TITLES.map((word) => phraseTokens(word)).filter((t) => t.length);
 
 export interface FeedIndexEntry {
   mp: FeedMp;
@@ -218,9 +245,21 @@ export interface FeedItemText {
  * Every member an item is about. Items nobody is named in come back empty:
  * a political story that names a party and no person belongs to nobody.
  */
-export function matchItem(index: FeedIndex, item: FeedItemText): MpMatch[] {
-  const titleTokens = textTokens(item.title);
-  const summaryTokens = item.summary ? textTokens(item.summary) : [];
+export interface MatchOptions {
+  /**
+   * The two rules added in 2026-09 (a name running on through "আল-" or "বিন",
+   * and a longer name of another member at the same place). Off only for
+   * scripts/feed-prune.ts, to tell which old links those rules alone reject.
+   */
+  longerNames?: boolean;
+}
+
+export function matchItem(index: FeedIndex, item: FeedItemText, opts: MatchOptions = {}): MpMatch[] {
+  const longerNames = opts.longerNames ?? true;
+  const title = textTokensWithBreaks(item.title);
+  const summary = textTokensWithBreaks(item.summary ?? '');
+  const titleTokens = title.tokens;
+  const summaryTokens = summary.tokens;
   const allTokens = [...titleTokens, ...summaryTokens];
   const negative = NEGATIVE_TOKENS.filter((w) => hasTokens(allTokens, w.tokens)).map((w) => w.word);
 
@@ -237,29 +276,55 @@ export function matchItem(index: FeedIndex, item: FeedItemText): MpMatch[] {
     }
   }
 
-  /** A name preceded by another name word is somebody else's longer name. */
-  const standsAlone = (tokens: string[], at: number) => {
-    if (at <= 0) return true;
-    const prev = tokens[at - 1]!;
-    return !index.nameWords.has(prev) || HONORIFICS.has(prev) || INITIALS.has(prev);
+  /**
+   * A name with another name word right before it is somebody else's longer
+   * name ("মনোয়ার হোসেন চৌধুরী" is not "হোসেন চৌধুরী"), and so is one that runs
+   * on through an Arabic name particle ("আব্দুল মালিক আল-হুথি"). A word after
+   * the name is usually the member's own nickname ("শহিদুল ইসলাম বাবুল"), so it
+   * only counts against the match when it completes another member's name;
+   * that is settled below, once every member has been looked for.
+   */
+  const standsAlone = (text: { tokens: string[]; breaks: boolean[] }, at: number, length: number) => {
+    const { tokens, breaks } = text;
+    if (longerNames) {
+      // "সাবেক মুখ্য সচিব ড. আবুল কালাম আজাদ": a namesake's description right
+      // before the name, honorifics between allowed.
+      let start = at;
+      while (start > 0 && (HONORIFICS.has(tokens[start - 1]!) || INITIALS.has(tokens[start - 1]!))) start--;
+      for (const t of NAMESAKE_TITLE_TOKENS) {
+        if (start < t.length) continue;
+        if (t.every((w, k) => tokens[start - t.length + k] === w)) return false;
+      }
+    }
+    if (at > 0 && !breaks[at - 1]) {
+      const prev = tokens[at - 1]!;
+      if (index.nameWords.has(prev) && !HONORIFICS.has(prev) && !INITIALS.has(prev)) return false;
+    }
+    const end = at + length - 1;
+    if (end + 1 < tokens.length && !breaks[end]) {
+      const next = tokens[end + 1]!;
+      if (longerNames && NAME_PARTICLES.has(next)) return false;
+    }
+    return true;
   };
 
   const found: MpMatch[] = [];
+  const spans = new Map<MpMatch, { inTitle: boolean; at: number; end: number }>();
   for (const entry of candidates) {
     const { mp } = entry;
     const signals: Signal[] = [];
     let score = 0;
     let named = false;
 
-    let best: { weight: number; label: string; inTitle: boolean } | null = null;
+    let best: { weight: number; label: string; inTitle: boolean; at: number; length: number } | null = null;
     for (const n of entry.names) {
       const atTitle = findRun(titleTokens, n.tokens);
       const atSummary = findRun(summaryTokens, n.tokens);
-      const inTitle = atTitle >= 0 && standsAlone(titleTokens, atTitle);
-      const inSummary = !inTitle && atSummary >= 0 && standsAlone(summaryTokens, atSummary);
+      const inTitle = atTitle >= 0 && standsAlone(title, atTitle, n.tokens.length);
+      const inSummary = !inTitle && atSummary >= 0 && standsAlone(summary, atSummary, n.tokens.length);
       if (!inTitle && !inSummary) continue;
       if (!best || (inTitle && !best.inTitle) || (inTitle === best.inTitle && n.weight > best.weight)) {
-        best = { weight: n.weight, label: n.label, inTitle };
+        best = { weight: n.weight, label: n.label, inTitle, at: inTitle ? atTitle : atSummary, length: n.tokens.length };
       }
     }
     if (best) {
@@ -297,6 +362,7 @@ export function matchItem(index: FeedIndex, item: FeedItemText): MpMatch[] {
 
     if (score >= REVIEW_SCORE) {
       found.push({ mpId: mp.id, score, lowConfidence: score < AUTO_SCORE, named, nameLabel: best?.label ?? null, signals });
+      if (best) spans.set(found[found.length - 1]!, { inTitle: best.inTitle, at: best.at, end: best.at + best.length });
     }
   }
 
@@ -304,6 +370,18 @@ export function matchItem(index: FeedIndex, item: FeedItemText): MpMatch[] {
   // happen to describe. Context-only matches drop out as soon as anyone is named.
   const anyNamed = found.some((f) => f.named);
   let kept = anyNamed ? found.filter((f) => f.named) : found;
+
+  // Where one member's name sits inside a longer name of another member at the
+  // same place, the text names the longer one: "রফিকুল ইসলাম হিলালী" is
+  // হিলালী, not কাজী রফিকুল ইসলাম, and "নুরুল ইসলাম মনি" is the chief whip.
+  kept = kept.filter((f) => {
+    const a = spans.get(f);
+    if (!a || !longerNames) return true;
+    return !kept.some((g) => {
+      const b = spans.get(g);
+      return g !== f && b !== undefined && b.inTitle === a.inTitle && b.at <= a.at && b.end >= a.end && b.end - b.at > a.end - a.at;
+    });
+  });
 
   // Two sitting members are called শফিকুর রহমান. When a headline writes that
   // name and nothing else separates them, the higher score wins; a tie goes to

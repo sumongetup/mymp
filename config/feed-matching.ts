@@ -44,6 +44,18 @@ export const NEGATIVE_CONTEXT = [
 ];
 
 /**
+ * Descriptions that name a namesake when they stand right before the name:
+ * "সাবেক মুখ্য সচিব আবুল কালাম আজাদ" is not the member. Unlike the words above,
+ * these count only in that position, because the same words turn up elsewhere
+ * in a member's own story ("ওয়ার্ড কাউন্সিলর প্রার্থীদের নিয়ে বললেন নাহিদ ইসলাম").
+ * All seen on members' pages in 2026-09.
+ */
+export const NAMESAKE_TITLES = [
+  'মৃত্যুদণ্ডপ্রাপ্ত', 'ফাঁসির দণ্ডপ্রাপ্ত', 'সাবেক মুখ্য সচিব', 'মুখ্য সচিব', 'পিআইও',
+  'সাবেক কাউন্সিলর', 'কাউন্সিলর', 'ভাষাসৈনিক', 'সাংবাদিক', 'শিল্পী', 'উপাচার্য',
+];
+
+/**
  * Office titles the press uses, mapped to the post title the posts sync
  * stores. A headline that says "পররাষ্ট্রমন্ত্রী" is about whoever holds that
  * ministry; the matcher only awards the points to the member who holds it.
