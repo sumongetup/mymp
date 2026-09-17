@@ -3,13 +3,16 @@ import { AdminPage, Notice, Panel, Stat } from '@/app/admin/ui';
 import { allMembers, bn } from '@/lib/data';
 import { SOCIAL_KEYS } from '@/lib/admin/social-import';
 import SocialImportForm from './SocialImportForm';
+import { requireAdmin } from '@/lib/admin/auth';
 
 export const metadata: Metadata = { title: 'সোশ্যাল লিংক' };
 
 const linksOf = (m: (typeof allMembers)[number]) =>
   SOCIAL_KEYS.filter((k) => !!(m as unknown as Record<string, string | null>)[k]);
 
-export default function SocialPage() {
+export default async function SocialPage() {
+  // Each page checks for itself; the layout's check is not guaranteed to run when only this segment renders.
+  await requireAdmin();
   const sitting = allMembers.filter((m) => !m.resignedOn);
   const withAny = sitting.filter((m) => linksOf(m).length > 0);
   const missing = sitting.filter((m) => linksOf(m).length === 0).sort((a, b) => (a.seat?.no ?? 999) - (b.seat?.no ?? 999));

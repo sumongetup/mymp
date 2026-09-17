@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { members, seats } from '@/lib/data';
+import { allMembers, seats } from '@/lib/data';
 import { requireAdmin } from '@/lib/admin/auth';
 import { getNews } from '@/lib/admin/store';
 import { saveNews, changeNewsStatus } from '@/app/admin/actions';
 import { AdminPage, Panel, Field, Button, Badge, Notice, when } from '@/app/admin/ui';
+import DraftKeeper from '../../DraftKeeper';
 
 export const metadata: Metadata = { title: 'সংবাদ সম্পাদনা' };
 
@@ -42,6 +43,8 @@ export default async function EditNews({
       }
     >
       {flags.saved && <Notice tone="good">সংরক্ষিত হয়েছে।</Notice>}
+      {flags.invalid === 'required' && <Notice tone="bad">শিরোনাম, সংবাদমাধ্যম, লিংক ও তারিখ লাগবে।</Notice>}
+      {flags.invalid === 'url' && <Notice tone="bad">লিংক http:// বা https:// দিয়ে শুরু হতে হবে।</Notice>}
       {flags.status && <Notice tone="good">অবস্থা বদলে হয়েছে: {STATUS_BN[flags.status as keyof typeof STATUS_BN] ?? flags.status}। সাইটে দেখাতে “সাইটে প্রকাশ করুন” চাপুন।</Notice>}
       {n && (
         <p className="flex items-center gap-2 text-[13.5px] text-muted">
@@ -51,7 +54,7 @@ export default async function EditNews({
       )}
 
       <Panel>
-        <form action={saveNews} className="flex flex-col gap-4 max-w-[760px]">
+        <form id="news-form" action={saveNews} className="flex flex-col gap-4 max-w-[760px]">
           {n && <input type="hidden" name="id" value={n.id} />}
           <Field label="শিরোনাম (বাংলা)" name="title_bn" defaultValue={n?.title_bn} required />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -65,8 +68,8 @@ export default async function EditNews({
               <span className="text-[13.5px] font-semibold">সংশ্লিষ্ট সংসদ সদস্য</span>
               <select name="member_id" defaultValue={n?.member_id ?? ''} className={sel}>
                 <option value="">কেউ নয়</option>
-                {[...members].sort((a, b) => (a.seat?.no ?? 999) - (b.seat?.no ?? 999)).map((m) => (
-                  <option key={m.id} value={m.id}>{m.seat?.nameBn ? `${m.seat.nameBn}, ` : ''}{m.nameBn ?? m.nameEn}</option>
+                {[...allMembers].sort((a, b) => (a.seat?.no ?? 999) - (b.seat?.no ?? 999)).map((m) => (
+                  <option key={m.id} value={m.id}>{m.seat?.nameBn ? `${m.seat.nameBn}, ` : ''}{m.nameBn ?? m.nameEn}{m.resignedOn ? ' (পদত্যাগ করেছেন)' : ''}</option>
                 ))}
               </select>
             </label>
@@ -83,6 +86,7 @@ export default async function EditNews({
             <Button kind="secondary" href="/admin/news">ফিরে যান</Button>
           </div>
         </form>
+        <DraftKeeper formId="news-form" fields={['title_bn', 'source_name', 'source_url', 'published_on', 'excerpt_bn', 'member_id', 'seat_slug']} restore={!!flags.invalid} />
       </Panel>
     </AdminPage>
   );

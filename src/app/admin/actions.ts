@@ -225,10 +225,10 @@ export async function saveNews(fd: FormData) {
     member_id: orNull(str(fd, 'member_id')),
     seat_slug: orNull(str(fd, 'seat_slug')),
   };
-  if (!input.title_bn || !input.source_name || !input.source_url || !input.published_on) {
-    throw new Error('শিরোনাম, সূত্র, লিংক ও তারিখ লাগবে।');
-  }
-  if (!/^https?:\/\//.test(input.source_url)) throw new Error('লিংক http:// বা https:// দিয়ে শুরু হতে হবে।');
+  // Sent back to the form, which puts the typed text back, rather than to an error page.
+  const back = `/admin/news/${id ?? 'new'}`;
+  if (!input.title_bn || !input.source_name || !input.source_url || !input.published_on) redirect(`${back}?invalid=required`);
+  if (!/^https?:\/\/\S+$/.test(input.source_url)) redirect(`${back}?invalid=url`);
   const savedId = await upsertNews(me, id, input);
   revalidatePath('/admin/news');
   redirect(`/admin/news/${savedId}?saved=1`);
@@ -497,17 +497,21 @@ export async function bulkHideFeed(_prev: ActionState, fd: FormData): Promise<Ac
   const reason = str(fd, 'reason').trim();
   if (!outlet && !from && !to) return { error: 'সংবাদমাধ্যম বা তারিখ বাছুন।' };
   if (!reason) return { error: 'কারণ লিখুন।' };
-  const n = await bulkHide(me, { outlet: outlet ?? undefined, from: from ?? undefined, to: to ?? undefined }, reason);
+  const { hidden, left } = await bulkHide(me, { outlet: outlet ?? undefined, from: from ?? undefined, to: to ?? undefined }, reason);
   revalidatePath('/admin/feed');
-  return { ok: `${n}টি সংযুক্তি লুকানো হয়েছে।` };
+  const bnN = (n: number) => String(n).replace(/\d/g, (d) => '০১২৩৪৫৬৭৮৯'[Number(d)]!);
+  return left
+    ? { error: `${bnN(hidden)}টি লুকানো হয়েছে, আরও ${bnN(left)}${left >= 1000 ? '+' : ''}টি বাকি। আবার চাপুন।` }
+    : { ok: `${bnN(hidden)}টি সংযুক্তি লুকানো হয়েছে।` };
 }
 
 export async function addNameVariant(fd: FormData) {
   const me = await requireAdmin();
   const mpId = str(fd, 'mp_id');
-  const variant = str(fd, 'variant').trim();
-  if (!mpId || variant.split(/\s+/).length < 2) return;
-  await addVariant(me, mpId, variantTokens(variant).join(' '));
+  // Counted after honorifics go, as the matcher will read it: "মোঃ রহিম" is one word, and one word names nobody.
+  const tokens = variantTokens(str(fd, 'variant').trim());
+  if (!mpId || tokens.length < 2) redirect(`/admin/members/${mpId}?invalidVariant=1`);
+  await addVariant(me, mpId, tokens.join(' '));
   revalidatePath(`/admin/members/${mpId}`);
 }
 

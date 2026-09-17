@@ -139,6 +139,9 @@ export default async function EditMember({
                 </li>
               ))}
             </ul>
+            {flags.invalidVariant && (
+              <p className="pb-3 text-[13px] text-danger font-semibold">যোগ করা হয়নি: মোঃ, ডা, ব্যারিস্টারের মতো শব্দ বাদ দিলে অন্তত দুই শব্দ থাকতে হবে।</p>
+            )}
             <form action={addNameVariant} className="flex flex-wrap items-center gap-2">
               <input type="hidden" name="mp_id" value={id} />
               <input name="variant" required placeholder="যেমন: মঈন খান" className="h-10 grow min-w-0 basis-[140px] rounded-lg border border-rule bg-surface px-3 text-[14px]" />

@@ -340,10 +340,20 @@ export async function runSocialWiki(db: Db): Promise<{ itemsFound: number; items
   }
   const mymp = createClient(url, key, { auth: { persistSession: false } });
   const fields = ['facebook', 'x', 'youtube', 'instagram', 'website', 'socialSource'];
-  const { data: existing, error } = await mymp.from('overrides').select('entity_id,field,updated_by').eq('entity_type', 'member').in('field', fields);
-  if (error) throw new Error(`mymp overrides read: ${error.message}`);
-  // An editor's saved link (updated_by set) is never replaced; this job's own earlier rows are.
-  const edited = new Set((existing ?? []).filter((r) => r.updated_by).map((r) => `${r.entity_id}|${r.field}`));
+  // A page at a time: one request returns at most 1000 rows, and a missed row is an edit overwritten.
+  const existing: { entity_id: string; field: string; updated_by: string | null }[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await mymp.from('overrides').select('entity_id,field,updated_by')
+      .eq('entity_type', 'member').in('field', fields).order('entity_id').order('field').range(from, from + 999);
+    if (error) throw new Error(`mymp overrides read: ${error.message}`);
+    existing.push(...(data ?? []));
+    if ((data ?? []).length < 1000) break;
+  }
+  // An editor's saved link is never replaced; this job's own earlier rows are. A link is this job's
+  // only while the member still carries its socialSource marker: saving links in the admin drops the
+  // marker, and a link written by a script with no signed-in editor leaves updated_by empty.
+  const marked = new Set(existing.filter((r) => r.field === 'socialSource' && !r.updated_by).map((r) => r.entity_id));
+  const edited = new Set(existing.filter((r) => r.updated_by || (r.field !== 'socialSource' && !marked.has(r.entity_id))).map((r) => `${r.entity_id}|${r.field}`));
   let written = 0;
   for (const f of withLinks) {
     const upserts: { entity_type: string; entity_id: string; field: string; value: string; updated_by: null; updated_at: string }[] = (Object.entries(f.links) as [SocialKey, string][])

@@ -5,7 +5,9 @@ import { parliamentLabel, parliamentsWithRecords, seatHolders } from '@/lib/hist
 import { requireAdmin } from '@/lib/admin/auth';
 import { getResult } from '@/lib/admin/store';
 import { saveResult, changeResultStatus } from '@/app/admin/actions';
+import Link from 'next/link';
 import { AdminPage, Panel, Field, Button, Badge, Notice, inputClass, when } from '@/app/admin/ui';
+import DraftKeeper from '../../DraftKeeper';
 
 export async function generateMetadata({ params }: { params: Promise<{ seat: string }> }): Promise<Metadata> {
   const seatNo = Number((await params).seat);
@@ -27,7 +29,10 @@ export default async function EditResult({
   const seat = seats.find((s) => s.no === seatNo && !s.reserved);
   if (!seat) notFound();
 
-  const parliamentNo = Number(flags.p || 13);
+  // Only an election the site has records for; anything else in the address falls back to the current one.
+  const elections = parliamentsWithRecords();
+  const asked = Number(flags.p || 13);
+  const parliamentNo = elections.some((p) => p.no === asked) || asked === 13 ? asked : 13;
   let row: Awaited<ReturnType<typeof getResult>> = null;
   let tableMissing = false;
   try {
@@ -54,16 +59,21 @@ export default async function EditResult({
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4 items-start">
         <Panel title="ফল">
-          <form action={saveResult} className="flex flex-col gap-4">
+          <form id="result-form" action={saveResult} className="flex flex-col gap-4">
             <input type="hidden" name="seat_no" value={seatNo} />
-            <label className="flex flex-col gap-1.5">
+            <input type="hidden" name="parliament_no" value={parliamentNo} />
+            <div className="flex flex-col gap-1.5">
               <span className="text-[13.5px] font-semibold">নির্বাচন</span>
-              <select name="parliament_no" defaultValue={String(parliamentNo)} className={inputClass}>
-                {parliamentsWithRecords().map((p) => (
-                  <option key={p.no} value={p.no}>{parliamentLabel(p.no)}</option>
-                ))}
-              </select>
-            </label>
+              <p className="text-[15px] font-semibold">{parliamentLabel(parliamentNo)}</p>
+              {elections.length > 1 && (
+                <p className="flex flex-wrap gap-x-3 gap-y-1 text-[13px]">
+                  <span className="text-muted">অন্য নির্বাচনের ফল:</span>
+                  {elections.filter((p) => p.no !== parliamentNo).map((p) => (
+                    <Link key={p.no} href={`/admin/results/${seatNo}?p=${p.no}`} className="text-brand font-semibold hover:underline">{parliamentLabel(p.no)}</Link>
+                  ))}
+                </p>
+              )}
+            </div>
             <Field
               label="প্রার্থী, দল ও প্রাপ্ত ভোট"
               name="candidates"
@@ -91,6 +101,7 @@ export default async function EditResult({
               <Button kind="secondary" href="/admin/results">ফিরে যান</Button>
             </div>
           </form>
+          <DraftKeeper formId="result-form" fields={['candidates', 'total_votes', 'turnout', 'source_url', 'source_note', 'status']} restore={!!flags.invalid} />
         </Panel>
 
         <div className="flex flex-col gap-4">

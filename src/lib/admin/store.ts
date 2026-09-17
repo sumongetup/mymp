@@ -318,6 +318,20 @@ export async function resolveCorrection(a: Actor, id: string, status: 'accepted'
 
 /* ---------------- audit / sync / users ---------------- */
 
+/** The audit log filtered in the database, a page at a time, newest first. */
+export async function searchAudit(q: { entity?: string; type?: string; actor?: string; action?: string; from: number; limit: number }): Promise<{ rows: AuditRow[]; total: number }> {
+  let query = supabaseAdmin().from('audit_log').select('*', { count: 'exact' });
+  if (q.entity) query = query.eq('entity_id', q.entity.trim());
+  if (q.type) query = query.eq('entity_type', q.type);
+  // PostgREST's ilike pattern: % and _ in what the editor typed are taken literally.
+  const literal = (s: string) => s.trim().replace(/[%_,()]/g, (c) => `\\${c}`);
+  if (q.actor) query = query.ilike('actor_email', `%${literal(q.actor)}%`);
+  if (q.action) query = query.ilike('action', `%${literal(q.action)}%`);
+  const { data, count, error } = await query.order('created_at', { ascending: false }).order('id', { ascending: false }).range(q.from, q.from + q.limit - 1);
+  if (error) throw new Error(`the history could not be read: ${error.message}`);
+  return { rows: (data ?? []) as AuditRow[], total: count ?? 0 };
+}
+
 export async function listAudit(limit = 100): Promise<AuditRow[]> {
   const { data } = await supabaseAdmin().from('audit_log').select('*').order('created_at', { ascending: false }).limit(limit);
   return (data ?? []) as AuditRow[];
@@ -402,13 +416,19 @@ export interface ResultRow {
 }
 
 export async function listResults(): Promise<ResultRow[]> {
-  const { data, error } = await supabaseAdmin()
-    .from('election_results')
-    .select('id,seat_no,parliament_no,candidates,total_votes,turnout,source_url,source_note,status,updated_at')
-    .order('seat_no')
-    .order('parliament_no', { ascending: false });
-  if (error) throw error;
-  return (data ?? []) as ResultRow[];
+  // Every seat of every election: past 1000 rows as soon as a second election is entered.
+  const out: ResultRow[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabaseAdmin()
+      .from('election_results')
+      .select('id,seat_no,parliament_no,candidates,total_votes,turnout,source_url,source_note,status,updated_at')
+      .order('seat_no')
+      .order('parliament_no', { ascending: false })
+      .range(from, from + 999);
+    if (error) throw error;
+    out.push(...((data ?? []) as ResultRow[]));
+    if ((data ?? []).length < 1000) return out;
+  }
 }
 
 export async function getResult(seatNo: number, parliamentNo: number): Promise<ResultRow | null> {

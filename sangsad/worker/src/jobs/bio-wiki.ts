@@ -273,10 +273,23 @@ export async function runBioWiki(db: Db): Promise<{ itemsFound: number; itemsNew
   }
   const mymp = createClient(url, key, { auth: { persistSession: false } });
   const all = [...FIELDS, 'bioFromWiki', 'bioSource'];
-  const { data: existing, error } = await mymp.from('overrides').select('entity_id,field,updated_by').eq('entity_type', 'member').in('field', all);
-  if (error) throw new Error(`mymp overrides read: ${error.message}`);
-  const edited = new Set((existing ?? []).filter((r) => r.updated_by).map((r) => `${r.entity_id}|${r.field}`));
-  const ours = new Set((existing ?? []).filter((r) => !r.updated_by).map((r) => `${r.entity_id}|${r.field}`));
+  // A page at a time: one request returns at most 1000 rows, and a missed row is an edit overwritten.
+  const existing: { entity_id: string; field: string; value: string | null; updated_by: string | null }[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await mymp.from('overrides').select('entity_id,field,value,updated_by')
+      .eq('entity_type', 'member').in('field', all).order('entity_id').order('field').range(from, from + 999);
+    if (error) throw new Error(`mymp overrides read: ${error.message}`);
+    existing.push(...(data ?? []));
+    if ((data ?? []).length < 1000) break;
+  }
+  // A row is this job's only while the member's bioFromWiki still lists the field. A biography written
+  // by a script or an editor drops the field from that list, and leaves updated_by empty when no
+  // signed-in editor saved it: such a row is an edit, and is neither overwritten nor removed.
+  const wikiListed = new Map(existing.filter((r) => r.field === 'bioFromWiki').map((r) => [r.entity_id, new Set((r.value ?? '').split(',').map((x) => x.trim()))]));
+  const isOurs = (r: (typeof existing)[number]) =>
+    !r.updated_by && ((FIELDS as readonly string[]).includes(r.field) ? !!wikiListed.get(r.entity_id)?.has(r.field) : true);
+  const edited = new Set(existing.filter((r) => !isOurs(r)).map((r) => `${r.entity_id}|${r.field}`));
+  const ours = new Set(existing.filter(isOurs).map((r) => `${r.entity_id}|${r.field}`));
   const now = new Date().toISOString();
   const upserts: { entity_type: string; entity_id: string; field: string; value: string; updated_by: null; updated_at: string }[] = [];
   const keep = new Set<string>();

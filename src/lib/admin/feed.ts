@@ -11,6 +11,7 @@
 import { supabaseAdmin } from '@/lib/supabase/admin';
 import { audit, type Actor } from './store';
 import type { AttachStatus, FeedType } from '@/lib/feed/store';
+import { NEWS_SOURCES } from '../../../config/news-sources';
 
 export interface AdminFeedRow {
   feed_item_id: number;
@@ -71,8 +72,11 @@ export async function listFeed(q: FeedQuery): Promise<AdminFeedRow[]> {
 }
 
 export async function feedOutlets(): Promise<string[]> {
-  const { data } = await supabaseAdmin().from('feed_items').select('outlet_name').limit(2000);
-  return [...new Set((data ?? []).map((r) => r.outlet_name as string).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'bn'));
+  // Every configured outlet, plus the channels and pasted sources seen lately: the table
+  // holds tens of thousands of items and one read returns only the first 1000.
+  const { data } = await supabaseAdmin().from('feed_items').select('outlet_name').order('fetched_at', { ascending: false }).limit(1000);
+  const names = [...NEWS_SOURCES.map((s) => s.nameBn), ...(data ?? []).map((r) => r.outlet_name as string)];
+  return [...new Set(names.filter(Boolean))].sort((a, b) => a.localeCompare(b, 'bn'));
 }
 
 export interface FeedCounts { total: number; visible: number; hidden: number; removed: number; review: number }
@@ -140,13 +144,12 @@ export async function setPinned(a: Actor, itemId: number, mpId: string, pinned: 
 export async function attachByHand(a: Actor, itemId: number, mpId: string) {
   const sb = supabaseAdmin();
   const { data: existing } = await sb.from('feed_item_mps').select('mp_id').eq('feed_item_id', itemId).eq('mp_id', mpId).maybeSingle();
-  if (existing) {
-    await sb.from('feed_item_mps').update({ status: 'visible', low_confidence: false }).eq('feed_item_id', itemId).eq('mp_id', mpId);
-  } else {
-    await sb.from('feed_item_mps').insert({
+  const { error } = existing
+    ? await sb.from('feed_item_mps').update({ status: 'visible', low_confidence: false }).eq('feed_item_id', itemId).eq('mp_id', mpId)
+    : await sb.from('feed_item_mps').insert({
       feed_item_id: itemId, mp_id: mpId, score: 100, low_confidence: false, signals: [{ signal: 'by-hand', points: 100 }], attached_by: a.email,
     });
-  }
+  if (error) throw error;
   await audit(a, { action: 'feed.attach', entity_type: 'feed_item', entity_id: String(itemId), field: mpId, old_value: null, new_value: 'by hand' });
   await recordFeedback(itemId, mpId, 'manual_attach', a.email);
 }
@@ -156,10 +159,22 @@ async function recordFeedback(itemId: number, mpId: string, action: 'confirm' | 
 }
 
 /** Everything from one outlet, or one date range, hidden in a single action. */
-export async function bulkHide(a: Actor, q: { outlet?: string; from?: string; to?: string }, reason: string): Promise<number> {
-  const rows = await listFeed({ outlet: q.outlet, from: q.from, to: q.to, status: 'visible', limit: 500 });
-  for (const r of rows) await setAttachmentStatus(a, r.feed_item_id, r.mp_id, 'hidden', reason);
-  return rows.length;
+export async function bulkHide(a: Actor, q: { outlet?: string; from?: string; to?: string }, reason: string): Promise<{ hidden: number; left: number }> {
+  // Batches of 200 until nothing matching is left or the action's time runs short; the
+  // editor is told how many remain, so a large outlet is never half-hidden in silence.
+  const deadline = Date.now() + 45_000;
+  let hidden = 0;
+  for (;;) {
+    const rows = await listFeed({ outlet: q.outlet, from: q.from, to: q.to, status: 'visible', limit: 200 });
+    if (!rows.length || Date.now() > deadline) break;
+    for (const r of rows) {
+      await setAttachmentStatus(a, r.feed_item_id, r.mp_id, 'hidden', reason);
+      hidden++;
+      if (Date.now() > deadline) break;
+    }
+  }
+  const left = (await listFeed({ outlet: q.outlet, from: q.from, to: q.to, status: 'visible', limit: 1000 })).length;
+  return { hidden, left };
 }
 
 /* ---------------------------------------------------------------- runs */
@@ -205,14 +220,16 @@ export async function variantsFor(mpId: string): Promise<VariantRow[]> {
 }
 
 export async function addVariant(a: Actor, mpId: string, variant: string) {
-  await supabaseAdmin().from('mp_name_variants').upsert(
+  const { error } = await supabaseAdmin().from('mp_name_variants').upsert(
     { mp_id: mpId, variant, source: 'manual', weight: 1, created_by: a.email },
     { onConflict: 'mp_id,variant' },
   );
+  if (error) throw error;
   await audit(a, { action: 'feed.variant.add', entity_type: 'member', entity_id: mpId, field: null, old_value: null, new_value: variant });
 }
 
 export async function removeVariant(a: Actor, id: number, mpId: string, variant: string) {
-  await supabaseAdmin().from('mp_name_variants').delete().eq('id', id);
+  const { error } = await supabaseAdmin().from('mp_name_variants').delete().eq('id', id).eq('mp_id', mpId);
+  if (error) throw error;
   await audit(a, { action: 'feed.variant.remove', entity_type: 'member', entity_id: mpId, field: null, old_value: variant, new_value: null });
 }
