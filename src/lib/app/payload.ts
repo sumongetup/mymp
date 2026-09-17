@@ -54,14 +54,30 @@ export interface AppMemberBrief {
  * What the member holds, in Bengali: a House office first (the source stores
  * those as codes, "pm", "speaker"), then a post on the cabinet list, then an
  * editor's entry. A code must never reach a reader: the app once showed "pm".
+ *
+ * A minister's post names the ministry, as Bangla readers say it: "পানি সম্পদ
+ * প্রতিমন্ত্রী", "শিল্প, বস্ত্র ও পাট এবং বাণিজ্য মন্ত্রী". A bare "প্রতিমন্ত্রী" left
+ * the reader asking of what.
  */
 const office = (m: Member): string | null => {
   const house = (m.offices ?? []).map((o) => OFFICE_LABELS[o]).find(Boolean);
   if (house) return house;
-  const post = governmentPostsOf(m.id)[0]?.title;
-  if (post) return post;
+  const posts = governmentPostsOf(m.id);
+  if (posts.length) return postTitle(posts);
   return m.govPost ?? null;
 };
+
+export function postTitle(posts: { title: string; ministryBn?: string | null }[]): string {
+  const title = posts[0]!.title;
+  // An adviser's "ministry" is the kind of adviser: "রাজনৈতিক উপদেষ্টা".
+  if (/উপদেষ্টা/.test(title)) return posts.find((p) => p.ministryBn?.includes('উপদেষ্টা'))?.ministryBn ?? title;
+  const names = [...new Set(posts.filter((p) => p.title === title).map((p) => p.ministryBn?.trim()).filter((x): x is string => !!x))]
+    .map((n) => n.replace(/\s*মন্ত্রণালয়$/, ''));
+  if (!names.length) return title;
+  const list = names.length === 1 ? names[0]! : `${names.slice(0, -1).join(', ')} এবং ${names[names.length - 1]}`;
+  // "সেতু বিভাগ" takes the possessive: "সেতু বিভাগের প্রতিমন্ত্রী".
+  return /বিভাগ$/.test(list) ? `${list}ের ${title}` : `${list} ${title}`;
+}
 
 /**
  * Parties on the 2026 ballot that won no seat carry codes the party list does
