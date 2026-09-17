@@ -85,6 +85,22 @@ export interface Member {
   website: string | null;
   /** The Wikipedia article(s) the links above were read from, space-separated; null once an editor has saved them. */
   socialSource?: string | null;
+  /**
+   * How far the Facebook link (facebook) is confirmed; it decides what the
+   * page shows (see facebookState in history.ts). Null keeps the old rule:
+   * a link is shown when there is one.
+   */
+  fbStatus?: 'verified' | 'pending' | 'disputed' | 'not_found' | null;
+  fbType?: 'page' | 'profile' | 'party_page' | null;
+  fbUsername?: string | null;
+  /** Filled by hand later. */
+  fbPageId?: string | null;
+  /** Facebook's own verified badge; filled by hand later. */
+  fbVerified?: boolean | null;
+  /** Where the Facebook page and website were confirmed. */
+  sourceUrl?: string | null;
+  /** YYYY-MM-DD, when these links were last checked. */
+  lastChecked?: string | null;
   /** Schools and degrees, from an editor or the member's Wikipedia infobox (see bioFromWiki). */
   educationBn?: string | null;
   /** Birthplace, from an editor or the member's Wikipedia infobox (see bioFromWiki). */

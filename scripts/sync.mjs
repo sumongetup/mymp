@@ -117,7 +117,7 @@ async function dbAll(path) {
 
 /** Overrides are stored as text; the site reads a few fields as a number or a yes/no. */
 const NUMBER_FIELDS = new Set(['termsCount']);
-const BOOLEAN_FIELDS = new Set(['isFreedomFighter']);
+const BOOLEAN_FIELDS = new Set(['isFreedomFighter', 'fbVerified']);
 function typed(field, value) {
   if (value == null) return value;
   if (NUMBER_FIELDS.has(field)) return Number.isFinite(Number(value)) ? Number(value) : null;
@@ -459,6 +459,8 @@ async function main() {
       // the engine's reading of the member's Wikipedia article (socialSource
       // then names it). Nothing here comes from parliament.gov.bd.
       facebook: null, x: null, youtube: null, instagram: null, website: null, socialSource: null,
+      // How far the Facebook link is confirmed, and the details kept with it.
+      fbStatus: null, fbType: null, fbUsername: null, fbPageId: null, fbVerified: null, sourceUrl: null, lastChecked: null,
       // Education and birthplace likewise come only from overrides: an editor,
       // or the engine's reading of the member's Wikipedia infobox (bioFromWiki
       // names those fields, bioSource the articles).

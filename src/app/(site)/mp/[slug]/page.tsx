@@ -10,7 +10,7 @@ import {
 } from '@/lib/data';
 import { storiesForMember } from '@/lib/newsView';
 import { rolesOf, noticesForMember, NOTICE_CATEGORY_BN } from '@/lib/activity';
-import { priorTermsOf, parliamentLabel, parliamentOrdinal, resultForSeat, socialsOf, electionYear } from '@/lib/history';
+import { priorTermsOf, parliamentLabel, parliamentOrdinal, resultForSeat, socialsOf, facebookNotice, UNVERIFIED_LABEL, electionYear } from '@/lib/history';
 import { Page, Card, Breadcrumb, Empty, PartyDot, DocLink } from '@/components/ui';
 import { ResultCard, sourceOf } from '@/components/results';
 import { introOf } from '@/lib/intro';
@@ -73,6 +73,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
   const notices = noticesForMember(m.id);
   const prior = priorTermsOf(m.id);
   const socials = socialsOf(m);
+  const fbNotice = facebookNotice(m);
   const result = m.seat && !m.seat.reserved ? resultForSeat(m.seat.no, meta.parliamentNo) : null;
   // The seat's result is only "this member's votes" when they are its winner;
   // after a by-election the general-election winner is someone else.
@@ -156,7 +157,8 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
       const same = [
         ...(m.bioSource ?? '').split(/\s+/),
         ...bioSources,
-        m.website, m.facebook, m.x, m.youtube, m.instagram,
+        // Only links the site stands behind: an unconfirmed Facebook page is not claimed as the member's.
+        ...socials.filter((s) => !s.unverified).map((s) => s.url),
       ].filter((u): u is string => !!u && /^https?:\/\//.test(u) && (!/wikipedia\.org/.test(u) || /\/wiki\//.test(u)));
       const unique = [...new Set(same.filter((u) => !/mymp\.bd|tbsnews\.net\/election/.test(u)))];
       return unique.length ? { sameAs: unique } : {};
@@ -269,7 +271,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
               </span>
             </div>
           )}
-          {socials.length > 0 && (
+          {(socials.length > 0 || fbNotice) && (
             <div className="flex flex-wrap gap-2">
               {socials.map((s) => (
                 <a
@@ -281,8 +283,15 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 >
                   {isBrand(s.key) ? <BrandIcon name={s.key} size={14} /> : <Icon name={s.icon} size={14} />}
                   {s.label}
+                  {s.unverified && <span className="text-[11.5px] font-medium text-muted">({UNVERIFIED_LABEL})</span>}
                 </a>
               ))}
+              {fbNotice && (
+                <span className="inline-flex items-center gap-1.5 h-8 px-3 rounded-lg border border-dashed border-rule text-[13px] text-muted">
+                  <BrandIcon name="facebook" size={14} />
+                  {fbNotice}
+                </span>
+              )}
             </div>
           )}
           <div className="pt-1 flex flex-col gap-3">
@@ -554,7 +563,7 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                 {m.seat?.reserved && ' সংরক্ষিত আসনের সদস্যদের ক্ষেত্রে এটি সাধারণ।'}
               </p>
             )}
-            {socials.length > 0 && (
+            {(socials.length > 0 || fbNotice) && (
               <div className="flex flex-col gap-2 border-t border-rule pt-3">
                 <span className="text-[12px] font-bold tracking-[1px] text-muted">অফিসিয়াল সোশ্যাল মিডিয়া</span>
                 <ul className="flex flex-col gap-1.5">
@@ -563,10 +572,17 @@ export default async function MemberPage({ params }: PageProps<'/mp/[slug]'>) {
                       <a href={s.url} target="_blank" rel="noopener noreferrer me" className="flex items-center gap-2 text-[14px] font-semibold hover:text-brand">
                         {isBrand(s.key) ? <BrandIcon name={s.key} size={15} /> : <Icon name={s.icon} size={15} className="text-muted" />}
                         {s.label}
+                        {s.unverified && <span className="text-[12px] font-medium text-muted">({UNVERIFIED_LABEL})</span>}
                         <Icon name="external" size={12} className="text-muted" />
                       </a>
                     </li>
                   ))}
+                  {fbNotice && (
+                    <li className="flex items-center gap-2 text-[14px] text-muted">
+                      <BrandIcon name="facebook" size={15} />
+                      {fbNotice}
+                    </li>
+                  )}
                 </ul>
                 {m.socialSource ? (
                   <span className="text-[12px] text-muted leading-relaxed">

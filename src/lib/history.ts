@@ -142,7 +142,37 @@ export const SOCIAL_FIELDS = [
   { key: 'website', label: 'ওয়েবসাইট', icon: 'globe' },
 ] as const;
 
-export const socialsOf = (m: Member) =>
-  SOCIAL_FIELDS.map((f) => ({ ...f, url: (m as unknown as Record<string, string | null>)[f.key] ?? null })).filter((f) => !!f.url) as {
-    key: string; label: string; icon: string; url: string;
-  }[];
+/**
+ * What the page may show for the member's Facebook, by fbStatus:
+ *   verified (or not set)  the link
+ *   pending                the link, marked "যাচাই করা হয়নি"
+ *   disputed               no link, only "ফেসবুক পেজ যাচাই করা হয়নি"
+ *   not_found              nothing
+ */
+export function facebookState(m: Member): { show: 'link'; unverified: boolean } | { show: 'notice'; text: string } | { show: 'nothing' } {
+  const status = m.fbStatus ?? null;
+  if (status === 'disputed') return { show: 'notice', text: 'ফেসবুক পেজ যাচাই করা হয়নি' };
+  if (status === 'not_found' || !m.facebook) return { show: 'nothing' };
+  return { show: 'link', unverified: status === 'pending' };
+}
+
+export const UNVERIFIED_LABEL = 'যাচাই করা হয়নি';
+
+export interface SocialLink { key: string; label: string; icon: string; url: string; unverified: boolean }
+
+/** The member's links the page shows, Facebook by the rule above. */
+export const socialsOf = (m: Member): SocialLink[] => {
+  const fb = facebookState(m);
+  return SOCIAL_FIELDS.flatMap((f): SocialLink[] => {
+    const url = (m as unknown as Record<string, string | null>)[f.key] ?? null;
+    if (!url) return [];
+    if (f.key === 'facebook') return fb.show === 'link' ? [{ ...f, url, unverified: fb.unverified }] : [];
+    return [{ ...f, url, unverified: false }];
+  });
+};
+
+/** The line shown in place of a Facebook link that is in dispute, or null. */
+export const facebookNotice = (m: Member): string | null => {
+  const fb = facebookState(m);
+  return fb.show === 'notice' ? fb.text : null;
+};

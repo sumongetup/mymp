@@ -15,7 +15,7 @@ import {
   members, parties, seats, meta, getMember, committeesOfMember, governmentPostsOf,
   districtOf, partyColor, partyShortBn, currentPosts, OFFICE_LABELS, type Member,
 } from '@/lib/data';
-import { priorTermsOf, socialsOf, resultForSeat } from '@/lib/history';
+import { priorTermsOf, socialsOf, facebookNotice, resultForSeat } from '@/lib/history';
 import { officers } from '@/lib/activity';
 import { adviserForPost, getAdviser, adviserPosts } from '@/lib/advisers';
 import { sourceList } from '@/lib/sourceLabel';
@@ -246,7 +246,10 @@ export function memberDetail(slug: string) {
     partyNameBn: m.party?.nameBn ?? null,
     districtEn: d?.en ?? null,
     offices: m.offices ?? [],
+    // Each link carries unverified: true for a Facebook page still being checked;
+    // facebookNotice replaces the link while the page is in dispute.
     socials,
+    facebookNotice: facebookNotice(m),
     governmentPosts: governmentPostsOf(m.id).map((p) => ({ title: p.title, ministryBn: p.ministryBn ?? null, fromDate: p.fromDate ?? null })),
     committees: committeesOfMember(m.id).map((c) => ({
       slug: c.slug,
