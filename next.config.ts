@@ -34,20 +34,22 @@ const legacyRedirects = [
   { source: '/jela/cox-sbazar', destination: '/jela/coxs-bazar', permanent: true },
 ];
 
+const HARFBUZZ_WASM = './node_modules/harfbuzzjs/dist/harfbuzz.wasm';
+
 const nextConfig: NextConfig = {
   ...(staticExport
     ? { output: 'export', images: { unoptimized: true }, basePath: process.env.BASE_PATH || '' }
     : { async redirects() { return legacyRedirects; } }),
   trailingSlash: staticExport,
-  // The member preview image shapes Bangla with HarfBuzz (WASM) and reads the font files at run time;
-  // both are loaded from node_modules, so the function must ship them.
+  // The preview images shape Bangla with HarfBuzz (WASM) and read two font files at run time, all from
+  // node_modules, so the function must ship them. src/lib/og/banglaText.ts reads each font by a literal
+  // path, which the build traces exactly; the fonts are not listed here because Turbopack also pulls in
+  // the `.ttf.png` previews beside any font entry. The WASM, opened by harfbuzzjs itself, is the backstop.
+  // Keys are globs: an unescaped `[slug]` never matches under Turbopack.
   serverExternalPackages: ['harfbuzzjs'],
   outputFileTracingIncludes: {
-    '/api/og/mp/[slug]': [
-      './node_modules/harfbuzzjs/dist/**/*',
-      './node_modules/@expo-google-fonts/noto-sans-bengali/700Bold/*.ttf',
-      './node_modules/@expo-google-fonts/noto-sans-bengali/400Regular/*.ttf',
-    ],
+    '/api/og/mp/\\[slug\\]': [HARFBUZZ_WASM],
+    '/api/og/party/\\[slug\\]': [HARFBUZZ_WASM, './public/party/og/*.jpg'],
   },
 };
 

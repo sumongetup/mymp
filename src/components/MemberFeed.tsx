@@ -79,7 +79,6 @@ function Row({ item, onPlay }: { item: FeedEntry; onPlay: (item: FeedEntry) => v
       <span className="shrink-0 w-[92px] sm:w-[116px] aspect-video rounded-lg bg-paper border border-rulesoft overflow-hidden grid place-items-center relative">
         {item.thumbnailUrl ? (
           // The outlet's own thumbnail, drawn small; nothing is copied to our storage.
-          // eslint-disable-next-line @next/next/no-img-element
           <StoryThumb src={item.thumbnailUrl} />
         ) : (
           <Icon name={item.type === 'video' ? 'play' : 'file'} size={18} className="text-muted" />
