@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PartyBadge from './PartyBadge';
+import StoryThumb from './StoryThumb';
 import type { StoryView } from '@/lib/newsView';
 
 const BN_DIGITS = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
@@ -32,12 +33,10 @@ export default function StoryCard({ s, showMember = true, showDate = true }: { s
           tabIndex={-1}
           className="shrink-0 w-[104px] sm:w-[148px] aspect-video rounded-lg bg-paper border border-rulesoft overflow-hidden relative grid place-items-center"
         >
-          {s.thumbnail ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={s.thumbnail} alt="" loading="lazy" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
-          ) : (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-muted" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-          )}
+          {/* The placeholder sits underneath: if the outlet's picture 404s, the
+              thumbnail removes itself and this is what stays. */}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-muted" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+          {s.thumbnail && <StoryThumb src={s.thumbnail} />}
           {video && (
             <span className="absolute inset-0 grid place-items-center bg-ink/25">
               <span className="w-9 h-9 rounded-full bg-white/90 grid place-items-center">

@@ -1,5 +1,7 @@
 'use client';
 
+import StoryThumb from './StoryThumb';
+
 import { useEffect, useState } from 'react';
 import Icon from './Icon';
 import { useQueryParam } from '@/lib/useQueryParam';
@@ -78,7 +80,7 @@ function Row({ item, onPlay }: { item: FeedEntry; onPlay: (item: FeedEntry) => v
         {item.thumbnailUrl ? (
           // The outlet's own thumbnail, drawn small; nothing is copied to our storage.
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={item.thumbnailUrl} alt="" loading="lazy" className="w-full h-full object-cover" />
+          <StoryThumb src={item.thumbnailUrl} />
         ) : (
           <Icon name={item.type === 'video' ? 'play' : 'file'} size={18} className="text-muted" />
         )}
