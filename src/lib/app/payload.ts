@@ -44,7 +44,12 @@ export interface AppMemberBrief {
   seatNo: number | null;
   seatBn: string | null;
   seatSlug: string | null;
+  /** "Dhaka-17", for a reader who searches in English. */
+  seatEn: string | null;
   districtBn: string | null;
+  districtEn: string | null;
+  /** The upazilas and wards the seat covers, so a search for one finds its member. */
+  areaBn: string | null;
   /** "প্রধানমন্ত্রী", "স্পিকার", a ministry — whatever the site shows beside the name. */
   officeBn: string | null;
   reserved: boolean;
@@ -127,7 +132,10 @@ export const brief = (m: Member): AppMemberBrief => {
     seatNo: m.seat?.no ?? null,
     seatBn: m.seat?.nameBn ?? null,
     seatSlug: m.seat?.slug ?? null,
+    seatEn: m.seat?.nameEn ?? null,
     districtBn: d?.bn ?? null,
+    districtEn: d?.en ?? null,
+    areaBn: m.seat?.boundaryBn ?? null,
     officeBn: office(m),
     reserved: !m.seat,
   };
