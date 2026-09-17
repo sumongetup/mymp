@@ -5,7 +5,7 @@
  * a bus ride is soon enough, and the app never waits on a cold function.
  */
 import { NextResponse } from 'next/server';
-import { newsPageStories } from '@/lib/feed/storyView';
+import { newsPageStories, latestVideos } from '@/lib/feed/storyView';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -15,10 +15,15 @@ export async function GET(req: Request) {
   const limit = Math.min(Number(url.searchParams.get('limit') ?? 200) || 200, 400);
   const type = url.searchParams.get('type');
 
+  // Videos are read as videos: picked out of the newest mixed stories they were a handful.
+  if (type === 'video') {
+    return NextResponse.json(
+      { stories: (await latestVideos(limit)).slice(0, limit) },
+      { headers: { 'cache-control': 'public, s-maxage=300, stale-while-revalidate=1800', 'access-control-allow-origin': '*' } },
+    );
+  }
   const { stories } = await newsPageStories(limit);
-  const filtered = type === 'video' ? stories.filter((s) => s.kind === 'video')
-    : type === 'news' ? stories.filter((s) => s.kind !== 'video')
-    : stories;
+  const filtered = type === 'news' ? stories.filter((s) => s.kind !== 'video') : stories;
 
   return NextResponse.json(
     { stories: filtered.slice(0, limit) },
