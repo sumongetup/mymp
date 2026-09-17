@@ -52,7 +52,7 @@ export default function StoryCard({ s, showMember = true, showDate = true }: { s
       )}
 
       <div className="min-w-0 grow flex flex-col gap-2.5">
-        <div className="flex items-center justify-between gap-3 text-[13px] text-muted">
+        <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-0.5 text-[13px] text-muted">
           <span className="flex items-center gap-2 min-w-0">
             {video && <span className="shrink-0 px-1.5 py-px rounded border border-brandring text-brand text-[11.5px] font-semibold">ভিডিও</span>}
             {s.kind === 'press' && <span className="shrink-0 px-1.5 py-px rounded border border-rule text-[11.5px] font-semibold">প্রজ্ঞাপন</span>}

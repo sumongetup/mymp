@@ -61,3 +61,13 @@ export async function newsPageStories(limit = 400): Promise<{ stories: StoryView
   const stories = [...live, ...older].sort((a, b) => b.date.localeCompare(a.date));
   return { stories: stories.slice(0, limit), live: reachable };
 }
+
+/** The newest member videos from the live feed, for the home page; none when the feed cannot be read. */
+export async function latestVideos(limit = 8): Promise<StoryView[]> {
+  try {
+    return (await latestItems({ limit, type: 'video' })).map(toStory);
+  } catch (e) {
+    if (!isMissingTable(e)) console.error('the feed could not be read for the home page videos', e);
+    return [];
+  }
+}

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { members, parties, meta, bn, dateBn, statistics, districtOf, getMemberById, GENERAL_SEATS } from '@/lib/data';
-import { allStories } from '@/lib/newsView';
+import { newsPageStories, latestVideos } from '@/lib/feed/storyView';
 import { latestSession, latestSitting, sessionLabel, officers, memberNoticeCount, totalSittings, ROLE_LABELS, daysSince } from '@/lib/activity';
 import { Page, Card, MemberCard, CompositionBar, Empty, SectionHead, DocLink } from '@/components/ui';
 import SiteSearch from '@/components/SiteSearch';
 import StoryCard from '@/components/StoryCard';
+import HomeVideos from '@/components/HomeVideos';
 import Icon from '@/components/Icon';
 import { siteUrl } from '@/lib/site';
 import { BASE_OPEN_GRAPH, BASE_TWITTER, SITE_DESCRIPTION, SITE_TITLE } from '@/lib/seo';
@@ -36,9 +37,16 @@ const WEBSITE_LD = {
   },
 };
 
-export default function Home() {
+/**
+ * Read again every five minutes, like /songbad: the headlines and videos come
+ * from the live feed, and a home page built once at deploy time went stale.
+ */
+export const revalidate = 300;
+
+export default async function Home() {
   const stats = statistics();
-  const latestNews = allStories().slice(0, 3);
+  const [{ stories }, videos] = await Promise.all([newsPageStories(40), latestVideos(30)]);
+  const latestNews = stories.filter((s) => s.kind !== 'video').slice(0, 3);
   const session = latestSession();
   const sitting = latestSitting();
   const sittingAgo = daysSince(sitting?.date ?? null);
@@ -210,6 +218,13 @@ export default function Home() {
             />
           )}
         </section>
+
+        {videos.some((v) => v.thumbnail) && (
+          <section className="pb-14 flex flex-col gap-5">
+            <SectionHead title="ভিডিওতে সংসদ সদস্যরা" href="/songbad?type=video" linkLabel="সব ভিডিও" />
+            <HomeVideos videos={videos} />
+          </section>
+        )}
       </Page>
     </>
   );
