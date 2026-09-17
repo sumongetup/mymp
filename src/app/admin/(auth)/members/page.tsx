@@ -6,7 +6,7 @@ import { requireAdmin } from '@/lib/admin/auth';
 import { hiddenList, overrideCounts, editedIds } from '@/lib/admin/store';
 import { memberCoverage, membersWithBio } from '@/lib/admin/health';
 import { allQuestions, questionStates } from '@/lib/admin/questions';
-import { AdminPage, Table, Td, Badge, Empty } from '@/app/admin/ui';
+import { AdminPage, Table, Td, Badge, Empty, when } from '@/app/admin/ui';
 
 export const metadata: Metadata = { title: 'সংসদ সদস্য' };
 
@@ -33,6 +33,7 @@ export default async function MembersAdmin({ searchParams }: { searchParams: Pro
     questionStates(),
   ]);
   const hiddenIds = new Set(hidden.filter((h) => h.entity_type === 'member').map((h) => h.entity_id));
+  const hiddenOnly = hidden.filter((h) => h.entity_type === 'member' && !members.some((m) => m.id === h.entity_id));
   const openQuestions = new Map<string, number>();
   for (const x of allQuestions()) if (!states.get(x.id)?.resolved) openQuestions.set(x.memberId, (openQuestions.get(x.memberId) ?? 0) + 1);
 
@@ -46,7 +47,7 @@ export default async function MembersAdmin({ searchParams }: { searchParams: Pro
   };
   // Counts on the filter chips are for sitting members; a resigned member still appears in "সবাই".
   const sitting = members.filter((m) => !m.resignedOn);
-  const counted = Object.fromEntries(FILTERS.map((f) => [f.key, f.key ? sitting.filter((m) => test[f.key]!(m.id)).length : members.length]));
+  const counted = Object.fromEntries(FILTERS.map((f) => [f.key, f.key === 'hidden' ? hiddenIds.size : f.key ? sitting.filter((m) => test[f.key]!(m.id)).length : members.length]));
 
   const words = normalise(q).split(' ').filter(Boolean);
   const list = (filter && test[filter] ? sitting.filter((m) => test[filter]!(m.id)) : members)
@@ -94,8 +95,24 @@ export default async function MembersAdmin({ searchParams }: { searchParams: Pro
         <button type="submit" className="h-11 px-5 rounded-lg bg-brand text-white font-semibold text-[14.5px]">খুঁজুন</button>
       </form>
 
+      {/* A hidden member is left out of the published list, so they are listed here by id to be brought back. */}
+      {filter === 'hidden' && hiddenOnly.length > 0 && (
+        <Table head={['আইডি', 'কবে সরানো', 'কারণ', '']} minWidth={560}>
+          {hiddenOnly.map((h) => (
+            <tr key={h.entity_id}>
+              <Td className="tnum">{h.entity_id}</Td>
+              <Td className="whitespace-nowrap text-muted">{when(h.hidden_at)}</Td>
+              <Td>{h.reason ?? 'নেই'}</Td>
+              <Td className="text-end whitespace-nowrap">
+                <Link href={`/admin/members/${h.entity_id}`} className="font-semibold text-brand hover:underline">আবার দেখান →</Link>
+              </Td>
+            </tr>
+          ))}
+        </Table>
+      )}
+
       {list.length === 0 ? (
-        <Empty>কিছু পাওয়া যায়নি।</Empty>
+        filter === 'hidden' && hiddenOnly.length ? null : <Empty>কিছু পাওয়া যায়নি।</Empty>
       ) : (
         <>
           <p className="text-[13px] text-muted">{bn(list.length)} জন</p>

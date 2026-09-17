@@ -27,7 +27,22 @@ export default async function EditMember({
   const { id } = await params;
   const flags = await searchParams;
   const m = getMemberById(id);
-  if (!m) notFound();
+  if (!m) {
+    // A hidden member is left out of the published data, so this page cannot
+    // show their details; it can still bring them back.
+    const hiddenRow = await isHidden('member', id);
+    if (!hiddenRow) notFound();
+    return (
+      <AdminPage title={`লুকানো সদস্য ${id}`} lede="এই সদস্য সাইট থেকে সরানো আছে, তাই প্রকাশিত তথ্যে তাঁর বিবরণ নেই। আবার দেখালে পরের প্রকাশে সাইটে ফিরবেন, তারপর এখানে সম্পাদনা করা যাবে।">
+        <EditFlags flags={flags} noun="সদস্যটি" />
+        <Notice tone="warn">সরানো হয়েছে {when(hiddenRow.hidden_at)}{hiddenRow.reason ? `: ${hiddenRow.reason}` : ''}।</Notice>
+        <div className="max-w-[420px] flex flex-col gap-4">
+          <HidePanel type="member" id={id} hidden={hiddenRow} noun="সদস্যের তথ্য" />
+          <AuditLink id={id} type="member" />
+        </div>
+      </AdminPage>
+    );
+  }
 
   const questions = questionsFor(id);
   const [overrides, hidden, variants, states] = await Promise.all([
@@ -135,7 +150,7 @@ export default async function EditMember({
           </Panel>
 
           <HidePanel type="member" id={id} hidden={hidden} noun="সদস্যের তথ্য" />
-          <AuditLink id={id} />
+          <AuditLink id={id} type="member" />
         </div>
       </div>
     </AdminPage>

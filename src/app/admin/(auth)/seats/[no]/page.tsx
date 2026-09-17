@@ -34,7 +34,7 @@ export default async function EditSeat({
       lede={[seat.nameEn, seat.reserved ? 'সংরক্ষিত নারী আসন' : 'সাধারণ আসন'].filter(Boolean).join(', ')}
       actions={<Button kind="secondary" href={`/ason/${seat.slug}`}>সাইটে দেখুন ↗</Button>}
     >
-      <EditFlags flags={flags} noun="আসনটি" />
+      <EditFlags flags={flags} noun="আসনটি" type="seat" />
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4 items-start">
         <EntityEditor
@@ -56,7 +56,7 @@ export default async function EditSeat({
               আসনে কে আছেন তা সংসদের তথ্যভান্ডার ঠিক করে। কোনো সদস্যকে সরাতে চাইলে তাঁর নিজের পাতায় যান।
             </p>
           </Panel>
-          <AuditLink id={no} />
+          <AuditLink id={no} type="seat" />
         </div>
       </div>
     </AdminPage>

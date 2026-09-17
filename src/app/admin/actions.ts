@@ -5,7 +5,7 @@ import { revalidatePath } from 'next/cache';
 import { supabaseSession } from '@/lib/supabase/server';
 import { requireAdmin, requireSuperAdmin } from '@/lib/admin/auth';
 import {
-  EDITABLE, type EntityType, setOverride, clearOverride, setHidden,
+  EDITABLE, type EntityType, setOverride, clearOverride, setHidden, overridesFor,
   upsertNews, setNewsStatus, resolveCorrection, addAdmin, removeAdmin, audit,
   upsertResult, setResultStatus, socialOverrides, dropSocialSource, dropBioFromWiki, setPostAlias,
 } from '@/lib/admin/store';
@@ -85,27 +85,38 @@ export async function saveOverrides(fd: FormData) {
   const id = str(fd, 'entity_id');
   if (!EDITABLE[type] || !id) throw new Error('bad entity');
 
-  let invalid: string | null = null;
+  const invalid: string[] = [];
+  const conflict: string[] = [];
   let socialSaved = false;
   const bioSaved: string[] = [];
+  // Someone else may have saved this record since the form was opened.
+  const loadedAt = str(fd, 'loaded_at');
+  const stored = new Map((await overridesFor(type, id)).map((o) => [o.field, o]));
   for (const f of EDITABLE[type]) {
     const next = orNull(str(fd, `field__${f.key}`));
     const current = orNull(str(fd, `current__${f.key}`));
     if (next === current) continue;
+    const theirs = stored.get(f.key);
+    if (theirs && loadedAt && new Date(theirs.updated_at).getTime() > Date.parse(loadedAt) && theirs.value !== next) {
+      conflict.push(f.key);
+      continue;
+    }
     if (type === 'member' && next && f.key in SOCIAL_HOSTS && !validUrl(next, SOCIAL_HOSTS[f.key as keyof typeof SOCIAL_HOSTS])) {
-      invalid = f.key;
+      invalid.push(f.key);
       continue;
     }
     // Any other link field (a party's website) must at least be a full https address.
     if (type !== 'member' && f.url && next && !/^https:\/\/[^\s/]+\.[^\s]+$/.test(next)) {
-      invalid = f.key;
+      invalid.push(f.key);
       continue;
     }
     // A date, a number or a choice must be one the site can read, or the page breaks.
-    if (next && f.date && !validPastDate(next)) { invalid = f.key; continue; }
-    if (next && f.number && !(/^\d+$/.test(next) && +next >= f.number.min && +next <= f.number.max)) { invalid = f.key; continue; }
-    if (next && f.options && !f.options.some((o) => o.value === next)) { invalid = f.key; continue; }
-    await setOverride(me, type, id, f.key, next, current);
+    if (next && f.date && !validPastDate(next)) { invalid.push(f.key); continue; }
+    if (next && f.number && !(/^\d+$/.test(next) && +next >= f.number.min && +next <= f.number.max)) { invalid.push(f.key); continue; }
+    if (next && f.options && !f.options.some((o) => o.value === next)) { invalid.push(f.key); continue; }
+    // Keep a pasted biography or name inside what a page can show.
+    if (next && next.length > (f.multiline ? 20_000 : 500)) { invalid.push(f.key); continue; }
+    await setOverride(me, type, id, f.key, next, current ?? theirs?.value ?? null);
     if (f.key in SOCIAL_HOSTS) socialSaved = true;
     if (['educationBn', 'birthPlaceBn', 'professionBn'].includes(f.key)) bioSaved.push(f.key);
   }
@@ -114,9 +125,12 @@ export async function saveOverrides(fd: FormData) {
   if (type === 'member' && socialSaved) await dropSocialSource(me, id);
   // "party" + "s" is not the route: parties live at /admin/parties.
   const page = `/admin/${ADMIN_PATH[type]}/${id}`;
-  if (invalid) redirect(`${page}?invalid=${invalid}`);
   revalidatePath(page);
-  redirect(`${page}?saved=1`);
+  const flags = new URLSearchParams({
+    ...(invalid.length ? { invalid: invalid.join(',') } : {}),
+    ...(conflict.length ? { conflict: conflict.join(',') } : {}),
+  });
+  redirect(`${page}?${flags.size ? flags : 'saved=1'}`);
 }
 
 export interface SocialImportState {
@@ -161,6 +175,8 @@ export async function importSocialLinks(_prev: SocialImportState, fd: FormData):
       saved++;
       changed.push(label[l.key] ?? l.key);
     }
+    // Saved here as on the member's own page: the links are now the editor's, not Wikipedia's.
+    if (changed.length) await dropSocialSource(me, p.memberId);
     lines.push({ line: p.line, raw: p.raw, who: p.memberName, ok: true, message: changed.length ? `সংরক্ষিত: ${changed.join(', ')}` : 'আগের মতোই আছে' });
   }
   revalidatePath('/admin/social');
@@ -175,17 +191,19 @@ export async function revertOverride(field: string, fd: FormData) {
   const type = str(fd, 'entity_type') as EntityType;
   const id = str(fd, 'entity_id');
   if (!EDITABLE[type]?.some((f) => f.key === field)) throw new Error('bad field');
-  // The revert button submits the whole edit form, so the current value travels as current__<field>.
-  await clearOverride(me, type, id, field, orNull(str(fd, `current__${field}`)));
-  const seg = type === 'member' ? 'members' : type + 's';
-  revalidatePath(`/admin/${seg}/${id}`);
-  redirect(`/admin/${seg}/${id}?reverted=1`);
+  // The revert has its own small form (so the edit form's unsaved text is not
+  // submitted and lost); the value being removed travels as `current`.
+  await clearOverride(me, type, id, field, orNull(str(fd, 'current')));
+  const page = `/admin/${ADMIN_PATH[type]}/${id}`;
+  revalidatePath(page);
+  redirect(`${page}?reverted=1`);
 }
 
 export async function toggleHidden(fd: FormData) {
   const me = await requireAdmin();
   const type = str(fd, 'entity_type') as 'member' | 'committee';
   const id = str(fd, 'entity_id');
+  if ((type !== 'member' && type !== 'committee') || !id) throw new Error('bad entity');
   const hide = str(fd, 'hide') === '1';
   await setHidden(me, type, id, hide, orNull(str(fd, 'reason')));
   const seg = type === 'member' ? 'members' : 'committees';

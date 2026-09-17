@@ -40,7 +40,7 @@ export default async function EditParty({
       lede={`${party.nameEn ?? ''}, ${bn(party.seats)}টি আসন`}
       actions={<Button kind="secondary" href={`/dol/${party.slug}`}>সাইটে দেখুন ↗</Button>}
     >
-      <EditFlags flags={flags} noun="দলটি" />
+      <EditFlags flags={flags} noun="দলটি" type="party" />
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4 items-start">
         <EntityEditor
@@ -73,7 +73,7 @@ export default async function EditParty({
               ))}
             </ul>
           </Panel>
-          <AuditLink id={abbr} />
+          <AuditLink id={abbr} type="party" />
         </div>
       </div>
     </AdminPage>

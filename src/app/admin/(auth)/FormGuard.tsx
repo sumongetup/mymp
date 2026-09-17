@@ -15,11 +15,28 @@ import { useEffect } from 'react';
 export default function FormGuard() {
   useEffect(() => {
     let dirty = false;
+    const dirtyForms = new Set<HTMLFormElement>();
     const onInput = (e: Event) => {
       const t = e.target as HTMLElement | null;
-      if (t?.closest('form') && !(t as HTMLInputElement).readOnly) dirty = true;
+      const form = t?.closest('form');
+      if (form && !(t as HTMLInputElement).readOnly) {
+        dirty = true;
+        dirtyForms.add(form);
+      }
     };
-    const onSubmit = () => { dirty = false; };
+    // Submitting one form reloads the page, which would lose what was typed in
+    // another (a field's revert button beside an edited biography): ask first.
+    const onSubmit = (e: Event) => {
+      const form = e.target as HTMLFormElement;
+      const elsewhere = [...dirtyForms].some((f) => f !== form && f.isConnected);
+      if (elsewhere && !window.confirm('অন্য ঘরে লেখা পরিবর্তন এখনো সংরক্ষণ করা হয়নি। এগিয়ে গেলে সেগুলো হারাবে। এগিয়ে যাবেন?')) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return;
+      }
+      dirty = false;
+      dirtyForms.clear();
+    };
     const onLeave = (e: BeforeUnloadEvent) => {
       if (!dirty) return;
       e.preventDefault();

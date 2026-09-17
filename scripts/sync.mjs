@@ -99,7 +99,17 @@ async function db(path, init = {}) {
 async function dbAll(path) {
   const out = [];
   for (let from = 0; ; from += 1000) {
-    const page = await db(path, { headers: { Range: `${from}-${from + 999}`, 'Range-Unit': 'items' } });
+    let page;
+    // A dropped connection is tried again twice before the build gives up.
+    for (let attempt = 1; ; attempt++) {
+      try {
+        page = await db(path, { headers: { Range: `${from}-${from + 999}`, 'Range-Unit': 'items' } });
+        break;
+      } catch (err) {
+        if (attempt >= 3) throw err;
+        await new Promise((r) => setTimeout(r, 2000 * attempt));
+      }
+    }
     out.push(...page);
     if (page.length < 1000) return out;
   }
@@ -784,8 +794,12 @@ async function main() {
       adminNote = `applied ${overridesApplied} overrides, ${hiddenApplied} hidden`;
       console.log(`  admin: ${adminNote}`);
     } catch (err) {
-      adminNote = `admin merge skipped: ${err.message}`;
-      console.warn(`  ${adminNote}`);
+      // Publishing without the editors' work would put every hidden member back
+      // and undo every correction, while the run reported success. Stop the
+      // build instead: the live site stays as it is until the next try.
+      const e = new Error(`admin edits could not be read, nothing was published: ${err.message}`);
+      e.fatal = true;
+      throw e;
     }
   }
 
@@ -853,7 +867,7 @@ async function main() {
   // Only published items reach the site, and only the fields the site shows.
   if (dbConfigured()) {
     try {
-      const rows = await db('news_posts?select=id,title_bn,source_name,source_url,published_on,excerpt_bn,member_id,seat_slug&status=eq.published&order=published_on.desc,created_at.desc&limit=3000');
+      const rows = await dbAll('news_posts?select=id,title_bn,source_name,source_url,published_on,excerpt_bn,member_id,seat_slug&status=eq.published&order=published_on.desc,created_at.desc,id');
       const news = rows.map((r) => ({
         id: r.id, titleBn: r.title_bn, sourceName: r.source_name, sourceUrl: r.source_url,
         publishedOn: r.published_on, excerptBn: r.excerpt_bn ?? null, memberId: r.member_id ?? null, seatSlug: r.seat_slug ?? null,
@@ -865,7 +879,7 @@ async function main() {
     }
     // Vote counts come only from here: the source has none. Draft rows never leave the database.
     try {
-      const rows = await db('election_results?select=seat_no,parliament_no,candidates,total_votes,turnout,source_url,source_note&status=eq.published&order=seat_no');
+      const rows = await dbAll('election_results?select=seat_no,parliament_no,candidates,total_votes,turnout,source_url,source_note&status=eq.published&order=seat_no,parliament_no');
       const results = rows.map((r) => ({
         seatNo: r.seat_no, parliamentNo: r.parliament_no, candidates: r.candidates ?? [],
         totalVotes: r.total_votes ?? null, turnout: r.turnout == null ? null : Number(r.turnout),
@@ -897,15 +911,16 @@ async function main() {
 
 main().catch(async (err) => {
   console.error('\nSync failed:', err.message);
-  if (SOFT) {
+  // The dashboard's "last sync" shows this, so a failed publish is not mistaken for a quiet one.
+  if (dbConfigured()) {
+    await db('sync_runs', {
+      method: 'POST',
+      body: JSON.stringify({ finished_at: new Date().toISOString(), ok: false, message: err.message.slice(0, 500) }),
+    }).catch(() => {});
+  }
+  if (SOFT && !err.fatal) {
     // Production build: keep the committed snapshot and let the deploy proceed.
     console.warn('--soft: keeping the committed snapshot in data/ and continuing the build.');
-    if (dbConfigured()) {
-      await db('sync_runs', {
-        method: 'POST',
-        body: JSON.stringify({ finished_at: new Date().toISOString(), ok: false, message: err.message.slice(0, 500) }),
-      }).catch(() => {});
-    }
     process.exit(0);
   }
   process.exit(1);

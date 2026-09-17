@@ -146,8 +146,17 @@ export interface AdminUserRow {
 
 export interface Actor { id: string; email: string }
 
+/**
+ * A write Supabase refused comes back as { error }, not as a throw, so every
+ * write here is checked: an editor must never see "saved", or an audit row
+ * record a change, that the database did not keep.
+ */
+function must(res: { error: { message: string } | null }, what: string) {
+  if (res.error) throw new Error(`${what}: ${res.error.message}`);
+}
+
 export async function audit(a: Actor, entry: Omit<AuditRow, 'id' | 'actor_email' | 'created_at'>) {
-  await supabaseAdmin().from('audit_log').insert({ actor: a.id, actor_email: a.email, ...entry });
+  must(await supabaseAdmin().from('audit_log').insert({ actor: a.id, actor_email: a.email, ...entry }), 'the change could not be recorded');
 }
 
 /* ---------------- overrides ---------------- */
@@ -199,10 +208,10 @@ export async function socialOverrides(ids: string[]): Promise<Map<string, Record
 export async function setOverride(a: Actor, type: EntityType, id: string, field: string, value: string | null, oldValue: string | null) {
   if (!EDITABLE[type].some((f) => f.key === field) && !(type === 'member' && field === 'bioFromWiki')) throw new Error(`Field ${field} is not editable on ${type}.`);
   const db = supabaseAdmin();
-  await db.from('overrides').upsert(
+  must(await db.from('overrides').upsert(
     { entity_type: type, entity_id: id, field, value, updated_by: a.id, updated_at: new Date().toISOString() },
     { onConflict: 'entity_type,entity_id,field' },
-  );
+  ), `${field} could not be saved`);
   await audit(a, { action: 'override.set', entity_type: type, entity_id: id, field, old_value: oldValue, new_value: value });
 }
 
@@ -231,7 +240,7 @@ export async function dropBioFromWiki(a: Actor, id: string, fields: string[]) {
 }
 
 export async function clearOverride(a: Actor, type: EntityType, id: string, field: string, oldValue: string | null) {
-  await supabaseAdmin().from('overrides').delete().match({ entity_type: type, entity_id: id, field });
+  must(await supabaseAdmin().from('overrides').delete().match({ entity_type: type, entity_id: id, field }), `${field} could not be reverted`);
   await audit(a, { action: 'override.clear', entity_type: type, entity_id: id, field, old_value: oldValue, new_value: null });
 }
 
@@ -250,9 +259,9 @@ export async function isHidden(type: 'member' | 'committee', id: string): Promis
 export async function setHidden(a: Actor, type: 'member' | 'committee', id: string, hidden: boolean, reason: string | null) {
   const db = supabaseAdmin();
   if (hidden) {
-    await db.from('hidden_entities').upsert({ entity_type: type, entity_id: id, reason, hidden_by: a.id, hidden_at: new Date().toISOString() });
+    must(await db.from('hidden_entities').upsert({ entity_type: type, entity_id: id, reason, hidden_by: a.id, hidden_at: new Date().toISOString() }), 'could not hide');
   } else {
-    await db.from('hidden_entities').delete().match({ entity_type: type, entity_id: id });
+    must(await db.from('hidden_entities').delete().match({ entity_type: type, entity_id: id }), 'could not show again');
   }
   await audit(a, { action: hidden ? 'entity.hide' : 'entity.unhide', entity_type: type, entity_id: id, field: null, old_value: null, new_value: reason });
 }
@@ -277,7 +286,7 @@ export async function upsertNews(a: Actor, id: string | null, input: NewsInput):
   const db = supabaseAdmin();
   if (id) {
     const before = await getNews(id);
-    await db.from('news_posts').update({ ...input, updated_by: a.id, updated_at: new Date().toISOString() }).eq('id', id);
+    must(await db.from('news_posts').update({ ...input, updated_by: a.id, updated_at: new Date().toISOString() }).eq('id', id), 'the news post could not be saved');
     await audit(a, { action: 'news.update', entity_type: 'news', entity_id: id, field: null, old_value: before?.title_bn ?? null, new_value: input.title_bn });
     return id;
   }
@@ -289,7 +298,7 @@ export async function upsertNews(a: Actor, id: string | null, input: NewsInput):
 
 export async function setNewsStatus(a: Actor, id: string, status: NewsRow['status']) {
   const before = await getNews(id);
-  await supabaseAdmin().from('news_posts').update({ status, updated_by: a.id, updated_at: new Date().toISOString() }).eq('id', id);
+  must(await supabaseAdmin().from('news_posts').update({ status, updated_by: a.id, updated_at: new Date().toISOString() }).eq('id', id), 'the status could not be changed');
   await audit(a, { action: `news.${status}`, entity_type: 'news', entity_id: id, field: 'status', old_value: before?.status ?? null, new_value: status });
 }
 
@@ -303,7 +312,7 @@ export async function listCorrections(status?: CorrectionRow['status']): Promise
 }
 
 export async function resolveCorrection(a: Actor, id: string, status: 'accepted' | 'rejected', note: string | null) {
-  await supabaseAdmin().from('corrections').update({ status, resolution_note: note, resolved_by: a.id, resolved_at: new Date().toISOString() }).eq('id', id);
+  must(await supabaseAdmin().from('corrections').update({ status, resolution_note: note, resolved_by: a.id, resolved_at: new Date().toISOString() }).eq('id', id), 'the correction could not be resolved');
   await audit(a, { action: 'correction.resolve', entity_type: 'correction', entity_id: id, field: 'status', old_value: 'open', new_value: status });
 }
 
@@ -342,14 +351,20 @@ export async function addAdmin(a: Actor, email: string, role: AdminUserRow['role
     userId = created.user.id;
   }
 
-  await db.from('admin_users').upsert({ user_id: userId, email: clean, role });
-  await audit(a, { action: 'user.add', entity_type: 'admin_user', entity_id: userId, field: 'role', old_value: null, new_value: role });
+  if (userId === a.id) throw new Error('নিজের ভূমিকা এখান থেকে বদলানো যায় না। অন্য একজন সুপার অ্যাডমিনকে বলুন।');
+  const { data: before } = await db.from('admin_users').select('role').eq('user_id', userId).maybeSingle();
+  must(await db.from('admin_users').upsert({ user_id: userId, email: clean, role }), 'the admin could not be saved');
+  await audit(a, { action: 'user.add', entity_type: 'admin_user', entity_id: userId, field: 'role', old_value: (before?.role as string | undefined) ?? null, new_value: role });
   return { tempPassword };
 }
 
 export async function removeAdmin(a: Actor, userId: string) {
   const { data: row } = await supabaseAdmin().from('admin_users').select('email, role').eq('user_id', userId).maybeSingle();
-  await supabaseAdmin().from('admin_users').delete().eq('user_id', userId);
+  if (row?.role === 'super_admin') {
+    const { count } = await supabaseAdmin().from('admin_users').select('user_id', { count: 'exact', head: true }).eq('role', 'super_admin');
+    if ((count ?? 0) <= 1) throw new Error('শেষ সুপার অ্যাডমিনকে সরানো যায় না; আগে আরেকজনকে সুপার অ্যাডমিন করুন।');
+  }
+  must(await supabaseAdmin().from('admin_users').delete().eq('user_id', userId), 'the admin could not be removed');
   await audit(a, { action: 'user.remove', entity_type: 'admin_user', entity_id: userId, field: null, old_value: row ? `${row.email} (${row.role})` : null, new_value: null });
 }
 

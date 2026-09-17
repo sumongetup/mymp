@@ -23,7 +23,20 @@ export default async function EditCommittee({
   const { id } = await params;
   const flags = await searchParams;
   const c = committees.find((x) => x.id === id);
-  if (!c) notFound();
+  if (!c) {
+    // A hidden committee is left out of the published data; it can still be brought back.
+    const hiddenRow = await isHidden('committee', id);
+    if (!hiddenRow) notFound();
+    return (
+      <AdminPage title={`লুকানো কমিটি ${id}`} lede="এই কমিটি সাইট থেকে সরানো আছে। আবার দেখালে পরের প্রকাশে সাইটে ফিরবে।">
+        <EditFlags flags={flags} noun="কমিটিটি" type="committee" />
+        <div className="max-w-[420px] flex flex-col gap-4">
+          <HidePanel type="committee" id={id} hidden={hiddenRow} noun="কমিটির তথ্য" />
+          <AuditLink id={id} type="committee" />
+        </div>
+      </AdminPage>
+    );
+  }
 
   const [overrides, hidden] = await Promise.all([overridesFor('committee', id), isHidden('committee', id)]);
 
@@ -33,7 +46,7 @@ export default async function EditCommittee({
       lede={[c.nameEn, c.type, c.startDate ? `গঠিত ${dateBn(c.startDate)}` : null].filter(Boolean).join(', ')}
       actions={<Button kind="secondary" href={`/committee/${c.slug}`}>সাইটে দেখুন ↗</Button>}
     >
-      <EditFlags flags={flags} noun="কমিটিটি" />
+      <EditFlags flags={flags} noun="কমিটিটি" type="committee" />
       {!c.rosterCurrent && (
         <Notice tone="warn">
           এই কমিটির সদস্য তালিকা সংসদের তথ্যভান্ডারে এখনো দ্বাদশ সংসদের। সাইটে সদস্যদের নাম দেখানো হয় না,
@@ -78,7 +91,7 @@ export default async function EditCommittee({
 
         <div className="flex flex-col gap-4">
           <HidePanel type="committee" id={id} hidden={hidden} noun="কমিটিটি" />
-          <AuditLink id={id} />
+          <AuditLink id={id} type="committee" />
         </div>
       </div>
     </AdminPage>
