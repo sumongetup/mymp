@@ -6,14 +6,24 @@ import { requireAdmin } from '@/lib/admin/auth';
 import { counts, listAudit, listSyncRuns } from '@/lib/admin/store';
 import { AdminPage, Panel, Stat, Table, Td, Empty, Notice, when } from '@/app/admin/ui';
 import PublishButton from './PublishButton';
+import { collectorHealth, memberCoverage, membersWithBio, postsUnmatched } from '@/lib/admin/health';
+import { feedCounts } from '@/lib/admin/feed';
+import { allQuestions, questionStates } from '@/lib/admin/questions';
 
 export const metadata: Metadata = { title: 'ড্যাশবোর্ড' };
 
 export default async function Dashboard({ searchParams }: { searchParams: Promise<{ forbidden?: string }> }) {
   await requireAdmin();
   const { forbidden } = await searchParams;
-  const [c, recent, runs] = await Promise.all([counts(), listAudit(8), listSyncRuns(1)]);
+  const [c, recent, runs, collectors, coverage, withBio, feed, qStates, unmatched] = await Promise.all([
+    counts(), listAudit(8), listSyncRuns(1), collectorHealth(), memberCoverage(), membersWithBio(), feedCounts(), questionStates(), postsUnmatched(),
+  ]);
   const lastRun = runs[0];
+  const noNews = members.filter((m) => !coverage[m.id]?.news).length;
+  const noVideo = members.filter((m) => !coverage[m.id]?.video).length;
+  const bios = members.filter((m) => withBio.has(m.id)).length;
+  const openQuestions = allQuestions().filter((q) => !qStates.get(q.id)?.resolved).length;
+  const staleCollectors = collectors.filter((x) => x.stale && x.key !== 'search');
   const stale = committees.filter((x) => !x.rosterCurrent).length;
   const session = latestSession();
   const sitting = latestSitting();
@@ -25,13 +35,53 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
       actions={<PublishButton />}
     >
       {forbidden && <Notice tone="warn">ওই পাতাটি শুধু সুপার অ্যাডমিন দেখতে পারেন।</Notice>}
+      {staleCollectors.length > 0 && (
+        <Notice tone="bad">
+          {staleCollectors.map((x) => x.label).join(', ')} সময়মতো চলেনি। নিচের “সংবাদ ও ভিডিও সংগ্রহ” অংশে শেষ চলার সময় দেখুন, আর GitHub-এ “MP feed loop” চালু আছে কিনা দেখুন।
+        </Notice>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
         <Stat label="সংশোধন অনুরোধ (খোলা)" value={bn(c.correctionsOpen)} href="/admin/corrections" icon="message" tone={c.correctionsOpen ? 'warn' : 'neutral'} />
-        <Stat label="সংবাদ খসড়া" value={bn(c.newsDraft)} href="/admin/news?status=draft" icon="file" tone={c.newsDraft ? 'warn' : 'neutral'} />
-        <Stat label="প্রকাশিত সংবাদ" value={bn(c.newsPublished)} href="/admin/news?status=published" icon="check" tone="good" />
-        <Stat label="হাতে সম্পাদিত ফিল্ড" value={bn(c.overrides)} href="/admin/members" icon="users" tone="good" />
+        <Stat label="তথ্য যাচাইয়ের প্রশ্ন (খোলা)" value={bn(openQuestions)} href="/admin/questions" icon="info" tone={openQuestions ? 'warn' : 'good'} />
+        <Stat label="ফিড যাচাইয়ের অপেক্ষায়" value={bn(feed.review)} href="/admin/feed/review" icon="check" tone={feed.review ? 'warn' : 'good'} />
+        <Stat
+          label="মন্ত্রিসভার মেলানো যায়নি এমন নাম"
+          value={bn(unmatched)}
+          href="/admin/sync"
+          icon="refresh"
+          tone={unmatched ? 'warn' : 'good'}
+        />
       </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+        <Stat label="জীবনী লেখা হয়েছে" value={`${bn(bios)}/${bn(members.length)}`} href="/admin/members?filter=nobio" hint={bios < members.length ? `বাকি ${bn(members.length - bios)} জন` : 'সবার আছে'} icon="file" tone={bios === members.length ? 'good' : 'warn'} />
+        <Stat label="কোনো খবর নেই" value={`${bn(noNews)} জন`} href="/admin/members?filter=nonews" hint="সদস্যের পাতায় একটিও খবর নেই" icon="layers" tone={noNews ? 'warn' : 'good'} />
+        <Stat label="কোনো ভিডিও নেই" value={`${bn(noVideo)} জন`} href="/admin/members?filter=novideo" hint="সদস্যের পাতায় একটিও ভিডিও নেই" icon="play" tone={noVideo ? 'warn' : 'good'} />
+        <Stat label="হাতে সম্পাদিত ফিল্ড" value={bn(c.overrides)} href="/admin/audit" icon="users" tone="good" />
+      </div>
+
+      <Panel title="সংবাদ ও ভিডিও সংগ্রহ" action={<Link href="/admin/feed/runs">সব সংগ্রহ →</Link>} flush>
+        <Table head={['সংগ্রাহক', 'শেষ চলেছে', 'ফল', 'নতুন সংযুক্তি']} minWidth={560}>
+          {collectors.map((x) => (
+            <tr key={x.key}>
+              <Td className="font-semibold whitespace-nowrap">{x.label}</Td>
+              <Td className={`whitespace-nowrap ${x.stale && x.key !== 'search' ? 'text-danger font-semibold' : 'text-muted'}`}>{x.lastAt ? when(x.lastAt) : 'কখনো চলেনি'}</Td>
+              <Td className="text-[13px]">
+                {x.status === 'ok' ? (
+                  <span className="text-brand font-semibold">সফল</span>
+                ) : x.status ? (
+                  <span className="text-danger font-semibold">{x.status === 'aborted' ? 'থেমে গেছে' : 'ব্যর্থ'}</span>
+                ) : (
+                  <span className="text-muted">নেই</span>
+                )}
+                {x.message && <span className="block text-muted wrap-anywhere max-w-[360px]">{x.message.slice(0, 140)}</span>}
+              </Td>
+              <Td className="tnum">{bn(x.attached)}</Td>
+            </tr>
+          ))}
+        </Table>
+      </Panel>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
         <Panel title="সংসদে এখন" action={<Link href="/odhibeshon" target="_blank">সাইটে দেখুন ↗</Link>}>

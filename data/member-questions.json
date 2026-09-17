@@ -1,0 +1,2049 @@
+{
+ "generatedOn": "2026-09-17",
+ "note": "Questions raised while every member biography was researched. Each is something a source contradicts or the site lacks; nothing was changed for them.",
+ "categories": {
+  "posts": "পদ, কমিটি বা নির্বাচনী ফল",
+  "dob": "জন্মতারিখ বা মুক্তিযোদ্ধা",
+  "terms": "কতবার নির্বাচিত",
+  "names": "নাম ও পিতা-মাতার নামের বানান",
+  "wiki": "উইকিপিডিয়া লিংক",
+  "fields": "পেশা ও অন্যান্য ঘর",
+  "other": "অন্যান্য"
+ },
+ "questions": [
+  {
+   "id": "7d8cbbf84a34",
+   "memberId": "013000401",
+   "category": "terms",
+   "text": "Site shows termsCount 2, but Jugantor/search coverage says this was his first BNP nomination and Ittefaq says BNP won Thakurgaon-2 for the first time in 37 years; no earlier term found. Please verify termsCount (https://www.ittefaq.com.bd/774730/, https://www.jugantor.com/bnp/1036964). The biography does not state a term number.",
+   "sources": [
+    "https://www.ittefaq.com.bd/774730/,",
+    "https://www.jugantor.com/bnp/1036964"
+   ]
+  },
+  {
+   "id": "86361333024b",
+   "memberId": "013000501",
+   "category": "wiki",
+   "text": "bioSource is empty, but the bn Wikipedia article জাহিদুর রহমান is this member (Thakurgaon-3, BNP, elected 2018 and 2026): https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%A6%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "b8c38e8c993e",
+   "memberId": "013000901",
+   "category": "posts",
+   "text": "The whip post on the site has fromDate 2026-09-12, but a Bangladesh Today report dated 25 March 2026 already calls him 'হুইপ আখতারুজ্জামান মিয়া' (https://thebangladeshtoday.com/bangla/country/2026/03/25/141345). The start date looks wrong; please check.",
+   "sources": [
+    "https://thebangladeshtoday.com/bangla/country/2026/03/25/141345"
+   ]
+  },
+  {
+   "id": "af659e282d45",
+   "memberId": "013001001",
+   "category": "names",
+   "text": "Name is stored with commas, 'এ, জেড, এম, রেজওয়ানুল হক' / 'A, Z, M, Rezwanul Haque'. Wikipedia and press write 'এ জেড এম রেজওয়ানুল হক' (https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%9C%E0%A7%87%E0%A6%A1_%E0%A6%8F%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95). Consider fixing the spelling (the bio uses the site form as instructed).",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%9C%E0%A7%87%E0%A6%A1_%E0%A6%8F%E0%A6%AE_%E0%A6%B0%E0%A7%87%E0%A6%9C%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95"
+   ]
+  },
+  {
+   "id": "92f1bed947da",
+   "memberId": "013001301",
+   "category": "names",
+   "text": "fatherEn reads 'Muhammad Abdul Atif' while fatherBn is 'মুহাম্মদ আব্দুল লতীফ'; the English looks like a typo for 'Muhammad Abdul Latif' (the member's own name ends 'Abdul Latif', see https://www.bssnews.net/bangla/national/283290).",
+   "sources": [
+    "https://www.bssnews.net/bangla/national/283290"
+   ]
+  },
+  {
+   "id": "a32ec556c0f0",
+   "memberId": "013001601",
+   "category": "names",
+   "text": "Name spelling differs: site 'হাসান রাজীব প্রধান' (as BSS writes it) vs Wikipedia title 'হাসান রাজিব প্রধান'. Site form looks right; no change needed unless the owner prefers otherwise (https://www.bssnews.net/bangla/news/283562).",
+   "sources": [
+    "https://www.bssnews.net/bangla/news/283562"
+   ]
+  },
+  {
+   "id": "c79e97ef0a2d",
+   "memberId": "013001901",
+   "category": "dob",
+   "text": "Birthplace conflict: site birthPlaceBn is 'পশ্চিম বড়বিল, গংগাচড়া, রংপুর' but bn Wikipedia says he was born in পাকুড়িয়া শরীফ village, Gangachara (https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B0%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%80). The Wikipedia claim is unreferenced, so no field change proposed; the bio names only the upazila.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%B0%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BF%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%80"
+   ]
+  },
+  {
+   "id": "5324c285b3e8",
+   "memberId": "013002201",
+   "category": "dob",
+   "text": "Date of birth conflict: site has 1997-09-07; bn Wikipedia gives 7 July 1997 in the lead and 7 July 1998 in the body (https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%96%E0%A6%A4%E0%A6%BE%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)). The bio leaves the date out; please verify against the affidavit.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%96%E0%A6%A4%E0%A6%BE%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "8da98f85c7ef",
+   "memberId": "013002301",
+   "category": "posts",
+   "text": "TBS result lists the BNP runner-up also as 'Md. Golam Rabbani' (same name as the winner). Not an error in itself, but worth knowing if names are matched automatically (https://www.tbsnews.net/election-2026-seat/rangpur-5).",
+   "sources": [
+    "https://www.tbsnews.net/election-2026-seat/rangpur-5"
+   ]
+  },
+  {
+   "id": "a082f76dd75e",
+   "memberId": "013002401",
+   "category": "wiki",
+   "text": "bioSource is empty, but the bn Wikipedia article 'মো. নুরুল আমিন' is this member (Rangpur-6, Jamaat, general secretary of Majlisul Mufassirin): https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "91663640e522",
+   "memberId": "013002501",
+   "category": "wiki",
+   "text": "bioSource is empty, but bn Wikipedia 'আনোয়ারুল ইসলাম (কুড়িগ্রামের রাজনীতিবিদ)' is this member (Kurigram-1, Jamaat, born 1 March 1970 as on the site): https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A8%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_(%E0%A6%95%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%A8%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_(%E0%A6%95%E0%A7%81%E0%A6%A1%E0%A6%BC%E0%A6%BF%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "a10f326f9927",
+   "memberId": "013002701",
+   "category": "wiki",
+   "text": "bioSource is empty, but bn Wikipedia 'মো. মাহবুবুল আলম' is this member (Kurigram-3, Jamaat, known as Mahbub Salehi): https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%B2%E0%A6%AE",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AC%E0%A7%81%E0%A6%AC%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%B2%E0%A6%AE"
+   ]
+  },
+  {
+   "id": "0b4e9fd61b9c",
+   "memberId": "013002901",
+   "category": "wiki",
+   "text": "bioSource is empty; bn Wikipedia 'মো. মাজেদুর রহমান' is a one-line stub about this member (Gaibandha-1, Jamaat, 2026): https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%A6%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A7%87%E0%A6%A6%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "3d80a80b602c",
+   "memberId": "013003901",
+   "category": "posts",
+   "text": "Committees list for this member is empty, but North Capital News reports he was made a member of the Standing Committee on the Ministry of Housing and Public Works, formed in parliament on 7 September 2026 (chair: Bogura-6 MP Rezaul Karim Badsha). https://northcapitalnews.com/%E0%A6%97%E0%A7%83%E0%A6%B9%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%A3-%E0%A6%93-%E0%A6%97%E0%A6%A3%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A4-%E0%A6%AE%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A7%8D%E0%A6%B0",
+   "sources": [
+    "https://northcapitalnews.com/%E0%A6%97%E0%A7%83%E0%A6%B9%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%A3-%E0%A6%93-%E0%A6%97%E0%A6%A3%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A4-%E0%A6%AE%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A7%8D%E0%A6%B0"
+   ]
+  },
+  {
+   "id": "eea38a36d30e",
+   "memberId": "013004101",
+   "category": "posts",
+   "text": "The seat result in the pack is the February general election won by Tarique Rahman (TBS bogra-6). This member won the 9 April 2026 by-election with 1,33,931 votes against Jamaat's Abidur Rahman (57,159). The by-election result should be shown instead. https://www.prothomalo.com/bangladesh/district/miel1pmfw9",
+   "sources": [
+    "https://www.prothomalo.com/bangladesh/district/miel1pmfw9"
+   ]
+  },
+  {
+   "id": "9cdcab2baa5e",
+   "memberId": "013004101",
+   "category": "posts",
+   "text": "Committees list is empty, but North Capital News reports he was made chair of the Standing Committee on the Ministry of Housing and Public Works, formed on 7 September 2026. https://northcapitalnews.com/%E0%A6%97%E0%A7%83%E0%A6%B9%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%A3-%E0%A6%93-%E0%A6%97%E0%A6%A3%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A4-%E0%A6%AE%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A7%8D%E0%A6%B0",
+   "sources": [
+    "https://northcapitalnews.com/%E0%A6%97%E0%A7%83%E0%A6%B9%E0%A6%BE%E0%A6%AF%E0%A6%BC%E0%A6%A3-%E0%A6%93-%E0%A6%97%E0%A6%A3%E0%A6%AA%E0%A7%82%E0%A6%B0%E0%A7%8D%E0%A6%A4-%E0%A6%AE%E0%A6%A8%E0%A7%8D%E0%A6%A4%E0%A7%8D%E0%A6%B0"
+   ]
+  },
+  {
+   "id": "b9514e69032a",
+   "memberId": "013004101",
+   "category": "fields",
+   "text": "The member has no parliament email on the site, unlike other members (probably bogra.6@parliament.gov.bd, unverified).",
+   "sources": []
+  },
+  {
+   "id": "92efa1103e6c",
+   "memberId": "013004201",
+   "category": "posts",
+   "text": "Name spelling: the site shows 'মোরশেদ মিলটন', but Bangladesh Pratidin, Dhaka Post and Khobor Sangjog all write 'মোরশেদ মিল্টন'. https://www.bd-pratidin.com/election/2026/01/03/1199727",
+   "sources": [
+    "https://www.bd-pratidin.com/election/2026/01/03/1199727"
+   ]
+  },
+  {
+   "id": "88c2c2f50373",
+   "memberId": "013004501",
+   "category": "fields",
+   "text": "Email on the site is malformed: 'chapainawabganj.3@parliament.gmail' (other members use @parliament.gov.bd).",
+   "sources": []
+  },
+  {
+   "id": "2f4ef67a532c",
+   "memberId": "013004501",
+   "category": "names",
+   "text": "Existing educationBn names 'বহরিমোহন উচ্চ বিদ্যালয়'; Wikipedia and his own biography page say 'হরিমোহন সরকারি উচ্চ বিদ্যালয়'. The proposed educationBn replaces it. https://nurulislambulbul.com/biography",
+   "sources": [
+    "https://nurulislambulbul.com/biography"
+   ]
+  },
+  {
+   "id": "893922899a3a",
+   "memberId": "013004501",
+   "category": "fields",
+   "text": "professionBn is 'লেখক', but neither Wikipedia nor his own biography describes him as a writer; they list teacher, university registrar, hospital MD and chairman of an advertising firm. Owner may want to review.",
+   "sources": []
+  },
+  {
+   "id": "29c9e08b0905",
+   "memberId": "013004901",
+   "category": "terms",
+   "text": "termsCount is missing from this member's site record (all other members in the batch have it); should be 1 per Wikipedia and Prothom Alo.",
+   "sources": []
+  },
+  {
+   "id": "5821a65b0ac1",
+   "memberId": "013004901",
+   "category": "wiki",
+   "text": "bioSource holds two URLs in one string separated by a space (bn and en Wikipedia), which may break a link.",
+   "sources": []
+  },
+  {
+   "id": "e80d30a1c99f",
+   "memberId": "013004901",
+   "category": "other",
+   "text": "en Wikipedia's Early life line calls him 'Sayed' (copy error in the article) and says he became upazila chairman in 2006, a year with no upazila elections; the year was not used. https://en.wikipedia.org/wiki/Ekramul_Bari_Tipu",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ekramul_Bari_Tipu"
+   ]
+  },
+  {
+   "id": "774d48d5e89c",
+   "memberId": "013005001",
+   "category": "names",
+   "text": "fatherEn and motherEn are empty for this member while the Bangla names are present.",
+   "sources": []
+  },
+  {
+   "id": "20389eab94ae",
+   "memberId": "013005201",
+   "category": "dob",
+   "text": "Birthplace conflict: site birthPlaceBn says 'Tanore Upazila, Rajshahi District, East Bengal' (English, with a colonial-era region), while the body of his en Wikipedia article says he was born in Alatuli village, Godagari Upazila. Needs checking before a Bangla value is set. https://en.wikipedia.org/wiki/Mujibur_Rahman_(Rajshahi_politician)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mujibur_Rahman_(Rajshahi_politician"
+   ]
+  },
+  {
+   "id": "e6669a37a1d6",
+   "memberId": "013006101",
+   "category": "names",
+   "text": "motherEn reads 'Abeda Kuatun', likely a typo for 'Abeda Khatun' (motherBn is আবেদা খাতুন).",
+   "sources": []
+  },
+  {
+   "id": "6e9164ca24df",
+   "memberId": "013006401",
+   "category": "wiki",
+   "text": "The English Wikipedia article in bioSource (https://en.wikipedia.org/wiki/Md._Aynul_Haque) says he is MP for Sirajganj-1; he is MP for Sirajganj-3. Same person (DOB 12 Sep 1968, Raiganj), but the article's seat is wrong.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Aynul_Haque"
+   ]
+  },
+  {
+   "id": "e33f5ed3a7c4",
+   "memberId": "013006501",
+   "category": "posts",
+   "text": "Bangla Wikipedia says he has been opposition whip since 17 Feb 2026, but the pack's posts list is empty. Please check whether the whip post should be shown (https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8).",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%96%E0%A6%BE%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "7998c1f6b9a2",
+   "memberId": "013006701",
+   "category": "names",
+   "text": "fatherEn is empty; Wikipedia gives the father as M. A. Matin (Mohammed Abdul Matin).",
+   "sources": []
+  },
+  {
+   "id": "0c598385fe60",
+   "memberId": "013006801",
+   "category": "names",
+   "text": "Bangla Wikipedia gives the mother's name as শামসুন্নাহার বেগম (also former secretary of the Jamaat women's wing); the site shows শামসুন্নাহার নিজামী. Probably the same person under a married name; please confirm the form to display.",
+   "sources": []
+  },
+  {
+   "id": "9a7b0e53d60e",
+   "memberId": "013007101",
+   "category": "wiki",
+   "text": "A fuller Bangla Wikipedia article exists (https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%AC_%E0%A6%AE%E0%A6%A3%E0%A7%8D%E0%A6%A1%E0%A6%B2); bioSource points to the English stub. Same person (DOB, parents, Pabna-4).",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%81_%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%AC_%E0%A6%AE%E0%A6%A3%E0%A7%8D%E0%A6%A1%E0%A6%B2"
+   ]
+  },
+  {
+   "id": "806c8b99b6cb",
+   "memberId": "013007201",
+   "category": "posts",
+   "text": "BSS (8 Sep 2026) reports he chairs the parliamentary standing committee on the Ministry of Labour and Employment, but the pack's committees list is empty (https://www.bssnews.net/bangla/news/339138).",
+   "sources": [
+    "https://www.bssnews.net/bangla/news/339138"
+   ]
+  },
+  {
+   "id": "c836767141db",
+   "memberId": "013007201",
+   "category": "wiki",
+   "text": "bioSource is empty. Bangla Wikipedia article for him: https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%AE%E0%A6%9B%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B6%E0%A6%BF%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8 (English: https://en.wikipedia.org/wiki/Shamsur_Rahman_Simul_Biswas).",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%AE%E0%A6%9B%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B6%E0%A6%BF%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8",
+    "https://en.wikipedia.org/wiki/Shamsur_Rahman_Simul_Biswas"
+   ]
+  },
+  {
+   "id": "7187939f28f1",
+   "memberId": "013007301",
+   "category": "posts",
+   "text": "Meherpur Pratidin (8 Sep 2026) reports he was made a member of the standing committee on the Ministry of Housing and Public Works, but the pack's committees list is empty.",
+   "sources": []
+  },
+  {
+   "id": "e5116fee4983",
+   "memberId": "013007301",
+   "category": "wiki",
+   "text": "bioSource is empty; an English Wikipedia stub exists for him (Meherpur-1, Jamaat): https://en.wikipedia.org/wiki/Md._Tajuddin_Khan.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Md._Tajuddin_Khan."
+   ]
+  },
+  {
+   "id": "3be479cd987a",
+   "memberId": "013007501",
+   "category": "names",
+   "text": "bioSource is empty. Bangla Wikipedia article for him (same DOB, seat and father): https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A7%81_%E0%A6%AE%E0%A7%8B%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A7%8D%E0%A6%9A%E0%A7%81_%E0%A6%AE%E0%A7%8B%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE"
+   ]
+  },
+  {
+   "id": "728cd15a6179",
+   "memberId": "013007501",
+   "category": "names",
+   "text": "fatherEn is spelled 'Ashanul Haque Mollaha'; Wikipedia spells the father আহসানুল হক মোল্লা (Ahsanul Haque Mollah).",
+   "sources": []
+  },
+  {
+   "id": "0bb5d6371fae",
+   "memberId": "013007601",
+   "category": "wiki",
+   "text": "bioSource is empty. Wikipedia articles for him (same seat and parents): https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%97%E0%A6%AB%E0%A7%81%E0%A6%B0 and https://en.wikipedia.org/wiki/Abdul_Gafur_(Bangladeshi_politician).",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%97%E0%A6%AB%E0%A7%81%E0%A6%B0",
+    "https://en.wikipedia.org/wiki/Abdul_Gafur_(Bangladeshi_politician"
+   ]
+  },
+  {
+   "id": "6e0818d308f1",
+   "memberId": "013007801",
+   "category": "wiki",
+   "text": "bioSource is empty. Wikipedia articles for him (same DOB, parents, seat): https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AB%E0%A6%9C%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A7%81%E0%A6%B7%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6) and https://en.wikipedia.org/wiki/Afjal_Hossain",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AB%E0%A6%9C%E0%A6%BE%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8_(%E0%A6%95%E0%A7%81%E0%A6%B7%E0%A7%8D%E0%A6%9F%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6",
+    "https://en.wikipedia.org/wiki/Afjal_Hossain"
+   ]
+  },
+  {
+   "id": "bfad98568e80",
+   "memberId": "013008001",
+   "category": "wiki",
+   "text": "bioSource is empty. Wikipedia stubs for him (Chuadanga-2, Jamaat): https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%81%E0%A6%B9%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8_(%E0%A6%9A%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A1%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6) and https://en.wikipedia.org/wiki/Md._Ruhul_Amin_(Chuadanga_politician)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A7%81%E0%A6%B9%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8_(%E0%A6%9A%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%A1%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A6%BE%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6",
+    "https://en.wikipedia.org/wiki/Md._Ruhul_Amin_(Chuadanga_politician"
+   ]
+  },
+  {
+   "id": "8e9dafcebff9",
+   "memberId": "013008201",
+   "category": "names",
+   "text": "Name spelling differs across sources: the site has আবু বকর, Bangla Wikipedia has আবু বক্কর, Jago News has আবুবকর. Please confirm the official spelling.",
+   "sources": []
+  },
+  {
+   "id": "05f67be0fa44",
+   "memberId": "013008201",
+   "category": "posts",
+   "text": "Vote count check: TBS gives 1,95,702 votes, but a search-result summary of Inqilab/Dhaka Times reported 1,22,905. The bio uses TBS; worth a second look at the TBS figure.",
+   "sources": []
+  },
+  {
+   "id": "9766103060c4",
+   "memberId": "013008401",
+   "category": "posts",
+   "text": "TBS result data for Jhenaidah-4 lists the 2nd and 3rd candidates (Md Saiful Islam Firoz, Ind, and Md Rashed Khan, BNP) with the identical figure 77,104 votes, which looks like a data error (https://www.tbsnews.net/election-2026-seat/jhenaidah-4).",
+   "sources": [
+    "https://www.tbsnews.net/election-2026-seat/jhenaidah-4"
+   ]
+  },
+  {
+   "id": "7636ae768e75",
+   "memberId": "013008401",
+   "category": "names",
+   "text": "nameEn is 'Md. Abu Taleb' while nameBn is আবু তালিব and Wikipedia uses 'Md. Abu Talib'. Please align the English spelling.",
+   "sources": []
+  },
+  {
+   "id": "3c59fa30e347",
+   "memberId": "013008801",
+   "category": "wiki",
+   "text": "bn.wikipedia has an article on this member (গোলাম রছুল, Jashore-4) that the pack did not link; bioSource is empty and could point to https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B0%E0%A6%9B%E0%A7%81%E0%A6%B2",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A7%8B%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B0%E0%A6%9B%E0%A7%81%E0%A6%B2"
+   ]
+  },
+  {
+   "id": "5003f78d4bf6",
+   "memberId": "013008901",
+   "category": "dob",
+   "text": "Date of birth: site shows 1959-06-03, bn.wikipedia says 6 September 1957. Needs owner check. https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%8F%E0%A6%A8%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95"
+   ]
+  },
+  {
+   "id": "3b8f688b41ce",
+   "memberId": "013009101",
+   "category": "wiki",
+   "text": "bn.wikipedia stub for this member (same seat, same DOB 30 May 1964) is not linked as bioSource: https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%A8%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%AE%E0%A6%A8%E0%A7%8B%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "90ed39e47f30",
+   "memberId": "013009101",
+   "category": "posts",
+   "text": "Party role sources differ: Prothom Alo (13 Dec 2024) names him member secretary of the Magura district BNP convening committee, while bn.wikipedia calls him district convener. partyRoleBn proposal follows Wikipedia; owner may want to confirm. https://www.prothomalo.com/bangladesh/district/7dp58g5a1t",
+   "sources": [
+    "https://www.prothomalo.com/bangladesh/district/7dp58g5a1t"
+   ]
+  },
+  {
+   "id": "c67c429d16b0",
+   "memberId": "013009101",
+   "category": "names",
+   "text": "News outlets use the name 'মনোয়ার হোসেন খান'; site shows 'মোঃ মনোয়ার হোসেন'. Not necessarily wrong.",
+   "sources": []
+  },
+  {
+   "id": "80278be0ef2e",
+   "memberId": "013009301",
+   "category": "names",
+   "text": "Father's name differs: site shows 'খলিলুর রহমান বিশ্বাস', bn.wikipedia says 'বিশ্বাস ইদ্রিস আহমেদ'. Needs owner check. https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8_%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%80%E0%A6%B0_%E0%A6%86%E0%A6%B2%E0%A6%AE",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%B8_%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A7%80%E0%A6%B0_%E0%A6%86%E0%A6%B2%E0%A6%AE"
+   ]
+  },
+  {
+   "id": "a50bf95c2335",
+   "memberId": "013009301",
+   "category": "posts",
+   "text": "Wikipedia articles (bn and en) on this member exist (same seat, same 99,975 votes) but bioSource is empty.",
+   "sources": []
+  },
+  {
+   "id": "b4f970b4f2de",
+   "memberId": "013009601",
+   "category": "dob",
+   "text": "Date of birth: site shows 1984-02-15; bn.wikipedia gives 15 February 1986 in its lead and 15 February 1985 in its body. Needs owner check. https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A6",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A7%87%E0%A6%96_%E0%A6%AE%E0%A6%A8%E0%A6%9C%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "52b2f335964b",
+   "memberId": "013009601",
+   "category": "dob",
+   "text": "Birth village: site birthPlaceBn says 'দেওয়ানহাটি গ্রাম', the same Wikipedia article's body says 'দেওয়ানবাটি', Bagerhat Sadar upazila. One of them is a typo; owner should confirm before changing.",
+   "sources": []
+  },
+  {
+   "id": "a074906d6853",
+   "memberId": "013009901",
+   "category": "names",
+   "text": "English name spelling: site nameEn is 'Amir Azez Khan'; Wikipedia and news use 'Amir Ejaz Khan', matching the Bangla 'এজাজ'. https://en.wikipedia.org/wiki/Amir_Ejaz_Khan",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Amir_Ejaz_Khan"
+   ]
+  },
+  {
+   "id": "94f44da17eec",
+   "memberId": "013010101",
+   "category": "wiki",
+   "text": "bioSource points to en.wikipedia 'Rakibul Islam (politician)', a stub about his wife only; the fuller bn.wikipedia article is https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%95%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AC%E0%A6%95%E0%A7%81%E0%A6%B2 (same person, same seat).",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%95%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AC%E0%A6%95%E0%A7%81%E0%A6%B2"
+   ]
+  },
+  {
+   "id": "41749827a362",
+   "memberId": "013010101",
+   "category": "posts",
+   "text": "Whip post: site records fromDate 2026-09-12, bn.wikipedia says he was appointed whip on 2 March 2026. Check the date.",
+   "sources": []
+  },
+  {
+   "id": "b7d90494da5b",
+   "memberId": "013010201",
+   "category": "names",
+   "text": "English name spelling: site nameEn 'SK Azizul Baree', Wikipedia uses 'SK Azizul Bari Helal'. Owner may prefer 'Bari'. https://en.wikipedia.org/wiki/SK_Azizul_Bari_Helal",
+   "sources": [
+    "https://en.wikipedia.org/wiki/SK_Azizul_Bari_Helal"
+   ]
+  },
+  {
+   "id": "c9fc9c2613e3",
+   "memberId": "013010301",
+   "category": "wiki",
+   "text": "bioSource holds two URLs in one string separated by a space (bn and en Wikipedia); may break a link renderer.",
+   "sources": []
+  },
+  {
+   "id": "6a0801b03140",
+   "memberId": "013010301",
+   "category": "other",
+   "text": "BCB presidency dates differ between sources: en.wikipedia says 2001 to 2006, bn.wikipedia says from 2001 with no end year. Bio uses the en.wikipedia range.",
+   "sources": []
+  },
+  {
+   "id": "1cebdf7a0eef",
+   "memberId": "013010801",
+   "category": "other",
+   "text": "PARTY: bn and en Wikipedia both say Bangladesh Jamaat-e-Islami expelled him on 22 July 2026 (moral turpitude clause). Site still lists him under Jamaat. Owner should verify with a news source and decide how the site shows his party. https://en.wikipedia.org/wiki/Gazi_Nazrul_Islam",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gazi_Nazrul_Islam"
+   ]
+  },
+  {
+   "id": "933b950368a8",
+   "memberId": "013010801",
+   "category": "dob",
+   "text": "Date of birth: site shows 1951-10-21, bn.wikipedia says 21 May 1951. https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%A8%E0%A6%9C%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A7%80_%E0%A6%A8%E0%A6%9C%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE"
+   ]
+  },
+  {
+   "id": "e9851d22da7d",
+   "memberId": "013010801",
+   "category": "posts",
+   "text": "Freedom fighter: bn.wikipedia calls him a মুক্তিযোদ্ধা, site has isFreedomFighter=false; en.wikipedia instead reports local claims of post-1971 Gonobahini involvement. Unverified either way; left out of the bio.",
+   "sources": []
+  },
+  {
+   "id": "7cf0b0574178",
+   "memberId": "013010801",
+   "category": "terms",
+   "text": "Wikipedia articles exist for this member (same seat, same earlier terms from Satkhira-5) yet bioSource is empty; they are dominated by the July 2026 scandal.",
+   "sources": []
+  },
+  {
+   "id": "38955a046f1d",
+   "memberId": "013010901",
+   "category": "names",
+   "text": "Name: site shows 'মোঃ অলি উল্লাহ'; Wikipedia and Jago News use the full name 'মাহমুদুল হোসাইন অলিউল্লাহ'. Owner may want the fuller name. https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%85%E0%A6%B2%E0%A6%BF%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B9%E0%A6%AE%E0%A7%81%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%A8_%E0%A6%85%E0%A6%B2%E0%A6%BF%E0%A6%89%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9"
+   ]
+  },
+  {
+   "id": "dbb4539728f3",
+   "memberId": "013011001",
+   "category": "dob",
+   "text": "Date of birth: site shows 1955-03-23; bn.wikipedia (and news citing it) give 25 March 1952. https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AE%E0%A6%A8%E0%A6%BF",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%AE%E0%A6%A8%E0%A6%BF"
+   ]
+  },
+  {
+   "id": "100852160a35",
+   "memberId": "013011001",
+   "category": "posts",
+   "text": "Chief whip post: site fromDate is 2026-09-12, Prothom Alo reports he was appointed on 2 March 2026. https://www.prothomalo.com/bangladesh/district/rghic0ie8d",
+   "sources": [
+    "https://www.prothomalo.com/bangladesh/district/rghic0ie8d"
+   ]
+  },
+  {
+   "id": "d4a48caf4188",
+   "memberId": "013011001",
+   "category": "fields",
+   "text": "professionBn on site is the placeholder 'সংসদ সদস্য'; no source found for an actual profession.",
+   "sources": []
+  },
+  {
+   "id": "cb58f875acbc",
+   "memberId": "013011101",
+   "category": "terms",
+   "text": "Term count: site shows termsCount=3, en.wikipedia calls him a two-term MP (2001-2006 and 2026). Needs owner check. https://en.wikipedia.org/wiki/Altaf_Hossain_Choudhury",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Altaf_Hossain_Choudhury"
+   ]
+  },
+  {
+   "id": "e39b16270905",
+   "memberId": "013011101",
+   "category": "names",
+   "text": "Seat name spelling on site is 'পটুয়াখালি-১'; the district is usually written 'পটুয়াখালী' (applies to all Patuakhali seats).",
+   "sources": []
+  },
+  {
+   "id": "914896b82dce",
+   "memberId": "013011101",
+   "category": "wiki",
+   "text": "en.wikipedia article for this member (same seat, BNP) exists but bioSource is empty.",
+   "sources": []
+  },
+  {
+   "id": "2cca85bf813f",
+   "memberId": "013011201",
+   "category": "names",
+   "text": "Name: site shows 'মোঃ শফিকুল ইসলাম'; he is widely known as 'শফিকুল ইসলাম মাসুদ' (en.wikipedia title). Owner may want the fuller name. https://en.wikipedia.org/wiki/Shafiqul_Islam_Masud",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shafiqul_Islam_Masud"
+   ]
+  },
+  {
+   "id": "6ab35d50098a",
+   "memberId": "013011401",
+   "category": "wiki",
+   "text": "bn.wikipedia has an article on this member (Patuakhali-4) that the pack did not link; bioSource is empty. https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%AC%E0%A6%BF_%E0%A6%8F%E0%A6%AE_%E0%A6%AE%E0%A7%8B%E0%A6%B6%E0%A6%BE%E0%A6%B0%E0%A6%B0%E0%A6%AB_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F_%E0%A6%AC%E0%A6%BF_%E0%A6%8F%E0%A6%AE_%E0%A6%AE%E0%A7%8B%E0%A6%B6%E0%A6%BE%E0%A6%B0%E0%A6%B0%E0%A6%AB_%E0%A6%B9%E0%A7%8B%E0%A6%B8%E0%A7%87%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "98e087b3b12e",
+   "memberId": "013011601",
+   "category": "names",
+   "text": "bn.wikipedia article on this member (Bhola-2, 8th parliament, mother Halima Khatun matches) exists but bioSource is empty. https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C_%E0%A6%87%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%AE",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B9%E0%A6%BE%E0%A6%AB%E0%A6%BF%E0%A6%9C_%E0%A6%87%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A6%BF%E0%A6%AE"
+   ]
+  },
+  {
+   "id": "22c3af6689d0",
+   "memberId": "013011801",
+   "category": "dob",
+   "text": "Site birthPlaceBn says 'জিন্নাগড়, চরফ্যাশন' while the body of the bn Wikipedia article says he was born in Sharif Para (শরিফ পাড়া), Charfashion. Both may be true (a para inside Jinnagarh union), so no change proposed; owner may want to confirm. https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%A8%E0%A6%AF%E0%A6%BC%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%A8%E0%A6%AF%E0%A6%BC%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "8b80b7b5830c",
+   "memberId": "013012101",
+   "category": "dob",
+   "text": "bn Wikipedia says he took part in the 1971 Liberation War in Sector 9, but the site has isFreedomFighter = false. Owner may want to verify against the gazette before changing. https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A7%81%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "174e8996b055",
+   "memberId": "013012301",
+   "category": "names",
+   "text": "bn Wikipedia (and the site's bioSource) spells him 'মজিবুর রহমান সারওয়ার' while the site shows 'মোঃ মজিবর রহমান সরওয়ার'; the site form matches the parliament roll, so this is just a spelling variant to be aware of.",
+   "sources": []
+  },
+  {
+   "id": "8da76c94998b",
+   "memberId": "013012301",
+   "category": "names",
+   "text": "bn Wikipedia says he was elected from Barishal-5 in 2008; the article is thin and unreferenced for that line, so the 2008 seat is not named in the biography. Owner may want to confirm. https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%9C%E0%A6%BF%E0%A6%AC%E0%A7%81%E0%A6%B0_%E0%A6%B0%E0%A6%B9%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0"
+   ]
+  },
+  {
+   "id": "362efa23ef28",
+   "memberId": "013012601",
+   "category": "posts",
+   "text": "Term count is unclear. bn Wikipedia says she was first elected in a 2000 by-election after her husband's death and again in 2001, which with 2026 would make three terms; Ittefaq says 2001 was her first time as MP. The site shows termsCount 2. Owner may want to check. https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%B8%E0%A6%B0%E0%A6%BE%E0%A6%A4_%E0%A6%B8%E0%A7%81%E0%A6%B2%E0%A6%A4%E0%A6%BE%E0%A6%A8%E0%A6%BE_%E0%A6%87%E0%A6%B2%E0%A7%87%E0%A6%A8_%E0%A6%AD%E0%A7%81%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A7%8B https://www.ittefaq.com.bd/774722/",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%87%E0%A6%B8%E0%A6%B0%E0%A6%BE%E0%A6%A4_%E0%A6%B8%E0%A7%81%E0%A6%B2%E0%A6%A4%E0%A6%BE%E0%A6%A8%E0%A6%BE_%E0%A6%87%E0%A6%B2%E0%A7%87%E0%A6%A8_%E0%A6%AD%E0%A7%81%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A7%8B",
+    "https://www.ittefaq.com.bd/774722/"
+   ]
+  },
+  {
+   "id": "f684b0cad8bc",
+   "memberId": "013012601",
+   "category": "names",
+   "text": "No bioSource is set on the site although a bn Wikipedia article exists (spelled ভুট্টো there, ভূট্টো on the site).",
+   "sources": []
+  },
+  {
+   "id": "81072d0386f5",
+   "memberId": "013012701",
+   "category": "dob",
+   "text": "Date of birth conflict: the site has 1975-11-01, bn Wikipedia gives 24 October 1971. Birth date left out of the biography until the owner confirms. https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%81%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%88%E0%A6%A6%E0%A7%80",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%81%E0%A6%A6_%E0%A6%B8%E0%A6%BE%E0%A6%88%E0%A6%A6%E0%A7%80"
+   ]
+  },
+  {
+   "id": "4f7a01d58ce2",
+   "memberId": "013013101",
+   "category": "terms",
+   "text": "No bioSource is set on the site, though bn and en Wikipedia articles exist for him (identity proven by seat Tangail-2 and the 1991/1996/2001 terms, which match termsCount 4).",
+   "sources": []
+  },
+  {
+   "id": "2727c09f38ea",
+   "memberId": "013013201",
+   "category": "posts",
+   "text": "TBS result data for Tangail-3 looks wrong: it gives the winner and the Islami Andolan candidate (Md. Rezaul Karim) the identical 107,901 votes. News reports put Azad at about 1,06,794 with BNP's S M Obaidul Haque Nasir second at about 81,734. Vote count left out of the biography until the owner checks. https://www.tbsnews.net/election-2026-seat/tangail-3",
+   "sources": [
+    "https://www.tbsnews.net/election-2026-seat/tangail-3"
+   ]
+  },
+  {
+   "id": "315ec79e88c6",
+   "memberId": "013013201",
+   "category": "names",
+   "text": "No bioSource is set on the site though a bn Wikipedia article exists (it gives his father as 'হাবিবর রহমান'; site has 'হবিবর রহমান খান').",
+   "sources": []
+  },
+  {
+   "id": "0af0a1f3500c",
+   "memberId": "013013201",
+   "category": "terms",
+   "text": "Term count: Wikipedia lists wins in 1991, 1996 and 2001 (continuous service 1991-2006) and a news summary says four earlier terms; site termsCount 5 fits if both 1996 elections are counted. The biography does not state a term number.",
+   "sources": []
+  },
+  {
+   "id": "8d4d439bdd1e",
+   "memberId": "013013301",
+   "category": "posts",
+   "text": "bn Wikipedia article is titled 'লুৎফর রহমান খান মতিন' but its text calls him 'মোঃ লুৎফর রহমান মতিন'; identity is proven (same seat, same birth date 3 Nov 1952, same vote count). No bioSource is set on the site.",
+   "sources": []
+  },
+  {
+   "id": "35fd0463b480",
+   "memberId": "013013601",
+   "category": "dob",
+   "text": "No bioSource is set on the site, though a bn Wikipedia article exists (identity proven by seat Tangail-7 and identical birth date 31 Oct 1964).",
+   "sources": []
+  },
+  {
+   "id": "43adc9b674e6",
+   "memberId": "013013901",
+   "category": "dob",
+   "text": "No bioSource is set on the site, though bn and en Wikipedia articles exist (identity proven by seat Jamalpur-2, birth date 31 March 1955 and father Shams Uddin Ahmed).",
+   "sources": []
+  },
+  {
+   "id": "600b80864c6d",
+   "memberId": "013014101",
+   "category": "posts",
+   "text": "Naya Diganta reported about 1,20,829 votes (unofficial, likely partial); TBS has 147,406. TBS figure used; owner may want to confirm the official count. https://dailynayadiganta.com/bangladesh/country-news/kAQvnVWP2xig",
+   "sources": [
+    "https://dailynayadiganta.com/bangladesh/country-news/kAQvnVWP2xig"
+   ]
+  },
+  {
+   "id": "0858fd62b01b",
+   "memberId": "013014201",
+   "category": "dob",
+   "text": "No bioSource is set on the site, though a bn Wikipedia article exists under the spelling 'শাহ মো. ওয়ারেস আলী মামুন' (identity proven by seat Jamalpur-5 and birth date 2 Jan 1968).",
+   "sources": []
+  },
+  {
+   "id": "5d83bfc4da08",
+   "memberId": "013014301",
+   "category": "names",
+   "text": "No bioSource is set on the site, though bn and en Wikipedia articles exist (identity proven by seat Sherpur-1, party, father Md. Abul Kashem).",
+   "sources": []
+  },
+  {
+   "id": "872582731ac8",
+   "memberId": "013014301",
+   "category": "posts",
+   "text": "Vote count differs: Wikipedia gives 130,989, TBS gives 127,811. TBS used. https://en.wikipedia.org/wiki/Rashedul_Islam_(politician)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rashedul_Islam_(politician"
+   ]
+  },
+  {
+   "id": "c4d8ae737312",
+   "memberId": "013014401",
+   "category": "dob",
+   "text": "Birth date mismatch between Wikipedias: bn says 5 July 1978 (matches site), en says 5 August 1978. No change proposed. https://en.wikipedia.org/wiki/Mohammed_Fahim_Chowdhury",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mohammed_Fahim_Chowdhury"
+   ]
+  },
+  {
+   "id": "c98b0e5111d7",
+   "memberId": "013014501",
+   "category": "posts",
+   "text": "The pack's result source for Sherpur-3 is the en Wikipedia constituency page, not TBS; the vote count 166,117 was not cross-checked against TBS.",
+   "sources": []
+  },
+  {
+   "id": "00cbd294fec8",
+   "memberId": "013014501",
+   "category": "dob",
+   "text": "bn Wikipedia spells the birthplace 'গৃদ্দার্নারায়নপুর' (likely a typo); the proposed value normalises it to 'গৃদ্দানারায়ণপুর'. Owner may want to confirm the spelling.",
+   "sources": []
+  },
+  {
+   "id": "b8381e24b0bd",
+   "memberId": "013014501",
+   "category": "posts",
+   "text": "Site termsCount is 4; bn Wikipedia lists service 1995 to 30 March 1996 and 2001 to 2006, which with 2026 fits four terms only if the 1995 by-election and the February 1996 election are counted separately. The biography does not state a term number.",
+   "sources": []
+  },
+  {
+   "id": "1c7a4a705ee8",
+   "memberId": "013014701",
+   "category": "wiki",
+   "text": "No bioSource is set on the site, though a bn Wikipedia article 'মুহাম্মদুল্লাহ (মুফতি)' exists (identity proven by seat Mymensingh-2 and party).",
+   "sources": []
+  },
+  {
+   "id": "173d5a2b735e",
+   "memberId": "013014701",
+   "category": "posts",
+   "text": "Vote count differs: bn Wikipedia gives 1,44,565 (unofficial), TBS gives 146,202. TBS used.",
+   "sources": []
+  },
+  {
+   "id": "26bfc21484a2",
+   "memberId": "013015001",
+   "category": "names",
+   "text": "Site fatherBn/fatherEn show 'আলঃ মোঃ কাসেম আলী' / 'ALL: MD. KASEM ALI' (the 'ALL:' looks like a mangled 'আলহাজ্ব' abbreviation); bn Wikipedia gives 'হাজী মোঃ কাশেম আলী'. Owner may want to clean the prefix.",
+   "sources": []
+  },
+  {
+   "id": "34a1eab307f0",
+   "memberId": "013015101",
+   "category": "dob",
+   "text": "Date of birth: site shows 1973-06-18 (matches en.wikipedia Md._Quamrul_Hassan), but bn.wikipedia gives 18 June 1976. Worth checking against the parliament record. https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%95%E0%A6%BE%E0%A6%AE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%83_%E0%A6%95%E0%A6%BE%E0%A6%AE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "98760797788a",
+   "memberId": "013015901",
+   "category": "dob",
+   "text": "Birthplace conflict: site birthPlaceBn says Kendua upazila, but bn.wikipedia says he was born in Netrokona Sadar upazila (his schooling was in Kendua). Not changed; owner to confirm. https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BE%E0%A6%B2%E0%A7%80",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B0%E0%A6%AB%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_%E0%A6%B9%E0%A6%BF%E0%A6%B2%E0%A6%BE%E0%A6%B2%E0%A7%80"
+   ]
+  },
+  {
+   "id": "ff6cc3d5a66a",
+   "memberId": "013016001",
+   "category": "terms",
+   "text": "termsCount is 4 on the site, but en.wikipedia only mentions wins in 1991 and 2001 (plus 2026). If he also won the February 1996 election the count is right; worth confirming against the parliament record. https://en.wikipedia.org/wiki/Lutfozzaman_Babar",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lutfozzaman_Babar"
+   ]
+  },
+  {
+   "id": "0dfa210a65a9",
+   "memberId": "013016001",
+   "category": "dob",
+   "text": "birthPlaceBn is stored in English ('Netrokona, East Pakistan'); Wikipedia only says the family originates from Netrokona and he grew up in Maghbazar, Dhaka, so the exact birthplace is not confirmed. Proposed value is just the Bangla form of the current value.",
+   "sources": []
+  },
+  {
+   "id": "dc8753ce56c7",
+   "memberId": "013016201",
+   "category": "dob",
+   "text": "Site has no bioSource, but a matching bn.wikipedia article exists (same seat, same date of birth and parents): https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%BE%E0%A6%9C%E0%A6%B9%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%87%E0%A6%B8%E0%A6%B2%E0%A6%BE%E0%A6%AE_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "a5f09fff9e49",
+   "memberId": "013016301",
+   "category": "wiki",
+   "text": "Site has no bioSource, but a matching bn.wikipedia article exists (same seat, same parents): https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%9C%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%B2_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A7%80%E0%A6%A8",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%9C%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%B2_%E0%A6%89%E0%A6%A6%E0%A7%8D%E0%A6%A6%E0%A7%80%E0%A6%A8"
+   ]
+  },
+  {
+   "id": "1a65f496ecdc",
+   "memberId": "013016401",
+   "category": "dob",
+   "text": "Site has no bioSource, but the pack candidate bn.wikipedia 'ওসমান ফারুক' is the same person (same date of birth 18 July 1940, same father, 2026 Kishoreganj-3 win): https://bn.wikipedia.org/wiki/%E0%A6%93%E0%A6%B8%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%95",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%93%E0%A6%B8%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%81%E0%A6%95"
+   ]
+  },
+  {
+   "id": "8d00ff087358",
+   "memberId": "013016501",
+   "category": "dob",
+   "text": "isFreedomFighter is false on the site, but Ittefaq calls him 'বীর মুক্তিযোদ্ধা' and bn.wikipedia says he led the Mujib Bahini in Kishoreganj in 1971. Owner to check the flag. https://www.ittefaq.com.bd/774589/",
+   "sources": [
+    "https://www.ittefaq.com.bd/774589/"
+   ]
+  },
+  {
+   "id": "ce2eb123daa5",
+   "memberId": "013016801",
+   "category": "dob",
+   "text": "bn.wikipedia contradicts itself on date of birth: the lead says 1 October 1960 (matches the site) but the birth section says 17 February 1960. The bio uses only the year. https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8_%E0%A6%8F_%E0%A6%9C%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%B9_%E0%A6%95%E0%A6%AC%E0%A7%80%E0%A6%B0",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%8F%E0%A6%B8_%E0%A6%8F_%E0%A6%9C%E0%A6%BF%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%B9_%E0%A6%95%E0%A6%AC%E0%A7%80%E0%A6%B0"
+   ]
+  },
+  {
+   "id": "d5f80f4b16e5",
+   "memberId": "013016901",
+   "category": "posts",
+   "text": "Site has no bioSource. en.wikipedia 'Moinul_Islam_Khan' is the same person (2006 Manikganj-4 by-election, 2026 Manikganj-2 win, father Shamsul Islam Khan). Note that bn.wikipedia 'মঈনুল_ইসলাম_খান' wrongly says he now represents Manikganj-3. https://en.wikipedia.org/wiki/Moinul_Islam_Khan",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Moinul_Islam_Khan"
+   ]
+  },
+  {
+   "id": "6a791906ba11",
+   "memberId": "013017101",
+   "category": "names",
+   "text": "Site has no bioSource. Two stub articles describe the same MP: https://en.wikipedia.org/wiki/Sheikh_Md._Abdullah and bn.wikipedia 'শেখ মোহাম্মদ আবদুল্লাহ (মুন্সিগঞ্জের রাজনীতিবীদ)'. Both are empty beyond the seat. Media use the name 'শেখ মো. আব্দুল্লাহ'; the site name omits 'শেখ', owner may want to check the preferred form.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sheikh_Md._Abdullah"
+   ]
+  },
+  {
+   "id": "f32e50240b45",
+   "memberId": "013017201",
+   "category": "posts",
+   "text": "Site has no bioSource. The pack candidate en.wikipedia 'Abdus_Salam_Azad' is the same person (Munshiganj-2, identical 2026 vote count 121,154): https://en.wikipedia.org/wiki/Abdus_Salam_Azad",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Abdus_Salam_Azad"
+   ]
+  },
+  {
+   "id": "2150dbb93054",
+   "memberId": "013017301",
+   "category": "fields",
+   "text": "professionBn on the site is 'সংসদ সদস্য', which is not a profession; no source found for his actual occupation.",
+   "sources": []
+  },
+  {
+   "id": "9b34878b75bd",
+   "memberId": "013017401",
+   "category": "wiki",
+   "text": "bioSource field holds two URLs joined by a space in one string (bn and en Wikipedia); may break a link on the page.",
+   "sources": []
+  },
+  {
+   "id": "b06f5f8c764c",
+   "memberId": "013018001",
+   "category": "wiki",
+   "text": "The en.wikipedia bioSource reads like campaign copy ('visionary leader', 'well known for his honesty') and has no biographical detail; consider whether it should stay as the bio source. https://en.wikipedia.org/wiki/Hamidur_Rahman_(Bangladeshi_politician)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hamidur_Rahman_(Bangladeshi_politician"
+   ]
+  },
+  {
+   "id": "c4c7622f1aac",
+   "memberId": "013018401",
+   "category": "posts",
+   "text": "Site shows no parliament post, but Nahid Islam was named Opposition Chief Whip (বিরোধীদলীয় চিফ হুইপ) in February 2026. Consider adding it to posts. Source: https://www.banglatribune.com/politics/other-politics/934406/ and bn.wikipedia (নাহিদ_ইসলাম).",
+   "sources": [
+    "https://www.banglatribune.com/politics/other-politics/934406/"
+   ]
+  },
+  {
+   "id": "96eef09897da",
+   "memberId": "013018801",
+   "category": "names",
+   "text": "Mother's name spelling: site has খতিবুন্নেছা, bn.wikipedia has খাতিবুন নেছা. Check against the affidavit. Source: https://bn.wikipedia.org/wiki/শফিকুর_রহমান",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/শফিকুর_রহমান"
+   ]
+  },
+  {
+   "id": "e2e5e8f9d859",
+   "memberId": "013018901",
+   "category": "dob",
+   "text": "Birthplace conflict: the site shows টাঙ্গাইল সদর উপজেলা, টাংগাইল (taken from the Wikipedia infobox), but the body of the same bn.wikipedia article says he was born in নটাবাড়ী village, পীরগাছা, রংপুর, and all his schooling was in Pirgachha and Rangpur. Please verify against the affidavit. Source: https://bn.wikipedia.org/wiki/আব্দুল_বাতেন_(কর্নেল)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/আব্দুল_বাতেন_(কর্নেল"
+   ]
+  },
+  {
+   "id": "eda612ee1420",
+   "memberId": "013019601",
+   "category": "posts",
+   "text": "Committee missing: Ittefaq and Prothom Alo (8 Sep 2026) report S.M. Rafiqul Islam (Gazipur-3) as chair of the Standing Committee on the Ministry of Health and Family Welfare, but the site lists no committees for him. Sources: https://www.ittefaq.com.bd/808604/ and https://www.prothomalo.com/politics/qcqkck3c24",
+   "sources": [
+    "https://www.ittefaq.com.bd/808604/",
+    "https://www.prothomalo.com/politics/qcqkck3c24"
+   ]
+  },
+  {
+   "id": "9136b054c002",
+   "memberId": "013019601",
+   "category": "posts",
+   "text": "Vote count differs: bn.wikipedia gives 1,61,258 votes, TBS gives 162,343. The biography uses the TBS figure.",
+   "sources": []
+  },
+  {
+   "id": "02c2faea68aa",
+   "memberId": "013019701",
+   "category": "names",
+   "text": "Name: the site shows সালাহ উদ্দিন, but he is widely known as সালাহউদ্দিন আইউবী (bn.wikipedia) / Salahuddin Aiyubi (en.wikipedia). Identity confirmed by seat and by both parents' names. Consider showing the known name. Source: https://bn.wikipedia.org/wiki/সালাহউদ্দিন_আইউবী",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/সালাহউদ্দিন_আইউবী"
+   ]
+  },
+  {
+   "id": "c36465387f7f",
+   "memberId": "013019801",
+   "category": "posts",
+   "text": "Committee chair missing: Ittefaq and Prothom Alo (8 Sep 2026) report A.K.M. Fazlul Haque Milon (Gazipur-5) as chair of the Standing Committee on the Ministry of Expatriates' Welfare and Overseas Employment; the site lists only two memberships (water resources, public accounts). Sources: https://www.ittefaq.com.bd/808604/ and https://www.prothomalo.com/politics/qcqkck3c24",
+   "sources": [
+    "https://www.ittefaq.com.bd/808604/",
+    "https://www.prothomalo.com/politics/qcqkck3c24"
+   ]
+  },
+  {
+   "id": "d3ef23f47b00",
+   "memberId": "013019801",
+   "category": "terms",
+   "text": "Site bioSource is empty, but bn.wikipedia has an article on him (identity confirmed by seat Gazipur-5 and prior terms): https://bn.wikipedia.org/wiki/এ_কে_এম_ফজলুল_হক_মিলন",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/এ_কে_এম_ফজলুল_হক_মিলন"
+   ]
+  },
+  {
+   "id": "5700dac3d980",
+   "memberId": "013019901",
+   "category": "posts",
+   "text": "Possible committee chair missing: mtnews24 (7 Sep 2026) reports Khairul Kabir Khokon (Narsingdi-1) was named chair of the Standing Committee on the Ministry of Fisheries and Livestock; the site lists no committees for him. mtnews24 is not a major outlet, so please confirm on parliament.gov.bd. Source: https://bn.mtnews24.com/jatio/576627/",
+   "sources": [
+    "https://bn.mtnews24.com/jatio/576627/"
+   ]
+  },
+  {
+   "id": "e3c060cb5da9",
+   "memberId": "013019901",
+   "category": "posts",
+   "text": "Site bioSource is empty, but Wikipedia articles exist in both languages (identity confirmed by seat Narsingdi-1 and the 2005 by-election term): https://bn.wikipedia.org/wiki/খায়রুল_কবির_খোকন",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/খায়রুল_কবির_খোকন"
+   ]
+  },
+  {
+   "id": "f76e8195e43c",
+   "memberId": "013020401",
+   "category": "dob",
+   "text": "Birthplace on the site is 'শরীয়তগঞ্জ, বাংলাদেশ', which does not match the bn.wikipedia body (born into the Bhuiyan family of Rupganj, Narayanganj). Proposed রূপগঞ্জ, নারায়ণগঞ্জ; please verify. Source: https://bn.wikipedia.org/wiki/মোস্তাফিজুর_রহমান_ভূঁইয়া_দিপু",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/মোস্তাফিজুর_রহমান_ভূঁইয়া_দিপু"
+   ]
+  },
+  {
+   "id": "f48ee1b59333",
+   "memberId": "013020401",
+   "category": "names",
+   "text": "Name spelling: site uses মুস্তাফিজুর রহমান ভূঁইয়া; Wikipedia uses মোস্তাফিজুর রহমান ভূঁইয়া দিপু. Check against the affidavit.",
+   "sources": []
+  },
+  {
+   "id": "d5b0d81e9330",
+   "memberId": "013020501",
+   "category": "fields",
+   "text": "Profession on the site is 'সংসদ সদস্য', which is an office, not a profession. No source found for his actual profession; consider clearing the field.",
+   "sources": []
+  },
+  {
+   "id": "3668f4715ce9",
+   "memberId": "013020801",
+   "category": "terms",
+   "text": "Site bioSource is empty, but bn.wikipedia has an article on him (identity confirmed by seat Narayanganj-5, the three earlier terms matching termsCount 4, and father Jalal Uddin): https://bn.wikipedia.org/wiki/আবুল_কালাম_(নারায়ণগঞ্জের_রাজনীতিবিদ)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/আবুল_কালাম_(নারায়ণগঞ্জের_রাজনীতিবিদ"
+   ]
+  },
+  {
+   "id": "9eb9b6f82c6c",
+   "memberId": "013021001",
+   "category": "dob",
+   "text": "Site bioSource is empty, but Wikipedia articles exist (identity confirmed by seat Rajbari-2, date of birth 1 July 1970 and father Matiar Rahman): https://en.wikipedia.org/wiki/Harunur_Rashid_(Rajbari_politician)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Harunur_Rashid_(Rajbari_politician"
+   ]
+  },
+  {
+   "id": "19bdb47f32e0",
+   "memberId": "013021301",
+   "category": "dob",
+   "text": "Site bioSource is empty, but Wikipedia articles exist in both languages (identity confirmed by seat Faridpur-3, date of birth 3 February 1970 and father Chowdhury Kamal Ibne Yusuf): https://en.wikipedia.org/wiki/Nayab_Yusuf_Ahmed",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nayab_Yusuf_Ahmed"
+   ]
+  },
+  {
+   "id": "888b029a23a2",
+   "memberId": "013021501",
+   "category": "dob",
+   "text": "Date of birth: site shows 1970-04-30, Bangla Wikipedia says 3 April 1970 (https://bn.wikipedia.org/wiki/মোঃ_সেলিমুজ্জামান_মোল্যা). Bio uses only the year until checked.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/মোঃ_সেলিমুজ্জামান_মোল্যা"
+   ]
+  },
+  {
+   "id": "f35bacbf8931",
+   "memberId": "013021801",
+   "category": "names",
+   "text": "Father's name: site has মুবিন উদ্দিন আহমাদ; Bangla Wikipedia gives Mubin Uddin Ahmed Noshin Mia (https://bn.wikipedia.org/wiki/সাইদ_উদ্দিন_আহমাদ_হানজালা). Probably the same person with a nickname; owner may want to confirm.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/সাইদ_উদ্দিন_আহমাদ_হানজালা"
+   ]
+  },
+  {
+   "id": "8c71fe2d1c86",
+   "memberId": "013021901",
+   "category": "names",
+   "text": "Father's name mismatch between languages: nameBn ওয়াজ উদ্দিন মাতুব্বর vs fatherEn Nazuddin Matubber. One spelling is wrong; bio omits the father until checked.",
+   "sources": []
+  },
+  {
+   "id": "93ff1e67e76f",
+   "memberId": "013021901",
+   "category": "names",
+   "text": "English name spelling: site nameEn is MD JAHANDER ALI MIHA; English Wikipedia uses Jahander Ali Miah (https://en.wikipedia.org/wiki/Jahander_Ali_Miah). MIHA looks like a typo for MIAH.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Jahander_Ali_Miah"
+   ]
+  },
+  {
+   "id": "f35a5946c844",
+   "memberId": "013022301",
+   "category": "posts",
+   "text": "Whip title and date: site post says হুইপ from 2026-09-12. English Wikipedia says whip; Bangla Wikipedia (https://bn.wikipedia.org/wiki/মিয়া_নুরুদ্দিন_আহাম্মেদ_অপু) says he was made Chief Whip by gazette on Monday 2 March 2026, and a Daily New Nation headline also says চিফ হুইপ. Owner should confirm whether he is whip or chief whip and the start date.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/মিয়া_নুরুদ্দিন_আহাম্মেদ_অপু"
+   ]
+  },
+  {
+   "id": "7b67858d8117",
+   "memberId": "013023301",
+   "category": "names",
+   "text": "Father's name: site has মোহাম্মদ আব্দুল লতিফ, Bangla Wikipedia has কাজী আব্দুল লতিফ (https://bn.wikipedia.org/wiki/আবুল_হাসান_(মুফতি)). Likely the same person (Kazi is a title); bio uses আব্দুল লতিফ.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/আবুল_হাসান_(মুফতি"
+   ]
+  },
+  {
+   "id": "f06aa445196b",
+   "memberId": "013023801",
+   "category": "dob",
+   "text": "Date of birth: site shows 1959-01-01; Bangla Wikipedia says 1 January 1968 (https://bn.wikipedia.org/wiki/মুজিবুর_রহমান_চৌধুরী). Bio omits the birth date until checked.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/মুজিবুর_রহমান_চৌধুরী"
+   ]
+  },
+  {
+   "id": "4353816d6384",
+   "memberId": "013024201",
+   "category": "fields",
+   "text": "professionBn 'ব‌্যবসা' contains a zero-width non-joiner character between ব and ্; it may display or search oddly (same pattern appears on other members in this batch).",
+   "sources": []
+  },
+  {
+   "id": "ebb1133c9bce",
+   "memberId": "013024301",
+   "category": "posts",
+   "text": "Site shows no committee for him, but FNS24 (7 Sep 2026) reports parliament approved him as a member of the Standing Committee on the Ministry of Fisheries and Livestock: https://www.fns24.com/single/84942/",
+   "sources": [
+    "https://www.fns24.com/single/84942/"
+   ]
+  },
+  {
+   "id": "579f50f5f942",
+   "memberId": "013024401",
+   "category": "dob",
+   "text": "bioSource is empty on the site although the bn and en Wikipedia articles are clearly about her (same seat, same father Oli Ahad, same date of birth 19 Aug 1981): https://en.wikipedia.org/wiki/Rumeen_Farhana",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rumeen_Farhana"
+   ]
+  },
+  {
+   "id": "38a916d67e17",
+   "memberId": "013024901",
+   "category": "other",
+   "text": "Seat boundaries for Cumilla-1 and Cumilla-2 may be stale: the site shows Cumilla-1 as Daudkandi + Titas and Cumilla-2 as Homna + Meghna, but Daily Inqilab (Sep 2026) calls Cumilla-2 'Homna-Titas': https://dailyinqilab.com/bangladesh/news/938668 . Worth checking against the 2025 EC delimitation.",
+   "sources": [
+    "https://dailyinqilab.com/bangladesh/news/938668"
+   ]
+  },
+  {
+   "id": "bc9622653d00",
+   "memberId": "013025001",
+   "category": "other",
+   "text": "Seat boundary may be stale: site shows Cumilla-2 as Homna + Meghna, but Daily Inqilab (Sep 2026) calls it 'Homna-Titas': https://dailyinqilab.com/bangladesh/news/938668",
+   "sources": [
+    "https://dailyinqilab.com/bangladesh/news/938668"
+   ]
+  },
+  {
+   "id": "ba0f57682b53",
+   "memberId": "013025001",
+   "category": "names",
+   "text": "Name spelling: news outlets write 'ভূঁইয়া' (with chandrabindu) while the site has 'ভূইয়া'; owner may want to check the parliament's spelling.",
+   "sources": []
+  },
+  {
+   "id": "74ffaeaf2cde",
+   "memberId": "013025201",
+   "category": "dob",
+   "text": "Date of birth conflict: site and bn Wikipedia say 13 Sep 1998, but en Wikipedia says 28 Feb 1998: https://en.wikipedia.org/wiki/Hasnat_Abdullah . Bio uses the site date.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Hasnat_Abdullah"
+   ]
+  },
+  {
+   "id": "a062fa433a7d",
+   "memberId": "013025201",
+   "category": "posts",
+   "text": "Site committee list includes an entry named just 'সংসদ কমিটি' (Member); this looks like a placeholder or truncated committee name.",
+   "sources": []
+  },
+  {
+   "id": "fff3e5140d02",
+   "memberId": "013025301",
+   "category": "posts",
+   "text": "TBS result data for Cumilla-5 shows the 2nd and 3rd candidates (Md. Emranul Haque, JP-Ershad and Mobarak Hussain, BJEI) with the identical count 124,547, which looks like a data error: https://www.tbsnews.net/election-2026-seat/comilla-5",
+   "sources": [
+    "https://www.tbsnews.net/election-2026-seat/comilla-5"
+   ]
+  },
+  {
+   "id": "6af10e93ec33",
+   "memberId": "013025401",
+   "category": "dob",
+   "text": "Date of birth conflict: site shows 16 Jul 1947, bn Wikipedia says born in 1946: https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80 . Bio omits the date.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%95_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80"
+   ]
+  },
+  {
+   "id": "f208ea39dde5",
+   "memberId": "013025801",
+   "category": "names",
+   "text": "Name spelling: site has 'ভুঁইয়া' (short u) while his father's name on the site and the bn Wikipedia article use 'ভূঁইয়া' (long u).",
+   "sources": []
+  },
+  {
+   "id": "ac6eb0b37641",
+   "memberId": "013025901",
+   "category": "names",
+   "text": "Father's name mismatch: site shows 'মরহুম সৈয়দ মোদেহেরুল হক হায়দারী', bn Wikipedia says 'মাওলানা সৈয়দ মাজহারুল হক হায়দারি'. Bio omits the name: https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%88%E0%A6%AF%E0%A6%BC%E0%A6%A6_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%A4%E0%A6%BE%E0%A6%B9%E0%A7%87%E0%A6%B0",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%88%E0%A6%AF%E0%A6%BC%E0%A6%A6_%E0%A6%86%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A7%81%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B9_%E0%A6%AE%E0%A7%8B%E0%A6%B9%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%A6_%E0%A6%A4%E0%A6%BE%E0%A6%B9%E0%A7%87%E0%A6%B0"
+   ]
+  },
+  {
+   "id": "3f80a3922ffb",
+   "memberId": "013025901",
+   "category": "posts",
+   "text": "Site 'posts' is empty, but bn Wikipedia says he is the Deputy Leader of the Opposition (বিরোধীদলীয় উপনেতা) in the 13th parliament; consider adding the post.",
+   "sources": []
+  },
+  {
+   "id": "68ded00dfa57",
+   "memberId": "013026301",
+   "category": "fields",
+   "text": "professionBn is duplicated on the site: 'ব‌্যবসা ব‌্যবসা' (also contains zero-width non-joiners).",
+   "sources": []
+  },
+  {
+   "id": "0b37d69ec5a6",
+   "memberId": "013026501",
+   "category": "posts",
+   "text": "bioSource is empty on the site, but en Wikipedia 'Munshi Rafiqul Alam' is clearly him (Feni-1, BNP, same 119,904 votes): https://en.wikipedia.org/wiki/Munshi_Rafiqul_Alam",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Munshi_Rafiqul_Alam"
+   ]
+  },
+  {
+   "id": "32db6496a2ce",
+   "memberId": "013026601",
+   "category": "dob",
+   "text": "Date of birth conflict: site shows 1 May 1948, but bn Wikipedia says 12 January 1956 (which looks copied from another MP; his school dates from 1959 onward fit 1948): https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A6%BE%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6) . Bio omits the date.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%9C%E0%A6%AF%E0%A6%BC%E0%A6%A8%E0%A6%BE%E0%A6%B2_%E0%A6%86%E0%A6%AC%E0%A7%87%E0%A6%A6%E0%A7%80%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "b386d8e28626",
+   "memberId": "013026601",
+   "category": "names",
+   "text": "The site's bioSource is the en Wikipedia stub; the fuller bn Wikipedia article 'জয়নাল আবেদীন (রাজনীতিবিদ)' is the same person (Feni-2, VP Joynal, father Chan Mia).",
+   "sources": []
+  },
+  {
+   "id": "670d54451c7e",
+   "memberId": "013026901",
+   "category": "dob",
+   "text": "Site birthPlaceBn is 'Noakhali District, East Pakistan' in English; search snippets say Senbag upazila but no fetched page confirmed it, so no value is proposed.",
+   "sources": []
+  },
+  {
+   "id": "cc04ae2224a4",
+   "memberId": "013027001",
+   "category": "names",
+   "text": "Mother's name mismatch: site shows 'ফর ফুল্লে নেছা', bn Wikipedia says 'কর্ফুলেন্নেসা'. Bio omits the mother's name.",
+   "sources": []
+  },
+  {
+   "id": "1d2f7b1600e6",
+   "memberId": "013027101",
+   "category": "terms",
+   "text": "bioSource is empty on the site, but bn Wikipedia 'মো. শাহজাহান (রাজনীতিবিদ)' is clearly him (Noakhali-4, BNP vice chairman, elected in the 5th-8th and 13th parliaments, matching termsCount 5): https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B._%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "a523a87c75cc",
+   "memberId": "013027301",
+   "category": "names",
+   "text": "Father's name on the site reads 'আমিরুল ইসলাম মোহাম্মদ আবুদল মালেক' (typo 'আবুদল'); bn Wikipedia has 'আবদুল মালেক'. https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A6%89%E0%A6%A6",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%86%E0%A6%AC%E0%A6%A6%E0%A7%81%E0%A6%B2_%E0%A6%B9%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%A8_%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A6%89%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "8531a290f217",
+   "memberId": "013027301",
+   "category": "fields",
+   "text": "Site profession is 'ব‌্যবসা' (with a stray zero-width non-joiner) but the only source describes him as a student leader still studying at Dhaka University; worth checking against the affidavit.",
+   "sources": []
+  },
+  {
+   "id": "cb24eac0224a",
+   "memberId": "013027401",
+   "category": "fields",
+   "text": "Site professionBn is 'সংসদ সদস্য', which is an office, not a profession; no source gives his actual profession.",
+   "sources": []
+  },
+  {
+   "id": "a1ac93ce3b07",
+   "memberId": "013027401",
+   "category": "names",
+   "text": "bn Wikipedia says he joined the 'এলডিপি', but Dhaka Times and bdnews24 name the party he led as Bangladesh Liberal Democratic Party (BLDP). https://www.dhakatimes24.com/2025/12/08/397962",
+   "sources": [
+    "https://www.dhakatimes24.com/2025/12/08/397962"
+   ]
+  },
+  {
+   "id": "eb0070df41b5",
+   "memberId": "013027701",
+   "category": "names",
+   "text": "fatherEn on the site reads 'Let Abdul Hadi Miah' (typo for 'Late').",
+   "sources": []
+  },
+  {
+   "id": "640769fbfd83",
+   "memberId": "013027901",
+   "category": "posts",
+   "text": "The site has no election result for Chattogram-2 (result is null). Jago News reports Sarowar Alamgir 1,38,545 votes and the runner-up, Jamaat's Nurul Amin, 62,160. The result was held back until the High Court cleared his candidacy; he took the oath on 9 July 2026. https://www.jagonews24.com/politics/news/1093339",
+   "sources": [
+    "https://www.jagonews24.com/politics/news/1093339"
+   ]
+  },
+  {
+   "id": "63fb9759c070",
+   "memberId": "013027901",
+   "category": "names",
+   "text": "Site has no father's name, mother's name or profession for this member.",
+   "sources": []
+  },
+  {
+   "id": "f6a14fb2d785",
+   "memberId": "013028001",
+   "category": "terms",
+   "text": "Site termsCount is 4, but bn Wikipedia calls him a three-time MP for Chattogram-3 (February 1996, 2001 and 2026). One of the two is wrong. https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%AB%E0%A6%BE_%E0%A6%95%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B2_%E0%A6%AA%E0%A6%BE%E0%A6%B6%E0%A6%BE_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%AE%E0%A7%8B%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%AB%E0%A6%BE_%E0%A6%95%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B2_%E0%A6%AA%E0%A6%BE%E0%A6%B6%E0%A6%BE_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "0c71f94c8646",
+   "memberId": "013028001",
+   "category": "fields",
+   "text": "Site professionBn is 'সংসদ সদস্য', which is an office, not a profession.",
+   "sources": []
+  },
+  {
+   "id": "4d31a6af74bc",
+   "memberId": "013028001",
+   "category": "wiki",
+   "text": "The pack has no Wikipedia link for this member, although the bn Wikipedia article above is clearly him (same seat number 280, Sandwip).",
+   "sources": []
+  },
+  {
+   "id": "d6b14b71cb18",
+   "memberId": "013028301",
+   "category": "names",
+   "text": "The pack has no Wikipedia link for this member, although the bn Wikipedia article above is clearly him (Chattogram-6, BNP, father Fazlul Quader Chowdhury).",
+   "sources": []
+  },
+  {
+   "id": "1134631c3826",
+   "memberId": "013028401",
+   "category": "wiki",
+   "text": "The pack has no Wikipedia link for this member, although both bn and en Wikipedia articles above are clearly him (Chattogram-7, same DOB 23 June 1983, son of Salahuddin Quader Chowdhury).",
+   "sources": []
+  },
+  {
+   "id": "5164e7790420",
+   "memberId": "013028601",
+   "category": "wiki",
+   "text": "The pack has no Wikipedia link for this member, although the bn and en Wikipedia articles above are clearly him (Chattogram-9, same DOB 1 October 1964, same parents).",
+   "sources": []
+  },
+  {
+   "id": "c5c8bd91cb69",
+   "memberId": "013028701",
+   "category": "wiki",
+   "text": "The pack has no Wikipedia link for this member, although the bn and en Wikipedia articles above are clearly him (Chattogram-10 MP, son of Abdullah Al Noman).",
+   "sources": []
+  },
+  {
+   "id": "bbf4346fdeab",
+   "memberId": "013028901",
+   "category": "wiki",
+   "text": "The pack has no Wikipedia link for this member, although the en article 'Enamul Haque Enam' and the bn article 'মোহাম্মদ এনামুল হক' are both about the Chattogram-12 BNP MP. The cricketer 'এনামুল হক মণি' is a different person.",
+   "sources": []
+  },
+  {
+   "id": "21a375f5171e",
+   "memberId": "013029001",
+   "category": "terms",
+   "text": "The pack has no Wikipedia link for this member, although the bn Wikipedia article above is clearly him (same name, BNP, contested Chattogram-13 in 2008 and 2018; three earlier terms plus 2026 matches the site's termsCount of 4).",
+   "sources": []
+  },
+  {
+   "id": "85884ef15722",
+   "memberId": "013029001",
+   "category": "dob",
+   "text": "Site date of birth is 1945-01-01, a 1 January placeholder-style date; worth checking.",
+   "sources": []
+  },
+  {
+   "id": "83894be7443a",
+   "memberId": "013029101",
+   "category": "dob",
+   "text": "Site birthPlaceBn is 'চন্দনাইশ, বাংলাদেশ'; the district is missing (should read 'চন্দনাইশ, চট্টগ্রাম'), but no source gives a more exact place.",
+   "sources": []
+  },
+  {
+   "id": "7a67820fa0f6",
+   "memberId": "013029201",
+   "category": "dob",
+   "text": "Date of birth: the site has 1956-04-07, bn Wikipedia says 6 April 1956 (possibly a time-zone shift in the stored date). https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%B9%E0%A6%9C%E0%A6%BE%E0%A6%B9%E0%A6%BE%E0%A6%A8_%E0%A6%9A%E0%A7%8C%E0%A6%A7%E0%A7%81%E0%A6%B0%E0%A7%80_(%E0%A6%9A%E0%A6%9F%E0%A7%8D%E0%A6%9F%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "2a8d5f1800ef",
+   "memberId": "013029201",
+   "category": "names",
+   "text": "Mother's name: the site has 'ছমুদা খাতুন', Wikipedia has 'ছমুদা বেগম'. Father spelling also differs slightly (site ওবাইদুর, Wikipedia ওবায়দুর).",
+   "sources": []
+  },
+  {
+   "id": "94229e0fd428",
+   "memberId": "013029801",
+   "category": "posts",
+   "text": "The site has no 2026 result for the Khagrachhari seat (result is null). Ajker Patrika reports Abdul Wadud Bhuiyan (BNP) 1,48,212 votes and independent Dharma Jyoti Chakma 58,136. https://www.ajkerpatrika.com/bangladesh/ajpyrohxpaz7i",
+   "sources": [
+    "https://www.ajkerpatrika.com/bangladesh/ajpyrohxpaz7i"
+   ]
+  },
+  {
+   "id": "bafc75d434c8",
+   "memberId": "013029801",
+   "category": "terms",
+   "text": "The pack has no Wikipedia link for this member, although en Wikipedia 'Wadud Bhuiyan' is clearly him (same DOB 5 January 1965, Khagrachhari MP in the 6th, 8th and 13th parliaments; three terms matches the site).",
+   "sources": []
+  },
+  {
+   "id": "ee5309b91786",
+   "memberId": "013029801",
+   "category": "posts",
+   "text": "Name spelling: the site uses 'ভূঁঞা' while the news reports and the result use 'ভূঁইয়া'. The site's fatherEn 'Shalay Ahmad Bhuiyan' looks like a garbled 'Saleh Ahmad Bhuiyan'.",
+   "sources": []
+  },
+  {
+   "id": "55a3ccd149b5",
+   "memberId": "013029901",
+   "category": "names",
+   "text": "The pack has no Wikipedia link for this member, although the bn and en Wikipedia articles above are clearly him (Rangamati seat 299, same DOB 8 June 1963, father Subimal Dewan).",
+   "sources": []
+  },
+  {
+   "id": "2701fdbefce9",
+   "memberId": "013029901",
+   "category": "names",
+   "text": "Mother's name: the site has 'মোহিনী দেওয়ান', BSS has 'মহিনী দেওয়ান' (spelling only).",
+   "sources": []
+  },
+  {
+   "id": "75b079aa0ece",
+   "memberId": "013029901",
+   "category": "dob",
+   "text": "The two Wikipedia articles give different birth localities (bn: রাঙ্গাপানি; en: Mantripara, College Gate), so only the district is proposed.",
+   "sources": []
+  },
+  {
+   "id": "4ba7e6e891bf",
+   "memberId": "013030101",
+   "category": "posts",
+   "text": "The pack has no Wikipedia link for this member, although the bn and en Wikipedia articles above are clearly her (same DOB 1 September 1941, father Justice Abdul Jabbar Khan, BNP standing committee member).",
+   "sources": []
+  },
+  {
+   "id": "f98ab7d1f990",
+   "memberId": "013030201",
+   "category": "names",
+   "text": "Name spelling: the site's nameEn is 'SHERIN SULTANA'; Bangla news spells her শিরীন/শিরিন সুলতানা, so 'Shirin Sultana' is the usual English form. Worth checking.",
+   "sources": []
+  },
+  {
+   "id": "d01966e95d9b",
+   "memberId": "013030301",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but https://en.wikipedia.org/wiki/Rasheda_Begum_Hira is clearly her (same DOB 29 August 1957, women's reserved seat-3).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rasheda_Begum_Hira"
+   ]
+  },
+  {
+   "id": "f1451f731093",
+   "memberId": "013030301",
+   "category": "terms",
+   "text": "The site says 3 terms; sources found confirm only 2009 and 2026, so the bio gives no term count.",
+   "sources": []
+  },
+  {
+   "id": "fce824341427",
+   "memberId": "013030401",
+   "category": "names",
+   "text": "Name spelling: the site's nameEn is 'RAHANA AKTER RANU'; English Wikipedia and news use 'Rehana Akter Ranu'. See https://en.wikipedia.org/wiki/Rehana_Akter_Ranu",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Rehana_Akter_Ranu"
+   ]
+  },
+  {
+   "id": "3efe1bbb4ac9",
+   "memberId": "013030401",
+   "category": "dob",
+   "text": "Date of birth on the site is 1970-01-01, which looks like a placeholder value. Worth checking.",
+   "sources": []
+  },
+  {
+   "id": "027042bbd089",
+   "memberId": "013030501",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn Wikipedia article above is clearly her (same DOB 30 August 1969, former BNP reserved-seat MP).",
+   "sources": []
+  },
+  {
+   "id": "f1be5e11af0c",
+   "memberId": "013030601",
+   "category": "other",
+   "text": "The pack's candidate article 'ফরিদা ইয়াসমিন (সাংবাদিক)' is a different person (journalist, born 1 June 1963, Narsingdi); do not link it.",
+   "sources": []
+  },
+  {
+   "id": "cdc9b07970bb",
+   "memberId": "013030701",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn and en Wikipedia articles above are clearly her (DOB 1 January 1956 matches, reserved seat-7).",
+   "sources": []
+  },
+  {
+   "id": "43f3b30c95f3",
+   "memberId": "013030701",
+   "category": "posts",
+   "text": "Prothom Alo (https://www.prothomalo.com/politics/xf0usldzvx) calls her 'মহিলা দলের সাধারণ সম্পাদক', but Prothom Alo on 11 April 2026 (https://www.prothomalo.com/politics/jmjq8oyi3h) gives that post to Sultana Ahmed (013031701). The post was left out of both bios until the owner confirms who holds it.",
+   "sources": [
+    "https://www.prothomalo.com/politics/xf0usldzvx",
+    "https://www.prothomalo.com/politics/jmjq8oyi3h"
+   ]
+  },
+  {
+   "id": "41710b617a79",
+   "memberId": "013030801",
+   "category": "names",
+   "text": "The pack has no linked Wikipedia article, but https://en.wikipedia.org/wiki/Shakila_Farzana is clearly her (reserved seat-8, father Syed Wahidul Alam matches the site).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Shakila_Farzana"
+   ]
+  },
+  {
+   "id": "28dd4e056ad5",
+   "memberId": "013030801",
+   "category": "names",
+   "text": "Name spelling: the site shows 'সাকিলা ফারজানা'; Prothom Alo and Bangla Tribune write 'শাকিলা ফারজানা' (https://www.prothomalo.com/politics/xf0usldzvx). Worth checking.",
+   "sources": [
+    "https://www.prothomalo.com/politics/xf0usldzvx"
+   ]
+  },
+  {
+   "id": "d7cb3f048415",
+   "memberId": "013030801",
+   "category": "dob",
+   "text": "Date of birth: the site says 1977-10-25, while English Wikipedia says 'born 1975 or 1976' (age-based estimate). Worth checking against the EC affidavit.",
+   "sources": []
+  },
+  {
+   "id": "91e0851e726c",
+   "memberId": "013030901",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but https://en.wikipedia.org/wiki/Helen_Zerin_Khan is clearly her (reserved women's seat-9, BNP).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Helen_Zerin_Khan"
+   ]
+  },
+  {
+   "id": "217861bbf60d",
+   "memberId": "013030901",
+   "category": "posts",
+   "text": "English Wikipedia also calls her Senior Joint Secretary of Jatiyatabadi Mohila Dal; Prothom Alo (April 2026) gives her BNP central post as co-education secretary. partyRoleBn uses the BNP post.",
+   "sources": []
+  },
+  {
+   "id": "204abb4bd51c",
+   "memberId": "013031001",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn and en Wikipedia articles above are clearly her (same DOB 15 August 1969, reserved seat-10).",
+   "sources": []
+  },
+  {
+   "id": "b6288936c756",
+   "memberId": "013031001",
+   "category": "names",
+   "text": "Name spelling: the site uses 'নিলোফার'; The Daily Star Bangla's nominee list writes 'নিলুফার চৌধুরী মনি' (https://bangla.thedailystar.net/thirteenth-national-parliamentary-election/news-3917881). Minor, worth a glance.",
+   "sources": [
+    "https://bangla.thedailystar.net/thirteenth-national-parliamentary-election/news-3917881"
+   ]
+  },
+  {
+   "id": "f111303eba90",
+   "memberId": "013031101",
+   "category": "names",
+   "text": "Name: the site's nameBn '‌নিপুন রায় চৌধুরী' starts with an invisible zero-width non-joiner (U+200C) and spells নিপুন with ন; Prothom Alo and English Wikipedia write 'নিপুণ রায় চৌধুরী'. Suggest removing the hidden character and checking the spelling.",
+   "sources": []
+  },
+  {
+   "id": "2ec4f075d0d6",
+   "memberId": "013031101",
+   "category": "names",
+   "text": "The pack has no linked Wikipedia article, but https://en.wikipedia.org/wiki/Nipun_Roy_Chowdhury is clearly her (DOB 29 October 1987 and father Nitai Roy Chowdhury match the site).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Nipun_Roy_Chowdhury"
+   ]
+  },
+  {
+   "id": "344b05554336",
+   "memberId": "013031201",
+   "category": "names",
+   "text": "The pack has no linked Wikipedia article, but the bn and en Wikipedia articles above are clearly her (reserved seat-12, father Akhtaruddin Ahmad matches the site).",
+   "sources": []
+  },
+  {
+   "id": "be97991e5417",
+   "memberId": "013031201",
+   "category": "names",
+   "text": "Name spelling: the site shows 'জীবা আমিনা খান'; The Daily Star Bangla's BNP list writes 'জেবা আমিন খান' (https://bangla.thedailystar.net/thirteenth-national-parliamentary-election/news-3917881). Worth checking.",
+   "sources": [
+    "https://bangla.thedailystar.net/thirteenth-national-parliamentary-election/news-3917881"
+   ]
+  },
+  {
+   "id": "70f1d5a9746f",
+   "memberId": "013031201",
+   "category": "posts",
+   "text": "Her Jhalokati district BNP role differs between sources: bn Wikipedia says convener (আহ্বায়ক), en Wikipedia says member of the convening committee. Left out of the bio and fields.",
+   "sources": []
+  },
+  {
+   "id": "e2c0686f589b",
+   "memberId": "013031301",
+   "category": "names",
+   "text": "The pack has no linked Wikipedia article, but https://en.wikipedia.org/wiki/Mahmuda_Habiba is clearly her (reserved seat-13, father Muhammad Ayyan Ud-Din matches the site).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mahmuda_Habiba"
+   ]
+  },
+  {
+   "id": "ddfd287ada18",
+   "memberId": "013031401",
+   "category": "names",
+   "text": "The site has no father or mother name. bn Wikipedia gives father মো. আব্দুল মান্নান and mother মোছা. রাজিয়া সুলতানা (https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A6%BE_%E0%A6%B8%E0%A7%81%E0%A6%B2%E0%A6%A4%E0%A6%BE%E0%A6%A8%E0%A6%BE). DOB 20 October 1976 matches the site.",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A6%BE%E0%A6%AC%E0%A6%BF%E0%A6%B0%E0%A6%BE_%E0%A6%B8%E0%A7%81%E0%A6%B2%E0%A6%A4%E0%A6%BE%E0%A6%A8%E0%A6%BE"
+   ]
+  },
+  {
+   "id": "9bf5f0917dd4",
+   "memberId": "013031401",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn and en Wikipedia articles above are clearly her (reserved seat-14, same DOB).",
+   "sources": []
+  },
+  {
+   "id": "9370dd0e916a",
+   "memberId": "013031501",
+   "category": "names",
+   "text": "Name: the site shows 'সানসিলা জেবরিন' / 'SUNSILA JABRIN'; bn Wikipedia, Bangla Tribune and The Daily Star Bangla use the full name 'সানসিলা জেবরিন প্রিয়াঙ্কা'. Consider adding প্রিয়াঙ্কা.",
+   "sources": []
+  },
+  {
+   "id": "09abda7d4c68",
+   "memberId": "013031501",
+   "category": "names",
+   "text": "The pack has no linked Wikipedia article, but the bn and en Wikipedia articles above are clearly her (same DOB 22 June 1993, father Hazrat Ali).",
+   "sources": []
+  },
+  {
+   "id": "c165752872aa",
+   "memberId": "013031601",
+   "category": "names",
+   "text": "The pack has no linked Wikipedia article, but the bn and en Wikipedia articles on Sanjida Islam Tulee are her (reserved-seat BNP MP, Dhaka-14 candidate 2026; Prothom Alo and Desh Rupantor name the nominee 'সানজিদা ইসলাম তুলি'). Wikipedia gives no DOB to cross-check.",
+   "sources": []
+  },
+  {
+   "id": "c5ae4426ad6e",
+   "memberId": "013031601",
+   "category": "other",
+   "text": "The 'সানজিদা খানম' candidate in the pack is a different person (Awami League reserved-seat MP, 2014).",
+   "sources": []
+  },
+  {
+   "id": "fd892b3f2823",
+   "memberId": "013031701",
+   "category": "posts",
+   "text": "Prothom Alo on 11 April 2026 (https://www.prothomalo.com/politics/jmjq8oyi3h) calls her 'মহিলা দলের সাধারণ সম্পাদক', but Prothom Alo's 20 April list (https://www.prothomalo.com/politics/xf0usldzvx) gives that title to Bilkis Islam (013030701). Owner should confirm who holds the Mohila Dal general secretary post before it goes into either bio.",
+   "sources": [
+    "https://www.prothomalo.com/politics/jmjq8oyi3h",
+    "https://www.prothomalo.com/politics/xf0usldzvx"
+   ]
+  },
+  {
+   "id": "00d2c75eec73",
+   "memberId": "013031701",
+   "category": "wiki",
+   "text": "No Wikipedia article found; the pack's candidates (Anjum Sultana Seema, Kazi Kaniz Sultana, UK and Pakistan lists) are different people.",
+   "sources": []
+  },
+  {
+   "id": "9c612e878aa1",
+   "memberId": "013031801",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn Wikipedia article 'ফাহমিদা হক' is her (BNP reserved-seat MP, 13th parliament, wife of Zillur Rahman).",
+   "sources": []
+  },
+  {
+   "id": "030ee7c8894d",
+   "memberId": "013031901",
+   "category": "names",
+   "text": "Father's name looks misspelt: the site has 'মৃত. পাউলুস মিস্‌জ' while the member's surname is মিন্‌জ. Probably 'পাউলুস মিন্‌জ'. The bio uses মিন্‌জ; owner should confirm.",
+   "sources": []
+  },
+  {
+   "id": "346120aefcb4",
+   "memberId": "013031901",
+   "category": "fields",
+   "text": "The site's profession is 'সংসদ সদস্য', which is not a profession. No sourced profession found.",
+   "sources": []
+  },
+  {
+   "id": "a605a58e24e3",
+   "memberId": "013031901",
+   "category": "other",
+   "text": "The pack's candidates (Jharkhand Mukti Morcha, Honey Mahogany, 13th parliament list) are not about her.",
+   "sources": []
+  },
+  {
+   "id": "bc2d3fa8927c",
+   "memberId": "013032001",
+   "category": "names",
+   "text": "Name spelling: the site shows 'সূবর্না সিকদার'; bn Wikipedia uses 'সূবর্ণা সিকদার', and news lists write 'সুবর্ণা সিকদার (ঠাকুর)' or 'সুবর্ণা শিকদার'. Worth checking against the EC gazette.",
+   "sources": []
+  },
+  {
+   "id": "9c54e2776e2a",
+   "memberId": "013032001",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn Wikipedia article 'সূবর্ণা সিকদার' is her (BNP reserved-seat MP, 13th parliament).",
+   "sources": []
+  },
+  {
+   "id": "5f43892ffb02",
+   "memberId": "013032001",
+   "category": "fields",
+   "text": "The site's profession is 'সংসদ সদস্য', which is not a profession.",
+   "sources": []
+  },
+  {
+   "id": "1fd302c75792",
+   "memberId": "013032101",
+   "category": "names",
+   "text": "The site has no father or mother name. bn Wikipedia gives father আবুল খায়ের and mother ফাতেমা খাতুন (DOB 1 July 1960 matches the site).",
+   "sources": []
+  },
+  {
+   "id": "a3351d2538fc",
+   "memberId": "013032101",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn Wikipedia article above is clearly her (same DOB, BNP reserved-seat MP).",
+   "sources": []
+  },
+  {
+   "id": "77c3cf13b741",
+   "memberId": "013032201",
+   "category": "names",
+   "text": "The site has no father or mother name. bn Wikipedia gives father 'মুক্তিযোদ্ধা কমান্ডার সিরাজুল ইসলাম' (DOB 2 November 1973 matches the site): https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A7%80_%E0%A6%86%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6)",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/%E0%A6%B6%E0%A6%BE%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A7%80_%E0%A6%86%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0_(%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A4%E0%A6%BF%E0%A6%AC%E0%A6%BF%E0%A6%A6"
+   ]
+  },
+  {
+   "id": "6c3c7f4edb15",
+   "memberId": "013032201",
+   "category": "wiki",
+   "text": "The pack found no Wikipedia article, but 'শাম্মী আক্তার (রাজনীতিবিদ)' on bn Wikipedia is clearly her (same DOB, reserved seat-22).",
+   "sources": []
+  },
+  {
+   "id": "88cb7243833f",
+   "memberId": "013032301",
+   "category": "other",
+   "text": "The pack's candidates (Netrokona people list, Muradnagar Upazila) are not about her; the Netrokona entry is the late actress Ferdousi Ahmed Lina.",
+   "sources": []
+  },
+  {
+   "id": "31887d268ca4",
+   "memberId": "013032401",
+   "category": "names",
+   "text": "English name: the site's nameEn 'Bithika Benta Hossain' looks misspelt; 'Binte' matches the Bangla বিনতে.",
+   "sources": []
+  },
+  {
+   "id": "282e0a24cf21",
+   "memberId": "013032401",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but the bn Wikipedia article 'বীথিকা বিনতে হোসাইন' is her (BNP reserved-seat MP, widow of Shafiul Bari).",
+   "sources": []
+  },
+  {
+   "id": "1c5917244a05",
+   "memberId": "013032501",
+   "category": "names",
+   "text": "The site has no father or mother name; none found in the sources checked.",
+   "sources": []
+  },
+  {
+   "id": "0bdcb2c2928e",
+   "memberId": "013032601",
+   "category": "wiki",
+   "text": "The pack has no linked Wikipedia article, but https://en.wikipedia.org/wiki/Mansura_Akter is clearly her (reserved women's seat-26, BNP).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mansura_Akter"
+   ]
+  },
+  {
+   "id": "654310c19ce4",
+   "memberId": "013032601",
+   "category": "fields",
+   "text": "The site's profession is 'ছাত্রী' (student), which looks out of date given her completed degree. 'রাজনীতিবিদ' is proposed as the neutral alternative.",
+   "sources": []
+  },
+  {
+   "id": "ac2737d7583d",
+   "memberId": "013032601",
+   "category": "names",
+   "text": "The Daily Star Bangla list spells her 'মনছুরা আক্তার' (https://bangla.thedailystar.net/thirteenth-national-parliamentary-election/news-3917881). Minor.",
+   "sources": [
+    "https://bangla.thedailystar.net/thirteenth-national-parliamentary-election/news-3917881"
+   ]
+  },
+  {
+   "id": "083af03930c6",
+   "memberId": "013032701",
+   "category": "names",
+   "text": "The pack has no linked Wikipedia article, but the bn and en Wikipedia articles above are clearly her (DOB 26 March 1983, father Ebadur Rahman Chowdhury, reserved seat-27).",
+   "sources": []
+  },
+  {
+   "id": "268afbd1011d",
+   "memberId": "013032701",
+   "category": "names",
+   "text": "Name spelling: bn Wikipedia opens with 'জাহরাত আদিব চৌধুরী' and the English form is 'Jahrat'; the site uses 'জহরত'. Minor, worth a glance.",
+   "sources": []
+  },
+  {
+   "id": "675536dc4fe2",
+   "memberId": "013032901",
+   "category": "dob",
+   "text": "The site marks Fahima Nasrin as a freedom fighter (isFreedomFighter = true), but her date of birth on the site is 25 December 1963, which would make her 7 years old in 1971. One of the two values is likely wrong; no source found confirming freedom-fighter status.",
+   "sources": []
+  },
+  {
+   "id": "f7d6d831795d",
+   "memberId": "013033301",
+   "category": "posts",
+   "text": "The site's English name 'SHACOT ARA AKTER' looks like a misspelling of Shawkat/Shaukat Ara Akter (Bangla শওকত আরা আক্তার). Several outlets (bdnews24, TBS, Daily Star) also print 'শওকত আর আক্তার', a typo; Bhorer Awaj and Bangla Tribune use শওকত আরা আক্তার (উর্মি).",
+   "sources": []
+  },
+  {
+   "id": "98709c69fb50",
+   "memberId": "013033501",
+   "category": "fields",
+   "text": "Site professionBn is 'সংসদ সদস্য', which is an office rather than a profession; no source found giving her actual profession.",
+   "sources": []
+  },
+  {
+   "id": "a0ebb2de00de",
+   "memberId": "013033701",
+   "category": "wiki",
+   "text": "The pack has no verified Wikipedia link for this member, but the candidate bn Wikipedia article 'নুরুন্নিসা সিদ্দীকা' is clearly her: born 1958 (site DOB 14 Oct 1958), Jamaat women's wing secretary, reserved-seat MP. It could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "638904ce7b5d",
+   "memberId": "013033801",
+   "category": "names",
+   "text": "The pack has no verified Wikipedia link, but en Wikipedia 'Marzia Begum' explicitly names Reserved Seat for Women-38 for Jamaat, and bn Wikipedia 'মারজিয়া বেগম' is the same person. Either could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "97cf962177cb",
+   "memberId": "013033901",
+   "category": "wiki",
+   "text": "The pack has no verified Wikipedia link, but bn Wikipedia 'সাবিকুন্নাহার মুন্নী' is clearly her (lawyer, Jamaat women's wing legal affairs, reserved-seat MP). Could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "271a2b519d8d",
+   "memberId": "013033901",
+   "category": "posts",
+   "text": "Site name is 'সাবিকুন্নাহার' with English 'SUBIKUNNAHAR'; she is widely published as 'সাবিকুন্নাহার মুন্নী' (bdnews24 gazette report, TBS, Ajker Patrika), and the English spelling 'Subikunnahar' looks off (likely 'Sabikunnahar').",
+   "sources": []
+  },
+  {
+   "id": "ef321a41d46d",
+   "memberId": "013034101",
+   "category": "fields",
+   "text": "Site professionBn is 'সংসদ সদস্য', which is an office rather than a profession. Naya Diganta calls her 'অধ্যাপিকা' and Dinajpur TV says she taught for 31 years, so 'শিক্ষকতা' is proposed.",
+   "sources": []
+  },
+  {
+   "id": "7cc307383418",
+   "memberId": "013034401",
+   "category": "names",
+   "text": "The pack has no verified Wikipedia link, but bn 'মারদিয়া মমতাজ' and en 'Mardia Mumtaz' are clearly her (father engineer Momtazul Karim matches the site's father বি. জেড. এম মোমতাজুল করিম; Jamaat reserved-seat MP). Either could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "e53246848fed",
+   "memberId": "013034401",
+   "category": "dob",
+   "text": "Birthplace is unclear: en Wikipedia says born in Chattogram, while bn Wikipedia gives her ancestral home as Brahmanbaria; no birthPlaceBn proposed until checked.",
+   "sources": []
+  },
+  {
+   "id": "ef9d94fe53cd",
+   "memberId": "013034501",
+   "category": "wiki",
+   "text": "The pack has no verified Wikipedia link, but bn 'রোকেয়া বেগম (ঢাকার রাজনীতিবিদ)' and en 'Rokeya Begum (Dhaka politician)' are clearly her (born 1977 matching the site DOB, retired teacher, Jamaat reserved-seat nominee). Either could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "f183cf0d1c9d",
+   "memberId": "013034601",
+   "category": "names",
+   "text": "The pack has no verified Wikipedia link, but en Wikipedia 'Mahmuda Mitu' is clearly her (father Mahbub Alam and mother Yasmin Alam match the site). Could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "8f47fdcb6e39",
+   "memberId": "013034701",
+   "category": "dob",
+   "text": "Date of birth: the site shows 20 December 1981, but bn Wikipedia says she was born in 1980 (infobox 'জন্ম ১৯৮০, বগুড়া'). Worth checking. https://bn.wikipedia.org/wiki/তাসমিয়া_প্রধান",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/তাসমিয়া_প্রধান"
+   ]
+  },
+  {
+   "id": "35706907fa00",
+   "memberId": "013034701",
+   "category": "names",
+   "text": "The pack has no verified Wikipedia link, but bn Wikipedia 'তাসমিয়া প্রধান' is clearly her (father Shafiul Alam Prodhan matches the site; infobox names seat সংরক্ষিত মহিলা-৪৭). Could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "9f9ab6d5e803",
+   "memberId": "013034701",
+   "category": "names",
+   "text": "Site mother name is 'রেহানা বেগম'; Wikipedia gives her as 'রেহানা প্রধান', a JAGPA president and college teacher. Likely the same person under a different surname form.",
+   "sources": []
+  },
+  {
+   "id": "3a5818358f36",
+   "memberId": "013034801",
+   "category": "wiki",
+   "text": "bn Wikipedia has an article 'মাহবুবা হাকিম' about her (parents আব্দুল হাকীম and মাহমুদা সুলতানা match the site); it was not in the pack and could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "153d34aeec1a",
+   "memberId": "013034901",
+   "category": "posts",
+   "text": "bn Wikipedia 'সুলতানা জেসমিন' (father আব্দুল আজিজ হাওলাদার matches the site) says she holds 'সংরক্ষিত মহিলা-৫০' and calls her a BNP central committee member, while the site shows her at Women Seat-49 as স্বতন্ত্র. The seat number on Wikipedia is probably wrong (Nusrat Tabassum is Seat-50 on the site), but the owner may want to check both the seat number and whether she holds a BNP post. https://bn.wikipedia.org/wiki/সুলতানা_জেসমিন",
+   "sources": [
+    "https://bn.wikipedia.org/wiki/সুলতানা_জেসমিন"
+   ]
+  },
+  {
+   "id": "e6447c7d67d0",
+   "memberId": "013034901",
+   "category": "wiki",
+   "text": "The pack has no verified Wikipedia link for her; the article above could be added as bioSource once the seat-number discrepancy is resolved.",
+   "sources": []
+  },
+  {
+   "id": "50773eda1381",
+   "memberId": "013035001",
+   "category": "wiki",
+   "text": "The pack had no candidates, but bn Wikipedia 'নুসরাত তাবাসসুম' is clearly her (born March 2001 in Bagoyan, Daulatpur, Kushtia; NCP; reserved-seat MP). Could be added as bioSource.",
+   "sources": []
+  },
+  {
+   "id": "ff518941fc53",
+   "memberId": "013035001",
+   "category": "fields",
+   "text": "Site professionBn is 'ব্যবসা', but every source describes her as a student leader, political activist and human rights defender; no source mentions a business. Worth checking.",
+   "sources": []
+  }
+ ]
+}

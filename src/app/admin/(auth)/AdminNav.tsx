@@ -19,7 +19,11 @@ export interface NavGroup {
 export default function AdminNav({ groups, account }: { groups: NavGroup[]; account: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const active = (href: string) => (href === '/admin' ? pathname === '/admin' : pathname.startsWith(href));
+  // The longest matching link wins, so /admin/feed/review lights only "ফিড যাচাই", not "সংবাদ ফিড" too.
+  const hrefs = groups.flatMap((g) => g.items.map((i) => i.href));
+  const matches = (href: string) => (href === '/admin' ? pathname === '/admin' : pathname === href || pathname.startsWith(`${href}/`));
+  const best = hrefs.filter(matches).sort((a, b) => b.length - a.length)[0];
+  const active = (href: string) => href === best;
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';

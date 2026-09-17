@@ -9,6 +9,7 @@ const GROUPS: { label: string; items: (NavGroup['items'][number] & { super?: boo
     items: [
       { href: '/admin', label: 'ড্যাশবোর্ড', icon: 'grid' },
       { href: '/admin/members', label: 'সংসদ সদস্য', icon: 'users' },
+      { href: '/admin/questions', label: 'তথ্য যাচাইয়ের প্রশ্ন', icon: 'message' },
       { href: '/admin/seats', label: 'আসন', icon: 'pin' },
       { href: '/admin/parties', label: 'দল', icon: 'flag' },
       { href: '/admin/committees', label: 'কমিটি', icon: 'layers' },

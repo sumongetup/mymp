@@ -8,6 +8,8 @@ import { EntityEditor, EditFlags, HidePanel, AuditLink } from '../../EntityEdito
 import { variantsFor } from '@/lib/admin/feed';
 import { addNameVariant, deleteNameVariant } from '@/app/admin/actions';
 import Link from 'next/link';
+import { questionsFor, questionStates } from '@/lib/admin/questions';
+import { QuestionItem } from '../../questions/QuestionItem';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const m = getMemberById((await params).id);
@@ -27,7 +29,13 @@ export default async function EditMember({
   const m = getMemberById(id);
   if (!m) notFound();
 
-  const [overrides, hidden, variants] = await Promise.all([overridesFor('member', id), isHidden('member', id), variantsFor(id)]);
+  const questions = questionsFor(id);
+  const [overrides, hidden, variants, states] = await Promise.all([
+    overridesFor('member', id),
+    isHidden('member', id),
+    variantsFor(id),
+    questions.length ? questionStates() : Promise.resolve(new Map()),
+  ]);
 
   return (
     <AdminPage
@@ -53,6 +61,19 @@ export default async function EditMember({
           {m.bioFromWiki.split(',').map((k) => ({ educationBn: 'শিক্ষা', birthPlaceBn: 'জন্মস্থান', professionBn: 'পেশা' })[k.trim()] ?? k).join(', ')}{' '}
           স্বয়ংক্রিয়ভাবে সদস্যের উইকিপিডিয়া নিবন্ধ থেকে নেওয়া ({(m.bioSource ?? '').split(' ').join(', ')})। সাইটে এগুলোর পাশে তারকাচিহ্ন ও সূত্র দেখানো হয়। যাচাই করে সংরক্ষণ করলে সেই ঘরটি আপনার সম্পাদনা হিসেবে দেখাবে।
         </Notice>
+      )}
+
+      {questions.length > 0 && (
+        <Panel
+          title={`যাচাইয়ের প্রশ্ন (${bn(questions.filter((x) => !states.get(x.id)?.resolved).length)}টি খোলা)`}
+          action={<Link href="/admin/questions">সব প্রশ্ন →</Link>}
+        >
+          <ul className="flex flex-col divide-y divide-rulesoft">
+            {questions.map((x) => (
+              <QuestionItem key={x.id} question={x} state={states.get(x.id) ?? null} back={`/admin/members/${id}`} />
+            ))}
+          </ul>
+        </Panel>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-4 items-start">

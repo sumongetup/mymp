@@ -19,6 +19,7 @@ import {
 } from '@/lib/admin/feed';
 import { SOCIAL_HOSTS, validSocialUrl, parseSocialLines } from '@/lib/admin/social-import';
 import { allMembers } from '@/lib/data';
+import { allQuestions } from '@/lib/admin/questions';
 
 export interface ActionState { error?: string; ok?: string }
 
@@ -514,4 +515,26 @@ export async function runFeedCollectorNow(): Promise<ActionState> {
   } catch (e) {
     return { error: (e as Error).message };
   }
+}
+
+/* ---------------- member data questions ---------------- */
+
+/** Marks a data question settled, or opens it again; the decision is kept in the audit log. */
+export async function setQuestionResolved(fd: FormData) {
+  const me = await requireAdmin();
+  const id = str(fd, 'question_id');
+  const memberId = str(fd, 'member_id');
+  const resolve = str(fd, 'resolve') === '1';
+  const q = allQuestions().find((x) => x.id === id && x.memberId === memberId);
+  if (!q) throw new Error('unknown question');
+  await audit(me, {
+    action: resolve ? 'question.resolved' : 'question.reopened',
+    entity_type: 'member', entity_id: memberId, field: id, old_value: null,
+    new_value: orNull(str(fd, 'note'))?.slice(0, 500) ?? null,
+  });
+  revalidatePath('/admin/questions');
+  revalidatePath(`/admin/members/${memberId}`);
+  const back = str(fd, 'back');
+  // Only this admin's own pages are a place to return to.
+  redirect(back.startsWith('/admin/') ? back : '/admin/questions');
 }
