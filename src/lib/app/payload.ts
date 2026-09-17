@@ -129,8 +129,8 @@ function leaders() {
     for (const o of officers.filter((x) => x.role === role && x.memberId)) {
       const m = members.find((x) => x.id === o.memberId);
       if (!m || out.some((x) => x.memberId === m.id)) continue;
-      // The Leader of the House is the Prime Minister; readers know the second title first.
-      const roleBn = role === 'LEADER_OF_HOUSE' && (m.offices ?? []).includes('pm') ? 'প্রধানমন্ত্রী ও সংসদ নেতা' : label[role]!;
+      // The Leader of the House is the Prime Minister, the title readers know; it fits a card's pill.
+      const roleBn = role === 'LEADER_OF_HOUSE' && (m.offices ?? []).includes('pm') ? 'প্রধানমন্ত্রী' : label[role]!;
       out.push({ roleBn, memberId: m.id });
     }
   }
