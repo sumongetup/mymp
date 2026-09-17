@@ -166,7 +166,13 @@ export const socialsOf = (m: Member): SocialLink[] => {
   return SOCIAL_FIELDS.flatMap((f): SocialLink[] => {
     const url = (m as unknown as Record<string, string | null>)[f.key] ?? null;
     if (!url) return [];
-    if (f.key === 'facebook') return fb.show === 'link' ? [{ ...f, url, unverified: fb.unverified }] : [];
+    // "অফিসিয়াল" tells the member's own page apart from the Facebook share
+    // button beside it, and is only claimed for a page not still being checked.
+    if (f.key === 'facebook') {
+      if (fb.show !== 'link') return [];
+      return [{ ...f, url, unverified: fb.unverified, label: fb.unverified ? 'ফেসবুক পেজ' : 'অফিসিয়াল ফেসবুক পেজ' }];
+    }
+    if (f.key === 'website') return [{ ...f, url, unverified: false, label: 'অফিসিয়াল ওয়েবসাইট' }];
     return [{ ...f, url, unverified: false }];
   });
 };
