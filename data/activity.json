@@ -523,6 +523,50 @@
  ],
  "notices": [
   {
+   "id": "884",
+   "type": "COMMITTEE",
+   "category": null,
+   "date": "2026-09-23",
+   "titleBn": "ত্রয়োদশ জাতীয় সংসদের স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটির ১ম বৈঠক",
+   "titleEn": "1st Meeting of the Standing Committee on the Ministry of Health and Family Welfare of the 13th Parliament",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/592dbbcc-3c75-4f0e-9197-782c7ff1a599.pdf",
+   "memberId": null,
+   "committeeId": "101"
+  },
+  {
+   "id": "881",
+   "type": "COMMITTEE",
+   "category": null,
+   "date": "2026-09-21",
+   "titleBn": "ত্রয়োদশ জাতীয় সংসদের গৃহায়ন ও গণপূর্ত মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটির ১ম বৈঠক",
+   "titleEn": "1st Meeting of the Parliamentary Standing Committee on the Ministry of Housing and Public Works of the 13th Parliament",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/d6ae27fe-b9e0-415b-ba72-6191f49ca969.pdf",
+   "memberId": null,
+   "committeeId": "100"
+  },
+  {
+   "id": "879",
+   "type": "COMMITTEE",
+   "category": null,
+   "date": "2026-09-20",
+   "titleBn": "ত্রয়োদশ জাতীয় সংসদের সংবিধান সংশোধন সম্পর্কিত বিশেষ কমিটির ২য় বৈঠক",
+   "titleEn": "2nd Meeting of the Special Committee on Constitutional Amendment of the 13th Parliament",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/f742569d-7c03-4627-8de4-1ff37ad70ed4.pdf",
+   "memberId": null,
+   "committeeId": "87"
+  },
+  {
+   "id": "868",
+   "type": "COMMITTEE",
+   "category": null,
+   "date": "2026-09-19",
+   "titleBn": "ত্রয়োদশ জাতীয় সংসদের পরিবেশ, বন ও জলবায়ু পরিবর্তন মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটির ১ম বৈঠক",
+   "titleEn": "1st Meeting of the Parliamentary Standing Committee on the Ministry of Environment, Forest and Climate Change of the 13th Parliament",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/3aab4bbd-2991-42dc-80a2-7851298c416e.pdf",
+   "memberId": null,
+   "committeeId": "97"
+  },
+  {
    "id": "847",
    "type": "COMMITTEE",
    "category": null,
@@ -534,15 +578,158 @@
    "committeeId": "86"
   },
   {
+   "id": "880",
+   "type": "COMMITTEE",
+   "category": null,
+   "date": "2026-09-16",
+   "titleBn": "ত্রয়োদশ জাতীয় সংসদের কৃষি মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটির ১ম বৈঠক",
+   "titleEn": "1st Meeting of the Parliamentary Standing Committee on the Ministry of Agriculture of the 13th Parliament",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/dba65491-8750-492f-be6f-358e789ed2f9.pdf",
+   "memberId": null,
+   "committeeId": "99"
+  },
+  {
+   "id": "869",
+   "type": "COMMITTEE",
+   "category": null,
+   "date": "2026-09-16",
+   "titleBn": "ত্রয়োদশ জাতীয় সংসদের ভূমি মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটির ‍১ম বৈঠক",
+   "titleEn": "1st Meeting of the Parliamentary Standing Committee on the Ministry of Land of the 13th Parliament",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/b566c83f-4148-405d-b5e6-25737c2fd8c3.pdf",
+   "memberId": null,
+   "committeeId": "98"
+  },
+  {
+   "id": "883",
+   "type": "GENERAL",
+   "category": "notification",
+   "date": "2026-09-15",
+   "titleBn": "গবেষণা প্রস্তাব আহবান",
+   "titleEn": "Call for Research Proposals",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/414c6933-45d7-47b7-90d9-5ce39bff47fb.pdf",
+   "memberId": null,
+   "committeeId": null
+  },
+  {
+   "id": "882",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-15",
+   "titleBn": "জনাব মোহাম্মদ কয়ছর আহমেদ, ২২৬ সুনামগঞ্জ-৩",
+   "titleEn": "Mr. Mohamed Koysor Ahmed, 226 Sunamganj-3 ( To visit Saudi Arabia And UAE)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/4dbed33e-8e73-46d5-9e3a-a7679ce36c9e.pdf",
+   "memberId": "013022601",
+   "committeeId": null
+  },
+  {
    "id": "864",
    "type": "COMMITTEE",
    "category": null,
    "date": "2026-09-15",
    "titleBn": "ত্রয়োদশ জাতীয় সংসদের তথ্য ও সম্প্রচার মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটির ১ম বৈঠক",
    "titleEn": "1st Meeting of the Standing Committee on the Ministry of Information and Broadcasting of the 13th Parliament",
-   "pdfUrl": "https://www.parliament.gov.bd/api/upload/db52310d-53a4-4e95-b8cd-93d527a454da.pdf",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/78d7ede5-0c05-4b08-9b03-aaaf8e558946.pdf",
    "memberId": null,
    "committeeId": "93"
+  },
+  {
+   "id": "877",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-14",
+   "titleBn": "মোঃ সেলিম ভূইয়া (২৫০ কুমিল্লা-২)",
+   "titleEn": "Mr. Md. Salim Bhuiyan (\t250 Cumilla-2)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/9dbe43e8-2861-4d22-a1e4-32408667df94.pdf",
+   "memberId": "013025001",
+   "committeeId": null
+  },
+  {
+   "id": "876",
+   "type": "NOC_GO",
+   "category": "GO",
+   "date": "2026-09-14",
+   "titleBn": "সৈয়দ আবদুল্লাহ মোহাম্মদ তাহের (২৫৯ কুমিল্লা-১১)",
+   "titleEn": "Dr. Syed Abdullah Mohammed Taher (259 Cumilla-11)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/c284d477-f884-412f-8f4e-73fa490052b7.pdf",
+   "memberId": "013025901",
+   "committeeId": null
+  },
+  {
+   "id": "873",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-14",
+   "titleBn": "জনাব মোহাম্মদ নুরুল ইসলাম (১১৮ ভোলা-৪)",
+   "titleEn": "Mr. Mohamad Nurul Islam (118 Bhola-04)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/2064a382-8309-4564-ac81-ea8c511464be.pdf",
+   "memberId": "013011801",
+   "committeeId": null
+  },
+  {
+   "id": "872",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-14",
+   "titleBn": "জনাব মোহাম্মদ নুরুল ইসলাম (১১৮ ভোলা-৪)",
+   "titleEn": "Mr. Mohamad Nurul Islam (118 Bhola-04)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/67210884-7c03-4ec0-9f76-cd29e7f3c2f9.pdf",
+   "memberId": "013011801",
+   "committeeId": null
+  },
+  {
+   "id": "871",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-14",
+   "titleBn": "ড. খন্দকার মোশাররফ হোসেন (২৪৯ কুমিল্লা-১)",
+   "titleEn": "Dr. Khandaker Mosharraf Hossain ( 249 Cumilla-1)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/d410d9e4-71d9-4caa-93ca-ec98ce72085b.pdf",
+   "memberId": "013024901",
+   "committeeId": null
+  },
+  {
+   "id": "875",
+   "type": "NOC_GO",
+   "category": "GO",
+   "date": "2026-09-13",
+   "titleBn": "এ. বি. এম আশরাফ উদ্দিন (নিজান) (২৭৭ লক্ষ্মীপুর-৪)",
+   "titleEn": "Mr. ABM Ashraf Uddin Nizan (277 Laxmipur-4)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/fd44e1f1-908c-43a5-88ff-90098b8938ae.pdf",
+   "memberId": "013027701",
+   "committeeId": null
+  },
+  {
+   "id": "874",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-13",
+   "titleBn": "জনাব মোহাম্মদ এনামুল হক (২৮৯ চট্টগ্রাম-১২)",
+   "titleEn": "Mr. Mohammed Enamul Hoque (289 Chattagram-12)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/5342950c-79aa-4a00-bd5a-abe479454dbf.pdf",
+   "memberId": "013028901",
+   "committeeId": null
+  },
+  {
+   "id": "870",
+   "type": "NOC_GO",
+   "category": "NOC",
+   "date": "2026-09-13",
+   "titleBn": "জনাব বিলকিস বেগম (৩০৭ মহিলা আসন-৭)",
+   "titleEn": "Ms. Bilkis Islam (307 Women Seat-7)",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/a6f7b515-9b2f-43c6-b38f-c2d94495baea.pdf",
+   "memberId": "013030701",
+   "committeeId": null
+  },
+  {
+   "id": "867",
+   "type": "NOC_GO",
+   "category": "GO",
+   "date": "2026-09-11",
+   "titleBn": "বাংলাদেশ জাতীয় সংসদের মাননীয় চিফ হুইপ জনাব নূরুল ইসলাম মনি, এমপি-র ১৪ থেকে ২১ সেপ্টেম্বর ২০২৬ তারিখ পর্যন্ত ওমরাহ হজ পালনের উদ্দেশ্যে সৌদি আরব সফরের অনুমোদন জ্ঞাপন।",
+   "titleEn": "Conceyance of sanction for the visit of Hon'ble Chief Whip of Bangladesh Parliament Mr. Nurul Islam Moni, MP to Saudi Arabia to perform Umrah Hajj from 14 to 21 September 2026.",
+   "pdfUrl": "https://www.parliament.gov.bd/api/upload/7688d0f2-79c0-42a6-9b0a-be33f665e73f.pdf",
+   "memberId": "013011001",
+   "committeeId": null
   },
   {
    "id": "863",

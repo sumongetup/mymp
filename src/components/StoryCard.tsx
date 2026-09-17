@@ -23,7 +23,7 @@ export default function StoryCard({ s, showMember = true, showDate = true }: { s
   const people = s.members?.length ? s.members : s.member ? [s.member] : [];
 
   return (
-    <article className="reveal bg-surface border border-rule rounded-card shadow-card p-4 sm:p-5 flex gap-4 hover:border-brandring transition-colors">
+    <article className="reveal h-full bg-surface border border-rule rounded-card shadow-card p-4 sm:p-5 flex gap-4 hover:border-brandring transition-colors">
       {(s.thumbnail || video) && (
         <a
           href={s.lead.url}

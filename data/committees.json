@@ -398,6 +398,55 @@
   "previousStartDate": "2024-02-07"
  },
  {
+  "id": "99",
+  "slug": "standing-committee-on-ministry-of-agriculture",
+  "nameBn": "কৃষি মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটি",
+  "nameEn": "Standing Committee on Ministry of Agriculture",
+  "type": "Ministry Related Standing Committee",
+  "startDate": "2026-09-10",
+  "rosterCurrent": true,
+  "memberCount": 9,
+  "members": [
+   {
+    "role": "Chairman",
+    "memberId": "013027401"
+   },
+   {
+    "role": "Member",
+    "memberId": "013021401"
+   },
+   {
+    "role": "Member",
+    "memberId": "013004601"
+   },
+   {
+    "role": "Member",
+    "memberId": "013001701"
+   },
+   {
+    "role": "Member",
+    "memberId": "013023801"
+   },
+   {
+    "role": "Member",
+    "memberId": "013014901"
+   },
+   {
+    "role": "Member",
+    "memberId": "013031401"
+   },
+   {
+    "role": "Member",
+    "memberId": "013008801"
+   },
+   {
+    "role": "Member",
+    "memberId": "013005501"
+   }
+  ],
+  "previousStartDate": "2024-02-07"
+ },
+ {
   "id": "94",
   "slug": "standing-committee-on-ministry-of-civil-aviation-and-tourism",
   "nameBn": "বেসামরিক বিমান পরিবহন ও পর্যটন মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটি",
@@ -716,6 +765,58 @@
   "previousStartDate": "2024-02-07"
  },
  {
+  "id": "101",
+  "slug": "standing-committee-on-ministry-of-health-and-family-planning",
+  "nameBn": "স্বাস্থ্য ও পরিবার পরিকল্পনা মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটি",
+  "nameEn": "Standing Committee on Ministry of Health and Family Planning",
+  "type": "Ministry Related Standing Committee",
+  "startDate": null,
+  "rosterCurrent": true,
+  "memberCount": 10,
+  "members": [
+   {
+    "role": "Chairman",
+    "memberId": "013019601"
+   },
+   {
+    "role": "Member",
+    "memberId": "013020201"
+   },
+   {
+    "role": "Member",
+    "memberId": "013006701"
+   },
+   {
+    "role": "Member",
+    "memberId": "013000401"
+   },
+   {
+    "role": "Member",
+    "memberId": "013024001"
+   },
+   {
+    "role": "Member",
+    "memberId": "013004901"
+   },
+   {
+    "role": "Member",
+    "memberId": "013015801"
+   },
+   {
+    "role": "Member",
+    "memberId": "013032101"
+   },
+   {
+    "role": "Member",
+    "memberId": "013005501"
+   },
+   {
+    "role": "Member",
+    "memberId": "013034601"
+   }
+  ]
+ },
+ {
   "id": "88",
   "slug": "standing-committee-on-ministry-of-home-affairs",
   "nameBn": "স্বরাষ্ট্র মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটি",
@@ -764,6 +865,59 @@
    {
     "role": "Member",
     "memberId": "013018901"
+   }
+  ],
+  "previousStartDate": "2024-02-07"
+ },
+ {
+  "id": "100",
+  "slug": "standing-committee-on-ministry-of-housing-and-public-works",
+  "nameBn": "গৃহায়ন ও গণপূর্ত মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটি",
+  "nameEn": "Standing Committee on Ministry of Housing and Public Works",
+  "type": "Ministry Related Standing Committee",
+  "startDate": "2026-09-07",
+  "rosterCurrent": true,
+  "memberCount": 10,
+  "members": [
+   {
+    "role": "Chairman",
+    "memberId": "013004101"
+   },
+   {
+    "role": "Member",
+    "memberId": "013025601"
+   },
+   {
+    "role": "Member",
+    "memberId": "013012801"
+   },
+   {
+    "role": "Member",
+    "memberId": "013016001"
+   },
+   {
+    "role": "Member",
+    "memberId": "013003901"
+   },
+   {
+    "role": "Member",
+    "memberId": "013016601"
+   },
+   {
+    "role": "Member",
+    "memberId": "013019501"
+   },
+   {
+    "role": "Member",
+    "memberId": "013032301"
+   },
+   {
+    "role": "Member",
+    "memberId": "013008001"
+   },
+   {
+    "role": "Member",
+    "memberId": "013007301"
    }
   ],
   "previousStartDate": "2024-02-07"
@@ -1585,17 +1739,6 @@
   "members": []
  },
  {
-  "id": "32",
-  "slug": "standing-committee-on-ministry-of-agriculture",
-  "nameBn": "কৃষি মন্ত্রণালয় সম্পর্কিত সংসদীয় স্থায়ী কমিটি",
-  "nameEn": "Standing Committee on Ministry of Agriculture",
-  "type": "Ministry Related Standing Committee",
-  "startDate": "2024-02-07",
-  "rosterCurrent": false,
-  "memberCount": 10,
-  "members": []
- },
- {
   "id": "13",
   "slug": "standing-committee-on-ministry-of-chittagong-hill-tracts-affairs",
   "nameBn": "পার্বত্য চট্টগ্রাম বিষয়ক মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটি",
@@ -1681,17 +1824,6 @@
   "startDate": "2024-02-07",
   "rosterCurrent": false,
   "memberCount": 9,
-  "members": []
- },
- {
-  "id": "30",
-  "slug": "standing-committee-on-ministry-of-housing-and-public-works",
-  "nameBn": "গৃহায়ন ও গণপূর্ত মন্ত্রণালয় সম্পর্কিত স্থায়ী কমিটি",
-  "nameEn": "Standing Committee on Ministry of Housing and Public Works",
-  "type": "Ministry Related Standing Committee",
-  "startDate": "2024-02-07",
-  "rosterCurrent": false,
-  "memberCount": 10,
   "members": []
  },
  {
