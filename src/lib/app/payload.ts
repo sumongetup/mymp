@@ -15,7 +15,8 @@ import {
   members, parties, seats, meta, getMember, committeesOfMember, governmentPostsOf,
   districtOf, partyColor, partyShortBn, currentPosts, OFFICE_LABELS, type Member,
 } from '@/lib/data';
-import { priorTermsOf, socialsOf } from '@/lib/history';
+import { priorTermsOf, socialsOf, resultForSeat } from '@/lib/history';
+import { officers } from '@/lib/activity';
 import { adviserForPost, getAdviser, adviserPosts } from '@/lib/advisers';
 import { sourceList } from '@/lib/sourceLabel';
 
@@ -62,7 +63,7 @@ const office = (m: Member): string | null => {
   return m.govPost ?? null;
 };
 
-const brief = (m: Member): AppMemberBrief => {
+export const brief = (m: Member): AppMemberBrief => {
   const d = m.seat ? districtOf(m.seat) : null;
   return {
     id: m.id,
@@ -105,7 +106,35 @@ export function bootstrap() {
     })),
     districts,
     members: members.map(brief),
+    leaders: leaders(),
   };
+}
+
+/**
+ * The House's senior office holders, in the order a reader looks for them:
+ * the Prime Minister, the Speaker and Deputy, the Leader of the Opposition,
+ * the Chief Whip. The app shows these above the member list.
+ */
+function leaders() {
+  const order = ['LEADER_OF_HOUSE', 'SPEAKER', 'DEPUTY_SPEAKER', 'OPPOSITION_LEADER', 'CHIEF_WHIP'];
+  const label: Record<string, string> = {
+    SPEAKER: 'স্পিকার',
+    DEPUTY_SPEAKER: 'ডেপুটি স্পিকার',
+    LEADER_OF_HOUSE: 'সংসদ নেতা',
+    OPPOSITION_LEADER: 'বিরোধীদলীয় নেতা',
+    CHIEF_WHIP: 'চিফ হুইপ',
+  };
+  const out: { roleBn: string; memberId: string }[] = [];
+  for (const role of order) {
+    for (const o of officers.filter((x) => x.role === role && x.memberId)) {
+      const m = members.find((x) => x.id === o.memberId);
+      if (!m || out.some((x) => x.memberId === m.id)) continue;
+      // The Leader of the House is the Prime Minister; readers know the second title first.
+      const roleBn = role === 'LEADER_OF_HOUSE' && (m.offices ?? []).includes('pm') ? 'প্রধানমন্ত্রী ও সংসদ নেতা' : label[role]!;
+      out.push({ roleBn, memberId: m.id });
+    }
+  }
+  return out;
 }
 
 /** The cabinet, in the order the site's মন্ত্রিসভা page uses. */
@@ -167,6 +196,21 @@ export function memberDetail(slug: string) {
       role: c.members.find((x) => x.memberId === m.id)?.role ?? null,
     })),
     priorTerms: priorTermsOf(m.id),
+    result: seatResult(m),
+  };
+}
+
+/** The seat's 2026 result, every candidate by votes, where one has been published. */
+function seatResult(m: Member) {
+  if (!m.seat || m.seat.reserved) return null;
+  const r = resultForSeat(m.seat.no, meta.parliamentNo);
+  if (!r || !r.candidates.length) return null;
+  return {
+    candidates: [...r.candidates]
+      .sort((a, b) => b.votes - a.votes)
+      .map((c) => ({ name: c.name, party: c.party, partyBn: partyShortBn(parties.find((p) => p.abbr === c.party) ?? null), votes: c.votes })),
+    sourceUrl: r.sourceUrl ?? null,
+    sourceNote: r.sourceNote ?? null,
   };
 }
 
