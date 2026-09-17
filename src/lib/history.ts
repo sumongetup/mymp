@@ -134,12 +134,17 @@ export function experienceStats() {
   };
 }
 
+/**
+ * The member's own accounts. "অফিসিয়াল" tells them apart from the share
+ * buttons beside them on the profile (Facebook, X…); a Facebook page still
+ * being checked drops the word (see socialsOf).
+ */
 export const SOCIAL_FIELDS = [
-  { key: 'facebook', label: 'Facebook', icon: 'facebook' },
-  { key: 'x', label: 'X', icon: 'x' },
-  { key: 'youtube', label: 'YouTube', icon: 'youtube' },
-  { key: 'instagram', label: 'Instagram', icon: 'instagram' },
-  { key: 'website', label: 'ওয়েবসাইট', icon: 'globe' },
+  { key: 'facebook', label: 'অফিসিয়াল ফেসবুক পেজ', icon: 'facebook' },
+  { key: 'x', label: 'অফিসিয়াল X', icon: 'x' },
+  { key: 'youtube', label: 'অফিসিয়াল ইউটিউব চ্যানেল', icon: 'youtube' },
+  { key: 'instagram', label: 'অফিসিয়াল ইনস্টাগ্রাম', icon: 'instagram' },
+  { key: 'website', label: 'অফিসিয়াল ওয়েবসাইট', icon: 'globe' },
 ] as const;
 
 /**
@@ -166,13 +171,11 @@ export const socialsOf = (m: Member): SocialLink[] => {
   return SOCIAL_FIELDS.flatMap((f): SocialLink[] => {
     const url = (m as unknown as Record<string, string | null>)[f.key] ?? null;
     if (!url) return [];
-    // "অফিসিয়াল" tells the member's own page apart from the Facebook share
-    // button beside it, and is only claimed for a page not still being checked.
+    // A page still being checked is not called official.
     if (f.key === 'facebook') {
       if (fb.show !== 'link') return [];
-      return [{ ...f, url, unverified: fb.unverified, label: fb.unverified ? 'ফেসবুক পেজ' : 'অফিসিয়াল ফেসবুক পেজ' }];
+      return [{ ...f, url, unverified: fb.unverified, label: fb.unverified ? 'ফেসবুক পেজ' : f.label }];
     }
-    if (f.key === 'website') return [{ ...f, url, unverified: false, label: 'অফিসিয়াল ওয়েবসাইট' }];
     return [{ ...f, url, unverified: false }];
   });
 };

@@ -43,3 +43,8 @@ test('not_found shows nothing for Facebook, even with a link stored', () => {
   assert.deepEqual(socialsOf(m).map((s) => s.key), ['website']);
   assert.equal(facebookNotice(m), null);
 });
+
+test('every other account is labelled official too', () => {
+  const m = member({ x: 'https://x.com/a', youtube: 'https://youtube.com/@a', instagram: 'https://instagram.com/a' });
+  assert.deepEqual(socialsOf(m).map((s) => s.label), ['অফিসিয়াল X', 'অফিসিয়াল ইউটিউব চ্যানেল', 'অফিসিয়াল ইনস্টাগ্রাম']);
+});
