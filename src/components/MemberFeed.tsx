@@ -77,12 +77,10 @@ function Row({ item, onPlay }: { item: FeedEntry; onPlay: (item: FeedEntry) => v
   const body = (
     <>
       <span className="shrink-0 w-[92px] sm:w-[116px] aspect-video rounded-lg bg-paper border border-rulesoft overflow-hidden grid place-items-center relative">
-        {item.thumbnailUrl ? (
-          // The outlet's own thumbnail, drawn small; nothing is copied to our storage.
-          <StoryThumb src={item.thumbnailUrl} />
-        ) : (
-          <Icon name={item.type === 'video' ? 'play' : 'file'} size={18} className="text-muted" />
-        )}
+        {/* The icon stays underneath, so a thumbnail that 404s leaves it showing. */}
+        <Icon name={item.type === 'video' ? 'play' : 'file'} size={18} className="text-muted" />
+        {/* The outlet's own thumbnail, drawn small; nothing is copied to our storage. */}
+        {item.thumbnailUrl && <StoryThumb src={item.thumbnailUrl} />}
         {item.type === 'video' && (
           <span className="absolute inset-0 grid place-items-center bg-ink/25">
             <span className="w-7 h-7 rounded-full bg-white/90 grid place-items-center"><Icon name="play" size={13} className="text-ink" /></span>
