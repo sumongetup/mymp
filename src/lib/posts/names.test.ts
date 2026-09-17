@@ -34,6 +34,9 @@ test('commas between initials are not a credential', () => {
   assert.notEqual(normalizeName('এ, জেড, এম, রেজওয়ানুল হক'), normalizeName('এ, কে, এম, সেলিম রেজা হাবিব'));
   assert.equal(normalizeName('এস,এম, রফিকুল ইসলাম'), normalizeName('এস এম রফিকুল ইসলাম'));
   assert.equal(normalizeName('ড, আবদুল মঈন খান'), normalizeName('আবদুল মঈন খান'));
+  // A short last name after initials is the name, not a credential.
+  assert.equal(normalizeName('এম, এ, মুহিত'), normalizeName('জনাব এম এ মুহিত'));
+  assert.equal(normalizeName('এম, এ, মুহিত'), 'এম এ মুহিত');
 });
 
 test('zero-width joiners and extra spaces do not matter', () => {

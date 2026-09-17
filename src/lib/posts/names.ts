@@ -18,7 +18,9 @@ export function normalizeName(raw: string): string {
       .normalize('NFC')
       .replace(/\([^)]*\)/g, ' ') // (অব:), (অবঃ)
       // A credential after a final comma (", সিএফএ") goes; commas between initials ("এ, কে, এম, …") are just spaces.
-      .replace(/,\s*[^,\s]{1,6}\s*$/, '')
+      // Only after a real name, though: in "এম, এ, মুহিত" the short last word is the name itself, and
+      // dropping it left "এম এ", so a state minister matched nobody.
+      .replace(/^(.*[^,\s]{3,}.*?),\s*[^,\s]{1,6}\s*$/, '$1')
       .replace(GALLANTRY, ' '),
   )
     .replace(/[ঃ.,:;'"‘’“”\-–—/]/g, ' ') // visarga in মোঃ/ডাঃ, dots, commas, dashes
