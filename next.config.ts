@@ -21,6 +21,9 @@ const legacyRedirects = [
   { source: '/contact', destination: '/jogajog', permanent: true },
   { source: '/privacy', destination: '/gopaniyota', permanent: true },
   { source: '/terms', destination: '/gopaniyota', permanent: true },
+  // Still in Google's index on 2026-09-19 as "Statistics — MY MP".
+  { source: '/statistics', destination: '/parisonkhan', permanent: true },
+  { source: '/stats', destination: '/parisonkhan', permanent: true },
   // English paths from the footer spec (2026-09-12) that the site spells in Bangla.
   { source: '/election-2026', destination: '/nirbachon', permanent: true },
   { source: '/sources', destination: '/sutro', permanent: true },
