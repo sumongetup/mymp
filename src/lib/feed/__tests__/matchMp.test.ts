@@ -180,3 +180,16 @@ test('a police officer with a member\'s name is not the member', () => {
     [],
   );
 });
+
+test('an office that names an institution is not the officeholder', () => {
+  // A theft at the Prime Minister's Office, which reached তারেক রহমান's page.
+  assert.deepEqual(
+    who(
+      'প্রধানমন্ত্রীর কার্যালয়ের রেড টেলিফোনের তার চুরি : আসামি রঞ্জন চন্দ্রের জামিন',
+      'সচিবালয়ে অবস্থিত প্রধানমন্ত্রীর কার্যালয়ের রেড টেলিফোন সংযোগের তামার চুরি হওয়ার ঘটনায় ঢাকার আদালত জামিন মঞ্জুর করেছেন।',
+    ),
+    [],
+  );
+  // Naming the member still works, and the office still adds to the name.
+  assert.ok(scoreOf('দিল্লিতে ব্রিকস সম্মেলনে যাচ্ছেন না প্রধানমন্ত্রী তারেক রহমান', 'tarique') >= 90);
+});

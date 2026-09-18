@@ -88,9 +88,9 @@ async function main() {
   for (const link of links) {
     const item = link.feed_items;
     if (!item) continue;
-    // Only links made by naming the member are re-judged. One made from an
-    // office title under an older rule ("…: প্রধানমন্ত্রী") is left alone.
-    if (!(link.signals ?? []).some((g) => g.signal.startsWith('name-'))) continue;
+    // A parliament notice names its member in the notice itself, not by
+    // matching, so it is never re-judged here.
+    if ((link.signals ?? []).some((g) => g.signal === 'parliament-notice')) continue;
     let ids = cache.get(link.feed_item_id);
     if (!ids) {
       const text = { title: item.title, summary: item.summary };

@@ -23,6 +23,8 @@
  * is dropped. When one member is named and another only picked up context
  * points on the same item, the second is dropped: an article that says
  * "প্রধানমন্ত্রী" while naming somebody else is not about the Prime Minister.
+ * An office followed by কার্যালয় or দপ্তর is the institution, not the person:
+ * a copper theft at প্রধানমন্ত্রীর কার্যালয় is not the Prime Minister's news.
  */
 import { foldBangla, nameTokens, HONORIFICS, INITIALS } from '@/lib/matching/nameMatch';
 import { SPELLING_FOLD, CASE_SUFFIXES, NEGATIVE_CONTEXT, NAMESAKE_TITLES, POST_WORDS } from '../../../config/feed-matching';
@@ -245,10 +247,33 @@ export interface FeedItemText {
  * Every member an item is about. Items nobody is named in come back empty:
  * a political story that names a party and no person belongs to nobody.
  */
+/** Words that turn an office into a building or a department: প্রধানমন্ত্রীর কার্যালয়. */
+const INSTITUTION_WORDS = ['কার্যালয়', 'দপ্তর', 'সচিবালয়'].map((w) => foldBangla(w));
+
+/**
+ * Does an office title appear as the person holding it, somewhere in the text?
+ * "প্রধানমন্ত্রী বলেছেন" does; "প্রধানমন্ত্রীর কার্যালয়ের তার চুরি" does not.
+ */
+function personalOffice(tokens: string[], office: string[]): boolean {
+  if (!office.length) return false;
+  for (let i = 0; i + office.length <= tokens.length; i++) {
+    let ok = true;
+    for (let j = 0; j < office.length; j++) {
+      if (!wordEq(tokens[i + j]!, office[j]!, j === office.length - 1)) { ok = false; break; }
+    }
+    if (!ok) continue;
+    const next = tokens[i + office.length];
+    if (next && INSTITUTION_WORDS.some((w) => next.startsWith(w))) continue;
+    return true;
+  }
+  return false;
+}
+
 export interface MatchOptions {
   /**
-   * The two rules added in 2026-09 (a name running on through "আল-" or "বিন",
-   * and a longer name of another member at the same place). Off only for
+   * The rules added in 2026-09: a name running on through "আল-" or "বিন", a
+   * longer name of another member at the same place, a namesake's title right
+   * before the name, and an office that names an institution. Off only for
    * scripts/feed-prune.ts, to tell which old links those rules alone reject.
    */
   longerNames?: boolean;
@@ -348,8 +373,8 @@ export function matchItem(index: FeedIndex, item: FeedItemText, opts: MatchOptio
       signals.push({ signal: 'party', points: POINTS.party, detail: mp.partyBn ?? mp.partyAbbr ?? '' });
     }
 
-    const office = phrases.posts.find((w) => hasTokens(allTokens, w.tokens))
-      ?? phrases.ministries.find((w) => hasTokens(allTokens, w.tokens));
+    const officeHere = (w: { tokens: string[] }) => longerNames ? personalOffice(allTokens, w.tokens) : hasTokens(allTokens, w.tokens);
+    const office = phrases.posts.find(officeHere) ?? phrases.ministries.find(officeHere);
     if (office) {
       score += POINTS.post;
       signals.push({ signal: 'post', points: POINTS.post, detail: office.word });
@@ -366,6 +391,8 @@ export function matchItem(index: FeedIndex, item: FeedItemText, opts: MatchOptio
     }
   }
 
+  // An item that names one member is not about another member the same words
+  // happen to describe, and one that names nobody is nobody's.
   // An item that names one member is not about another member the same words
   // happen to describe. Context-only matches drop out as soon as anyone is named.
   const anyNamed = found.some((f) => f.named);
