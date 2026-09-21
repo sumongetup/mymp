@@ -32,6 +32,7 @@ export type FooterLink = { href: string; label: string; external?: boolean };
  */
 export const FOOTER_SECTIONS: FooterLink[] = [
   { href: '/mp', label: 'সব এমপি' },
+  { href: '/sangrakkhito-ason', label: 'সংরক্ষিত নারী আসন' },
   { href: '/nirbachon#jela', label: 'আসন ও জেলা' },
   { href: '/dol', label: 'দল' },
   { href: '/ministers', label: 'মন্ত্রিসভা' },

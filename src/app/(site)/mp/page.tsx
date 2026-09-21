@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { shareGraph } from '@/lib/seo';
 import { members, parties, bn, statistics, partyShortBn } from '@/lib/data';
 import { Page, PageHead, Stat } from '@/components/ui';
@@ -29,6 +30,14 @@ export default function AllMps() {
           </div>
         }
       />
+
+      <p className="mt-5 text-[14px] text-inksoft">
+        সংরক্ষিত নারী আসনের {bn(stats.reserved)} জন সদস্য একসঙ্গে দেখতে{' '}
+        <Link href="/sangrakkhito-ason" className="font-semibold text-brand hover:underline">
+          সংরক্ষিত নারী আসন
+        </Link>{' '}
+        পাতায় যান।
+      </p>
 
       <div className="py-8">
         <MemberFilter

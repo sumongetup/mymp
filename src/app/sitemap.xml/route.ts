@@ -36,6 +36,7 @@ export function GET() {
     { path: '/committee', changefreq: 'weekly', priority: 0.8 },
     { path: '/ministers', changefreq: 'daily', priority: 0.8 },
     { path: '/parisonkhan', changefreq: 'weekly', priority: 0.8 },
+    { path: '/sangrakkhito-ason', changefreq: 'weekly', priority: 0.7 },
     { path: '/songbad', changefreq: 'daily', priority: 0.6 },
     { path: '/somporke', changefreq: 'monthly', priority: 0.4 },
     { path: '/sutro', changefreq: 'monthly', priority: 0.4 },

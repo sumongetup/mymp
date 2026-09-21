@@ -135,7 +135,10 @@ export default function StatisticsPage() {
             </div>
           </div>
           <p className="text-[13px] text-muted border-t border-rule pt-3">
-            সংরক্ষিত আসন বাদ দিলে সাধারণ আসনে নারীর হার {bn(womenGeneralPct)}%।
+            সংরক্ষিত আসন বাদ দিলে সাধারণ আসনে নারীর হার {bn(womenGeneralPct)}%।{' '}
+            <Link href="/sangrakkhito-ason" className="font-semibold text-brand hover:underline">
+              সংরক্ষিত আসনের সদস্যরা
+            </Link>
           </p>
         </Card>
 
