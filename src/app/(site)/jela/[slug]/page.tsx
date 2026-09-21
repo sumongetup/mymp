@@ -1,22 +1,10 @@
 import type { Metadata } from 'next';
 import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
-import { seats, getMemberById, districtOf, bn, meta, dateBn } from '@/lib/data';
+import { getMemberById, bn, meta, dateBn } from '@/lib/data';
+import { districtGroups as districts } from '@/lib/districts';
 import { Page, PageHead, Card, Breadcrumb, MemberRow, PartyDot, Stat } from '@/components/ui';
 import Link from 'next/link';
-
-/** Every district that has at least one territorial seat. */
-function districts() {
-  const map = new Map<string, { en: string; bn: string; slug: string; seats: typeof seats }>();
-  for (const s of seats) {
-    const d = districtOf(s);
-    if (!d) continue;
-    const e = map.get(d.slug) ?? { ...d, seats: [] as typeof seats };
-    e.seats.push(s);
-    map.set(d.slug, e);
-  }
-  return map;
-}
 
 export function generateStaticParams() {
   return [...districts().keys()].map((slug) => ({ slug }));
@@ -45,7 +33,7 @@ export default async function DistrictPage({ params }: PageProps<'/jela/[slug]'>
 
   return (
     <Page>
-      <Breadcrumb items={[{ href: '/', label: 'হোম' }, { href: '/mp', label: 'সংসদ সদস্য' }, { label: `${d.bn} জেলা` }]} />
+      <Breadcrumb items={[{ href: '/', label: 'হোম' }, { href: '/jela', label: 'জেলা' }, { label: `${d.bn} জেলা` }]} />
       <PageHead
         eyebrow="জেলা"
         title={`${d.bn} জেলা`}

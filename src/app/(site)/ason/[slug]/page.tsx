@@ -65,7 +65,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
       <Breadcrumb
         items={[
           { href: '/', label: 'হোম' },
-          { href: '/nirbachon', label: 'ত্রয়োদশ নির্বাচন' },
+          { href: '/ason', label: 'সব আসন' },
           ...(district ? [{ href: `/jela/${district.slug}`, label: district.bn }] : []),
           { label: seat.nameBn ?? '' },
         ]}
