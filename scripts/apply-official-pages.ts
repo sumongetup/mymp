@@ -42,7 +42,14 @@ const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 if (!URL_BASE || !KEY) throw new Error('.env.local needs NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY');
 const HEAD = { apikey: KEY, Authorization: `Bearer ${KEY}`, 'content-type': 'application/json' };
 const ACTOR = 'editorial: official Facebook pages and websites (owner list, 2026-09-17)';
-const CHECKED = '2026-09-17';
+/**
+ * The date written into last_checked. It is the day the rows in front of the
+ * script were actually looked at, not the day the file was written: the owner's
+ * own list was checked on 17 September 2026, a researched folder is checked the
+ * day it is imported, so --dir stamps today.
+ */
+const OWNER_CHECKED = '2026-09-17';
+const today = () => new Date(Date.now() + 6 * 3600_000).toISOString().slice(0, 10); // Dhaka is UTC+6
 
 interface Row {
   name: string;
@@ -204,7 +211,7 @@ async function main() {
 
   const now = new Date().toISOString();
   for (const { row, member } of applied) {
-    const fields = { ...row.fields, lastChecked: CHECKED };
+    const fields = { ...row.fields, lastChecked: row.byId ? today() : OWNER_CHECKED };
     const current = (await call(
       `overrides?entity_type=eq.member&entity_id=eq.${member.id}&select=field,value`,
     )) as { field: string; value: string | null }[];
