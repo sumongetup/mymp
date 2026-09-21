@@ -7,6 +7,7 @@
  *   npx tsx scripts/apply-official-pages.ts            report, write nothing
  *   npx tsx scripts/apply-official-pages.ts --apply    write
  *   npx tsx scripts/apply-official-pages.ts --dir <folder> [--ids a,b] [--apply]
+ *       [--update] also writes over a member whose status is already set
  *       read researched rows instead: <folder>/<id>.json, one per member, as
  *       described in the research brief (facebook, fbUsername, fbType,
  *       fbStatus, website, sourceUrl, evidence). Each must name a sitting member
@@ -129,7 +130,7 @@ const isFacebook = (u: string) => /^https:\/\/(www\.)?facebook\.com\/[^\s?#]+$/.
 const isHttps = (u: string) => /^https:\/\/[^\s/]+\.[^\s]+$/.test(u) && !/facebook\.com|wikipedia\.org/.test(u);
 
 /** Researched files turned into rows, or a reason each one cannot be used. */
-async function rowsFromDir(dir: string, only: Set<string> | null) {
+async function rowsFromDir(dir: string, only: Set<string> | null, update: boolean) {
   const rows: (Row & { id: string })[] = [];
   const rejected: { file: string; problem: string }[] = [];
   const status = new Map<string, string>();
@@ -141,7 +142,11 @@ async function rowsFromDir(dir: string, only: Set<string> | null) {
     const r = JSON.parse(fs.readFileSync(`${dir}/${file}`, 'utf8').replace(/^\uFEFF/, '')) as Researched;
     if (only && !only.has(r.id)) continue;
     const reject = (problem: string) => rejected.push({ file, problem });
-    if (status.has(r.id)) { reject(`status already set (${status.get(r.id)}); left alone`); continue; }
+    // A member whose status is already set is left alone, unless --update says
+    // to write over it: the owner asked on 2026-09-21 for pages found since to
+    // be shown, labelled unverified, rather than kept back.
+    if (status.has(r.id) && !update) { reject(`status already set (${status.get(r.id)}); left alone`); continue; }
+    if (status.has(r.id) && status.get(r.id) === r.fbStatus && !r.facebook) { reject(`already ${r.fbStatus} with nothing new`); continue; }
     if (!STATUSES.has(r.fbStatus)) { reject(`unknown fbStatus ${r.fbStatus}`); continue; }
     if (r.fbType && !TYPES.has(r.fbType)) { reject(`unknown fbType ${r.fbType}`); continue; }
     if (r.facebook && !isFacebook(r.facebook)) { reject(`not a clean facebook.com link: ${r.facebook}`); continue; }
@@ -162,13 +167,14 @@ async function rowsFromDir(dir: string, only: Set<string> | null) {
 
 async function main() {
   const apply = process.argv.includes('--apply');
+  const update = process.argv.includes('--update');
   const sitting = allMembers.filter((m) => !m.resignedOn);
   const dirAt = process.argv.indexOf('--dir');
   const idsAt = process.argv.indexOf('--ids');
   const only = idsAt >= 0 ? new Set(process.argv[idsAt + 1]!.split(',')) : null;
   let ROWS = OWNER_ROWS;
   if (dirAt >= 0) {
-    const { rows, rejected } = await rowsFromDir(process.argv[dirAt + 1]!, only);
+    const { rows, rejected } = await rowsFromDir(process.argv[dirAt + 1]!, only, update);
     for (const r of rejected) console.log(`REJECT ${r.file}: ${r.problem}`);
     // A researched row names its member by id; name and seat are checked against the roll.
     ROWS = rows.map((r) => ({ ...r, byId: r.id }));
