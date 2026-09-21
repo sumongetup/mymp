@@ -60,7 +60,9 @@ export default function SeatIndex() {
             </h2>
             <ul className="mt-2.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               {d.seats.map((s) => {
-                const m = s.memberId ? getMemberById(s.memberId) : null;
+                // A seat whose holder has resigned keeps its memberId, and the
+                // seat's own page says it is vacant; the index has to agree.
+                const m = s.memberId && !s.vacantSince ? getMemberById(s.memberId) : null;
                 return (
                   <li key={s.slug}>
                     <Link
@@ -71,7 +73,7 @@ export default function SeatIndex() {
                         {s.nameBn ?? s.nameEn}
                       </span>
                       <span className="grow min-w-0 text-end text-[12.5px] text-muted truncate">
-                        {m ? m.nameBn ?? m.nameEn : 'শূন্য'}
+                        {m ? m.nameBn ?? m.nameEn : <span className="text-warn font-semibold">শূন্য</span>}
                       </span>
                       {m?.party && <PartyDot abbr={m.party.abbr} size={9} />}
                     </Link>
