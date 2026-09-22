@@ -24,6 +24,14 @@ export default function MobileNav({
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
+  // Escape closes the menu, as a keyboard user expects of anything that opens.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+
   const active = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
 
   return (

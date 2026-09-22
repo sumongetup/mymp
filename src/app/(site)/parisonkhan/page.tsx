@@ -57,7 +57,7 @@ export default function StatisticsPage() {
         <Stat label="মোট সদস্য" value={bn(s.total)} note={`${bn(s.territorial)} আসনভিত্তিক, ${bn(s.reserved)} সংরক্ষিত`} />
         <Stat label="নারী সদস্য" value={bn(s.women)} note={`${bn(womenPct)}%, এর ${bn(s.womenReserved)} জন সংরক্ষিত আসনে`} />
         <Stat
-          label="গড় বয়স (মধ্যক)"
+          label="মধ্যক বয়স"
           value={s.medianAge !== null ? bn(s.medianAge) : 'তথ্য নেই'}
           note={s.youngest && s.oldest ? `সর্বকনিষ্ঠ ${bn(s.youngest.age)}, সর্বজ্যেষ্ঠ ${bn(s.oldest.age)}` : undefined}
         />

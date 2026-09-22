@@ -386,6 +386,17 @@ export const GENERAL_SEATS = 300;
 export const RESERVED_SEATS = 50;
 export const HOUSE_SEATS = GENERAL_SEATS + RESERVED_SEATS;
 
+/** Variant spellings of an occupation, each mapped to the key of the one shown. */
+const PROFESSION_CANON: Record<string, string> = {
+  'ব্যবসায়ী': 'ব্যবসা',
+  'ব্যবসায়': 'ব্যবসা',
+  'ব্যাবসা': 'ব্যবসা',
+  'ব্যাবসায়ী': 'ব্যবসা',
+  'আইনজীবি': 'আইনজীবী',
+  'এডভোকেট': 'আইনজীবী',
+  'অ্যাডভোকেট': 'আইনজীবী',
+};
+
 export function statistics() {
   const territorial = members.filter((m) => m.seat && !m.seat.reserved);
   const reserved = members.filter((m) => m.seat?.reserved);
@@ -410,7 +421,9 @@ export function statistics() {
   const profs = new Map<string, { label: string; count: number }>();
   for (const m of members) {
     if (!m.professionBn) continue;
-    const key = normalise(m.professionBn);
+    // Spellings of the same job fold to one key ("ব্যবসায়ী" and "ব্যবসা" are one
+    // occupation), or the chart shows the same bar twice.
+    const key = PROFESSION_CANON[normalise(m.professionBn)] ?? normalise(m.professionBn);
     if (!key) continue;
     const e = profs.get(key) ?? { label: m.professionBn.trim(), count: 0 };
     e.count++;

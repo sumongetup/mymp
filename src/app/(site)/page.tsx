@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { members, parties, meta, bn, dateBn, statistics, districtOf, getMemberById, GENERAL_SEATS } from '@/lib/data';
+import { parties, meta, bn, dateBn, statistics, getMemberById, GENERAL_SEATS } from '@/lib/data';
+import { districtList } from '@/lib/districts';
 import { newsPageStories, latestVideos } from '@/lib/feed/storyView';
 import { latestSession, latestSitting, sessionLabel, officers, memberNoticeCount, totalSittings, ROLE_LABELS, daysSince } from '@/lib/activity';
 import { Page, Card, MemberCard, CompositionBar, Empty, SectionHead, DocLink } from '@/components/ui';
@@ -59,15 +60,13 @@ export default async function Home() {
     .filter((x, i, arr) => arr.findIndex((y) => y.m.id === x.m.id) === i)
     .slice(0, 4);
 
-  const districts = new Map<string, { bn: string; slug: string; count: number }>();
-  for (const m of members) {
-    const d = districtOf(m.seat);
-    if (!d) continue;
-    const e = districts.get(d.en) ?? { bn: d.bn, slug: d.slug, count: 0 };
-    e.count++;
-    districts.set(d.en, e);
-  }
-  const topDistricts = [...districts.values()].sort((a, b) => b.count - a.count).slice(0, 12);
+  // Counted from the seats, not from the members: a seat with no member on
+  // the roll (Chattogram-4 in September 2026) is still a seat, and the card
+  // says "আসন".
+  const topDistricts = districtList()
+    .map((d) => ({ bn: d.bn, slug: d.slug, count: d.seats.length }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 12);
 
   return (
     <>
@@ -187,7 +186,7 @@ export default async function Home() {
         </section>
 
         <section className="pb-12 flex flex-col gap-5">
-          <SectionHead title="জেলা অনুযায়ী" href="/nirbachon" linkLabel="সব জেলা" />
+          <SectionHead title="জেলা অনুযায়ী" href="/jela" linkLabel="সব জেলা" />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {topDistricts.map((d) => (
               <Link

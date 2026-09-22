@@ -42,8 +42,8 @@ export default function SiteFooter() {
           <div className="flex flex-col gap-5 max-w-[440px]">
             <Brand tone="light" />
             <p className="text-[16px] leading-relaxed text-[#dbe6df]">
-              বাংলাদেশ জাতীয় সংসদের সদস্য, আসন, কমিটি ও অধিবেশনের উন্মুক্ত তথ্যভান্ডার। প্রতিটি তথ্যের সূত্র জাতীয় সংসদ ও
-              নির্বাচন কমিশন; কোনো তথ্য অনুমান করে বসানো হয় না।
+              বাংলাদেশ জাতীয় সংসদের সদস্য, আসন, কমিটি ও অধিবেশনের উন্মুক্ত তথ্যভান্ডার। মূল তথ্য জাতীয় সংসদ ও নির্বাচন
+              কমিশন থেকে; বাকি তথ্যের সূত্র ও যাচাইয়ের অবস্থা প্রতিটি পাতায় লেখা। কোনো তথ্য অনুমান করে বসানো হয় না।
             </p>
             {/* The owner asked for this line to stand out. */}
             <div className="flex gap-3 rounded-xl border border-[#17cf54]/40 bg-[#17cf54]/10 px-4 py-3.5">

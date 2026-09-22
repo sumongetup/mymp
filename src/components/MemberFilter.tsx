@@ -16,6 +16,10 @@ export interface FilterMember {
   party: string | null;
   partyBn: string | null;
   seatBn: string | null;
+  seatEn?: string | null;
+  seatSlug?: string | null;
+  districtBn?: string | null;
+  districtEn?: string | null;
   seatNo: number | null;
   reserved: boolean;
   gender: string | null;
@@ -62,7 +66,16 @@ export default function MemberFilter({
   const keyed = useMemo(
     () => members.map((m) => ({
       m,
-      key: [normalise(m.nameBn ?? ''), normalise(m.nameEn ?? ''), normalise(m.seatBn ?? '')].join(' '),
+      // "dhaka-17", "Dhaka 17" and "ঢাকা-১৭" must all find the member (QA-01,
+      // 23 September 2026): the English seat, the district and the slug join
+      // the key, and every part also appears without spaces, so a typed
+      // "dhaka17" matches "dhaka 17".
+      key: (() => {
+        const parts = [m.nameBn, m.nameEn, m.seatBn, m.seatEn, m.seatSlug, m.districtBn, m.districtEn]
+          .map((x) => normalise(x ?? ''))
+          .filter(Boolean);
+        return [...parts, ...parts.map((x) => x.replace(/ /g, ''))].join(' ');
+      })(),
     })),
     [members],
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { shareGraph } from '@/lib/seo';
-import { members, parties, bn, statistics, partyShortBn } from '@/lib/data';
+import { members, parties, bn, statistics, partyShortBn, districtOf } from '@/lib/data';
 import { Page, PageHead, Stat } from '@/components/ui';
 import MemberFilter from '@/components/MemberFilter';
 
@@ -50,6 +50,10 @@ export default function AllMps() {
             party: m.party?.abbr ?? null,
             partyBn: partyShortBn(m.party),
             seatBn: m.seat?.nameBn ?? null,
+            seatEn: m.seat?.nameEn ?? null,
+            seatSlug: m.seat?.slug ?? null,
+            districtBn: districtOf(m.seat)?.bn ?? null,
+            districtEn: districtOf(m.seat)?.en ?? null,
             seatNo: m.seat?.no ?? null,
             reserved: !!m.seat?.reserved,
             gender: m.gender,

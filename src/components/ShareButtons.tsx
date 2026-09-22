@@ -100,6 +100,7 @@ export default function ShareButtons({ url, title, text }: { url: string; title:
           onClick={l.onClick}
           className={button}
           aria-label={l.key === 'messenger' ? 'Messenger-এ পাঠান' : `${l.label}-এ শেয়ার করুন`}
+          title={l.key === 'messenger' ? 'ফোনে Messenger অ্যাপে খোলে। কম্পিউটারে লিংক কপি হয় আর messenger.com খোলে; চ্যাটে পেস্ট করুন।' : undefined}
         >
           <BrandIcon name={l.key} size={16} />
           <span className="hidden sm:inline">{l.key === 'messenger' && copied === 'messenger' ? 'লিংক কপি হয়েছে, চ্যাটে পেস্ট করুন' : l.label}</span>
