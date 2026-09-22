@@ -3,6 +3,7 @@ import { shareGraph } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 import { getMemberById, bn, meta, dateBn } from '@/lib/data';
 import { districtGroups as districts } from '@/lib/districts';
+import { districtIntro } from '@/lib/districtIntro';
 import { Page, PageHead, Card, Breadcrumb, MemberRow, PartyDot, Stat } from '@/components/ui';
 import Link from 'next/link';
 
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: PageProps<'/jela/[slug]'>): P
     title: `${d.bn} জেলার সংসদ সদস্য ও আসন`,
     alternates: { canonical: `/jela/${d.slug}` },
     openGraph: shareGraph(`/jela/${d.slug}`),
-    description: `${d.bn} জেলায় ${bn(d.seats.length)}টি সংসদীয় আসন। প্রতিটি আসনের বর্তমান সংসদ সদস্য, দল ও জেলার দলভিত্তিক আসনের হিসাব এই পাতায়; তথ্যসূত্র বাংলাদেশ জাতীয় সংসদ।`,
+    description: districtIntro(d).short,
   };
 }
 
@@ -45,6 +46,9 @@ export default async function DistrictPage({ params }: PageProps<'/jela/[slug]'>
           </div>
         }
       />
+
+      {/* The district in a paragraph, from the site's own records: division, seats and their upazilas, who holds them now and who held them last time. */}
+      <p className="mt-6 max-w-[760px] text-[16px] leading-[1.75] text-inksoft text-pretty">{districtIntro(d).text}</p>
 
       <div className="mt-8 pb-14 grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 items-start">
         <ul className="flex flex-col gap-3">
