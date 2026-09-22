@@ -76,10 +76,18 @@ export function constituencyBn(m: SeoMember): string | null {
   return m.seat.reserved ? `সংরক্ষিত নারী আসন (${seat})` : seat;
 }
 
-/** `{name} | {constituency} | আমার এমপি` */
+/**
+ * `{name} | ঢাকা-১৭ আসনের এমপি | আমার এমপি`
+ *
+ * Search Console (28 days to 21 September 2026) shows people looking a member
+ * up by name and by "<seat> আসনের এমপি"; the title says both, in their words.
+ * A member who has resigned keeps the plain seat name, since "এমপি" would be
+ * untrue.
+ */
 export function mpTitle(m: SeoMember): string {
   const where = constituencyBn(m);
-  return [m.nameBn ?? m.nameEn, where, 'আমার এমপি'].filter(Boolean).join(' | ');
+  const role = !where || m.resignedOn ? where : m.seat?.reserved ? `${where}ের সংসদ সদস্য` : `${where} আসনের এমপি`;
+  return [m.nameBn ?? m.nameEn, role, 'আমার এমপি'].filter(Boolean).join(' | ');
 }
 
 /** Sentence 1: who the member is, the party, and a government post when one is on record. */
