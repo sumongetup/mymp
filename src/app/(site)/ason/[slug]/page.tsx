@@ -6,9 +6,36 @@ import {
   seats, getSeat, getMemberById, districtOf, bn, bnGroup, initial, dateBn, meta, partyColor, nameEnDisplay,
 } from '@/lib/data';
 import { Page, Card, Breadcrumb, Empty, PartyDot } from '@/components/ui';
+import type { Seat } from '@/lib/data';
 import MemberPhoto from '@/components/MemberPhoto';
 import { ResultCard } from '@/components/results';
 import { seatHolders, resultsForSeat, resultForSeat, parliamentLabel, SAME_AREA_SINCE, electionYear } from '@/lib/history';
+
+/**
+ * What people actually type, and what a seat page has to answer in its first
+ * line: "ঢাকা-১৪ আসনের এমপি" (Search Console, 28 days to 21 September 2026:
+ * 209 such queries, 1,040 impressions, 27 clicks). The title, the description,
+ * the visible lede and the Q&A all say it the same way.
+ */
+function seatAnswer(s: Seat & { memberId: string | null }) {
+  const m = s.memberId && !s.vacantSince ? getMemberById(s.memberId) : undefined;
+  const name = m ? m.nameBn ?? m.nameEn : null;
+  const where = s.reserved ? `${s.nameBn}-এর` : `${s.nameBn} আসনের`;
+  const question = s.reserved ? `${s.nameBn}-এর সংসদ সদস্য কে?` : `${s.nameBn} আসনের এমপি কে?`;
+  if (!name) {
+    return {
+      m, name, where, question,
+      title: s.vacantSince ? `${s.nameBn} আসন (শূন্য)` : `${s.nameBn} আসন`,
+      sentence: `${where} আসনটি ${s.vacantSince ? `${dateBn(s.vacantSince)} থেকে শূন্য` : 'এখন শূন্য'}; ত্রয়োদশ জাতীয় সংসদে এখানে কোনো সদস্য নেই।`,
+    };
+  }
+  const party = m?.party?.nameBn ?? m?.party?.abbr;
+  return {
+    m, name, where, question,
+    title: s.reserved ? `${s.nameBn}-এর সংসদ সদস্য ${name}` : `${s.nameBn} আসনের এমপি ${name}`,
+    sentence: `ত্রয়োদশ জাতীয় সংসদে ${where} সংসদ সদস্য ${name}${party ? `, ${party}` : ''}।`,
+  };
+}
 
 export function generateStaticParams() {
   return seats.map((s) => ({ slug: s.slug }));
@@ -31,7 +58,7 @@ export async function generateMetadata({ params }: PageProps<'/ason/[slug]'>): P
   // The sitting member's preview image (/api/og/mp/[slug]); a vacant seat keeps the site's.
   const card = m ? { url: `/api/og/mp/${m.slug}`, width: 1200, height: 630, type: 'image/png', alt: `${where}, ${name}` } : null;
   return {
-    title: name ? `${where} | ${name}` : s.vacantSince ? `${where} (শূন্য)` : where,
+    title: seatAnswer(s).title,
     alternates: { canonical: `/ason/${s.slug}` },
     openGraph: shareGraph(`/ason/${s.slug}`, card),
     twitter: { ...shareTwitter(card), ...(card ? { card: 'summary_large_image' as const } : {}) },
@@ -56,12 +83,20 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
   const results = seat.reserved ? [] : resultsForSeat(seat.no);
   const oldBoundary = holders.some((h) => h.parliamentNo < SAME_AREA_SINCE);
 
+  const answer = seatAnswer(seat);
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [{ '@type': 'Question', name: answer.question, acceptedAnswer: { '@type': 'Answer', text: answer.sentence } }],
+  };
+
   const idx = seats.findIndex((s) => s.no === seat.no);
   const prev = seats[idx - 1];
   const next = seats[idx + 1];
 
   return (
     <Page>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Breadcrumb
         items={[
           { href: '/', label: 'হোম' },
@@ -85,6 +120,7 @@ export default async function SeatPage({ params }: PageProps<'/ason/[slug]'>) {
               ? <span className="px-3 py-1 rounded-full border border-rule text-[13px] font-semibold">সংরক্ষিত নারী আসন</span>
               : district && <Link href={`/jela/${district.slug}`} className="hover:text-brand">{district.bn} জেলা</Link>}
           </div>
+          <p className="max-w-[640px] text-[16.5px] leading-relaxed text-inksoft text-pretty">{answer.sentence}</p>
         </div>
         <div className="flex gap-2 shrink-0">
           {prev && (
