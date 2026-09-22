@@ -11,22 +11,32 @@ import SiteFooter from '@/components/SiteFooter';
 import Icon from '@/components/Icon';
 import { siteUrl, SITE_EMAIL, SITE_FACEBOOK } from '@/lib/site';
 
-/** How the site works, in three lines, above the footer (owner, 2026-09-12). */
+/**
+ * How the site works, in three lines, above the footer (owner, 2026-09-12).
+ * Each line ends in the page that answers it in full, so a reader who wants
+ * the detail is one click away instead of reading a paragraph here.
+ */
 const HOW_IT_WORKS = [
   {
     icon: 'file',
     title: 'কোথা থেকে তথ্য আসে',
-    body: 'বাংলাদেশ জাতীয় সংসদের ওয়েবসাইট ও সংসদ সচিবালয়ের প্রজ্ঞাপন, নির্বাচন কমিশনের প্রকাশিত তথ্য; ভোটের ফল ও দলের ইতিহাসের মতো বাকি তথ্যের সূত্র প্রতিটি পাতায় লেখা। কোনো তথ্য অনুমান করে বসানো হয় না।',
+    body: 'সদস্য, আসন, কমিটি ও অধিবেশন আসে জাতীয় সংসদের ওয়েবসাইট থেকে; ভোটার সংখ্যা নির্বাচন কমিশন ও মন্ত্রিসভা মন্ত্রিপরিষদ বিভাগ থেকে। ভোটের ফল ও জীবনীর সূত্র আলাদা করে প্রতিটি পাতায় লেখা।',
+    href: '/sutro',
+    cta: 'সব সূত্র দেখুন',
   },
   {
     icon: 'refresh',
     title: 'কত দিন পরপর হালনাগাদ',
-    body: 'প্রতিদিন। সংসদের নতুন প্রজ্ঞাপন, বৈঠকের কার্যসূচি ও কমিটির পরিবর্তন প্রকাশের পরদিনের মধ্যে যুক্ত হয়; সংবাদ শিরোনাম আরও ঘন ঘন।',
+    body: 'প্রতি রাতে পুরো সাইট সংসদের তথ্যভান্ডার থেকে নতুন করে তৈরি হয়। নতুন প্রজ্ঞাপন, বৈঠকের কার্যসূচি বা কমিটির পরিবর্তন পরদিনের মধ্যে যুক্ত হয়; সংবাদ শিরোনাম দিনে কয়েকবার।',
+    href: '/sutro',
+    cta: 'পদ্ধতি',
   },
   {
     icon: 'flag',
     title: 'ভুল পেলে',
-    body: 'প্রতিটি সদস্যের পাতায় “সংশোধন জানান” বোতাম আছে। সূত্রসহ জানালে ২৪ ঘণ্টার মধ্যে যাচাই করে ঠিক করা হয়।',
+    body: 'প্রতিটি সদস্যের পাতায় “সংশোধন জানান” বোতাম আছে। সূত্রসহ জানালে ২৪ ঘণ্টার মধ্যে যাচাই করে ঠিক করা হয়; সদস্যের দপ্তর নিজের পাতাও হালনাগাদ করাতে পারেন।',
+    href: '/jogajog',
+    cta: 'যোগাযোগ',
   },
 ];
 
@@ -107,9 +117,12 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
               <span className="shrink-0 w-11 h-11 rounded-xl bg-surface text-brand grid place-items-center ring-1 ring-brandring">
                 <Icon name={h.icon} size={21} />
               </span>
-              <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col items-start gap-1.5">
                 <h2 className="display text-[19px] font-bold text-ink">{h.title}</h2>
-                <p className="text-[16px] leading-relaxed text-inksoft">{h.body}</p>
+                <p className="text-[15.5px] leading-relaxed text-inksoft text-pretty">{h.body}</p>
+                <Link href={h.href} className="mt-0.5 text-[14.5px] font-semibold text-brand hover:underline">
+                  {h.cta} →
+                </Link>
               </div>
             </div>
           ))}
