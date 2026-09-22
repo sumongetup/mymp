@@ -96,7 +96,7 @@ export default function ContactPage() {
           <h2 className="display text-[21px] font-bold">কোনো সংসদ সদস্যের সঙ্গে যোগাযোগ</h2>
           <p className="text-[15.5px] leading-relaxed text-inksoft">
             এই সাইট কোনো সদস্যের দপ্তর নয়, তাঁদের পক্ষে বার্তা নেয় না বা পৌঁছে দেয় না। প্রত্যেক সদস্যের পাতায়
-            "যোগাযোগ" অংশে জাতীয় সংসদের দেওয়া দাপ্তরিক ইমেইল আছে (যেমন{' '}
+            &ldquo;যোগাযোগ&rdquo; অংশে জাতীয় সংসদের দেওয়া দাপ্তরিক ইমেইল আছে (যেমন{' '}
             <span className="font-mono text-[14px]">panchagarh.1@parliament.gov.bd</span>), আর যাঁদের যাচাইকৃত ফেসবুক
             পেজ বা ওয়েবসাইট আছে, সেগুলোও। সরাসরি সেখানে লিখুন।{' '}
             <Link href="/mp" className="text-brand font-semibold hover:underline">সদস্যদের তালিকা →</Link>
