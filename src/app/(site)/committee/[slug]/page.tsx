@@ -32,7 +32,10 @@ export async function generateMetadata({ params }: PageProps<'/committee/[slug]'
   const c = getCommittee(slug);
   if (!c) return { title: 'কমিটি পাওয়া যায়নি' };
   return {
-    title: c.nameBn ?? c.nameEn ?? 'কমিটি',
+    // "সরকারি হিসাব কমিটির কাজ কি" is how the committee is searched for
+    // (Search Console, September 2026), so a committee with a duty on record
+    // says so in its title.
+    title: committeeDuty(c, committees) ? `${c.nameBn ?? c.nameEn}: কাজ ও সদস্য` : (c.nameBn ?? c.nameEn ?? 'কমিটি'),
     alternates: { canonical: `/committee/${c.slug}` },
     openGraph: shareGraph(`/committee/${c.slug}`),
     description: committeeDescription(c),
@@ -94,10 +97,21 @@ export default async function CommitteePage({ params }: PageProps<'/committee/[s
     .filter((x): x is { role: string; m: NonNullable<ReturnType<typeof getMemberById>> } => !!x.m);
   const notices = noticesForCommittee(c.id);
   const duty = committeeDuty(c, committees);
+  // The duty as a question and answer, for search engines that show one.
+  const faqLd = duty
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: `${c.nameBn ?? c.nameEn}-এর কাজ কী?`, acceptedAnswer: { '@type': 'Answer', text: [duty.summary, ...duty.duties].join(' ') } },
+        ],
+      }
+    : null;
   const type = typeBn(c.type);
 
   return (
     <Page>
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       <Breadcrumb
         items={[
           { href: '/', label: 'হোম' },
