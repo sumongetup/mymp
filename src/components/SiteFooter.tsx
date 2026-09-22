@@ -3,13 +3,15 @@ import Brand from './Brand';
 import Icon from './Icon';
 import BrandIcon from './BrandIcon';
 import { meta, dateBn } from '@/lib/data';
-import { FOOTER_SECTIONS, FOOTER_ABOUT, type FooterLink } from '@/lib/nav';
+import { FOOTER_HOUSE, FOOTER_WORK, FOOTER_ABOUT, type FooterLink } from '@/lib/nav';
 import { SITE_EMAIL, SITE_FACEBOOK } from '@/lib/site';
 
 /*
- * The footer on every public page (owner's spec, 2026-09-12): brand, বিভাগ and
- * আমার এমপি side by side, stacked in that order on a phone, then the bottom
- * line. Text is 15-16px in clear light tones, since the owner found the first
+ * The footer on every public page (owner's spec, 2026-09-12, reshaped
+ * 2026-09-23): brand, then three short link columns (সংসদ, কার্যক্রম, আমার
+ * এমপি) side by side, so no column runs eleven links deep while the others
+ * end halfway; on a tablet the three columns share a row under the brand, on
+ * a phone they stack two abreast; then the bottom line. Text is 15-16px in clear light tones, since the owner found the first
  * version small and grey. On the green (#10281f) the body text #dbe6df is
  * 13:1, the logo-green headings #6ee79a 9.8:1, the bottom line #b9c7bf 9.2:1,
  * links white. No letter spacing on headings: it pulls Bangla letters apart.
@@ -17,8 +19,8 @@ import { SITE_EMAIL, SITE_FACEBOOK } from '@/lib/site';
  */
 const HEADING = 'text-[15px] font-bold text-[#6ee79a]';
 const LINK = 'text-white hover:text-[#6ee79a] transition-colors';
-const NAV = 'flex flex-col gap-4 border-t border-white/15 pt-6 md:border-0 md:pt-0';
-const LINKS = 'grid grid-cols-2 md:grid-cols-1 gap-x-5 gap-y-3.5 text-[15.5px] sm:text-[16px] leading-snug';
+const NAV = 'flex flex-col gap-4 border-t border-white/15 pt-6 lg:border-0 lg:pt-0';
+const LINKS = 'flex flex-col gap-y-3 text-[15.5px] sm:text-[16px] leading-snug';
 const PILL = 'h-11 px-4 inline-flex items-center gap-2 rounded-full bg-white/10 text-white text-[15px] font-semibold hover:bg-white/20 transition-colors';
 
 function FooterItem({ item }: { item: FooterLink }) {
@@ -37,9 +39,8 @@ export default function SiteFooter() {
   return (
     <footer className="bg-[#10281f] text-[#cfdad3] border-t-[3px] border-transparent [border-image:linear-gradient(90deg,var(--color-brand),var(--color-logo),var(--color-brand))_1]">
       <div className="mx-auto max-w-[1200px] px-5 py-10 sm:py-12 flex flex-col gap-8 sm:gap-10">
-        {/* On a phone: brand, then both link groups in the same two-column grid, each under a thin rule. */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-8 md:gap-10">
-          <div className="flex flex-col gap-5 max-w-[440px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr_1fr_1fr] gap-8 lg:gap-12">
+          <div className="flex flex-col gap-5 max-w-[440px] lg:pe-4">
             <Brand tone="light" />
             <p className="text-[16px] leading-relaxed text-[#dbe6df]">
               বাংলাদেশ জাতীয় সংসদের সদস্য, আসন, কমিটি ও অধিবেশনের উন্মুক্ত তথ্যভান্ডার। মূল তথ্য জাতীয় সংসদ ও নির্বাচন
@@ -65,23 +66,35 @@ export default function SiteFooter() {
             </div>
           </div>
 
-          <nav aria-label="বিভাগ" className={NAV}>
-            <span className={HEADING}>বিভাগ</span>
-            <div className={LINKS}>
-              {FOOTER_SECTIONS.map((item) => (
-                <FooterItem key={item.label} item={item} />
-              ))}
-            </div>
-          </nav>
+          {/* Below lg the three columns share one grid: two abreast on a phone, three on a tablet. */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:contents">
+            <nav aria-label="সংসদ" className={NAV}>
+              <span className={HEADING}>সংসদ</span>
+              <div className={LINKS}>
+                {FOOTER_HOUSE.map((item) => (
+                  <FooterItem key={item.label} item={item} />
+                ))}
+              </div>
+            </nav>
 
-          <nav aria-label="আমার এমপি" className={NAV}>
-            <span className={HEADING}>আমার এমপি</span>
-            <div className={LINKS}>
-              {FOOTER_ABOUT.map((item) => (
-                <FooterItem key={item.label} item={item} />
-              ))}
-            </div>
-          </nav>
+            <nav aria-label="কার্যক্রম" className={NAV}>
+              <span className={HEADING}>কার্যক্রম</span>
+              <div className={LINKS}>
+                {FOOTER_WORK.map((item) => (
+                  <FooterItem key={item.label} item={item} />
+                ))}
+              </div>
+            </nav>
+
+            <nav aria-label="আমার এমপি" className={`${NAV} col-span-2 sm:col-span-1`}>
+              <span className={HEADING}>আমার এমপি</span>
+              <div className={LINKS}>
+                {FOOTER_ABOUT.map((item) => (
+                  <FooterItem key={item.label} item={item} />
+                ))}
+              </div>
+            </nav>
+          </div>
         </div>
 
         <div className="border-t border-white/15 pt-5 flex flex-col sm:flex-row gap-2 justify-between text-[14px] text-[#b9c7bf]">

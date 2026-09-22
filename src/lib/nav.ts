@@ -30,19 +30,27 @@ export type FooterLink = { href: string; label: string; external?: boolean };
  * /about → /somporke, /sources → /sutro (new; redirected), /contact → /jogajog,
  * /privacy → /gopaniyota.
  */
-export const FOOTER_SECTIONS: FooterLink[] = [
+/** The House: who sits in it and where they come from. */
+export const FOOTER_HOUSE: FooterLink[] = [
   { href: '/mp', label: 'সব এমপি' },
   { href: '/sangrakkhito-ason', label: 'সংরক্ষিত নারী আসন' },
   { href: '/ason', label: 'সব আসন' },
   { href: '/jela', label: 'জেলা অনুযায়ী' },
   { href: '/dol', label: 'দল' },
   { href: '/ministers', label: 'মন্ত্রিসভা' },
+];
+
+/** What the House does, and the numbers behind it. */
+export const FOOTER_WORK: FooterLink[] = [
   { href: '/committee', label: 'কমিটি' },
   { href: '/odhibeshon', label: 'অধিবেশন' },
-  { href: '/parisonkhan', label: 'পরিসংখ্যান' },
   { href: '/nirbachon', label: 'নির্বাচন ২০২৬' },
+  { href: '/parisonkhan', label: 'পরিসংখ্যান' },
   { href: '/songbad', label: 'সংবাদ' },
 ];
+
+/** Kept for anything that still reads the old single list. */
+export const FOOTER_SECTIONS: FooterLink[] = [...FOOTER_HOUSE, ...FOOTER_WORK];
 
 export const FOOTER_ABOUT: FooterLink[] = [
   { href: '/somporke', label: 'সম্পর্কে' },
