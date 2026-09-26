@@ -89,6 +89,11 @@ can read nothing; only server actions holding the service key touch them.
 - Vote counts do not exist in the source. `supabase/migrations/002_election_results.sql` adds a table an admin fills from the Election Commission's gazette at /admin/results; only `published` rows are copied into `data/results.json` at build time.
 - Social links are admin-entered member overrides (facebook, x, youtube, instagram, website) and are refused unless they are https URLs on the matching network.
 
+## New here?
+
+`docs/developer.md` is the handover: access, local setup, how an edit reaches a
+visitor, the scripts, the deploy model, the editorial rules and the traps.
+
 ## Not built yet
 
 The public correction form (the queue exists), the news scraper (news is
