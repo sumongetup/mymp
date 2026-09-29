@@ -20,6 +20,7 @@ import { runSocialWiki } from './jobs/social-wiki';
 import { runBioWiki } from './jobs/bio-wiki';
 import { runOgCards } from './jobs/og-cards';
 
+config({ path: resolve(import.meta.dirname, '../../.env.local') });
 config({ path: resolve(import.meta.dirname, '../../.env') });
 
 type Job = () => Promise<{ itemsFound: number; itemsNew: number }>;
