@@ -103,7 +103,7 @@ Use the following ownership:
 - `DEPLOY_ENV_FILE_B64`: complete MYMP VPS runtime `.env`, including `DATABASE_URL`, `DATABASE_SSL=disable`, `DATABASE_SCHEMA=sangsad`, Supabase keys, and `CRON_SECRET`.
 - `MYMP_DEPLOY_TOKEN`: fine-grained GitHub token with repository Contents read/write permission; dispatches `sangsad-data-updated`.
 - `MYMP_CRON_SECRET`: same value as the runtime `CRON_SECRET`; used by GitHub HTTP cron callers.
-- `SANGSAD_DATABASE_URL`: shared PostgreSQL URL used by Sangsad GitHub jobs.
+- `SANGSAD_DATABASE_URL`: shared PostgreSQL URL used by Sangsad GitHub jobs. Set it as one unquoted line, for example `postgresql://postgres.mymp:PASSWORD@supabase.mymp.bd:5433/postgres`. Do not include `***`, surrounding quotes, spaces, or a `.env` assignment. URL-encode special characters in the password.
 - `SANGSAD_SUPABASE_URL`: shared Supabase URL used for the public mirror bucket.
 - `SANGSAD_SUPABASE_SERVICE_ROLE_KEY`: service key used by Sangsad worker/mirror jobs.
 - `MYMP_SUPABASE_URL`, `MYMP_SUPABASE_SERVICE_ROLE_KEY`: MYMP database delivery credentials used by Sangsad news/enrichment jobs.

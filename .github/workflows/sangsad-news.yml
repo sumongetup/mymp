@@ -42,6 +42,8 @@ jobs:
       APP_ENV: production
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: prod
       - uses: pnpm/action-setup@v4
         with:
           version: 12
@@ -51,6 +53,20 @@ jobs:
           cache: pnpm
           cache-dependency-path: sangsad/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
+      - name: Validate database URL
+        run: |
+          node --input-type=module <<'NODE'
+          const value = process.env.DATABASE_URL?.trim();
+          if (!value) throw new Error('SANGSAD_DATABASE_URL is empty');
+          if (/^["']|["']$/.test(value) || /\s/.test(value)) {
+            throw new Error('SANGSAD_DATABASE_URL must be an unquoted URL without whitespace');
+          }
+          const parsed = new URL(value);
+          if (!['postgres:', 'postgresql:'].includes(parsed.protocol) || !parsed.hostname || !parsed.pathname) {
+            throw new Error('SANGSAD_DATABASE_URL must be a complete postgresql:// URL');
+          }
+          console.log(`database URL format valid (host: ${parsed.hostname}, port: ${parsed.port || 'default'})`);
+          NODE
       - run: pnpm worker news
       - name: Deploy mymp with the new headlines
         if: github.event.schedule == '10 */3 * * *' || github.event_name == 'workflow_dispatch'
