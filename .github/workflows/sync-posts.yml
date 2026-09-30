@@ -1,14 +1,11 @@
 name: MP posts sync
 
 # Every six hours, asks mymp.bd to re-read the cabinet and parliament lists
-# and update ministers, state ministers, deputy ministers, advisers and the
-# House offices (src/lib/posts/sync.ts). The schedule lives here because
-# Vercel's Hobby plan allows only daily cron jobs; vercel.json keeps a daily
-# run as a backstop in case GitHub pauses this workflow (it does that to
-# scheduled workflows in repositories with no activity for 60 days).
+# and update ministers, state ministers, deputy ministers, advisers and House
+# offices. GitHub Actions is the sole production scheduler for this job.
 #
 # Needs the repository secret MYMP_CRON_SECRET, the same value as CRON_SECRET
-# in Vercel. A failed run turns red here, and GitHub emails the repository owner.
+# in the VPS runtime environment. A failed run turns red here.
 
 on:
   schedule:

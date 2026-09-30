@@ -5,6 +5,9 @@
 - Values clear, plain-language explanations of the overall project architecture, component responsibilities, and data flow, with special attention to explaining unfamiliar subsystems such as `sangsad`. Confidence: 0.9
 - Prefers architecture recommendations grounded in a full repository and documentation review, with explicit comparison of alternatives and their performance, freshness, reliability, security, and operational tradeoffs. Confidence: 0.9
 - Prefers deploying this project on a self-hosted VPS with a single shared self-hosted Supabase project/database for MYMP and Sangsad, instead of Vercel-managed infrastructure or separate Supabase projects. Confidence: 0.95
+- Prefers GitHub Actions as the sole production scheduler for the `sync-posts` job, with no duplicate Supabase Cron `sync-posts` job; Supabase Cron may remain for separate jobs such as the reachability probe. Confidence: 0.98
+- Wants VPS deployment documentation to be a complete operational runbook covering Docker deployment, Supabase Cron schedules, secrets, health checks, cutover, rollback, and avoiding duplicate scheduling across Supabase Cron and GitHub Actions. Confidence: 0.95
+- Prefers operational guidance to state exactly what to do and what not to do, using explicit actionable checklists rather than ambiguous explanatory prose. Confidence: 0.95
 - Prefers adapting deployment workflows from a known working sibling project, while inspecting project-specific differences before copying the pattern. Confidence: 0.9
 - Prefers VPS deployment workflows to use an explicit, stable application project-root setting so multiple apps can be managed consistently. Confidence: 0.85
 - Prefers the local pnpm toolchain to be kept aligned with the repository-declared version, specifically pnpm 12.3.4 for this project. Confidence: 0.95

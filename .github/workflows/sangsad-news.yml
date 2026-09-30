@@ -32,6 +32,8 @@ jobs:
     timeout-minutes: 15
     env:
       DATABASE_URL: ${{ secrets.SANGSAD_DATABASE_URL }}
+      DATABASE_SSL: disable
+      DATABASE_SCHEMA: sangsad
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SANGSAD_SUPABASE_URL }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SANGSAD_SUPABASE_SERVICE_ROLE_KEY }}
       MYMP_SUPABASE_URL: ${{ secrets.MYMP_SUPABASE_URL }}

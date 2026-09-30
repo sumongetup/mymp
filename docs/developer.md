@@ -3,7 +3,7 @@
 Everything a new developer needs to work on **আমার এমপি / MY MP** (mymp.bd).
 Read this once, top to bottom, before the first commit. It is short on purpose.
 
-- Website repo: `sumongetup/mymp` (this one). Next.js, deployed on Vercel.
+- Website repo: `sumongetup/mymp` (this one). Next.js, deployed as Docker on the VPS; see `docs/vps-deployment.md`.
 - App repo: `sumongetup/mymp-app` (separate). Flutter, built on Codemagic,
   published as `bd.mymp.app` on Google Play. It reads this site's
   `/api/app/v1/*` routes, so a breaking change here breaks the app.
@@ -58,15 +58,16 @@ Supabase: overrides, hidden, news, results, feed
 ```
 
 - **No database is read when a visitor loads a page.** Public pages must never
-  call auth or Supabase. One `auth()` call in a public route makes the whole
-  site uncacheable and the Vercel bill jumps. This has happened before.
+  call auth or Supabase. The generated snapshot is bundled into the VPS Docker
+  image and served as static/build-time data.
 - `scripts/sync.mjs` runs at the start of every build (`npm run build` =
   `sync --soft` then the name index then `next build`). It fetches the official
   sources, then applies every row from the Supabase `overrides` table and every
   `hidden` flag on top, then writes `data/*.json`.
-- So an edit made in `/admin` is not live until a build runs. "Publish" in the
-  admin calls a Vercel deploy hook; a Vercel cron does the same nightly at
-  02:00 Dhaka time (`vercel.json`, `0 21 * * *` UTC).
+- So an edit made in `/admin` is not live until a build runs. Sangsad refreshes
+  dispatch the GitHub VPS deployment workflow; Supabase Cron handles protected
+  application jobs such as posts sync and feed collection. See
+  `docs/vps-deployment.md` for schedules and cutover steps.
 - `data/*.json` is committed. Treat it as generated output: regenerate with
   `npm run sync`, do not hand-edit it. Corrections belong in the `overrides`
   table (via `/admin`), not in the JSON.
