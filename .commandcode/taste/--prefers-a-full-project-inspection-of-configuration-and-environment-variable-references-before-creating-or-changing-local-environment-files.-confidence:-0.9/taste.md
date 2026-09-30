@@ -1,3 +1,4 @@
+# - Prefers a full-project inspection of configuration and environment-variable references before creating or changing local environment files. Confidence: 0.9
 - Prefers a full-project inspection of configuration and environment-variable references before creating or changing local environment files. Confidence: 0.9
 - Wants local environment configuration to include all required variables discovered from the project, rather than only a minimal example. Confidence: 0.9
 - Prefers `.env.local` to be the canonical local configuration source and for all project components to use the same values consistently. Confidence: 0.9

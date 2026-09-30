@@ -1,14 +1,16 @@
 name: Sangsad news
 
+# MYMP_DEPLOY_TOKEN must be a fine-grained token with Contents: Read and write
+# on this repository; it is used only to request the VPS deployment workflow.
 # Every 30 minutes: read the active news sources, match new headlines to
 # sitting members, and hand the matches to mymp.bd's news table (published
 # when certain, drafts for an editor otherwise). Every 3 hours the run also
-# asks Vercel to rebuild mymp.bd so new headlines appear on the site.
+# dispatches a VPS rebuild so new headlines appear on the site.
 #
 # Secrets: SANGSAD_DATABASE_URL, SANGSAD_SUPABASE_URL,
 # SANGSAD_SUPABASE_SERVICE_ROLE_KEY (the engine), MYMP_SUPABASE_URL and
 # MYMP_SUPABASE_SERVICE_ROLE_KEY (mymp.bd's own database, for delivery), and
-# optionally MYMP_DEPLOY_HOOK_URL (the rebuild).
+# MYMP_DEPLOY_TOKEN (a GitHub token allowed to dispatch the VPS deployment).
 
 on:
   schedule:
@@ -34,7 +36,7 @@ jobs:
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SANGSAD_SUPABASE_SERVICE_ROLE_KEY }}
       MYMP_SUPABASE_URL: ${{ secrets.MYMP_SUPABASE_URL }}
       MYMP_SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.MYMP_SUPABASE_SERVICE_ROLE_KEY }}
-      MYMP_DEPLOY_HOOK_URL: ${{ secrets.MYMP_DEPLOY_HOOK_URL }}
+      MYMP_DEPLOY_TOKEN: ${{ secrets.MYMP_DEPLOY_TOKEN }}
       APP_ENV: production
     steps:
       - uses: actions/checkout@v4
@@ -48,6 +50,18 @@ jobs:
           cache-dependency-path: sangsad/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
       - run: pnpm worker news
-      - name: Rebuild mymp.bd with the new headlines
-        if: (github.event.schedule == '10 */3 * * *' || github.event_name == 'workflow_dispatch') && env.MYMP_DEPLOY_HOOK_URL != ''
-        run: curl -fsS -X POST "$MYMP_DEPLOY_HOOK_URL" > /dev/null && echo 'mymp.bd rebuild requested'
+      - name: Deploy mymp with the new headlines
+        if: github.event.schedule == '10 */3 * * *' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.MYMP_DEPLOY_TOKEN }}
+        run: |
+          set -Eeuo pipefail
+          test -n "$GH_TOKEN"
+          gh api \
+            --method POST \
+            -H 'Accept: application/vnd.github+json' \
+            /repos/${{ github.repository }}/dispatches \
+            -f event_type='sangsad-data-updated' \
+            -f client_payload[ref]='prod' \
+            -f client_payload[source]='sangsad-news'
+          echo 'mymp VPS deployment requested'

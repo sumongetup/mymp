@@ -1,0 +1,136 @@
+name: Build and deploy Docker image
+
+on:
+  push:
+    branches:
+      - main
+      - prod
+  workflow_dispatch:
+  repository_dispatch:
+    types: [sangsad-data-updated]
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+env:
+  IMAGE_NAME: mymp
+  APP_NAME: mymp
+  PROJECT_ROOT: /home/devuser/opt/apps/mymp
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy to VPS
+    environment: prod
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.client_payload.ref || github.ref }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Load deployment environment
+        env:
+          DEPLOY_ENV_FILE_B64: ${{ secrets.DEPLOY_ENV_FILE_B64 }}
+        run: |
+          set -Eeuo pipefail
+          test -n "$DEPLOY_ENV_FILE_B64"
+          printf '%s' "$DEPLOY_ENV_FILE_B64" | base64 --decode > .env.local
+          chmod 600 .env.local
+          for variable in NEXT_PUBLIC_SITE_URL NEXT_PUBLIC_SUPABASE_URL NEXT_PUBLIC_SUPABASE_ANON_KEY; do
+            value=$(awk -F= -v key="$variable" '
+              {
+                sub(/\r$/, "")
+                name = $1
+                sub(/^[[:space:]]+/, "", name)
+                sub(/^export[[:space:]]+/, "", name)
+                sub(/[[:space:]]+$/, "", name)
+                if (name == key) {
+                  sub(/^[^=]*=[[:space:]]*/, "")
+                  gsub(/^[\047\042]|[\047\042]$/, "")
+                  print
+                  exit
+                }
+              }
+            ' .env.local)
+            if [ -z "$value" ]; then
+              echo "Missing required environment variable: $variable" >&2
+              exit 1
+            fi
+            printf '%s=%s\n' "$variable" "$value" >> "$GITHUB_ENV"
+          done
+
+      - name: Validate and prepare data
+        run: |
+          set -Eeuo pipefail
+          npm run typecheck
+          npm run build
+          rm -f .env.local
+
+      - name: Configure SSH
+        env:
+          VPS_HOST: ${{ secrets.DEPLOY_HOST }}
+          VPS_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          set -Eeuo pipefail
+          test -n "$VPS_HOST"
+          test -n "$VPS_KEY"
+          mkdir -p ~/.ssh
+          printf '%s\n' "$VPS_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "$VPS_HOST" > ~/.ssh/known_hosts
+
+      - name: Build and transfer image
+        env:
+          VPS_HOST: ${{ secrets.DEPLOY_HOST }}
+          VPS_USER: devuser
+        run: |
+          set -Eeuo pipefail
+          docker build \
+            --build-arg NEXT_PUBLIC_SITE_URL="$NEXT_PUBLIC_SITE_URL" \
+            --build-arg NEXT_PUBLIC_SUPABASE_URL="$NEXT_PUBLIC_SUPABASE_URL" \
+            --build-arg NEXT_PUBLIC_SUPABASE_ANON_KEY="$NEXT_PUBLIC_SUPABASE_ANON_KEY" \
+            -t "$IMAGE_NAME:latest" .
+          ssh "$VPS_USER@$VPS_HOST" "mkdir -p '$PROJECT_ROOT'"
+          scp docker-compose.yml "$VPS_USER@$VPS_HOST:$PROJECT_ROOT/docker-compose.yml"
+          docker save "$IMAGE_NAME:latest" | gzip -c | ssh "$VPS_USER@$VPS_HOST" "gunzip | docker load"
+          ssh "$VPS_USER@$VPS_HOST" "docker image inspect '$IMAGE_NAME:latest' >/dev/null"
+
+      - name: Deploy on VPS
+        env:
+          VPS_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_ENV_FILE_B64: ${{ secrets.DEPLOY_ENV_FILE_B64 }}
+        run: |
+          set -Eeuo pipefail
+          test -n "$DEPLOY_ENV_FILE_B64"
+          printf '%s' "$DEPLOY_ENV_FILE_B64" | base64 --decode | ssh "devuser@$VPS_HOST" "umask 077; mkdir -p '$PROJECT_ROOT'; cat > '$PROJECT_ROOT/.env'"
+          ssh "devuser@$VPS_HOST" "set -Eeuo pipefail
+            cd '$PROJECT_ROOT'
+            docker rm -f mymp 2>/dev/null || true
+            docker compose config >/dev/null
+            docker compose up -d --force-recreate web
+            for attempt in \$(seq 1 30); do
+              status=\$(docker inspect --format='{{.State.Health.Status}}' mymp 2>/dev/null || true)
+              if [ \"\$status\" = healthy ]; then
+                exit 0
+              fi
+              if [ \"\$status\" = unhealthy ]; then
+                docker compose logs --tail 100 web
+                exit 1
+              fi
+              sleep 3
+            done
+            docker compose ps
+            docker compose logs --tail 100 web
+            exit 1
+          "
