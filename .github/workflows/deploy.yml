@@ -70,11 +70,11 @@ jobs:
             printf '%s=%s\n' "$variable" "$value" >> "$GITHUB_ENV"
           done
 
-      - name: Validate and prepare data
+      - name: Build and validate
         run: |
           set -Eeuo pipefail
-          npm run typecheck
           npm run build
+          npm run typecheck
           rm -f .env.local
 
       - name: Configure SSH
