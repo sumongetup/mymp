@@ -75,7 +75,6 @@ jobs:
           set -Eeuo pipefail
           npm run build
           npm run typecheck
-          rm -f .env.local
 
       - name: Configure SSH
         env:
@@ -97,10 +96,12 @@ jobs:
         run: |
           set -Eeuo pipefail
           docker build \
+            --secret id=env,src=.env.local \
             --build-arg NEXT_PUBLIC_SITE_URL="$NEXT_PUBLIC_SITE_URL" \
             --build-arg NEXT_PUBLIC_SUPABASE_URL="$NEXT_PUBLIC_SUPABASE_URL" \
             --build-arg NEXT_PUBLIC_SUPABASE_ANON_KEY="$NEXT_PUBLIC_SUPABASE_ANON_KEY" \
             -t "$IMAGE_NAME:latest" .
+          rm -f .env.local
           ssh "$VPS_USER@$VPS_HOST" "mkdir -p '$PROJECT_ROOT'"
           scp docker-compose.yml "$VPS_USER@$VPS_HOST:$PROJECT_ROOT/docker-compose.yml"
           docker save "$IMAGE_NAME:latest" | gzip -c | ssh "$VPS_USER@$VPS_HOST" "gunzip | docker load"

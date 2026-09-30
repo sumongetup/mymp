@@ -17,7 +17,8 @@ ENV NEXT_PUBLIC_SUPABASE_ANON_KEY=$NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build:local
+RUN --mount=type=secret,id=env,target=/run/secrets/mymp.env \
+    set -a && . /run/secrets/mymp.env && set +a && npm run build:local
 
 FROM node:24-bookworm-slim AS runner
 WORKDIR /app

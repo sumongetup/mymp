@@ -13,3 +13,4 @@
 - Prefers the assistant to implement the necessary end-to-end workflow changes directly, rather than only explaining the required steps, when the intended outcome is clear. Confidence: 0.9
 - Prefers database schema changes to be runnable through a repository script/command using the `DATABASE_URL` from `.env.local`, rather than requiring manual SQL-editor steps. Confidence: 0.85
 - Is comfortable delegating technical implementation and dependency/tool choices to the assistant when the choice is justified by existing project conventions and best practices. Confidence: 0.85
+- Wants CI environment provenance explained explicitly, distinguishing local dotenv files from variables injected by workflow configuration and GitHub secrets. Confidence: 0.9
