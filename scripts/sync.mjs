@@ -40,6 +40,19 @@ const LIVE = process.argv.includes('--live');
 const ENGINE_ONLY = process.argv.includes('--engine');
 
 /*
+ * `npm run build` starts here, under plain Node, which does not read .env.local
+ * the way Next does. Load it before any environment-derived URLs or clients are
+ * initialized, so local and CI builds use the same configuration.
+ */
+const envFile = new URL('../.env.local', import.meta.url);
+if (existsSync(envFile)) {
+  for (const line of readFileSync(envFile, 'utf8').split(/\r?\n/)) {
+    const m = line.match(/^([A-Z_]+)=(.*)$/);
+    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^"|"$/g, '');
+  }
+}
+
+/*
  * The engine's public mirror. The bucket is public by design (it holds only
  * what mymp.bd itself publishes; mobile numbers are stripped by the engine),
  * so its address is not a secret and needs no environment variable.
@@ -50,21 +63,6 @@ const MIRROR_URL = `${ENGINE_URL}/storage/v1/object/public/mirror`;
 const MIRROR_MAX_AGE_HOURS = 36;
 /** Set by loadMirror(): { fetchedAt, responses: { [apiPath]: rows }, photos: { [externalId]: url } }. */
 let mirror = null;
-
-/*
- * `npm run build` starts here, under plain Node, which does not read .env.local
- * the way Next does. Without it the admin database looks absent, and a local
- * build quietly rewrites data/*.json with none of the editors' overrides in it
- * — hundreds of corrections gone from the files, with nothing on screen to say
- * so. Reading the file makes a local build produce what Vercel's build does.
- */
-const envFile = new URL('../.env.local', import.meta.url);
-if (existsSync(envFile)) {
-  for (const line of readFileSync(envFile, 'utf8').split(/\r?\n/)) {
-    const m = line.match(/^([A-Z_]+)=(.*)$/);
-    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^"|"$/g, '');
-  }
-}
 
 /**
  * Optional admin database. When the Supabase variables are present, admin

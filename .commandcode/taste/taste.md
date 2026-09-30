@@ -3,8 +3,10 @@
 - Prefers `.env.local` to be the canonical local configuration source and for all project components to use the same values consistently. Confidence: 0.9
 - Values clear, plain-language explanations of the overall project architecture, component responsibilities, and data flow, with special attention to explaining unfamiliar subsystems such as `sangsad`. Confidence: 0.9
 - Prefers architecture recommendations grounded in a full repository and documentation review, with explicit comparison of alternatives and their performance, freshness, reliability, security, and operational tradeoffs. Confidence: 0.9
-- Prefers deploying this project on a self-hosted VPS with self-hosted Supabase instead of Vercel-managed infrastructure. Confidence: 0.9
+- Prefers deploying this project on a self-hosted VPS with a single shared self-hosted Supabase project/database for MYMP and Sangsad, instead of Vercel-managed infrastructure or separate Supabase projects. Confidence: 0.95
 - Prefers adapting deployment workflows from a known working sibling project, while inspecting project-specific differences before copying the pattern. Confidence: 0.9
 - Prefers VPS deployment workflows to use an explicit, stable application project-root setting so multiple apps can be managed consistently. Confidence: 0.85
 - Prefers the local pnpm toolchain to be kept aligned with the repository-declared version, specifically pnpm 12.3.4 for this project. Confidence: 0.95
-- Prefers the assistant to implement the necessary end-to-end workflow changes directly, rather than only explaining the required steps, when the intended outcome is clear. Confidence: 0.85
+- Prefers the assistant to implement the necessary end-to-end workflow changes directly, rather than only explaining the required steps, when the intended outcome is clear. Confidence: 0.9
+- Prefers database schema changes to be runnable through a repository script/command using the `DATABASE_URL` from `.env.local`, rather than requiring manual SQL-editor steps. Confidence: 0.85
+- Is comfortable delegating technical implementation and dependency/tool choices to the assistant when the choice is justified by existing project conventions and best practices. Confidence: 0.85

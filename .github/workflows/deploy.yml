@@ -47,7 +47,7 @@ jobs:
           test -n "$DEPLOY_ENV_FILE_B64"
           printf '%s' "$DEPLOY_ENV_FILE_B64" | base64 --decode > .env.local
           chmod 600 .env.local
-          for variable in NEXT_PUBLIC_SITE_URL NEXT_PUBLIC_SUPABASE_URL NEXT_PUBLIC_SUPABASE_ANON_KEY; do
+          for variable in NEXT_PUBLIC_SITE_URL NEXT_PUBLIC_SUPABASE_URL NEXT_PUBLIC_SUPABASE_ANON_KEY SANGSAD_SUPABASE_URL SUPABASE_SERVICE_ROLE_KEY; do
             value=$(awk -F= -v key="$variable" '
               {
                 sub(/\r$/, "")
