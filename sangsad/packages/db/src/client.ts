@@ -15,7 +15,12 @@ export function getDb(): Db {
   if (cached) return cached;
   const url = process.env.DATABASE_URL;
   if (!url) throw new Error('DATABASE_URL is not set (see .env.example)');
-  client = postgres(url, {
+  const connectionUrl = new URL(url);
+  if (process.env.DATABASE_SSL === 'disable') {
+    connectionUrl.searchParams.delete('sslmode');
+    connectionUrl.searchParams.delete('ssl');
+  }
+  client = postgres(connectionUrl.toString(), {
     prepare: false,
     max: 5,
     ssl: process.env.DATABASE_SSL === 'disable' ? false : 'require',

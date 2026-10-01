@@ -14,8 +14,8 @@ name: Sangsad news
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
-    - cron: '10 */3 * * *' # the same run, plus a rebuild of mymp.bd
+    - cron: "*/30 * * * *"
+    - cron: "10 */3 * * *" # the same run, plus a rebuild of mymp.bd
   workflow_dispatch:
 
 concurrency:
